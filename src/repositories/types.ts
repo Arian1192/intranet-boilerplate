@@ -3,7 +3,15 @@ import type {
   Artist,
   BookingDashboard,
   Dashboard,
+  Delivery,
+  Influencer,
+  InventoryItem,
   LogisticsItem,
+  PrAccount,
+  PrAction,
+  PrDashboard,
+  ProductionEvent,
+  SeedingReportRow,
   Show,
   User,
   UserSession,
@@ -20,4 +28,16 @@ export interface Repository {
   getLogistics(): Promise<LogisticsItem[]>;
   getArtists(): Promise<Artist[]>;
   getAnalytics(): Promise<AnalyticsSummary>;
+
+  // Comunicación & PR
+  getPrDashboard(): Promise<PrDashboard>;
+  getPrActions(): Promise<PrAction[]>;
+  getInventory(): Promise<InventoryItem[]>;
+  getDeliveries(): Promise<Delivery[]>;
+  getInfluencers(): Promise<Influencer[]>;
+  getSeedingReport(): Promise<SeedingReportRow[]>;
+  getPrAccounts(): Promise<PrAccount[]>;
+
+  // Producción
+  getProductionEvents(): Promise<ProductionEvent[]>;
 }

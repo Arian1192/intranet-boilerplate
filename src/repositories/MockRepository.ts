@@ -3,7 +3,15 @@ import type {
   Artist,
   BookingDashboard,
   Dashboard,
+  Delivery,
+  Influencer,
+  InventoryItem,
   LogisticsItem,
+  PrAccount,
+  PrAction,
+  PrDashboard,
+  ProductionEvent,
+  SeedingReportRow,
   Show,
   User,
   UserSession,
@@ -281,5 +289,130 @@ export class MockRepository implements Repository {
         { label: 'Confirmados', value: '7', change: '+2' },
       ],
     });
+  }
+
+  async getPrDashboard(): Promise<PrDashboard> {
+    return this.delay({
+      activeAccounts: 2,
+      totalAccounts: 2,
+      billingThisMonth: 0,
+      upcomingActions: [
+        {
+          id: 'pa1',
+          date: '16 jul 2026',
+          title: 'Acción de prensa Cliente A',
+          meta: 'Cliente A · Evento',
+          badge: 'En curso',
+        },
+      ],
+      recentCoverage: [
+        {
+          id: 'rc1',
+          date: '08 jul 2026',
+          title: 'Mención en medios',
+          meta: 'Cliente A · Prensa Digital',
+        },
+      ],
+    });
+  }
+
+  async getPrActions(): Promise<PrAction[]> {
+    return this.delay([
+      { id: 'act1', title: 'Preparar dossier de prensa', account: 'Cliente A', type: 'Evento', amount: 0, status: 'planned', date: '20 jul 2026' },
+      { id: 'act2', title: 'Acción de prensa Cliente A', account: 'Cliente A', type: 'Evento', amount: 10000, status: 'in-progress', date: '16 jul 2026' },
+      { id: 'act3', title: 'Cierre de campaña Cliente B', account: 'Cliente B', type: 'Campaña', amount: 0, status: 'done', date: '01 jul 2026' },
+    ]);
+  }
+
+  async getInventory(): Promise<InventoryItem[]> {
+    return this.delay([
+      { id: 'inv1', name: 'Gorra Edición Limitada', variant: '8 · Rojo', ref: 'REF-0001', quantity: 6 },
+      { id: 'inv2', name: 'Camiseta Colección', variant: 'M · Negro', ref: 'REF-0002', quantity: 12 },
+    ]);
+  }
+
+  async getDeliveries(): Promise<Delivery[]> {
+    return this.delay([
+      {
+        id: 'del1',
+        date: '07 jul 2026',
+        account: 'Cliente A',
+        tags: ['internal-use'],
+        recipient: 'Ana López',
+        itemsSummary: '1x Gorra Edición Limitada · 8',
+        amount: 0,
+      },
+      {
+        id: 'del2',
+        date: '07 jul 2026',
+        account: 'Cliente A',
+        tags: ['mrw-shipment', 'delivered', 'published'],
+        recipient: 'Carlos Ruiz',
+        itemsSummary: '2x Gorra Edición Limitada · 8',
+        amount: 0,
+      },
+      {
+        id: 'del3',
+        date: '06 jul 2026',
+        account: 'Cliente A',
+        tags: ['mrw-shipment', 'delivered', 'published'],
+        recipient: 'Carlos Ruiz',
+        itemsSummary: '1x Gorra Edición Limitada · 8',
+        amount: 0,
+      },
+    ]);
+  }
+
+  async getInfluencers(): Promise<Influencer[]> {
+    return this.delay([
+      { id: 'inf1', name: 'Carlos Ruiz', initials: 'CR', instagramFollowers: 245000, tiktokFollowers: 26200 },
+      { id: 'inf2', name: 'María García', initials: 'MG', instagramFollowers: 335000 },
+    ]);
+  }
+
+  async getSeedingReport(): Promise<SeedingReportRow[]> {
+    return this.delay([
+      { date: '07 jul 2026', influencer: 'Carlos Ruiz', pieces: 2, productCost: 0, shippingCost: 0, publicationStatus: 'Publicado' },
+      { date: '06 jul 2026', influencer: 'Carlos Ruiz', pieces: 1, productCost: 0, shippingCost: 0, publicationStatus: 'Publicado' },
+    ]);
+  }
+
+  async getPrAccounts(): Promise<PrAccount[]> {
+    return this.delay([
+      { id: 'acc1', name: 'Cliente A', status: 'active', manager: 'Ana López', crmClient: 'Cliente A', contact: 'Jack Contacto' },
+      { id: 'acc2', name: 'Cliente B', status: 'active', manager: 'Carlos Ruiz', crmClient: 'Cliente B', contact: 'Laura Contacto' },
+    ]);
+  }
+
+  async getProductionEvents(): Promise<ProductionEvent[]> {
+    return this.delay([
+      {
+        id: 'ev1',
+        title: 'Evento Primavera',
+        icon: '🎫',
+        date: '15 jul 2026',
+        isoDate: '2026-07-15',
+        time: '20:00–21:30',
+        venue: 'Sala Norte, Madrid',
+        businessLines: ['Línea A'],
+        manager: 'Ana López',
+        isHome: true,
+        status: 'confirmed',
+      },
+      {
+        id: 'ev2',
+        title: 'Proyecto Q3',
+        icon: '🎫',
+        date: '18 jul 2026',
+        isoDate: '2026-07-18',
+        time: '18:00–23:00',
+        venue: 'Espacio Central, Valencia',
+        businessLines: ['Línea B', 'Línea A'],
+        manager: 'Carlos Ruiz',
+        isHome: true,
+        role: 'promoter',
+        status: 'in-production',
+      },
+    ]);
   }
 }

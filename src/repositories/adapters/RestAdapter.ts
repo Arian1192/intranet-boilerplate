@@ -3,7 +3,15 @@ import type {
   Artist,
   BookingDashboard,
   Dashboard,
+  Delivery,
+  Influencer,
+  InventoryItem,
   LogisticsItem,
+  PrAccount,
+  PrAction,
+  PrDashboard,
+  ProductionEvent,
+  SeedingReportRow,
   Show,
   User,
   UserSession,
@@ -45,5 +53,37 @@ export class RestAdapter implements Repository {
 
   async getAnalytics(): Promise<AnalyticsSummary> {
     throw new Error('RestAdapter not implemented in Fase 2');
+  }
+
+  async getPrDashboard(): Promise<PrDashboard> {
+    throw new Error('RestAdapter not implemented in Fase 3');
+  }
+
+  async getPrActions(): Promise<PrAction[]> {
+    throw new Error('RestAdapter not implemented in Fase 3');
+  }
+
+  async getInventory(): Promise<InventoryItem[]> {
+    throw new Error('RestAdapter not implemented in Fase 3');
+  }
+
+  async getDeliveries(): Promise<Delivery[]> {
+    throw new Error('RestAdapter not implemented in Fase 3');
+  }
+
+  async getInfluencers(): Promise<Influencer[]> {
+    throw new Error('RestAdapter not implemented in Fase 3');
+  }
+
+  async getSeedingReport(): Promise<SeedingReportRow[]> {
+    throw new Error('RestAdapter not implemented in Fase 3');
+  }
+
+  async getPrAccounts(): Promise<PrAccount[]> {
+    throw new Error('RestAdapter not implemented in Fase 3');
+  }
+
+  async getProductionEvents(): Promise<ProductionEvent[]> {
+    throw new Error('RestAdapter not implemented in Fase 3');
   }
 }
