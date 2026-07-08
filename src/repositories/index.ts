@@ -1,6 +1,7 @@
 export * from './types';
 export * from './RepositoryContext';
 export * from './RepositoryProvider';
+export * from './useRepositoryQuery';
 export { MockRepository } from './MockRepository';
 export { SupabaseAdapter } from './adapters/SupabaseAdapter';
 export { RestAdapter } from './adapters/RestAdapter';
