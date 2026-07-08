@@ -24,7 +24,7 @@ export function ModuleGrid({ modules, title }: ModuleGridProps) {
             >
               <div className="flex items-center gap-2">
                 {Icon && <Icon className="h-5 w-5 shrink-0 text-slate-500" aria-hidden="true" />}
-                <span className="font-medium text-slate-800">{module.name}</span>
+                <span className="text-base font-semibold leading-normal text-slate-800">{module.name}</span>
               </div>
               <p className="mt-1 text-sm leading-snug text-slate-500">{module.shortDescription}</p>
             </Link>
