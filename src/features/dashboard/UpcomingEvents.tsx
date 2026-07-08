@@ -9,7 +9,7 @@ export interface UpcomingEventsProps {
 export function UpcomingEvents({ events }: UpcomingEventsProps) {
   return (
     <section>
-      <h2 className="mb-4 text-xs font-bold uppercase tracking-wider text-slate-400">
+      <h2 className="mb-4 text-xs font-semibold uppercase tracking-wider text-slate-400">
         Próximos eventos
       </h2>
       <Card className="divide-y divide-slate-100">
@@ -22,7 +22,7 @@ export function UpcomingEvents({ events }: UpcomingEventsProps) {
               <Ticket className="h-5 w-5" />
             </div>
             <div className="min-w-0 flex-1">
-              <h3 className="font-medium text-slate-900">{event.title}</h3>
+              <h3 className="font-normal text-slate-900">{event.title}</h3>
               <p className="text-sm text-slate-500">
                 {event.date} · {event.timeRange} · {event.location}
               </p>

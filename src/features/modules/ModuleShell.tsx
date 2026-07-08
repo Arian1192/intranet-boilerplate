@@ -23,7 +23,7 @@ export function ModuleShell({ title, description, tabs }: ModuleShellProps) {
     >
       <div className="space-y-6">
         <div>
-          <h1 className="text-2xl font-bold text-slate-900">{title}</h1>
+          <h1 className="text-2xl font-semibold text-slate-900">{title}</h1>
           <p className="text-slate-500">{description}</p>
         </div>
         <Card className="p-12 text-center">

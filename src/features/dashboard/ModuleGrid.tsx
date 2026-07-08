@@ -10,7 +10,7 @@ export interface ModuleGridProps {
 export function ModuleGrid({ modules, title }: ModuleGridProps) {
   return (
     <section>
-      <h2 className="mb-4 text-xs font-bold uppercase tracking-wider text-slate-400">
+      <h2 className="mb-4 text-xs font-semibold uppercase tracking-wider text-slate-400">
         {title}
       </h2>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

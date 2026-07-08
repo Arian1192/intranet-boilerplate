@@ -24,7 +24,7 @@ export function TopNav({ user, notificationCount = 0, module }: TopNavProps) {
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-600 text-white font-bold">
               {APP_NAME.charAt(0)}
             </div>
-            <span className="text-lg font-semibold text-slate-900">{APP_NAME}</span>
+            <span className="text-lg font-medium text-slate-900">{APP_NAME}</span>
           </div>
 
           {module && (
@@ -37,7 +37,7 @@ export function TopNav({ user, notificationCount = 0, module }: TopNavProps) {
                   <button
                     key={tab}
                     type="button"
-                    className={`rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
+                    className={`rounded-lg px-3 py-2 text-sm font-normal transition-colors ${
                       isActive
                         ? 'bg-brand-50 text-brand-700'
                         : 'text-slate-600 hover:bg-slate-100'

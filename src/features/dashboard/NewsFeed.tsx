@@ -10,7 +10,7 @@ export function NewsFeed({ items }: NewsFeedProps) {
   return (
     <section>
       <div className="mb-4 flex items-center gap-2">
-        <h2 className="text-xs font-bold uppercase tracking-wider text-slate-400">
+        <h2 className="text-xs font-semibold uppercase tracking-wider text-slate-400">
           Novedades
         </h2>
         <button
@@ -29,7 +29,7 @@ export function NewsFeed({ items }: NewsFeedProps) {
             </div>
             <div className="min-w-0 flex-1">
               <div className="mb-1 flex flex-wrap items-center gap-2 text-xs text-slate-500">
-                <span className="font-medium text-slate-700">{item.author}</span>
+                <span className="font-normal text-slate-700">{item.author}</span>
                 <ArrowRight className="h-3 w-3" />
                 <span>{item.scope}</span>
                 <span>·</span>
@@ -40,7 +40,7 @@ export function NewsFeed({ items }: NewsFeedProps) {
                   </span>
                 )}
               </div>
-              <p className="text-sm font-medium text-slate-800">{item.title}</p>
+              <p className="text-sm font-normal text-slate-800">{item.title}</p>
             </div>
             <div className="flex items-center gap-2">
               {item.actionLabel && (

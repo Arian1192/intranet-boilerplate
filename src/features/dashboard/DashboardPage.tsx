@@ -45,7 +45,7 @@ export function DashboardPage() {
     >
       <div className="space-y-8">
         <div className="text-center">
-          <h1 className="text-3xl font-bold text-slate-900">
+          <h1 className="text-3xl font-semibold text-slate-900">
             {dashboard.greeting} 👋🏼
           </h1>
           {dashboard.birthdayNotice && (

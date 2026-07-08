@@ -11,7 +11,7 @@ export function Reminders({ reminders }: RemindersProps) {
 
   return (
     <section>
-      <h2 className="mb-4 text-xs font-bold uppercase tracking-wider text-slate-400">
+      <h2 className="mb-4 text-xs font-semibold uppercase tracking-wider text-slate-400">
         Mis recordatorios
       </h2>
       <Card className="flex flex-col items-center justify-center p-8 text-center">
@@ -28,7 +28,7 @@ export function Reminders({ reminders }: RemindersProps) {
           </ul>
         ) : (
           <>
-            <p className="font-medium text-slate-700">Aún no tienes recordatorios.</p>
+            <p className="font-normal text-slate-700">Aún no tienes recordatorios.</p>
             <p className="text-sm text-slate-500">
               Pronto podrás crear aquí tus tareas y recordatorios personales.
             </p>
