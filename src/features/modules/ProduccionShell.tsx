@@ -1,12 +1,20 @@
-import { ModuleShell } from './ModuleShell';
+import { Outlet } from 'react-router';
+import { AppLayout } from '@/components/layout';
+import type { User } from '@/types';
+
+const mockUser: User = {
+  id: '1',
+  email: 'test@example.com',
+  name: 'Test User',
+  role: 'Admin',
+};
+
+const tabs = [{ label: 'Eventos', href: '/produccion' }];
 
 export function ProduccionShell() {
   return (
-    <ModuleShell
-      
-      title="Producción"
-      description="Base de datos de eventos y producciones: calendario, tareas, responsables y presupuesto."
-      tabs={['Dashboard', 'Eventos', 'Calendario']}
-    />
+    <AppLayout user={mockUser} module={{ name: 'Producción', href: '/produccion', tabs }}>
+      <Outlet />
+    </AppLayout>
   );
 }

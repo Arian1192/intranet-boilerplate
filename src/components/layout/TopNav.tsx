@@ -1,5 +1,5 @@
 import { Bell } from 'lucide-react';
-import { NavLink } from 'react-router';
+import { Link, NavLink } from 'react-router';
 import { APP_NAME } from '@/lib/constants';
 import { cn } from '@/lib/utils';
 import { UserMenu } from './UserMenu';
@@ -7,6 +7,7 @@ import type { User } from '@/types';
 
 export interface ModuleHeader {
   name: string;
+  href?: string;
   tabs?: { label: string; href: string }[];
   actionLabel?: string;
 }
@@ -32,7 +33,13 @@ export function TopNav({ user, notificationCount = 0, module }: TopNavProps) {
           {module && (
             <nav className="hidden items-center gap-1 md:flex" aria-label={`Pestañas de ${module.name}`}>
               <span className="mr-2 text-sm font-semibold text-slate-400">/</span>
-              <span className="mr-3 text-sm font-semibold text-slate-900">{module.name}</span>
+              {module.href ? (
+                <Link to={module.href} className="mr-3 text-sm font-semibold text-slate-900 hover:text-slate-700">
+                  {module.name}
+                </Link>
+              ) : (
+                <span className="mr-3 text-sm font-semibold text-slate-900">{module.name}</span>
+              )}
               {module.tabs?.map((tab) => (
                 <NavLink
                   key={tab.href}

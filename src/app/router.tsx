@@ -13,6 +13,11 @@ import { ShowsPage } from '@/features/booking/pages/ShowsPage';
 import { LogisticsPage } from '@/features/booking/pages/LogisticsPage';
 import { ArtistsPage } from '@/features/booking/pages/ArtistsPage';
 import { AnalyticsPage } from '@/features/booking/pages/AnalyticsPage';
+import { EtraDashboardPage } from '@/features/etra/pages/EtraDashboardPage';
+import { ActionsPage } from '@/features/etra/pages/ActionsPage';
+import { SeedingPage } from '@/features/etra/pages/SeedingPage';
+import { AccountsPage } from '@/features/etra/pages/AccountsPage';
+import { EventsPage } from '@/features/produccion/pages/EventsPage';
 
 export function AppRouter() {
   return (
@@ -26,8 +31,15 @@ export function AppRouter() {
         <Route path="artistas" element={<ArtistsPage />} />
         <Route path="analitica" element={<AnalyticsPage />} />
       </Route>
-      <Route path="/etra" element={<EtraShell />} />
-      <Route path="/produccion" element={<ProduccionShell />} />
+      <Route path="/etra" element={<EtraShell />}>
+        <Route index element={<EtraDashboardPage />} />
+        <Route path="tareas" element={<ActionsPage />} />
+        <Route path="seeding" element={<SeedingPage />} />
+        <Route path="cuentas" element={<AccountsPage />} />
+      </Route>
+      <Route path="/produccion" element={<ProduccionShell />}>
+        <Route index element={<EventsPage />} />
+      </Route>
       <Route path="/cruda" element={<CrudaShell />} />
       <Route path="/crm" element={<CRMShell />} />
       <Route path="/personal" element={<TeamShell />} />
