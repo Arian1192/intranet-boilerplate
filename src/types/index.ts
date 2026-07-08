@@ -113,3 +113,94 @@ export interface Artist {
 export interface AnalyticsSummary {
   stats: { label: string; value: string; change?: string }[];
 }
+
+// Comunicación & PR
+export type ActionStatus = 'planned' | 'in-progress' | 'done' | 'cancelled';
+export interface PrAction {
+  id: string;
+  title: string;
+  account: string;
+  type: string;
+  amount: number;
+  status: ActionStatus;
+  date: string;
+}
+
+export type DeliveryTag = 'internal-use' | 'mrw-shipment' | 'delivered' | 'published';
+export interface Delivery {
+  id: string;
+  date: string;
+  account: string;
+  tags: DeliveryTag[];
+  recipient: string;
+  itemsSummary: string;
+  amount: number;
+}
+
+export interface InventoryItem {
+  id: string;
+  name: string;
+  variant: string;
+  ref: string;
+  quantity: number;
+}
+
+export interface Influencer {
+  id: string;
+  name: string;
+  initials: string;
+  instagramFollowers?: number;
+  tiktokFollowers?: number;
+}
+
+export interface SeedingReportRow {
+  date: string;
+  influencer: string;
+  pieces: number;
+  productCost: number;
+  shippingCost: number;
+  publicationStatus: string;
+}
+
+export type AccountStatus = 'active' | 'paused' | 'inactive';
+export interface PrAccount {
+  id: string;
+  name: string;
+  status: AccountStatus;
+  manager: string;
+  crmClient: string;
+  contact: string;
+}
+
+export interface ActivityItem {
+  id: string;
+  date: string;
+  title: string;
+  meta?: string;
+  badge?: string;
+}
+
+export interface PrDashboard {
+  activeAccounts: number;
+  totalAccounts: number;
+  billingThisMonth: number;
+  upcomingActions: ActivityItem[];
+  recentCoverage: ActivityItem[];
+}
+
+// Producción
+export type EventStatus = 'idea' | 'confirmed' | 'in-production' | 'in-progress' | 'closed';
+export interface ProductionEvent {
+  id: string;
+  title: string;
+  icon: string;
+  date: string;
+  isoDate: string;
+  time: string;
+  venue: string;
+  businessLines: string[];
+  manager?: string;
+  isHome: boolean;
+  role?: 'promoter';
+  status: EventStatus;
+}
