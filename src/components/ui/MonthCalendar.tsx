@@ -31,10 +31,14 @@ export function MonthCalendar({ year, month, monthLabel, events, onPrevMonth, on
   const days = buildDays(year, month);
   const eventsByDay = new Map<number, MonthCalendarEvent[]>();
   events.forEach((event) => {
-    const day = Number(event.isoDate.split('-')[2]);
-    const list = eventsByDay.get(day) ?? [];
-    list.push(event);
-    eventsByDay.set(day, list);
+    const eventDate = new Date(event.isoDate);
+    // Only include events that match the currently displayed year and month
+    if (eventDate.getFullYear() === year && eventDate.getMonth() === month) {
+      const day = eventDate.getDate();
+      const list = eventsByDay.get(day) ?? [];
+      list.push(event);
+      eventsByDay.set(day, list);
+    }
   });
 
   return (

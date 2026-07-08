@@ -24,4 +24,20 @@ describe('MonthCalendar', () => {
     fireEvent.click(screen.getByText('Siguiente →'));
     expect(onNextMonth).toHaveBeenCalledTimes(1);
   });
+
+  it('does not render events from a different month', () => {
+    render(
+      <MonthCalendar
+        year={2026}
+        month={6}
+        monthLabel="Julio de 2026"
+        events={[{ id: 'e1', isoDate: '2026-08-15', label: 'Evento Agosto', toneClassName: 'bg-blue-100 text-blue-700' }]}
+        onPrevMonth={() => {}}
+        onNextMonth={() => {}}
+      />
+    );
+
+    expect(screen.getByText('Julio de 2026')).toBeInTheDocument();
+    expect(screen.queryByText('Evento Agosto')).not.toBeInTheDocument();
+  });
 });
