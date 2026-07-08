@@ -19,7 +19,7 @@ const tabs = [
 
 export function ConceptOneShell() {
   return (
-    <AppLayout user={mockUser} module={{ name: 'Booking & Management', tabs }}>
+    <AppLayout user={mockUser} module={{ name: 'Booking & Management', tabs, actionLabel: '+ Añadir show' }}>
       <Outlet />
     </AppLayout>
   );

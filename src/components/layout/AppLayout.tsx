@@ -12,7 +12,7 @@ export function AppLayout({ user, children, module }: AppLayoutProps) {
   return (
     <div className="min-h-screen bg-slate-50">
       <TopNav user={user} notificationCount={7} module={module} />
-      <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">{children}</main>
+      <main className="mx-auto max-w-[1248px] px-4 py-7 xl:px-0">{children}</main>
     </div>
   );
 }

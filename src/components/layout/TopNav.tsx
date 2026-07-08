@@ -8,6 +8,7 @@ import type { User } from '@/types';
 export interface ModuleHeader {
   name: string;
   tabs?: { label: string; href: string }[];
+  actionLabel?: string;
 }
 
 export interface TopNavProps {
@@ -19,7 +20,7 @@ export interface TopNavProps {
 export function TopNav({ user, notificationCount = 0, module }: TopNavProps) {
   return (
     <header className="sticky top-0 z-30 border-b border-slate-100 bg-white/80 backdrop-blur-sm">
-      <div className="flex h-16 items-center justify-between px-6">
+      <div className="mx-auto flex h-14 max-w-[1248px] items-center justify-between px-4 xl:px-0">
         <div className="flex items-center gap-6">
           <div className="flex items-center gap-3">
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-600 text-white font-bold">
@@ -39,7 +40,7 @@ export function TopNav({ user, notificationCount = 0, module }: TopNavProps) {
                   end={tab.href === '/conceptone'}
                   className={({ isActive }) =>
                     cn(
-                      'rounded-lg px-3 py-2 text-sm font-normal transition-colors',
+                      'rounded-lg px-3 py-1.5 text-sm font-medium transition-colors',
                       isActive
                         ? 'bg-brand-50 text-brand-700'
                         : 'text-slate-600 hover:bg-slate-100'
@@ -54,6 +55,14 @@ export function TopNav({ user, notificationCount = 0, module }: TopNavProps) {
         </div>
 
         <div className="flex items-center gap-4">
+          {module?.actionLabel && (
+            <button
+              type="button"
+              className="hidden h-9 items-center rounded-lg bg-brand-600 px-4 text-sm font-semibold text-white shadow-md shadow-brand-600/20 hover:bg-brand-700 md:inline-flex"
+            >
+              {module.actionLabel}
+            </button>
+          )}
           <button
             type="button"
             className="relative grid h-9 w-9 place-items-center rounded-lg text-slate-500 hover:bg-slate-100"
