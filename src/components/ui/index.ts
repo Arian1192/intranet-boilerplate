@@ -6,3 +6,4 @@ export * from './Avatar';
 export * from './SegmentedControl';
 export * from './KanbanBoard';
 export * from './MasterDetailList';
+export * from './MonthCalendar';
