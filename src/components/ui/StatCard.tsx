@@ -1,4 +1,4 @@
-import { Card } from '@/components/ui';
+import { Card } from './Card';
 
 export interface StatCardProps {
   label: string;

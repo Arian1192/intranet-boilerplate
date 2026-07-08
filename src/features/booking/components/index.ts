@@ -4,5 +4,4 @@ export * from './ShowListItem';
 export * from './DataTable';
 export * from './TaskList';
 export * from './ArtistCard';
-export * from './StatCard';
 export * from './ChartPlaceholder';

@@ -1,4 +1,5 @@
-import { StatCard, ChartPlaceholder } from '@/features/booking/components';
+import { StatCard } from '@/components/ui';
+import { ChartPlaceholder } from '@/features/booking/components';
 import { useAnalytics } from '../hooks/useAnalytics';
 
 export function AnalyticsPage() {
