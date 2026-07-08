@@ -2014,14 +2014,14 @@ git commit -m "feat: implement Etra dashboard page"
 - Modify: `src/features/etra/pages/ActionsPage.tsx`
 
 **Interfaces:**
-- Consumes: `usePrActions`, `KanbanBoard`, `KanbanCard`, `Badge`, `Input` from `@/components/ui`.
+- Consumes: `usePrActions`, `KanbanBoard`, `KanbanCard`, `Badge` from `@/components/ui`.
 - Produces: complete Acciones page.
 
 - [ ] **Step 1: Implement the page**
 
 ```tsx
 // src/features/etra/pages/ActionsPage.tsx
-import { KanbanBoard, KanbanCard, Badge, Input } from '@/components/ui';
+import { KanbanBoard, KanbanCard, Badge } from '@/components/ui';
 import { usePrActions } from '../hooks/usePrActions';
 import type { PrAction, ActionStatus } from '@/types';
 
@@ -2108,12 +2108,6 @@ export function ActionsPage() {
 }
 ```
 
-Note: `Input` is imported but unused in this version since the reference's Acciones page has no free-text search — remove the `Input` import to avoid an unused-import lint error:
-
-```tsx
-import { KanbanBoard, KanbanCard, Badge } from '@/components/ui';
-```
-
 - [ ] **Step 2: Verify in the browser**
 
 ```bash
@@ -2128,7 +2122,7 @@ Navigate to `/etra/tareas` and confirm all 4 columns render with correct counts 
 npm run lint
 ```
 
-Expected: no errors (confirms the unused `Input` import was removed).
+Expected: no errors.
 
 - [ ] **Step 4: Commit**
 
