@@ -40,4 +40,23 @@ describe('MonthCalendar', () => {
     expect(screen.getByText('Julio de 2026')).toBeInTheDocument();
     expect(screen.queryByText('Evento Agosto')).not.toBeInTheDocument();
   });
+
+  it('does not misclassify month-boundary events due to timezone parsing', () => {
+    // Test that an event on August 1st (2026-08-01) is not rendered when viewing July.
+    // This catches timezone bugs where UTC-parsing a date-only string then reading it
+    // in local timezone can shift it to the previous day/month in negative UTC offsets.
+    render(
+      <MonthCalendar
+        year={2026}
+        month={6}
+        monthLabel="Julio de 2026"
+        events={[{ id: 'e1', isoDate: '2026-08-01', label: 'Evento 1 de Agosto', toneClassName: 'bg-green-100 text-green-700' }]}
+        onPrevMonth={() => {}}
+        onNextMonth={() => {}}
+      />
+    );
+
+    expect(screen.getByText('Julio de 2026')).toBeInTheDocument();
+    expect(screen.queryByText('Evento 1 de Agosto')).not.toBeInTheDocument();
+  });
 });
