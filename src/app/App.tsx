@@ -1,17 +1,12 @@
-import { AppLayout } from '@/components/layout';
-import type { User } from '@/types';
+import { AppRouter } from './router';
+import { RepositoryProvider, createRepository } from '@/repositories';
 
-const mockUser: User = {
-  id: '1',
-  email: 'test@example.com',
-  name: 'Test User',
-  role: 'Admin',
-};
+const repository = createRepository(import.meta.env.VITE_DATA_ADAPTER || 'mock');
 
 export default function App() {
   return (
-    <AppLayout user={mockUser}>
-      <div className="text-slate-600">Layout works</div>
-    </AppLayout>
+    <RepositoryProvider repository={repository}>
+      <AppRouter />
+    </RepositoryProvider>
   );
 }
