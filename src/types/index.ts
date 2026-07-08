@@ -54,3 +54,62 @@ export interface Dashboard {
   upcomingEvents: Event[];
   reminders: Reminder[];
 }
+
+export type ShowStatus =
+  | 'tentative'
+  | 'offer'
+  | 'confirmed'
+  | 'contract'
+  | 'pending-payment'
+  | 'pending-settlement'
+  | 'done';
+
+export interface Kpi {
+  id: string;
+  label: string;
+  amount: number;
+  count: number;
+  status: ShowStatus;
+}
+
+export interface ShowSummary {
+  id: string;
+  title: string;
+  date: string;
+  daysLeft: number;
+  badges: string[];
+}
+
+export interface BookingDashboard {
+  kpis: Kpi[];
+  advancing: ShowSummary[];
+  logistics: ShowSummary[];
+  upcomingShows: ShowSummary[];
+}
+
+export interface Show {
+  id: string;
+  name: string;
+  client: string;
+  date: string;
+  status: ShowStatus;
+  amount: number;
+}
+
+export interface LogisticsItem {
+  id: string;
+  title: string;
+  tasks: { id: string; label: string; done: boolean }[];
+}
+
+export interface Artist {
+  id: string;
+  name: string;
+  role: string;
+  email: string;
+  avatar?: string;
+}
+
+export interface AnalyticsSummary {
+  stats: { label: string; value: string; change?: string }[];
+}
