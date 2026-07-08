@@ -1,12 +1,13 @@
 import { Bell } from 'lucide-react';
+import { NavLink } from 'react-router';
 import { APP_NAME } from '@/lib/constants';
+import { cn } from '@/lib/utils';
 import { UserMenu } from './UserMenu';
 import type { User } from '@/types';
 
 export interface ModuleHeader {
   name: string;
-  tabs?: string[];
-  activeTab?: string;
+  tabs?: { label: string; href: string }[];
 }
 
 export interface TopNavProps {
@@ -31,22 +32,23 @@ export function TopNav({ user, notificationCount = 0, module }: TopNavProps) {
             <nav className="hidden items-center gap-1 md:flex" aria-label={`Pestañas de ${module.name}`}>
               <span className="mr-2 text-sm font-semibold text-slate-400">/</span>
               <span className="mr-3 text-sm font-semibold text-slate-900">{module.name}</span>
-              {module.tabs?.map((tab) => {
-                const isActive = tab === (module.activeTab || module.tabs?.[0]);
-                return (
-                  <button
-                    key={tab}
-                    type="button"
-                    className={`rounded-lg px-3 py-2 text-sm font-normal transition-colors ${
+              {module.tabs?.map((tab) => (
+                <NavLink
+                  key={tab.href}
+                  to={tab.href}
+                  end={tab.href === '/conceptone'}
+                  className={({ isActive }) =>
+                    cn(
+                      'rounded-lg px-3 py-2 text-sm font-normal transition-colors',
                       isActive
                         ? 'bg-brand-50 text-brand-700'
                         : 'text-slate-600 hover:bg-slate-100'
-                    }`}
-                  >
-                    {tab}
-                  </button>
-                );
-              })}
+                    )
+                  }
+                >
+                  {tab.label}
+                </NavLink>
+              ))}
             </nav>
           )}
         </div>
