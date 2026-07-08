@@ -1,5 +1,5 @@
+import { MODULE_ICONS } from '@/lib/icons';
 import type { Module } from '@/types';
-import * as Icons from 'lucide-react';
 import { Link } from 'react-router';
 
 export interface ModuleGridProps {
@@ -15,9 +15,7 @@ export function ModuleGrid({ modules, title }: ModuleGridProps) {
       </h2>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {modules.map((module) => {
-          const Icon = Icons[module.icon as keyof typeof Icons] as React.ComponentType<{
-            className?: string;
-          }>;
+          const Icon = MODULE_ICONS[module.id];
           return (
             <Link
               key={module.id}

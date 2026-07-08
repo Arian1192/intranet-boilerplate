@@ -1,8 +1,8 @@
 import { MODULES } from '@/lib/constants';
+import { MODULE_ICONS } from '@/lib/icons';
 import { Link, useLocation } from 'react-router';
 import { ChevronDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import * as Icons from 'lucide-react';
 
 export function ModuleSelector() {
   const location = useLocation();
@@ -11,7 +11,7 @@ export function ModuleSelector() {
   return (
     <nav className="hidden items-center gap-1 md:flex" aria-label="Módulos de negocio">
       {MODULES.filter((m) => m.category === 'business').map((module) => {
-        const Icon = Icons[module.icon as keyof typeof Icons] as React.ComponentType<{ className?: string }>;
+        const Icon = MODULE_ICONS[module.id];
         const isActive = activeModule?.id === module.id;
         return (
           <Link

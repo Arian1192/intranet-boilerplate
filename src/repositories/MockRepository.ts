@@ -40,7 +40,7 @@ export class MockRepository implements Repository {
     return this.delay({
       greeting: 'Hola, Test',
       birthdayNotice: 'El cumple de un compañero es en 3 días 🎂',
-      weather: 'Barcelona · 34° / 23°',
+      weather: 'Madrid · 34° / 23°',
       modules: [
         {
           id: 'conceptone',
@@ -102,7 +102,7 @@ export class MockRepository implements Repository {
       news: [
         {
           id: 'news-1',
-          author: 'Carlos Pego',
+          author: 'Ana López',
           scope: 'Grupo',
           date: '06 jul 2026',
           title: 'Comida de verano, ganas de pasar un rato con todos vosotros! 🍻',
@@ -112,7 +112,7 @@ export class MockRepository implements Repository {
         },
         {
           id: 'news-2',
-          author: 'Carlos Pego',
+          author: 'Ana López',
           scope: 'Grupo',
           date: '05 jul 2026',
           title: 'Teletrabajo hasta el 7 de julio incluido',
@@ -121,18 +121,18 @@ export class MockRepository implements Repository {
       upcomingEvents: [
         {
           id: 'event-1',
-          title: 'Mixmag Intimate Sessions: BLOND:ISH',
+          title: 'Festival Primavera Interna',
           date: '15 jul 2026',
           timeRange: '20:00–21:30',
-          location: 'Soho Farmhouse, Ibiza',
+          location: 'Sala Norte, Madrid',
           status: 'confirmed',
         },
         {
           id: 'event-2',
-          title: 'Please Quiet x SIGHT',
+          title: 'Evento Corporativo Q3',
           date: '18 jul 2026',
           timeRange: '18:00–23:00',
-          location: 'Cósmico - SLS Barcelona, Barcelona',
+          location: 'Terraza Este, Valencia',
           status: 'in-production',
         },
       ],
