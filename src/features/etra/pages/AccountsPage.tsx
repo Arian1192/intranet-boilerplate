@@ -86,7 +86,7 @@ export function AccountsPage() {
             </Badge>
           </div>
         )}
-        renderDetail={(account) => <AccountDetail account={account} />}
+        renderDetail={(account) => <AccountDetail key={account.id} account={account} />}
       />
     </div>
   );
