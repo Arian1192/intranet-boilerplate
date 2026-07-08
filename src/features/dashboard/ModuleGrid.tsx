@@ -20,15 +20,13 @@ export function ModuleGrid({ modules, title }: ModuleGridProps) {
             <Link
               key={module.id}
               to={`/${module.slug}`}
-              className="group grid grid-cols-[auto_1fr] gap-x-3 gap-y-1 rounded-xl border border-slate-100 bg-white p-5 shadow-sm transition-shadow hover:shadow-md"
+              className="group block h-full rounded-xl border border-slate-100 bg-white p-5 shadow-sm transition-shadow hover:shadow-md"
             >
-              <div className="row-span-2 flex h-10 w-10 items-center justify-center rounded-lg bg-slate-50 text-slate-600 group-hover:bg-brand-50 group-hover:text-brand-600">
-                {Icon && <Icon className="h-5 w-5" aria-hidden="true" />}
+              <div className="flex items-center gap-2">
+                {Icon && <Icon className="h-5 w-5 shrink-0 text-slate-500" aria-hidden="true" />}
+                <span className="font-semibold text-slate-800">{module.name}</span>
               </div>
-              <h3 className="self-start font-semibold text-slate-900">{module.name}</h3>
-              <p className="col-span-2 text-sm leading-relaxed text-slate-500">
-                {module.shortDescription}
-              </p>
+              <p className="mt-1 text-sm text-slate-500">{module.shortDescription}</p>
             </Link>
           );
         })}
