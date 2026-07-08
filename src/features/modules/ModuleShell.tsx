@@ -5,6 +5,7 @@ import type { User } from '@/types';
 export interface ModuleShellProps {
   title: string;
   description: string;
+  tabs?: string[];
 }
 
 const mockUser: User = {
@@ -14,9 +15,12 @@ const mockUser: User = {
   role: 'Admin',
 };
 
-export function ModuleShell({ title, description }: ModuleShellProps) {
+export function ModuleShell({ title, description, tabs }: ModuleShellProps) {
   return (
-    <AppLayout user={mockUser}>
+    <AppLayout
+      user={mockUser}
+      module={{ name: title, tabs, activeTab: tabs?.[0] }}
+    >
       <div className="space-y-6">
         <div>
           <h1 className="text-2xl font-bold text-slate-900">{title}</h1>
