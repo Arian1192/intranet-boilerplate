@@ -1,4 +1,13 @@
-import type { Dashboard, User, UserSession } from '@/types';
+import type {
+  AnalyticsSummary,
+  Artist,
+  BookingDashboard,
+  Dashboard,
+  LogisticsItem,
+  Show,
+  User,
+  UserSession,
+} from '@/types';
 import type { Repository } from '../types';
 
 export class SupabaseAdapter implements Repository {
@@ -16,5 +25,25 @@ export class SupabaseAdapter implements Repository {
 
   async getDashboard(): Promise<Dashboard> {
     throw new Error('SupabaseAdapter not implemented in Fase 1');
+  }
+
+  async getBookingDashboard(): Promise<BookingDashboard> {
+    throw new Error('SupabaseAdapter not implemented in Fase 2');
+  }
+
+  async getShows(): Promise<Show[]> {
+    throw new Error('SupabaseAdapter not implemented in Fase 2');
+  }
+
+  async getLogistics(): Promise<LogisticsItem[]> {
+    throw new Error('SupabaseAdapter not implemented in Fase 2');
+  }
+
+  async getArtists(): Promise<Artist[]> {
+    throw new Error('SupabaseAdapter not implemented in Fase 2');
+  }
+
+  async getAnalytics(): Promise<AnalyticsSummary> {
+    throw new Error('SupabaseAdapter not implemented in Fase 2');
   }
 }

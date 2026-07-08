@@ -1,4 +1,13 @@
-import type { Dashboard, User, UserSession } from '@/types';
+import type {
+  AnalyticsSummary,
+  Artist,
+  BookingDashboard,
+  Dashboard,
+  LogisticsItem,
+  Show,
+  User,
+  UserSession,
+} from '@/types';
 import type { Repository } from './types';
 
 export class MockRepository implements Repository {
@@ -137,6 +146,140 @@ export class MockRepository implements Repository {
         },
       ],
       reminders: [],
+    });
+  }
+
+  async getBookingDashboard(): Promise<BookingDashboard> {
+    return this.delay({
+      kpis: [
+        { id: '1', label: 'TENTATIVE', amount: 0, count: 0, status: 'tentative' },
+        { id: '2', label: 'OFERTA', amount: 0, count: 0, status: 'offer' },
+        { id: '3', label: 'CONFIRMADO', amount: 7000, count: 4, status: 'confirmed' },
+        { id: '4', label: 'CONTRATO', amount: 0, count: 0, status: 'contract' },
+        { id: '5', label: 'PENDIENTE PAGO', amount: 800, count: 1, status: 'pending-payment' },
+        { id: '6', label: 'PENDIENTE LIQUIDAR', amount: 0, count: 0, status: 'pending-settlement' },
+        { id: '7', label: 'CELEBRADO', amount: 0, count: 0, status: 'done' },
+      ],
+      advancing: [
+        {
+          id: 'a1',
+          title: 'Evento Primavera @ Sala Norte',
+          date: '18 jul 2026',
+          daysLeft: 10,
+          badges: ['Contrato sin firmar', 'Depósito pendiente', 'Falta firmante'],
+        },
+        {
+          id: 'a2',
+          title: 'Proyecto Q3 @ Espacio Central',
+          date: '25 jul 2026',
+          daysLeft: 17,
+          badges: ['Contrato sin firmar', 'Depósito pendiente', 'Falta firmante'],
+        },
+        {
+          id: 'a3',
+          title: 'Campaña Verano @ Terraza Este',
+          date: '04 sept 2026',
+          daysLeft: 58,
+          badges: ['Contrato sin firmar', 'Falta firmante'],
+        },
+      ],
+      logistics: [
+        {
+          id: 'l1',
+          title: 'Evento Primavera @ Sala Norte',
+          date: '18 jul 2026',
+          daysLeft: 10,
+          badges: ['Pendiente logística', 'Sin set times', 'Gastos sin cerrar'],
+        },
+        {
+          id: 'l2',
+          title: 'Proyecto Q3 @ Espacio Central',
+          date: '25 jul 2026',
+          daysLeft: 17,
+          badges: ['Pendiente logística', 'Sin set times', 'Gastos sin cerrar'],
+        },
+        {
+          id: 'l3',
+          title: 'Campaña Verano @ Terraza Este',
+          date: '04 sept 2026',
+          daysLeft: 58,
+          badges: ['Pendiente logística', 'Sin set times'],
+        },
+      ],
+      upcomingShows: [
+        {
+          id: 'u1',
+          title: 'Evento Primavera @ Sala Norte',
+          date: '18 jul 2026',
+          daysLeft: 10,
+          badges: ['Confirmado', 'No abonado'],
+        },
+        {
+          id: 'u2',
+          title: 'Proyecto Q3 @ Espacio Central',
+          date: '25 jul 2026',
+          daysLeft: 17,
+          badges: ['Confirmado', 'No abonado'],
+        },
+        {
+          id: 'u3',
+          title: 'Campaña Verano @ Terraza Este',
+          date: '04 sept 2026',
+          daysLeft: 58,
+          badges: ['Confirmado', 'No abonado'],
+        },
+      ],
+    });
+  }
+
+  async getShows(): Promise<Show[]> {
+    return this.delay([
+      { id: 's1', name: 'Evento Primavera', client: 'Cliente A', date: '15 jul 2026', status: 'confirmed', amount: 3500 },
+      { id: 's2', name: 'Proyecto Q3', client: 'Cliente B', date: '18 jul 2026', status: 'pending-payment', amount: 800 },
+      { id: 's3', name: 'Campaña Verano', client: 'Cliente C', date: '25 jul 2026', status: 'confirmed', amount: 2200 },
+      { id: 's4', name: 'Lanzamiento Producto', client: 'Cliente D', date: '04 sept 2026', status: 'contract', amount: 1500 },
+    ]);
+  }
+
+  async getLogistics(): Promise<LogisticsItem[]> {
+    return this.delay([
+      {
+        id: 'log1',
+        title: 'Evento Primavera',
+        tasks: [
+          { id: 't1', label: 'Confirmar itinerario', done: false },
+          { id: 't2', label: 'Reservar vuelos', done: false },
+          { id: 't3', label: 'Definir horarios', done: true },
+        ],
+      },
+      {
+        id: 'log2',
+        title: 'Proyecto Q3',
+        tasks: [
+          { id: 't4', label: 'Confirmar itinerario', done: false },
+          { id: 't5', label: 'Reservar alojamiento', done: false },
+        ],
+      },
+    ]);
+  }
+
+  async getArtists(): Promise<Artist[]> {
+    return this.delay([
+      { id: 'ar1', name: 'Ana López', role: 'Directora', email: 'ana@example.com' },
+      { id: 'ar2', name: 'Carlos Ruiz', role: 'Productor', email: 'carlos@example.com' },
+      { id: 'ar3', name: 'María García', role: 'Técnica', email: 'maria@example.com' },
+      { id: 'ar4', name: 'Laura Martín', role: 'Manager', email: 'laura@example.com' },
+    ]);
+  }
+
+  async getAnalytics(): Promise<AnalyticsSummary> {
+    return this.delay({
+      stats: [
+        { label: 'Items este mes', value: '12', change: '+20%' },
+        { label: 'Ingresos', value: '18.400 €', change: '+8%' },
+        { label: 'Pendientes', value: '3', change: '-1' },
+        { label: 'Confirmados', value: '7', change: '+2' },
+      ],
     });
   }
 }

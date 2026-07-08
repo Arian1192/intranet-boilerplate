@@ -1,0 +1,45 @@
+import { useNavigate } from 'react-router';
+import { formatCurrency } from '@/lib/format';
+import type { Kpi } from '@/types';
+
+export interface KpiCardProps {
+  kpi: Kpi;
+}
+
+const statusStyles: Record<Kpi['status'], string> = {
+  tentative: 'bg-slate-500',
+  offer: 'bg-sky-400',
+  confirmed: 'bg-sky-500',
+  contract: 'bg-blue-500',
+  'pending-payment': 'bg-rose-500',
+  'pending-settlement': 'bg-indigo-500',
+  done: 'bg-emerald-500',
+};
+
+const statusLabels: Record<Kpi['status'], string> = {
+  tentative: 'Tentative',
+  offer: 'Oferta',
+  confirmed: 'Confirmado',
+  contract: 'Contrato',
+  'pending-payment': 'Pendiente pago',
+  'pending-settlement': 'Pendiente liquidar',
+  done: 'Celebrado',
+};
+
+export function KpiCard({ kpi }: KpiCardProps) {
+  const navigate = useNavigate();
+  const label = statusLabels[kpi.status];
+
+  return (
+    <button
+      type="button"
+      title={`Ver shows en ${label}`}
+      className={`rounded-xl px-3 py-2.5 text-left text-white transition-transform hover:-translate-y-0.5 ${statusStyles[kpi.status]}`}
+      onClick={() => navigate(`/conceptone/shows?status=${kpi.status}`)}
+    >
+      <div className="text-lg font-bold leading-tight">{formatCurrency(kpi.amount)}</div>
+      <div className="text-[11px] font-medium uppercase tracking-wide opacity-90">{label}</div>
+      <div className="text-[11px] opacity-80">{kpi.count} shows</div>
+    </button>
+  );
+}

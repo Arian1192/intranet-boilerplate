@@ -15,12 +15,9 @@ const mockUser: User = {
   role: 'Admin',
 };
 
-export function ModuleShell({ title, description, tabs }: ModuleShellProps) {
+export function ModuleShell({ title, description }: ModuleShellProps) {
   return (
-    <AppLayout
-      user={mockUser}
-      module={{ name: title, tabs, activeTab: tabs?.[0] }}
-    >
+    <AppLayout user={mockUser} module={{ name: title }}>
       <div className="space-y-6">
         <div>
           <h1 className="text-2xl font-semibold text-slate-900">{title}</h1>
