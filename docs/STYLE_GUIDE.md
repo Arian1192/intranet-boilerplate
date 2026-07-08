@@ -10,14 +10,14 @@ This document defines the visual language and component conventions for the boil
 
 | Token | Hex | Usage |
 |-------|-----|-------|
-| `brand-50` | `#F5F3FF` | Hover backgrounds, light accents |
+| `brand-50` | `#F7F3FB` | Hover backgrounds, light accents |
 | `brand-100` | `#EDE9FE` | Light badges |
-| `brand-600` | `#7C3AED` | Primary buttons, links, active nav |
-| `brand-700` | `#6D28D9` | Primary hover |
+| `brand-600` | `#773C9F` | Primary buttons, links, active nav |
+| `brand-700` | `#633383` | Primary hover |
 
 ### Neutrals
 
-Use `slate-*` for text, borders, and backgrounds. Prefer `slate-50` for page background, `slate-100` for borders, `slate-500` for secondary text, `slate-900` for headings.
+Use `slate-*` for text, borders, and backgrounds. Prefer `slate-50` for page background, `slate-100` for borders, `slate-500` for secondary text. Headings use `slate-800` (`#1E293B`), not slate-900 — verified against the reference app.
 
 ### Status
 
@@ -31,7 +31,7 @@ Use `slate-*` for text, borders, and backgrounds. Prefer `slate-50` for page bac
 
 ## Typography
 
-- Font: `Inter`, fallback `system-ui`.
+- Font: system font stack (`ui-sans-serif, system-ui, sans-serif`) — no web font is loaded.
 - Headings: semibold/bold, tight leading.
 - Body: normal weight, relaxed leading.
 - Labels: uppercase, bold, wide tracking, small size.
