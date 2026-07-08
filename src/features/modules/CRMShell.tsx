@@ -1,4 +1,10 @@
-// Stub for Task 6 compilation; full implementation in Task 8
+import { ModuleShell } from './ModuleShell';
+
 export function CRMShell() {
-  return <div className="p-8 text-slate-600">CRM placeholder</div>;
+  return (
+    <ModuleShell
+      title="CRM"
+      description="Base de clientes y contactos, pipeline de oportunidades, KPIs comerciales."
+    />
+  );
 }

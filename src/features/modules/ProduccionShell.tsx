@@ -1,4 +1,10 @@
-// Stub for Task 6 compilation; full implementation in Task 8
+import { ModuleShell } from './ModuleShell';
+
 export function ProduccionShell() {
-  return <div className="p-8 text-slate-600">Producción placeholder</div>;
+  return (
+    <ModuleShell
+      title="Producción"
+      description="Base de datos de eventos y producciones: calendario, tareas, responsables y presupuesto."
+    />
+  );
 }

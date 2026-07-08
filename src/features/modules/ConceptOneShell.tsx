@@ -1,4 +1,10 @@
-// Stub for Task 6 compilation; full implementation in Task 8
+import { ModuleShell } from './ModuleShell';
+
 export function ConceptOneShell() {
-  return <div className="p-8 text-slate-600">Booking & Management placeholder</div>;
+  return (
+    <ModuleShell
+      title="Booking & Management"
+      description="Gestiona shows y su calculadora, liquidaciones, fichas de artistas, logística y reportes."
+    />
+  );
 }

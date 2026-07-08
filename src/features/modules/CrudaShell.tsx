@@ -1,4 +1,10 @@
-// Stub for Task 6 compilation; full implementation in Task 8
+import { ModuleShell } from './ModuleShell';
+
 export function CrudaShell() {
-  return <div className="p-8 text-slate-600">CRUDA placeholder</div>;
+  return (
+    <ModuleShell
+      title="CRUDA"
+      description="Catálogo, pedidos y control de stock de ropa y merch, con analítica."
+    />
+  );
 }
