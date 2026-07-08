@@ -32,3 +32,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+
+# Subagent-Driven Development scratch files
+.superpowers/
+
+# Pi subagents metadata
+.pi-subagents/
