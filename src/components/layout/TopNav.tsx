@@ -1,6 +1,7 @@
 import { Bell } from 'lucide-react';
 import { APP_NAME } from '@/lib/constants';
 import { UserMenu } from './UserMenu';
+import { ModuleSelector } from './ModuleSelector';
 import type { User } from '@/types';
 
 export interface TopNavProps {
@@ -17,6 +18,9 @@ export function TopNav({ user, notificationCount = 0 }: TopNavProps) {
             {APP_NAME.charAt(0)}
           </div>
           <span className="text-lg font-semibold text-slate-900">{APP_NAME}</span>
+          <div className="hidden md:block">
+            <ModuleSelector />
+          </div>
         </div>
 
         <div className="flex items-center gap-4">
