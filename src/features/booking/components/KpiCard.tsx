@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router';
 import { formatCurrency } from '@/lib/format';
 import type { Kpi } from '@/types';
 
@@ -15,14 +16,30 @@ const statusStyles: Record<Kpi['status'], string> = {
   done: 'bg-emerald-500',
 };
 
+const statusLabels: Record<Kpi['status'], string> = {
+  tentative: 'Tentative',
+  offer: 'Oferta',
+  confirmed: 'Confirmado',
+  contract: 'Contrato',
+  'pending-payment': 'Pendiente pago',
+  'pending-settlement': 'Pendiente liquidar',
+  done: 'Celebrado',
+};
+
 export function KpiCard({ kpi }: KpiCardProps) {
+  const navigate = useNavigate();
+  const label = statusLabels[kpi.status];
+
   return (
-    <div className={`flex h-[76px] flex-col justify-between rounded-[10px] px-3 py-2.5 text-white ${statusStyles[kpi.status]}`}>
-      <p className="text-xl font-semibold leading-6">{formatCurrency(kpi.amount)}</p>
-      <div>
-        <p className="text-xs font-medium uppercase leading-4 tracking-wide">{kpi.label}</p>
-        <p className="text-xs leading-4 opacity-90">{kpi.count} shows</p>
-      </div>
-    </div>
+    <button
+      type="button"
+      title={`Ver shows en ${label}`}
+      className={`rounded-xl px-3 py-2.5 text-left text-white transition-transform hover:-translate-y-0.5 ${statusStyles[kpi.status]}`}
+      onClick={() => navigate(`/conceptone/shows?status=${kpi.status}`)}
+    >
+      <div className="text-lg font-bold leading-tight">{formatCurrency(kpi.amount)}</div>
+      <div className="text-[11px] font-medium uppercase tracking-wide opacity-90">{label}</div>
+      <div className="text-[11px] opacity-80">{kpi.count} shows</div>
+    </button>
   );
 }
