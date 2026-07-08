@@ -1,3 +1,17 @@
+import { AppLayout } from '@/components/layout';
+import type { User } from '@/types';
+
+const mockUser: User = {
+  id: '1',
+  email: 'test@example.com',
+  name: 'Test User',
+  role: 'Admin',
+};
+
 export default function App() {
-  return <div className="p-8 text-brand-600 font-bold">Tailwind works</div>;
+  return (
+    <AppLayout user={mockUser}>
+      <div className="text-slate-600">Layout works</div>
+    </AppLayout>
+  );
 }
