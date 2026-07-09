@@ -100,3 +100,29 @@ describe('AccountsPage — detail tabs (Acciones, Obligaciones)', () => {
     expect(screen.getByRole('progressbar')).toBeInTheDocument();
   });
 });
+
+describe('AccountsPage — detail tabs (Cobertura, Facturación)', () => {
+  it('renders coverage items with the total value', () => {
+    render(<AccountsPage />);
+    fireEvent.click(screen.getAllByText('Cliente A')[0]);
+    fireEvent.click(screen.getByRole('button', { name: 'Cobertura' }));
+
+    expect(screen.getByText(/Valor total de cobertura:/)).toBeInTheDocument();
+    expect(screen.getByText('Mención en medios')).toBeInTheDocument();
+    expect(screen.getByText('Prensa Digital · Online')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Añadir' })).toBeInTheDocument();
+  });
+
+  it('renders the billing defaults, formula banner and monthly totals', () => {
+    render(<AccountsPage />);
+    fireEvent.click(screen.getAllByText('Cliente A')[0]);
+    fireEvent.click(screen.getByRole('button', { name: 'Facturación' }));
+
+    expect(screen.getByText('Retainer mensual (por defecto)')).toBeInTheDocument();
+    expect(screen.getByText(/Ingresos =/)).toBeInTheDocument();
+    // Jul 2026: 5500 + 2000 = 7500; Jun 2026: 5500. Total: 11000 + 2000 = 13.000
+    expect(screen.getByText('7500,00 €')).toBeInTheDocument();
+    expect(screen.getByText('13.000,00 €')).toBeInTheDocument();
+    expect(screen.getByText(/Las comisiones se calculan solas desde las acciones/)).toBeInTheDocument();
+  });
+});

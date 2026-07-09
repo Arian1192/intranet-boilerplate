@@ -1,6 +1,12 @@
 import { useState } from 'react';
 import { MasterDetailList, Badge, Button, Card, Select, UnderlineTabs } from '@/components/ui';
-import { AccountForm, AccountActionsTab, AccountObligationsTab } from '../components';
+import {
+  AccountForm,
+  AccountActionsTab,
+  AccountObligationsTab,
+  AccountCoverageTab,
+  AccountBillingTab,
+} from '../components';
 import { usePrAccounts } from '../hooks/usePrAccounts';
 import type { PrAccount } from '@/types';
 
@@ -57,12 +63,8 @@ function AccountDetail({ account }: { account: PrAccount }) {
       {tab === 'datos' && <AccountDatosTab account={account} />}
       {tab === 'acciones' && <AccountActionsTab account={account} />}
       {tab === 'obligaciones' && <AccountObligationsTab account={account} />}
-      {tab === 'cobertura' && (
-        <p className="py-8 text-center text-slate-400">Pendiente (Task 16).</p>
-      )}
-      {tab === 'facturacion' && (
-        <p className="py-8 text-center text-slate-400">Pendiente (Task 16).</p>
-      )}
+      {tab === 'cobertura' && <AccountCoverageTab account={account} />}
+      {tab === 'facturacion' && <AccountBillingTab account={account} />}
     </div>
   );
 }

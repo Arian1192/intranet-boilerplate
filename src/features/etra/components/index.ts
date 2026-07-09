@@ -12,3 +12,5 @@ export * from './SeedingReportTab';
 export * from './AccountForm';
 export * from './account-tabs/AccountActionsTab';
 export * from './account-tabs/AccountObligationsTab';
+export * from './account-tabs/AccountCoverageTab';
+export * from './account-tabs/AccountBillingTab';
