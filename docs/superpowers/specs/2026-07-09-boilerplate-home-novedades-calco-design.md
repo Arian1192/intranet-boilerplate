@@ -89,6 +89,18 @@ Se refactoriza `src/features/dashboard/NewsFeed.tsx` y se añaden dos componente
 
 ---
 
+### Estados dinámicos del panel "¿Cuándo se publica?" (capturas Programar/Borrador)
+
+El `SegmentedControl` de timing cambia el contenido del panel y la etiqueta del botón primario:
+
+| Timing | Bajo el segmented | Checkboxes | Botón primario |
+|--------|-------------------|------------|----------------|
+| `Ahora` (`now`) | — | Notificar + Enviar por email | **Publicar** |
+| `Programar` (`schedule`) | `<input type="datetime-local">` (borde `slate-300`) + helper `text-xs text-slate-400`: "Hora de Barcelona. Se publicará y avisará sola en ese momento." | Notificar + Enviar por email | **Programar** |
+| `Borrador` (`draft`) | helper `text-xs text-slate-400`: "Se guarda sin publicar. No avisa a nadie hasta que lo publiques." | **ocultos** | **Guardar borrador** |
+
+Todos los botones primarios usan brand-600 (`#773C9F`). El helper es slate-400 (`#94A3B8`). Todo presentacional; el datetime es un input controlado sin efecto real.
+
 ## Datos
 
 - `src/types/index.ts`: `NewsItem` gana campo opcional `content?: string`. Sin otros cambios de contrato; adaptadores REST/Supabase intactos.
