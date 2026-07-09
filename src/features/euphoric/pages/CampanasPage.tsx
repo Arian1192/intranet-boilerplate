@@ -125,7 +125,6 @@ function CampanasGestion({ campaigns: allCampaigns }: { campaigns: Campaign[] })
           <Button className="w-full">+ Nueva campaña</Button>
           <Card className="p-4">
             <Select
-              label="Estado"
               value={statusFilter}
               onChange={(event) => setStatusFilter(event.target.value as CampaignStatus | 'todas')}
             >
