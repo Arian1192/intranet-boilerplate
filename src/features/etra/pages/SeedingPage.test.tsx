@@ -67,3 +67,32 @@ describe('SeedingPage — Entregas', () => {
     expect(screen.getByText('¿Quién se lo queda? *')).toBeInTheDocument();
   });
 });
+
+describe('SeedingPage — Influencers', () => {
+  it('expands a card to reveal email and edit/delete actions', () => {
+    render(<SeedingPage />);
+    fireEvent.click(screen.getByRole('button', { name: 'Influencers' }));
+
+    expect(screen.getByText('2 en el directorio')).toBeInTheDocument();
+    expect(screen.getByText('IG · 245K')).toBeInTheDocument();
+    expect(screen.queryByText('carlos.ruiz@example.com')).not.toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole('button', { name: 'Expandir Carlos Ruiz' }));
+    expect(screen.getByText('carlos.ruiz@example.com')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Editar' })).toBeInTheDocument();
+  });
+
+  it('opens the influencer form modal in create and edit modes', () => {
+    render(<SeedingPage />);
+    fireEvent.click(screen.getByRole('button', { name: 'Influencers' }));
+
+    fireEvent.click(screen.getByRole('button', { name: '+ Añadir influencer' }));
+    expect(screen.getByText('Nuevo influencer')).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: 'Cancelar' }));
+
+    fireEvent.click(screen.getByRole('button', { name: 'Expandir Carlos Ruiz' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Editar' }));
+    expect(screen.getByText('Editar influencer')).toBeInTheDocument();
+    expect(screen.getByDisplayValue('Carlos Ruiz')).toBeInTheDocument();
+  });
+});

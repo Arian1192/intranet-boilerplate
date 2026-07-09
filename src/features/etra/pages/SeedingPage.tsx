@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { UnderlineTabs, Card, Badge } from '@/components/ui';
 import { formatCurrency } from '@/lib/format';
-import { SeedingDeliveriesTab } from '../components';
+import { SeedingDeliveriesTab, SeedingInfluencersTab } from '../components';
 import { useInventory } from '../hooks/useInventory';
 import { useDeliveries } from '../hooks/useDeliveries';
 import { useInfluencers } from '../hooks/useInfluencers';
@@ -60,19 +60,10 @@ export function SeedingPage() {
       )}
 
       {tab === 'influencers' && (
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <>
           {influencers.isLoading && <p className="text-slate-500">Cargando...</p>}
-          {influencers.data?.map((influencer) => (
-            <Card key={influencer.id} className="flex items-center gap-3 p-4">
-              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-brand-50 text-sm font-medium text-brand-700">
-                {influencer.initials}
-              </div>
-              <div>
-                <p className="font-medium text-slate-800">{influencer.name}</p>
-              </div>
-            </Card>
-          ))}
-        </div>
+          {influencers.data && <SeedingInfluencersTab influencers={influencers.data} />}
+        </>
       )}
 
       {tab === 'reporte' && (
