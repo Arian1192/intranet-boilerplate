@@ -9,3 +9,4 @@ export * from './InfluencerCard';
 export * from './InfluencerFormModal';
 export * from './SeedingInfluencersTab';
 export * from './SeedingReportTab';
+export * from './AccountForm';

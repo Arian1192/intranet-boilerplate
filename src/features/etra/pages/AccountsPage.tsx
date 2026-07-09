@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { MasterDetailList, Badge, SegmentedControl } from '@/components/ui';
+import { MasterDetailList, Badge, Button, Card, Select, UnderlineTabs } from '@/components/ui';
+import { AccountForm } from '../components';
 import { usePrAccounts } from '../hooks/usePrAccounts';
 import type { PrAccount } from '@/types';
 
@@ -19,35 +20,52 @@ const DETAIL_TABS: { label: string; value: AccountDetailTab }[] = [
   { label: 'Facturación', value: 'facturacion' },
 ];
 
+function AccountDatosTab({ account }: { account: PrAccount }) {
+  const rows: { label: string; value?: string }[] = [
+    { label: 'Resp.', value: account.manager },
+    { label: 'Cliente CRM', value: account.crmClient },
+    { label: 'Contacto', value: account.contact },
+    { label: 'Fecha de alta', value: account.signupDate },
+    { label: 'Email', value: account.email },
+    { label: 'Teléfono', value: account.phone },
+    { label: 'Notas', value: account.notes },
+  ];
+  return (
+    <dl className="space-y-1 text-sm">
+      {rows
+        .filter((row) => row.value)
+        .map((row) => (
+          <div key={row.label} className="flex gap-2">
+            <dt className="text-slate-400">{row.label}:</dt>
+            <dd className="text-slate-700">{row.value}</dd>
+          </div>
+        ))}
+    </dl>
+  );
+}
+
 function AccountDetail({ account }: { account: PrAccount }) {
   const [tab, setTab] = useState<AccountDetailTab>('datos');
 
   return (
     <div>
-      <div className="mb-3 flex items-center justify-between">
+      <div className="mb-4 flex items-center justify-between">
         <h2 className="text-lg font-semibold text-slate-800">{account.name}</h2>
         <Badge variant="emerald">{STATUS_LABEL[account.status]}</Badge>
       </div>
-      <div className="mb-4 border-b border-slate-100 pb-2">
-        <SegmentedControl options={DETAIL_TABS} value={tab} onChange={setTab} />
-      </div>
-      {tab === 'datos' ? (
-        <dl className="space-y-1 text-sm">
-          <div className="flex gap-2">
-            <dt className="text-slate-400">Resp.:</dt>
-            <dd className="text-slate-700">{account.manager}</dd>
-          </div>
-          <div className="flex gap-2">
-            <dt className="text-slate-400">Cliente CRM:</dt>
-            <dd className="text-slate-700">{account.crmClient}</dd>
-          </div>
-          <div className="flex gap-2">
-            <dt className="text-slate-400">Contacto:</dt>
-            <dd className="text-slate-700">{account.contact}</dd>
-          </div>
-        </dl>
-      ) : (
-        <p className="py-8 text-center text-slate-400">Sin datos de ejemplo para esta pestaña.</p>
+      <UnderlineTabs options={DETAIL_TABS} value={tab} onChange={setTab} className="mb-5" />
+      {tab === 'datos' && <AccountDatosTab account={account} />}
+      {tab === 'acciones' && (
+        <p className="py-8 text-center text-slate-400">Pendiente (Task 15).</p>
+      )}
+      {tab === 'obligaciones' && (
+        <p className="py-8 text-center text-slate-400">Pendiente (Task 15).</p>
+      )}
+      {tab === 'cobertura' && (
+        <p className="py-8 text-center text-slate-400">Pendiente (Task 16).</p>
+      )}
+      {tab === 'facturacion' && (
+        <p className="py-8 text-center text-slate-400">Pendiente (Task 16).</p>
       )}
     </div>
   );
@@ -55,6 +73,8 @@ function AccountDetail({ account }: { account: PrAccount }) {
 
 export function AccountsPage() {
   const { data, isLoading, error } = usePrAccounts();
+  const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [mode, setMode] = useState<'browse' | 'new'>('browse');
 
   if (isLoading) {
     return <div className="py-12 text-center text-slate-500">Cargando...</div>;
@@ -66,21 +86,48 @@ export function AccountsPage() {
 
   return (
     <div className="space-y-6">
-      <div className="flex items-start justify-between">
+      <div>
         <h1 className="text-2xl font-semibold text-slate-800">Cuentas</h1>
-        <button
-          type="button"
-          className="inline-flex h-9 items-center rounded-lg bg-brand-600 px-4 text-sm font-medium text-white hover:bg-brand-700"
-        >
-          + Nueva cuenta
-        </button>
+        <p className="text-sm text-slate-500">
+          Cuentas y marcas que gestiona el equipo: acciones de PR, cobertura y facturación.
+        </p>
       </div>
       <MasterDetailList
         items={data}
+        selectedId={mode === 'new' ? null : selectedId}
+        onSelect={(id) => {
+          setSelectedId(id);
+          setMode('browse');
+        }}
+        listTop={
+          <>
+            <Button
+              className="w-full"
+              onClick={() => {
+                setMode('new');
+                setSelectedId(null);
+              }}
+            >
+              + Nueva cuenta
+            </Button>
+            <Card className="p-4">
+              <Select label="Estado">
+                <option>Todas</option>
+                <option>Activa</option>
+                <option>Pausada</option>
+                <option>Baja</option>
+              </Select>
+            </Card>
+          </>
+        }
+        detailOverride={mode === 'new' ? <AccountForm onCancel={() => setMode('browse')} /> : undefined}
         emptyState="Selecciona una cuenta o crea una nueva."
         renderRow={(account) => (
           <div className="flex items-center justify-between">
-            <span className="font-medium text-slate-800">{account.name}</span>
+            <div>
+              <p className="font-medium text-slate-800">{account.name}</p>
+              <p className="text-xs text-slate-400">{account.crmClient}</p>
+            </div>
             <Badge variant="emerald" size="sm">
               {STATUS_LABEL[account.status]}
             </Badge>
