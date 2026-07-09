@@ -9,6 +9,7 @@ export interface SegmentedControlProps<T extends string> {
   options: SegmentedControlOption<T>[];
   value: T;
   onChange: (value: T) => void;
+  fullWidth?: boolean;
   className?: string;
 }
 
@@ -16,10 +17,17 @@ export function SegmentedControl<T extends string>({
   options,
   value,
   onChange,
+  fullWidth = false,
   className,
 }: SegmentedControlProps<T>) {
   return (
-    <div className={cn('inline-flex items-center gap-1 rounded-lg bg-slate-100 p-1', className)}>
+    <div
+      className={cn(
+        'rounded-lg bg-slate-100 p-1',
+        fullWidth ? 'grid w-full auto-cols-fr grid-flow-col gap-1' : 'inline-flex items-center gap-1',
+        className
+      )}
+    >
       {options.map((option) => (
         <button
           key={option.value}

@@ -22,4 +22,19 @@ describe('SegmentedControl', () => {
     fireEvent.click(screen.getByRole('button', { name: 'Kanban' }));
     expect(onChange).toHaveBeenCalledWith('kanban');
   });
+
+  it('spreads segments across the full width when fullWidth is set', () => {
+    render(
+      <SegmentedControl
+        fullWidth
+        options={[
+          { label: 'Envío MRW', value: 'mrw' },
+          { label: 'Uso interno', value: 'internal' },
+        ]}
+        value="mrw"
+        onChange={() => {}}
+      />
+    );
+    expect(screen.getByRole('button', { name: 'Envío MRW' }).parentElement).toHaveClass('grid');
+  });
 });

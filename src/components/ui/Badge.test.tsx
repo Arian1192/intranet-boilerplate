@@ -29,4 +29,15 @@ describe('Badge', () => {
     render(<Badge variant="warning">Legacy</Badge>);
     expect(screen.getByText('Legacy')).toHaveClass('bg-yellow-50', 'text-yellow-700');
   });
+
+  it('renders the sky and pink variants', () => {
+    render(
+      <>
+        <Badge variant="sky">Envío MRW</Badge>
+        <Badge variant="pink" size="sm">IG · 245K</Badge>
+      </>
+    );
+    expect(screen.getByText('Envío MRW')).toHaveClass('bg-sky-100', 'text-sky-700');
+    expect(screen.getByText('IG · 245K')).toHaveClass('bg-pink-50', 'text-pink-600');
+  });
 });
