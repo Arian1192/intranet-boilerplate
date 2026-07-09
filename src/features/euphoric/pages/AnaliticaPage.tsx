@@ -45,7 +45,7 @@ export function AnaliticaPage() {
         </div>
       </Card>
 
-      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-[3fr_2fr]">
         <Card className="p-5">
           <p className="text-xs font-semibold tracking-wide text-slate-400">POR CUENTA</p>
           <div className="mt-3 overflow-x-auto">

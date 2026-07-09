@@ -53,7 +53,7 @@ export function RetainerBarChart({ data, max }: RetainerBarChartProps) {
                 style={{ height: `${heightPct}%` }}
                 title={`${item.label}: ${formatCurrencyEs(item.value)}`}
               />
-              <span className="text-xs font-medium text-slate-500">{item.label}</span>
+              <span className="text-xs font-medium text-slate-500 -rotate-45">{item.label}</span>
             </div>
           );
         })}
