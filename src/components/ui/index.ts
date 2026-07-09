@@ -12,3 +12,4 @@ export * from './KanbanBoard';
 export * from './MasterDetailList';
 export * from './MonthCalendar';
 export * from './StatCard';
+export * from './Modal';
