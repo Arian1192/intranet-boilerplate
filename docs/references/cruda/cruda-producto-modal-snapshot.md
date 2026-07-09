@@ -1,0 +1,355 @@
+- generic [ref=f1e1]:
+  - generic [ref=f1e4]:
+    - banner [ref=f1e5]:
+      - generic [ref=f1e6]:
+        - generic [ref=f1e7]:
+          - link [ref=f1e8] [cursor=pointer]:
+            - /url: /
+            - img "Black Moose Group" [ref=f1e9]
+          - generic [ref=f1e10]:
+            - generic [ref=f1e11]: /
+            - button "CRUDA" [ref=f1e13] [cursor=pointer]
+        - navigation [ref=f1e16]:
+          - link "Pedidos" [ref=f1e17] [cursor=pointer]:
+            - /url: /cruda
+          - link "Catálogo" [ref=f1e18] [cursor=pointer]:
+            - /url: /cruda/catalogo
+          - link "Analítica" [ref=f1e20] [cursor=pointer]:
+            - /url: /cruda/analitica
+        - generic [ref=f1e26]:
+          - button "Notificaciones" [ref=f1e28] [cursor=pointer]:
+            - generic [ref=f1e32]: 9+
+          - link "test admin test" [ref=f1e33] [cursor=pointer]:
+            - /url: /perfil
+            - generic [ref=f1e34]:
+              - generic [ref=f1e35]: test
+              - generic [ref=f1e36]: admin
+            - generic "test" [ref=f1e37]: T
+    - main [ref=f1e38]:
+      - generic [ref=f1e39]:
+        - generic [ref=f1e41]:
+          - heading "Catálogo" [level=1] [ref=f1e42]
+          - paragraph [ref=f1e43]: Colecciones y productos de CRUDA.
+        - generic [ref=f1e44]:
+          - generic [ref=f1e45]:
+            - heading "Colecciones" [level=2] [ref=f1e46]
+            - button "+ Nueva colección" [ref=f1e47] [cursor=pointer]
+          - generic [ref=f1e48]:
+            - button "Todas 1" [ref=f1e49] [cursor=pointer]
+            - generic [ref=f1e50]:
+              - button "Top Sales 1" [ref=f1e51] [cursor=pointer]
+              - button "✎" [ref=f1e52] [cursor=pointer]
+            - button "Sin colección" [ref=f1e53] [cursor=pointer]
+        - generic [ref=f1e54]:
+          - generic [ref=f1e55]:
+            - heading "Productos" [level=2] [ref=f1e56]
+            - button "+ Nuevo producto" [ref=f1e57] [cursor=pointer]
+          - textbox "Buscar por nombre o SKU…" [ref=f1e59]
+          - table [ref=f1e61]:
+            - rowgroup [ref=f1e62]:
+              - row [ref=f1e63]:
+                - columnheader "Producto" [ref=f1e64]
+                - columnheader "Tipo" [ref=f1e65]
+                - columnheader "Colección" [ref=f1e66]
+                - columnheader "Stock" [ref=f1e67]
+                - columnheader "Precio" [ref=f1e68]
+                - columnheader "Margen" [ref=f1e69]
+            - rowgroup [ref=f1e70]:
+              - row [ref=f1e71] [cursor=pointer]:
+                - cell "(Test) Camiseta A&F" [ref=f1e72]
+                - cell "3 variantes" [ref=f1e75]
+                - cell "Top Sales" [ref=f1e76]
+                - cell "340 uds" [ref=f1e77]
+                - cell "16,50 €" [ref=f1e78]
+                - cell "8,50 €" [ref=f1e79]
+        - generic [ref=f1e81]:
+          - generic [ref=f1e82]:
+            - heading "Productos más vendidos" [level=2] [ref=f1e83]
+            - table [ref=f1e84]:
+              - rowgroup [ref=f1e85]:
+                - row [ref=f1e86]:
+                  - columnheader "Producto" [ref=f1e87]
+                  - columnheader "Unidades" [ref=f1e88]
+                  - columnheader "Valor" [ref=f1e89]
+              - rowgroup [ref=f1e90]:
+                - row [ref=f1e91]:
+                  - cell "(Test) Camiseta A&F" [ref=f1e92]
+                  - cell "860" [ref=f1e93]
+                  - cell "14.708,35 €" [ref=f1e94]
+          - generic [ref=f1e95]:
+            - generic [ref=f1e96]:
+              - heading "Alertas de stock" [level=2] [ref=f1e97]
+              - generic [ref=f1e98]: 340 uds · valor a coste 2720,00 €
+            - generic [ref=f1e99]: "1 variante(s) en o por debajo del mínimo:"
+            - table [ref=f1e100]:
+              - rowgroup [ref=f1e101]:
+                - row [ref=f1e102]:
+                  - columnheader "Variante" [ref=f1e103]
+                  - columnheader "Stock" [ref=f1e104]
+                  - columnheader "Mín." [ref=f1e105]
+              - rowgroup [ref=f1e106]:
+                - row [ref=f1e107]:
+                  - cell "(Test) Camiseta A&F · Algodón / L / Crudo" [ref=f1e108]:
+                    - text: (Test) Camiseta A&F
+                    - generic [ref=f1e109]: · Algodón / L / Crudo
+                  - cell "40" [ref=f1e110]
+                  - cell "50" [ref=f1e111]
+        - generic [ref=f1e112]:
+          - generic [ref=f1e113]:
+            - heading "Extras (packaging, personalización…)" [level=2] [ref=f1e114]
+            - button "+ Nuevo extra" [ref=f1e115] [cursor=pointer]
+          - table [ref=f1e117]:
+            - rowgroup [ref=f1e118]:
+              - row [ref=f1e119]:
+                - columnheader "Extra" [ref=f1e120]
+                - columnheader "Tipo" [ref=f1e121]
+                - columnheader "Modo" [ref=f1e122]
+                - columnheader "Precio" [ref=f1e123]
+            - rowgroup [ref=f1e124]:
+              - row [ref=f1e125] [cursor=pointer]:
+                - cell "Bolsa Cierre Zip" [ref=f1e126]
+                - cell "Packaging" [ref=f1e127]
+                - cell "Por unidad (× prendas)" [ref=f1e128]
+                - cell "0,70 €" [ref=f1e129]
+              - row [ref=f1e130] [cursor=pointer]:
+                - cell "Bordado" [ref=f1e131]
+                - cell "Personalización" [ref=f1e132]
+                - cell "Por unidad (× prendas)" [ref=f1e133]
+                - cell "2,50 €" [ref=f1e134]
+              - row [ref=f1e135] [cursor=pointer]:
+                - cell "Etiqueta Bordada Personalizada" [ref=f1e136]
+                - cell "Etiqueta" [ref=f1e137]
+                - cell "Por unidad (× prendas)" [ref=f1e138]
+                - cell "0,15 €" [ref=f1e139]
+        - generic [ref=f1e140]:
+          - heading "Variables de producto" [level=2] [ref=f1e141]
+          - paragraph [ref=f1e142]: Valores permitidos para las variantes. Al crear una variante se eligen de aquí, así fábrica recibe siempre los mismos términos.
+          - generic [ref=f1e143]:
+            - generic [ref=f1e144]:
+              - generic [ref=f1e145]: Acabados
+              - generic [ref=f1e146]:
+                - generic [ref=f1e147]:
+                  - text: Algodón
+                  - button "✕" [ref=f1e148] [cursor=pointer]
+                - generic [ref=f1e149]:
+                  - text: Ripstop
+                  - button "✕" [ref=f1e150] [cursor=pointer]
+                - generic [ref=f1e151]:
+                  - text: Lino
+                  - button "✕" [ref=f1e152] [cursor=pointer]
+              - generic [ref=f1e153]:
+                - textbox "Añadir…" [ref=f1e154]
+                - button "+" [ref=f1e155] [cursor=pointer]
+            - generic [ref=f1e156]:
+              - generic [ref=f1e157]: Tallas
+              - generic [ref=f1e158]:
+                - generic [ref=f1e159]:
+                  - text: XS
+                  - button "✕" [ref=f1e160] [cursor=pointer]
+                - generic [ref=f1e161]:
+                  - text: S
+                  - button "✕" [ref=f1e162] [cursor=pointer]
+                - generic [ref=f1e163]:
+                  - text: M
+                  - button "✕" [ref=f1e164] [cursor=pointer]
+                - generic [ref=f1e165]:
+                  - text: L
+                  - button "✕" [ref=f1e166] [cursor=pointer]
+                - generic [ref=f1e167]:
+                  - text: XL
+                  - button "✕" [ref=f1e168] [cursor=pointer]
+                - generic [ref=f1e169]:
+                  - text: XXL
+                  - button "✕" [ref=f1e170] [cursor=pointer]
+              - generic [ref=f1e171]:
+                - textbox "Añadir…" [ref=f1e172]
+                - button "+" [ref=f1e173] [cursor=pointer]
+            - generic [ref=f1e174]:
+              - generic [ref=f1e175]: Colores
+              - generic [ref=f1e176]:
+                - generic [ref=f1e177]:
+                  - text: Crudo
+                  - button "✕" [ref=f1e178] [cursor=pointer]
+                - generic [ref=f1e179]:
+                  - text: Azul
+                  - button "✕" [ref=f1e180] [cursor=pointer]
+              - generic [ref=f1e181]:
+                - textbox "Añadir…" [ref=f1e182]
+                - button "+" [ref=f1e183] [cursor=pointer]
+  - generic [ref=f1e185]:
+    - heading "Producto" [level=3] [ref=f1e186]
+    - paragraph [ref=f1e187]: La prenda "madre" solo lleva nombre, colección e imagen. El SKU, precio y coste van en cada variante (salvo que sea un producto único).
+    - generic [ref=f1e188]:
+      - generic [ref=f1e190]:
+        - button "Cambiar" [ref=f1e191] [cursor=pointer]
+        - button "✕" [ref=f1e192] [cursor=pointer]
+      - generic [ref=f1e193]:
+        - generic [ref=f1e194]:
+          - generic [ref=f1e195]: Nombre *
+          - textbox [active] [ref=f1e196]: (Test) Camiseta A&F
+        - generic [ref=f1e197]:
+          - generic [ref=f1e198]: Colección
+          - combobox [ref=f1e199]:
+            - option "Sin colección"
+            - option "Top Sales" [selected]
+    - generic [ref=f1e200]:
+      - generic [ref=f1e201]:
+        - generic [ref=f1e202]: Tipo de producto
+        - generic [ref=f1e203]:
+          - button "Con variantes" [ref=f1e204] [cursor=pointer]
+          - button "Producto único" [ref=f1e205] [cursor=pointer]
+        - paragraph [ref=f1e206]: "Con variantes: cada combinación de acabado/talla/color con su SKU, precio y coste. Único: talla y acabado únicos, datos en el propio producto."
+      - generic [ref=f1e207]:
+        - checkbox "Activo" [checked] [ref=f1e208]
+        - text: Activo
+      - generic [ref=f1e209]:
+        - generic [ref=f1e210]: Notas
+        - textbox [ref=f1e211]
+    - generic [ref=f1e212]:
+      - 'heading "Variantes Stock total: 340 uds" [level=4] [ref=f1e213]':
+        - generic [ref=f1e214]: Variantes
+        - generic [ref=f1e215]: "Stock total: 340 uds"
+      - generic [ref=f1e216]:
+        - generic [ref=f1e217]:
+          - generic [ref=f1e218]: Img
+          - generic [ref=f1e219]:
+            - generic [ref=f1e220]: SKU
+            - generic [ref=f1e221]: Acabado
+            - generic [ref=f1e222]: Talla
+            - generic [ref=f1e223]: Color
+            - generic [ref=f1e224]: Precio €
+            - generic [ref=f1e225]: Coste €
+            - generic [ref=f1e226]: Margen
+            - generic [ref=f1e227]: PVP €
+            - generic [ref=f1e228]: ×
+            - generic [ref=f1e229]: Stock
+            - generic [ref=f1e230]: Mín.
+        - generic [ref=f1e231]:
+          - generic [ref=f1e233]:
+            - generic [ref=f1e234]: 🖼️
+            - button "Subir" [ref=f1e235] [cursor=pointer]
+          - generic [ref=f1e236]:
+            - textbox [ref=f1e237]: 4878test01
+            - combobox [ref=f1e238]:
+              - option "—"
+              - option "Algodón" [selected]
+              - option "Ripstop"
+              - option "Lino"
+            - combobox [ref=f1e239]:
+              - option "—"
+              - option "XS"
+              - option "S" [selected]
+              - option "M"
+              - option "L"
+              - option "XL"
+              - option "XXL"
+            - combobox [ref=f1e240]:
+              - option "—"
+              - option "Crudo" [selected]
+              - option "Azul"
+            - spinbutton [ref=f1e241]: "16.5"
+            - spinbutton [ref=f1e242]: "8"
+            - generic "Margen (precio - coste)" [ref=f1e243]: 8,50 €
+            - spinbutton "PVP recomendado" [ref=f1e244]: "41.03"
+            - spinbutton "Multiplicador (× sobre precio)" [ref=f1e245]: "2.49"
+            - spinbutton [ref=f1e246]: "150"
+            - spinbutton [ref=f1e247]: "50"
+          - button "✕" [ref=f1e249] [cursor=pointer]
+        - generic [ref=f1e250]:
+          - generic [ref=f1e252]:
+            - generic [ref=f1e253]: 🖼️
+            - button "Subir" [ref=f1e254] [cursor=pointer]
+          - generic [ref=f1e255]:
+            - textbox [ref=f1e256]: 4878test02
+            - combobox [ref=f1e257]:
+              - option "—"
+              - option "Algodón" [selected]
+              - option "Ripstop"
+              - option "Lino"
+            - combobox [ref=f1e258]:
+              - option "—"
+              - option "XS"
+              - option "S"
+              - option "M" [selected]
+              - option "L"
+              - option "XL"
+              - option "XXL"
+            - combobox [ref=f1e259]:
+              - option "—"
+              - option "Crudo" [selected]
+              - option "Azul"
+            - spinbutton [ref=f1e260]: "16.5"
+            - spinbutton [ref=f1e261]: "8"
+            - generic "Margen (precio - coste)" [ref=f1e262]: 8,50 €
+            - spinbutton "PVP recomendado" [ref=f1e263]: "45"
+            - spinbutton "Multiplicador (× sobre precio)" [ref=f1e264]: "2.73"
+            - spinbutton [ref=f1e265]: "150"
+            - spinbutton [ref=f1e266]: "50"
+          - button "✕" [ref=f1e268] [cursor=pointer]
+        - generic [ref=f1e269]:
+          - generic [ref=f1e271]:
+            - generic [ref=f1e272]: 🖼️
+            - button "Subir" [ref=f1e273] [cursor=pointer]
+          - generic [ref=f1e274]:
+            - textbox [ref=f1e275]: 4878test03
+            - combobox [ref=f1e276]:
+              - option "—"
+              - option "Algodón" [selected]
+              - option "Ripstop"
+              - option "Lino"
+            - combobox [ref=f1e277]:
+              - option "—"
+              - option "XS"
+              - option "S"
+              - option "M"
+              - option "L" [selected]
+              - option "XL"
+              - option "XXL"
+            - combobox [ref=f1e278]:
+              - option "—"
+              - option "Crudo" [selected]
+              - option "Azul"
+            - spinbutton [ref=f1e279]: "16.5"
+            - spinbutton [ref=f1e280]: "8"
+            - generic "Margen (precio - coste)" [ref=f1e281]: 8,50 €
+            - spinbutton "PVP recomendado" [ref=f1e282]: "45"
+            - spinbutton "Multiplicador (× sobre precio)" [ref=f1e283]: "2.73"
+            - spinbutton [ref=f1e284]: "40"
+            - spinbutton [ref=f1e285]: "50"
+          - button "✕" [ref=f1e287] [cursor=pointer]
+        - generic [ref=f1e288]:
+          - generic [ref=f1e290]:
+            - generic [ref=f1e291]: 🖼️
+            - button "Subir" [ref=f1e292] [cursor=pointer]
+          - generic [ref=f1e293]:
+            - textbox "SKU único" [ref=f1e294]
+            - combobox [ref=f1e295]:
+              - option "—" [selected]
+              - option "Algodón"
+              - option "Ripstop"
+              - option "Lino"
+            - combobox [ref=f1e296]:
+              - option "—" [selected]
+              - option "XS"
+              - option "S"
+              - option "M"
+              - option "L"
+              - option "XL"
+              - option "XXL"
+            - combobox [ref=f1e297]:
+              - option "—" [selected]
+              - option "Crudo"
+              - option "Azul"
+            - spinbutton "Precio" [ref=f1e298]
+            - spinbutton "Coste" [ref=f1e299]
+            - generic "Margen (precio - coste)" [ref=f1e300]: —
+            - spinbutton "PVP" [ref=f1e301]
+            - spinbutton "×" [ref=f1e302]
+            - spinbutton "Stock" [ref=f1e303]
+            - spinbutton "Mín." [ref=f1e304]
+          - button "+" [ref=f1e305] [cursor=pointer]
+    - generic [ref=f1e306]:
+      - generic [ref=f1e307]:
+        - button "Guardar" [ref=f1e308] [cursor=pointer]
+        - button "Cancelar" [ref=f1e309] [cursor=pointer]
+      - button "Eliminar" [ref=f1e310] [cursor=pointer]

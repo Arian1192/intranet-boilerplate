@@ -1,0 +1,172 @@
+- generic [ref=e4]:
+  - banner [ref=e5]:
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - link [ref=e8] [cursor=pointer]:
+          - /url: /
+          - img "Black Moose Group" [ref=e9]
+        - generic [ref=e10]:
+          - generic [ref=e11]: /
+          - button "CRUDA" [ref=e13] [cursor=pointer]
+      - navigation [ref=e16]:
+        - link "Pedidos" [ref=e17] [cursor=pointer]:
+          - /url: /cruda
+        - link "Catálogo" [ref=e18] [cursor=pointer]:
+          - /url: /cruda/catalogo
+        - link "Analítica" [ref=e20] [cursor=pointer]:
+          - /url: /cruda/analitica
+      - generic [ref=e26]:
+        - button "Notificaciones" [ref=e28] [cursor=pointer]:
+          - generic [ref=e32]: 9+
+        - link "test admin test" [ref=e33] [cursor=pointer]:
+          - /url: /perfil
+          - generic [ref=e34]:
+            - generic [ref=e35]: test
+            - generic [ref=e36]: admin
+          - generic "test" [ref=e37]: T
+  - main [ref=e38]:
+    - generic [ref=e39]:
+      - generic [ref=e40]:
+        - heading "Pedidos" [level=1] [ref=e41]
+        - paragraph [ref=e42]: "Hojas de pedido de CRUDA: producto, cantidades y estado."
+      - generic [ref=e146]:
+        - button "← Todos los pedidos" [ref=e147] [cursor=pointer]
+        - generic [ref=e148]:
+          - generic [ref=e149]:
+            - heading "CR00103 Colección" [level=2] [ref=e150]:
+              - text: CR00103
+              - generic [ref=e151]: Colección
+            - generic [ref=e152]: 5782,50 €
+          - generic [ref=e153]:
+            - button "Borrador" [ref=e154] [cursor=pointer]
+            - button "Confirmado" [ref=e155] [cursor=pointer]
+            - button "En producción" [ref=e156] [cursor=pointer]
+            - button "Enviado" [ref=e157] [cursor=pointer]
+            - button "Entregado" [ref=e158] [cursor=pointer]
+            - button "Facturado" [ref=e159] [cursor=pointer]
+            - button "Cancelado" [ref=e160] [cursor=pointer]
+            - button "Anular" [ref=e161] [cursor=pointer]
+            - generic [ref=e162]:
+              - button "Descontar del stock" [ref=e163] [cursor=pointer]
+              - button "Hoja de pedido (PDF)" [ref=e164] [cursor=pointer]
+          - generic [ref=e166]:
+            - generic [ref=e168]:
+              - generic [ref=e169]: Colección
+              - generic [ref=e170]: New Era
+              - generic [ref=e171]: "Fecha: 07 jul 2026"
+              - generic [ref=e172]: "Resp.: Israel Cuenca"
+            - button "Modificar" [ref=e173] [cursor=pointer]
+        - generic [ref=e175]:
+          - heading "Líneas del pedido" [level=3] [ref=e176]
+          - table [ref=e178]:
+            - rowgroup [ref=e193]:
+              - row [ref=e194]:
+                - columnheader "Descripción" [ref=e195]
+                - columnheader "SKU" [ref=e196]
+                - columnheader "Talla" [ref=e197]
+                - columnheader "Color" [ref=e198]
+                - columnheader "Cant." [ref=e199]
+                - columnheader "Precio €" [ref=e200]
+                - columnheader "Dto %" [ref=e201]
+                - columnheader "Neto €" [ref=e202]
+                - columnheader "PVP €" [ref=e203]
+                - columnheader "×" [ref=e204]
+                - columnheader "Subtotal" [ref=e205]
+                - columnheader "Extras" [ref=e206]
+                - columnheader [ref=e207]
+            - rowgroup [ref=e208]:
+              - row [ref=e209]:
+                - cell "(Test) Camiseta A&F · Algodón" [ref=e210]
+                - cell "4878test01" [ref=e211]
+                - cell "S" [ref=e212]
+                - cell "Crudo" [ref=e213]
+                - cell [ref=e214]:
+                  - spinbutton [ref=e215]: "100"
+                - cell "16,50 €" [ref=e216]
+                - cell [ref=e218]:
+                  - spinbutton [ref=e219]: "0"
+                - cell "16,50 €" [ref=e220]:
+                  - generic "Precio unitario tras descuento" [ref=e221]: 16,50 €
+                - cell [ref=e222]:
+                  - spinbutton "PVP recomendado (informativo, no afecta al total)" [ref=e223]: "45"
+                - cell [ref=e224]:
+                  - spinbutton "Multiplicador sobre el precio neto (informativo)" [ref=e225]: "2.73"
+                - cell "1900,00 €" [ref=e226]
+                - cell [ref=e227]:
+                  - button "Extras (1)" [ref=e228] [cursor=pointer]
+                - cell [ref=e229]:
+                  - button "✕" [ref=e230] [cursor=pointer]
+              - row [ref=e231]:
+                - cell "(Test) Camiseta A&F · Algodón" [ref=e232]
+                - cell "4878test02" [ref=e233]
+                - cell "M" [ref=e234]
+                - cell "Crudo" [ref=e235]
+                - cell [ref=e236]:
+                  - spinbutton [ref=e237]: "200"
+                - cell "16,50 €" [ref=e238]
+                - cell [ref=e240]:
+                  - spinbutton [ref=e241]: "0"
+                - cell "16,50 €" [ref=e242]:
+                  - generic "Precio unitario tras descuento" [ref=e243]: 16,50 €
+                - cell [ref=e244]:
+                  - spinbutton "PVP recomendado (informativo, no afecta al total)" [ref=e245]: "45"
+                - cell [ref=e246]:
+                  - spinbutton "Multiplicador sobre el precio neto (informativo)" [ref=e247]: "2.73"
+                - cell "3800,00 €" [ref=e248]
+                - cell [ref=e249]:
+                  - button "Extras (1)" [ref=e250] [cursor=pointer]
+                - cell [ref=e251]:
+                  - button "✕" [ref=e252] [cursor=pointer]
+              - row [ref=e253]:
+                - cell "(Test) Camiseta A&F · Algodón" [ref=e254]
+                - cell "4878test03" [ref=e255]
+                - cell "L" [ref=e256]
+                - cell "Crudo" [ref=e257]
+                - cell [ref=e258]:
+                  - spinbutton [ref=e259]: "50"
+                - cell "16,50 €" [ref=e260]
+                - cell [ref=e262]:
+                  - spinbutton [ref=e263]: "0"
+                - cell "16,50 €" [ref=e264]:
+                  - generic "Precio unitario tras descuento" [ref=e265]: 16,50 €
+                - cell [ref=e266]:
+                  - spinbutton "PVP recomendado (informativo, no afecta al total)" [ref=e267]: "45"
+                - cell [ref=e268]:
+                  - spinbutton "Multiplicador sobre el precio neto (informativo)" [ref=e269]: "2.73"
+                - cell "950,00 €" [ref=e270]
+                - cell [ref=e271]:
+                  - button "Extras (1)" [ref=e272] [cursor=pointer]
+                - cell [ref=e273]:
+                  - button "✕" [ref=e274] [cursor=pointer]
+          - generic [ref=e275]:
+            - generic [ref=e276]: Añadir línea
+            - generic [ref=e277]:
+              - generic [ref=e278]:
+                - generic [ref=e279]: Producto
+                - combobox [ref=e280]:
+                  - option "Libre…" [selected]
+                  - option "(Test) Camiseta A&F"
+              - generic [ref=e281]:
+                - generic [ref=e282]: Variante
+                - combobox [disabled] [ref=e283]:
+                  - option "Sin variantes" [selected]
+              - generic [ref=e284]:
+                - generic [ref=e285]: Descripción *
+                - textbox [ref=e286]
+              - generic [ref=e287]:
+                - generic [ref=e288]: Cant.
+                - spinbutton [ref=e289]: "1"
+              - generic [ref=e290]:
+                - generic [ref=e291]: Precio
+                - spinbutton [ref=e292]: "0"
+            - button "+ Añadir línea" [ref=e293] [cursor=pointer]
+          - generic [ref=e294]:
+            - generic [ref=e295]: "Bruto: 6650,00 €"
+            - generic [ref=e296]: "Total: 6650,00 €"
+        - generic [ref=e298]:
+          - heading "Portal de reposiciones (CRUDA)" [level=3] [ref=e299]
+          - paragraph [ref=e300]: Da acceso a este cliente para que pida sus reposiciones de forma autónoma. Verá solo su catálogo y sus pedidos.
+          - generic [ref=e301]:
+            - textbox "email@cliente.com" [ref=e302]
+            - button "Invitar" [ref=e303] [cursor=pointer]
+          - paragraph [ref=e304]: Se le enviará un email para crear su contraseña. Requiere permiso de gestión de usuarios.
