@@ -167,18 +167,18 @@ export class MockRepository implements Repository {
       upcomingEvents: [
         {
           id: 'event-1',
-          title: 'Festival Primavera Interna',
+          title: 'Mixmag Intimate Sessions: BLOND:ISH',
           date: '15 jul 2026',
           timeRange: '20:00–21:30',
-          location: 'Sala Norte, Madrid',
+          location: 'Soho Farmhouse, Ibiza',
           status: 'confirmed',
         },
         {
           id: 'event-2',
-          title: 'Evento Corporativo Q3',
+          title: 'Please Quiet x SIGHT',
           date: '18 jul 2026',
           timeRange: '18:00–23:00',
-          location: 'Terraza Este, Valencia',
+          location: 'Cósmico - SLS Barcelona, Barcelona',
           status: 'in-production',
         },
       ],

@@ -59,14 +59,8 @@ export function DashboardPage() {
         <ModuleGrid modules={businessModules} title="Tus espacios" />
         <ModuleGrid modules={internalModules} title="Uso interno" />
 
-        <div className="grid gap-8 lg:grid-cols-3">
-          <div className="lg:col-span-2">
-            <UpcomingEvents events={dashboard.upcomingEvents} />
-          </div>
-          <div>
-            <Reminders reminders={dashboard.reminders} />
-          </div>
-        </div>
+        <UpcomingEvents events={dashboard.upcomingEvents} />
+        {dashboard.reminders.length > 0 && <Reminders reminders={dashboard.reminders} />}
       </div>
     </AppLayout>
   );

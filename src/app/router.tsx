@@ -43,6 +43,7 @@ export function AppRouter() {
       </Route>
       <Route path="/produccion" element={<ProduccionShell />}>
         <Route index element={<EventsPage />} />
+        <Route path=":eventId" element={<EventsPage />} />
       </Route>
       <Route path="/euphoric" element={<EuphoricShell />} />
       <Route path="/creativos" element={<CreativosShell />} />
