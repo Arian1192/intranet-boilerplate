@@ -4,7 +4,7 @@ import { describe, it, expect } from 'vitest';
 import { KanbanBoard, KanbanCard } from './KanbanBoard';
 
 describe('KanbanBoard', () => {
-  it('renders columns with counts and an empty-state dash when there are no items', () => {
+  it('renders columns with plain-text counts and an empty-state dash when there are no items', () => {
     render(
       <KanbanBoard
         columns={[
@@ -19,7 +19,7 @@ describe('KanbanBoard', () => {
             label: 'En curso',
             accentClassName: 'border-t-amber-400',
             count: 1,
-            children: <KanbanCard>59FIFTY Madrid</KanbanCard>,
+            children: <KanbanCard>Acción de prensa Cliente A</KanbanCard>,
           },
         ]}
       />
@@ -27,6 +27,7 @@ describe('KanbanBoard', () => {
 
     expect(screen.getByText('Planificada')).toBeInTheDocument();
     expect(screen.getByText('—')).toBeInTheDocument();
-    expect(screen.getByText('59FIFTY Madrid')).toBeInTheDocument();
+    expect(screen.getByText('Acción de prensa Cliente A')).toBeInTheDocument();
+    expect(screen.getByText('1')).not.toHaveClass('bg-slate-100');
   });
 });

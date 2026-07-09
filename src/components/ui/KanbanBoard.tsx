@@ -47,9 +47,7 @@ export function KanbanColumn({ label, accentClassName, count, children }: Kanban
       <div className="flex items-center justify-between px-4 py-3">
         <h3 className="text-sm font-semibold text-slate-800">{label}</h3>
         {count !== undefined && (
-          <span className="rounded-full bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-500">
-            {count}
-          </span>
+          <span className="text-xs font-medium text-slate-400">{count}</span>
         )}
       </div>
       <div className="space-y-3 px-4 pb-4">
