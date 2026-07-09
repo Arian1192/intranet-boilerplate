@@ -1,5 +1,6 @@
 import { Badge, Card, StatCard } from '@/components/ui';
-import { RetainerBarChart, formatCurrencyEs } from '../components/RetainerBarChart';
+import { RetainerBarChart } from '../components/RetainerBarChart';
+import { formatCurrencyEs } from '../data/format';
 import { accounts, campaigns, publications, analytics } from '../data/seed';
 
 export function AnaliticaPage() {

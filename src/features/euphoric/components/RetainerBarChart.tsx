@@ -1,3 +1,5 @@
+import { formatCurrencyEs } from '../data/format';
+
 const TICK_COUNT = 5;
 
 export interface RetainerBarChartDatum {
@@ -8,13 +10,6 @@ export interface RetainerBarChartDatum {
 export interface RetainerBarChartProps {
   data: RetainerBarChartDatum[];
   max: number;
-}
-
-export function formatCurrencyEs(value: number): string {
-  return `${new Intl.NumberFormat('es-ES', {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  }).format(value)} €`;
 }
 
 /**
