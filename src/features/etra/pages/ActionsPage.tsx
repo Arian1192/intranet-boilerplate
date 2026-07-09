@@ -1,6 +1,8 @@
-import { KanbanBoard, KanbanCard, Badge } from '@/components/ui';
+import { useState } from 'react';
+import { KanbanBoard, Select } from '@/components/ui';
+import { NewActionPanel, ActionKanbanCard } from '../components';
 import { usePrActions } from '../hooks/usePrActions';
-import type { PrAction, ActionStatus } from '@/types';
+import type { ActionStatus } from '@/types';
 
 const COLUMNS: { id: ActionStatus; label: string; accentClassName: string }[] = [
   { id: 'planned', label: 'Planificada', accentClassName: 'border-t-blue-400' },
@@ -9,23 +11,9 @@ const COLUMNS: { id: ActionStatus; label: string; accentClassName: string }[] = 
   { id: 'cancelled', label: 'Cancelada', accentClassName: 'border-t-slate-300' },
 ];
 
-function ActionCard({ action }: { action: PrAction }) {
-  return (
-    <KanbanCard>
-      <div className="flex items-start justify-between gap-2">
-        <p className="font-medium text-slate-800">{action.title}</p>
-        <span className="shrink-0 text-xs text-slate-400">{action.date}</span>
-      </div>
-      <div className="mt-2 flex flex-wrap gap-2">
-        <Badge variant="neutral" size="sm">{action.account}</Badge>
-        <Badge variant="neutral" size="sm">{action.type}</Badge>
-      </div>
-    </KanbanCard>
-  );
-}
-
 export function ActionsPage() {
   const { data, isLoading, error } = usePrActions();
+  const [showNewPanel, setShowNewPanel] = useState(false);
 
   if (isLoading) {
     return <div className="py-12 text-center text-slate-500">Cargando...</div>;
@@ -46,7 +34,7 @@ export function ActionsPage() {
         items.length > 0 ? (
           <>
             {items.map((action) => (
-              <ActionCard key={action.id} action={action} />
+              <ActionKanbanCard key={action.id} action={action} />
             ))}
           </>
         ) : undefined,
@@ -56,29 +44,36 @@ export function ActionsPage() {
   return (
     <div className="space-y-6">
       <div className="flex items-start justify-between">
-        <h1 className="text-2xl font-semibold text-slate-800">Acciones</h1>
+        <div>
+          <h1 className="text-2xl font-semibold text-slate-800">Acciones</h1>
+          <p className="text-sm text-slate-500">
+            El trabajo diario del equipo de PR. Arrastra las tarjetas para cambiar su estado.
+          </p>
+        </div>
         <button
           type="button"
+          onClick={() => setShowNewPanel((open) => !open)}
           className="inline-flex h-9 items-center rounded-lg bg-brand-600 px-4 text-sm font-medium text-white hover:bg-brand-700"
         >
           + Nueva acción
         </button>
       </div>
       <div className="flex flex-wrap items-center gap-3">
-        <select className="h-10 rounded-lg border border-slate-200 bg-white px-3 text-sm text-slate-800">
+        <Select className="w-auto">
           <option>Todas las cuentas</option>
-        </select>
-        <select className="h-10 rounded-lg border border-slate-200 bg-white px-3 text-sm text-slate-800">
+        </Select>
+        <Select className="w-auto">
           <option>Cualquier responsable</option>
-        </select>
-        <select className="h-10 rounded-lg border border-slate-200 bg-white px-3 text-sm text-slate-800">
+        </Select>
+        <Select className="w-auto">
           <option>Todos los tipos</option>
-        </select>
-        <label className="flex items-center gap-2 text-sm text-slate-600">
+        </Select>
+        <label className="flex h-10 items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 px-3 text-sm text-slate-600">
           <input type="checkbox" className="h-4 w-4 rounded border-slate-300 text-brand-600" />
           Solo mías
         </label>
       </div>
+      {showNewPanel && <NewActionPanel onClose={() => setShowNewPanel(false)} />}
       <KanbanBoard columns={columns} />
     </div>
   );
