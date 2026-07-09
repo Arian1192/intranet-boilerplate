@@ -38,3 +38,6 @@ pnpm-debug.log*
 
 # Pi subagents metadata
 .pi-subagents/
+
+# Playwright MCP scratch
+.playwright-mcp/
