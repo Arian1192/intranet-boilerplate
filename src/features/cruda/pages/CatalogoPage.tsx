@@ -59,6 +59,7 @@ export function CatalogoPage() {
       </section>
 
       <ProductModal
+        key={openProductId}
         open={openProductId !== null}
         productId={openProductId}
         onClose={() => setOpenProductId(null)}

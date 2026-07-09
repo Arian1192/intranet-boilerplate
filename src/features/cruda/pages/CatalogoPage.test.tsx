@@ -23,4 +23,7 @@ test('opening a product row shows the product modal', () => {
   // ProductsTable row.
   fireEvent.click(screen.getAllByText('(Test) Camiseta A&F')[0]);
   expect(screen.getByRole('dialog')).toBeInTheDocument();
+  // The modal must be prefilled with the selected product's data, not blank.
+  expect(screen.getByDisplayValue('(Test) Camiseta A&F')).toBeInTheDocument();
+  expect(screen.getByText('Stock total: 340 uds')).toBeInTheDocument();
 });
