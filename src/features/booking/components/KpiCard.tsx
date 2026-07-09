@@ -12,8 +12,8 @@ const statusStyles: Record<Kpi['status'], string> = {
   confirmed: 'bg-sky-500',
   contract: 'bg-blue-500',
   'pending-payment': 'bg-rose-500',
-  'pending-settlement': 'bg-indigo-500',
-  done: 'bg-emerald-500',
+  'pending-settlement': 'bg-indigo-600',
+  done: 'bg-emerald-600',
 };
 
 const statusLabels: Record<Kpi['status'], string> = {
@@ -39,7 +39,9 @@ export function KpiCard({ kpi }: KpiCardProps) {
     >
       <div className="text-lg font-bold leading-tight">{formatCurrency(kpi.amount)}</div>
       <div className="text-[11px] font-medium uppercase tracking-wide opacity-90">{label}</div>
-      <div className="text-[11px] opacity-80">{kpi.count} shows</div>
+      <div className="text-[11px] opacity-80">
+        {kpi.count} {kpi.count === 1 ? 'show' : 'shows'}
+      </div>
     </button>
   );
 }
