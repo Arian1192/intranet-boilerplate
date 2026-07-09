@@ -11,7 +11,7 @@ export interface ModuleHeader {
   href?: string;
   tabs?: { label: string; href: string }[];
   actionLabel?: string;
-  iconAction?: { icon: LucideIcon; href: string; label: string };
+  iconActions?: { icon: LucideIcon; href: string; label: string }[];
 }
 
 export interface TopNavProps {
@@ -72,10 +72,11 @@ export function TopNav({ user, notificationCount = 0, module }: TopNavProps) {
               {module.actionLabel}
             </button>
           )}
-          {module?.iconAction && (
+          {module?.iconActions?.map((iconAction) => (
             <NavLink
-              to={module.iconAction.href}
-              aria-label={module.iconAction.label}
+              key={iconAction.href}
+              to={iconAction.href}
+              aria-label={iconAction.label}
               className={({ isActive }) =>
                 cn(
                   'grid h-9 w-9 place-items-center rounded-lg transition-colors',
@@ -83,9 +84,9 @@ export function TopNav({ user, notificationCount = 0, module }: TopNavProps) {
                 )
               }
             >
-              <module.iconAction.icon className="h-5 w-5" />
+              <iconAction.icon className="h-5 w-5" />
             </NavLink>
-          )}
+          ))}
           <button
             type="button"
             className="relative grid h-9 w-9 place-items-center rounded-lg text-slate-500 hover:bg-slate-100"

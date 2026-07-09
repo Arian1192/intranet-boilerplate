@@ -28,6 +28,7 @@ import { PiezasPage } from '@/features/euphoric/pages/PiezasPage';
 import { EventosPage } from '@/features/euphoric/pages/EventosPage';
 import { CuentasPage } from '@/features/euphoric/pages/CuentasPage';
 import { AnaliticaPage } from '@/features/euphoric/pages/AnaliticaPage';
+import { ArtistasPage } from '@/features/euphoric/pages/ArtistasPage';
 
 export function AppRouter() {
   return (
@@ -59,6 +60,7 @@ export function AppRouter() {
         <Route path="piezas" element={<PiezasPage />} />
         <Route path="eventos" element={<EventosPage />} />
         <Route path="cuentas" element={<CuentasPage />} />
+        <Route path="artistas" element={<ArtistasPage />} />
         <Route path="analitica" element={<AnaliticaPage />} />
       </Route>
       <Route path="/creativos" element={<CreativosShell />} />

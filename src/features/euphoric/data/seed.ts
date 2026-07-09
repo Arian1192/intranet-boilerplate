@@ -1,4 +1,4 @@
-import type { Account, Campaign, Piece, EventItem, Publication } from './types';
+import type { Account, Campaign, Piece, EventItem, Publication, Artist } from './types';
 
 export const accounts: Account[] = [
   { id: 'acc-sight', name: 'SIGHT', kind: 'Cliente', services: ['Redes sociales', 'Paid media', 'Contenido'], status: 'Activa', retainer: 800 },
@@ -27,6 +27,51 @@ export const publications: Publication[] = [
     account: 'SIGHT', status: 'En producción', type: 'Post', eventName: 'SIGHT: Patrick Topping, ACA, Luca 606, Nicholls',
     time: '12:00', textApproval: 'Aprobado', imageApproval: 'Pendiente', kanbanColumn: 'falta-arte',
   },
+];
+
+export const artists: Artist[] = [
+  { id: 'aaron-martin', name: 'Aaron Martin', kind: 'Agencia' },
+  { id: 'abdon', name: 'Abdon', kind: 'Agencia' },
+  { id: 'aca', name: 'ACA', kind: 'Agencia' },
+  { id: 'andrea-castells', name: 'Andrea Castells', kind: 'Agencia' },
+  { id: 'art-no-logia', name: 'ART NO LOGIA', kind: 'Agencia' },
+  { id: 'bassel-darwish', name: 'Bassel Darwish', kind: 'Agencia' },
+  { id: 'bizza', name: 'Bizza', kind: 'Agencia' },
+  { id: 'brenda-serna', name: 'Brenda Serna', kind: 'Agencia' },
+  { id: 'claudia-tejeda', name: 'Claudia Tejeda', kind: 'Agencia' },
+  { id: 'dh-moon', name: 'DH Moon', kind: 'Agencia' },
+  { id: 'dhuna', name: 'Dhuna', kind: 'Agencia' },
+  { id: 'florentia', name: 'Florentia', kind: 'Agencia' },
+  { id: 'fran-hernandez', name: 'Fran Hernandez', kind: 'Agencia' },
+  { id: 'freddy-bello', name: 'Freddy Bello', kind: 'Agencia' },
+  { id: 'galgo', name: 'Galgo', kind: 'Externo' },
+  { id: 'gaston-zani', name: 'Gaston Zani', kind: 'Agencia' },
+  { id: 'janse', name: 'Janse', kind: 'Agencia' },
+  { id: 'jose-fajardo', name: 'Jose Fajardo', kind: 'Agencia' },
+  { id: 'koleto', name: 'Koleto', kind: 'Agencia' },
+  { id: 'la-cintia', name: 'LA CINTIA', kind: 'Agencia' },
+  { id: 'londonground', name: 'Londonground', kind: 'Agencia' },
+  { id: 'los-canarios', name: 'Los Canarios', kind: 'Agencia' },
+  { id: 'marcel-bs', name: 'Marcel BS', kind: 'Agencia' },
+  { id: 'marian-ariss', name: 'Marian Ariss', kind: 'Agencia' },
+  { id: 'miane', name: 'Miane', kind: 'Externo' },
+  { id: 'milan', name: 'Milan', kind: 'Agencia' },
+  { id: 'nacho-scoppa', name: 'Nacho Scoppa', kind: 'Agencia' },
+  { id: 'nicole-moudaber', name: 'Nicole Moudaber', kind: 'Externo' },
+  { id: 'olivia-bass', name: 'Olivia Bass', kind: 'Agencia' },
+  { id: 'parsa-jafari', name: 'Parsa Jafari', kind: 'Agencia' },
+  { id: 'pau-guilera', name: 'Pau Guilera', kind: 'Agencia' },
+  { id: 'prophecy', name: 'Prophecy', kind: 'Agencia' },
+  { id: 'rivellino', name: 'Rivellino', kind: 'Agencia' },
+  { id: 'roleh', name: 'Rooléh', kind: 'Externo' },
+  { id: 'rubenus', name: 'Rubenus', kind: 'Agencia' },
+  { id: 'saldivar', name: 'Saldivar', kind: 'Agencia' },
+  { id: 'sebastian-ledher', name: 'Sebastian Ledher', kind: 'Agencia' },
+  { id: 'sera-de-villalta', name: 'Sera De Villalta', kind: 'Agencia' },
+  { id: 'sergio-saffe', name: 'Sergio Saffe', kind: 'Agencia' },
+  { id: 'sumia', name: 'SUMIA', kind: 'Agencia' },
+  { id: 'tomi-kesh', name: 'Tomi & Kesh', kind: 'Agencia' },
+  { id: 'vidaloca', name: 'Vidaloca', kind: 'Agencia' },
 ];
 
 export const analytics = {

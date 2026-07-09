@@ -5,7 +5,7 @@ import { test, expect } from 'vitest';
 import { EuphoricShell } from '@/features/modules/EuphoricShell';
 import { ResumenPage } from './pages/ResumenPage';
 
-test('renders module tabs and Analítica icon', () => {
+test('renders module tabs and Artistas + Analítica icons', () => {
   render(
     <MemoryRouter initialEntries={['/euphoric']}>
       <Routes>
@@ -17,5 +17,6 @@ test('renders module tabs and Analítica icon', () => {
   );
   expect(screen.getByRole('link', { name: 'Campañas' })).toHaveAttribute('href', '/euphoric/campanas');
   expect(screen.getByRole('link', { name: 'Contenido' })).toHaveAttribute('href', '/euphoric/calendario');
+  expect(screen.getByRole('link', { name: 'Artistas' })).toHaveAttribute('href', '/euphoric/artistas');
   expect(screen.getByRole('link', { name: 'Analítica' })).toHaveAttribute('href', '/euphoric/analitica');
 });

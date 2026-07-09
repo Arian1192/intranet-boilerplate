@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router';
-import { BarChart2 } from 'lucide-react';
+import { BarChart2, Users } from 'lucide-react';
 import { AppLayout } from '@/components/layout';
 import type { User } from '@/types';
 
@@ -22,7 +22,10 @@ export function EuphoricShell() {
         name: 'Euphoric Media',
         href: '/euphoric',
         tabs,
-        iconAction: { icon: BarChart2, href: '/euphoric/analitica', label: 'Analítica' },
+        iconActions: [
+          { icon: Users, href: '/euphoric/artistas', label: 'Artistas' },
+          { icon: BarChart2, href: '/euphoric/analitica', label: 'Analítica' },
+        ],
       }}
     >
       <Outlet />

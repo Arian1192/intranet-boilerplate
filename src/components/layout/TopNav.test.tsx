@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router';
-import { BarChart2 } from 'lucide-react';
+import { BarChart2, Users } from 'lucide-react';
 import { test, expect } from 'vitest';
 import { TopNav } from './TopNav';
 import type { User } from '@/types';
@@ -16,13 +16,22 @@ function renderNav(module?: Parameters<typeof TopNav>[0]['module']) {
   );
 }
 
-test('renders iconAction link when provided', () => {
-  renderNav({ name: 'Euphoric Media', iconAction: { icon: BarChart2, href: '/euphoric/analitica', label: 'Analítica' } });
-  const link = screen.getByRole('link', { name: 'Analítica' });
-  expect(link).toHaveAttribute('href', '/euphoric/analitica');
+test('renders iconActions links in order when provided', () => {
+  renderNav({
+    name: 'Euphoric Media',
+    iconActions: [
+      { icon: Users, href: '/euphoric/artistas', label: 'Artistas' },
+      { icon: BarChart2, href: '/euphoric/analitica', label: 'Analítica' },
+    ],
+  });
+  const links = screen.getAllByRole('link', { name: /Artistas|Analítica/ });
+  expect(links.map((link) => link.getAttribute('aria-label'))).toEqual(['Artistas', 'Analítica']);
+  expect(screen.getByRole('link', { name: 'Artistas' })).toHaveAttribute('href', '/euphoric/artistas');
+  expect(screen.getByRole('link', { name: 'Analítica' })).toHaveAttribute('href', '/euphoric/analitica');
 });
 
-test('omits iconAction link when not provided', () => {
+test('omits iconActions links when not provided', () => {
   renderNav({ name: 'ConceptOne' });
   expect(screen.queryByRole('link', { name: 'Analítica' })).toBeNull();
+  expect(screen.queryByRole('link', { name: 'Artistas' })).toBeNull();
 });

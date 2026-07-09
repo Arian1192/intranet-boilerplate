@@ -32,3 +32,6 @@ export interface Publication {
   account: string; status: string; type: string; eventName?: string;
   time: string; textApproval: string; imageApproval: string; kanbanColumn: PublicationKanbanColumn;
 }
+export interface Artist {
+  id: string; name: string; kind: 'Agencia' | 'Externo';
+}
