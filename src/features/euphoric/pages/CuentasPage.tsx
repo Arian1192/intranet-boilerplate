@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import { Badge, Button, MasterDetailList } from '@/components/ui';
+import { Button, MasterDetailList } from '@/components/ui';
 import { AccountForm } from '../components/AccountForm';
+import { StatusChip } from '../components/StatusChip';
 import { accounts } from '../data/seed';
 
 export function CuentasPage() {
@@ -32,7 +33,7 @@ export function CuentasPage() {
                 {account.kind} · {account.services.join(', ')}
               </p>
             </div>
-            <Badge variant="success">{account.status}</Badge>
+            <StatusChip status={account.status} />
           </div>
         )}
         renderDetail={(account) => (
