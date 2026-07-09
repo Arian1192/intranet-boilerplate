@@ -14,7 +14,20 @@ describe('useRepositoryQuery', () => {
   it('resolves data from the given query function', async () => {
     const query = vi.fn((repository: Repository) => repository.getPrAccounts());
     const repository: Partial<Repository> = {
-      getPrAccounts: () => Promise.resolve([{ id: 'a1', name: 'Cliente A', status: 'active', manager: 'X', crmClient: 'X', contact: 'X' }]),
+      getPrAccounts: () =>
+        Promise.resolve([
+          {
+            id: 'a1',
+            name: 'Cliente A',
+            status: 'active',
+            manager: 'X',
+            crmClient: 'X',
+            contact: 'X',
+            obligations: [],
+            coverage: [],
+            billing: { defaultRetainer: 0, defaultCommissionPct: 20, months: [] },
+          },
+        ]),
     };
 
     const { result } = renderHook(() => useRepositoryQuery(query), { wrapper: wrapper(repository) });

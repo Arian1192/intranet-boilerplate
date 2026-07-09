@@ -318,9 +318,24 @@ export class MockRepository implements Repository {
 
   async getPrActions(): Promise<PrAction[]> {
     return this.delay([
-      { id: 'act1', title: 'Preparar dossier de prensa', account: 'Cliente A', type: 'Evento', amount: 0, status: 'planned', date: '20 jul 2026' },
-      { id: 'act2', title: 'Acción de prensa Cliente A', account: 'Cliente A', type: 'Evento', amount: 10000, status: 'in-progress', date: '16 jul 2026' },
-      { id: 'act3', title: 'Cierre de campaña Cliente B', account: 'Cliente B', type: 'Campaña', amount: 0, status: 'done', date: '01 jul 2026' },
+      {
+        id: 'act1',
+        title: 'Acción de prensa Cliente A',
+        account: 'Cliente A',
+        type: 'Evento',
+        amount: 10000,
+        status: 'in-progress',
+        date: '16 jul 2026',
+        responsible: 'Sin asignar',
+        commissionPct: 20,
+        includedInFee: true,
+        budgetLines: [
+          { id: 'bl1', description: 'Foto / Vídeo (Ana)', amount: 400, status: 'paid' },
+          { id: 'bl2', description: 'Staff', amount: 140, status: 'pending-payment' },
+          { id: 'bl3', description: 'Talent', amount: 1500, status: 'pending-payment' },
+          { id: 'bl4', description: 'Talent', amount: 1500, status: 'proposed' },
+        ],
+      },
     ]);
   }
 
@@ -337,50 +352,105 @@ export class MockRepository implements Repository {
         id: 'del1',
         date: '07 jul 2026',
         account: 'Cliente A',
-        tags: ['internal-use'],
+        method: 'internal',
+        status: 'delivered',
+        published: false,
         recipient: 'Ana López',
-        itemsSummary: '1x Gorra Edición Limitada · 8',
-        amount: 0,
+        itemsSummary: '1× Gorra Edición Limitada · 8',
+        piecesCount: 1,
+        cost: 0,
       },
       {
         id: 'del2',
         date: '07 jul 2026',
         account: 'Cliente A',
-        tags: ['mrw-shipment', 'delivered', 'published'],
+        method: 'mrw',
+        status: 'delivered',
+        published: true,
         recipient: 'Carlos Ruiz',
-        itemsSummary: '2x Gorra Edición Limitada · 8',
-        amount: 0,
+        itemsSummary: '2× Gorra Edición Limitada · 8',
+        piecesCount: 2,
+        cost: 0,
       },
       {
         id: 'del3',
         date: '06 jul 2026',
         account: 'Cliente A',
-        tags: ['mrw-shipment', 'delivered', 'published'],
+        method: 'mrw',
+        status: 'delivered',
+        published: true,
         recipient: 'Carlos Ruiz',
-        itemsSummary: '1x Gorra Edición Limitada · 8',
-        amount: 0,
+        itemsSummary: '1× Gorra Edición Limitada · 8',
+        piecesCount: 1,
+        cost: 0,
       },
     ]);
   }
 
   async getInfluencers(): Promise<Influencer[]> {
     return this.delay([
-      { id: 'inf1', name: 'Carlos Ruiz', initials: 'CR', instagramFollowers: 245000, tiktokFollowers: 26200 },
+      {
+        id: 'inf1',
+        name: 'Carlos Ruiz',
+        initials: 'CR',
+        instagramFollowers: 245000,
+        tiktokFollowers: 26200,
+        email: 'carlos.ruiz@example.com',
+      },
       { id: 'inf2', name: 'María García', initials: 'MG', instagramFollowers: 335000 },
     ]);
   }
 
   async getSeedingReport(): Promise<SeedingReportRow[]> {
     return this.delay([
-      { date: '07 jul 2026', influencer: 'Carlos Ruiz', pieces: 2, productCost: 0, shippingCost: 0, publicationStatus: 'Publicado' },
-      { date: '06 jul 2026', influencer: 'Carlos Ruiz', pieces: 1, productCost: 0, shippingCost: 0, publicationStatus: 'Publicado' },
+      { date: '07 jul 2026', influencer: 'Carlos Ruiz', pieces: 2, productCost: 0, shippingCost: 0, publicationStatus: 'Publicado', reach: null },
+      { date: '06 jul 2026', influencer: 'Carlos Ruiz', pieces: 1, productCost: 0, shippingCost: 0, publicationStatus: 'Publicado', reach: null },
     ]);
   }
 
   async getPrAccounts(): Promise<PrAccount[]> {
     return this.delay([
-      { id: 'acc1', name: 'Cliente A', status: 'active', manager: 'Ana López', crmClient: 'Cliente A', contact: 'Jack Contacto' },
-      { id: 'acc2', name: 'Cliente B', status: 'active', manager: 'Carlos Ruiz', crmClient: 'Cliente B', contact: 'Laura Contacto' },
+      {
+        id: 'acc1',
+        name: 'Cliente A',
+        status: 'active',
+        manager: 'Ana López',
+        crmClient: 'Cliente A',
+        contact: 'Jack Contacto',
+        signupDate: '01 ene 2026',
+        email: 'contacto@cliente-a.example.com',
+        phone: '+34 600 000 001',
+        obligations: [
+          { id: 'ob1', label: 'Notas de prensa', cadence: 'Mensual', period: '2026-07', done: 0, target: 4 },
+        ],
+        coverage: [
+          { id: 'cov1', date: '08 jul 2026', title: 'Mención en medios', outlet: 'Prensa Digital', channel: 'Online', value: 1000 },
+        ],
+        billing: {
+          defaultRetainer: 5500,
+          defaultCommissionPct: 20,
+          months: [
+            { id: 'm7', label: 'Jul 2026', retainer: 5500, commissions: 2000, others: 0 },
+            { id: 'm6', label: 'Jun 2026', retainer: 5500, commissions: null, others: 0 },
+            { id: 'm5', label: 'May 2026', retainer: 5500, commissions: null, others: 0 },
+            { id: 'm4', label: 'Abr 2026', retainer: 5500, commissions: null, others: 0 },
+            { id: 'm3', label: 'Mar 2026', retainer: 5500, commissions: null, others: 0 },
+            { id: 'm2', label: 'Feb 2026', retainer: 5500, commissions: null, others: 0 },
+            { id: 'm1', label: 'Ene 2026', retainer: 5500, commissions: null, others: 0 },
+          ],
+        },
+      },
+      {
+        id: 'acc2',
+        name: 'Cliente B',
+        status: 'active',
+        manager: 'Carlos Ruiz',
+        crmClient: 'Cliente B',
+        contact: 'Laura Contacto',
+        obligations: [],
+        coverage: [],
+        billing: { defaultRetainer: 0, defaultCommissionPct: 20, months: [] },
+      },
     ]);
   }
 

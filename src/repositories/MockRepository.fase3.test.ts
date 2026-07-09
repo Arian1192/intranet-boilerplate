@@ -10,20 +10,46 @@ describe('MockRepository — Comunicación & PR', () => {
     expect(data.recentCoverage.length).toBeGreaterThan(0);
   });
 
-  it('returns PR actions across multiple statuses', async () => {
+  it('returns the capture-exact in-progress action with budget lines summing 3540', async () => {
     const repo = new MockRepository();
     const actions = await repo.getPrActions();
-    const statuses = new Set(actions.map((action) => action.status));
-    expect(statuses.size).toBeGreaterThan(1);
+    expect(actions).toHaveLength(1);
+    const [action] = actions;
+    expect(action.status).toBe('in-progress');
+    expect(action.amount).toBe(10000);
+    expect(action.commissionPct).toBe(20);
+    const spent = (action.budgetLines ?? []).reduce((sum, line) => sum + line.amount, 0);
+    expect(spent).toBe(3540);
   });
 
-  it('returns inventory, deliveries, influencers, seeding report, and accounts', async () => {
+  it('returns 3 deliveries with 4 pieces and 2 published MRW shipments', async () => {
+    const repo = new MockRepository();
+    const deliveries = await repo.getDeliveries();
+    expect(deliveries).toHaveLength(3);
+    expect(deliveries.reduce((sum, d) => sum + d.piecesCount, 0)).toBe(4);
+    expect(deliveries.filter((d) => d.published)).toHaveLength(2);
+    expect(deliveries.filter((d) => d.method === 'internal')).toHaveLength(1);
+  });
+
+  it('returns accounts with obligations, coverage and monthly billing', async () => {
+    const repo = new MockRepository();
+    const [account] = await repo.getPrAccounts();
+    expect(account.obligations[0]).toMatchObject({ label: 'Notas de prensa', done: 0, target: 4 });
+    expect(account.coverage[0].value).toBe(1000);
+    expect(account.billing.defaultRetainer).toBe(5500);
+    expect(account.billing.months).toHaveLength(7);
+    const retainerTotal = account.billing.months.reduce((sum, m) => sum + m.retainer, 0);
+    expect(retainerTotal).toBe(38500);
+  });
+
+  it('returns inventory, influencers and a seeding report with reach', async () => {
     const repo = new MockRepository();
     expect((await repo.getInventory()).length).toBeGreaterThan(0);
-    expect((await repo.getDeliveries()).length).toBeGreaterThan(0);
-    expect((await repo.getInfluencers()).length).toBeGreaterThan(0);
-    expect((await repo.getSeedingReport()).length).toBeGreaterThan(0);
-    expect((await repo.getPrAccounts()).length).toBeGreaterThan(0);
+    const influencers = await repo.getInfluencers();
+    expect(influencers[0].email).toBeTruthy();
+    const report = await repo.getSeedingReport();
+    expect(report.length).toBeGreaterThan(0);
+    expect(report[0]).toHaveProperty('reach');
   });
 });
 

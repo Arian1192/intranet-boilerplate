@@ -116,6 +116,13 @@ export interface AnalyticsSummary {
 
 // Comunicación & PR
 export type ActionStatus = 'planned' | 'in-progress' | 'done' | 'cancelled';
+export type BudgetLineStatus = 'proposed' | 'pending-payment' | 'paid';
+export interface ActionBudgetLine {
+  id: string;
+  description: string;
+  amount: number;
+  status: BudgetLineStatus;
+}
 export interface PrAction {
   id: string;
   title: string;
@@ -124,17 +131,25 @@ export interface PrAction {
   amount: number;
   status: ActionStatus;
   date: string;
+  responsible?: string;
+  commissionPct?: number;
+  includedInFee?: boolean;
+  budgetLines?: ActionBudgetLine[];
 }
 
-export type DeliveryTag = 'internal-use' | 'mrw-shipment' | 'delivered' | 'published';
+export type DeliveryMethod = 'mrw' | 'hand' | 'internal';
+export type DeliveryStatus = 'prepared' | 'shipped' | 'delivered';
 export interface Delivery {
   id: string;
   date: string;
   account: string;
-  tags: DeliveryTag[];
+  method: DeliveryMethod;
+  status: DeliveryStatus;
+  published: boolean;
   recipient: string;
   itemsSummary: string;
-  amount: number;
+  piecesCount: number;
+  cost: number;
 }
 
 export interface InventoryItem {
@@ -151,6 +166,7 @@ export interface Influencer {
   initials: string;
   instagramFollowers?: number;
   tiktokFollowers?: number;
+  email?: string;
 }
 
 export interface SeedingReportRow {
@@ -160,8 +176,32 @@ export interface SeedingReportRow {
   productCost: number;
   shippingCost: number;
   publicationStatus: string;
+  reach: number | null;
 }
 
+export interface AccountObligation {
+  id: string;
+  label: string;
+  cadence: string;
+  period: string;
+  done: number;
+  target: number;
+}
+export interface CoverageItem {
+  id: string;
+  date: string;
+  title: string;
+  outlet: string;
+  channel: string;
+  value: number;
+}
+export interface AccountBillingMonth {
+  id: string;
+  label: string;
+  retainer: number;
+  commissions: number | null;
+  others: number;
+}
 export type AccountStatus = 'active' | 'paused' | 'inactive';
 export interface PrAccount {
   id: string;
@@ -170,6 +210,17 @@ export interface PrAccount {
   manager: string;
   crmClient: string;
   contact: string;
+  signupDate?: string;
+  email?: string;
+  phone?: string;
+  notes?: string;
+  obligations: AccountObligation[];
+  coverage: CoverageItem[];
+  billing: {
+    defaultRetainer: number;
+    defaultCommissionPct: number;
+    months: AccountBillingMonth[];
+  };
 }
 
 export interface ActivityItem {

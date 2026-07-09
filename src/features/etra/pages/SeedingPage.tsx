@@ -5,7 +5,6 @@ import { useInventory } from '../hooks/useInventory';
 import { useDeliveries } from '../hooks/useDeliveries';
 import { useInfluencers } from '../hooks/useInfluencers';
 import { useSeedingReport } from '../hooks/useSeedingReport';
-import type { DeliveryTag } from '@/types';
 
 type SeedingTab = 'inventario' | 'entregas' | 'influencers' | 'reporte';
 
@@ -15,13 +14,6 @@ const TABS: { label: string; value: SeedingTab }[] = [
   { label: 'Influencers', value: 'influencers' },
   { label: 'Reporte', value: 'reporte' },
 ];
-
-const DELIVERY_TAG_LABEL: Record<DeliveryTag, string> = {
-  'internal-use': 'Uso interno',
-  'mrw-shipment': 'Envío MRW',
-  delivered: 'Entregado',
-  published: 'Publicado',
-};
 
 export function SeedingPage() {
   const [tab, setTab] = useState<SeedingTab>('inventario');
@@ -68,11 +60,15 @@ export function SeedingPage() {
                 <span>
                   {delivery.date} · {delivery.account}
                 </span>
-                {delivery.tags.map((tagValue) => (
-                  <Badge key={tagValue} variant="emerald" size="sm">
-                    {DELIVERY_TAG_LABEL[tagValue]}
-                  </Badge>
-                ))}
+                {delivery.method === 'internal' ? (
+                  <Badge variant="amber" size="sm">Uso interno</Badge>
+                ) : (
+                  <Badge variant="sky" size="sm">Envío MRW</Badge>
+                )}
+                {delivery.method !== 'internal' && delivery.status === 'delivered' && (
+                  <Badge variant="emerald" size="sm">Entregado</Badge>
+                )}
+                {delivery.published && <Badge variant="emerald" size="sm">Publicado</Badge>}
               </div>
               <p className="font-medium text-slate-800">{delivery.recipient}</p>
               <p className="text-sm text-slate-500">{delivery.itemsSummary}</p>
