@@ -23,6 +23,10 @@ export default {
           danger: '#EF4444',
           neutral: '#94A3B8',
         },
+        news: {
+          card: '#F7F6FC',
+          border: '#EEE3F6',
+        },
       },
     },
   },

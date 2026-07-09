@@ -123,6 +123,8 @@ export class MockRepository implements Repository {
           scope: 'Grupo',
           date: '06 jul 2026',
           title: 'Comida de verano, ganas de pasar un rato con todos vosotros! 🍻',
+          content:
+            'Nos vemos el viernes para la comida de verano del equipo. Habrá barra libre y sorpresas. Confirma tu asistencia para reservar sitio.',
           scheduledFor: 'Programada 09 jul 2026',
           actionLabel: 'Confirmar asistencia',
           actionHref: '#',
@@ -133,6 +135,8 @@ export class MockRepository implements Repository {
           scope: 'Grupo',
           date: '05 jul 2026',
           title: 'Teletrabajo hasta el 7 de julio incluido',
+          content:
+            'Debido a la instalación de las nuevas máquinas de aire acondicionado establecemos teletrabajo hasta el 7 de julio inclusive. Estad atentos a próximas novedades.',
         },
       ],
       upcomingEvents: [

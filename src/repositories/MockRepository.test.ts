@@ -15,4 +15,11 @@ describe('MockRepository', () => {
     expect(session.user.email).toBe('test@example.com');
     expect(session.accessToken).toBeDefined();
   });
+
+  it('includes content on news items for the expandable card', async () => {
+    const repo = new MockRepository();
+    const dashboard = await repo.getDashboard();
+    expect(dashboard.news.length).toBeGreaterThan(0);
+    expect(dashboard.news.every((n) => typeof n.content === 'string' && n.content.length > 0)).toBe(true);
+  });
 });

@@ -26,6 +26,7 @@ export interface NewsItem {
   scope: string;
   date: string;
   title: string;
+  content?: string;
   scheduledFor?: string;
   actionLabel?: string;
   actionHref?: string;
