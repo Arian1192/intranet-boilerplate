@@ -24,7 +24,7 @@ export function AnaliticaPage() {
         <StatCard
           label="MRR (RETAINERS ACTIVOS)"
           value={formatCurrencyEs(analytics.mrr)}
-          valueClassName="text-rose-500"
+          valueClassName="text-[#db2777]"
         />
         <StatCard
           label="CUENTAS ACTIVAS"
