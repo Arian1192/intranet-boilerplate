@@ -33,11 +33,8 @@ export function MasterDetailList<T extends { id: string }>({
   const selected = items.find((item) => item.id === selectedId) ?? null;
 
   const handleSelect = (id: string) => {
-    if (onSelect) {
-      onSelect(id);
-    } else {
-      setInternalSelectedId(id);
-    }
+    onSelect?.(id);
+    if (controlledSelectedId === undefined) setInternalSelectedId(id);
   };
 
   return (

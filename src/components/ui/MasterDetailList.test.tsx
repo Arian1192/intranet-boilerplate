@@ -60,4 +60,20 @@ describe('MasterDetailList', () => {
     );
     expect(screen.getByText('Formulario de alta')).toBeInTheDocument();
   });
+
+  it('keeps internal selection working when onSelect is passed without selectedId', () => {
+    const onSelect = vi.fn();
+    render(
+      <MasterDetailList
+        items={items}
+        onSelect={onSelect}
+        renderRow={(item) => <span>{item.name}</span>}
+        renderDetail={(item) => <p>Detalle de {item.name}</p>}
+      />
+    );
+
+    fireEvent.click(screen.getByText('Cliente A'));
+    expect(onSelect).toHaveBeenCalledWith('1');
+    expect(screen.getByText('Detalle de Cliente A')).toBeInTheDocument();
+  });
 });
