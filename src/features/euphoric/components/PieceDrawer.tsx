@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Badge, Button, Input, Select, SegmentedControl, Textarea } from '@/components/ui';
+import { Badge, Button, Input, Select, Textarea } from '@/components/ui';
 import { cn } from '@/lib/utils';
 
 export interface PieceDrawerProps {
@@ -11,6 +11,11 @@ type Priority = 'baja' | 'media' | 'alta';
 type Ratio = '1:1' | '4:5' | '9:16' | '16:9';
 type ApprovalStatus = 'Sin enviar' | 'Pendiente cliente' | 'Aprobado cliente' | 'Cambios cliente';
 
+const PRIORITIES: { label: string; value: Priority }[] = [
+  { label: 'Baja', value: 'baja' },
+  { label: 'Media', value: 'media' },
+  { label: 'Alta', value: 'alta' },
+];
 const RATIOS: Ratio[] = ['1:1', '4:5', '9:16', '16:9'];
 const APPROVAL_OPTIONS: ApprovalStatus[] = [
   'Sin enviar',
@@ -52,46 +57,26 @@ function AssignSlot({ label }: { label: string }) {
   );
 }
 
-function RatioChip({
+function ToggleChip({
   active,
   onClick,
   children,
+  shape = 'pill',
 }: {
   active: boolean;
   onClick: () => void;
   children: React.ReactNode;
+  shape?: 'pill' | 'rounded';
 }) {
   return (
     <button
       type="button"
       onClick={onClick}
       className={cn(
-        'rounded-lg border px-4 py-2 text-sm font-medium transition-colors',
-        active ? 'border-slate-300 bg-slate-100 text-slate-800' : 'border-slate-200 bg-white text-slate-600 hover:bg-slate-50'
-      )}
-    >
-      {children}
-    </button>
-  );
-}
-
-function ApprovalChip({
-  active,
-  onClick,
-  children,
-}: {
-  active: boolean;
-  onClick: () => void;
-  children: React.ReactNode;
-}) {
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      className={cn(
-        'rounded-full border px-3 py-1.5 text-sm font-medium transition-colors',
+        'border px-3 py-1.5 text-sm font-medium transition-colors',
+        shape === 'pill' ? 'rounded-full' : 'rounded-lg px-4 py-2',
         active
-          ? 'border-brand-500 bg-brand-50 text-brand-700'
+          ? 'border-brand-300 bg-brand-50 text-brand-700'
           : 'border-slate-200 bg-white text-slate-600 hover:bg-slate-50'
       )}
     >
@@ -213,15 +198,17 @@ export function PieceDrawer({ open, onClose }: PieceDrawerProps) {
 
           <div className="grid grid-cols-2 gap-4">
             <FieldGroup label="Prioridad">
-              <SegmentedControl
-                options={[
-                  { label: 'Baja', value: 'baja' },
-                  { label: 'Media', value: 'media' },
-                  { label: 'Alta', value: 'alta' },
-                ]}
-                value={priority}
-                onChange={setPriority}
-              />
+              <div className="flex flex-wrap gap-2">
+                {PRIORITIES.map((option) => (
+                  <ToggleChip
+                    key={option.value}
+                    active={priority === option.value}
+                    onClick={() => setPriority(option.value)}
+                  >
+                    {option.label}
+                  </ToggleChip>
+                ))}
+              </div>
             </FieldGroup>
             <Input label="Deadline" placeholder="dd/mm/aaaa" />
           </div>
@@ -229,9 +216,9 @@ export function PieceDrawer({ open, onClose }: PieceDrawerProps) {
           <FieldGroup label="Tamaños / ratios">
             <div className="flex flex-wrap gap-2">
               {RATIOS.map((ratio) => (
-                <RatioChip key={ratio} active={ratios.has(ratio)} onClick={() => toggleRatio(ratio)}>
+                <ToggleChip key={ratio} shape="rounded" active={ratios.has(ratio)} onClick={() => toggleRatio(ratio)}>
                   {ratio}
-                </RatioChip>
+                </ToggleChip>
               ))}
             </div>
           </FieldGroup>
@@ -301,9 +288,9 @@ export function PieceDrawer({ open, onClose }: PieceDrawerProps) {
             </div>
             <div className="flex flex-wrap gap-2">
               {APPROVAL_OPTIONS.map((option) => (
-                <ApprovalChip key={option} active={approval === option} onClick={() => setApproval(option)}>
+                <ToggleChip key={option} active={approval === option} onClick={() => setApproval(option)}>
                   {option}
-                </ApprovalChip>
+                </ToggleChip>
               ))}
             </div>
           </div>
