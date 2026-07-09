@@ -46,11 +46,31 @@ La nav de la referencia muestra **4 tabs**: Resumen, Acciones, Seeding, Cuentas.
 
 Ajustes a primitivas existentes:
 
-- **`Badge`**: nuevo variant `rose` (`bg-rose-100 text-rose-700`) para el chip "IG · 245K".
+- **`Badge`**: nuevos variants `sky` (`bg-sky-100 text-sky-700`, tag "Envío MRW") y `pink` (`bg-pink-50 text-pink-600`, chip "IG · 245K").
 - **`SegmentedControl`**: prop opcional `fullWidth` que lo convierte en `grid` de segmentos iguales a ancho completo (switcher "Método" del modal de entrega).
 - **`StatCard`**: prop opcional `caption` (texto pequeño bajo el valor: "3 piezas", "Total 0,00 €", "2 de 2 publicados") y `valueClassName` (el valor de RETORNO va en verde `text-emerald-600`).
-- **`MasterDetailList`**: props opcionales `selectedId`/`onSelect` (selección controlada — necesaria porque "＋ Nueva cuenta" toma el panel derecho), slot `listTop` (contenido encima de la card de lista: botón + card de filtro), y fila seleccionada con `bg-brand-50` en vez de `bg-slate-50`. El panel de detalle pasa a alinearse arriba (`items-start`) cuando hay contenido; el empty state sigue centrado.
-- **`KanbanBoard`/`KanbanColumn`**: el acento superior de la captura es más fino que el actual `border-t-4` → `border-t-2`; el contador de columna es texto plano `text-xs text-slate-400` (sin pill). Columna "Cancelada" con acento `border-t-rose-300` (verificar visualmente en la comparación final; hoy es `border-t-slate-300`).
+- **`MasterDetailList`**: props opcionales `selectedId`/`onSelect` (selección controlada — necesaria porque "＋ Nueva cuenta" toma el panel derecho), slot `listTop` (contenido encima de la card de lista: botón + card de filtro), y fila seleccionada con `bg-brand-50/60` (`#FAF8FD` verificado) en vez de `bg-slate-50`. El panel de detalle pasa a alinearse arriba (`items-start`) cuando hay contenido; el empty state sigue centrado.
+- **`KanbanBoard`/`KanbanColumn`**: el acento superior `border-t-4` y los colores por columna actuales (azul/ámbar/esmeralda/slate-300) están **verificados por píxel contra las capturas** — no cambian. Único cambio: el contador de columna pasa a texto plano `text-xs text-slate-400` (sin pill).
+
+### 3.4 Colorimetría verificada (muestreo de píxeles sobre las capturas)
+
+| Elemento | Color muestreado | Tailwind |
+|---|---|---|
+| Botón primario, underline de tab activo | `#773C9F` | `brand-600` (confirmado) |
+| Acentos kanban Planificada / En curso / Hecha / Cancelada | `#60A5FA` / `#FBBF24` / `#34D399` / `#CBD5E1` | `blue-400` / `amber-400` / `emerald-400` / `slate-300` |
+| Caja Disponible (bg / valor) | `#EFF6FF` / `#1D4ED8` | `blue-50` / `blue-700` |
+| Caja Restante (bg / valor) | `#ECFDF5` / `#047857` | `emerald-50` / `emerald-700` |
+| Valores Comisión y Gastado | `#1E293B` | `slate-800` (sin tinte rojo) |
+| Barra de progreso (fill) | `#10B981` | `emerald-500` |
+| Select Abonado (bg / texto) | `#D1FAE5` / `#047857` | `emerald-100` / `emerald-700` |
+| Select Pendiente abonar (bg / texto) | `#FEF3C7` / `#B45309` | `amber-100` / `amber-700` |
+| Tags Uso interno / En curso | `#FEF3C7` + `#B45309` | `amber-100` / `amber-700` |
+| Tag Envío MRW | `#E0F2FE` / `#0369A1` | `sky-100` / `sky-700` |
+| Tags Entregado, Publicado, Activa | `#D1FAE5` / `#047857` | `emerald-100` / `emerald-700` |
+| Chip IG | `#FDF2F8` / `#DB2777` | `pink-50` / `pink-600` |
+| Chips TT, piezas, pill Budget | `#F1F5F9` | `slate-100` |
+| Avatar influencer (bg) | `#F7F3FB` | `brand-50` |
+| Fila de cuenta seleccionada | `#FAF8FD` | `brand-50/60` |
 
 ### 3.3 Rutas
 
@@ -173,7 +193,7 @@ Fixtures de `MockRepository` actualizados para reproducir exactamente los númer
 - Fila 2 (3 columnas iguales): "Tipo" (select, default "Nota de prensa"), "Responsable" (select "Sin asignar"), "Fecha límite" (`input type="date"`).
 - Fila 3: checkbox marcado "Incluida en el fee" a la izquierda; botón primario "Crear y abrir" a la derecha.
 
-**Kanban**: 4 columnas (Planificada azul / En curso ámbar / Hecha esmeralda / Cancelada rose-300), contador plano a la derecha del label, "—" centrado en columnas vacías. Tarjeta:
+**Kanban**: 4 columnas (Planificada blue-400 / En curso amber-400 / Hecha emerald-400 / Cancelada slate-300, verificadas por píxel), contador plano a la derecha del label, "—" centrado en columnas vacías. Tarjeta:
 - Línea 1: título `font-medium` izquierda + fecha `text-xs text-slate-400` derecha.
 - Línea 2: badge slate con la cuenta + tipo como **texto plano** `text-xs text-slate-500` + `· {importe}` formateado (`10.000,00 €`) cuando `amount > 0`.
 - La tarjeta entera es un `Link` a `/etra/tareas/:id`.
@@ -185,7 +205,7 @@ Fixtures de `MockRepository` actualizados para reproducir exactamente los númer
 - **Card "Desglose de la activación"**:
   - 5 cajas en fila (grid 5 cols, `rounded-xl border p-4 text-center`): Budget `10.000,00 €` (blanca) · Comisión (20%) `−2000,00 €` (blanca) · Disponible `8000,00 €` (`bg-blue-50` valor `text-blue-700`) · Gastado `−3540,00 €` (blanca) · Restante `4460,00 €` (`bg-emerald-50` valor `text-emerald-700`). Valor `font-semibold` arriba, label `text-xs text-slate-500` debajo. La etiqueta de comisión es neutral: "Comisión agencia (20%)".
   - `ProgressBar` esmeralda (3540/8000) con "Gastado 3540,00 €" a la izquierda y "Queda 4460,00 € de 8000,00 €" a la derecha (`text-xs text-slate-400`).
-  - **Líneas de gasto** (una fila por `budgetLine`): descripción en input readonly-style (`font-medium`), importe alineado a la derecha + "€", select de estado **coloreado**: Abonado `bg-emerald-100 text-emerald-800`, Pendiente abonar `bg-amber-100 text-amber-800`, Propuesto blanco; icono comentario (`MessageCircle` slate-300), link "adjuntar" con icono clip (`text-slate-400 text-xs`), X de borrado.
+  - **Líneas de gasto** (una fila por `budgetLine`): descripción en input readonly-style (`font-medium`), importe alineado a la derecha + "€", select de estado **coloreado**: Abonado `bg-emerald-100 text-emerald-700`, Pendiente abonar `bg-amber-100 text-amber-700`, Propuesto blanco; icono comentario (`MessageCircle` slate-300), link "adjuntar" con icono clip (`text-slate-400 text-xs`), X de borrado.
   - **Fila de alta**: inputs "Descripción" / "0" / select "Propuesto" / "Proveedor" / "Enlace"; segunda línea input ancho "Notas internas (opcional)" + botón primario "Añadir línea".
 - **Card "Comentarios"**: heading, texto vacío "Sin comentarios. Menciona a alguien con @Nombre." (`text-sm text-slate-500`), `Textarea` placeholder "Escribe un comentario... usa @Nombre para mencionar" + botón primario "Enviar" abajo a la derecha.
 - Si el `:actionId` no existe en fixtures → estado vacío con el link de volver.
@@ -198,7 +218,7 @@ Los 4 sub-tabs pasan de `SegmentedControl` a **`UnderlineTabs`**. Inventario no 
 - Barra de stats (`text-sm text-slate-500`, números `font-semibold text-slate-800`): "3 entregas · 4 piezas · Gasto MRW 0,00 € · 2 publicados · 100% retorno" a la izquierda; botón primario "+ Nueva entrega" a la derecha (abre el modal).
 - Card de filtros: `Select` "Todos los métodos" (estrecho) · `Select` "Todos los clientes" (flexible, notablemente ancho como en la captura) · `Select` "Todos los influencers" · `Input` "Filtrar por modelo...".
 - Filas (Card por entrega):
-  - Línea 1: "07 jul 2026 · Cliente A" (`text-xs text-slate-400`) + badges: método ("Uso interno" ámbar / "Envío MRW" azul), y si método ≠ interno: estado ("Entregado" esmeralda) y "Publicado" (esmeralda).
+  - Línea 1: "07 jul 2026 · Cliente A" (`text-xs text-slate-400`) + badges: método ("Uso interno" `amber` / "Envío MRW" `sky`), y si método ≠ interno: estado ("Entregado" esmeralda) y "Publicado" (esmeralda).
   - Línea 2: destinatario `font-medium` + icono info slate (solo si tiene email/notas) + flecha "→" `text-slate-300` + chip slate con `itemsSummary` ("1× Gorra Edición Limitada · 8").
   - Derecha: entregas internas → botón secundario "Editar" + X; envíos MRW → importe "0,00 €" (`text-sm text-slate-500`) + select de estado ("Entregado") + X.
 - **Modal "Nueva entrega"** (`Modal`): switcher "Método" (`SegmentedControl fullWidth`: Envío MRW / Entrega en mano / Uso interno) que **cambia los campos visibles**:
@@ -211,7 +231,7 @@ Los 4 sub-tabs pasan de `SegmentedControl` a **`UnderlineTabs`**. Inventario no 
 **Influencers**:
 - Fila superior: `Input` "Buscar influencer..." (ancho fijo ~256px) · "2 en el directorio" (`text-sm text-slate-400`) · botón primario "+ Añadir influencer" a la derecha (abre modal en modo alta).
 - Grid 2 columnas de cards **expandibles** (estado local por card, chevron `v`/`^` arriba a la derecha):
-  - Colapsada: avatar circular con iniciales (`bg-brand-50 text-brand-700`), nombre `font-medium`, chips: "IG · 245K" (`Badge rose sm`) y "TT · 26,2K" (`Badge neutral sm`).
+  - Colapsada: avatar circular con iniciales (`bg-brand-50 text-brand-700`), nombre `font-medium`, chips: "IG · 245K" (`Badge pink sm`) y "TT · 26,2K" (`Badge neutral sm`).
   - Expandida: + separador, fila email con icono sobre (`text-sm text-slate-600`), links "Editar" (brand, abre modal en modo edición) y "Eliminar" (slate-400, decorativo).
 - **Modal "Nuevo influencer" / "Editar influencer"** (mismo componente, `initialValues` opcionales):
   - Círculo de foto con overlay "Hacer foto" y caption "Foto" + "Nombre *" (input, autofocus, borde brand al foco).
@@ -232,7 +252,7 @@ Los 4 sub-tabs pasan de `SegmentedControl` a **`UnderlineTabs`**. Inventario no 
 **Columna izquierda** (`listTop` del `MasterDetailList`):
 - Botón primario **a ancho completo** "+ Nueva cuenta" (activa el modo alta en el panel derecho y deselecciona la cuenta).
 - Card de filtro: label "Estado" + `Select` "Todas".
-- Card de lista: filas con nombre `font-medium` + subtítulo `text-xs text-slate-400` (crmClient) + badge "Activa" esmeralda; fila seleccionada `bg-brand-50`.
+- Card de lista: filas con nombre `font-medium` + subtítulo `text-xs text-slate-400` (crmClient) + badge "Activa" esmeralda; fila seleccionada `bg-brand-50/60`.
 
 **Panel derecho — modo alta ("Nueva cuenta")**, sustituye al detalle:
 - Título "Nueva cuenta". Grid 2 columnas: "Nombre (marca) *" / "Cliente del CRM" (con link "Abrir CRM ↗" `text-xs text-brand-600` a la derecha del label, input "Buscar o crear cliente...", help "Busca el cliente del CRM. Si no existe, escríbelo y créalo al momento.") · "Responsable" / "Estado" (select "Activa") · "Fecha de alta" (date) / "Contacto" · "Email de contacto" / "Teléfono de contacto" · "Notas" (`Textarea` a doble columna). Pie: "Guardar" (primario) + "Cancelar" (vuelve al empty state).
