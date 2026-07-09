@@ -58,6 +58,7 @@ export function CatalogoPage() {
         </div>
       </section>
 
+      {/* key remounts the modal per selection so its useState-seeded fields re-init (prefill). Do not remove. */}
       <ProductModal
         key={openProductId}
         open={openProductId !== null}

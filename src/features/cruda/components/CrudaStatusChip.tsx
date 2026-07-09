@@ -1,10 +1,8 @@
 import { Badge } from '@/components/ui';
-import { cn } from '@/lib/utils';
 import type { OrderStatus } from '../data/types';
 import type { BadgeProps } from '@/components/ui/Badge';
 
 const VARIANT: Partial<Record<OrderStatus, BadgeProps['variant']>> = {
-  Borrador: 'neutral',
   Confirmado: 'blue',
   'En producción': 'amber',
   Enviado: 'indigo',
@@ -34,5 +32,5 @@ export function CrudaStatusChip({ status }: { status: OrderStatus }) {
       </span>
     );
   }
-  return <Badge variant={VARIANT[status] ?? 'neutral'} className={cn()}>{status}</Badge>;
+  return <Badge variant={VARIANT[status] ?? 'neutral'}>{status}</Badge>;
 }
