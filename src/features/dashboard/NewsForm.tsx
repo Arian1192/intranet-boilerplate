@@ -13,6 +13,12 @@ const timingOptions: { label: string; value: Timing }[] = [
   { label: 'Borrador', value: 'draft' },
 ];
 
+const publishLabel: Record<Timing, string> = {
+  now: 'Publicar',
+  schedule: 'Programar',
+  draft: 'Guardar borrador',
+};
+
 export function NewsForm({ onClose }: NewsFormProps) {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
@@ -20,6 +26,7 @@ export function NewsForm({ onClose }: NewsFormProps) {
   const [buttonHref, setButtonHref] = useState('');
   const [buttonLabel, setButtonLabel] = useState('');
   const [timing, setTiming] = useState<Timing>('now');
+  const [scheduleAt, setScheduleAt] = useState('');
   const [notify, setNotify] = useState(true);
   const [email, setEmail] = useState(false);
 
@@ -73,31 +80,54 @@ export function NewsForm({ onClose }: NewsFormProps) {
             value={timing}
             onChange={setTiming}
           />
-          <div className="mt-4 space-y-2">
-            <label className="flex items-center gap-2 text-sm text-slate-700">
-              <input
-                type="checkbox"
-                checked={notify}
-                onChange={(e) => setNotify(e.target.checked)}
-                className="accent-[#0075FF]"
+
+          {timing === 'schedule' && (
+            <div className="mt-4">
+              <Input
+                type="datetime-local"
+                value={scheduleAt}
+                onChange={(e) => setScheduleAt(e.target.value)}
+                className="border-slate-300"
               />
-              Notificar a todo el equipo <span className="text-slate-400">(campanita)</span>
-            </label>
-            <label className="flex items-center gap-2 text-sm text-slate-700">
-              <input
-                type="checkbox"
-                checked={email}
-                onChange={(e) => setEmail(e.target.checked)}
-                className="accent-[#0075FF]"
-              />
-              Enviar también por email{' '}
-              <span className="text-slate-400">(para novedades importantes)</span>
-            </label>
-          </div>
+              <p className="mt-1.5 text-xs text-slate-400">
+                Hora de Barcelona. Se publicará y avisará sola en ese momento.
+              </p>
+            </div>
+          )}
+
+          {timing === 'draft' && (
+            <p className="mt-4 text-xs text-slate-400">
+              Se guarda sin publicar. No avisa a nadie hasta que lo publiques.
+            </p>
+          )}
+
+          {timing !== 'draft' && (
+            <div className="mt-4 space-y-2">
+              <label className="flex items-center gap-2 text-sm text-slate-700">
+                <input
+                  type="checkbox"
+                  checked={notify}
+                  onChange={(e) => setNotify(e.target.checked)}
+                  className="accent-[#0075FF]"
+                />
+                Notificar a todo el equipo <span className="text-slate-400">(campanita)</span>
+              </label>
+              <label className="flex items-center gap-2 text-sm text-slate-700">
+                <input
+                  type="checkbox"
+                  checked={email}
+                  onChange={(e) => setEmail(e.target.checked)}
+                  className="accent-[#0075FF]"
+                />
+                Enviar también por email{' '}
+                <span className="text-slate-400">(para novedades importantes)</span>
+              </label>
+            </div>
+          )}
         </div>
         <div className="mt-5 flex gap-3">
           <Button variant="primary" onClick={onClose}>
-            Publicar
+            {publishLabel[timing]}
           </Button>
           <Button variant="secondary" onClick={onClose}>
             Cancelar
