@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { Badge, Button, Input, MasterDetailList, MonthCalendar, SegmentedControl } from '@/components/ui';
-import type { MonthCalendarEvent } from '@/components/ui/MonthCalendar';
+import { Badge, Button, Input, MasterDetailList, SegmentedControl } from '@/components/ui';
+import { EuphoricCalendar, EventPill } from '../components/EuphoricCalendar';
 import { EventForm } from '../components/EventForm';
 import { events } from '../data/seed';
 import type { EventItem } from '../data/types';
@@ -15,11 +15,6 @@ const VIEW_OPTIONS: { label: string; value: EventosView }[] = [
 const KIND_LABEL: Record<EventItem['kind'], string> = {
   marketing: 'Marketing',
   produccion: 'Producción',
-};
-
-const CALENDAR_TONE: Record<EventItem['kind'], string> = {
-  marketing: 'bg-brand-50 text-brand-700',
-  produccion: 'bg-red-50 text-red-600',
 };
 
 const MONTHS_ES = [
@@ -76,12 +71,24 @@ function EventosCalendario() {
   const [year, setYear] = useState(2026);
   const [month, setMonth] = useState(6); // Julio 2026 (0-indexed)
 
-  const calendarEvents: MonthCalendarEvent[] = events.map((event) => ({
-    id: event.id,
-    isoDate: event.isoDate,
-    label: event.name,
-    toneClassName: CALENDAR_TONE[event.kind],
-  }));
+  const eventsByDate = new Map<string, EventItem[]>();
+  events.forEach((event) => {
+    const list = eventsByDate.get(event.isoDate) ?? [];
+    list.push(event);
+    eventsByDate.set(event.isoDate, list);
+  });
+
+  const renderDay = (isoDate: string) => {
+    const dayEvents = eventsByDate.get(isoDate) ?? [];
+    if (dayEvents.length === 0) return null;
+    return (
+      <>
+        {dayEvents.map((event) => (
+          <EventPill key={event.id} name={event.name} tone={event.kind === 'marketing' ? 'violet' : 'rose'} />
+        ))}
+      </>
+    );
+  };
 
   const goToMonth = (delta: number) => {
     const total = month + delta;
@@ -93,13 +100,14 @@ function EventosCalendario() {
 
   return (
     <div className="space-y-4">
-      <MonthCalendar
+      <EuphoricCalendar
         year={year}
         month={month}
         monthLabel={`${MONTHS_ES[month]} ${year}`}
-        events={calendarEvents}
         onPrevMonth={() => goToMonth(-1)}
         onNextMonth={() => goToMonth(1)}
+        today={{ year: 2026, month: 6, day: 9 }}
+        renderDay={renderDay}
       />
       <p className="text-center text-sm text-slate-400">
         Toca un evento del calendario para editarlo, o «+ Nuevo evento».

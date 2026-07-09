@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { Button, MonthCalendar, SegmentedControl, Select } from '@/components/ui';
-import type { MonthCalendarEvent } from '@/components/ui/MonthCalendar';
+import { Button, SegmentedControl, Select } from '@/components/ui';
 import { cn } from '@/lib/utils';
+import { EuphoricCalendar, EventPill, PublicationCell } from '../components/EuphoricCalendar';
 import { PublicationKanban } from '../components/PublicationKanban';
 import { PublicationTable } from '../components/PublicationTable';
 import { events, publications } from '../data/seed';
@@ -58,22 +58,43 @@ function CalendarioView() {
   const [cursor, setCursor] = useState(TODAY);
   const [showEvents, setShowEvents] = useState(true);
 
-  const calendarEvents: MonthCalendarEvent[] = [
-    ...publications.map((pub) => ({
-      id: pub.id,
-      isoDate: pub.isoDate,
-      label: pub.name,
-      toneClassName: 'bg-blue-50 text-blue-700',
-    })),
-    ...(showEvents
-      ? events.map((event) => ({
-          id: event.id,
-          isoDate: event.isoDate,
-          label: `📍 ${event.name}`,
-          toneClassName: 'bg-red-50 text-red-600',
-        }))
-      : []),
-  ];
+  const publicationsByDate = new Map<string, typeof publications>();
+  publications.forEach((pub) => {
+    const list = publicationsByDate.get(pub.isoDate) ?? [];
+    list.push(pub);
+    publicationsByDate.set(pub.isoDate, list);
+  });
+
+  const eventsByDate = new Map<string, typeof events>();
+  events.forEach((event) => {
+    const list = eventsByDate.get(event.isoDate) ?? [];
+    list.push(event);
+    eventsByDate.set(event.isoDate, list);
+  });
+
+  const renderDay = (isoDate: string) => {
+    const dayPublications = publicationsByDate.get(isoDate) ?? [];
+    const dayEvents = showEvents ? eventsByDate.get(isoDate) ?? [] : [];
+    if (dayPublications.length === 0 && dayEvents.length === 0) return null;
+    return (
+      <>
+        {dayPublications.map((pub) => (
+          <PublicationCell
+            key={pub.id}
+            name={pub.name}
+            account={pub.account}
+            location={pub.eventName ?? ''}
+            typeLabel={pub.type}
+            statusLabel={pub.status}
+            title={`${pub.account} · ${pub.name} · ${pub.status}`}
+          />
+        ))}
+        {dayEvents.map((event) => (
+          <EventPill key={event.id} name={event.name} tone="rose" />
+        ))}
+      </>
+    );
+  };
 
   return (
     <div className="space-y-3">
@@ -92,13 +113,14 @@ function CalendarioView() {
           Hoy
         </Button>
       </div>
-      <MonthCalendar
+      <EuphoricCalendar
         year={cursor.year}
         month={cursor.month}
         monthLabel={`${MONTH_LABELS[cursor.month]} ${cursor.year}`}
-        events={calendarEvents}
         onPrevMonth={() => setCursor((value) => addMonths(value, -1))}
         onNextMonth={() => setCursor((value) => addMonths(value, 1))}
+        today={{ year: TODAY.year, month: TODAY.month, day: 9 }}
+        renderDay={renderDay}
       />
     </div>
   );
