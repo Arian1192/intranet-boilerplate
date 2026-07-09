@@ -3,6 +3,8 @@ export * from './Card';
 export * from './Badge';
 export * from './ActivityListItem';
 export * from './Input';
+export * from './Select';
+export * from './Textarea';
 export * from './Avatar';
 export * from './SegmentedControl';
 export * from './KanbanBoard';
