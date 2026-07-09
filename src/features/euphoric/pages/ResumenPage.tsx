@@ -2,6 +2,7 @@ import { Link } from 'react-router';
 import { StatCard, Card } from '@/components/ui';
 import { StatusChip } from '../components/StatusChip';
 import { accounts, campaigns, publications } from '../data/seed';
+import { campaignStatusLabel } from '../data/labels';
 
 export function ResumenPage() {
   const cmp = campaigns[0];
@@ -13,9 +14,9 @@ export function ResumenPage() {
         <p className="text-slate-500">Marketing del grupo: cuentas, campañas y calendario de contenido.</p>
       </div>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-        <Link to="/euphoric/cuentas"><StatCard label="Cuentas activas" value={`${accounts.length}`} caption="de 1" /></Link>
-        <StatCard label="Campañas en curso" value="1" />
-        <StatCard label="Publicaciones (7 días)" value="1" />
+        <Link to="/euphoric/cuentas"><StatCard label="CUENTAS ACTIVAS" value={String(accounts.filter((a) => a.status === 'Activa').length)} caption={`de ${accounts.length}`} /></Link>
+        <StatCard label="CAMPAÑAS EN CURSO" value={String(campaigns.filter((c) => c.status === 'en-curso').length)} />
+        <StatCard label="PUBLICACIONES (7 DÍAS)" value={String(publications.length)} />
       </div>
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
         <Card className="p-5">
@@ -25,7 +26,7 @@ export function ResumenPage() {
               <p className="font-medium text-slate-900">{cmp.name}</p>
               <p className="text-sm text-slate-500">{cmp.account} · hasta {cmp.endLabel}</p>
             </div>
-            <StatusChip status="En curso" />
+            <StatusChip status={campaignStatusLabel[cmp.status]} />
           </Link>
         </Card>
         <Card className="p-5">
@@ -35,7 +36,7 @@ export function ResumenPage() {
               <p className="font-medium text-slate-900">{pub.name}</p>
               <p className="text-sm text-slate-500">{pub.dateLabel} · {pub.channel} · {pub.account}</p>
             </div>
-            <StatusChip status="En producción" />
+            <StatusChip status={pub.status} />
           </Link>
         </Card>
       </div>
