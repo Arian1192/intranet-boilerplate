@@ -7,6 +7,7 @@ export * from './Select';
 export * from './Textarea';
 export * from './Avatar';
 export * from './SegmentedControl';
+export * from './UnderlineTabs';
 export * from './KanbanBoard';
 export * from './MasterDetailList';
 export * from './MonthCalendar';
