@@ -1,13 +1,11 @@
 import { useState } from 'react';
 import { Button, Card } from '@/components/ui';
-import type { BadgeProps } from '@/components/ui/Badge';
 import { Badge } from '@/components/ui';
 import { cn } from '@/lib/utils';
 import { PieceBoard } from '../components/PieceBoard';
 import { StatusChip } from '../components/StatusChip';
 import { pieces } from '../data/seed';
-import { pieceStatusLabel } from '../data/labels';
-import type { PiecePriority } from '../data/types';
+import { PRIORITY_LABEL, PRIORITY_VARIANT, pieceStatusLabel } from '../data/labels';
 
 type PiezasFilter = 'todas' | 'mias' | 'diseno' | 'video' | 'pend-aprobar' | 'correcciones' | 'atrasadas';
 
@@ -20,18 +18,6 @@ const FILTER_OPTIONS: { label: string; value: PiezasFilter }[] = [
   { label: 'Correcciones', value: 'correcciones' },
   { label: 'Atrasadas', value: 'atrasadas' },
 ];
-
-const PRIORITY_VARIANT: Record<PiecePriority, BadgeProps['variant']> = {
-  baja: 'neutral',
-  media: 'amber',
-  alta: 'danger',
-};
-
-const PRIORITY_LABEL: Record<PiecePriority, string> = {
-  baja: 'Baja',
-  media: 'Media',
-  alta: 'Alta',
-};
 
 function PieceStatCard({
   value,
@@ -73,11 +59,23 @@ function FilterChip({
   );
 }
 
-function AssigneeChip({ children }: { children: React.ReactNode }) {
+function AssigneeChip({
+  active,
+  children,
+  onClick,
+}: {
+  active: boolean;
+  children: React.ReactNode;
+  onClick: () => void;
+}) {
   return (
     <button
       type="button"
-      className="rounded-full border border-slate-200 bg-white px-3 py-1 text-sm text-slate-600 transition-colors hover:bg-slate-50"
+      onClick={onClick}
+      className={cn(
+        'rounded-full border px-3 py-1 text-sm font-medium transition-colors',
+        active ? 'border-brand-600 bg-brand-600 text-white' : 'border-slate-200 bg-white text-slate-600 hover:bg-slate-50'
+      )}
     >
       {children}
     </button>
@@ -126,6 +124,13 @@ function PiecesTable() {
 export function PiezasPage() {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [filter, setFilter] = useState<PiezasFilter>('todas');
+  const [selectedAssignees, setSelectedAssignees] = useState<string[]>([]);
+
+  const toggleAssignee = (assignee: string) => {
+    setSelectedAssignees((current) =>
+      current.includes(assignee) ? current.filter((item) => item !== assignee) : [...current, assignee]
+    );
+  };
 
   const activeCount = pieces.length;
   const pendApprove = pieces.filter((piece) => piece.status === 'revision').length;
@@ -141,8 +146,12 @@ export function PiezasPage() {
         </div>
         <div className="flex items-center gap-3">
           <span className="text-sm text-slate-400">Asignar a:</span>
-          <AssigneeChip>+ Alba</AssigneeChip>
-          <AssigneeChip>+ Carlos</AssigneeChip>
+          <AssigneeChip active={selectedAssignees.includes('Alba')} onClick={() => toggleAssignee('Alba')}>
+            + Alba
+          </AssigneeChip>
+          <AssigneeChip active={selectedAssignees.includes('Carlos')} onClick={() => toggleAssignee('Carlos')}>
+            + Carlos
+          </AssigneeChip>
           <Button onClick={() => setDrawerOpen(true)}>+ Nueva pieza</Button>
         </div>
       </div>

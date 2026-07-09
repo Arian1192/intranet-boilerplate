@@ -1,22 +1,9 @@
 import { Avatar, Badge, Card } from '@/components/ui';
-import type { BadgeProps } from '@/components/ui/Badge';
-import type { Piece, PiecePriority, PieceStatus } from '../data/types';
-import { pieceStatusLabel } from '../data/labels';
+import type { Piece, PieceStatus } from '../data/types';
+import { PRIORITY_LABEL, PRIORITY_VARIANT, pieceStatusLabel } from '../data/labels';
 import { StatusChip } from './StatusChip';
 
 const COLUMN_ORDER: PieceStatus[] = ['briefing', 'en-produccion', 'revision', 'cambios', 'aprobado'];
-
-const PRIORITY_VARIANT: Record<PiecePriority, BadgeProps['variant']> = {
-  baja: 'neutral',
-  media: 'amber',
-  alta: 'danger',
-};
-
-const PRIORITY_LABEL: Record<PiecePriority, string> = {
-  baja: 'Baja',
-  media: 'Media',
-  alta: 'Alta',
-};
 
 export function PieceBoard({ pieces }: { pieces: Piece[] }) {
   return (
