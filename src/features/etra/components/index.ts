@@ -10,3 +10,5 @@ export * from './InfluencerFormModal';
 export * from './SeedingInfluencersTab';
 export * from './SeedingReportTab';
 export * from './AccountForm';
+export * from './account-tabs/AccountActionsTab';
+export * from './account-tabs/AccountObligationsTab';

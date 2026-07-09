@@ -74,3 +74,29 @@ describe('AccountsPage', () => {
     expect(screen.getByText('contacto@cliente-a.example.com')).toBeInTheDocument();
   });
 });
+
+describe('AccountsPage — detail tabs (Acciones, Obligaciones)', () => {
+  it('renders the per-account action form and list', () => {
+    render(<AccountsPage />);
+    fireEvent.click(screen.getAllByText('Cliente A')[0]);
+    fireEvent.click(screen.getByRole('button', { name: 'Acciones' }));
+
+    expect(screen.getByText('Título de la acción')).toBeInTheDocument();
+    expect(screen.getByText('Incluida en fee')).toBeInTheDocument();
+    expect(screen.getByText('Acción de prensa Cliente A')).toBeInTheDocument();
+    expect(screen.getByText('En curso')).toBeInTheDocument();
+  });
+
+  it('renders obligations with a progress bar and target', () => {
+    render(<AccountsPage />);
+    fireEvent.click(screen.getAllByText('Cliente A')[0]);
+    fireEvent.click(screen.getByRole('button', { name: 'Obligaciones' }));
+
+    expect(screen.getByText('KPIS / OBLIGACIONES')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Modificar obligaciones' })).toBeInTheDocument();
+    expect(screen.getByText('Notas de prensa')).toBeInTheDocument();
+    expect(screen.getByText('Mensual · 2026-07')).toBeInTheDocument();
+    expect(screen.getByText('/ 4')).toBeInTheDocument();
+    expect(screen.getByRole('progressbar')).toBeInTheDocument();
+  });
+});

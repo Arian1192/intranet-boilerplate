@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { MasterDetailList, Badge, Button, Card, Select, UnderlineTabs } from '@/components/ui';
-import { AccountForm } from '../components';
+import { AccountForm, AccountActionsTab, AccountObligationsTab } from '../components';
 import { usePrAccounts } from '../hooks/usePrAccounts';
 import type { PrAccount } from '@/types';
 
@@ -55,12 +55,8 @@ function AccountDetail({ account }: { account: PrAccount }) {
       </div>
       <UnderlineTabs options={DETAIL_TABS} value={tab} onChange={setTab} className="mb-5" />
       {tab === 'datos' && <AccountDatosTab account={account} />}
-      {tab === 'acciones' && (
-        <p className="py-8 text-center text-slate-400">Pendiente (Task 15).</p>
-      )}
-      {tab === 'obligaciones' && (
-        <p className="py-8 text-center text-slate-400">Pendiente (Task 15).</p>
-      )}
+      {tab === 'acciones' && <AccountActionsTab account={account} />}
+      {tab === 'obligaciones' && <AccountObligationsTab account={account} />}
       {tab === 'cobertura' && (
         <p className="py-8 text-center text-slate-400">Pendiente (Task 16).</p>
       )}
