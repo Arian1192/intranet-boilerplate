@@ -8,3 +8,4 @@ export * from './SeedingDeliveriesTab';
 export * from './InfluencerCard';
 export * from './InfluencerFormModal';
 export * from './SeedingInfluencersTab';
+export * from './SeedingReportTab';

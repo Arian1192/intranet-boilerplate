@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { UnderlineTabs, Card, Badge } from '@/components/ui';
-import { formatCurrency } from '@/lib/format';
-import { SeedingDeliveriesTab, SeedingInfluencersTab } from '../components';
+import { SeedingDeliveriesTab, SeedingInfluencersTab, SeedingReportTab } from '../components';
 import { useInventory } from '../hooks/useInventory';
 import { useDeliveries } from '../hooks/useDeliveries';
 import { useInfluencers } from '../hooks/useInfluencers';
@@ -67,32 +66,10 @@ export function SeedingPage() {
       )}
 
       {tab === 'reporte' && (
-        <div className="overflow-hidden rounded-xl border border-slate-100 bg-white shadow-sm">
-          <table className="w-full text-left text-sm">
-            <thead className="bg-slate-50 text-xs font-medium uppercase text-slate-500">
-              <tr>
-                <th className="px-4 py-3">Fecha</th>
-                <th className="px-4 py-3">Influencer</th>
-                <th className="px-4 py-3 text-right">Piezas</th>
-                <th className="px-4 py-3 text-right">Coste prod.</th>
-                <th className="px-4 py-3 text-right">Envío</th>
-                <th className="px-4 py-3">Publicación</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-slate-100">
-              {report.data?.map((row, index) => (
-                <tr key={index}>
-                  <td className="px-4 py-3 text-slate-500">{row.date}</td>
-                  <td className="px-4 py-3 font-medium text-slate-800">{row.influencer}</td>
-                  <td className="px-4 py-3 text-right text-slate-700">{row.pieces}</td>
-                  <td className="px-4 py-3 text-right text-slate-700">{formatCurrency(row.productCost)}</td>
-                  <td className="px-4 py-3 text-right text-slate-700">{formatCurrency(row.shippingCost)}</td>
-                  <td className="px-4 py-3 text-slate-500">{row.publicationStatus}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+        <>
+          {report.isLoading && <p className="text-slate-500">Cargando...</p>}
+          {report.data && <SeedingReportTab rows={report.data} />}
+        </>
       )}
     </div>
   );

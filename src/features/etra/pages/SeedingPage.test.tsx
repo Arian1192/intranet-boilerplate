@@ -96,3 +96,18 @@ describe('SeedingPage — Influencers', () => {
     expect(screen.getByDisplayValue('Carlos Ruiz')).toBeInTheDocument();
   });
 });
+
+describe('SeedingPage — Reporte', () => {
+  it('renders the six stat cards and the Alcance column', () => {
+    render(<SeedingPage />);
+    fireEvent.click(screen.getByRole('button', { name: 'Reporte' }));
+
+    expect(screen.getByText('ENVÍOS')).toBeInTheDocument();
+    expect(screen.getByText('RETORNO')).toBeInTheDocument();
+    expect(screen.getByText('100%')).toHaveClass('text-emerald-600');
+    expect(screen.getByText('2 de 2 publicados')).toBeInTheDocument();
+    expect(screen.getByText('COSTE POR PUBLICACIÓN')).toBeInTheDocument();
+    expect(screen.getByText('Alcance')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Exportar PDF' })).toBeInTheDocument();
+  });
+});
