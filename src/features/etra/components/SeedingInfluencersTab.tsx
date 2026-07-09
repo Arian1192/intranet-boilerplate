@@ -10,7 +10,9 @@ export function SeedingInfluencersTab({ influencers }: { influencers: Influencer
   return (
     <div className="space-y-4">
       <div className="flex flex-wrap items-center gap-4">
-        <Input placeholder="Buscar influencer..." className="w-64" />
+        <div className="w-64">
+          <Input placeholder="Buscar influencer..." />
+        </div>
         <span className="text-sm text-slate-400">{influencers.length} en el directorio</span>
         <div className="ml-auto">
           <Button size="sm" onClick={() => setModal({ open: true })}>+ Añadir influencer</Button>

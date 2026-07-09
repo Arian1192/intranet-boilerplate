@@ -15,9 +15,15 @@ export function SeedingReportTab({ rows }: { rows: SeedingReportRow[] }) {
   return (
     <div className="space-y-4">
       <div className="flex flex-wrap items-end gap-4">
-        <Input label="Cliente" placeholder="Todos los clientes..." className="w-56" />
-        <Input label="Desde" type="date" defaultValue={`${currentYear}-01-01`} className="w-40" />
-        <Input label="Hasta" type="date" defaultValue={new Date().toISOString().slice(0, 10)} className="w-40" />
+        <div className="w-56">
+          <Input label="Cliente" placeholder="Todos los clientes..." />
+        </div>
+        <div className="w-40">
+          <Input label="Desde" type="date" defaultValue={`${currentYear}-01-01`} />
+        </div>
+        <div className="w-40">
+          <Input label="Hasta" type="date" defaultValue={new Date().toISOString().slice(0, 10)} />
+        </div>
         <div className="ml-auto">
           <Button size="sm">Exportar PDF</Button>
         </div>

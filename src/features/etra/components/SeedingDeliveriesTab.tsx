@@ -39,7 +39,9 @@ export function SeedingDeliveriesTab({ deliveries }: { deliveries: Delivery[] })
         <Select className="w-48">
           <option>Todos los influencers</option>
         </Select>
-        <Input placeholder="Filtrar por modelo..." className="w-48" />
+        <div className="w-48">
+          <Input placeholder="Filtrar por modelo..." />
+        </div>
       </Card>
 
       <div className="space-y-3">
