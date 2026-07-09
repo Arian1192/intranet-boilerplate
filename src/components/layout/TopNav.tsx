@@ -44,7 +44,7 @@ export function TopNav({ user, notificationCount = 0, module }: TopNavProps) {
                 <NavLink
                   key={tab.href}
                   to={tab.href}
-                  end={tab.href === '/conceptone'}
+                  end={tab.href === '/conceptone' || tab.href === module.href}
                   className={({ isActive }) =>
                     cn(
                       'rounded-lg px-3 py-1.5 text-sm font-medium transition-colors',

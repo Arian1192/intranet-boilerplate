@@ -10,6 +10,7 @@ const mockUser: User = {
 };
 
 const tabs = [
+  { label: 'Resumen', href: '/etra' },
   { label: 'Acciones', href: '/etra/tareas' },
   { label: 'Seeding', href: '/etra/seeding' },
   { label: 'Cuentas', href: '/etra/cuentas' },
