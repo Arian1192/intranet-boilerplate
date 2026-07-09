@@ -4,12 +4,14 @@ import { APP_NAME } from '@/lib/constants';
 import { cn } from '@/lib/utils';
 import { UserMenu } from './UserMenu';
 import type { User } from '@/types';
+import type { LucideIcon } from 'lucide-react';
 
 export interface ModuleHeader {
   name: string;
   href?: string;
   tabs?: { label: string; href: string }[];
   actionLabel?: string;
+  iconAction?: { icon: LucideIcon; href: string; label: string };
 }
 
 export interface TopNavProps {
@@ -69,6 +71,20 @@ export function TopNav({ user, notificationCount = 0, module }: TopNavProps) {
             >
               {module.actionLabel}
             </button>
+          )}
+          {module?.iconAction && (
+            <NavLink
+              to={module.iconAction.href}
+              aria-label={module.iconAction.label}
+              className={({ isActive }) =>
+                cn(
+                  'grid h-9 w-9 place-items-center rounded-lg transition-colors',
+                  isActive ? 'bg-brand-50 text-brand-700' : 'text-slate-500 hover:bg-slate-100'
+                )
+              }
+            >
+              <module.iconAction.icon className="h-5 w-5" />
+            </NavLink>
           )}
           <button
             type="button"
