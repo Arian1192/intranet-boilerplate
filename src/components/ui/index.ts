@@ -13,3 +13,4 @@ export * from './MasterDetailList';
 export * from './MonthCalendar';
 export * from './StatCard';
 export * from './Modal';
+export * from './ProgressBar';
