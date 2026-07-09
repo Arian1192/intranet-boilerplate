@@ -1,0 +1,170 @@
+- generic [ref=f3e4]:
+  - banner [ref=f3e5]:
+    - generic [ref=f3e6]:
+      - generic [ref=f3e7]:
+        - link [ref=f3e8] [cursor=pointer]:
+          - /url: /
+          - img "Black Moose Group" [ref=f3e9]
+        - generic [ref=f3e10]:
+          - generic [ref=f3e11]: /
+          - button "CRUDA" [ref=f3e13] [cursor=pointer]
+      - navigation [ref=f3e16]:
+        - link "Pedidos" [ref=f3e17] [cursor=pointer]:
+          - /url: /cruda
+        - link "Catálogo" [ref=f3e18] [cursor=pointer]:
+          - /url: /cruda/catalogo
+        - link "Analítica" [ref=f3e20] [cursor=pointer]:
+          - /url: /cruda/analitica
+      - generic [ref=f3e26]:
+        - button "Notificaciones" [ref=f3e28] [cursor=pointer]:
+          - generic [ref=f3e32]: 9+
+        - link "test admin test" [ref=f3e33] [cursor=pointer]:
+          - /url: /perfil
+          - generic [ref=f3e34]:
+            - generic [ref=f3e35]: test
+            - generic [ref=f3e36]: admin
+          - generic "test" [ref=f3e37]: T
+  - main [ref=f3e38]:
+    - generic [ref=f3e39]:
+      - generic [ref=f3e40]:
+        - generic [ref=f3e41]:
+          - heading "Analítica CRUDA" [level=1] [ref=f3e42]
+          - paragraph [ref=f3e43]: Ventas, líneas de negocio, productos y stock.
+        - combobox [ref=f3e44]:
+          - option "2023"
+          - option "2024"
+          - option "2025"
+          - option "2026" [selected]
+          - option "2027"
+      - generic [ref=f3e45]:
+        - generic [ref=f3e46]:
+          - generic [ref=f3e47]: En curso (activos)
+          - generic [ref=f3e48]: 15.614,85 €
+          - generic [ref=f3e49]: 4 pedidos
+        - generic [ref=f3e50]:
+          - generic [ref=f3e51]: Facturado (histórico)
+          - generic [ref=f3e52]: 2540,25 €
+        - generic [ref=f3e53]:
+          - generic [ref=f3e54]: Colección
+          - generic [ref=f3e55]: 15.614,85 €
+          - generic [ref=f3e56]: en curso
+        - generic [ref=f3e57]:
+          - generic [ref=f3e58]: Producción (custom)
+          - generic [ref=f3e59]: 0,00 €
+          - generic [ref=f3e60]: en curso
+      - generic [ref=f3e61]:
+        - heading "Ventas facturadas por mes · 2026" [level=2] [ref=f3e62]
+        - generic [ref=f3e63]:
+          - generic [ref=f3e64]:
+            - generic [ref=f3e65]: ·
+            - generic "0,00 €"
+            - generic [ref=f3e66]: Ene
+          - generic [ref=f3e67]:
+            - generic [ref=f3e68]: ·
+            - generic "0,00 €"
+            - generic [ref=f3e69]: Feb
+          - generic [ref=f3e70]:
+            - generic [ref=f3e71]: ·
+            - generic "0,00 €"
+            - generic [ref=f3e72]: Mar
+          - generic [ref=f3e73]:
+            - generic [ref=f3e74]: ·
+            - generic "0,00 €"
+            - generic [ref=f3e75]: Abr
+          - generic [ref=f3e76]:
+            - generic [ref=f3e77]: ·
+            - generic "0,00 €"
+            - generic [ref=f3e78]: May
+          - generic [ref=f3e79]:
+            - generic [ref=f3e80]: ·
+            - generic "0,00 €"
+            - generic [ref=f3e81]: Jun
+          - generic [ref=f3e82]:
+            - generic [ref=f3e83]: 3K€
+            - generic "2540,25 €" [ref=f3e84]
+            - generic [ref=f3e85]: Jul
+          - generic [ref=f3e86]:
+            - generic [ref=f3e87]: ·
+            - generic "0,00 €"
+            - generic [ref=f3e88]: Ago
+          - generic [ref=f3e89]:
+            - generic [ref=f3e90]: ·
+            - generic "0,00 €"
+            - generic [ref=f3e91]: Sep
+          - generic [ref=f3e92]:
+            - generic [ref=f3e93]: ·
+            - generic "0,00 €"
+            - generic [ref=f3e94]: Oct
+          - generic [ref=f3e95]:
+            - generic [ref=f3e96]: ·
+            - generic "0,00 €"
+            - generic [ref=f3e97]: Nov
+          - generic [ref=f3e98]:
+            - generic [ref=f3e99]: ·
+            - generic "0,00 €"
+            - generic [ref=f3e100]: Dic
+      - generic [ref=f3e101]:
+        - heading "Dinero acumulado por fase" [level=2] [ref=f3e102]
+        - generic [ref=f3e103]:
+          - generic [ref=f3e104]:
+            - generic [ref=f3e105]:
+              - generic [ref=f3e106]: Borrador
+              - generic [ref=f3e107]: "2"
+            - generic [ref=f3e108]: 6424,60 €
+          - generic [ref=f3e111]:
+            - generic [ref=f3e112]:
+              - generic [ref=f3e113]: Confirmado
+              - generic [ref=f3e114]: "1"
+            - generic [ref=f3e115]: 6650,00 €
+          - generic [ref=f3e118]:
+            - generic [ref=f3e119]:
+              - generic [ref=f3e120]: En producción
+              - generic [ref=f3e121]: "0"
+            - generic [ref=f3e122]: 0,00 €
+          - generic [ref=f3e124]:
+            - generic [ref=f3e125]:
+              - generic [ref=f3e126]: Enviado
+              - generic [ref=f3e127]: "0"
+            - generic [ref=f3e128]: 0,00 €
+          - generic [ref=f3e130]:
+            - generic [ref=f3e131]:
+              - generic [ref=f3e132]: Entregado
+              - generic [ref=f3e133]: "0"
+            - generic [ref=f3e134]: 0,00 €
+          - generic [ref=f3e136]:
+            - generic [ref=f3e137]:
+              - generic [ref=f3e138]: Facturado
+              - generic [ref=f3e139]: "1"
+            - generic [ref=f3e140]: 2540,25 €
+      - generic [ref=f3e143]:
+        - generic [ref=f3e144]:
+          - heading "Productos más vendidos" [level=2] [ref=f3e145]
+          - table [ref=f3e146]:
+            - rowgroup [ref=f3e147]:
+              - row [ref=f3e148]:
+                - columnheader "Producto" [ref=f3e149]
+                - columnheader "Unidades" [ref=f3e150]
+                - columnheader "Valor" [ref=f3e151]
+            - rowgroup [ref=f3e152]:
+              - row [ref=f3e153]:
+                - cell "(Test) Camiseta A&F" [ref=f3e154]
+                - cell "860" [ref=f3e155]
+                - cell "14.708,35 €" [ref=f3e156]
+        - generic [ref=f3e157]:
+          - generic [ref=f3e158]:
+            - heading "Alertas de stock" [level=2] [ref=f3e159]
+            - generic [ref=f3e160]: 340 uds · valor a coste 2720,00 €
+          - generic [ref=f3e161]: "1 variante(s) en o por debajo del mínimo:"
+          - table [ref=f3e162]:
+            - rowgroup [ref=f3e163]:
+              - row [ref=f3e164]:
+                - columnheader "Variante" [ref=f3e165]
+                - columnheader "Stock" [ref=f3e166]
+                - columnheader "Mín." [ref=f3e167]
+            - rowgroup [ref=f3e168]:
+              - row [ref=f3e169]:
+                - cell "(Test) Camiseta A&F · Algodón / L / Crudo" [ref=f3e170]:
+                  - text: (Test) Camiseta A&F
+                  - generic [ref=f3e171]: · Algodón / L / Crudo
+                - cell "40" [ref=f3e172]
+                - cell "50" [ref=f3e173]
