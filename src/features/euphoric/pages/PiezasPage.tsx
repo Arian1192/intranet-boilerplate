@@ -3,6 +3,7 @@ import { Button, Card } from '@/components/ui';
 import { Badge } from '@/components/ui';
 import { cn } from '@/lib/utils';
 import { PieceBoard } from '../components/PieceBoard';
+import { PieceDrawer } from '../components/PieceDrawer';
 import { StatusChip } from '../components/StatusChip';
 import { pieces } from '../data/seed';
 import { PRIORITY_LABEL, PRIORITY_VARIANT, pieceStatusLabel } from '../data/labels';
@@ -179,6 +180,8 @@ export function PiezasPage() {
       <PieceBoard pieces={pieces} />
 
       <PiecesTable />
+
+      <PieceDrawer open={drawerOpen} onClose={() => setDrawerOpen(false)} />
     </div>
   );
 }
