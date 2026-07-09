@@ -5,6 +5,8 @@ import { ConceptOneShell } from '@/features/modules/ConceptOneShell';
 import { EtraShell } from '@/features/modules/EtraShell';
 import { ProduccionShell } from '@/features/modules/ProduccionShell';
 import { CrudaShell } from '@/features/modules/CrudaShell';
+import { EuphoricShell } from '@/features/modules/EuphoricShell';
+import { CreativosShell } from '@/features/modules/CreativosShell';
 import { CRMShell } from '@/features/modules/CRMShell';
 import { TeamShell } from '@/features/modules/TeamShell';
 import { ConfigShell } from '@/features/modules/ConfigShell';
@@ -42,6 +44,8 @@ export function AppRouter() {
       <Route path="/produccion" element={<ProduccionShell />}>
         <Route index element={<EventsPage />} />
       </Route>
+      <Route path="/euphoric" element={<EuphoricShell />} />
+      <Route path="/creativos" element={<CreativosShell />} />
       <Route path="/cruda" element={<CrudaShell />} />
       <Route path="/crm" element={<CRMShell />} />
       <Route path="/personal" element={<TeamShell />} />

@@ -18,6 +18,8 @@ export interface Module {
   shortDescription: string;
   icon: string;
   category: 'business' | 'internal';
+  /** Hex accent color for the icon chip background (rendered at 8% alpha). */
+  accent?: string;
 }
 
 export interface NewsItem {

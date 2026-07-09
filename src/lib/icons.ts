@@ -1,9 +1,11 @@
 import {
-  Calendar,
+  Clapperboard,
   Headphones,
   Megaphone,
+  Palette,
   Settings,
   Shirt,
+  Sparkles,
   Target,
   Users,
   type LucideIcon,
@@ -12,7 +14,9 @@ import {
 export const MODULE_ICONS: Record<string, LucideIcon> = {
   conceptone: Headphones,
   etra: Megaphone,
-  produccion: Calendar,
+  produccion: Clapperboard,
+  euphoric: Sparkles,
+  creativos: Palette,
   cruda: Shirt,
   crm: Target,
   personal: Users,
