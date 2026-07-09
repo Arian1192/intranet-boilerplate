@@ -21,6 +21,13 @@ import { ActionDetailPage } from '@/features/etra/pages/ActionDetailPage';
 import { SeedingPage } from '@/features/etra/pages/SeedingPage';
 import { AccountsPage } from '@/features/etra/pages/AccountsPage';
 import { EventsPage } from '@/features/produccion/pages/EventsPage';
+import { ResumenPage } from '@/features/euphoric/pages/ResumenPage';
+import { CampanasPage } from '@/features/euphoric/pages/CampanasPage';
+import { ContenidoPage } from '@/features/euphoric/pages/ContenidoPage';
+import { PiezasPage } from '@/features/euphoric/pages/PiezasPage';
+import { EventosPage } from '@/features/euphoric/pages/EventosPage';
+import { CuentasPage } from '@/features/euphoric/pages/CuentasPage';
+import { AnaliticaPage } from '@/features/euphoric/pages/AnaliticaPage';
 
 export function AppRouter() {
   return (
@@ -45,7 +52,15 @@ export function AppRouter() {
         <Route index element={<EventsPage />} />
         <Route path=":eventId" element={<EventsPage />} />
       </Route>
-      <Route path="/euphoric" element={<EuphoricShell />} />
+      <Route path="/euphoric" element={<EuphoricShell />}>
+        <Route index element={<ResumenPage />} />
+        <Route path="campanas" element={<CampanasPage />} />
+        <Route path="calendario" element={<ContenidoPage />} />
+        <Route path="piezas" element={<PiezasPage />} />
+        <Route path="eventos" element={<EventosPage />} />
+        <Route path="cuentas" element={<CuentasPage />} />
+        <Route path="analitica" element={<AnaliticaPage />} />
+      </Route>
       <Route path="/creativos" element={<CreativosShell />} />
       <Route path="/cruda" element={<CrudaShell />} />
       <Route path="/crm" element={<CRMShell />} />
