@@ -29,6 +29,9 @@ import { EventosPage } from '@/features/euphoric/pages/EventosPage';
 import { CuentasPage } from '@/features/euphoric/pages/CuentasPage';
 import { AnaliticaPage } from '@/features/euphoric/pages/AnaliticaPage';
 import { ArtistasPage } from '@/features/euphoric/pages/ArtistasPage';
+import { PedidosPage } from '@/features/cruda/pages/PedidosPage';
+import { CatalogoPage } from '@/features/cruda/pages/CatalogoPage';
+import { AnaliticaPage as CrudaAnaliticaPage } from '@/features/cruda/pages/AnaliticaPage';
 
 export function AppRouter() {
   return (
@@ -64,7 +67,11 @@ export function AppRouter() {
         <Route path="analitica" element={<AnaliticaPage />} />
       </Route>
       <Route path="/creativos" element={<CreativosShell />} />
-      <Route path="/cruda" element={<CrudaShell />} />
+      <Route path="/cruda" element={<CrudaShell />}>
+        <Route index element={<PedidosPage />} />
+        <Route path="catalogo" element={<CatalogoPage />} />
+        <Route path="analitica" element={<CrudaAnaliticaPage />} />
+      </Route>
       <Route path="/crm" element={<CRMShell />} />
       <Route path="/personal" element={<TeamShell />} />
       <Route path="/configuracion" element={<ConfigShell />} />
