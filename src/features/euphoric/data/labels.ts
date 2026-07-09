@@ -1,4 +1,4 @@
-import type { CampaignStatus } from './types';
+import type { CampaignStatus, PieceStatus } from './types';
 
 export const campaignStatusLabel: Record<CampaignStatus, string> = {
   'planificada': 'Planificada',
@@ -6,4 +6,12 @@ export const campaignStatusLabel: Record<CampaignStatus, string> = {
   'pausada': 'Pausada',
   'finalizada': 'Finalizada',
   'cancelada': 'Cancelada',
+};
+
+export const pieceStatusLabel: Record<PieceStatus, string> = {
+  'briefing': 'Briefing',
+  'en-produccion': 'En producción',
+  'revision': 'Revisión',
+  'cambios': 'Cambios',
+  'aprobado': 'Aprobado',
 };

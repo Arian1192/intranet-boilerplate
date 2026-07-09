@@ -4,6 +4,7 @@ import type { BadgeProps } from '@/components/ui/Badge';
 const MAP: Record<string, BadgeProps['variant']> = {
   'En curso': 'info', 'En producción': 'info', 'Activa': 'success',
   'Pausada': 'warning', 'Finalizada': 'success', 'Cancelada': 'danger', 'Planificada': 'neutral',
+  'Briefing': 'neutral', 'Revisión': 'amber', 'Cambios': 'danger', 'Aprobado': 'emerald',
 };
 
 export function StatusChip({ status }: { status: string }) {
