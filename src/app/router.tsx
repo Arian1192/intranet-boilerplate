@@ -15,6 +15,7 @@ import { ArtistsPage } from '@/features/booking/pages/ArtistsPage';
 import { AnalyticsPage } from '@/features/booking/pages/AnalyticsPage';
 import { EtraDashboardPage } from '@/features/etra/pages/EtraDashboardPage';
 import { ActionsPage } from '@/features/etra/pages/ActionsPage';
+import { ActionDetailPage } from '@/features/etra/pages/ActionDetailPage';
 import { SeedingPage } from '@/features/etra/pages/SeedingPage';
 import { AccountsPage } from '@/features/etra/pages/AccountsPage';
 import { EventsPage } from '@/features/produccion/pages/EventsPage';
@@ -34,6 +35,7 @@ export function AppRouter() {
       <Route path="/etra" element={<EtraShell />}>
         <Route index element={<EtraDashboardPage />} />
         <Route path="tareas" element={<ActionsPage />} />
+        <Route path="tareas/:actionId" element={<ActionDetailPage />} />
         <Route path="seeding" element={<SeedingPage />} />
         <Route path="cuentas" element={<AccountsPage />} />
       </Route>
