@@ -15,8 +15,8 @@ export function EventForm({ onSave }: EventFormProps) {
       <Input label="Nombre *" placeholder="Ej: OFF BCN · Ku · 12 jul" />
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-        <Input label="Fecha inicio" placeholder="dd/mm/aaaa" />
-        <Input label="Fecha fin (opc.)" placeholder="dd/mm/aaaa" />
+        <Input label="Fecha inicio" type="date" />
+        <Input label="Fecha fin (opc.)" type="date" />
       </div>
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">

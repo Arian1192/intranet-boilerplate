@@ -210,7 +210,7 @@ export function PieceDrawer({ open, onClose }: PieceDrawerProps) {
                 ))}
               </div>
             </FieldGroup>
-            <Input label="Deadline" placeholder="dd/mm/aaaa" />
+            <Input label="Deadline" type="date" />
           </div>
 
           <FieldGroup label="Tamaños / ratios">
