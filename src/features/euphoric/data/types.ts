@@ -2,6 +2,13 @@ export type CampaignStatus = 'planificada' | 'en-curso' | 'pausada' | 'finalizad
 export type PieceStatus = 'briefing' | 'en-produccion' | 'revision' | 'cambios' | 'aprobado';
 export type PiecePriority = 'baja' | 'media' | 'alta';
 export type EventKind = 'marketing' | 'produccion';
+export type PublicationKanbanColumn =
+  | 'falta-copy'
+  | 'falta-arte'
+  | 'falta-aprobacion'
+  | 'listo'
+  | 'programado'
+  | 'publicado';
 
 export interface Account {
   id: string; name: string; kind: string; services: string[];
@@ -23,4 +30,5 @@ export interface EventItem {
 export interface Publication {
   id: string; name: string; dateLabel: string; isoDate: string; channel: string;
   account: string; status: string; type: string; eventName?: string;
+  time: string; textApproval: string; imageApproval: string; kanbanColumn: PublicationKanbanColumn;
 }
