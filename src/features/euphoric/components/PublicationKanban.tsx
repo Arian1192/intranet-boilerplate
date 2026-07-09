@@ -31,27 +31,23 @@ export function PublicationKanban({ publications }: { publications: Publication[
             </div>
             <p className="mb-3 text-xs text-slate-400">{column.subtitle}</p>
             <div className="space-y-3">
-              {items.length === 0 ? (
-                <p className="py-6 text-center text-slate-300">—</p>
-              ) : (
-                items.map((pub) => (
-                  <div key={pub.id} className="rounded-lg border border-slate-100 bg-white p-3 shadow-sm">
-                    <p className="text-xs text-slate-400">Sin asignar</p>
-                    <p className="font-medium text-slate-900">{pub.name}</p>
-                    <p className="text-sm text-slate-500">
-                      {pub.isoDate} · {pub.channel} · {pub.account}
-                    </p>
-                    <div className="mt-2 flex flex-wrap gap-1.5">
-                      <Badge variant={APPROVAL_VARIANT[pub.textApproval] ?? 'neutral'} size="sm">
-                        T: {pub.textApproval}
-                      </Badge>
-                      <Badge variant={APPROVAL_VARIANT[pub.imageApproval] ?? 'neutral'} size="sm">
-                        I: {pub.imageApproval}
-                      </Badge>
-                    </div>
+              {items.map((pub) => (
+                <div key={pub.id} className="rounded-lg border border-slate-100 bg-white p-3 shadow-sm">
+                  <p className="text-xs text-slate-400">Sin asignar</p>
+                  <p className="font-medium text-slate-900">{pub.name}</p>
+                  <p className="text-sm text-slate-500">
+                    {pub.isoDate} · {pub.channel} · {pub.account}
+                  </p>
+                  <div className="mt-2 flex flex-wrap gap-1.5">
+                    <Badge variant={APPROVAL_VARIANT[pub.textApproval] ?? 'neutral'} size="sm">
+                      T: {pub.textApproval}
+                    </Badge>
+                    <Badge variant={APPROVAL_VARIANT[pub.imageApproval] ?? 'neutral'} size="sm">
+                      I: {pub.imageApproval}
+                    </Badge>
                   </div>
-                ))
-              )}
+                </div>
+              ))}
             </div>
           </Card>
         );
