@@ -36,6 +36,7 @@ export function NewsCard({ item }: NewsCardProps) {
         <button
           type="button"
           onClick={toggle}
+          aria-expanded={expanded}
           className="min-w-0 flex-1 truncate text-left text-base font-medium text-slate-800"
         >
           {item.title}
@@ -43,6 +44,7 @@ export function NewsCard({ item }: NewsCardProps) {
         <button
           type="button"
           onClick={toggle}
+          aria-expanded={expanded}
           className="shrink-0 text-slate-300 hover:text-slate-500"
           aria-label={expanded ? 'Colapsar' : 'Expandir'}
         >

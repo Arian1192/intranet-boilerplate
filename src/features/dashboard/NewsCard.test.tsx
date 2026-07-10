@@ -30,4 +30,10 @@ describe('NewsCard', () => {
     expect(screen.getByText('Eliminar')).toBeInTheDocument();
     expect(screen.getByRole('button', { name: 'Colapsar' })).toBeInTheDocument();
   });
+
+  it('reveals content when the title button is clicked', () => {
+    render(<NewsCard item={item} />);
+    fireEvent.click(screen.getByText(item.title));
+    expect(screen.getByText('Detalle completo de la novedad.')).toBeInTheDocument();
+  });
 });
