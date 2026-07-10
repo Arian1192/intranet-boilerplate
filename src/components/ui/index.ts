@@ -15,3 +15,4 @@ export * from './StatCard';
 export * from './Modal';
 export * from './ProgressBar';
 export * from './DateBadge';
+export * from './RichTextEditor';

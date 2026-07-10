@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Badge, Button, Input, Select, Textarea } from '@/components/ui';
+import { Badge, Button, Input, RichTextEditor, Select, Textarea } from '@/components/ui';
 import { cn } from '@/lib/utils';
 
 export interface PieceDrawerProps {
@@ -82,48 +82,6 @@ function ToggleChip({
     >
       {children}
     </button>
-  );
-}
-
-const TOOLBAR_TEXT_BUTTONS = ['B', 'i', 'U', 'S'] as const;
-
-function BriefToolbar() {
-  return (
-    <div className="flex items-center gap-3 rounded-t-lg border border-b-0 border-slate-200 bg-slate-50 px-3 py-2">
-      <div className="flex items-center gap-2">
-        {TOOLBAR_TEXT_BUTTONS.map((label) => (
-          <button
-            key={label}
-            type="button"
-            className={cn(
-              'flex h-6 w-6 items-center justify-center text-sm font-semibold text-slate-500 hover:text-slate-700',
-              label === 'B' && 'font-bold',
-              label === 'i' && 'italic',
-              label === 'U' && 'underline',
-              label === 'S' && 'line-through'
-            )}
-          >
-            {label}
-          </button>
-        ))}
-      </div>
-      <span className="h-4 w-px bg-slate-200" aria-hidden />
-      <div className="flex items-center gap-2">
-        <button type="button" className="text-xs font-semibold text-slate-500 hover:text-slate-700">
-          A
-        </button>
-        <button type="button" className="text-sm font-semibold text-slate-500 hover:text-slate-700">
-          A
-        </button>
-        <button type="button" className="text-base font-semibold text-slate-500 hover:text-slate-700">
-          A
-        </button>
-      </div>
-      <span className="h-4 w-px bg-slate-200" aria-hidden />
-      <button type="button" className="text-sm text-slate-500 hover:text-slate-700" aria-label="Limpiar formato">
-        ✕
-      </button>
-    </div>
   );
 }
 
@@ -263,11 +221,7 @@ export function PieceDrawer({ open, onClose }: PieceDrawerProps) {
 
           <div className="space-y-1.5">
             <p className="text-sm font-medium text-slate-700">Brief</p>
-            <BriefToolbar />
-            <Textarea
-              className="rounded-t-none"
-              placeholder="Qué necesita la pieza: mensaje, formato, maquetación, referencias…"
-            />
+            <RichTextEditor />
           </div>
 
           <Input label="Enlace al asset" placeholder="Drive / Frame.io / Dropbox…" />
