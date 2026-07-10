@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import { Calendar } from 'lucide-react';
-import { Badge, Button } from '@/components/ui';
+import { Badge, Button, RichTextEditor } from '@/components/ui';
 import { SegmentedButtons } from './drawer/SegmentedButtons';
-import { BriefEditor } from './drawer/BriefEditor';
 
 export interface NuevaPiezaDrawerProps {
   open: boolean;
@@ -210,7 +209,7 @@ export function NuevaPiezaDrawer({ open, onClose }: NuevaPiezaDrawerProps) {
             {/* Brief */}
             <div className="sm:col-span-2">
               <label className="label">Brief</label>
-              <BriefEditor />
+              <RichTextEditor />
             </div>
 
             {/* Enlace al asset */}
