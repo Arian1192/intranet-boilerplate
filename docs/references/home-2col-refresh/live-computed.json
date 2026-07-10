@@ -1,0 +1,247 @@
+{
+  "main": {
+    "tag": "main",
+    "cls": "mx-auto w-full max-w-7xl flex-1 px-4 py-6",
+    "rect": {
+      "x": 80,
+      "y": 57,
+      "w": 1280,
+      "h": 843
+    },
+    "display": "block",
+    "grid-template-columns": "none",
+    "gap": "normal",
+    "column-gap": "normal",
+    "row-gap": "normal",
+    "max-width": "1280px",
+    "width": "1280px",
+    "margin-left": "80px",
+    "margin-right": "80px",
+    "padding": "24px 16px",
+    "background-color": "rgba(0, 0, 0, 0)",
+    "border": "0px solid rgb(229, 231, 235)",
+    "border-radius": "0px",
+    "box-shadow": "none"
+  },
+  "headers": [
+    {
+      "text": "Novedades",
+      "tag": "h2",
+      "cls": "text-sm font-semibold uppercase tracking-wide text-slate-400",
+      "rect": {
+        "x": 96,
+        "y": 199,
+        "w": 101,
+        "h": 20
+      },
+      "font-size": "14px",
+      "font-weight": "600",
+      "line-height": "20px",
+      "letter-spacing": "0.35px",
+      "color": "rgb(148, 163, 184)",
+      "text-transform": "uppercase",
+      "text-align": "start",
+      "margin-bottom": "0px",
+      "margin-top": "0px"
+    },
+    {
+      "text": "Próximos eventos",
+      "tag": "h2",
+      "cls": "text-sm font-semibold uppercase tracking-wide text-slate-400",
+      "rect": {
+        "x": 732,
+        "y": 199,
+        "w": 168,
+        "h": 20
+      },
+      "font-size": "14px",
+      "font-weight": "600",
+      "line-height": "20px",
+      "letter-spacing": "0.35px",
+      "color": "rgb(148, 163, 184)",
+      "text-transform": "uppercase",
+      "text-align": "start",
+      "margin-bottom": "0px",
+      "margin-top": "0px"
+    },
+    {
+      "text": "Tus espacios",
+      "tag": "h2",
+      "cls": "mb-3 text-sm font-semibold uppercase tracking-wide text-slate-400",
+      "rect": {
+        "x": 96,
+        "y": 397,
+        "w": 1248,
+        "h": 20
+      },
+      "font-size": "14px",
+      "font-weight": "600",
+      "line-height": "20px",
+      "letter-spacing": "0.35px",
+      "color": "rgb(148, 163, 184)",
+      "text-transform": "uppercase",
+      "text-align": "start",
+      "margin-bottom": "12px",
+      "margin-top": "0px"
+    },
+    {
+      "text": "Uso interno",
+      "tag": "h2",
+      "cls": "mb-3 text-sm font-semibold uppercase tracking-wide text-slate-400",
+      "rect": {
+        "x": 96,
+        "y": 617,
+        "w": 1248,
+        "h": 20
+      },
+      "font-size": "14px",
+      "font-weight": "600",
+      "line-height": "20px",
+      "letter-spacing": "0.35px",
+      "color": "rgb(148, 163, 184)",
+      "text-transform": "uppercase",
+      "text-align": "start",
+      "margin-bottom": "12px",
+      "margin-top": "0px"
+    }
+  ],
+  "novedadesRowAncestor": {
+    "tag": "div",
+    "cls": "mb-3 flex items-center gap-2",
+    "rect": {
+      "x": 96,
+      "y": 199,
+      "w": 612,
+      "h": 20
+    },
+    "display": "flex",
+    "grid-template-columns": "none",
+    "gap": "8px",
+    "column-gap": "8px",
+    "row-gap": "8px",
+    "max-width": "none",
+    "width": "612px",
+    "margin-left": "0px",
+    "margin-right": "0px",
+    "padding": "0px",
+    "background-color": "rgba(0, 0, 0, 0)",
+    "border": "0px solid rgb(229, 231, 235)",
+    "border-radius": "0px",
+    "box-shadow": "none"
+  },
+  "greeting": {
+    "tag": "h1",
+    "cls": "text-3xl font-semibold text-slate-800",
+    "rect": {
+      "x": 96,
+      "y": 89,
+      "w": 1248,
+      "h": 36
+    },
+    "font-size": "30px",
+    "font-weight": "600",
+    "line-height": "36px",
+    "letter-spacing": "normal",
+    "color": "rgb(30, 41, 59)",
+    "text-transform": "none",
+    "text-align": "center",
+    "margin-bottom": "0px",
+    "margin-top": "0px"
+  },
+  "moduleCard": {
+    "tag": "a",
+    "cls": "block",
+    "rect": {
+      "x": 96,
+      "y": 429,
+      "w": 408,
+      "h": 72
+    },
+    "display": "block",
+    "grid-template-columns": "none",
+    "gap": "normal",
+    "column-gap": "normal",
+    "row-gap": "normal",
+    "max-width": "none",
+    "width": "408px",
+    "margin-left": "0px",
+    "margin-right": "0px",
+    "padding": "0px",
+    "background-color": "rgba(0, 0, 0, 0)",
+    "border": "0px solid rgb(229, 231, 235)",
+    "border-radius": "0px",
+    "box-shadow": "none"
+  },
+  "moduleGrid": {
+    "tag": "div",
+    "cls": "grid gap-3 sm:grid-cols-2 lg:grid-cols-3",
+    "rect": {
+      "x": 96,
+      "y": 429,
+      "w": 1248,
+      "h": 156
+    },
+    "display": "grid",
+    "grid-template-columns": "408px 408px 408px",
+    "gap": "12px",
+    "column-gap": "12px",
+    "row-gap": "12px",
+    "max-width": "none",
+    "width": "1248px",
+    "margin-left": "0px",
+    "margin-right": "0px",
+    "padding": "0px",
+    "background-color": "rgba(0, 0, 0, 0)",
+    "border": "0px solid rgb(229, 231, 235)",
+    "border-radius": "0px",
+    "box-shadow": "none"
+  },
+  "novedadesCard": {
+    "tag": "div",
+    "cls": "flex items-center justify-between gap-3",
+    "rect": {
+      "x": 113,
+      "y": 268,
+      "w": 578,
+      "h": 24
+    },
+    "display": "flex",
+    "grid-template-columns": "none",
+    "gap": "12px",
+    "column-gap": "12px",
+    "row-gap": "12px",
+    "max-width": "none",
+    "width": "578px",
+    "margin-left": "0px",
+    "margin-right": "0px",
+    "padding": "0px",
+    "background-color": "rgba(0, 0, 0, 0)",
+    "border": "0px solid rgb(229, 231, 235)",
+    "border-radius": "0px",
+    "box-shadow": "none"
+  },
+  "eventosCard": {
+    "tag": "div",
+    "cls": "mb-8 grid items-start gap-6 lg:grid-cols-2",
+    "rect": {
+      "x": 96,
+      "y": 199,
+      "w": 1248,
+      "h": 166
+    },
+    "display": "grid",
+    "grid-template-columns": "612px 612px",
+    "gap": "24px",
+    "column-gap": "24px",
+    "row-gap": "24px",
+    "max-width": "none",
+    "width": "1248px",
+    "margin-left": "0px",
+    "margin-right": "0px",
+    "padding": "0px",
+    "background-color": "rgba(0, 0, 0, 0)",
+    "border": "0px solid rgb(229, 231, 235)",
+    "border-radius": "0px",
+    "box-shadow": "none"
+  }
+}

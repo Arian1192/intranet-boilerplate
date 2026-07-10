@@ -25,7 +25,7 @@ const events: Event[] = [
 ];
 
 describe('UpcomingEvents', () => {
-  it('links each event to its produccion detail and shows the meta line', () => {
+  it('links each event to its produccion detail', () => {
     render(
       <MemoryRouter>
         <UpcomingEvents events={events} />
@@ -33,19 +33,29 @@ describe('UpcomingEvents', () => {
     );
     const link = screen.getByRole('link', { name: /Mixmag Intimate Sessions/ });
     expect(link).toHaveAttribute('href', '/produccion/event-1');
-    expect(
-      screen.getByText('15 jul 2026 · 20:00–21:30 · Soho Farmhouse, Ibiza')
-    ).toBeInTheDocument();
   });
 
-  it('renders status badges with the right label and color', () => {
+  it('shows a date badge with month and day, not the raw date', () => {
     render(
       <MemoryRouter>
         <UpcomingEvents events={events} />
       </MemoryRouter>
     );
-    expect(screen.getByText('Confirmado')).toHaveClass('bg-blue-100', 'text-blue-700');
-    expect(screen.getByText('En producción')).toHaveClass('bg-amber-100', 'text-amber-700');
+    // Both fixture events fall in July, so two badges render "JUL" — assert both, not one.
+    expect(screen.getAllByText('JUL', { selector: 'span' })).toHaveLength(2);
+    expect(screen.getByText('15')).toBeInTheDocument();
+  });
+
+  it('shows only start time and location in the subtitle (no date, no range, no status chip)', () => {
+    render(
+      <MemoryRouter>
+        <UpcomingEvents events={events} />
+      </MemoryRouter>
+    );
+    expect(screen.getByText('20:00 · Soho Farmhouse, Ibiza')).toBeInTheDocument();
+    expect(screen.queryByText(/20:00–21:30/)).not.toBeInTheDocument();
+    expect(screen.queryByText('Confirmado')).not.toBeInTheDocument();
+    expect(screen.queryByText('En producción')).not.toBeInTheDocument();
   });
 
   it('has a "Ver todos" link to produccion', () => {

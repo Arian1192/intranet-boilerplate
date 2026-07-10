@@ -45,7 +45,7 @@ export function DashboardPage() {
     >
       <div className="space-y-8">
         <div className="text-center">
-          <h1 className="text-3xl font-semibold text-slate-900">
+          <h1 className="text-3xl font-semibold text-slate-800">
             {dashboard.greeting} 👋🏼
           </h1>
           {dashboard.birthdayNotice && (
@@ -54,12 +54,14 @@ export function DashboardPage() {
           <p className="mt-1 text-sm text-slate-400">{dashboard.weather}</p>
         </div>
 
-        <NewsFeed items={dashboard.news} />
+        <div className="grid items-start gap-6 lg:grid-cols-2">
+          <NewsFeed items={dashboard.news} />
+          <UpcomingEvents events={dashboard.upcomingEvents} />
+        </div>
 
         <ModuleGrid modules={businessModules} title="Tus espacios" />
         <ModuleGrid modules={internalModules} title="Uso interno" />
 
-        <UpcomingEvents events={dashboard.upcomingEvents} />
         {dashboard.reminders.length > 0 && <Reminders reminders={dashboard.reminders} />}
       </div>
     </AppLayout>
