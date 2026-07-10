@@ -12,8 +12,8 @@ export function NewsFeed({ items }: NewsFeedProps) {
 
   return (
     <section>
-      <div className="mb-4 flex items-center gap-2">
-        <h2 className="text-xs font-semibold uppercase tracking-wider text-slate-400">
+      <div className="mb-3 flex items-center gap-2">
+        <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-400">
           Novedades
         </h2>
         <button
@@ -30,11 +30,11 @@ export function NewsFeed({ items }: NewsFeedProps) {
           <NewsForm onClose={() => setShowForm(false)} />
         </div>
       )}
-      <div className="space-y-3">
+      <ul className="space-y-2">
         {items.map((item) => (
           <NewsCard key={item.id} item={item} />
         ))}
-      </div>
+      </ul>
     </section>
   );
 }
