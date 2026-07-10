@@ -6,9 +6,11 @@ import { CreativosStatCard } from '../components/CreativosStatCard';
 import { FilterChips } from '../components/FilterChips';
 import { PiecesKanban } from '../components/PiecesKanban';
 import { PiecesTable } from '../components/PiecesTable';
+import { NuevaPiezaDrawer } from '../components/NuevaPiezaDrawer';
 
 export function CreativosPage() {
   const [filter, setFilter] = useState<CreativosFilter>('Todas');
+  const [drawerOpen, setDrawerOpen] = useState(false);
   const stats = deriveStats(allPieces);
   const visible = filterPieces(allPieces, filter, CURRENT_USER);
 
@@ -32,7 +34,7 @@ export function CreativosPage() {
               + {name}
             </button>
           ))}
-          <Button variant="primary" size="sm">
+          <Button variant="primary" size="sm" onClick={() => setDrawerOpen(true)}>
             + Nueva pieza
           </Button>
         </div>
@@ -54,6 +56,8 @@ export function CreativosPage() {
 
       <PiecesKanban pieces={visible} />
       <PiecesTable pieces={visible} />
+
+      <NuevaPiezaDrawer open={drawerOpen} onClose={() => setDrawerOpen(false)} />
     </div>
   );
 }

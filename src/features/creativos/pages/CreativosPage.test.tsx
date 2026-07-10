@@ -24,4 +24,13 @@ describe('CreativosPage', () => {
     const table = screen.getByRole('table');
     expect(within(table).getAllByRole('row')).toHaveLength(2); // header + 1 data row
   });
+
+  it('opens and closes the Nueva pieza drawer', () => {
+    render(<CreativosPage />);
+    expect(screen.queryByRole('heading', { name: 'Nueva pieza' })).not.toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: /Nueva pieza/ }));
+    expect(screen.getByRole('heading', { name: 'Nueva pieza' })).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: 'Guardar' }));
+    expect(screen.queryByRole('heading', { name: 'Nueva pieza' })).not.toBeInTheDocument();
+  });
 });
