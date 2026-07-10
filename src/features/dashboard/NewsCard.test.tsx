@@ -14,9 +14,10 @@ const item: NewsItem = {
 };
 
 describe('NewsCard', () => {
-  it('renders the title with semibold weight and hides content when collapsed', () => {
+  it('renders the title with medium weight and the scope as a pill; hides content when collapsed', () => {
     render(<NewsCard item={item} />);
-    expect(screen.getByText(item.title)).toHaveClass('font-semibold');
+    expect(screen.getByText(item.title)).toHaveClass('font-medium');
+    expect(screen.getByText('Grupo')).toHaveClass('rounded-full');
     expect(screen.queryByText('Detalle completo de la novedad.')).not.toBeInTheDocument();
     expect(screen.queryByText('Editar')).not.toBeInTheDocument();
   });
