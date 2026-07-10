@@ -40,4 +40,9 @@ describe('Badge', () => {
     expect(screen.getByText('Envío MRW')).toHaveClass('bg-sky-100', 'text-sky-700');
     expect(screen.getByText('IG · 245K')).toHaveClass('bg-pink-50', 'text-pink-600');
   });
+
+  it('renders the rose variant', () => {
+    render(<Badge variant="rose">Cambios</Badge>);
+    expect(screen.getByText('Cambios')).toHaveClass('bg-rose-100', 'text-rose-700');
+  });
 });
