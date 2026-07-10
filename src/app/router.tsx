@@ -32,6 +32,7 @@ import { ArtistasPage } from '@/features/euphoric/pages/ArtistasPage';
 import { PedidosPage } from '@/features/cruda/pages/PedidosPage';
 import { CatalogoPage } from '@/features/cruda/pages/CatalogoPage';
 import { AnaliticaPage as CrudaAnaliticaPage } from '@/features/cruda/pages/AnaliticaPage';
+import { CreativosPage } from '@/features/creativos/pages/CreativosPage';
 
 export function AppRouter() {
   return (
@@ -66,7 +67,9 @@ export function AppRouter() {
         <Route path="artistas" element={<ArtistasPage />} />
         <Route path="analitica" element={<AnaliticaPage />} />
       </Route>
-      <Route path="/creativos" element={<CreativosShell />} />
+      <Route path="/creativos" element={<CreativosShell />}>
+        <Route index element={<CreativosPage />} />
+      </Route>
       <Route path="/cruda" element={<CrudaShell />}>
         <Route index element={<PedidosPage />} />
         <Route path="catalogo" element={<CatalogoPage />} />
