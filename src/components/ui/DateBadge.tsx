@@ -1,4 +1,4 @@
-export function parseDateBadge(date: string): { day: string; month: string } {
+function parseDateBadge(date: string): { day: string; month: string } {
   const [day = '', month = ''] = date.trim().split(/\s+/);
   return { day, month: month.toUpperCase() };
 }
