@@ -13,7 +13,7 @@ export const docBlockNoteTheme: Theme = {
     shadow: '#e2e8f0',
     border: '#e2e8f0',
     sideMenu: '#cbd5e1',
-    highlights: {} as NonNullable<Theme['colors']>['highlights'],
+    highlights: {} as NonNullable<Theme['colors']>['highlights'], // unused: no highlight marks in the seed content
   },
   borderRadius: 8,
   fontFamily: 'Inter, "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',

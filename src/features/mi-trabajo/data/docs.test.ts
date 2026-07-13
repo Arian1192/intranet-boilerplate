@@ -24,6 +24,13 @@ describe('mi-trabajo data', () => {
     expect(root.children.length).toBeGreaterThanOrEqual(1);
   });
 
+  it('buildTree promotes an orphan child to root when its parent is filtered out', () => {
+    const subset = docs.filter((d) => d.id === 'd-riders'); // child whose parent d-welcome is absent
+    const tree = buildTree(subset);
+    const equipo = tree.find((s) => s.key === 'equipo')!;
+    expect(equipo.roots.map((n) => n.doc.id)).toContain('d-riders');
+  });
+
   it('childrenOf returns direct children only', () => {
     const kids = childrenOf(docs, WELCOME_ID);
     expect(kids.map((d) => d.id)).toContain('d-riders');

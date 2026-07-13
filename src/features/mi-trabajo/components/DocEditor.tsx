@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { MoreHorizontal, Maximize2 } from 'lucide-react';
 import { useCreateBlockNote } from '@blocknote/react';
 import { BlockNoteView } from '@blocknote/mantine';
@@ -21,9 +20,6 @@ interface Props {
 export function DocEditor({ doc, onTitleChange, onVisibilityChange }: Props) {
   // Recrea el editor por doc (key en el padre garantiza remount al cambiar de doc).
   const editor = useCreateBlockNote({ initialContent: doc.content });
-
-  // Enfoca al montar sin robar el foco de inputs de la toolbar.
-  useEffect(() => { /* noop: el foco lo gestiona el usuario */ }, [doc.id]);
 
   return (
     <div className="flex min-w-0 flex-col">
