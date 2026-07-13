@@ -1,0 +1,49 @@
+{
+  "_note": "Computed styles extracted from live /mi-trabajo (logged in). Editor canvas uses BlockNote (class prefix bn-, bn-inline-content). Shell is plain Tailwind.",
+  "layout": {
+    "page_main": "mx-auto w-full max-w-7xl flex-1 px-4 py-6",
+    "row": "flex flex-col gap-6 lg:flex-row",
+    "left_aside": { "cls": "w-full shrink-0 lg:sticky lg:top-20 lg:w-56 lg:self-start", "width_px": 224 },
+    "center_main": "min-w-0 flex-1",
+    "right_aside": { "cls": "w-full shrink-0 lg:sticky lg:top-20 lg:w-72 lg:self-start", "width_px": 288 }
+  },
+  "tree": {
+    "header_row": "mb-3 flex h-9 items-center justify-between",
+    "header_h2": "text-sm font-semibold text-slate-800",
+    "header_btn": "grid h-8 w-8 place-items-center rounded-lg text-slate-400",
+    "sections_wrap": "space-y-5",
+    "section_titles": ["PRIVADOS", "COMPARTIDOS", "TODO EL EQUIPO"],
+    "empty_label": "Vacío"
+  },
+  "editor_toolbar": {
+    "row": "mb-3 flex h-9 shrink-0 items-center gap-1",
+    "emoji_btn": "grid h-8 w-7 place-items-center rounded-lg text-base",
+    "title_input": "min-w-0 flex-1 border-0 bg-transparent p-0 text-sm font-semibold text-slate-800",
+    "assistant_btn": "inline-flex h-8 items-center gap-1.5 rounded-lg px-2 text-xs font-medium text-slate-500",
+    "visibility_select": { "cls": "h-8 cursor-pointer rounded-lg border border-slate-200 bg-white px-2 text-xs text-slate-600", "options": ["Privado", "Compartido", "Todo el equipo"] }
+  },
+  "editor_canvas": {
+    "article": "min-h-[70vh] rounded-2xl border border-slate-200/70 bg-white pb-16 pt-...",
+    "font_family": "Inter, SF Pro Display, -apple-system, ...",
+    "h1": { "letter_spacing": "-0.32px", "font_weight": "bold" },
+    "paragraph": { "font-size": "16px", "line-height": "23.2px", "color": "rgb(51,65,85)" },
+    "blockquote": { "font-style": "italic", "color": "rgb(125,121,122)", "padding-left": "16px" },
+    "code_block_pre": { "color": "rgb(255,255,255)", "padding": "24px", "font-family": "ui-monospace, ...", "bg": "near-black" },
+    "table_td": { "border": "1px solid rgb(221,221,221)", "padding": "5px 10px", "color": "rgb(63,63,63)" },
+    "block_types_seen": ["h1", "h2", "paragraph", "bullet_list", "numbered_list", "check_list", "blockquote", "table", "code_block", "inline: bold/italic/underline/strike/code"]
+  },
+  "tasks_panel": {
+    "header_h2": "flex items-center gap-2 text-sm font-semibold text-slate-800 (Tareas)",
+    "header_add_btn": "grid h-8 w-8 place-items-center rounded-lg text-slate-400 (＋)",
+    "doc_task_card": "card mb-3 border-brand-200/70 bg-brand-50/30 p-3 (DE ESTE DOCUMENTO + Tarea)",
+    "list_card": "card p-3",
+    "task_input": { "cls": "input mb-2 h-8 py-0 text-sm", "placeholder": "Tarea de este documento…", "border": "rgb(203,213,225)", "radius": "8px" },
+    "tabs": ["Mías", "Creadas", "Todas", "Ver hechas"],
+    "empty": "Nada pendiente. 🎉"
+  },
+  "help_panel_global": {
+    "_scope": "GLOBAL bottom-left, appears on every screen. Belongs to Incidencias/Support phase, not this one.",
+    "title": "Mi trabajo (context-named)",
+    "elements": ["tips list", "Pregunta o cuenta qué falla… input", "Enviar", "Reportar con captura", "Mis avisos"]
+  }
+}
