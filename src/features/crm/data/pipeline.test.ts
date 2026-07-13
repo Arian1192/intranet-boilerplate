@@ -72,6 +72,6 @@ describe('pipeline data', () => {
   });
 
   it('formatEur uses es-ES currency', () => {
-    expect(formatEur(48000).replace(/ /g, ' ')).toBe('48.000,00 €');
+    expect(formatEur(48000).replace(/\u00A0/g, ' ')).toBe('48.000,00 €');
   });
 });
