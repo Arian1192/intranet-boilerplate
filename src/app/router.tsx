@@ -10,6 +10,7 @@ import { CreativosShell } from '@/features/modules/CreativosShell';
 import { CRMShell } from '@/features/modules/CRMShell';
 import { TeamShell } from '@/features/modules/TeamShell';
 import { ConfigShell } from '@/features/modules/ConfigShell';
+import { MiTrabajoShell } from '@/features/modules/MiTrabajoShell';
 import { BookingDashboardPage } from '@/features/booking/pages/BookingDashboardPage';
 import { ShowsPage } from '@/features/booking/pages/ShowsPage';
 import { LogisticsPage } from '@/features/booking/pages/LogisticsPage';
@@ -33,6 +34,9 @@ import { PedidosPage } from '@/features/cruda/pages/PedidosPage';
 import { CatalogoPage } from '@/features/cruda/pages/CatalogoPage';
 import { AnaliticaPage as CrudaAnaliticaPage } from '@/features/cruda/pages/AnaliticaPage';
 import { CreativosPage } from '@/features/creativos/pages/CreativosPage';
+import { ClientesPage } from '@/features/crm/pages/ClientesPage';
+import { PipelinePage } from '@/features/crm/pages/PipelinePage';
+import { CrecimientoPage } from '@/features/crm/pages/CrecimientoPage';
 
 export function AppRouter() {
   return (
@@ -75,9 +79,14 @@ export function AppRouter() {
         <Route path="catalogo" element={<CatalogoPage />} />
         <Route path="analitica" element={<CrudaAnaliticaPage />} />
       </Route>
-      <Route path="/crm" element={<CRMShell />} />
+      <Route path="/crm" element={<CRMShell />}>
+        <Route index element={<ClientesPage />} />
+        <Route path="pipeline" element={<PipelinePage />} />
+        <Route path="crecimiento" element={<CrecimientoPage />} />
+      </Route>
       <Route path="/personal" element={<TeamShell />} />
       <Route path="/configuracion" element={<ConfigShell />} />
+      <Route path="/mi-trabajo" element={<MiTrabajoShell />} />
     </Routes>
   );
 }

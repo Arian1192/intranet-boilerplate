@@ -12,6 +12,11 @@
     "format": "prettier --write \"src/**/*.{ts,tsx,css,json}\""
   },
   "dependencies": {
+    "@blocknote/core": "^0.51.4",
+    "@blocknote/mantine": "^0.51.4",
+    "@blocknote/react": "^0.51.4",
+    "@mantine/core": "^9.4.1",
+    "@mantine/hooks": "^9.4.1",
     "@tiptap/core": "^3.27.3",
     "@tiptap/extension-placeholder": "^3.27.3",
     "@tiptap/extension-text-style": "^3.27.3",

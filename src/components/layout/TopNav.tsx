@@ -1,4 +1,4 @@
-import { Bell } from 'lucide-react';
+import { Bell, Briefcase } from 'lucide-react';
 import { Link, NavLink } from 'react-router';
 import { APP_NAME } from '@/lib/constants';
 import { cn } from '@/lib/utils';
@@ -87,6 +87,13 @@ export function TopNav({ user, notificationCount = 0, module }: TopNavProps) {
               <iconAction.icon className="h-5 w-5" />
             </NavLink>
           ))}
+          <Link
+            to="/mi-trabajo"
+            aria-label="Mi trabajo"
+            className="grid h-9 w-9 place-items-center rounded-lg text-slate-500 hover:bg-slate-100"
+          >
+            <Briefcase className="h-5 w-5" />
+          </Link>
           <button
             type="button"
             className="relative grid h-9 w-9 place-items-center rounded-lg text-slate-500 hover:bg-slate-100"
