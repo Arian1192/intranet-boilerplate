@@ -27,10 +27,8 @@ export function buildTree(docs: DocNode[]): TreeSection[] {
   return SECTIONS.map(({ key, title }) => ({
     key,
     title,
-    // raíces de la sección = docs de esa visibilidad sin padre (o cuyo padre no es de la sección)
-    roots: toTree(docs.filter((d) => d.visibility === key), null).length
-      ? toTree(docs.filter((d) => d.visibility === key), null)
-      : [],
+    // raíces de la sección = docs de esa visibilidad sin padre
+    roots: toTree(docs.filter((d) => d.visibility === key), null),
   }));
 }
 

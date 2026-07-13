@@ -26,6 +26,7 @@ describe('mi-trabajo data', () => {
 
   it('childrenOf returns direct children only', () => {
     const kids = childrenOf(docs, WELCOME_ID);
+    expect(kids.map((d) => d.id)).toContain('d-riders');
     expect(kids.every((d) => d.parentId === WELCOME_ID)).toBe(true);
   });
 
