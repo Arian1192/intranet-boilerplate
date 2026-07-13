@@ -10,6 +10,7 @@ import { CreativosShell } from '@/features/modules/CreativosShell';
 import { CRMShell } from '@/features/modules/CRMShell';
 import { TeamShell } from '@/features/modules/TeamShell';
 import { ConfigShell } from '@/features/modules/ConfigShell';
+import { MiTrabajoShell } from '@/features/modules/MiTrabajoShell';
 import { BookingDashboardPage } from '@/features/booking/pages/BookingDashboardPage';
 import { ShowsPage } from '@/features/booking/pages/ShowsPage';
 import { LogisticsPage } from '@/features/booking/pages/LogisticsPage';
@@ -85,6 +86,7 @@ export function AppRouter() {
       </Route>
       <Route path="/personal" element={<TeamShell />} />
       <Route path="/configuracion" element={<ConfigShell />} />
+      <Route path="/mi-trabajo" element={<MiTrabajoShell />} />
     </Routes>
   );
 }
