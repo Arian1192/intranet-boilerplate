@@ -1,0 +1,6 @@
+/* Overrides acotados al canvas de Documentos para calcar el look del live. */
+.doc-canvas .bn-editor { padding-inline: 3.5rem; }
+.doc-canvas .bn-block-content[data-content-type='paragraph'] { font-size: 16px; line-height: 23.2px; color: rgb(51, 65, 85); }
+.doc-canvas .bn-block-content[data-content-type='quote'] { font-style: italic; color: rgb(125, 121, 122); }
+.doc-canvas .bn-block-content[data-content-type='table'] td,
+.doc-canvas .bn-block-content[data-content-type='table'] th { border: 1px solid rgb(221, 221, 221); padding: 5px 10px; color: rgb(63, 63, 63); }
