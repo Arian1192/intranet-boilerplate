@@ -13,7 +13,9 @@ interface Props {
 
 export function TasksPanel({ doc, tasks }: Props) {
   const [tab, setTab] = useState<(typeof TABS)[number]>('Mías');
-  const docTasks = doc ? tasks.filter((t) => t.docId === doc.id && !t.done) : [];
+  const docTasks = doc
+    ? tasks.filter((t) => t.docId === doc.id && (tab === 'Ver hechas' ? t.done : !t.done))
+    : [];
 
   return (
     <div>

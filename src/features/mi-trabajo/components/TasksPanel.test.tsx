@@ -26,4 +26,18 @@ describe('TasksPanel', () => {
     fireEvent.click(todas);
     expect(todas).toHaveAttribute('aria-pressed', 'true');
   });
+
+  it('shows pending tasks by default and done tasks under "Ver hechas"', () => {
+    const doc = docs[0];
+    const tasks = [
+      { id: 't1', docId: doc.id, text: 'Pendiente A', done: false, owner: 'AC', scope: 'mias' as const },
+      { id: 't2', docId: doc.id, text: 'Hecha B', done: true, owner: 'AC', scope: 'mias' as const },
+    ];
+    render(<TasksPanel doc={doc} tasks={tasks} />);
+    expect(screen.getByText('Pendiente A')).toBeInTheDocument();
+    expect(screen.queryByText('Hecha B')).not.toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: 'Ver hechas' }));
+    expect(screen.getByText('Hecha B')).toBeInTheDocument();
+    expect(screen.queryByText('Pendiente A')).not.toBeInTheDocument();
+  });
 });
