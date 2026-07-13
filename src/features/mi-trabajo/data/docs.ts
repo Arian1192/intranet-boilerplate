@@ -18,8 +18,15 @@ export function childrenOf(docs: DocNode[], parentId: string): DocNode[] {
 }
 
 function toTree(docs: DocNode[], parentId: string | null): TreeNode[] {
+  const ids = new Set(docs.map((d) => d.id));
   return docs
-    .filter((d) => d.parentId === parentId)
+    .filter((d) =>
+      parentId === null
+        // raíz = sin padre, o cuyo padre real no está en este subconjunto
+        // (p.ej. filtrado por búsqueda, que rompe la cadena de ancestros)
+        ? d.parentId === null || !ids.has(d.parentId)
+        : d.parentId === parentId
+    )
     .map((doc) => ({ doc, children: toTree(docs, doc.id) }));
 }
 
