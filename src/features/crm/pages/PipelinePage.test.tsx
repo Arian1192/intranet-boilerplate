@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent, within } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import { PipelinePage } from './PipelinePage';
 
@@ -23,5 +23,18 @@ describe('PipelinePage', () => {
     fireEvent.change(screen.getByLabelText('Empresa'), { target: { value: 'Etra Agency' } });
     expect(screen.getByText('Contactado')).toBeInTheDocument();
     expect(screen.getByText('Foot District')).toBeInTheDocument();
+  });
+
+  it('moving a card updates the forecast stat', () => {
+    render(<PipelinePage />);
+    fireEvent.change(screen.getByLabelText('Empresa'), { target: { value: 'Etra Agency' } });
+    // FORECAST card shows 31.200,00 € initially (48000*.25 + 12000*.1 + 30000*.6)
+    const forecastLabel = screen.getByText('FORECAST PONDERADO');
+    const forecastCard = forecastLabel.parentElement as HTMLElement;
+    expect(within(forecastCard).getByText(/31\.200,00/)).toBeInTheDocument();
+    // move Foot District (Contactado, .25) to next stage (Cualificado, .4): 48000*.4=19200 → 38.400
+    const card = screen.getByText('Foot District').closest('div.rounded-lg') as HTMLElement;
+    fireEvent.click(within(card).getByRole('button', { name: 'Mover a etapa siguiente' }));
+    expect(within(forecastCard).getByText(/38\.400,00/)).toBeInTheDocument();
   });
 });

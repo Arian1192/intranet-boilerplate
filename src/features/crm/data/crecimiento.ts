@@ -23,7 +23,7 @@ export function atRisk(orgs: CrmOrg[], opps: Opportunity[], months: number) {
   return clients
     .map((org) => {
       const orgOpps = opps.filter((o) => o.orgId === org.id);
-      const dates = orgOpps.map((o) => o.closeDate).sort();
+      const dates = orgOpps.flatMap((o) => [o.createdAt, o.closeDate]).sort();
       const last = dates.length > 0 ? dates[dates.length - 1] : null;
       return { org, lastActivity: last, companies: org.worksWith };
     })

@@ -11,6 +11,7 @@ export interface Opportunity {
   id: string;
   orgId: string;
   orgName: string;
+  // Denormalization of stage.company (derivable via stageId → stage); kept for convenient filtering.
   company: string;
   stageId: string;
   amount: number;

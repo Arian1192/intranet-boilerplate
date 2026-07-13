@@ -9,7 +9,7 @@ describe('pipeline data', () => {
   it('has the exact ConceptOne and Etra stages in order', () => {
     // STAGES is the flat source of truth stagesFor() derives from; assert it's populated
     // (also keeps the import "used" under noUnusedLocals).
-    expect(STAGES.length).toBeGreaterThan(0);
+    expect(STAGES.length).toBe(12); // 5 ConceptOne + 7 Etra
     expect(stagesFor('ConceptOne').map((s) => s.name)).toEqual([
       'Interés', 'Oferta enviada', 'Confirmando fecha', 'Contratado', 'Caído',
     ]);

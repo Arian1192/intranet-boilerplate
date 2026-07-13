@@ -30,7 +30,7 @@ export function PipelinePage() {
             aria-label="Empresa"
             value={company}
             onChange={(e) => setCompany(e.target.value)}
-            className="h-10 rounded-lg border border-slate-300 bg-white px-3 text-sm text-slate-800 focus:border-brand-400 focus:outline-none"
+            className="h-9 rounded-lg border border-slate-300 bg-white px-3 text-sm text-slate-800 focus:border-brand-400 focus:outline-none"
           >
             {GROUP_COMPANIES.map((c) => <option key={c} value={c}>{c}</option>)}
           </select>

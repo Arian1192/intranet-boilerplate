@@ -31,7 +31,7 @@ export function CrecimientoPage() {
             aria-label="Umbral de inactividad"
             value={months}
             onChange={(e) => setMonths(Number(e.target.value))}
-            className="h-10 rounded-lg border border-slate-300 bg-white px-3 text-sm text-slate-800 focus:border-brand-400 focus:outline-none"
+            className="h-9 rounded-lg border border-slate-300 bg-white px-3 text-sm text-slate-800 focus:border-brand-400 focus:outline-none"
           >
             {RISK_OPTIONS.map((m) => <option key={m} value={m}>Sin actividad en {m} meses</option>)}
           </select>
