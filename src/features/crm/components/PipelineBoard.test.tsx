@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom';
-import { render, screen } from '@testing-library/react';
+import { render, screen, within, fireEvent } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
 import { PipelineBoard } from './PipelineBoard';
 import { PipelineStatCards } from './PipelineStatCards';
@@ -19,14 +19,16 @@ describe('PipelineBoard', () => {
     expect(screen.getByRole('button', { name: 'Configurar etapas' })).toBeInTheDocument();
   });
 
-  it('moving the first stage card calls onMove; edge disables prev', () => {
+  it('first-stage card has prev disabled and next calls onMove with its id', () => {
     const onMove = vi.fn();
     const opps = opportunitiesFor(opportunities, 'Etra Agency');
     render(<PipelineBoard company="Etra Agency" opps={opps} onMove={onMove} />);
-    // op2 BMG is in 'Nuevo' (first stage) → prev disabled. BMG appears twice
-    // (op2 'Nuevo', op4 'Ganada') so use getAllByText and take the first match.
-    const bmg = screen.getAllByText('BMG')[0].closest('div')!;
-    expect(bmg).toBeInTheDocument();
+    // The BMG card in the first stage (Nuevo) is the first 'BMG' in DOM order.
+    const card = screen.getAllByText('BMG')[0].closest('div.rounded-lg') as HTMLElement;
+    const utils = within(card);
+    expect(utils.getByRole('button', { name: 'Mover a etapa anterior' })).toBeDisabled();
+    fireEvent.click(utils.getByRole('button', { name: 'Mover a etapa siguiente' }));
+    expect(onMove).toHaveBeenCalledWith('op2', 1);
   });
 });
 
@@ -38,5 +40,7 @@ describe('PipelineStatCards', () => {
     expect(screen.getByText('FORECAST PONDERADO')).toBeInTheDocument();
     expect(screen.getByText('GANADAS')).toBeInTheDocument();
     expect(screen.getByText('Σ valor × probabilidad')).toBeInTheDocument();
+    const ganadasValue = screen.getByText('GANADAS').parentElement!.querySelector('.text-emerald-600');
+    expect(ganadasValue).not.toBeNull();
   });
 });
