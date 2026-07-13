@@ -28,6 +28,15 @@ describe('crecimiento data', () => {
     expect(Array.isArray(atRisk(orgs, opportunities, 12))).toBe(true);
   });
 
+  it('excludes clients whose most recent activity is newer than the cutoff, includes never-active ones', () => {
+    const rows = atRisk(orgs, opportunities, 6);
+    const ids = rows.map((r) => r.org.id);
+    // BMG (o1) last activity 2026-11-15 is after the 6-month cutoff → excluded
+    expect(ids).not.toContain('o1');
+    // at least one client with no opportunities appears as "Nunca" (lastActivity null)
+    expect(rows.some((r) => r.lastActivity === null)).toBe(true);
+  });
+
   it('exposes risk options 3/6/12', () => {
     expect(RISK_OPTIONS).toEqual([3, 6, 12]);
   });
