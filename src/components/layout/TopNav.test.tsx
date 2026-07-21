@@ -2,7 +2,7 @@ import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router';
 import { BarChart2, Users } from 'lucide-react';
-import { test, expect } from 'vitest';
+import { test, expect, it } from 'vitest';
 import { TopNav } from './TopNav';
 import type { User } from '@/types';
 
@@ -34,4 +34,15 @@ test('omits iconActions links when not provided', () => {
   renderNav({ name: 'ConceptOne' });
   expect(screen.queryByRole('link', { name: 'Analítica' })).toBeNull();
   expect(screen.queryByRole('link', { name: 'Artistas' })).toBeNull();
+});
+
+it('muestra el dropdown Espacios y el badge 9+ sin acentos brand', () => {
+  const { container } = render(
+    <MemoryRouter>
+      <TopNav user={{ id: '1', email: 'a@b.c', name: 'Test', role: 'Admin' }} notificationCount={12} />
+    </MemoryRouter>
+  );
+  expect(screen.getByRole('button', { name: /Espacios/ })).toBeInTheDocument();
+  expect(screen.getByText('9+')).toBeInTheDocument();
+  expect(container.innerHTML).not.toMatch(/brand-/);
 });
