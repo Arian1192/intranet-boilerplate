@@ -11,6 +11,9 @@ import { CRMShell } from '@/features/modules/CRMShell';
 import { TeamShell } from '@/features/modules/TeamShell';
 import { ConfigShell } from '@/features/modules/ConfigShell';
 import { MiTrabajoShell } from '@/features/modules/MiTrabajoShell';
+import { MixmagShell } from '@/features/modules/MixmagShell';
+import { TagmagShell } from '@/features/modules/TagmagShell';
+import { HerramientasShell } from '@/features/modules/HerramientasShell';
 import { BookingDashboardPage } from '@/features/booking/pages/BookingDashboardPage';
 import { ShowsPage } from '@/features/booking/pages/ShowsPage';
 import { LogisticsPage } from '@/features/booking/pages/LogisticsPage';
@@ -87,6 +90,9 @@ export function AppRouter() {
       <Route path="/personal" element={<TeamShell />} />
       <Route path="/configuracion" element={<ConfigShell />} />
       <Route path="/mi-trabajo" element={<MiTrabajoShell />} />
+      <Route path="/mixmag" element={<MixmagShell />} />
+      <Route path="/tagmag" element={<TagmagShell />} />
+      <Route path="/herramientas" element={<HerramientasShell />} />
     </Routes>
   );
 }
