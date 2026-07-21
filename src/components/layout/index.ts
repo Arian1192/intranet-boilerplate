@@ -4,3 +4,4 @@ export * from './UserMenu';
 export * from './ModuleSelector';
 export * from './EspaciosDropdown';
 export * from './HelpPanel';
+export * from './ReportDialog';
