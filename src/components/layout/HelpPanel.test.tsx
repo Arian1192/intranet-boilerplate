@@ -19,4 +19,25 @@ describe('HelpPanel', () => {
     await user.click(screen.getByRole('button', { name: /Cerrar ayuda/ }));
     expect(screen.queryByRole('button', { name: 'Enviar' })).toBeNull();
   });
+
+  it('abre el modal Reportar, envía y muestra el toast', async () => {
+    const user = userEvent.setup();
+    render(<HelpPanel />);
+    await user.click(screen.getByRole('button', { name: 'Reportar con captura' }));
+    expect(screen.getByRole('heading', { name: 'Reportar' })).toBeInTheDocument();
+    // el panel de ayuda ya no está visible
+    expect(screen.queryByText('Reportar con captura')).toBeNull();
+    await user.type(screen.getByRole('textbox'), 'no carga la página');
+    await user.click(screen.getByRole('button', { name: 'Enviar' }));
+    expect(screen.queryByRole('heading', { name: 'Reportar' })).toBeNull();
+    expect(screen.getByText('Gracias, hemos recibido tu incidencia.')).toBeInTheDocument();
+  });
+
+  it('Cancelar vuelve al panel de ayuda', async () => {
+    const user = userEvent.setup();
+    render(<HelpPanel />);
+    await user.click(screen.getByRole('button', { name: 'Reportar con captura' }));
+    await user.click(screen.getByRole('button', { name: 'Cancelar' }));
+    expect(screen.getByPlaceholderText('Pregunta o cuenta qué falla…')).toBeInTheDocument();
+  });
 });
