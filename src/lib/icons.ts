@@ -1,4 +1,5 @@
 import {
+  BarChart3,
   Clapperboard,
   Headphones,
   Megaphone,
@@ -16,10 +17,13 @@ export const MODULE_ICONS: Record<string, LucideIcon> = {
   etra: Megaphone,
   produccion: Clapperboard,
   euphoric: Sparkles,
+  mixmag: Sparkles,
+  tagmag: Sparkles,
   creativos: Palette,
   cruda: Shirt,
   crm: Target,
   personal: Users,
+  herramientas: BarChart3,
   configuracion: Settings,
 };
 

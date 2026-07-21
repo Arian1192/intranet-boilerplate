@@ -30,8 +30,8 @@ export function DashboardPage() {
     );
   }
 
-  const businessModules = dashboard.modules.filter((m) => m.category === 'business');
-  const internalModules = dashboard.modules.filter((m) => m.category === 'internal');
+  const businessModules = dashboard.modules.filter((m) => m.category === 'workspace');
+  const internalModules = dashboard.modules.filter((m) => m.category === 'management');
   const displayName = dashboard.greeting.replace(/^Hola,\s*/, '');
 
   return (

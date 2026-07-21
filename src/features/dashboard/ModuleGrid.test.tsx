@@ -12,7 +12,7 @@ const modules: Module[] = [
     name: 'ConceptOne',
     shortDescription: 'Gestiona shows y su calculadora.',
     icon: 'Headphones',
-    category: 'business',
+    category: 'workspace',
     accent: '#773C9F',
   },
 ];

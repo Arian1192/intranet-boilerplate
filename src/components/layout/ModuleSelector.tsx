@@ -10,7 +10,7 @@ export function ModuleSelector() {
 
   return (
     <nav className="hidden items-center gap-1 md:flex" aria-label="Módulos de negocio">
-      {MODULES.filter((m) => m.category === 'business').map((module) => {
+      {MODULES.filter((m) => m.category === 'workspace').map((module) => {
         const Icon = MODULE_ICONS[module.id];
         const isActive = activeModule?.id === module.id;
         return (
