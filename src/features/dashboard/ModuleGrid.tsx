@@ -1,4 +1,5 @@
 import { MODULE_ICONS } from '@/lib/icons';
+import { tint } from '@/lib/color';
 import type { Module } from '@/types';
 import { Link } from 'react-router';
 
@@ -8,15 +9,6 @@ export interface ModuleGridProps {
 }
 
 const DEFAULT_ACCENT = '#64748B';
-
-/** Convert a #rrggbb hex color to an rgba() string at the given alpha. */
-export function tint(hex: string, alpha: number): string {
-  const n = parseInt(hex.replace('#', ''), 16);
-  const r = (n >> 16) & 255;
-  const g = (n >> 8) & 255;
-  const b = n & 255;
-  return `rgba(${r}, ${g}, ${b}, ${alpha})`;
-}
 
 export function ModuleGrid({ modules, title }: ModuleGridProps) {
   return (
