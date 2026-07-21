@@ -33,6 +33,9 @@ import { EventosPage } from '@/features/euphoric/pages/EventosPage';
 import { CuentasPage } from '@/features/euphoric/pages/CuentasPage';
 import { AnaliticaPage } from '@/features/euphoric/pages/AnaliticaPage';
 import { ArtistasPage } from '@/features/euphoric/pages/ArtistasPage';
+import { ResumenPage as RedaccionResumenPage } from '@/features/redaccion/pages/ResumenPage';
+import { RevistasPage } from '@/features/redaccion/pages/RevistasPage';
+import { EnConstruccionPage } from '@/features/redaccion/pages/EnConstruccionPage';
 import { PedidosPage } from '@/features/cruda/pages/PedidosPage';
 import { CatalogoPage } from '@/features/cruda/pages/CatalogoPage';
 import { AnaliticaPage as CrudaAnaliticaPage } from '@/features/cruda/pages/AnaliticaPage';
@@ -90,8 +93,18 @@ export function AppRouter() {
       <Route path="/personal" element={<TeamShell />} />
       <Route path="/configuracion" element={<ConfigShell />} />
       <Route path="/mi-trabajo" element={<MiTrabajoShell />} />
-      <Route path="/mixmag" element={<MixmagShell />} />
-      <Route path="/tagmag" element={<TagmagShell />} />
+      <Route path="/mixmag" element={<MixmagShell />}>
+        <Route index element={<RedaccionResumenPage />} />
+        <Route path="contenidos" element={<EnConstruccionPage />} />
+        <Route path="campanas" element={<EnConstruccionPage />} />
+        <Route path="revistas" element={<RevistasPage />} />
+      </Route>
+      <Route path="/tagmag" element={<TagmagShell />}>
+        <Route index element={<RedaccionResumenPage />} />
+        <Route path="contenidos" element={<EnConstruccionPage />} />
+        <Route path="campanas" element={<EnConstruccionPage />} />
+        <Route path="revistas" element={<RevistasPage />} />
+      </Route>
       <Route path="/herramientas" element={<HerramientasShell />} />
     </Routes>
   );

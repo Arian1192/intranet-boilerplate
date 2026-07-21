@@ -1,11 +1,6 @@
-import { ModuleShell } from './ModuleShell';
+import { RedaccionShell } from '@/features/redaccion/RedaccionShell';
+import { TAGMAG } from '@/features/redaccion/data/seed';
 
 export function TagmagShell() {
-  return (
-    <ModuleShell
-      title="TAGMAG"
-      description="Redacción TAGMAG: contenidos, campañas y revistas."
-      tabs={['Resumen', 'Contenidos', 'Campañas', 'Revistas']}
-    />
-  );
+  return <RedaccionShell magazine={TAGMAG} />;
 }
