@@ -36,4 +36,21 @@ describe('NewsCard', () => {
     fireEvent.click(screen.getByText(item.title));
     expect(screen.getByText('Detalle completo de la novedad.')).toBeInTheDocument();
   });
+
+  it('muestra el botón de acción en la fila (colapsada) sin acentos brand', () => {
+    render(
+      <NewsCard
+        item={{
+          id: '1',
+          author: 'Carlos Pego',
+          scope: 'Grupo',
+          date: '20 jul 2026',
+          title: 'Black Moose Summer Lunch',
+          actionLabel: 'Confirmar Asistencia',
+        }}
+      />
+    );
+    const btn = screen.getByRole('button', { name: 'Confirmar Asistencia' });
+    expect(btn.className).not.toMatch(/brand/);
+  });
 });

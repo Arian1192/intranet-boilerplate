@@ -16,7 +16,7 @@ export function UserMenu({ user }: UserMenuProps) {
         <p className="text-sm font-medium text-slate-900">{user.name}</p>
         <p className="text-xs text-slate-500 capitalize">{user.role}</p>
       </div>
-      <Avatar fallback={user.name} size="md" src={user.avatar} />
+      <Avatar fallback={user.name} size="md" src={user.avatar} className="bg-slate-800" />
     </button>
   );
 }

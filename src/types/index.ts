@@ -17,7 +17,7 @@ export interface Module {
   name: string;
   shortDescription: string;
   icon: string;
-  category: 'business' | 'internal';
+  category: 'workspace' | 'management' | 'tools';
   /** Hex accent color for the icon chip background (rendered at 8% alpha). */
   accent?: string;
 }
@@ -51,6 +51,7 @@ export interface Reminder {
 export interface Dashboard {
   greeting: string;
   birthdayNotice?: string;
+  festivoNotice?: string;
   weather: string;
   modules: Module[];
   news: NewsItem[];

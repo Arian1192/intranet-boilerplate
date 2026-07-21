@@ -1,0 +1,37 @@
+{
+  "_note": "Computed styles from live /crm/pipeline (logged in). Faithful model for future Supabase.",
+  "header": {
+    "company_select": "class 'input' (h~36 border-slate-300 rounded-lg px-3 py-2 text-sm w-[154px])",
+    "etapas_btn": "btn-secondary whitespace-nowrap (border-slate-300 px-4 py-2 text-sm font-medium)",
+    "add_btn": "btn-primary whitespace-nowrap (+ Oportunidad)"
+  },
+  "stat_cards": {
+    "labels": ["PIPELINE ABIERTO", "FORECAST PONDERADO", "GANADAS"],
+    "sublabels": ["N oportunidades", "Σ valor × probabilidad", "N cerradas"],
+    "ganadas_value_color": "green (emerald)",
+    "layout": "3 cards en fila, rounded-2xl border bg-white"
+  },
+  "column_header": "STAGE_NAME (bold) + count badge + Σ€ a la derecha",
+  "opportunity_card": {
+    "container": "rounded-lg border border-slate-200 bg-white p-3 shadow-sm  (w~272px)",
+    "title": "font-medium text-slate-800 (client/org name)",
+    "amount": "bold  e.g. 48.000,00 €",
+    "avatar": "grid place-items-center rounded-full font-semibold text-white  ~22px  bg emerald-600(#059669)  font 9px  (owner initials)",
+    "close": "Cierre: 01 oct 2026  (text-xs text-slate-400)",
+    "note": "↳ <descripcion> · <fecha>  (text-xs text-slate-400, truncated)",
+    "footer": "◀  Mover  ▶   (mueve la tarjeta de etapa)"
+  },
+  "pipelines": {
+    "ConceptOne": ["Interés","Oferta enviada","Confirmando fecha","Contratado","Caído"],
+    "Etra Agency": ["Nuevo","Contactado","Cualificado","Propuesta","Negociación","Ganada","Perdida"],
+    "CRUDA": "empty-state: 'CRUDA no tiene etapas configuradas todavía.' + 'Configurar etapas'",
+    "Euphoric Media": "empty-state",
+    "Mixmag Spain": "empty-state",
+    "TAGMAG": "empty-state"
+  },
+  "real_opportunity_example": {
+    "company": "Etra Agency", "stage": "Contactado", "client": "Carhartt",
+    "amount": 48000, "forecast": 12000, "implied_probability": 0.25,
+    "close": "01 oct 2026", "note": "Mostrar la oficina reformada · 15 sept 2026", "owner": "IC"
+  }
+}

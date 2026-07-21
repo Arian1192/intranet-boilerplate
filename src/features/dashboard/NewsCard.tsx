@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Button } from '@/components/ui';
 import type { NewsItem } from '@/types';
 import { ArrowRight, ChevronDown, ChevronUp } from 'lucide-react';
 
@@ -12,7 +11,7 @@ export function NewsCard({ item }: NewsCardProps) {
   const toggle = () => setExpanded((v) => !v);
 
   return (
-    <li className="overflow-hidden rounded-xl border border-news-border bg-news-card px-4 py-3">
+    <li className="overflow-hidden rounded-xl border border-slate-200 bg-white px-4 py-3">
       <div className="mb-1 flex flex-wrap items-center gap-1.5 text-xs text-slate-500">
         <span
           aria-hidden
@@ -26,7 +25,7 @@ export function NewsCard({ item }: NewsCardProps) {
         <span>·</span>
         <span className="text-slate-400">{item.date}</span>
         {item.scheduledFor && (
-          <span className="rounded-full bg-brand-50 px-2 py-0.5 text-brand-700">
+          <span className="rounded-full bg-slate-100 px-2 py-0.5 text-slate-500">
             {item.scheduledFor}
           </span>
         )}
@@ -41,6 +40,14 @@ export function NewsCard({ item }: NewsCardProps) {
         >
           {item.title}
         </button>
+        {item.actionLabel && (
+          <button
+            type="button"
+            className="hidden shrink-0 rounded-lg bg-slate-800 px-3 py-1.5 text-sm font-medium text-white hover:bg-slate-900 sm:inline-flex"
+          >
+            {item.actionLabel}
+          </button>
+        )}
         <button
           type="button"
           onClick={toggle}
@@ -56,14 +63,7 @@ export function NewsCard({ item }: NewsCardProps) {
         <p className="mt-3 text-sm leading-relaxed text-slate-600">{item.content}</p>
       )}
       {expanded && (
-        <div className="mt-4 flex items-center justify-between">
-          <div>
-            {item.actionLabel && (
-              <Button variant="primary" size="sm">
-                {item.actionLabel}
-              </Button>
-            )}
-          </div>
+        <div className="mt-4 flex items-center justify-end">
           <div className="flex items-center gap-4 text-xs text-slate-400">
             <button type="button" className="hover:text-slate-600">
               Editar
