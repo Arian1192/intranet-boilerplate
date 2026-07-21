@@ -19,7 +19,7 @@ export function NewsFeed({ items }: NewsFeedProps) {
         <button
           type="button"
           onClick={() => setShowForm((v) => !v)}
-          className="grid h-5 w-5 place-items-center rounded-full bg-slate-100 text-sm font-medium text-slate-500 hover:bg-brand-50 hover:text-brand-600"
+          className="grid h-5 w-5 place-items-center rounded-full bg-slate-100 text-sm font-medium text-slate-500 hover:bg-slate-200 hover:text-slate-700"
           aria-label="Añadir novedad"
         >
           +
