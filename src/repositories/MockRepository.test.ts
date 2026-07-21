@@ -22,4 +22,13 @@ describe('MockRepository', () => {
     expect(dashboard.news.length).toBeGreaterThan(0);
     expect(dashboard.news.every((n) => typeof n.content === 'string' && n.content.length > 0)).toBe(true);
   });
+
+  it('getDashboard devuelve los 12 módulos, festivo y sin recordatorios', async () => {
+    const repo = new MockRepository();
+    const d = await repo.getDashboard();
+    expect(d.modules).toHaveLength(12);
+    expect(d.festivoNotice).toMatch(/festivo/i);
+    expect(d.weather).toContain('Barcelona');
+    expect(d.reminders).toEqual([]);
+  });
 });
