@@ -1,0 +1,238 @@
+/
+Team
+Equipo
+Calendario
+Fichas
+9+
+test
+Admin
+T
+Fichas del equipo
+
+Información sensible: datos personales, condiciones económicas, vacaciones y horas. El resto del equipo solo ve el directorio.
+
+⬇ Exportar a Excel
++ Nueva persona
+Empresa
+Todas
+ConceptOne
+CRUDA
+Etra Agency
+Euphoric Media
+Mixmag Spain
+TAGMAG
+Tipo
+Todos
+Contratado
+Freelance
+Alba Gelabert
+Freelance · Account Manager
+Alberto Egea
+Freelance · Ads Specialist
+Aldo Messina
+Freelance · Booker
+Alejandro Gonzalez
+Freelance · Logística · Booker
+Borja Comino
+Freelance · Comercial · Redacción
+Carlos Pego Muñoz
+Freelance
+Carlos Ramudo Valencia
+Freelance
+Federico Cortina
+Freelance · Dirección · Redacción
+Fran Hinojosa Veredas
+Freelance
+Inés Batlle
+Contratado · Comunicación · PR
+Israel B Gras Cuenca
+Freelance
+Jack Howell
+Freelance
+Jassi Gonzalez Montes
+Freelance
+Joe Coe
+Freelance · Advancing
+Juan Manuel Molina
+Freelance · Redacción
+Lucía Gómez Garcia
+Contratado · Account Manager
+Maria Fernanda Rodriguez
+Freelance · Diseño
+Marian Aristimuno
+Freelance · Redacción
+Oscar Buch
+Freelance · Booker · Logística
+Pablo Carrera
+Contratado · Social Media Manager
+Patricia Pareja Casalí
+Freelance · Project Manager
+Sadkiel
+Freelance · Project Manager
+Tony Carrerira
+Freelance
+Usuario Test
+Contratado
+Victor Moreno
+Freelance · Video Editor
+Yenifer Bernardo
+Freelance · Booker
+Alba Gelabert
+Con cuenta
+Activa
+Datos personales
+Acceso y permisos
+Condiciones económicas
+Vacaciones
+Registro de horas
+Cambios sin guardar
+Guardar
+Nombre *
+Puestos
+
+Puede tener varios. El marcado con ★ es el que se enseña en el directorio. Sirven para avisar o compartir con todos los del mismo puesto.
+
+Reporta a
+Nadie (raíz del organigrama)
+Alberto Egea
+Aldo Messina
+Alejandro Gonzalez
+Borja Comino
+Carlos Pego Muñoz
+Carlos Ramudo Valencia
+Federico Cortina
+Fran Hinojosa Veredas
+Inés Batlle
+Israel B Gras Cuenca
+Jack Howell
+Jassi Gonzalez Montes
+Joe Coe
+Juan Manuel Molina
+Lucía Gómez Garcia
+Maria Fernanda Rodriguez
+Marian Aristimuno
+Oscar Buch
+Pablo Carrera
+Patricia Pareja Casalí
+Sadkiel
+Tony Carrerira
+Usuario Test
+Victor Moreno
+Yenifer Bernardo
+
+Su responsable ve sus días fuera en el calendario.
+
+Email
+Teléfono
+DNI / NIE
+Nº Seguridad Social
+Tipo
+Contratado
+Freelance
+Fecha de nacimiento
+09/07/1997
+Dirección
+Ciudad
+País
+Fecha de inicio
+dd/mm/aaaa
+Fecha de fin
+dd/mm/aaaa
+Días de vacaciones / año
+
+0 = sin límite
+
+Fin del periodo de prueba
+dd/mm/aaaa
+
+Avisa antes de que venza.
+
+% SS empresa (opcional)
+
+Vacío = usa el % global de Configuración.
+
+Persona activa
+Notas
+Guardar
+Dashboard de costes
+Coste mensual estimado total: 34.522,07 €
+COSTE POR EMPRESA
+ConceptOne
+11.460,00 €
+Euphoric Media
+8937,68 €
+Mixmag Spain
+6750,00 €
+Etra Agency
+4894,39 €
+TAGMAG
+2480,00 €
+CRUDA
+0,00 €
+COSTE POR PERSONA
+Alberto Egea
+Ads Specialist
+4000,00 €
+Lucía Gómez Garcia
+Account Manager
+3068,33 €
+Maria Fernanda Rodriguez
+Diseño
+2420,00 €
+Borja Comino
+Comercial · Redacción
+2400,00 €
+Pablo Carrera
+Social Media Manager
+2007,68 €
+Alba Gelabert
+Account Manager
+2000,00 €
+Sadkiel
+Project Manager
+2000,00 €
+Federico Cortina
+Dirección · Redacción
+1900,00 €
+Inés Batlle
+Comunicación · PR
+1826,06 €
+Victor Moreno
+Video Editor
+1700,00 €
+Aldo Messina
+Booker
+1500,00 €
+Joe Coe
+Advancing
+1500,00 €
+Marian Aristimuno
+Redacción
+1500,00 €
+Patricia Pareja Casalí
+Project Manager
+1500,00 €
+Yenifer Bernardo
+Booker
+1500,00 €
+Alejandro Gonzalez
+Logística · Booker
+1200,00 €
+Oscar Buch
+Booker · Logística
+1200,00 €
+Juan Manuel Molina
+Redacción
+800,00 €
+Carlos Ramudo Valencia
+500,00 €
+?
+Team
+
+Los accesos se dan desde la ficha
+
+Crear la persona y darle acceso son dos cosas: una persona puede estar en el directorio sin cuenta. Los permisos se editan en su ficha, no en una lista aparte.
+
+Enviar
+Reportar con captura
+Mis avisos
