@@ -18,7 +18,7 @@ export function ContenidosPage() {
   const [mine, setMine] = useState(false);
   const [scope, setScope] = useState<'todo' | 'campana' | 'organico'>('todo');
   const [teamTab, setTeamTab] = useState<ContentTeam | 'todos'>('todos');
-  const [statusFilter, setStatusFilter] = useState<string | undefined>(undefined);
+  const [selectedStatus, setSelectedStatus] = useState<{ team: ContentTeam; statusId: string } | null>(null);
 
   const all = useMemo(() => piecesFor(magazine.id), [magazine.id]);
   const base = useMemo(
@@ -26,7 +26,8 @@ export function ContenidosPage() {
     [all, query, mine, scope]
   );
 
-  const toggleStatus = (id: string) => setStatusFilter((cur) => (cur === id ? undefined : id));
+  const toggleStatus = (team: ContentTeam, statusId: string) =>
+    setSelectedStatus((cur) => (cur && cur.team === team && cur.statusId === statusId ? null : { team, statusId }));
 
   return (
     <div className="space-y-4">
@@ -40,14 +41,18 @@ export function ContenidosPage() {
         scope={scope}
         onScope={setScope}
         view={view}
-        onView={setView}
+        onView={(v) => {
+          setView(v);
+          setSelectedStatus(null);
+        }}
       />
 
       {view === 'panel' ? (
         <div className="space-y-4">
           {TEAMS.map((t) => {
             const statuses = statusesForTeam(magazine.id, t.id);
-            const teamPieces = filterPieces(base, { team: t.id, statusId: statusFilter });
+            const sel = selectedStatus?.team === t.id ? selectedStatus.statusId : undefined;
+            const teamPieces = filterPieces(base, { team: t.id, statusId: sel });
             const teamAll = filterPieces(base, { team: t.id });
             return (
               <TeamGroup
@@ -59,8 +64,8 @@ export function ContenidosPage() {
                 statuses={statuses}
                 counts={countByStatus(teamAll, statuses)}
                 pieces={teamPieces}
-                selectedStatusId={statusFilter}
-                onStatusClick={toggleStatus}
+                selectedStatusId={sel}
+                onStatusClick={(id) => toggleStatus(t.id, id)}
               />
             );
           })}

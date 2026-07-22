@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom';
 import { describe, it, expect } from 'vitest';
-import { render, screen } from '@testing-library/react';
+import { render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { MemoryRouter, Routes, Route, Outlet } from 'react-router';
 import { ContenidosPage } from './ContenidosPage';
@@ -28,6 +28,32 @@ describe('ContenidosPage', () => {
     expect(screen.getByText('Artículo Soho Farmhouse Ibiza')).toBeInTheDocument();
     // MAQUETACIÓN aparece una vez (solo revista)
     expect(screen.getAllByText('MAQUETACIÓN')).toHaveLength(1);
+  });
+
+  it('Mixmag Panel: el filtro de estado por StatusBox es por-equipo (no global)', async () => {
+    renderPage(MIXMAG);
+    const redesSection = screen.getByText('REDES').closest('section');
+    expect(redesSection).not.toBeNull();
+    const redesBorradorBox = within(redesSection as HTMLElement)
+      .getAllByText('BORRADOR')
+      .map((el) => el.closest('button'))
+      .find((btn): btn is HTMLButtonElement => btn !== null);
+    expect(redesBorradorBox).toBeDefined();
+
+    await userEvent.click(redesBorradorBox as HTMLButtonElement);
+
+    // REDES ahora muestra solo su pieza en BORRADOR
+    expect(
+      within(redesSection as HTMLElement).getByText('Campaña Test 1 · Post en redes')
+    ).toBeInTheDocument();
+
+    // WEB no debe verse afectado por la selección de REDES: sus 2 piezas
+    // ('Campaña Test 1 · Artículo patrocinado' en IDEA y EN CURSO) siguen visibles
+    const webSection = screen.getByText('WEB').closest('section');
+    expect(webSection).not.toBeNull();
+    expect(
+      within(webSection as HTMLElement).getAllByText('Campaña Test 1 · Artículo patrocinado')
+    ).toHaveLength(2);
   });
 
   it('cambia a Kanban y muestra tabs de equipo + columnas', async () => {
