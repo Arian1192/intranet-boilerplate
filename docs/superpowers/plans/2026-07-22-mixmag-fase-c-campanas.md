@@ -14,7 +14,7 @@
 - Prohibido mutar el live; todo presentacional/in-memory, sin persistencia. Modelo espeja tablas Supabase (FKs `stageId`/`clientId`; `client`/`untilLabel` denormalizado/snapshot).
 - Sin clases `brand-*` en grises/negros. Botón `+ Campaña` = `#44444C`. ACEPTADA en emerald (=live).
 - **Reusar** `formatCurrency` de `@/lib/format` y `SegmentedControl` de `@/components/ui` (NO duplicar).
-- es-ES. Target ES2020: NO `Array.prototype.at()`. `formatCurrency` usa NBSP antes de € → en tests, matchear con regex sobre la parte numérica (p.ej. `/1\.500,00/`), nunca un literal con € y NBSP.
+- es-ES. Target ES2020: NO `Array.prototype.at()`. `formatCurrency` usa NBSP antes de € → en tests, matchear con regex sobre la parte numérica (p.ej. `/1\.?500,00/`), nunca un literal con € y NBSP.
 - Ubicación `src/features/redaccion/` (datos `data/campanas.ts`, componentes `components/`, página `pages/`). Cada test importa `'@testing-library/jest-dom'`. Un commit por tarea.
 
 ---
@@ -379,7 +379,7 @@ describe('CampaignRow', () => {
     expect(screen.getByText('Campaña Test 1')).toBeInTheDocument();
     expect(screen.getByText('Cold Cloud SL')).toBeInTheDocument();
     expect(screen.getByText('hasta 29 jul')).toBeInTheDocument();
-    expect(screen.getByText(/1\.500,00/)).toBeInTheDocument();
+    expect(screen.getByText(/1\.?500,00/)).toBeInTheDocument();
   });
 
   it('aplica tinte emerald cuando la etapa es emerald', () => {
@@ -467,7 +467,7 @@ describe('CampaignCard', () => {
     render(<CampaignCard campaign={campaignsFor('mixmag')[0]} />);
     expect(screen.getByText('Campaña Test 1')).toBeInTheDocument();
     expect(screen.getByText('Cold Cloud SL')).toBeInTheDocument();
-    expect(screen.getByText(/1\.500,00/)).toBeInTheDocument();
+    expect(screen.getByText(/1\.?500,00/)).toBeInTheDocument();
     expect(screen.getByText('hasta 29 jul')).toBeInTheDocument();
   });
 });
@@ -657,7 +657,7 @@ describe('CampanasToolbar', () => {
     expect(screen.getByPlaceholderText(/Buscar campaña o anuncian/)).toBeInTheDocument();
     expect(screen.getByText('En el aire')).toBeInTheDocument();
     expect(screen.getByText('Ganado')).toBeInTheDocument();
-    expect(screen.getByText(/1\.500,00/)).toBeInTheDocument();
+    expect(screen.getByText(/1\.?500,00/)).toBeInTheDocument();
     expect(screen.getByRole('button', { name: '+ Campaña' })).toHaveAttribute('type', 'button');
   });
 
