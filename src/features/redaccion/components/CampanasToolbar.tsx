@@ -21,12 +21,11 @@ export function CampanasToolbar({ query, onQuery, enElAire, ganado, view, onView
         placeholder="Buscar campaña o anuncian…"
         className="h-9 w-56 rounded-lg border border-slate-200 px-3 text-sm"
       />
-      <span className="text-sm text-slate-500">
-        En el aire <span className="font-bold text-slate-800">{formatCurrency(enElAire)}</span>
-      </span>
-      <span className="text-sm text-slate-500">
-        Ganado <span className="font-bold text-slate-800">{formatCurrency(ganado)}</span>
-      </span>
+      <div className="flex items-center gap-2 text-sm text-slate-500">
+        <span>En el aire <span className="font-bold text-slate-800">{formatCurrency(enElAire)}</span></span>
+        <span aria-hidden="true">·</span>
+        <span>Ganado <span className="font-bold text-slate-800">{formatCurrency(ganado)}</span></span>
+      </div>
       <div className="ml-auto flex items-center gap-3">
         <SegmentedControl
           options={[
