@@ -34,9 +34,12 @@ describe('incidencias data', () => {
     expect(list[1].reporterColor).toBe('#16A34A');
     expect(list[4].reporterInitials).toBe('JC');
     expect(list[4].routePath).toBe('/shows/nuevo');
+    // Filas 4/6/7/8: Carlos Pego, que en el live usa foto de perfil en vez de iniciales.
+    expect(list[3].reporterName).toBe('Carlos Pego');
     expect(list[3].reporterInitials).toBeUndefined();
-    expect(list[3].reporterName).toBeUndefined();
     expect(list[3].reporterColor).toBeUndefined();
+    expect(list[4].reporterName).toBe('Joe Coe');
+    expect(list[4].reporterColor).toBe('#2563EB');
     expect(list[6].routePath).toBe('/shows/08ea3304-af17-4722-84d5-d3b63347fe74');
     expect(list[7].routePath).toBe('/shows/08ea3304-af17-4722-84d5-d3b63347fe74');
   });

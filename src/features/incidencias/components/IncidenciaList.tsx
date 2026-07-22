@@ -3,9 +3,10 @@ import type { Incidencia } from '../data/incidencias';
 
 export interface IncidenciaListProps {
   items: Incidencia[];
+  onOpen?: (incidencia: Incidencia) => void;
 }
 
-export function IncidenciaList({ items }: IncidenciaListProps) {
+export function IncidenciaList({ items, onOpen }: IncidenciaListProps) {
   if (items.length === 0) {
     // El live no envuelve el estado vacío en la tarjeta: el texto flota sobre el fondo
     // de la página, sin borde ni fondo blanco (ver live-incidencias-en-curso.png).
@@ -16,7 +17,7 @@ export function IncidenciaList({ items }: IncidenciaListProps) {
     <div className="overflow-hidden rounded-xl border border-slate-200 bg-white">
       <div className="divide-y divide-slate-50">
         {items.map((i) => (
-          <IncidenciaRow key={i.id} incidencia={i} />
+          <IncidenciaRow key={i.id} incidencia={i} onOpen={onOpen ? () => onOpen(i) : undefined} />
         ))}
       </div>
     </div>

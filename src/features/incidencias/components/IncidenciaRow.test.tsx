@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom';
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { IncidenciaRow } from './IncidenciaRow';
@@ -27,16 +27,24 @@ describe('IncidenciaRow', () => {
     expect(screen.getByText('/euphoric/calendario')).toBeInTheDocument();
   });
 
-  it('fila con reportante anónimo: avatar con aria-label "Reportante desconocido"', () => {
+  it('reportante con foto en el live: sin URL cae al placeholder, conservando su nombre', () => {
     render(<IncidenciaRow incidencia={seed[3]} />);
-    expect(screen.getByLabelText('Reportante desconocido')).toBeInTheDocument();
+    expect(screen.getByLabelText('Carlos Pego')).toBeInTheDocument();
   });
 
-  it('la fila es un botón inerte (no lanza al hacer click)', async () => {
-    render(<IncidenciaRow incidencia={seed[0]} />);
+  it('si hay foto de perfil se renderiza la imagen en vez de las iniciales', () => {
+    render(
+      <IncidenciaRow incidencia={{ ...seed[3], reporterAvatarUrl: 'https://example.test/carlos.png' }} />
+    );
+    expect(screen.getByAltText('Carlos Pego')).toHaveClass('rounded-full', 'object-cover');
+  });
+
+  it('la fila abre el detalle al hacer click', async () => {
+    const onOpen = vi.fn();
+    render(<IncidenciaRow incidencia={seed[0]} onOpen={onOpen} />);
     const row = screen.getByRole('button');
     expect(row).toHaveAttribute('type', 'button');
     await userEvent.click(row);
-    expect(screen.getByText(seed[0].texto)).toBeInTheDocument();
+    expect(onOpen).toHaveBeenCalledTimes(1);
   });
 });

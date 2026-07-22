@@ -53,6 +53,19 @@ describe('IncidenciasPage', () => {
     expect(stats().getByRole('button', { name: /DESCARTADAS/ })).toHaveAttribute('aria-pressed', 'false');
   });
 
+  it('al pulsar una fila abre el detalle, y se cierra con la ✕', async () => {
+    render(<IncidenciasPage />);
+    const filas = screen.getAllByRole('button').filter((b) => !stats().queryAllByRole('button').includes(b));
+    await userEvent.click(filas[0]);
+
+    const dialog = screen.getByRole('dialog');
+    expect(within(dialog).getByText('Contexto técnico')).toBeInTheDocument();
+    expect(within(dialog).getByRole('textbox')).toBeInTheDocument();
+
+    await userEvent.click(within(dialog).getByRole('button', { name: 'Cerrar' }));
+    expect(screen.queryByRole('dialog')).toBeNull();
+  });
+
   it('no usa clases brand-*', () => {
     const { container } = render(<IncidenciasPage />);
     expect(container.querySelector('[class*="brand-"]')).toBeNull();

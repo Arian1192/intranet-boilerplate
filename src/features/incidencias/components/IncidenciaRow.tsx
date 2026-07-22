@@ -18,18 +18,27 @@ const ESTADO_LABEL: Record<IncidenciaEstado, string> = INCIDENCIA_ESTADOS.reduce
 
 export interface IncidenciaRowProps {
   incidencia: Incidencia;
+  /** Abre el detalle. En el live la fila abre un modal con el reporte completo. */
+  onOpen?: () => void;
 }
 
-export function IncidenciaRow({ incidencia }: IncidenciaRowProps) {
-  const { estado, tipo, texto, hasAttachment, routePath, reporterName, reporterInitials, reporterColor } =
-    incidencia;
+export function IncidenciaRow({ incidencia, onOpen }: IncidenciaRowProps) {
+  const {
+    estado,
+    tipo,
+    texto,
+    hasAttachment,
+    routePath,
+    reporterName,
+    reporterInitials,
+    reporterColor,
+    reporterAvatarUrl,
+  } = incidencia;
 
   return (
     <button
       type="button"
-      // Inerte a propósito: el live probablemente abre un detalle/drawer al pulsar
-      // la fila, no explorado por la regla de no-navegar a lo desconocido (ver plan, Global Constraints).
-      onClick={() => {}}
+      onClick={onOpen}
       className="flex w-full items-center gap-3 px-4 py-2.5 text-left transition-colors hover:bg-slate-50"
     >
       <span
@@ -46,7 +55,12 @@ export function IncidenciaRow({ incidencia }: IncidenciaRowProps) {
       {hasAttachment && <span className="shrink-0 text-[11px] text-slate-400">📎</span>}
       <span className="hidden w-40 shrink-0 truncate text-[11px] text-slate-400 lg:block">{routePath}</span>
       <span className="w-20 shrink-0 text-right text-[11px] text-slate-400">—</span>
-      <IncidenciaAvatar reporterName={reporterName} reporterInitials={reporterInitials} reporterColor={reporterColor} />
+      <IncidenciaAvatar
+        reporterName={reporterName}
+        reporterInitials={reporterInitials}
+        reporterColor={reporterColor}
+        reporterAvatarUrl={reporterAvatarUrl}
+      />
     </button>
   );
 }

@@ -1,11 +1,14 @@
 import { useState } from 'react';
 import { listIncidencias, countByEstado, filterByEstado, INCIDENCIA_ESTADOS } from '../data/incidencias';
 import type { IncidenciaEstado } from '../data/incidencias';
+import type { Incidencia } from '../data/incidencias';
 import { IncidenciaStatFilter } from '../components/IncidenciaStatFilter';
 import { IncidenciaList } from '../components/IncidenciaList';
+import { IncidenciaDetailDialog } from '../components/IncidenciaDetailDialog';
 
 export function IncidenciasPage() {
   const [estadoFilter, setEstadoFilter] = useState<IncidenciaEstado | null>(null);
+  const [abierta, setAbierta] = useState<Incidencia | null>(null);
 
   const all = listIncidencias();
   const counts = countByEstado(all);
@@ -35,7 +38,8 @@ export function IncidenciasPage() {
           />
         ))}
       </div>
-      <IncidenciaList items={filtered} />
+      <IncidenciaList items={filtered} onOpen={setAbierta} />
+      {abierta && <IncidenciaDetailDialog incidencia={abierta} onClose={() => setAbierta(null)} />}
     </div>
   );
 }
