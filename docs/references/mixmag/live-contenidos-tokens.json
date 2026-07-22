@@ -1,0 +1,36 @@
+{
+  "mixmag_redes_chip": null,
+  "mixmag_web_chip": null,
+  "mixmag_revista_chip": null,
+  "mixmag_addContenido": {
+    "tag": "button",
+    "cls": "btn-primary text-sm",
+    "backgroundColor": "rgb(68, 68, 76)",
+    "color": "rgb(255, 255, 255)",
+    "borderColor": "rgb(229, 231, 235)",
+    "borderRadius": "8px",
+    "fontSize": "14px",
+    "fontWeight": "500",
+    "padding": "8px 16px",
+    "textTransform": "none",
+    "letterSpacing": "normal"
+  },
+  "mixmag_kanban_text": "/ Mixmag Resumen Contenidos Campañas Revistas 9+ test Admin T Mixmag Spain Solo lo mío Todo De campaña Orgánico Panel Kanban + Contenido Todos6 Redes2 Web2 Revista2 IDEA 2 Campaña Test 1 · Artículo patrocinado Web Artículo 29 jul 2026 Campaña Test 1 · Story Redes Stories 29 jul 2026 BORRADOR 3 Campaña Test 1 · Post en redes Redes Post (IG/FB) 29 jul 2026 Campaña Test 1 · Publirreportaje Revista Artículo 29 jul 2026 Artículo Soho Farmhouse Ibiza Revista Artículo hoy EN CURSO 1 Campaña Test 1 · Artículo patrocinado Web Noticia 29 jul 2026 CORRECCIONES MAQUETACIÓN PENDIENTE DE APROBACIÓN APROBADO PROGRAMADO PUBLICADO ? Ayuda",
+  "tagmag_redes_chip": null,
+  "tagmag_web_chip": null,
+  "tagmag_revista_chip": null,
+  "tagmag_addContenido": {
+    "tag": "button",
+    "cls": "btn-primary text-sm",
+    "backgroundColor": "rgb(68, 68, 76)",
+    "color": "rgb(255, 255, 255)",
+    "borderColor": "rgb(229, 231, 235)",
+    "borderRadius": "8px",
+    "fontSize": "14px",
+    "fontWeight": "500",
+    "padding": "8px 16px",
+    "textTransform": "none",
+    "letterSpacing": "normal"
+  },
+  "tagmag_kanban_text": "/ TAGMAG Resumen Contenidos Campañas Revistas 9+ test Admin T TAGMAG Solo lo mío Todo De campaña Orgánico Panel Kanban + Contenido Todos0 Redes0 Web0 Revista0 PENDIENTE DE REVISIÓN APROBADO (A ESCRIBIR) BORRADOR CORRECCIONES PROGRAMADO PUBLICADO ? Ayuda"
+}
