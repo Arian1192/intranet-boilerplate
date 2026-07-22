@@ -1,3 +1,5 @@
+import { SegmentedControl } from '@/components/ui';
+
 type Scope = 'todo' | 'campana' | 'organico';
 type View = 'panel' | 'kanban';
 
@@ -20,24 +22,6 @@ const SCOPES: { id: Scope; label: string }[] = [
   { id: 'organico', label: 'Orgánico' },
 ];
 
-function Segment<T extends string>({ items, active, onSelect }: { items: { id: T; label: string }[]; active: T; onSelect: (v: T) => void }) {
-  return (
-    <div className="inline-flex rounded-lg bg-slate-100 p-0.5">
-      {items.map((it) => (
-        <button
-          key={it.id}
-          type="button"
-          aria-pressed={active === it.id}
-          onClick={() => onSelect(it.id)}
-          className={`rounded-md px-3 py-1 text-sm ${active === it.id ? 'bg-white text-slate-800 shadow-sm' : 'text-slate-500'}`}
-        >
-          {it.label}
-        </button>
-      ))}
-    </div>
-  );
-}
-
 export function ContenidosToolbar({ spaceName, accent, query, onQuery, mine, onMine, scope, onScope, view, onView }: ContenidosToolbarProps) {
   return (
     <div className="flex flex-wrap items-center gap-3">
@@ -59,9 +43,16 @@ export function ContenidosToolbar({ spaceName, accent, query, onQuery, mine, onM
       >
         Solo lo mío
       </button>
-      <Segment items={SCOPES} active={scope} onSelect={onScope} />
+      <SegmentedControl options={SCOPES.map((s) => ({ label: s.label, value: s.id }))} value={scope} onChange={onScope} />
       <div className="ml-auto flex items-center gap-3">
-        <Segment items={[{ id: 'panel', label: 'Panel' }, { id: 'kanban', label: 'Kanban' }]} active={view} onSelect={onView} />
+        <SegmentedControl
+          options={[
+            { label: 'Panel', value: 'panel' },
+            { label: 'Kanban', value: 'kanban' },
+          ]}
+          value={view}
+          onChange={onView}
+        />
         <button type="button" className="rounded-lg px-4 py-2 text-sm font-medium text-white" style={{ backgroundColor: '#44444C' }}>
           + Contenido
         </button>
