@@ -2,7 +2,8 @@ import { useMemo, useState } from 'react';
 import { SegmentedControl } from '@/components/ui';
 import { PersonCard } from '../components/PersonCard';
 import { DirectorioToolbar } from '../components/DirectorioToolbar';
-import { allPeople, searchPeople, departmentsList } from '../data/people';
+import { OrgRow } from '../components/OrgRow';
+import { allPeople, searchPeople, departmentsList, orgRoots } from '../data/people';
 
 export function EquipoPage() {
   const [view, setView] = useState<'directorio' | 'organigrama'>('directorio');
@@ -15,6 +16,7 @@ export function EquipoPage() {
     () => searchPeople(people, query, department),
     [people, query, department]
   );
+  const roots = useMemo(() => orgRoots(), []);
 
   return (
     <div className="space-y-6">
@@ -47,7 +49,13 @@ export function EquipoPage() {
           </div>
         </div>
       )}
-      {view === 'organigrama' && <div data-testid="organigrama">Organigrama</div>}
+      {view === 'organigrama' && (
+        <div className="space-y-2" data-testid="organigrama">
+          {roots.map((person) => (
+            <OrgRow key={person.id} person={person} />
+          ))}
+        </div>
+      )}
     </div>
   );
 }
