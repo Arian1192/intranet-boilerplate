@@ -10,3 +10,14 @@ export interface Person {
   photoUrl?: string;
   avatarColor: string;
 }
+
+export type AbsenceType = 'vacaciones' | 'teletrabajo' | 'baja' | 'ausencia';
+
+export interface Absence {
+  id: string;
+  personId: string;
+  type: AbsenceType;
+  startDate: string;
+  endDate: string;
+  approved: boolean;
+}
