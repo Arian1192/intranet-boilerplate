@@ -23,6 +23,22 @@ describe('SegmentedControl', () => {
     expect(onChange).toHaveBeenCalledWith('kanban');
   });
 
+  it('dark tone uses #44444C background for active option', () => {
+    render(
+      <SegmentedControl
+        tone="dark"
+        options={[
+          { label: 'Directorio', value: 'directorio' },
+          { label: 'Organigrama', value: 'organigrama' },
+        ]}
+        value="directorio"
+        onChange={() => {}}
+      />
+    );
+    expect(screen.getByRole('button', { name: 'Directorio' })).toHaveClass('bg-[#44444C]');
+    expect(screen.getByRole('button', { name: 'Directorio' })).toHaveClass('text-white');
+  });
+
   it('spreads segments across the full width when fullWidth is set', () => {
     render(
       <SegmentedControl
