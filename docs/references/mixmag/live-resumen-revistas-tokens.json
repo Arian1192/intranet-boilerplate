@@ -1,0 +1,137 @@
+{
+  "resumen": {
+    "statLabel": null,
+    "pubHeading": {
+      "fontSize": "14px",
+      "fontWeight": "600",
+      "color": "rgb(30, 41, 59)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "borderColor": "rgb(229, 231, 235)",
+      "borderWidth": "0px",
+      "padding": "0px",
+      "gap": "normal",
+      "boxShadow": "none",
+      "textTransform": "none",
+      "letterSpacing": "normal",
+      "width": "1248px",
+      "height": "20px",
+      "_rect": {
+        "w": 1248,
+        "h": 20
+      },
+      "_cls": "mb-2 text-sm font-semibold text-slate-800"
+    },
+    "spaceName": {
+      "fontSize": "16px",
+      "fontWeight": "600",
+      "color": "rgb(30, 41, 59)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "borderColor": "rgb(229, 231, 235)",
+      "borderWidth": "0px",
+      "padding": "0px",
+      "gap": "normal",
+      "boxShadow": "none",
+      "textTransform": "none",
+      "letterSpacing": "normal",
+      "width": "126.875px",
+      "height": "24px",
+      "_rect": {
+        "w": 127,
+        "h": 24
+      },
+      "_cls": "min-w-0 truncate font-semibold text-slate-800"
+    },
+    "enCursoNum": {
+      "fontSize": "20px",
+      "fontWeight": "600",
+      "color": "rgb(30, 41, 59)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "borderColor": "rgb(229, 231, 235)",
+      "borderWidth": "0px",
+      "padding": "0px",
+      "gap": "normal",
+      "boxShadow": "none",
+      "textTransform": "none",
+      "letterSpacing": "normal",
+      "width": "auto",
+      "height": "auto",
+      "_rect": {
+        "w": 14,
+        "h": 24
+      },
+      "_cls": "text-xl font-semibold tabular-nums text-slate-800"
+    }
+  },
+  "resumenExtra": {},
+  "revistas": {
+    "spaceNameR": {
+      "fontSize": "14px",
+      "fontWeight": "500",
+      "color": "rgb(51, 65, 85)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "borderColor": "rgb(229, 231, 235)",
+      "borderWidth": "0px",
+      "padding": "0px 4px",
+      "gap": "8px",
+      "boxShadow": "none",
+      "textTransform": "none",
+      "letterSpacing": "normal",
+      "width": "124.938px",
+      "height": "36px",
+      "_rect": {
+        "w": 125,
+        "h": 36
+      },
+      "_cls": "flex h-9 items-center gap-2 px-1 text-sm font-medium text-slate-700"
+    },
+    "edicionBtn": {
+      "fontSize": "14px",
+      "fontWeight": "500",
+      "color": "rgb(255, 255, 255)",
+      "backgroundColor": "rgb(68, 68, 76)",
+      "borderRadius": "8px",
+      "borderColor": "rgb(229, 231, 235)",
+      "borderWidth": "0px",
+      "padding": "8px 16px",
+      "gap": "8px",
+      "boxShadow": "none",
+      "textTransform": "none",
+      "letterSpacing": "normal",
+      "width": "98.8281px",
+      "height": "36px",
+      "_rect": {
+        "w": 99,
+        "h": 36
+      },
+      "_cls": "btn-primary text-sm"
+    }
+  },
+  "revExtra": {
+    "editionCard": {
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "color": "rgb(30, 41, 59)",
+      "backgroundColor": "rgb(255, 255, 255)",
+      "borderRadius": "12px",
+      "borderColor": "rgb(226, 232, 240)",
+      "borderWidth": "1px",
+      "padding": "0px",
+      "gap": "normal",
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px",
+      "textTransform": "none",
+      "letterSpacing": "normal",
+      "width": "405.328px",
+      "height": "650.266px",
+      "_rect": {
+        "w": 405,
+        "h": 650
+      },
+      "_cls": "card overflow-hidden text-left transition-shadow hover:shadow-md"
+    },
+    "editionHTML": "<button class=\"card overflow-hidden text-left transition-shadow hover:shadow-md\"><div class=\"grid aspect-[3/4] place-items-center bg-slate-100\"><img src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTd-cVsAoKDVRk7VtnwWZyPLQO5xQcO_qngrzmls0hpg&amp;s=10\" alt=\"Patrick Topping\" class=\"h-full w-full object-cover\"></div><div class=\"p-3\"><div class=\"flex items-baseline justify-between gap-2\"><h3 class=\"min-w-0 truncate font-semibold text-slate-800\"><span class=\"text-slate-400\">#29 </span>Patrick Topping</h3><span class=\"shrink-0 text-xs text-slate-400\">Agosto 2026</span></div><div class=\"mt"
+  }
+}

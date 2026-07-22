@@ -1,11 +1,6 @@
-import { ModuleShell } from './ModuleShell';
+import { RedaccionShell } from '@/features/redaccion/RedaccionShell';
+import { MIXMAG } from '@/features/redaccion/data/seed';
 
 export function MixmagShell() {
-  return (
-    <ModuleShell
-      title="Mixmag"
-      description="Redacción Mixmag: contenidos, campañas y revistas."
-      tabs={['Resumen', 'Contenidos', 'Campañas', 'Revistas']}
-    />
-  );
+  return <RedaccionShell magazine={MIXMAG} />;
 }

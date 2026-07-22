@@ -1,0 +1,22 @@
+{
+  "mixmag_embudo_text": "/ Mixmag Resumen Contenidos Campañas Revistas 9+ test Admin T En el aire 0,00 €·Ganado 1500,00 € Embudo Kanban + Campaña TENTATIVA 0 PROPUESTA ENVIADA 0 NEGOCIACIÓN 0 ACEPTADA 1 1500,00 € EN CURSO 0 COMPLETADA 0 ACEPTADA Campaña Test 1 Cold Cloud SL hasta 29 jul 1500,00 € ? Ayuda",
+  "mixmag_addCampana": {
+    "bg": "rgb(68, 68, 76)",
+    "color": "rgb(255, 255, 255)",
+    "radius": "8px",
+    "fontSize": "14px",
+    "fontWeight": "500",
+    "padding": "8px 16px"
+  },
+  "mixmag_kanban_text": "/ Mixmag Resumen Contenidos Campañas Revistas 9+ test Admin T En el aire 0,00 €·Ganado 1500,00 € Embudo Kanban + Campaña TENTATIVA PROPUESTA ENVIADA NEGOCIACIÓN ACEPTADA 1 Campaña Test 1 Cold Cloud SL 1500,00 € hasta 29 jul EN CURSO COMPLETADA ? Ayuda",
+  "tagmag_embudo_text": "/ TAGMAG Resumen Contenidos Campañas Revistas 9+ test Admin T En el aire 0,00 €·Ganado 1500,00 € Embudo Kanban + Campaña TENTATIVA 0 PROPUESTA ENVIADA 0 NEGOCIACIÓN 0 ACEPTADA 1 1500,00 € EN CURSO 0 COMPLETADA 0 ACEPTADA Campaña Test 1 Cold Cloud SL hasta 29 jul 1500,00 € ? Ayuda",
+  "tagmag_addCampana": {
+    "bg": "rgb(68, 68, 76)",
+    "color": "rgb(255, 255, 255)",
+    "radius": "8px",
+    "fontSize": "14px",
+    "fontWeight": "500",
+    "padding": "8px 16px"
+  },
+  "tagmag_kanban_text": "/ TAGMAG Resumen Contenidos Campañas Revistas 9+ test Admin T En el aire 0,00 €·Ganado 1500,00 € Embudo Kanban + Campaña TENTATIVA PROPUESTA ENVIADA NEGOCIACIÓN ACEPTADA 1 Campaña Test 1 Cold Cloud SL 1500,00 € hasta 29 jul EN CURSO COMPLETADA ? Ayuda"
+}
