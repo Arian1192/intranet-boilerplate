@@ -10,7 +10,7 @@ export function CostDashboard() {
         Coste mensual estimado total: <span className="font-bold">{formatCurrency(totalMonthlyCost())}</span>
       </h2>
       <div className="grid gap-4 md:grid-cols-2">
-        <CostByCompanyCard companies={companies} total={totalMonthlyCost()} />
+        <CostByCompanyCard companies={companies} />
         <CostByPersonCard ranking={costRankingByPerson()} />
       </div>
     </div>

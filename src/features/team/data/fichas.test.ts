@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { fichas, companies, totalMonthlyCost, costRankingByPerson, fichaFor, filterFichas } from './fichas';
+import { fichas, totalMonthlyCost, costRankingByPerson, fichaFor, filterFichas } from './fichas';
 
 describe('fichas data', () => {
   it('has 26 fichas, 4 contratado and 22 freelance', () => {

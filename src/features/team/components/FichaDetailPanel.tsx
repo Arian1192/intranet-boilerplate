@@ -17,13 +17,6 @@ function isoToDisplay(iso?: string): string {
   return `${d}/${m}/${y}`;
 }
 
-function displayToIso(display?: string): string | undefined {
-  if (!display) return undefined;
-  const [d, m, y] = display.split('/');
-  if (!d || !m || !y) return undefined;
-  return `${y}-${m}-${d}`;
-}
-
 export interface FichaDetailPanelProps {
   person: Person;
   ficha: Ficha;

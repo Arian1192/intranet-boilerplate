@@ -19,7 +19,7 @@ export function CalendarLegend({ approvedOnly, onApprovedOnly }: CalendarLegendP
           type="checkbox"
           checked={approvedOnly}
           onChange={(e) => onApprovedOnly(e.target.checked)}
-          className="h-4 w-4 rounded border-slate-300 text-brand-600 focus:ring-brand-500"
+          className="h-4 w-4 rounded border-slate-300 text-slate-600 focus:ring-slate-500"
         />
         Solo aprobadas
       </label>

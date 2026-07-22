@@ -4,10 +4,9 @@ import type { Company } from '../data/types';
 
 export interface CostByCompanyCardProps {
   companies: Company[];
-  total: number;
 }
 
-export function CostByCompanyCard({ companies, total }: CostByCompanyCardProps) {
+export function CostByCompanyCard({ companies }: CostByCompanyCardProps) {
   const max = Math.max(...companies.map((c) => c.monthlyCost));
   return (
     <div>

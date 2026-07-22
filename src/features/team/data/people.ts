@@ -60,7 +60,7 @@ export const searchPeople = (list: Person[], query: string, department?: string)
 };
 
 export const departmentsList = (): string[] =>
-  [...new Set(people.map((p) => p.department).filter(Boolean))].sort((a, b) => a!.localeCompare(b!));
+  [...new Set(people.map((p) => p.department).filter((d): d is string => Boolean(d)))].sort((a, b) => a.localeCompare(b));
 
 export const directReports = (personId: string): Person[] =>
   people.filter((p) => p.managerId === personId);

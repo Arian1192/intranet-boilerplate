@@ -35,7 +35,6 @@ export const absencesForMonth = (
 ): Absence[] => {
   const list = absences.filter((a) => {
     const start = new Date(a.startDate);
-    const end = new Date(a.endDate);
     const inMonth = start.getFullYear() === year && start.getMonth() + 1 === month;
     const approved = opts?.approvedOnly ? a.approved : true;
     return inMonth && approved;

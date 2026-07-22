@@ -16,7 +16,7 @@ export function DirectorioToolbar({ query, onQuery, departments, department, onD
         value={query}
         onChange={(e) => onQuery(e.target.value)}
         placeholder="Buscar por nombre, puesto o email..."
-        className="h-10 flex-1 rounded-lg border border-slate-200 bg-white px-3 text-sm text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500"
+        className="h-10 flex-1 rounded-lg border border-slate-200 bg-white px-3 text-sm text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-500"
       />
       <Select
         aria-label="Departamento"
