@@ -7,11 +7,9 @@ export interface IncidenciaListProps {
 
 export function IncidenciaList({ items }: IncidenciaListProps) {
   if (items.length === 0) {
-    return (
-      <div className="overflow-hidden rounded-xl border border-slate-200 bg-white py-10 text-center text-sm text-slate-400">
-        Nada en este estado.
-      </div>
-    );
+    // El live no envuelve el estado vacío en la tarjeta: el texto flota sobre el fondo
+    // de la página, sin borde ni fondo blanco (ver live-incidencias-en-curso.png).
+    return <div className="py-16 text-center text-sm text-slate-400">Nada en este estado.</div>;
   }
 
   return (

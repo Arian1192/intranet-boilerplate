@@ -21,6 +21,12 @@ export function IncidenciaAvatar({ reporterName, reporterInitials, reporterColor
     );
   }
 
+  // Delta documentado vs live: en el live estas filas no llevan silueta gris, llevan la
+  // FOTO DE PERFIL real del reportante (verificado muestreando píxeles de
+  // docs/references/incidencias/live-incidencias.png: tonos de piel, no grises). No se
+  // replican fotos de personas reales, así que se usa un placeholder neutro del mismo
+  // tamaño y posición (18px). Las iniciales+color sí son fieles (FV #EA580C, AG #16A34A,
+  // JC #2563EB, confirmados por muestreo del mismo PNG).
   return (
     <span
       aria-label={label}
