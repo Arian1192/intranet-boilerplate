@@ -29,8 +29,6 @@ export const seedProyecciones: Proyeccion[] = [
       comida: { nosLlevamosPct: 10, sobreBase: 'neto', deduccionFijaEur: 0, deduccionPct: 25 },
       merchandising: { nosLlevamosPct: 100, sobreBase: 'neto', deduccionFijaEur: 0, deduccionPct: 0 },
     },
-    // Ver nota de fidelidad: ticketing NO es Σ(entradas×precio) de `ticketing` de abajo.
-    acuerdoBrutos: { ticketing: 4600, mesasVip: 12790, barras: 15000, comida: 1125, merchandising: 0 },
     ajustesEscenarios: {
       multiplicadorPesimistaPct: 50,
       multiplicadorBasePct: 75,

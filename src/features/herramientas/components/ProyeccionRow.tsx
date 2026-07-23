@@ -3,6 +3,7 @@ import { Badge, Button } from '@/components/ui';
 import { cn } from '@/lib/utils';
 import { formatCurrency } from '@/lib/format';
 import { calcularResultadoAcuerdo } from '../data/calculos-acuerdo';
+import { calcularBrutosEscenario } from '../data/calculos-escenarios';
 import type { Proyeccion, ProyeccionEstado } from '../data/types';
 
 const ESTADO_LABEL: Record<ProyeccionEstado, string> = {
@@ -28,7 +29,7 @@ interface Props {
 export function ProyeccionRow({ proyeccion, onDuplicate, onDelete }: Props) {
   const resultado = calcularResultadoAcuerdo(
     proyeccion.acuerdo,
-    proyeccion.acuerdoBrutos,
+    calcularBrutosEscenario(proyeccion, 'base'),
     proyeccion.eventoAforo,
     proyeccion.gastos
   );

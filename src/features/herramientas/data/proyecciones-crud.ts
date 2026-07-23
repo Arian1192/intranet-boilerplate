@@ -26,7 +26,6 @@ export function createBlankProyeccion(): Proyeccion {
       comida: { nosLlevamosPct: 0, sobreBase: 'neto', deduccionFijaEur: 0, deduccionPct: 0 },
       merchandising: { nosLlevamosPct: 0, sobreBase: 'neto', deduccionFijaEur: 0, deduccionPct: 0 },
     },
-    acuerdoBrutos: { ticketing: 0, mesasVip: 0, barras: 0, comida: 0, merchandising: 0 },
     ajustesEscenarios: {
       multiplicadorPesimistaPct: 75,
       multiplicadorBasePct: 100,

@@ -38,8 +38,8 @@ describe('seedProyecciones', () => {
     expect(p.acuerdo.merchandising).toEqual({ nosLlevamosPct: 100, sobreBase: 'neto', deduccionFijaEur: 0, deduccionPct: 0 });
   });
 
-  it('acuerdoBrutos son las cifras verificadas del live (ver nota de fidelidad)', () => {
-    expect(p.acuerdoBrutos).toEqual({ ticketing: 4600, mesasVip: 12790, barras: 15000, comida: 1125, merchandising: 0 });
+  it('ya no expone acuerdoBrutos (Fase B lo deriva de ticketing/mesasVip/barrasComidaMerch)', () => {
+    expect((p as unknown as Record<string, unknown>).acuerdoBrutos).toBeUndefined();
   });
 
   it('los 7 gastos suman -5.470,00 € y son todos "nosotros"', () => {

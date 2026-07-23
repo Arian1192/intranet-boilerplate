@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { netoDeIva, ingresoTramo, calcularResultadoAcuerdo } from './calculos-acuerdo';
+import { calcularBrutosEscenario } from './calculos-escenarios';
 import { seedProyecciones } from './seed';
 
 describe('netoDeIva', () => {
@@ -33,7 +34,7 @@ describe('ingresoTramo', () => {
 
 describe('calcularResultadoAcuerdo — reproduce exactamente el "Resultado por acuerdo" del live', () => {
   const p = seedProyecciones[0];
-  const resultado = calcularResultadoAcuerdo(p.acuerdo, p.acuerdoBrutos, p.eventoAforo, p.gastos);
+  const resultado = calcularResultadoAcuerdo(p.acuerdo, calcularBrutosEscenario(p, 'base'), p.eventoAforo, p.gastos);
 
   it('NUESTROS INGRESOS = 6.330,14€', () => {
     expect(resultado.nuestrosIngresos).toBeCloseTo(6330.14, 1);

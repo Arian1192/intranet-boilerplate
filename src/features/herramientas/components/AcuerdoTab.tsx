@@ -1,4 +1,5 @@
 import { calcularResultadoAcuerdo } from '../data/calculos-acuerdo';
+import { calcularBrutosEscenario } from '../data/calculos-escenarios';
 import { AcuerdoTramoCard } from './AcuerdoTramoCard';
 import { QuienPagaGastos } from './QuienPagaGastos';
 import { ResultadoAcuerdoCard } from './ResultadoAcuerdoCard';
@@ -12,7 +13,10 @@ interface Props {
 type TramoKey = 'ticketing' | 'mesasVip' | 'barras' | 'comida' | 'merchandising';
 
 export function AcuerdoTab({ proyeccion, onUpdate }: Props) {
-  const { acuerdo, acuerdoBrutos, eventoAforo, gastos } = proyeccion;
+  const { acuerdo, eventoAforo, gastos } = proyeccion;
+  // Acuerdo no tiene selector de escenario propio: usa siempre el multiplicador Base
+  // (mismo criterio que el live — ver spec de Fase B §3.5).
+  const acuerdoBrutos = calcularBrutosEscenario(proyeccion, 'base');
   const resultado = calcularResultadoAcuerdo(acuerdo, acuerdoBrutos, eventoAforo, gastos);
 
   const setTramo = (tramo: TramoKey, config: TramoAcuerdoConfig) => {

@@ -40,11 +40,13 @@ export interface AcuerdoConfig {
 }
 
 /**
- * Brutos por tramo usados por Acuerdo para "NUESTRO INGRESO". Fase A los trata como
- * constantes verificadas del live (ver nota de fidelidad del plan de Fase A): el bruto
- * de ticketing NO coincide con Σ(entradas×precio) de `ticketing[]` porque el live parece
- * escalar las entradas por el multiplicador de escenario antes de sumar. Fase B, al
- * construir el motor real de Previsión, sustituirá esto por el cálculo en vivo.
+ * Brutos por tramo usados por Acuerdo/Previsión para "NUESTRO INGRESO". Fase A trató esto
+ * como constantes estáticas verificadas del live porque el bruto de ticketing no coincidía
+ * con Σ(entradas×precio) de `ticketing[]`. Fase B resolvió la discrepancia (no era un
+ * problema de redondeo: el live vende los releases en cascada — "waterfall" — hasta cubrir
+ * las entradas que el escenario activo proyecta vender; ver `calcularBrutosEscenario` en
+ * `calculos-escenarios.ts` y la spec de Fase B §3). Este tipo es ahora solo el shape de
+ * retorno de ese cálculo derivado; ya no vive como campo estático en `Proyeccion`.
  */
 export interface AcuerdoBrutos {
   ticketing: number;
@@ -70,6 +72,10 @@ export interface TicketingRelease {
   entradas: number;
   precio: number;
   entradasReal?: number;
+  /** Desglose por ticketera (Fourvenues, RA, DICE…) — solo visible/editable si
+   * `Proyeccion.desglosarPorTicketera` está activo. No afecta a ningún total
+   * (confirmado contra el live, recon-notas.md gap #6). */
+  canales?: string[];
 }
 
 export interface MesaVip {
@@ -128,7 +134,6 @@ export interface Proyeccion {
   comentarios: Comentario[];
   eventoAforo: EventoAforo;
   acuerdo: AcuerdoConfig;
-  acuerdoBrutos: AcuerdoBrutos;
   ajustesEscenarios: AjustesEscenarios;
   ticketing: TicketingRelease[];
   desglosarPorTicketera: boolean;

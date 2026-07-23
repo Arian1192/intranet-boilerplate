@@ -3,12 +3,13 @@ import { describe, it, expect } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import { ResultadoAcuerdoCard } from './ResultadoAcuerdoCard';
 import { calcularResultadoAcuerdo } from '../data/calculos-acuerdo';
+import { calcularBrutosEscenario } from '../data/calculos-escenarios';
 import { seedProyecciones } from '../data/seed';
 
 describe('ResultadoAcuerdoCard', () => {
   it('renders the exact live figures for the seed', () => {
     const p = seedProyecciones[0];
-    const resultado = calcularResultadoAcuerdo(p.acuerdo, p.acuerdoBrutos, p.eventoAforo, p.gastos);
+    const resultado = calcularResultadoAcuerdo(p.acuerdo, calcularBrutosEscenario(p, 'base'), p.eventoAforo, p.gastos);
     render(<ResultadoAcuerdoCard resultado={resultado} />);
     expect(screen.getByText('Resultado por acuerdo')).toBeInTheDocument();
     // Nota: Intl.NumberFormat('es-ES') en este runtime usa minimumGroupingDigits=2,
