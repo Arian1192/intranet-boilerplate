@@ -13,6 +13,17 @@ import { EquipoPage } from '@/features/team/pages/EquipoPage';
 import { CalendarioPage } from '@/features/team/pages/CalendarioPage';
 import { FichasPage } from '@/features/team/pages/FichasPage';
 import { ConfigShell } from '@/features/modules/ConfigShell';
+import { PlantillasCorreoPage } from '@/features/configuracion/pages/PlantillasCorreoPage';
+import { UsoPage } from '@/features/configuracion/pages/UsoPage';
+import { IncidenciasPage as ConfiguracionIncidenciasPage } from '@/features/configuracion/pages/IncidenciasPage';
+import { DocumentosTipografiaPage } from '@/features/configuracion/pages/DocumentosTipografiaPage';
+import { NotificacionesPage } from '@/features/configuracion/pages/NotificacionesPage';
+import { ComisionesBookersPage } from '@/features/configuracion/pages/ComisionesBookersPage';
+import { ControlComisionesPage } from '@/features/configuracion/pages/ControlComisionesPage';
+import { ContratosPage } from '@/features/configuracion/pages/ContratosPage';
+import { AlertasEventosPage } from '@/features/configuracion/pages/AlertasEventosPage';
+import { RrhhPage } from '@/features/configuracion/pages/RrhhPage';
+import { FestivosPage } from '@/features/configuracion/pages/FestivosPage';
 import { MiTrabajoShell } from '@/features/modules/MiTrabajoShell';
 import { IncidenciasShell } from '@/features/modules/IncidenciasShell';
 import { MixmagShell } from '@/features/modules/MixmagShell';
@@ -100,7 +111,19 @@ export function AppRouter() {
         <Route path="calendario" element={<CalendarioPage />} />
         <Route path="fichas" element={<FichasPage />} />
       </Route>
-      <Route path="/configuracion" element={<ConfigShell />} />
+      <Route path="/configuracion" element={<ConfigShell />}>
+        <Route index element={<PlantillasCorreoPage />} />
+        <Route path="uso" element={<UsoPage />} />
+        <Route path="incidencias" element={<ConfiguracionIncidenciasPage />} />
+        <Route path="documentos" element={<DocumentosTipografiaPage />} />
+        <Route path="notificaciones" element={<NotificacionesPage />} />
+        <Route path="comisiones" element={<ComisionesBookersPage />} />
+        <Route path="comisiones-pagos" element={<ControlComisionesPage />} />
+        <Route path="contratos" element={<ContratosPage />} />
+        <Route path="alertas" element={<AlertasEventosPage />} />
+        <Route path="rrhh" element={<RrhhPage />} />
+        <Route path="festivos" element={<FestivosPage />} />
+      </Route>
       <Route path="/mi-trabajo" element={<MiTrabajoShell />} />
       <Route path="/incidencias" element={<IncidenciasShell />} />
       <Route path="/mixmag" element={<MixmagShell />}>
