@@ -1,0 +1,145 @@
+/
+Team
+Equipo
+Calendario
+Fichas
+9+
+test
+Admin
+T
+Equipo
+
+Quién es quién, cómo contactarle y de quién depende.
+
+Directorio
+Organigrama
+AG
+Alba Gelabert
+1 persona
+Account Manager · Marketing
+✉
+Ficha
+PC
+Pablo Carrera
+Social Media Manager · Marketing
+Ficha
+AE
+Alberto Egea
+Ads Specialist · Paid Ads
+Ficha
+AM
+Aldo Messina
+Booker · Booking
+✉
+Ficha
+AG
+Alejandro Gonzalez
+Logística · Booker · Logística
+✉
+Ficha
+BC
+Borja Comino
+Comercial · Redacción · Comercial
+Ficha
+Carlos Pego Muñoz
+—
+✉
+Ficha
+CV
+Carlos Ramudo Valencia
+— · Comercial
+✉
+Ficha
+FC
+Federico Cortina
+Dirección · Redacción · Redacción
+Ficha
+FV
+Fran Hinojosa Veredas
+—
+✉
+Ficha
+IC
+Israel B Gras Cuenca
+—
+✉
+Ficha
+Jack Howell
+—
+✉
+Ficha
+JM
+Jassi Gonzalez Montes
+—
+✉
+Ficha
+JC
+Joe Coe
+Advancing · Advancing
+✉
+Ficha
+JM
+Juan Manuel Molina
+Redacción · Redacción
+Ficha
+LG
+Lucía Gómez Garcia
+1 persona
+Account Manager · Comunicación & PR
+Ficha
+IB
+Inés Batlle
+Comunicación · PR · Comunicación & PR
+Ficha
+MR
+Maria Fernanda Rodriguez
+Diseño · Diseño
+Ficha
+MA
+Marian Aristimuno
+Redacción · Redacción
+Ficha
+OB
+Oscar Buch
+Booker · Logística · Booking
+✉
+Ficha
+PC
+Patricia Pareja Casalí
+Project Manager · Management
+✉
+Ficha
+S
+Sadkiel
+Project Manager · Management
+✉
+Ficha
+TC
+Tony Carrerira
+—
+✉
+Ficha
+UT
+Usuario Test
+—
+✉
+Ficha
+VM
+Victor Moreno
+Video Editor · Vídeo
+Ficha
+YB
+Yenifer Bernardo
+Booker · Booking
+✉
+Ficha
+?
+Team
+
+Los accesos se dan desde la ficha
+
+Crear la persona y darle acceso son dos cosas: una persona puede estar en el directorio sin cuenta. Los permisos se editan en su ficha, no en una lista aparte.
+
+Enviar
+Reportar con captura
+Mis avisos

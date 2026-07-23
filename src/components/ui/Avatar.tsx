@@ -6,9 +6,10 @@ export interface AvatarProps {
   fallback: string;
   size?: 'sm' | 'md' | 'lg';
   className?: string;
+  style?: React.CSSProperties;
 }
 
-export function Avatar({ src, alt, fallback, size = 'md', className }: AvatarProps) {
+export function Avatar({ src, alt, fallback, size = 'md', className, style }: AvatarProps) {
   const initials = fallback.slice(0, 2).toUpperCase();
   const sizeClasses = {
     sm: 'h-8 w-8 text-xs',
@@ -23,6 +24,7 @@ export function Avatar({ src, alt, fallback, size = 'md', className }: AvatarPro
         sizeClasses[size],
         className
       )}
+      style={style}
     >
       {src ? (
         <img src={src} alt={alt || fallback} className="h-full w-full object-cover" />
