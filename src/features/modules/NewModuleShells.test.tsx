@@ -10,14 +10,10 @@ describe('Nuevos shells stub', () => {
   it.each([
     [MixmagShell, 'Mixmag'],
     [TagmagShell, 'TAGMAG'],
+    [HerramientasShell, 'Herramientas'],
   ])('%s renderiza el nombre del módulo y la pestaña Resumen', (Shell, name) => {
     render(<MemoryRouter><Shell /></MemoryRouter>);
     expect(screen.getByRole('link', { name })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'Resumen' })).toBeInTheDocument();
-  });
-
-  it('HerramientasShell renderiza su título', () => {
-    render(<MemoryRouter><HerramientasShell /></MemoryRouter>);
-    expect(screen.getByRole('heading', { name: 'Herramientas' })).toBeInTheDocument();
   });
 });
