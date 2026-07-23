@@ -1,0 +1,204 @@
+{
+  "text": "/ Herramientas Herramientas Proyecciones 9+ test Admin T ← Volver Nuevo evento i Cambios sin guardar Comentarios PDF Ventas PDF Explotación Excel Guardar ESTADO Borrador En junta Aprobada Rechazada REUNIÓN RESPONSABLES Convertir en evento → Acuerdo Previsión Real ESCENARIO Pesimista · 75% Base · 100% Optimista · 115% FACTURACIÓN TOTAL 0,00 € INVERSIÓN (GASTOS) 0,00 € 0% · riesgo BENEFICIO NETO 0,00 € MARGEN 0.0% PUNTO DE EQUILIBRIO 0% 0 entradas ASISTENCIA 0 / 0 0% ocupación Resultado FACTURACIÓN BRUTA 0,00 € FACTURACIÓN NETA 0,00 € GASTOS TOTALES 0,00 € BENEFICIO NETO 0,00 € MARGEN 0.0% RATIO DE GASTO 0.0% INGRESO/PAX 0,00 € GASTO/PAX 0,00 € Bº/PAX 0,00 € Escenarios ESCENARIO BENEFICIO MARGEN Pesimista 0,00 € 0.0% Base 0,00 € 0.0% Optimista 0,00 € 0.0% Gasto por categoría Ajustes de escenarios y breakeven Base 100% · BE 0% Evento y aforo NOMBRE FECHA dd/mm/aaaa VENUE AFORO MÁXIMO DURACIÓN (HORAS) INVITACIONES IVA TICKETING % IVA BARRAS/COMIDA/VIP % Asistencia proyectada 0 = entradas + invitaciones · PAX de pago 0forzar a mano Ticketing Desglosar por ticketera (Fourvenues, RA, DICE…) + Añadir RELEASE ENTRADAS PRECIO € FACTURACIÓN 0,00 € ↑ ↓ × Total ticketing· 0 entradas 0,00 € Mesas VIP + Añadir ZONA MESAS PROB. % PRECIO € FACTURACIÓN Total VIP 0,00 € Barras, comida y merch Barras 0,00 € CONSUMICIONES / HORA PRECIO MEDIO € 0.0 cons./pax en 6h Comida 0,00 € % QUE CONSUME TICKET MEDIO € Merch 0,00 € % CONVERSIÓN PRECIO MEDIO € Barras, comida y merch 0,00 € Gastos + Añadir CATEG",
+  "inputs": [
+    {
+      "tag": "INPUT",
+      "type": "date",
+      "name": "",
+      "placeholder": "",
+      "value": ""
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "name": "",
+      "placeholder": "",
+      "value": "Nuevo evento"
+    },
+    {
+      "tag": "INPUT",
+      "type": "date",
+      "name": "",
+      "placeholder": "",
+      "value": ""
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "name": "",
+      "placeholder": "Buscar venue…",
+      "value": ""
+    },
+    {
+      "tag": "INPUT",
+      "type": "number",
+      "name": "",
+      "placeholder": "",
+      "value": "0"
+    },
+    {
+      "tag": "INPUT",
+      "type": "number",
+      "name": "",
+      "placeholder": "",
+      "value": "6"
+    },
+    {
+      "tag": "INPUT",
+      "type": "number",
+      "name": "",
+      "placeholder": "",
+      "value": "0"
+    },
+    {
+      "tag": "INPUT",
+      "type": "number",
+      "name": "",
+      "placeholder": "",
+      "value": "10"
+    },
+    {
+      "tag": "INPUT",
+      "type": "number",
+      "name": "",
+      "placeholder": "",
+      "value": "10"
+    },
+    {
+      "tag": "INPUT",
+      "type": "checkbox",
+      "name": "",
+      "placeholder": "",
+      "value": "on"
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "name": "",
+      "placeholder": "",
+      "value": ""
+    },
+    {
+      "tag": "INPUT",
+      "type": "number",
+      "name": "",
+      "placeholder": "",
+      "value": "0"
+    },
+    {
+      "tag": "INPUT",
+      "type": "number",
+      "name": "",
+      "placeholder": "",
+      "value": "0"
+    },
+    {
+      "tag": "INPUT",
+      "type": "number",
+      "name": "",
+      "placeholder": "",
+      "value": "0"
+    },
+    {
+      "tag": "INPUT",
+      "type": "number",
+      "name": "",
+      "placeholder": "",
+      "value": "0"
+    },
+    {
+      "tag": "INPUT",
+      "type": "number",
+      "name": "",
+      "placeholder": "",
+      "value": "0"
+    },
+    {
+      "tag": "INPUT",
+      "type": "number",
+      "name": "",
+      "placeholder": "",
+      "value": "0"
+    },
+    {
+      "tag": "INPUT",
+      "type": "number",
+      "name": "",
+      "placeholder": "",
+      "value": "0"
+    },
+    {
+      "tag": "INPUT",
+      "type": "number",
+      "name": "",
+      "placeholder": "",
+      "value": "0"
+    },
+    {
+      "tag": "TEXTAREA",
+      "type": "textarea",
+      "name": "",
+      "placeholder": "Pregunta o cuenta qué falla…",
+      "value": ""
+    }
+  ],
+  "labels": [
+    "Reunión",
+    "Nombre",
+    "Fechadd/mm/aaaa",
+    "Venue",
+    "Aforo máximo",
+    "Duración (horas)",
+    "Invitaciones",
+    "IVA ticketing %",
+    "IVA barras/comida/VIP %",
+    "Desglosar por ticketera (Fourvenues, RA, DICE…)",
+    "Consumiciones / hora",
+    "Precio medio €",
+    "% que consume",
+    "Ticket medio €",
+    "% conversión",
+    "Precio medio €"
+  ],
+  "buttons": [
+    "Herramientas",
+    "9+",
+    "← Volver",
+    "Nuevo evento",
+    "i",
+    "Comentarios",
+    "PDF Ventas",
+    "PDF Explotación",
+    "Excel",
+    "Guardar",
+    "Borrador",
+    "En junta",
+    "Aprobada",
+    "Rechazada",
+    "Convertir en evento →",
+    "Acuerdo",
+    "Previsión",
+    "Real",
+    "Pesimista · 75%",
+    "Base · 100%",
+    "Optimista · 115%",
+    "Resultado",
+    "Escenarios",
+    "Gasto por categoría",
+    "Ajustes de escenarios y breakevenBase 100% · BE 0%",
+    "Evento y aforo",
+    "forzar a mano",
+    "Ticketing",
+    "+ Añadir",
+    "↑",
+    "↓",
+    "×",
+    "Mesas VIP",
+    "+ Añadir",
+    "Barras, comida y merch",
+    "Gastos",
+    "+ Añadir",
+    "Enviar",
+    "Reportar con captura"
+  ]
+}
