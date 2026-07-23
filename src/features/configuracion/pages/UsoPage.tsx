@@ -13,6 +13,13 @@ const PERIODS: { label: string; value: UsagePeriod }[] = [
   { label: 'Un año', value: '1y' },
 ];
 
+const PERIOD_LABEL: Record<UsagePeriod, string> = {
+  '7d': '7 días',
+  '30d': '30 días',
+  '90d': '90 días',
+  '1y': 'un año',
+};
+
 export function UsoPage() {
   const [period, setPeriod] = useState<UsagePeriod>('30d');
   const list = integrations();
@@ -36,7 +43,11 @@ export function UsoPage() {
 
       <div className="grid gap-4 sm:grid-cols-3">
         <StatCard label="Cuota fija/mes" value={formatCurrency(totals.cuotaFijaMes)} />
-        <StatCard label="Gasto total (30 días)" value={formatCurrency(totals.gastoTotalPeriodo)} />
+        <StatCard
+          label={`Gasto total (${PERIOD_LABEL[period]})`}
+          value={formatCurrency(totals.gastoTotalPeriodo)}
+          caption="Cuota prorrateada + consumo"
+        />
         <StatCard label="Errores" value={String(totals.errores)} />
       </div>
 
@@ -54,6 +65,12 @@ export function UsoPage() {
             snapshot={snapshotFor(integration.id, period)}
           />
         ))}
+      </div>
+
+      <div className="flex items-center gap-3 text-sm text-slate-500">
+        <button type="button" className="underline hover:text-slate-700">Cuotas y tarifas</button>
+        <span>·</span>
+        <button type="button" className="underline hover:text-slate-700">Actualizar</button>
       </div>
     </div>
   );

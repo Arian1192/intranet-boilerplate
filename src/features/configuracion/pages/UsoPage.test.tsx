@@ -14,6 +14,9 @@ describe('UsoPage', () => {
     expect(screen.getByText('Precio de vuelos')).toBeInTheDocument();
     expect(screen.getByText('Horarios de vuelos')).toBeInTheDocument();
     expect(screen.getByText('Triaje de incidencias')).toBeInTheDocument();
+    expect(screen.getByText('Cuota prorrateada + consumo')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Cuotas y tarifas' })).toHaveAttribute('type', 'button');
+    expect(screen.getByRole('button', { name: 'Actualizar' })).toHaveAttribute('type', 'button');
   });
 
   it('el toggle de periodo por defecto está en 30 días', () => {
@@ -25,6 +28,7 @@ describe('UsoPage', () => {
     render(<UsoPage />);
     await userEvent.click(screen.getByRole('button', { name: 'Un año' }));
     expect(screen.getByRole('button', { name: 'Un año' })).toHaveClass('bg-[#44444C]');
+    expect(screen.getByText('Gasto total (un año)')).toBeInTheDocument();
     expect(screen.getByText('Precio de vuelos')).toBeInTheDocument();
   });
 

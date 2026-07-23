@@ -25,6 +25,7 @@ describe('IntegrationRow', () => {
     expect(screen.getByText('copys')).toBeInTheDocument();
     expect(screen.getByText('mejorar')).toBeInTheDocument();
     expect(screen.getAllByText('gemini-flash-latest')).toHaveLength(4);
+    expect(screen.getByText(/0,0300/)).toBeInTheDocument();
     expect(screen.getByText(/0,0154/)).toBeInTheDocument();
     expect(screen.getByText(/0,0150/)).toBeInTheDocument();
   });

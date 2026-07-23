@@ -18,6 +18,14 @@ describe('RrhhPage', () => {
     expect(screen.getByRole('checkbox', { name: /cumpleaños/ })).toBeChecked();
   });
 
+  it('permite editar libremente las listas de días de aviso', async () => {
+    render(<RrhhPage />);
+    const input = screen.getByDisplayValue('60, 30, 15');
+    await userEvent.clear(input);
+    await userEvent.type(input, '45, 10');
+    expect(input).toHaveValue('45, 10');
+  });
+
   it('12 departamentos activos y selector de 8 colores para "Nuevo departamento"', () => {
     render(<RrhhPage />);
     expect(screen.getByText('Advancing')).toBeInTheDocument();

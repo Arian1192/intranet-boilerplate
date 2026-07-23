@@ -51,7 +51,11 @@ export function IntegrationRow({ integration, snapshot }: IntegrationRowProps) {
           {snapshot?.spend !== undefined && (
             <div>
               <p className="text-[10px] font-semibold uppercase tracking-wide text-slate-400">Gasto</p>
-              <p className="font-semibold text-slate-800">{formatCurrency(snapshot.spend)}</p>
+              <p className="font-semibold text-slate-800">
+                {integration.id === 'ia'
+                  ? formatCurrencyPrecise(snapshot.spend, 4)
+                  : formatCurrency(snapshot.spend)}
+              </p>
             </div>
           )}
           {snapshot && 'perUse' in snapshot && (

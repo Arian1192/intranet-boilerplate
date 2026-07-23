@@ -8,7 +8,7 @@ export function PlantillasCorreoPage() {
     <div className="space-y-6">
       <ConfigPageHeader
         title="Plantillas de correo"
-        subtitle="Personaliza los correos que salen desde Black Moose."
+        subtitle="Escribe el correo como un correo. La marca —logo, tipografía, botón y pie— la pone el sistema: aquí solo va el mensaje. Las variables van entre llaves, p. ej. {{nombre}}."
       />
       <div className="space-y-4">
         {list.map((template) => (

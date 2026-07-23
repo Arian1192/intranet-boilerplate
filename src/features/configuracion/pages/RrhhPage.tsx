@@ -15,15 +15,12 @@ function noticeListToString(arr: number[]): string {
   return arr.join(', ');
 }
 
-function parseNoticeList(value: string): number[] {
-  return value
-    .split(',')
-    .map((item) => Number(item.trim()))
-    .filter((item) => !Number.isNaN(item));
-}
-
 export function RrhhPage() {
-  const [settings, setSettings] = useState<HrSettings>(() => hrSettings());
+  const initialSettings = hrSettings();
+  const [settings, setSettings] = useState<HrSettings>(initialSettings);
+  const [contractNoticeDays, setContractNoticeDays] = useState(() => noticeListToString(initialSettings.contractEndNoticeDays));
+  const [probationNoticeDays, setProbationNoticeDays] = useState(() => noticeListToString(initialSettings.probationEndNoticeDays));
+  const [salaryReviewNoticeDays, setSalaryReviewNoticeDays] = useState(() => noticeListToString(initialSettings.salaryReviewNoticeDays));
   const [depts, setDepts] = useState<Department[]>(() => departments());
   const [newName, setNewName] = useState('');
   const [newColor, setNewColor] = useState<DepartmentColor>('blue');
@@ -137,8 +134,8 @@ export function RrhhPage() {
           <div>
             <label className="block text-sm text-slate-600">Fin de contrato</label>
             <Input
-              value={noticeListToString(settings.contractEndNoticeDays)}
-              onChange={(event) => setSettings((current) => ({ ...current, contractEndNoticeDays: parseNoticeList(event.target.value) }))}
+              value={contractNoticeDays}
+              onChange={(event) => setContractNoticeDays(event.target.value)}
               className="mt-1"
             />
             <p className="mt-1 text-xs text-slate-400">Días antes de fecha_fin. Ej: 60, 30, 15</p>
@@ -146,8 +143,8 @@ export function RrhhPage() {
           <div>
             <label className="block text-sm text-slate-600">Fin de periodo de prueba</label>
             <Input
-              value={noticeListToString(settings.probationEndNoticeDays)}
-              onChange={(event) => setSettings((current) => ({ ...current, probationEndNoticeDays: parseNoticeList(event.target.value) }))}
+              value={probationNoticeDays}
+              onChange={(event) => setProbationNoticeDays(event.target.value)}
               className="mt-1"
             />
             <p className="mt-1 text-xs text-slate-400">Días antes de que venza. Ej: 15, 7</p>
@@ -155,8 +152,8 @@ export function RrhhPage() {
           <div>
             <label className="block text-sm text-slate-600">Revisión salarial</label>
             <Input
-              value={noticeListToString(settings.salaryReviewNoticeDays)}
-              onChange={(event) => setSettings((current) => ({ ...current, salaryReviewNoticeDays: parseNoticeList(event.target.value) }))}
+              value={salaryReviewNoticeDays}
+              onChange={(event) => setSalaryReviewNoticeDays(event.target.value)}
               className="mt-1"
             />
             <p className="mt-1 text-xs text-slate-400">Días antes de la fecha de revisión. Ej: 30</p>
