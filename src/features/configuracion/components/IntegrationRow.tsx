@@ -1,5 +1,5 @@
 import { Plug } from 'lucide-react';
-import { formatCurrency } from '@/lib/format';
+import { formatCurrency, formatCurrencyPrecise } from '@/lib/format';
 import type { Integration, IntegrationUsageSnapshot } from '../data/uso';
 
 const DOT: Record<'green' | 'amber', string> = { green: 'bg-emerald-500', amber: 'bg-amber-500' };
@@ -72,7 +72,7 @@ export function IntegrationRow({ integration, snapshot }: IntegrationRowProps) {
               <span className="flex items-center gap-4 text-slate-500">
                 <span>{s.usos} usos</span>
                 <span>{s.tokensIn} → {s.tokensOut}</span>
-                <span className="font-medium text-slate-700">{formatCurrency(s.spend)}</span>
+                <span className="font-medium text-slate-700">{formatCurrencyPrecise(s.spend, 4)}</span>
               </span>
             </div>
           ))}
