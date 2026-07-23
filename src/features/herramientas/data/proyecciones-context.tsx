@@ -39,6 +39,7 @@ export function ProyeccionesProvider({ children }: { children: ReactNode }) {
   return <ProyeccionesContext.Provider value={value}>{children}</ProyeccionesContext.Provider>;
 }
 
+// eslint-disable-next-line react-refresh/only-export-components -- Context + hook colocation es el patrón estándar de React; no hay motivo para partir el archivo por esto.
 export function useProyecciones(): ProyeccionesContextValue {
   const ctx = useContext(ProyeccionesContext);
   if (!ctx) throw new Error('useProyecciones debe usarse dentro de <ProyeccionesProvider>');
