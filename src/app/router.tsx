@@ -8,9 +8,13 @@ import { CrudaShell } from '@/features/modules/CrudaShell';
 import { EuphoricShell } from '@/features/modules/EuphoricShell';
 import { CreativosShell } from '@/features/modules/CreativosShell';
 import { CRMShell } from '@/features/modules/CRMShell';
-import { TeamShell } from '@/features/modules/TeamShell';
+import { TeamShell } from '@/features/team/TeamShell';
+import { EquipoPage } from '@/features/team/pages/EquipoPage';
+import { CalendarioPage } from '@/features/team/pages/CalendarioPage';
+import { FichasPage } from '@/features/team/pages/FichasPage';
 import { ConfigShell } from '@/features/modules/ConfigShell';
 import { MiTrabajoShell } from '@/features/modules/MiTrabajoShell';
+import { IncidenciasShell } from '@/features/modules/IncidenciasShell';
 import { MixmagShell } from '@/features/modules/MixmagShell';
 import { TagmagShell } from '@/features/modules/TagmagShell';
 import { HerramientasShell } from '@/features/modules/HerramientasShell';
@@ -91,9 +95,14 @@ export function AppRouter() {
         <Route path="pipeline" element={<PipelinePage />} />
         <Route path="crecimiento" element={<CrecimientoPage />} />
       </Route>
-      <Route path="/personal" element={<TeamShell />} />
+      <Route path="/personal" element={<TeamShell />}>
+        <Route index element={<EquipoPage />} />
+        <Route path="calendario" element={<CalendarioPage />} />
+        <Route path="fichas" element={<FichasPage />} />
+      </Route>
       <Route path="/configuracion" element={<ConfigShell />} />
       <Route path="/mi-trabajo" element={<MiTrabajoShell />} />
+      <Route path="/incidencias" element={<IncidenciasShell />} />
       <Route path="/mixmag" element={<MixmagShell />}>
         <Route index element={<RedaccionResumenPage />} />
         <Route path="contenidos" element={<ContenidosPage />} />

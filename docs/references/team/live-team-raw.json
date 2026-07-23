@@ -1,0 +1,106 @@
+{
+  "realRoute": "https://bookings.conceptoneagency.com/personal",
+  "bodyText": "/\nTeam\nEquipo\nCalendario\nFichas\n9+\ntest\nAdmin\nT\nEquipo\n\nQuién es quién, cómo contactarle y de quién depende.\n\nDirectorio\nOrganigrama\nTodos los departamentos\nAdvancing\nBooking\nComercial\nComunicación & PR\nDiseño\nLogística\nManagement\nMarketing\nPaid Ads\nRedacción\nVídeo\nAG\nAlba Gelabert\n\nAccount Manager\n\nMarketing\nalba@blackmoose.es\nSin teléfono\nVer ficha personal →\nAE\nAlberto Egea\n\nAds Specialist\n\nPaid Ads\nSin email\nSin teléfono\nVer ficha personal →\nAM\nAldo Messina\n\nBooker\n\nBooking\naldo@conceptoneagency.com\nSin teléfono\nVer ficha personal →\nAG\nAlejandro Gonzalez\n\nLogística · Booker\n\nLogística\nalex@blackmoose.es\n664604640\nVer ficha personal →\nBC\nBorja Comino\n\nComercial · Redacción\n\nComercial\nSin email\nSin teléfono\nVer ficha personal →\nCarlos Pego Muñoz\n\n—\n\ncarlos@blackmoose.es\n648815985\nVer ficha personal →\nCV\nCarlos Ramudo Valencia\n\n—\n\nComercial\nc.ramudo@blackmoose.es\nSin teléfono\nVer ficha personal →\nFC\nFederico Cortina\n\nDirección · Redacción\n\nRedacción\nSin email\nSin teléfono\nVer ficha personal →\nFV\nFran Hinojosa Veredas\n\n—\n\nfran@blackmoose.es\nSin teléfono\nVer ficha personal →\nIB\nInés Batlle\n\nComunicación · PR\n\nComunicación & PR\nSin email\nSin teléfono\n\nReporta a Lucía Gómez Garcia\n\nVer ficha personal →\nIC\nIsrael B Gras Cuenca\n\n—\n\nisrael@blackmoose.es\n606263540\nVer ficha personal →\nJack Howell\n\n—\n\njack@blackmoose.es\nSin teléfono\nVer ficha personal →\nJM\nJassi Gonzalez Montes\n\n—\n\njassi@blackmoose.es\nSin teléfono\nVer ficha personal →\nJC\nJoe Coe\n\nAdvancing\n\nAdvancing\njoe@blackmoose.es\n620719682\nVer ficha personal →\nJM\nJuan Manuel Molina\n\nRedacción\n\nRedacción\nSin email\nSin teléfono\nVer ficha personal →\nLG\nLucía Gómez Garcia\n\nAccount Manager\n\nComunicación & PR\nSin email\nSin teléfono\nVer ficha personal →\nMR\nMaria Fernanda Rodriguez\n\nDiseño\n\nDiseño\nSin email\nSin teléfono\nVer ficha personal →\nMA\nMarian Aristimuno\n\nRedacción\n\nRedacción\nSin email\nSin teléfono\nVer ficha personal →\nOB\nOscar Buch\n\nBooker · Logística\n\nBooking\noscar@conceptoneagency.com\nSin teléfono\nVer ficha personal →\nPC\nPablo Carrera\n\nSocial Media Manager\n\nMarketing\nSin email\nSin teléfono\n\nReporta a Alba Gelabert\n\nVer ficha personal →\nPC\nPatricia Pareja Casalí\n\nProject Manager\n\nManagement\npatricia@blackmoose.es\nSin teléfono\nVer ficha personal →\nS\nSadkiel\n\nProject Manager\n\nManagement\nsadkiel@blackmoose.es\nSin teléfono\nVer ficha personal →\nTC\nTony Carrerira\n\n—\n\ntony@blackmoose.es\nSin teléfono\nVer ficha personal →\nUT\nUsuario Test\n\n—\n\ncpegomunoz@gmail.com\nSin teléfono\nVer ficha personal →\nVM\nVictor Moreno\n\nVideo Editor\n\nVídeo\nSin email\nSin teléfono\nVer ficha personal →\nYB\nYenifer Bernardo\n\nBooker\n\nBooking\nyenifer@conceptoneagency.com\nSin teléfono\nVer ficha personal →\n?\nTeam\n\nLos accesos se dan desde la ficha\n\nCrear la persona y darle acceso son dos cosas: una persona puede estar en el directorio sin cuenta. Los permisos se editan en su ficha, no en una lista aparte.\n\nEnviar\nReportar con captura\nMis avisos",
+  "headings": [
+    "H1: Equipo"
+  ],
+  "subTabCandidates": [
+    {
+      "text": "Equipo",
+      "tag": "A",
+      "top": 12,
+      "left": 235.6875,
+      "sel": "nav a"
+    },
+    {
+      "text": "Calendario",
+      "tag": "A",
+      "top": 12,
+      "left": 309.640625,
+      "sel": "nav a"
+    },
+    {
+      "text": "Fichas",
+      "tag": "A",
+      "top": 12,
+      "left": 411.0625,
+      "sel": "nav a"
+    },
+    {
+      "text": "test\nAdmin\nT",
+      "tag": "A",
+      "top": 7.25,
+      "left": 1245.75,
+      "sel": "header a"
+    },
+    {
+      "text": "Team",
+      "tag": "BUTTON",
+      "top": 14,
+      "left": 144.453125,
+      "sel": "header button"
+    },
+    {
+      "text": "9+",
+      "tag": "BUTTON",
+      "top": 10,
+      "left": 1197.75,
+      "sel": "header button"
+    }
+  ],
+  "subTabs": [
+    "Equipo",
+    "Calendario",
+    "Fichas",
+    "test\nAdmin\nT",
+    "Team",
+    "9+"
+  ],
+  "perTabResults": [
+    {
+      "tab": "Equipo",
+      "url": "https://bookings.conceptoneagency.com/personal",
+      "bodyText": "/\nTeam\nEquipo\nCalendario\nFichas\n9+\ntest\nAdmin\nT\nEquipo\n\nQuién es quién, cómo contactarle y de quién depende.\n\nDirectorio\nOrganigrama\nTodos los departamentos\nAdvancing\nBooking\nComercial\nComunicación & PR\nDiseño\nLogística\nManagement\nMarketing\nPaid Ads\nRedacción\nVídeo\nAG\nAlba Gelabert\n\nAccount Manager\n\nMarketing\nalba@blackmoose.es\nSin teléfono\nVer ficha personal →\nAE\nAlberto Egea\n\nAds Specialist\n\nPaid Ads\nSin email\nSin teléfono\nVer ficha personal →\nAM\nAldo Messina\n\nBooker\n\nBooking\naldo@conceptoneagency.com\nSin teléfono\nVer ficha personal →\nAG\nAlejandro Gonzalez\n\nLogística · Booker\n\nLogística\nalex@blackmoose.es\n664604640\nVer ficha personal →\nBC\nBorja Comino\n\nComercial · Redacción\n\nComercial\nSin email\nSin teléfono\nVer ficha personal →\nCarlos Pego Muñoz\n\n—\n\ncarlos@blackmoose.es\n648815985\nVer ficha personal →\nCV\nCarlos Ramudo Valencia\n\n—\n\nComercial\nc.ramudo@blackmoose.es\nSin teléfono\nVer ficha personal →\nFC\nFederico Cortina\n\nDirección · Redacción\n\nRedacción\nSin email\nSin teléfono\nVer ficha personal →\nFV\nFran Hinojosa Veredas\n\n—\n\nfran@blackmoose.es\nSin teléfono\nVer ficha personal →\nIB\nInés Batlle\n\nComunicación · PR\n\nComunicación & PR\nSin email\nSin teléfono\n\nReporta a Lucía Gómez Garcia\n\nVer ficha personal →\nIC\nIsrael B Gras Cuenca\n\n—\n\nisrael@blackmoose.es\n606263540\nVer ficha personal →\nJack Howell\n\n—\n\njack@blackmoose.es\nSin teléfono\nVer ficha personal →\nJM\nJassi Gonzalez Montes\n\n—\n\njassi@blackmoose.es\nSin teléfono\nVer ficha personal →\nJC\nJoe Coe\n\nAdvancing\n\nAdvancing\njoe@blackmoose.es\n620719682\nVer ficha personal →\nJM\nJuan Manuel Molina\n\nRedacción\n\nRedacción\nSin email\nSin teléfono\nVer ficha personal →\nLG\nLucía Gómez Garcia\n\nAccount Manager\n\nComunicación & PR\nSin email\nSin teléfono\nVer ficha personal →\nMR\nMaria Fernanda Rodriguez\n\nDiseño\n\nDiseño\nSin email\nSin teléfono\nVer ficha personal →\nMA\nMarian Aristimuno\n\nRedacción\n\nRedacción\nSin email\nSin teléfono\nVer ficha personal →\nOB\nOscar Buch\n\nBooker · Logística\n\nBooking\noscar@conceptoneagency.com\nSin teléfono\nVer ficha personal →\nPC\nPablo Carrera\n\nSocial Media Manager\n\nMarketing\nSin email\nSin teléfono\n\nReporta a Alba Gelabert\n\nVer ficha personal →\nPC\nPatricia Pareja Casalí\n\nProject Manager\n\nManagement\npatricia@blackmoose.es\nSin teléfono\nVer ficha personal →\nS\nSadkiel\n\nProject Manager\n\nManagement\nsadkiel@blackmoose.es\nSin teléfono\nVer ficha personal →\nTC\nTony Carrerira\n\n—\n\ntony@blackmoose.es\nSin teléfono\nVer ficha personal →\nUT\nUsuario Test\n\n—\n\ncpegomunoz@gmail.com\nSin teléfono\nVer ficha personal →\nVM\nVictor Moreno\n\nVideo Editor\n\nVídeo\nSin email\nSin teléfono\nVer ficha personal →\nYB\nYenifer Bernardo\n\nBooker\n\nBooking\nyenifer@conceptoneagency.com\nSin teléfono\nVer ficha personal →\n?\nTeam\n\nLos accesos se dan desde la ficha\n\nCrear la persona y darle acceso son dos cosas: una persona puede estar en el directorio sin cuenta. Los permisos se editan en su ficha, no en una lista aparte.\n\nEnviar\nReportar con captura\nMis avisos",
+      "headings": [
+        "H1: Equipo"
+      ]
+    },
+    {
+      "tab": "Calendario",
+      "url": "https://bookings.conceptoneagency.com/personal/calendario",
+      "bodyText": "/\nTeam\nEquipo\nCalendario\nFichas\n9+\ntest\nAdmin\nT\nCalendario del equipo\n\nQuién está fuera y quién teletrabaja, de un vistazo.\n\n‹\nJulio 2026\n›\nHoy:\nCarlos Ramudo Valencia · Vacaciones\nSolo aprobadas\nVacaciones\nTeletrabajo\nBaja\nAusencia\nFestivo / finde\nPersona\t\nX\n1\n\t\nJ\n2\n\t\nV\n3\n\t\nS\n4\n\t\nD\n5\n\t\nL\n6\n\t\nM\n7\n\t\nX\n8\n\t\nJ\n9\n\t\nV\n10\n\t\nS\n11\n\t\nD\n12\n\t\nL\n13\n\t\nM\n14\n\t\nX\n15\n\t\nJ\n16\n\t\nV\n17\n\t\nS\n18\n\t\nD\n19\n\t\nL\n20\n\t\nM\n21\n\t\nX\n22\n\t\nJ\n23\n\t\nV\n24\n\t\nS\n25\n\t\nD\n26\n\t\nL\n27\n\t\nM\n28\n\t\nX\n29\n\t\nJ\n30\n\t\nV\n31\n\tDías\n\nAG\nAlba Gelabert\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t—\n\nAE\nAlberto Egea\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t—\n\nAM\nAldo Messina\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t—\n\nAG\nAlejandro Gonzalez\n\t\t\t\n\t\n\t\n\t\n\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t5\n\nBC\nBorja Comino\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t—\n\nCarlos Pego Muñoz\n\t\t\t\n\t\n\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t3\n\nCV\nCarlos Ramudo Valencia\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\t\t\t\t\t\t\t\t\t7\n\nFC\nFederico Cortina\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t—\n\nFV\nFran Hinojosa Veredas\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t—\n\nIB\nInés Batlle\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t—\n\nIC\nIsrael B Gras Cuenca\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t—\n\nJack Howell\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t—\n\nJM\nJassi Gonzalez Montes\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t—\n\nJC\nJoe Coe\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t—\n\nJM\nJuan Manuel Molina\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t—\n\nLG\nLucía Gómez Garcia\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t—\n\nMR\nMaria Fernanda Rodriguez\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t—\n\nMA\nMarian Aristimuno\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t—\n\nOB\nOscar Buch\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t—\n\nPC\nPablo Carrera\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t—\n\nPC\nPatricia Pareja Casalí\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t—\n\nS\nSadkiel\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t—\n\nTC\nTony Carrerira\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t—\n\nUT\nUsuario Test\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t—\n\nVM\nVictor Moreno\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t—\n\nYB\nYenifer Bernardo\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t—\n\nPasa el ratón por una fila para seguirla. Las solicitudes pendientes de aprobar se ven translúcidas. El total de días solo se muestra de ti y de las personas a tu cargo.\n\n?\nTeam\n\nLos accesos se dan desde la ficha\n\nCrear la persona y darle acceso son dos cosas: una persona puede estar en el directorio sin cuenta. Los permisos se editan en su ficha, no en una lista aparte.\n\nEnviar\nReportar con captura\nMis avisos",
+      "headings": [
+        "H1: Calendario del equipo"
+      ]
+    },
+    {
+      "tab": "Fichas",
+      "url": "https://bookings.conceptoneagency.com/personal/fichas",
+      "bodyText": "/\nTeam\nEquipo\nCalendario\nFichas\n9+\ntest\nAdmin\nT\nFichas del equipo\n\nInformación sensible: datos personales, condiciones económicas, vacaciones y horas. El resto del equipo solo ve el directorio.\n\n⬇ Exportar a Excel\n+ Nueva persona\nEmpresa\nTodas\nConceptOne\nCRUDA\nEtra Agency\nEuphoric Media\nMixmag Spain\nTAGMAG\nTipo\nTodos\nContratado\nFreelance\nAlba Gelabert\nFreelance · Account Manager\nAlberto Egea\nFreelance · Ads Specialist\nAldo Messina\nFreelance · Booker\nAlejandro Gonzalez\nFreelance · Logística · Booker\nBorja Comino\nFreelance · Comercial · Redacción\nCarlos Pego Muñoz\nFreelance\nCarlos Ramudo Valencia\nFreelance\nFederico Cortina\nFreelance · Dirección · Redacción\nFran Hinojosa Veredas\nFreelance\nInés Batlle\nContratado · Comunicación · PR\nIsrael B Gras Cuenca\nFreelance\nJack Howell\nFreelance\nJassi Gonzalez Montes\nFreelance\nJoe Coe\nFreelance · Advancing\nJuan Manuel Molina\nFreelance · Redacción\nLucía Gómez Garcia\nContratado · Account Manager\nMaria Fernanda Rodriguez\nFreelance · Diseño\nMarian Aristimuno\nFreelance · Redacción\nOscar Buch\nFreelance · Booker · Logística\nPablo Carrera\nContratado · Social Media Manager\nPatricia Pareja Casalí\nFreelance · Project Manager\nSadkiel\nFreelance · Project Manager\nTony Carrerira\nFreelance\nUsuario Test\nContratado\nVictor Moreno\nFreelance · Video Editor\nYenifer Bernardo\nFreelance · Booker\nSelecciona una persona o crea una nueva.\nDashboard de costes\nCoste mensual estimado total: 34.522,07 €\nCOSTE POR EMPRESA\nConceptOne\n11.460,00 €\nEuphoric Media\n8937,68 €\nMixmag Spain\n6750,00 €\nEtra Agency\n4894,39 €\nTAGMAG\n2480,00 €\nCRUDA\n0,00 €\nCOSTE POR PERSONA\nAlberto Egea\nAds Specialist\n4000,00 €\nLucía Gómez Garcia\nAccount Manager\n3068,33 €\nMaria Fernanda Rodriguez\nDiseño\n2420,00 €\nBorja Comino\nComercial · Redacción\n2400,00 €\nPablo Carrera\nSocial Media Manager\n2007,68 €\nAlba Gelabert\nAccount Manager\n2000,00 €\nSadkiel\nProject Manager\n2000,00 €\nFederico Cortina\nDirección · Redacción\n1900,00 €\nInés Batlle\nComunicación · PR\n1826,06 €\nVictor Moreno\nVideo Editor\n1700,00 €\nAldo Messina\nBooker\n1500,00 €\nJoe Coe\nAdvancing\n1500,00 €\nMarian Aristimuno\nRedacción\n1500,00 €\nPatricia Pareja Casalí\nProject Manager\n1500,00 €\nYenifer Bernardo\nBooker\n1500,00 €\nAlejandro Gonzalez\nLogística · Booker\n1200,00 €\nOscar Buch\nBooker · Logística\n1200,00 €\nJuan Manuel Molina\nRedacción\n800,00 €\nCarlos Ramudo Valencia\n500,00 €\n?\nTeam\n\nLos accesos se dan desde la ficha\n\nCrear la persona y darle acceso son dos cosas: una persona puede estar en el directorio sin cuenta. Los permisos se editan en su ficha, no en una lista aparte.\n\nEnviar\nReportar con captura\nMis avisos",
+      "headings": [
+        "H1: Fichas del equipo",
+        "H2: Dashboard de costes",
+        "H3: COSTE POR EMPRESA",
+        "H3: COSTE POR PERSONA"
+      ]
+    },
+    {
+      "tab": "Team",
+      "url": "https://bookings.conceptoneagency.com/personal/fichas",
+      "bodyText": "/\nTeam\nEquipo\nCalendario\nFichas\n9+\ntest\nAdmin\nT\nFichas del equipo\n\nInformación sensible: datos personales, condiciones económicas, vacaciones y horas. El resto del equipo solo ve el directorio.\n\n⬇ Exportar a Excel\n+ Nueva persona\nEmpresa\nTodas\nConceptOne\nCRUDA\nEtra Agency\nEuphoric Media\nMixmag Spain\nTAGMAG\nTipo\nTodos\nContratado\nFreelance\nAlba Gelabert\nFreelance · Account Manager\nAlberto Egea\nFreelance · Ads Specialist\nAldo Messina\nFreelance · Booker\nAlejandro Gonzalez\nFreelance · Logística · Booker\nBorja Comino\nFreelance · Comercial · Redacción\nCarlos Pego Muñoz\nFreelance\nCarlos Ramudo Valencia\nFreelance\nFederico Cortina\nFreelance · Dirección · Redacción\nFran Hinojosa Veredas\nFreelance\nInés Batlle\nContratado · Comunicación · PR\nIsrael B Gras Cuenca\nFreelance\nJack Howell\nFreelance\nJassi Gonzalez Montes\nFreelance\nJoe Coe\nFreelance · Advancing\nJuan Manuel Molina\nFreelance · Redacción\nLucía Gómez Garcia\nContratado · Account Manager\nMaria Fernanda Rodriguez\nFreelance · Diseño\nMarian Aristimuno\nFreelance · Redacción\nOscar Buch\nFreelance · Booker · Logística\nPablo Carrera\nContratado · Social Media Manager\nPatricia Pareja Casalí\nFreelance · Project Manager\nSadkiel\nFreelance · Project Manager\nTony Carrerira\nFreelance\nUsuario Test\nContratado\nVictor Moreno\nFreelance · Video Editor\nYenifer Bernardo\nFreelance · Booker\nSelecciona una persona o crea una nueva.\nDashboard de costes\nCoste mensual estimado total: 34.522,07 €\nCOSTE POR EMPRESA\nConceptOne\n11.460,00 €\nEuphoric Media\n8937,68 €\nMixmag Spain\n6750,00 €\nEtra Agency\n4894,39 €\nTAGMAG\n2480,00 €\nCRUDA\n0,00 €\nCOSTE POR PERSONA\nAlberto Egea\nAds Specialist\n4000,00 €\nLucía Gómez Garcia\nAccount Manager\n3068,33 €\nMaria Fernanda Rodriguez\nDiseño\n2420,00 €\nBorja Comino\nComercial · Redacción\n2400,00 €\nPablo Carrera\nSocial Media Manager\n2007,68 €\nAlba Gelabert\nAccount Manager\n2000,00 €\nSadkiel\nProject Manager\n2000,00 €\nFederico Cortina\nDirección · Redacción\n1900,00 €\nInés Batlle\nComunicación · PR\n1826,06 €\nVictor Moreno\nVideo Editor\n1700,00 €\nAldo Messina\nBooker\n1500,00 €\nJoe Coe\nAdvancing\n1500,00 €\nMarian Aristimuno\nRedacción\n1500,00 €\nPatricia Pareja Casalí\nProject Manager\n1500,00 €\nYenifer Bernardo\nBooker\n1500,00 €\nAlejandro Gonzalez\nLogística · Booker\n1200,00 €\nOscar Buch\nBooker · Logística\n1200,00 €\nJuan Manuel Molina\nRedacción\n800,00 €\nCarlos Ramudo Valencia\n500,00 €\n?\nTeam\n\nLos accesos se dan desde la ficha\n\nCrear la persona y darle acceso son dos cosas: una persona puede estar en el directorio sin cuenta. Los permisos se editan en su ficha, no en una lista aparte.\n\nEnviar\nReportar con captura\nMis avisos",
+      "headings": [
+        "H1: Fichas del equipo",
+        "H2: Dashboard de costes",
+        "H3: COSTE POR EMPRESA",
+        "H3: COSTE POR PERSONA"
+      ]
+    }
+  ],
+  "captures": [
+    "/home/arian/dev/Boilerplate/docs/references/team/live-team.png",
+    "/home/arian/dev/Boilerplate/docs/references/team/live-team-equipo.png",
+    "/home/arian/dev/Boilerplate/docs/references/team/live-team-calendario.png",
+    "/home/arian/dev/Boilerplate/docs/references/team/live-team-fichas.png",
+    "/home/arian/dev/Boilerplate/docs/references/team/live-team-team.png"
+  ]
+}

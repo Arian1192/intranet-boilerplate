@@ -1,0 +1,59 @@
+{
+ "overlayClass": "fixed inset-0 z-50 flex items-center justify-center bg-slate-900/30 p-4",
+ "cardClass": "flex max-h-[85vh] w-[min(46rem,100%)] flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-2xl",
+ "detailsSummary": "Contexto técnico",
+ "detailsClass": "rounded-lg border border-slate-200 bg-slate-50",
+ "detailsBody": "Contexto técnico{ \"url\": \"https://workspace.blackmoose.es/#\", \"ruta\": \"/\", \"zoom\": 1, \"cuando\": \"2026-07-21T15:56:28.757Z\", \"idioma\": \"es-ES\", \"ventana\": \"1920×992\", \"pantalla\": \"1920×1080\", \"navegador\": \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36\", \"conversacion\": [ { \"rol\": \"usuario\", \"texto\": \"viendo como crear un cliente y pone una dirección de correo. Puede haber más de un contacto, si es Marketing, Dirección o administración?\" } ], \"errores_consola\": [] }",
+ "respuestaLabel": "Respuesta",
+ "textareaPlaceholder": "Qué era, qué has hecho. Se le manda al que lo reportó.",
+ "textareaClass": "input min-h-[70px] text-sm",
+ "buttons": [
+  {
+   "text": "Copiar para Claude",
+   "className": "rounded-lg border border-slate-200 px-2.5 py-1 text-xs font-medium text-slate-600 transition hover:border-slate-300 hover:text-slate-900"
+  },
+  {
+   "text": "✕",
+   "className": "rounded p-1 text-slate-300 hover:bg-slate-100 hover:text-slate-600"
+  },
+  {
+   "text": "Descartar",
+   "className": "btn-ghost text-sm"
+  },
+  {
+   "text": "En curso",
+   "className": "btn-secondary text-sm"
+  },
+  {
+   "text": "Resuelta",
+   "className": "btn-primary text-sm"
+  }
+ ],
+ "headerSpans": [
+  {
+   "text": "DescartadasFVFran Hinojosa Veredas· —",
+   "className": "flex items-center gap-2"
+  },
+  {
+   "text": "Descartadas",
+   "className": "rounded px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide bg-slate-100 text-slate-500"
+  },
+  {
+   "text": "FVFran Hinojosa Veredas",
+   "className": "flex items-center gap-1.5 text-xs text-slate-500"
+  },
+  {
+   "text": "FV",
+   "className": "grid shrink-0 place-items-center rounded-full font-semibold text-white"
+  },
+  {
+   "text": "· —",
+   "className": "text-xs text-slate-400"
+  },
+  {
+   "text": "Copiar para Claude✕",
+   "className": "flex items-center gap-2"
+  }
+ ],
+ "bodyHTML": "<div class=\"flex max-h-[85vh] w-[min(46rem,100%)] flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-2xl\"><div class=\"flex items-center justify-between border-b border-slate-100 px-4 py-3\"><div class=\"flex items-center gap-2\"><span class=\"rounded px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide bg-slate-100 text-slate-500\">Descartadas</span><span class=\"flex items-center gap-1.5 text-xs text-slate-500\"><span class=\"grid shrink-0 place-items-center rounded-full font-semibold text-white\" aria-label=\"Fran Hinojosa Veredas\" style=\"width: 16px; height: 16px; background-color: rgb(234, 88, 12); font-size: 7px;\">FV</span>Fran Hinojosa Veredas</span><span class=\"text-xs text-slate-400\">· —</span></div><div class=\"flex items-center gap-2\"><button class=\"rounded-lg border border-slate-200 px-2.5 py-1 text-xs font-medium text-slate-600 transition hover:border-slate-300 hover:text-slate-900\" title=\"Copia la incidencia con su contexto y las instrucciones, lista para pegar en Claude\">Copiar para Claude</button><button class=\"rounded p-1 text-slate-300 hover:bg-slate-100 hover:text-slate-600\">✕</button></div></div><div class=\"min-h-0 flex-1 space-y-4 overflow-y-auto p-4\"><p class=\"whitespace-pre-wrap text-sm leading-relaxed text-slate-700\">viendo como crear un cliente y pone una dirección de correo. Puede haber más de un contacto, si es Marketing, Dirección o administración?</p><details class=\"rounded-lg border border-slate-200 bg-slate-50\" open=\"\"><summary class=\"cursor-pointer px-3 py-2 text-xs font-medium text-slate-500\">Contexto técnico</summary><pre class=\"overflow-x-auto px-3 pb-3 text-[11px] leading-relaxed text-slate-500\">{\n  \"url\": \"https://workspace.blackmoose.es/#\",\n  \"ruta\": \"/\",\n  \"zoom\": 1,\n  \"cuando\": \"2026-07-21T15:56:28.757Z\",\n  \"idioma\": \"es-ES\",\n  \"ventana\": \"1920×992\",\n  \"pantalla\": \"1920×1080\",\n  \"navegador\": \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36\",\n  \"conversacion\": [\n    {\n      \"rol\": \"usuario\",\n      \"texto\": \"viendo como crear un cliente y pone una dirección de correo. Puede haber más de un contacto, si es Marketing, Dirección o administración?\"\n    }\n  ],\n  \"errores_consola\": []\n}</pre></details><div><label class=\"label\">Respuesta</label><textarea class=\"input min-h-[70px] text-sm\" placeholder=\"Qué era, qué has hecho. Se le manda al que lo reportó.\" style=\"\"></textarea></div></div><div class=\"flex justify-end gap-2 border-t border-slate-100 bg-slate-50 px-4 py-3\"><button class=\"btn-ghost text-sm\">Descartar</button><button class=\"btn-secondary text-sm\">En curso</button><button class=\"btn-primary text-sm\">Resuelta</button></div></div>"
+}
