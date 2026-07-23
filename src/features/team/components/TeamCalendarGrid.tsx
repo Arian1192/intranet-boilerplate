@@ -65,8 +65,8 @@ export function TeamCalendarGrid({ year, month, people, absences, approvedOnly }
             <tr key={person.id} className="hover:bg-slate-50">
               <td className="sticky left-0 z-10 border-b border-slate-200 bg-white p-2">
                 <div className="flex items-center gap-2">
-                  <Avatar src={person.photoUrl} fallback={getInitials(person.name)} size="sm" />
-                  <span className="text-slate-700">{person.name}</span>
+                  <Avatar src={person.photoUrl} fallback={getInitials(person.name)} size="sm" style={{ backgroundColor: person.avatarColor }} />
+                  <span className="w-32 truncate text-slate-700">{person.name}</span>
                 </div>
               </td>
               {Array.from({ length: daysInMonth }, (_, i) => i + 1).map((day) => {

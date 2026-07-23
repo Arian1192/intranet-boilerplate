@@ -42,9 +42,40 @@ export const fichas: Ficha[] = people.map((p) => {
     'juan-molina': 800.00,
     'carlos-ramudo': 500.00,
   };
+  // Asignaciones de empresa inferidas de los dots de live-team-fichas.png.
+  // Los casos multi-empresa verificados: Israel (etra+cruda) y Maria Fernanda (mixmag+tagmag+conceptone+euphoric).
+  // Los demás multi-dot de filas tapadas por el panel de ayuda se dejan como mejor inferencia.
+  const companyMap: Record<string, CompanyId[]> = {
+    'alba-gelabert': ['euphoric'],
+    'alberto-egea': ['euphoric'],
+    'aldo-messina': ['conceptone'],
+    'alejandro-gonzalez': ['conceptone'],
+    'borja-comino': ['mixmag'],
+    'carlos-pego': ['conceptone', 'etra', 'mixmag', 'euphoric'],
+    'carlos-ramudo': ['tagmag', 'mixmag'],
+    'federico-cortina': ['mixmag', 'euphoric'],
+    'fran-hinojosa': ['euphoric', 'conceptone', 'cruda', 'etra', 'mixmag', 'tagmag'],
+    'ines-batlle': ['etra'],
+    'israel-gras': ['etra', 'cruda'],
+    'jack-howell': [],
+    'jassi-gonzalez': [],
+    'joe-coe': ['conceptone'],
+    'juan-molina': ['mixmag'],
+    'lucia-gomez': ['etra'],
+    'maria-fernanda': ['mixmag', 'tagmag', 'conceptone', 'euphoric'],
+    'marian-aristimuno': ['mixmag'],
+    'oscar-buch': ['conceptone'],
+    'pablo-carrera': ['euphoric'],
+    'patricia-pareja': ['conceptone'],
+    sadkiel: ['conceptone'],
+    'tony-carrerira': [],
+    'usuario-test': [],
+    'victor-moreno': ['tagmag'],
+    'yenifer-bernardo': ['conceptone'],
+  };
   const contratados = ['ines-batlle', 'lucia-gomez', 'pablo-carrera', 'usuario-test'];
   return fichaById(p.id, {
-    companyIds: [],
+    companyIds: companyMap[p.id] || [],
     employmentType: contratados.includes(p.id) ? 'contratado' : 'freelance',
     monthlyCost: costMap[p.id],
     hasAccount: p.id === 'alba-gelabert',

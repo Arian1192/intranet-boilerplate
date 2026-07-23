@@ -25,7 +25,7 @@ export function OrgRow({ person, level = 0, reports }: OrgRowProps) {
     <div style={{ marginLeft: `${level * 24}px` }} className="space-y-2">
       <div className="flex items-center justify-between rounded-lg border border-slate-200 bg-white p-3">
         <div className="flex items-center gap-3">
-          <Avatar src={person.photoUrl} fallback={getInitials(person.name)} size="sm" />
+          <Avatar src={person.photoUrl} fallback={getInitials(person.name)} size="sm" style={{ backgroundColor: person.avatarColor }} />
           <div>
             <p className="font-medium text-slate-800">{person.name}</p>
             <p className="text-xs text-slate-500">{label}</p>
