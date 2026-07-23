@@ -4,6 +4,7 @@ import { UnderlineTabs } from '@/components/ui';
 import { useProyecciones } from '../data/proyecciones-context';
 import { ProyeccionHeader } from '../components/ProyeccionHeader';
 import { AcuerdoTab } from '../components/AcuerdoTab';
+import { PrevisionTab } from '../components/PrevisionTab';
 import { TabPlaceholder } from '../components/TabPlaceholder';
 import type { Proyeccion } from '../data/types';
 
@@ -42,7 +43,7 @@ export function ProyeccionDetailPage() {
       <ProyeccionHeader proyeccion={proyeccion} isDirty={isDirty} onUpdate={handleUpdate} onGuardar={() => setIsDirty(false)} />
       <UnderlineTabs options={TAB_OPTIONS} value={tab} onChange={setTab} />
       {tab === 'acuerdo' && <AcuerdoTab proyeccion={proyeccion} onUpdate={handleUpdate} />}
-      {tab === 'prevision' && <TabPlaceholder fase="B" />}
+      {tab === 'prevision' && <PrevisionTab proyeccion={proyeccion} onUpdate={handleUpdate} />}
       {tab === 'real' && <TabPlaceholder fase="C" />}
     </div>
   );
