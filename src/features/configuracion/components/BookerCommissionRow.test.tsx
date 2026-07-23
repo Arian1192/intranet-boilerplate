@@ -1,7 +1,6 @@
 import '@testing-library/jest-dom';
 import { describe, it, expect, vi } from 'vitest';
-import { render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import { fireEvent, render, screen } from '@testing-library/react';
 import { BookerCommissionRow } from './BookerCommissionRow';
 
 describe('BookerCommissionRow', () => {
@@ -12,12 +11,10 @@ describe('BookerCommissionRow', () => {
     expect(screen.getByText('(global 25%)')).toBeInTheDocument();
   });
 
-  it('editar el input dispara onChange con el número', async () => {
+  it('editar el input dispara onChange con el número', () => {
     const onChange = vi.fn();
     render(<BookerCommissionRow bookerName="Alba Gelabert" percent={25} globalPercent={25} onChange={onChange} />);
-    const input = screen.getByDisplayValue('25');
-    await userEvent.clear(input);
-    await userEvent.type(input, '30');
+    fireEvent.change(screen.getByDisplayValue('25'), { target: { value: '30' } });
     expect(onChange).toHaveBeenCalledWith(30);
   });
 
