@@ -348,7 +348,7 @@ export const seedProyecciones: Proyeccion[] = [
 - [ ] **Step 5: Ejecutar el test para comprobar que pasa**
 
 Run: `npx vitest run src/features/herramientas/data/seed.test.ts`
-Expected: PASS (10 tests)
+Expected: PASS (9 tests)
 
 - [ ] **Step 6: Commit**
 
@@ -509,7 +509,7 @@ export function calcularResultadoAcuerdo(
 - [ ] **Step 4: Ejecutar el test para comprobar que pasa**
 
 Run: `npx vitest run src/features/herramientas/data/calculos-acuerdo.test.ts`
-Expected: PASS (9 tests)
+Expected: PASS (10 tests)
 
 - [ ] **Step 5: Commit**
 
