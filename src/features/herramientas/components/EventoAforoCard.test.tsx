@@ -10,7 +10,7 @@ import type { Proyeccion } from '../data/types';
 describe('EventoAforoCard', () => {
   it('arranca colapsada con el resumen "18 jul 2026 · 600 · 6h · 500 pax"', () => {
     render(<EventoAforoCard proyeccion={seedProyecciones[0]} onUpdate={vi.fn()} />);
-    expect(screen.getByText(/600.*6h.*500 pax/)).toBeInTheDocument();
+    expect(screen.getByText('18 jul 2026 · 600 · 6h · 500 pax')).toBeInTheDocument();
   });
 
   it('al expandir, muestra los campos con los valores sembrados y la nota de asistencia proyectada', async () => {
