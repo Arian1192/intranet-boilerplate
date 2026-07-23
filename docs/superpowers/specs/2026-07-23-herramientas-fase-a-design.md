@@ -86,9 +86,16 @@ export type ViaBreakeven = 'ticketing' | 'mesas_vip' | 'barras' | 'comida' | 'me
 export interface Responsable { id: string; nombre: string; avatarUrl?: string; iniciales: string }
 export interface Comentario { id: string; autor: string; texto: string; fecha: string }
 
-export interface TramoAcuerdo {
-  id: string; nombre: string; nosLlevamosPct: number; base: BaseCalculoAcuerdo;
-  deduccionFijaEur: number; deduccionPct: number;
+export interface TramoAcuerdoConfig {
+  nosLlevamosPct: number; sobreBase: BaseCalculoAcuerdo; deduccionFijaEur: number; deduccionPct: number;
+}
+export interface AcuerdoConfig {
+  aplicarAcuerdo: boolean; // checkbox "Aplicar acuerdo (si no, el resultado es el 100% del evento)"
+  ticketing: TramoAcuerdoConfig;
+  mesasVip: TramoAcuerdoConfig;
+  barras: TramoAcuerdoConfig;
+  comida: TramoAcuerdoConfig;
+  merchandising: TramoAcuerdoConfig;
 }
 export interface Gasto {
   id: string; categoria: CategoriaGasto; concepto: string; base: BaseGasto;
@@ -118,12 +125,47 @@ export interface EventoAforo {
 export interface Proyeccion {
   id: string; nombre: string; estado: ProyeccionEstado; reunionFecha: string;
   responsables: Responsable[]; comentarios: Comentario[];
-  eventoAforo: EventoAforo; acuerdo: TramoAcuerdo[]; ajustesEscenarios: AjustesEscenarios;
+  eventoAforo: EventoAforo; acuerdo: AcuerdoConfig; ajustesEscenarios: AjustesEscenarios;
   ticketing: TicketingRelease[]; desglosarPorTicketera: boolean; mesasVip: MesaVip[];
   barrasComidaMerch: BarrasComidaMerchConfig; cajaReal: CajaRealLinea[]; gastos: Gasto[];
   creadoEn: string; actualizadoEn?: string;
 }
 ```
+
+**Corrección tras releer los accessibility snapshots con detalle (`live-proyeccion-acuerdo-snapshot.txt`):** el tab Acuerdo no es una lista libre de tramos — son **5 secciones fijas** (Ticketing, Mesas VIP, Barras, Comida, Merchandising) tras un checkbox maestro "Aplicar acuerdo (si no, el resultado es el 100% del evento)". Cada tramo calcula un **"NUESTRO INGRESO"** derivado, y las fórmulas exactas se verificaron cuadrando al céntimo contra las cifras reales del seed:
+
+```ts
+// bruto de cada tramo (usa datos de ticketing/mesasVip/barrasComidaMerch — ya en el tipo completo)
+totalTicketingBruto = Σ(entradas_i × precio_i)                              // 4600,00€
+totalVipBruto        = Σ(mesas_i × probabilidadPct_i/100 × precio_i)         // 12.790,00€
+asistenciaProyectada = eventoAforo.asistenciaForzada
+  ?? round(totalEntradasTicketing × ajustesEscenarios.multiplicadorBasePct/100) + eventoAforo.invitaciones
+  // 600 × 75% = 450 pax de pago + 50 invitaciones = 500 — Acuerdo usa SIEMPRE el multiplicador Base (no tiene selector propio de escenario)
+totalBarrasBruto = barras.consumicionesHora × eventoAforo.duracionHoras × barras.precioMedio × asistenciaProyectada   // 0.5×6×10×500 = 15.000,00€
+totalComidaBruto = comida.pctQueConsume/100 × comida.ticketMedio × asistenciaProyectada                              // 0.15×15×500 = 1.125,00€
+totalMerchBruto  = merch.pctConversion/100 × merch.precioMedio × asistenciaProyectada                                // 0
+
+// ingreso por tramo
+netoDeIva(bruto, ivaPct) = bruto / (1 + ivaPct/100)
+baseParaTramo(cfg, bruto, ivaPct) = cfg.sobreBase === 'neto' ? netoDeIva(bruto, ivaPct) : bruto
+ingresoTramo(cfg, bruto, ivaPct) =
+  (baseParaTramo(cfg, bruto, ivaPct) - cfg.deduccionFijaEur) × (1 - cfg.deduccionPct/100) × (cfg.nosLlevamosPct/100)
+// Ticketing (100%/Neto/0/0, iva 10%): 4181,82€ · VIP (10%/Neto/0/18, iva 10%): 953,44€
+// Barras (10%/Neto/0/18): 1.118,18€ · Comida (10%/Neto/0/25): 76,70€ · Merch (100%/Neto/0/0): 0,00€
+
+nuestrosIngresos      = Σ ingresoTramo de los 5                              // 6.330,14€
+gastosQueAsumimos     = -Σ(gasto.valor donde gasto.paga === 'nosotros')      // -5.470,00€ (los 7 gastos sembrados son "nosotros")
+beneficioPorAcuerdo   = nuestrosIngresos + gastosQueAsumimos                 // 860,14€
+margenSobreIngresos   = beneficioPorAcuerdo / nuestrosIngresos × 100         // 13.6%
+
+totalNetoEvento       = Σ netoDeIva(bruto_tramo, iva_tramo) de los 5         // 30.468,18€ (100% neto, ignorando el % del acuerdo)
+eventoCompletoBeneficio = totalNetoEvento + gastosQueAsumimos                // 24.998,18€ — "Evento completo: 24.998,18€ (82%)."
+margenEventoCompleto  = round(eventoCompletoBeneficio / totalNetoEvento × 100) // 82%
+```
+
+Esta tarjeta **"Resultado por acuerdo"** (NUESTROS INGRESOS / GASTOS QUE ASUMIMOS / BENEFICIO POR ACUERDO / MARGEN S/INGRESOS + frase "Evento completo") es **compartida** entre Acuerdo y Previsión (se ve idéntica en ambos snapshots) — vive en Fase A porque Acuerdo la necesita, y Previsión (Fase B) la reutiliza tal cual.
+
+La sección **"¿Quién paga cada gasto?"** se agrupa por `categoria`: una cabecera de categoría con su subtotal + un toggle Nosotros/Venue que aplica a **todas** las líneas de esa categoría de golpe, y debajo una fila por `Gasto` (concepto + su propio toggle individual). Pie con dos totales: "Pagamos nosotros" (Σ valor donde paga=nosotros) y "Paga el venue" (Σ valor donde paga=venue).
 
 **Semilla:** una única `Proyeccion` ("PQ @ SLS Barcelona") con todos los valores exactos leídos de `docs/references/herramientas/` (snapshots `.txt` + capturas `.png` + `live-nueva-proyeccion-form-vacio.json` para los defaults de un borrador nuevo). Responsables sembrados: Jack Howell (avatar con foto) y Tony Carrerira (iniciales "TC"). 7 gastos, todos "Nosotros", que suman -5.470,00 €, tal como aparece en `live-info-como-se-calcula.png` / `live-panel-comentarios.png`.
 
@@ -140,7 +182,7 @@ export interface Proyeccion {
 - **`ProyeccionDetailPage`** (`/herramientas/proyecciones/:id`):
   - `ProyeccionHeader`: Volver, nombre, Guardar (controla solo el indicador visual "Cambios sin guardar"/"Guardado", sin lógica de descarte), Estado (4 vías, funcional), Reunión (date input, funcional), Responsables (chips + quitar, funcional; "＋ Añadir" **visible pero inerte**, su picker es Fase C), "Convertir en evento →" (siempre inerte, fuera de alcance de todo el módulo), y "i" / Comentarios / PDF Ventas / PDF Explotación / Excel **visibles con su estilo real pero inertes** (Fase C).
   - `UnderlineTabs` (ya existente en `components/ui`) para Acuerdo / Previsión / Real.
-  - `AcuerdoTab` (única tab funcional): tabla "Acuerdo con el venue/promotor" (los `TramoAcuerdo` sembrados, editables: nombre, NOS LLEVAMOS %, toggle Bruto/Neto, DEDUC. FIJA €, DEDUC. %) + lista "¿Quién paga cada gasto?" (concepto + toggle Nosotros/Venue por cada `Gasto` sembrado, solo lectura del resto de campos — el CRUD completo de Gastos es de Previsión/Fase B).
+  - `AcuerdoTab` (única tab funcional): checkbox "Aplicar acuerdo (si no, el resultado es el 100% del evento)" + 5 secciones fijas Ticketing/Mesas VIP/Barras/Comida/Merchandising (cada una editable: NOS LLEVAMOS %, toggle Bruto/Neto, DEDUC. FIJA €, DEDUC. %, con "NUESTRO INGRESO" calculado en vivo con las fórmulas de la sección 3) + párrafo de ayuda fijo ("Ej. PQ @ SLS: ticketing 100%; barras y VIP 10% sobre bruto tras descontar el % de coste del venue.") + sección "¿Quién paga cada gasto?" (agrupada por categoría: toggle a granel por categoría + toggle por línea, sin CRUD de gastos — eso es Previsión/Fase B) + tarjeta "Resultado por acuerdo" (compartida con Previsión).
   - `PrevisionTabPlaceholder` / `RealTabPlaceholder`: tarjeta simple "Esta vista se construye en la Fase B/C" (mismo patrón que los stubs de Mixmag/TAGMAG en Home v2).
 
 ---
