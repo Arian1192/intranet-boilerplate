@@ -20,7 +20,7 @@ function renderShell(initialEntry = '/herramientas') {
 describe('HerramientasShell', () => {
   it('renders module tabs', () => {
     renderShell();
-    expect(screen.getByRole('link', { name: 'Herramientas' })).toBeInTheDocument();
+    expect(screen.getAllByRole('link', { name: 'Herramientas' })).toHaveLength(2);
     expect(screen.getByRole('link', { name: 'Proyecciones' })).toBeInTheDocument();
   });
 

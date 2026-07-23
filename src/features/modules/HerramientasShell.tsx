@@ -12,7 +12,7 @@ const mockUser: User = {
 
 export function HerramientasShell() {
   const tabs = [
-    { label: 'Resumen', href: '/herramientas' },
+    { label: 'Herramientas', href: '/herramientas' },
     { label: 'Proyecciones', href: '/herramientas/proyecciones' },
   ];
   return (
