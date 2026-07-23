@@ -1,0 +1,54 @@
+{
+  "nuevaPlantillaBtn": {
+    "bg": "rgb(68, 68, 76)",
+    "color": "rgb(255, 255, 255)",
+    "radius": "8px",
+    "fontSize": "14px",
+    "fontWeight": "500",
+    "padding": "8px 16px"
+  },
+  "langBadge": null,
+  "editarLink": {
+    "bg": "rgba(0, 0, 0, 0)",
+    "color": "rgb(148, 163, 184)",
+    "radius": "0px",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "padding": "0px"
+  },
+  "cardContainer": null,
+  "guardarConfigBtn": {
+    "bg": "rgb(68, 68, 76)",
+    "color": "rgb(255, 255, 255)",
+    "radius": "8px",
+    "fontSize": "14px",
+    "fontWeight": "500",
+    "padding": "8px 16px"
+  },
+  "desactivarLink": {
+    "bg": "rgba(0, 0, 0, 0)",
+    "color": "rgb(148, 163, 184)",
+    "radius": "0px",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "padding": "0px"
+  },
+  "sectionLabel": null,
+  "periodToggleActive": {
+    "bg": "rgb(68, 68, 76)",
+    "color": "rgb(255, 255, 255)",
+    "radius": "6px",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "padding": "4px 10px"
+  },
+  "warningBanner": {
+    "bg": "rgb(248, 250, 252)",
+    "color": "rgb(30, 41, 59)",
+    "radius": "0px",
+    "border": "0px solid rgb(229, 231, 235)",
+    "padding": "0px"
+  },
+  "statPills": {},
+  "rowStatusChips": {}
+}

@@ -1,0 +1,410 @@
+{
+  "buttons": [
+    {
+      "text": "Team",
+      "tag": "BUTTON",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(71, 85, 105)",
+      "borderRadius": "8px",
+      "fontSize": "14px",
+      "fontWeight": "600",
+      "padding": "4px 8px"
+    },
+    {
+      "text": "9+",
+      "tag": "BUTTON",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(100, 116, 139)",
+      "borderRadius": "8px",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "padding": "0px"
+    },
+    {
+      "text": "Invitar",
+      "tag": "BUTTON",
+      "backgroundColor": "rgb(68, 68, 76)",
+      "color": "rgb(255, 255, 255)",
+      "borderRadius": "8px",
+      "fontSize": "14px",
+      "fontWeight": "500",
+      "padding": "8px 16px"
+    },
+    {
+      "text": "Booker",
+      "tag": "BUTTON",
+      "backgroundColor": "rgb(255, 255, 255)",
+      "color": "rgb(71, 85, 105)",
+      "borderRadius": "9999px",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "padding": "4px 10px"
+    },
+    {
+      "text": "Logística",
+      "tag": "BUTTON",
+      "backgroundColor": "rgb(255, 255, 255)",
+      "color": "rgb(71, 85, 105)",
+      "borderRadius": "9999px",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "padding": "4px 10px"
+    },
+    {
+      "text": "Advancing / Finanzas",
+      "tag": "BUTTON",
+      "backgroundColor": "rgb(255, 255, 255)",
+      "color": "rgb(71, 85, 105)",
+      "borderRadius": "9999px",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "padding": "4px 10px"
+    },
+    {
+      "text": "Marketing",
+      "tag": "BUTTON",
+      "backgroundColor": "rgb(255, 255, 255)",
+      "color": "rgb(71, 85, 105)",
+      "borderRadius": "9999px",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "padding": "4px 10px"
+    },
+    {
+      "text": "Project Manager",
+      "tag": "BUTTON",
+      "backgroundColor": "rgb(255, 255, 255)",
+      "color": "rgb(71, 85, 105)",
+      "borderRadius": "9999px",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "padding": "4px 10px"
+    },
+    {
+      "text": "Todos",
+      "tag": "BUTTON",
+      "backgroundColor": "rgb(246, 246, 247)",
+      "color": "rgb(55, 55, 61)",
+      "borderRadius": "6px",
+      "fontSize": "14px",
+      "fontWeight": "500",
+      "padding": "4px 12px"
+    },
+    {
+      "text": "Internos",
+      "tag": "BUTTON",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(100, 116, 139)",
+      "borderRadius": "6px",
+      "fontSize": "14px",
+      "fontWeight": "500",
+      "padding": "4px 12px"
+    },
+    {
+      "text": "Portales",
+      "tag": "BUTTON",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(100, 116, 139)",
+      "borderRadius": "6px",
+      "fontSize": "14px",
+      "fontWeight": "500",
+      "padding": "4px 12px"
+    },
+    {
+      "text": "Restablecer pwd",
+      "tag": "BUTTON",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(100, 116, 139)",
+      "borderRadius": "0px",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "padding": "0px"
+    },
+    {
+      "text": "Desactivar",
+      "tag": "BUTTON",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(239, 68, 68)",
+      "borderRadius": "0px",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "padding": "0px"
+    },
+    {
+      "text": "Restablecer pwd",
+      "tag": "BUTTON",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(100, 116, 139)",
+      "borderRadius": "0px",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "padding": "0px"
+    }
+  ],
+  "badges": [
+    {
+      "text": "Admin",
+      "tag": "SPAN",
+      "backgroundColor": "rgb(236, 236, 237)",
+      "color": "rgb(55, 55, 61)",
+      "borderRadius": "9999px",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "padding": "2px 10px"
+    },
+    {
+      "text": "🧑‍💼 Team",
+      "tag": "SPAN",
+      "backgroundColor": "rgb(237, 233, 254)",
+      "color": "rgb(109, 40, 217)",
+      "borderRadius": "9999px",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "padding": "2px 10px"
+    },
+    {
+      "text": "Activo",
+      "tag": "SPAN",
+      "backgroundColor": "rgb(209, 250, 229)",
+      "color": "rgb(4, 120, 87)",
+      "borderRadius": "9999px",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "padding": "2px 10px"
+    },
+    {
+      "text": "Interno",
+      "tag": "SPAN",
+      "backgroundColor": "rgb(241, 245, 249)",
+      "color": "rgb(100, 116, 139)",
+      "borderRadius": "9999px",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "padding": "2px 10px"
+    },
+    {
+      "text": "🧑‍💼 Team",
+      "tag": "SPAN",
+      "backgroundColor": "rgb(237, 233, 254)",
+      "color": "rgb(109, 40, 217)",
+      "borderRadius": "9999px",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "padding": "2px 10px"
+    },
+    {
+      "text": "Activo",
+      "tag": "SPAN",
+      "backgroundColor": "rgb(209, 250, 229)",
+      "color": "rgb(4, 120, 87)",
+      "borderRadius": "9999px",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "padding": "2px 10px"
+    },
+    {
+      "text": "Admin",
+      "tag": "SPAN",
+      "backgroundColor": "rgb(236, 236, 237)",
+      "color": "rgb(55, 55, 61)",
+      "borderRadius": "9999px",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "padding": "2px 10px"
+    },
+    {
+      "text": "🧑‍💼 Team",
+      "tag": "SPAN",
+      "backgroundColor": "rgb(237, 233, 254)",
+      "color": "rgb(109, 40, 217)",
+      "borderRadius": "9999px",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "padding": "2px 10px"
+    },
+    {
+      "text": "Activo",
+      "tag": "SPAN",
+      "backgroundColor": "rgb(209, 250, 229)",
+      "color": "rgb(4, 120, 87)",
+      "borderRadius": "9999px",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "padding": "2px 10px"
+    },
+    {
+      "text": "Admin",
+      "tag": "SPAN",
+      "backgroundColor": "rgb(236, 236, 237)",
+      "color": "rgb(55, 55, 61)",
+      "borderRadius": "9999px",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "padding": "2px 10px"
+    },
+    {
+      "text": "🧑‍💼 Team",
+      "tag": "SPAN",
+      "backgroundColor": "rgb(237, 233, 254)",
+      "color": "rgb(109, 40, 217)",
+      "borderRadius": "9999px",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "padding": "2px 10px"
+    },
+    {
+      "text": "Activo",
+      "tag": "SPAN",
+      "backgroundColor": "rgb(209, 250, 229)",
+      "color": "rgb(4, 120, 87)",
+      "borderRadius": "9999px",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "padding": "2px 10px"
+    },
+    {
+      "text": "Admin",
+      "tag": "SPAN",
+      "backgroundColor": "rgb(236, 236, 237)",
+      "color": "rgb(55, 55, 61)",
+      "borderRadius": "9999px",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "padding": "2px 10px"
+    },
+    {
+      "text": "🧑‍💼 Team",
+      "tag": "SPAN",
+      "backgroundColor": "rgb(237, 233, 254)",
+      "color": "rgb(109, 40, 217)",
+      "borderRadius": "9999px",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "padding": "2px 10px"
+    },
+    {
+      "text": "Pendiente",
+      "tag": "SPAN",
+      "backgroundColor": "rgb(254, 243, 199)",
+      "color": "rgb(180, 83, 9)",
+      "borderRadius": "9999px",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "padding": "2px 10px"
+    }
+  ],
+  "tableHeaders": [
+    {
+      "text": "Sección",
+      "tag": "TH",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(148, 163, 184)",
+      "borderRadius": "0px",
+      "fontSize": "11px",
+      "fontWeight": "500",
+      "padding": "6px 12px"
+    },
+    {
+      "text": "Ver",
+      "tag": "TH",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(148, 163, 184)",
+      "borderRadius": "0px",
+      "fontSize": "11px",
+      "fontWeight": "500",
+      "padding": "6px 1px"
+    },
+    {
+      "text": "Editar",
+      "tag": "TH",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(148, 163, 184)",
+      "borderRadius": "0px",
+      "fontSize": "11px",
+      "fontWeight": "500",
+      "padding": "6px 1px"
+    },
+    {
+      "text": "Sección",
+      "tag": "TH",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(148, 163, 184)",
+      "borderRadius": "0px",
+      "fontSize": "11px",
+      "fontWeight": "500",
+      "padding": "6px 12px"
+    },
+    {
+      "text": "Ver",
+      "tag": "TH",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(148, 163, 184)",
+      "borderRadius": "0px",
+      "fontSize": "11px",
+      "fontWeight": "500",
+      "padding": "6px 1px"
+    },
+    {
+      "text": "Editar",
+      "tag": "TH",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(148, 163, 184)",
+      "borderRadius": "0px",
+      "fontSize": "11px",
+      "fontWeight": "500",
+      "padding": "6px 1px"
+    },
+    {
+      "text": "Sección",
+      "tag": "TH",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(148, 163, 184)",
+      "borderRadius": "0px",
+      "fontSize": "11px",
+      "fontWeight": "500",
+      "padding": "6px 12px"
+    },
+    {
+      "text": "Ver",
+      "tag": "TH",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(148, 163, 184)",
+      "borderRadius": "0px",
+      "fontSize": "11px",
+      "fontWeight": "500",
+      "padding": "6px 1px"
+    },
+    {
+      "text": "Editar",
+      "tag": "TH",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(148, 163, 184)",
+      "borderRadius": "0px",
+      "fontSize": "11px",
+      "fontWeight": "500",
+      "padding": "6px 1px"
+    },
+    {
+      "text": "Nombre",
+      "tag": "TH",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(100, 116, 139)",
+      "borderRadius": "0px",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "padding": "12px 16px"
+    }
+  ],
+  "cards": [
+    {
+      "text": "Usuarios de la intranetAlta por invitación, permisos por usu",
+      "tag": "SECTION",
+      "backgroundColor": "rgb(255, 255, 255)",
+      "color": "rgb(30, 41, 59)",
+      "borderRadius": "12px",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "padding": "20px"
+    }
+  ]
+}
