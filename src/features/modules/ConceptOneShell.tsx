@@ -11,10 +11,10 @@ const mockUser: User = {
 
 const tabs = [
   { label: 'Dashboard', href: '/conceptone' },
-  { label: 'Shows', href: '/conceptone/shows' },
-  { label: 'Logística', href: '/conceptone/logistica' },
-  { label: 'Artistas', href: '/conceptone/artistas' },
-  { label: 'Analítica', href: '/conceptone/analitica' },
+  { label: 'Shows', href: '/shows' },
+  { label: 'Calendario', href: '/calendario-c1' },
+  { label: 'Disponibilidad', href: '/disponibilidad' },
+  { label: 'Contactos', href: '/contactos' },
 ];
 
 export function ConceptOneShell() {

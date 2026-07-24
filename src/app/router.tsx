@@ -16,9 +16,9 @@ import { TagmagShell } from '@/features/modules/TagmagShell';
 import { HerramientasShell } from '@/features/modules/HerramientasShell';
 import { BookingDashboardPage } from '@/features/booking/pages/BookingDashboardPage';
 import { ShowsPage } from '@/features/booking/pages/ShowsPage';
-import { LogisticsPage } from '@/features/booking/pages/LogisticsPage';
-import { ArtistsPage } from '@/features/booking/pages/ArtistsPage';
-import { AnalyticsPage } from '@/features/booking/pages/AnalyticsPage';
+import { CalendarioStubPage } from '@/features/booking/pages/CalendarioStubPage';
+import { DisponibilidadStubPage } from '@/features/booking/pages/DisponibilidadStubPage';
+import { ContactosStubPage } from '@/features/booking/pages/ContactosStubPage';
 import { EtraDashboardPage } from '@/features/etra/pages/EtraDashboardPage';
 import { ActionsPage } from '@/features/etra/pages/ActionsPage';
 import { ActionDetailPage } from '@/features/etra/pages/ActionDetailPage';
@@ -50,12 +50,12 @@ export function AppRouter() {
     <Routes>
       <Route path="/login" element={<LoginPage />} />
       <Route path="/" element={<DashboardPage />} />
-      <Route path="/conceptone" element={<ConceptOneShell />}>
-        <Route index element={<BookingDashboardPage />} />
-        <Route path="shows" element={<ShowsPage />} />
-        <Route path="logistica" element={<LogisticsPage />} />
-        <Route path="artistas" element={<ArtistsPage />} />
-        <Route path="analitica" element={<AnalyticsPage />} />
+      <Route element={<ConceptOneShell />}>
+        <Route path="/conceptone" element={<BookingDashboardPage />} />
+        <Route path="/shows" element={<ShowsPage />} />
+        <Route path="/calendario-c1" element={<CalendarioStubPage />} />
+        <Route path="/disponibilidad" element={<DisponibilidadStubPage />} />
+        <Route path="/contactos" element={<ContactosStubPage />} />
       </Route>
       <Route path="/etra" element={<EtraShell />}>
         <Route index element={<EtraDashboardPage />} />
