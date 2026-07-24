@@ -8,10 +8,13 @@ interface Props {
   proyeccion: Proyeccion;
   escenario: Escenario;
   onUpdate: (patch: Partial<Proyeccion>) => void;
+  /** 'real' añade la columna MESAS REAL y calcula el total con mesas ejecutadas (Fase C). */
+  modo?: 'prevision' | 'real';
 }
 
-export function MesasVipTable({ proyeccion, escenario: _escenario, onUpdate }: Props) {
+export function MesasVipTable({ proyeccion, escenario: _escenario, onUpdate, modo = 'prevision' }: Props) {
   const { mesasVip, acuerdo, eventoAforo } = proyeccion;
+  const esReal = modo === 'real';
 
   const setMesasVip = (next: MesaVip[]) => onUpdate({ mesasVip: next });
 
@@ -26,9 +29,11 @@ export function MesasVipTable({ proyeccion, escenario: _escenario, onUpdate }: P
     setMesasVip([...mesasVip, nueva]);
   };
 
-  const total = vipBruto(mesasVip);
-  // Bruto VIP NO se escala por escenario (ver spec §3.3) — "Por acuerdo" es constante
-  // sea cual sea el escenario seleccionado en la Previsión.
+  // Previsión: bruto = Σ mesas × prob% × precio (no escala por escenario, spec §3.3).
+  // Real: bruto = Σ mesasReal × precio (mesas realmente vendidas, sin probabilidad).
+  const total = esReal
+    ? mesasVip.reduce((a, z) => a + (z.mesasReal ?? 0) * z.precio, 0)
+    : vipBruto(mesasVip);
   const porAcuerdo = ingresoTramo(acuerdo.mesasVip, total, eventoAforo.ivaBarrasComidaVipPct);
 
   const inputClass = 'h-9 w-full rounded-lg border border-slate-200 px-2 text-sm';
@@ -45,7 +50,7 @@ export function MesasVipTable({ proyeccion, escenario: _escenario, onUpdate }: P
         <span className="col-span-2">Mesas</span>
         <span className="col-span-2">Prob. %</span>
         <span className="col-span-2">Precio €</span>
-        <span className="col-span-2">Facturación</span>
+        {esReal ? <span className="col-span-2">Mesas real</span> : <span className="col-span-2">Facturación</span>}
         <span className="col-span-1" />
       </div>
 
@@ -79,9 +84,19 @@ export function MesasVipTable({ proyeccion, escenario: _escenario, onUpdate }: P
             onChange={(e) => patchRow(z.id, { precio: Number(e.target.value) })}
             className={`col-span-2 ${inputClass}`}
           />
-          <span className="col-span-2 text-sm font-medium text-slate-800">
-            {formatCurrency(z.mesas * (z.probabilidadPct / 100) * z.precio)}
-          </span>
+          {esReal ? (
+            <input
+              type="number"
+              aria-label="Mesas real"
+              value={z.mesasReal ?? 0}
+              onChange={(e) => patchRow(z.id, { mesasReal: Number(e.target.value) })}
+              className={`col-span-2 ${inputClass}`}
+            />
+          ) : (
+            <span className="col-span-2 text-sm font-medium text-slate-800">
+              {formatCurrency(z.mesas * (z.probabilidadPct / 100) * z.precio)}
+            </span>
+          )}
           <div className="col-span-1 flex justify-end">
             <button type="button" aria-label="×" onClick={() => borrar(z.id)}>×</button>
           </div>

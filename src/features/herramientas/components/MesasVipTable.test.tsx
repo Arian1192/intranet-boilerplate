@@ -21,6 +21,20 @@ function Wrapper({ onUpdate, escenario = 'base' as const }: { onUpdate: (patch: 
   );
 }
 
+describe('MesasVipTable modo real', () => {
+  it('modo="real": añade MESAS REAL y total real 0,00€ (mesasReal 0)', () => {
+    render(<MesasVipTable proyeccion={seedProyecciones[0]} escenario="base" modo="real" onUpdate={vi.fn()} />);
+    expect(screen.getByText(/^mesas real$/i)).toBeInTheDocument();
+    // total real y "por acuerdo" real = 0,00€ (getAll: aparece más de una vez)
+    expect(screen.getAllByText(/^0,00\s?€$/).length).toBeGreaterThan(0);
+  });
+
+  it('modo="prevision" (default) no muestra MESAS REAL', () => {
+    render(<MesasVipTable proyeccion={seedProyecciones[0]} escenario="base" onUpdate={vi.fn()} />);
+    expect(screen.queryByText(/^mesas real$/i)).not.toBeInTheDocument();
+  });
+});
+
 describe('MesasVipTable', () => {
   it('renders las 3 zonas del seed con su facturación y el total 12.790,00€ / Por acuerdo 953,44€', () => {
     render(<MesasVipTable proyeccion={seedProyecciones[0]} escenario="base" onUpdate={vi.fn()} />);
