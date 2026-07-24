@@ -121,6 +121,8 @@ Izquierda→derecha en una fila con separadores: **fecha** (o "—") · **códig
 ### 4.4 Ayuda contextual (copy del live, minor)
 Dos textos de ayuda ("?"): *"El fee va en la moneda del deal — Si el acuerdo es en dólares, se guarda en dólares y se convierte con el tipo de cambio del show…"* y *"Cerrar gastos es lo que congela la liquidación — Mientras no cierres gastos, la cifra sigue moviéndose…"*. Incluir como tooltip/popover del icono "?" si aparece en la toolbar del live; si el spacing no lo justifica, omitir y documentar (delta menor).
 
+> **Delta de cierre Fase B (resuelto):** el recon (`c1-shows.png`) confirma que esos dos textos **no** están en la toolbar de Shows como un icono "?", sino dentro del **panel de Ayuda global** (widget "ConceptOne" inferior-izquierdo con "Reportar con captura" / "Mis avisos"), que es global a la app y ya existe. Por tanto **se omite** el tooltip "?" en la toolbar de Shows (no se inventa UI que el live no tiene ahí). Delta menor consciente, sin impacto funcional. La fidelidad fina del panel de Ayuda se verifica en su propio ámbito, no en Fase B.
+
 ---
 
 ## 5. Comportamiento (filtrado)
