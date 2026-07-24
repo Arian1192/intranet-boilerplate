@@ -55,4 +55,16 @@ describe('ShowsPage', () => {
     fireEvent.click(screen.getByRole('button', { name: 'Filtros' }));
     expect((screen.getByLabelText('Etapa') as HTMLSelectElement).value).toBe('confirmed');
   });
+
+  it('el rango por defecto muestra los 14 y "Hasta hoy" recorta a los no-futuros', async () => {
+    renderShows();
+    await screen.findByText('C1-2026-006');
+    expect(screen.getByText('14 shows')).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: /Última semana → Todo el futuro/ }));
+    fireEvent.change(screen.getByLabelText('Hasta'), { target: { value: 'hasta-hoy' } });
+    // 18/18/21 jul dentro + el de fecha null; 25 jul en adelante fuera
+    expect(screen.getByText('4 shows')).toBeInTheDocument();
+    expect(screen.getByText('C1-2026-007')).toBeInTheDocument(); // date null se mantiene
+    expect(screen.queryByText('C1-2026-014')).not.toBeInTheDocument(); // 25 jul fuera
+  });
 });

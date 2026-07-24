@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { useSearchParams } from 'react-router';
-import { ShowCard, ShowsToolbar, FiltrosDrawer } from '@/features/booking/components';
+import { ShowCard, ShowsToolbar, FiltrosDrawer, RangoPopover } from '@/features/booking/components';
 import type { ShowsFiltros } from '@/features/booking/components';
 import type { Show, ShowStatus } from '@/types';
 import { useShows } from '../hooks/useShows';
+import { dentroDeRango, desdeLabel, hastaLabel, rangoPorDefecto, type Rango } from '../data/rango';
 
 const validStatuses: ShowStatus[] = [
   'tentative',
@@ -34,6 +35,8 @@ export function ShowsPage() {
   const [searchParams] = useSearchParams();
   const [query, setQuery] = useState('');
   const [filtrosAbierto, setFiltrosAbierto] = useState(false);
+  const [rangoAbierto, setRangoAbierto] = useState(false);
+  const [rango, setRango] = useState<Rango>(rangoPorDefecto);
   const [filtros, setFiltros] = useState<ShowsFiltros>(() => {
     const status = searchParams.get('status');
     return isShowStatus(status) ? { ...filtrosVacios, etapa: status } : filtrosVacios;
@@ -42,6 +45,7 @@ export function ShowsPage() {
   const shownShows = shows.filter(
     (show) =>
       matchesQuery(show, query) &&
+      dentroDeRango(show.date, rango) &&
       (!filtros.etapa || show.etapa === filtros.etapa) &&
       (!filtros.fase || show.fase === filtros.fase) &&
       (!filtros.pago || show.paymentStatus === filtros.pago) &&
@@ -58,14 +62,22 @@ export function ShowsPage() {
 
   return (
     <div>
-      <ShowsToolbar
-        count={shownShows.length}
-        query={query}
-        onQueryChange={setQuery}
-        rangoLabel="Última semana → Todo el futuro"
-        onToggleRango={() => {}}
-        onOpenFiltros={() => setFiltrosAbierto(true)}
-      />
+      <div className="relative">
+        <ShowsToolbar
+          count={shownShows.length}
+          query={query}
+          onQueryChange={setQuery}
+          rangoLabel={`${desdeLabel(rango.desde)} → ${hastaLabel(rango.hasta)}`}
+          onToggleRango={() => setRangoAbierto((v) => !v)}
+          onOpenFiltros={() => setFiltrosAbierto(true)}
+        />
+        <RangoPopover
+          abierto={rangoAbierto}
+          rango={rango}
+          onChange={setRango}
+          onClose={() => setRangoAbierto(false)}
+        />
+      </div>
       <div className="overflow-hidden rounded-xl border border-slate-100 bg-white shadow-sm">
         {shownShows.map((show) => (
           <ShowCard key={show.id} show={show} />
