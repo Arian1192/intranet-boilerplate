@@ -365,15 +365,18 @@ it('muestra los 5 KPIs reales del live (677,27 / -5470 / -4792,73 / -707.7% / 13
 
 ---
 
-### Task 7: `personas.ts` + `ResponsablesPicker`
+### Task 7: `personas.ts` (evidencia del live) + `ResponsablesPicker`
 
 **Files:**
 - Create: `src/features/herramientas/data/personas.ts`
 - Create: `src/features/herramientas/components/ResponsablesPicker.tsx`
 - Create: `src/features/herramientas/components/ResponsablesPicker.test.tsx`
+- Add (evidencia): `docs/references/herramientas/live-picker-responsables-full.png`
 
 **Interfaces:**
-- `personas.ts`: `export const personasDisponibles: Responsable[]` (pool local, spec D4 — nombres cortos del live: Alba Gelabert, Aldo Messina, Alex González, Carlos Pego, Fran Hinojosa Veredas, Israel Cuenca, Jack Howell, Tony Carrerira, …; cada uno `{ id, nombre, iniciales }`). `export function buscarPersonas(query: string): Responsable[]`.
+- `personas.ts`: `export const personasDisponibles: Responsable[]` (pool local, spec D4 — **lista EXACTA capturada del live**, mismos nombres y orden; cada uno `{ id, nombre, iniciales }`). `export function buscarPersonas(query: string): Responsable[]`.
+
+- [ ] **Step 0 (D4 — re-captura SOLO LECTURA, ANTES de sembrar):** con el script Playwright del proyecto (patrón de la re-captura de la tab Real), loguear `test@blackmoose.es` en `https://bookings.conceptoneagency.com`, abrir la proyección, pulsar **"＋ Añadir"** (abre el desplegable — acción de solo-lectura, no muta nada), y **extraer del DOM la lista completa de personas (nombres + orden + iniciales)** además de un screenshot `live-picker-responsables-full.png`. **NO** seleccionar a nadie, **NO** guardar, cerrar con Escape. Sembrar `personas.ts` con esa lista exacta (respetando el orden del live y marcando iniciales tal como las muestra). Commit del PNG + `personas.ts` puede ir junto al resto de la Task.
 - `ResponsablesPicker({ asignados: Responsable[], onAdd: (r: Responsable) => void, onClose: () => void })`: `Input` "Buscar persona…" + lista; asignados con "✓" y no clicables; clic en no asignado → `onAdd`.
 
 - [ ] **Step 1: Test (fallará)**
@@ -499,26 +502,32 @@ it('muestra el título y las 6 secciones; "×" cierra', () => {
 
 ---
 
-### Task 11: Exports en MOCK FIEL (delta consciente D5)
+### Task 11: Exports = BOTONES INERTES (delta consciente D5)
 
 **Files:**
 - Modify: `src/features/herramientas/components/ProyeccionToolbar.tsx`
 - Modify: `src/features/herramientas/components/ProyeccionToolbar.test.tsx`
 
-**Interfaces:** los 3 botones (PDF Ventas / PDF Explotación / Excel) presentes e idénticos; al pulsarlos, muestran un aviso efímero inline "Próximamente" con `aria-live="polite"` (no generan fichero). Sin libs nuevas.
+**Interfaces (D5, decisión de Arian):** los 3 botones (PDF Ventas / PDF Explotación / Excel) presentes e **idénticos al live** en posición/etiqueta/icono, **sin `onClick` / sin acción al pulsar** (cero ruido). **NO** se añade aviso "Próximamente" ni feedback alguno — el live no lo muestra y prima la fidelidad al píxel. En la práctica esta Task es sobre todo **verificación**: si en Task 8 la toolbar ya renderiza los 3 botones inertes, aquí solo se asegura el test y el comentario del delta.
 
-- [ ] **Step 1: Test (fallará)**
+- [ ] **Step 1: Test (fallará si aún no están los 3 botones inertes)**
 ```ts
-it('pulsar un export muestra "Próximamente" (mock, no genera fichero)', () => {
+it('renderiza los 3 exports inertes (presentes, sin acción — delta consciente D5)', () => {
   render(<ProyeccionToolbar proyeccion={seedProyecciones[0]} {...noopHandlers} />);
-  fireEvent.click(screen.getByText('Excel'));
-  expect(screen.getByText('Próximamente')).toBeInTheDocument();
+  for (const label of ['PDF Ventas', 'PDF Explotación', 'Excel']) {
+    const btn = screen.getByText(label);
+    expect(btn).toBeInTheDocument();
+    // inerte: pulsarlos no cambia nada ni lanza (sin onClick)
+    fireEvent.click(btn);
+  }
+  // no aparece ningún aviso tipo "Próximamente" (el live no lo muestra)
+  expect(screen.queryByText(/Próximamente/i)).not.toBeInTheDocument();
 });
 ```
-- [ ] **Step 2: Ejecutar → falla.**
-- [ ] **Step 3: Implementar** estado local `avisoExport` en la toolbar; los 3 `onClick` lo activan (con un `setTimeout` para autocierre opcional — o botón de descarte); render de un `<span role="status" aria-live="polite">Próximamente</span>`. Documentar en el código el delta MOCK (comentario que apunta a spec D5).
+- [ ] **Step 2: Ejecutar → verificar (falla solo si faltan botones o hay aviso).**
+- [ ] **Step 3: Implementar/ajustar** en `ProyeccionToolbar.tsx`: los 3 `Button variant="secondary" size="sm"` **sin `onClick`**. Añadir un comentario que documente el delta: `{/* Exports en mock (D5): botones fieles al live pero inertes; sin generar fichero ni aviso. Ver spec §7. */}`.
 - [ ] **Step 4: Ejecutar → verde.**
-- [ ] **Step 5: Commit** `feat(herramientas): exports en mock fiel (aviso "Próximamente", sin generar fichero)`
+- [ ] **Step 5: Commit** `feat(herramientas): exports fieles al live pero inertes (delta consciente D5)`
 
 ---
 
