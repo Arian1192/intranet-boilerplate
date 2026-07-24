@@ -35,7 +35,11 @@ export function CalendarioPage() {
         <MonthGrid year={year} month={month} events={events} />
       </div>
 
-      <DayAgenda events={events} />
+      {events.length === 0 ? (
+        <p className="mt-8 py-12 text-center text-sm text-slate-400">Sin shows ni holds este mes.</p>
+      ) : (
+        <DayAgenda events={events} />
+      )}
     </div>
   );
 }

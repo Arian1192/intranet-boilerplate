@@ -34,4 +34,11 @@ describe('CalendarioPage', () => {
     fireEvent.click(screen.getByRole('button', { name: /anterior/i }));
     expect(screen.getByText('Julio 2026')).toBeInTheDocument();
   });
+
+  it('un mes sin eventos (junio 2026) muestra el estado vacío', () => {
+    render(<CalendarioPage />);
+    fireEvent.click(screen.getByRole('button', { name: /anterior/i })); // julio → junio
+    expect(screen.getByText('Junio 2026')).toBeInTheDocument();
+    expect(screen.getByText('Sin shows ni holds este mes.')).toBeInTheDocument();
+  });
 });
