@@ -12,3 +12,5 @@ export * from './AgendaHoldCard';
 export * from './DayAgenda';
 export * from './EstiloChips';
 export * from './MensajeDisponibilidad';
+export * from './VenueCard';
+export * from './EmpresaRow';

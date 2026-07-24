@@ -3,16 +3,6 @@ import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { MemoryRouter } from 'react-router';
 import { ConceptOneShell } from '@/features/modules/ConceptOneShell';
-import { ContactosStubPage } from './index';
-
-describe('ConceptOne stubs', () => {
-  it.each([
-    [ContactosStubPage, 'Contactos'],
-  ])('cada stub muestra su título', (Stub, name) => {
-    render(<MemoryRouter><Stub /></MemoryRouter>);
-    expect(screen.getByRole('heading', { name })).toBeInTheDocument();
-  });
-});
 
 describe('ConceptOneShell (tabs planas)', () => {
   it('muestra las 5 tabs del live y ninguna de las viejas', () => {

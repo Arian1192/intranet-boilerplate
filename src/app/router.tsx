@@ -18,7 +18,7 @@ import { BookingDashboardPage } from '@/features/booking/pages/BookingDashboardP
 import { ShowsPage } from '@/features/booking/pages/ShowsPage';
 import { CalendarioPage } from '@/features/booking/pages/CalendarioPage';
 import { DisponibilidadPage } from '@/features/booking/pages/DisponibilidadPage';
-import { ContactosStubPage } from '@/features/booking/pages/ContactosStubPage';
+import { ContactosPage } from '@/features/booking/pages/ContactosPage';
 import { EtraDashboardPage } from '@/features/etra/pages/EtraDashboardPage';
 import { ActionsPage } from '@/features/etra/pages/ActionsPage';
 import { ActionDetailPage } from '@/features/etra/pages/ActionDetailPage';
@@ -55,7 +55,7 @@ export function AppRouter() {
         <Route path="/shows" element={<ShowsPage />} />
         <Route path="/calendario-c1" element={<CalendarioPage />} />
         <Route path="/disponibilidad" element={<DisponibilidadPage />} />
-        <Route path="/contactos" element={<ContactosStubPage />} />
+        <Route path="/contactos" element={<ContactosPage />} />
       </Route>
       <Route path="/etra" element={<EtraShell />}>
         <Route index element={<EtraDashboardPage />} />
