@@ -91,13 +91,40 @@ export interface BookingDashboard {
   upcomingShows: ShowSummary[];
 }
 
+export type DealType = 'All In' | 'Landed' | '+++';
+export type PaymentStatus =
+  | 'No abonado'
+  | 'Parcialmente abonado'
+  | 'Pendiente liquidar'
+  | 'Liquidado'
+  | 'Incidencia';
+export type ArtStatus = 'Arte no subido' | 'Arte pendiente' | 'Arte subido';
+export type ShowFase =
+  | 'tentative'
+  | 'confirmed'
+  | 'contract'
+  | 'pagos'
+  | 'liquidacion'
+  | 'liquidado'
+  | 'cancelado';
+
 export interface Show {
   id: string;
-  name: string;
-  client: string;
-  date: string;
-  status: ShowStatus;
-  amount: number;
+  code: string;
+  date: string | null;
+  artist: string;
+  event: string;
+  venue: string | null;
+  country: string | null;
+  etapa: ShowStatus;
+  fase: ShowFase;
+  dealType: DealType;
+  fee: number;
+  bf: number;
+  mf: number;
+  paymentStatus: PaymentStatus;
+  artStatus: ArtStatus;
+  exception: boolean;
 }
 
 export interface LogisticsItem {

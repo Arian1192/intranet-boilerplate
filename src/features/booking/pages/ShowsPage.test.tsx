@@ -1,29 +1,32 @@
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router';
-import { describe, expect, it, vi } from 'vitest';
+import { describe, expect, it } from 'vitest';
+import { RepositoryProvider, MockRepository } from '@/repositories';
 import { ShowsPage } from './ShowsPage';
 
-vi.mock('../hooks/useShows', () => ({
-  useShows: () => ({
-    isLoading: false,
-    error: null,
-    shows: [
-      { id: 's1', name: 'Show confirmado', client: 'Cliente A', date: '15 jul 2026', status: 'confirmed', amount: 3500 },
-      { id: 's2', name: 'Show contrato', client: 'Cliente B', date: '18 jul 2026', status: 'contract', amount: 800 },
-    ],
-  }),
-}));
-
-describe('ShowsPage', () => {
-  it('filters shows by the status query parameter', () => {
-    render(
-      <MemoryRouter initialEntries={['/conceptone/shows?status=contract']}>
+function renderShows(path = '/shows') {
+  return render(
+    <RepositoryProvider repository={new MockRepository()}>
+      <MemoryRouter initialEntries={[path]}>
         <ShowsPage />
       </MemoryRouter>
-    );
+    </RepositoryProvider>
+  );
+}
 
-    expect(screen.getByText('Show contrato')).toBeInTheDocument();
-    expect(screen.queryByText('Show confirmado')).not.toBeInTheDocument();
+describe('ShowsPage', () => {
+  it('renderiza los 14 shows del live', async () => {
+    renderShows();
+    expect(await screen.findByText('C1-2026-006')).toBeInTheDocument();
+    expect(screen.getByText('14 shows')).toBeInTheDocument();
+    expect(screen.getByText('C1-2026-007')).toBeInTheDocument();
+  });
+
+  it('el deep-link ?status=confirmed muestra solo los shows de etapa confirmada', async () => {
+    renderShows('/shows?status=confirmed');
+    expect(await screen.findByText('6 shows')).toBeInTheDocument();
+    expect(screen.getByText('C1-2026-006')).toBeInTheDocument();
+    expect(screen.queryByText('C1-2026-012')).not.toBeInTheDocument(); // tentative queda fuera
   });
 });

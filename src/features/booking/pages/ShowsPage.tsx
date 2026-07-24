@@ -1,5 +1,5 @@
 import { useSearchParams } from 'react-router';
-import { DataTable } from '@/features/booking/components';
+import { ShowCard } from '@/features/booking/components';
 import type { ShowStatus } from '@/types';
 import { useShows } from '../hooks/useShows';
 
@@ -21,8 +21,8 @@ export function ShowsPage() {
   const { shows, isLoading, error } = useShows();
   const [searchParams] = useSearchParams();
   const selectedStatus = searchParams.get('status');
-  const filteredShows = isShowStatus(selectedStatus)
-    ? shows.filter((show) => show.status === selectedStatus)
+  const shownShows = isShowStatus(selectedStatus)
+    ? shows.filter((show) => show.etapa === selectedStatus)
     : shows;
 
   if (isLoading) {
@@ -34,9 +34,16 @@ export function ShowsPage() {
   }
 
   return (
-    <div className="space-y-6">
+    <div>
       <h1 className="text-2xl font-semibold text-slate-900">Shows</h1>
-      <DataTable shows={filteredShows} />
+      <p className="mb-5 mt-1 text-sm text-slate-400">
+        {shownShows.length} {shownShows.length === 1 ? 'show' : 'shows'}
+      </p>
+      <div className="overflow-hidden rounded-xl border border-slate-100 bg-white shadow-sm">
+        {shownShows.map((show) => (
+          <ShowCard key={show.id} show={show} />
+        ))}
+      </div>
     </div>
   );
 }

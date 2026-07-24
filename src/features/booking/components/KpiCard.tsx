@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router';
 import { formatCurrency } from '@/lib/format';
 import type { Kpi } from '@/types';
+import { etapaLabel } from '../data/etapaLabels';
 
 export interface KpiCardProps {
   kpi: Kpi;
@@ -16,19 +17,9 @@ const statusStyles: Record<Kpi['status'], string> = {
   done: 'bg-emerald-600',
 };
 
-const statusLabels: Record<Kpi['status'], string> = {
-  tentative: 'Tentative',
-  offer: 'Oferta',
-  confirmed: 'Confirmado',
-  contract: 'Contrato',
-  'pending-payment': 'Pendiente cobro',
-  'pending-settlement': 'Pendiente liquidar',
-  done: 'Liquidado',
-};
-
 export function KpiCard({ kpi }: KpiCardProps) {
   const navigate = useNavigate();
-  const label = statusLabels[kpi.status];
+  const label = etapaLabel(kpi.status);
 
   return (
     <button

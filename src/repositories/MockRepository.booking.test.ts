@@ -21,11 +21,24 @@ describe('MockRepository booking', () => {
     expect(data.upcomingShows.length).toBeGreaterThan(0);
   });
 
-  it('returns shows', async () => {
+  it('getShows devuelve los 14 shows del live con datos exactos', async () => {
     const repo = new MockRepository();
     const shows = await repo.getShows();
-    expect(shows.length).toBeGreaterThan(0);
-    expect(shows[0].amount).toBeDefined();
+    expect(shows).toHaveLength(14);
+    const s6 = shows.find((s) => s.code === 'C1-2026-006')!;
+    expect(s6).toMatchObject({
+      artist: 'Los Canarios', event: 'FUEGO', etapa: 'confirmed', fase: 'confirmed',
+      dealType: 'Landed', fee: 3000, bf: 600, mf: 449.58, paymentStatus: 'No abonado',
+      artStatus: 'Arte no subido', exception: true,
+    });
+    const s5 = shows.find((s) => s.code === 'C1-2026-005')!;
+    expect(s5).toMatchObject({ fase: 'liquidado', etapa: 'done', venue: null, country: null, paymentStatus: 'Parcialmente abonado' });
+    const s7 = shows.find((s) => s.code === 'C1-2026-007')!;
+    expect(s7).toMatchObject({ fase: 'tentative', etapa: 'tentative', date: null });
+    // fase por evidencia (spec §3.1)
+    const fasePorCodigo = Object.fromEntries(shows.map((s) => [s.code, s.fase]));
+    expect(fasePorCodigo['C1-2026-014']).toBe('liquidado');
+    expect(fasePorCodigo['C1-2026-011']).toBe('confirmed');
   });
 
   it('returns artists', async () => {
