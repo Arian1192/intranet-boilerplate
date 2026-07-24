@@ -118,13 +118,6 @@ export interface EventoAforo {
   asistenciaForzada?: number;
 }
 
-/** Resultado real de la tab Real. Fase A/B lo tratan como constante verificada del
- * live (mismo motivo que `acuerdoBrutos`); Fase C lo calculará de verdad a partir de
- * `cajaReal` + entradas/mesas reales. */
-export interface ResultadoReal {
-  beneficioNeto: number;
-}
-
 export interface Proyeccion {
   id: string;
   nombre: string;
@@ -141,7 +134,6 @@ export interface Proyeccion {
   barrasComidaMerch: BarrasComidaMerchConfig;
   cajaReal: CajaRealLinea[];
   gastos: Gasto[];
-  resultadoReal: ResultadoReal | null;
   creadoEn: string;
   actualizadoEn?: string;
 }

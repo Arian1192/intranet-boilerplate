@@ -42,7 +42,6 @@ export function createBlankProyeccion(): Proyeccion {
     },
     cajaReal: [],
     gastos: [],
-    resultadoReal: null,
     creadoEn: new Date().toISOString(),
   };
 }

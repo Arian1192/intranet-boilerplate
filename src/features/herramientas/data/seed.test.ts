@@ -55,10 +55,6 @@ describe('seedProyecciones', () => {
     expect(porCategoria).toEqual({ Artística: 2400, Promoción: 1500, Publicidad: 1300, Staff: 270 });
   });
 
-  it('resultadoReal guarda la cifra real observada del live (Fase C la recalculará)', () => {
-    expect(p.resultadoReal).toEqual({ beneficioNeto: -4792.73 });
-  });
-
   it('ticketing y mesasVip guardan las filas observadas (para Fase B)', () => {
     expect(p.ticketing.length).toBe(7);
     expect(p.ticketing[0]).toEqual({ id: 'tk-1', orden: 0, release: 'Early Access - acceso antes de las 7:30pm', entradas: 100, precio: 8, entradasReal: 20 });

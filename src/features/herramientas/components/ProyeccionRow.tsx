@@ -4,6 +4,7 @@ import { cn } from '@/lib/utils';
 import { formatCurrency } from '@/lib/format';
 import { calcularResultadoAcuerdo } from '../data/calculos-acuerdo';
 import { calcularBrutosEscenario } from '../data/calculos-escenarios';
+import { calcularResultadoReal, tieneDatosReal } from '../data/calculos-real';
 import type { Proyeccion, ProyeccionEstado } from '../data/types';
 
 const ESTADO_LABEL: Record<ProyeccionEstado, string> = {
@@ -33,12 +34,13 @@ export function ProyeccionRow({ proyeccion, onDuplicate, onDelete }: Props) {
     proyeccion.eventoAforo,
     proyeccion.gastos
   );
+  const real = calcularResultadoReal(proyeccion);
 
   return (
     <div className="group flex items-center justify-between gap-4 border-b border-slate-100 px-4 py-4 last:border-0">
       <Link to={`/herramientas/proyecciones/${proyeccion.id}`} className="flex flex-1 items-center gap-3">
         <span className="font-semibold text-slate-900">{proyeccion.nombre}</span>
-        {proyeccion.resultadoReal && <Badge variant="sky">Real</Badge>}
+        {tieneDatosReal(proyeccion) && <Badge variant="sky">Real</Badge>}
         <Badge variant={ESTADO_VARIANT[proyeccion.estado]}>{ESTADO_LABEL[proyeccion.estado]}</Badge>
         <span className="text-sm text-slate-400">
           {proyeccion.eventoAforo.fecha || 'sin fecha'} · actualizado {proyeccion.actualizadoEn ?? '—'}
@@ -51,8 +53,8 @@ export function ProyeccionRow({ proyeccion, onDuplicate, onDelete }: Props) {
         </div>
         <div className="text-right">
           <p className="text-xs text-slate-400">REAL</p>
-          <p className={cn('font-semibold', (proyeccion.resultadoReal?.beneficioNeto ?? 0) < 0 ? 'text-red-600' : 'text-emerald-600')}>
-            {proyeccion.resultadoReal ? formatCurrency(proyeccion.resultadoReal.beneficioNeto) : '—'}
+          <p className={cn('font-semibold', (real?.beneficioPorAcuerdo ?? 0) < 0 ? 'text-red-600' : 'text-emerald-600')}>
+            {real ? formatCurrency(real.beneficioPorAcuerdo) : '—'}
           </p>
         </div>
         <div className="hidden items-center gap-2 group-hover:flex">

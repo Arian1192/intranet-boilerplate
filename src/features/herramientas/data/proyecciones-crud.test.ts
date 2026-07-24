@@ -15,7 +15,7 @@ describe('createBlankProyeccion', () => {
     expect(p.ajustesEscenarios).toEqual({
       multiplicadorPesimistaPct: 75, multiplicadorBasePct: 100, multiplicadorOptimistaPct: 115, viasBreakeven: [],
     });
-    expect(p.resultadoReal).toBeNull();
+    expect(p.cajaReal).toEqual([]);
   });
 
   it('cada llamada produce un id distinto', () => {

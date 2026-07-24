@@ -67,8 +67,6 @@ export const seedProyecciones: Proyeccion[] = [
       { id: 'gasto-6', categoria: 'Publicidad', concepto: 'Inversión Meta', base: 'importe_fijo', valor: 1000, paga: 'nosotros' },
       { id: 'gasto-7', categoria: 'Publicidad', concepto: 'Euphoric Media Fee', base: 'importe_fijo', valor: 300, paga: 'nosotros' },
     ],
-    // Ver nota de fidelidad: cifra real observada, Fase C la calculará de verdad.
-    resultadoReal: { beneficioNeto: -4792.73 },
     creadoEn: '2026-06-01T00:00:00.000Z',
   },
 ];

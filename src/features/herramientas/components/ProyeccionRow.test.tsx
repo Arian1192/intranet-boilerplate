@@ -33,8 +33,13 @@ describe('ProyeccionRow', () => {
     expect(onDelete).toHaveBeenCalledWith(proyeccion.id);
   });
 
-  it('no muestra el badge "Real" ni la columna REAL si resultadoReal es null', () => {
-    const sinReal = { ...proyeccion, resultadoReal: null };
+  it('no muestra el badge "Real" ni la cifra REAL si no hay datos reales', () => {
+    const sinReal = {
+      ...proyeccion,
+      ticketing: proyeccion.ticketing.map((r) => ({ ...r, entradasReal: undefined })),
+      mesasVip: proyeccion.mesasVip.map((z) => ({ ...z, mesasReal: undefined })),
+      cajaReal: [],
+    };
     render(<MemoryRouter><ProyeccionRow proyeccion={sinReal} onDuplicate={vi.fn()} onDelete={vi.fn()} /></MemoryRouter>);
     expect(screen.queryByText('Real')).not.toBeInTheDocument();
     expect(screen.getByText('—')).toBeInTheDocument();
