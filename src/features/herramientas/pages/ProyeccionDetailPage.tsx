@@ -5,6 +5,7 @@ import { useProyecciones } from '../data/proyecciones-context';
 import { ProyeccionToolbar } from '../components/ProyeccionToolbar';
 import { ProyeccionEstadoCard } from '../components/ProyeccionEstadoCard';
 import { ComentariosPanel } from '../components/ComentariosPanel';
+import { InfoComoSeCalcula } from '../components/InfoComoSeCalcula';
 import { AcuerdoTab } from '../components/AcuerdoTab';
 import { PrevisionTab } from '../components/PrevisionTab';
 import { RealTab } from '../components/RealTab';
@@ -68,7 +69,7 @@ export function ProyeccionDetailPage() {
       )}
       <ProyeccionEstadoCard proyeccion={proyeccion} onUpdate={handleUpdate} />
       <UnderlineTabs options={TAB_OPTIONS} value={tab} onChange={setTab} />
-      {/* El panel "¿Cómo se calcula?" (Task 10) se inserta aquí, bajo las tabs. */}
+      {infoAbierta && <InfoComoSeCalcula onClose={() => setInfoAbierta(false)} />}
       {tab === 'acuerdo' && <AcuerdoTab proyeccion={proyeccion} onUpdate={handleUpdate} />}
       {tab === 'prevision' && <PrevisionTab proyeccion={proyeccion} onUpdate={handleUpdate} />}
       {tab === 'real' && <RealTab proyeccion={proyeccion} onUpdate={handleUpdate} />}

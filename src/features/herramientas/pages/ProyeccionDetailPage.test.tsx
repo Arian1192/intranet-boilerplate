@@ -52,6 +52,15 @@ describe('ProyeccionDetailPage', () => {
     expect(screen.getByText('Sin comentarios todavía.')).toBeInTheDocument();
   });
 
+  it('el botón "i" muestra/oculta el panel "¿Cómo se calcula?"', async () => {
+    renderDetail();
+    expect(screen.queryByText('¿Cómo se calcula?')).not.toBeInTheDocument();
+    await userEvent.click(screen.getByRole('button', { name: 'i' }));
+    expect(screen.getByText('¿Cómo se calcula?')).toBeInTheDocument();
+    await userEvent.click(screen.getByLabelText(/cerrar/i));
+    expect(screen.queryByText('¿Cómo se calcula?')).not.toBeInTheDocument();
+  });
+
   it('shows "Proyección no encontrada" for an unknown id', () => {
     renderDetail('id-inexistente');
     expect(screen.getByText('Proyección no encontrada.')).toBeInTheDocument();
