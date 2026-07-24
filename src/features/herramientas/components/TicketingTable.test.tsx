@@ -21,6 +21,27 @@ function Wrapper({ onUpdate }: { onUpdate: (patch: Partial<Proyeccion>) => void 
   );
 }
 
+describe('TicketingTable modo real', () => {
+  it('modo="real": ENTRADAS PREV. + ENTRADAS REAL, sin columna FACTURACIÓN, total real 745,00€ / 82 entradas', () => {
+    render(<TicketingTable proyeccion={seedProyecciones[0]} escenario="base" modo="real" onUpdate={vi.fn()} />);
+    expect(screen.getByText(/^entradas prev\.$/i)).toBeInTheDocument();
+    expect(screen.getByText(/^entradas real$/i)).toBeInTheDocument();
+    // la cabecera "Facturación" (columna de previsión) desaparece; solo quedan sub-líneas "Facturación real"
+    expect(screen.queryByText(/^facturación$/i)).not.toBeInTheDocument();
+    expect(screen.getByText(/^745,00\s?€$/)).toBeInTheDocument();
+    expect(screen.getByText(/82 entradas/)).toBeInTheDocument();
+    // Por acuerdo real = ingresoTramo(ticketing, 745, iva 10%) = 677,27€
+    expect(screen.getByText(/^677,27\s?€$/)).toBeInTheDocument();
+    // facturación real de la fila 1 (20×8 = 160,00€)
+    expect(screen.getByText(/^160,00\s?€$/)).toBeInTheDocument();
+  });
+
+  it('modo="prevision" (default) no muestra ENTRADAS REAL', () => {
+    render(<TicketingTable proyeccion={seedProyecciones[0]} escenario="base" onUpdate={vi.fn()} />);
+    expect(screen.queryByText(/^entradas real$/i)).not.toBeInTheDocument();
+  });
+});
+
 describe('TicketingTable', () => {
   it('renders las 7 filas del seed con release/entradas/precio/facturación, y el total', () => {
     render(<TicketingTable proyeccion={seedProyecciones[0]} escenario="base" onUpdate={vi.fn()} />);

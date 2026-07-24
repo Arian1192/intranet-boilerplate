@@ -8,9 +8,12 @@ interface Props {
   proyeccion: Proyeccion;
   escenario: Escenario;
   onUpdate: (patch: Partial<Proyeccion>) => void;
+  /** 'real' añade la columna ENTRADAS REAL y muestra cifras ejecutadas (tab Real, Fase C). */
+  modo?: 'prevision' | 'real';
 }
 
-export function TicketingTable({ proyeccion, escenario, onUpdate }: Props) {
+export function TicketingTable({ proyeccion, escenario, onUpdate, modo = 'prevision' }: Props) {
+  const esReal = modo === 'real';
   const { ticketing, desglosarPorTicketera, acuerdo, eventoAforo, ajustesEscenarios } = proyeccion;
   const ordenado = [...ticketing].sort((a, b) => a.orden - b.orden);
 
@@ -54,14 +57,21 @@ export function TicketingTable({ proyeccion, escenario, onUpdate }: Props) {
     patchRow(id, { canales });
   };
 
-  const totalEntradas = ticketing.reduce((a, r) => a + r.entradas, 0);
-  const totalFacturacion = ticketing.reduce((a, r) => a + r.entradas * r.precio, 0);
-
   const objetivo = entradasObjetivo(
     ticketing, ajustesEscenarios, escenario, eventoAforo.invitaciones, eventoAforo.asistenciaForzada
   );
   const brutoEscenario = ticketingBrutoWaterfall(ticketing, objetivo);
-  const porAcuerdo = ingresoTramo(acuerdo.ticketing, brutoEscenario, eventoAforo.ivaTicketingPct);
+
+  // En Real los totales/acuerdo salen de las entradas ejecutadas (entradasReal), no de la
+  // proyección en cascada del escenario.
+  const totalEntradas = esReal
+    ? ticketing.reduce((a, r) => a + (r.entradasReal ?? 0), 0)
+    : ticketing.reduce((a, r) => a + r.entradas, 0);
+  const totalFacturacion = esReal
+    ? ticketing.reduce((a, r) => a + (r.entradasReal ?? 0) * r.precio, 0)
+    : ticketing.reduce((a, r) => a + r.entradas * r.precio, 0);
+  const brutoParaAcuerdo = esReal ? totalFacturacion : brutoEscenario;
+  const porAcuerdo = ingresoTramo(acuerdo.ticketing, brutoParaAcuerdo, eventoAforo.ivaTicketingPct);
 
   const inputClass = 'h-9 w-full rounded-lg border border-slate-200 px-2 text-sm';
 
@@ -83,9 +93,9 @@ export function TicketingTable({ proyeccion, escenario, onUpdate }: Props) {
 
       <div className="grid grid-cols-12 gap-2 pb-1 text-xs uppercase text-slate-400">
         <span className="col-span-4">Release</span>
-        <span className="col-span-2">Entradas</span>
+        <span className="col-span-2">{esReal ? 'Entradas prev.' : 'Entradas'}</span>
         <span className="col-span-2">Precio €</span>
-        <span className="col-span-2">Facturación</span>
+        {esReal ? <span className="col-span-2">Entradas real</span> : <span className="col-span-2">Facturación</span>}
         <span className="col-span-2" />
       </div>
 
@@ -113,15 +123,30 @@ export function TicketingTable({ proyeccion, escenario, onUpdate }: Props) {
               onChange={(e) => patchRow(r.id, { precio: Number(e.target.value) })}
               className={`col-span-2 ${inputClass}`}
             />
-            <span className="col-span-2 text-sm font-medium text-slate-800">
-              {formatCurrency(r.entradas * r.precio)}
-            </span>
+            {esReal ? (
+              <input
+                type="number"
+                aria-label="Entradas real"
+                value={r.entradasReal ?? 0}
+                onChange={(e) => patchRow(r.id, { entradasReal: Number(e.target.value) })}
+                className={`col-span-2 ${inputClass}`}
+              />
+            ) : (
+              <span className="col-span-2 text-sm font-medium text-slate-800">
+                {formatCurrency(r.entradas * r.precio)}
+              </span>
+            )}
             <div className="col-span-2 flex items-center justify-end gap-1">
               <button type="button" aria-label="↑" onClick={() => mover(r.id, -1)} disabled={idx === 0} className="disabled:opacity-30">↑</button>
               <button type="button" aria-label="↓" onClick={() => mover(r.id, 1)} disabled={idx === ordenado.length - 1} className="disabled:opacity-30">↓</button>
               <button type="button" aria-label="×" onClick={() => borrar(r.id)}>×</button>
             </div>
           </div>
+          {esReal && (
+            <div className="mt-1 text-right text-xs text-slate-500">
+              Facturación real <span className="font-semibold text-slate-800">{formatCurrency((r.entradasReal ?? 0) * r.precio)}</span>
+            </div>
+          )}
           {desglosarPorTicketera && (
             <div className="col-span-12 mt-1 flex flex-wrap items-center gap-2 pl-1 text-xs text-slate-500">
               <span>Reparto ticketeras: 0 / {r.canales?.length ?? 0}</span>
