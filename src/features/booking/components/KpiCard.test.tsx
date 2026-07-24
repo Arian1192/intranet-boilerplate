@@ -54,6 +54,24 @@ describe('KpiCard', () => {
     expect(screen.getByText('0 shows')).toHaveClass('text-[11px]', 'opacity-80');
 
     fireEvent.click(button);
-    expect(screen.getByTestId('location')).toHaveTextContent('/conceptone/shows?status=contract');
+    expect(screen.getByTestId('location')).toHaveTextContent('/shows?status=contract');
+  });
+
+  it('relabela pending-payment como "Pendiente cobro" y done como "Liquidado"', () => {
+    render(
+      <MemoryRouter>
+        <KpiCard kpi={{ id: 'x', label: '', amount: 0, count: 0, status: 'pending-payment' }} />
+      </MemoryRouter>
+    );
+    expect(screen.getByText('Pendiente cobro')).toBeInTheDocument();
+  });
+
+  it('done se muestra como "Liquidado"', () => {
+    render(
+      <MemoryRouter>
+        <KpiCard kpi={{ id: 'y', label: '', amount: 0, count: 0, status: 'done' }} />
+      </MemoryRouter>
+    );
+    expect(screen.getByText('Liquidado')).toBeInTheDocument();
   });
 });
