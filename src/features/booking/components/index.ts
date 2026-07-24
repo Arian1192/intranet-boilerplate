@@ -10,3 +10,5 @@ export * from './PaymentChip';
 export * from './AgendaShowCard';
 export * from './AgendaHoldCard';
 export * from './DayAgenda';
+export * from './EstiloChips';
+export * from './MensajeDisponibilidad';

@@ -17,7 +17,7 @@ import { HerramientasShell } from '@/features/modules/HerramientasShell';
 import { BookingDashboardPage } from '@/features/booking/pages/BookingDashboardPage';
 import { ShowsPage } from '@/features/booking/pages/ShowsPage';
 import { CalendarioPage } from '@/features/booking/pages/CalendarioPage';
-import { DisponibilidadStubPage } from '@/features/booking/pages/DisponibilidadStubPage';
+import { DisponibilidadPage } from '@/features/booking/pages/DisponibilidadPage';
 import { ContactosStubPage } from '@/features/booking/pages/ContactosStubPage';
 import { EtraDashboardPage } from '@/features/etra/pages/EtraDashboardPage';
 import { ActionsPage } from '@/features/etra/pages/ActionsPage';
@@ -54,7 +54,7 @@ export function AppRouter() {
         <Route path="/conceptone" element={<BookingDashboardPage />} />
         <Route path="/shows" element={<ShowsPage />} />
         <Route path="/calendario-c1" element={<CalendarioPage />} />
-        <Route path="/disponibilidad" element={<DisponibilidadStubPage />} />
+        <Route path="/disponibilidad" element={<DisponibilidadPage />} />
         <Route path="/contactos" element={<ContactosStubPage />} />
       </Route>
       <Route path="/etra" element={<EtraShell />}>
