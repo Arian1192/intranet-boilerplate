@@ -4,3 +4,5 @@ export * from './ShowCard';
 export * from './ShowsToolbar';
 export * from './FiltrosDrawer';
 export * from './RangoPopover';
+export * from './MonthNav';
+export * from './MonthGrid';

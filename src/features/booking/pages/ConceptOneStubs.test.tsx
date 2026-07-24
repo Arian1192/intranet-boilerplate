@@ -3,11 +3,10 @@ import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { MemoryRouter } from 'react-router';
 import { ConceptOneShell } from '@/features/modules/ConceptOneShell';
-import { CalendarioStubPage, DisponibilidadStubPage, ContactosStubPage } from './index';
+import { DisponibilidadStubPage, ContactosStubPage } from './index';
 
 describe('ConceptOne stubs', () => {
   it.each([
-    [CalendarioStubPage, 'Calendario'],
     [DisponibilidadStubPage, 'Disponibilidad'],
     [ContactosStubPage, 'Contactos'],
   ])('cada stub muestra su título', (Stub, name) => {

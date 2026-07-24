@@ -1,5 +1,5 @@
 export * from './BookingDashboardPage';
 export * from './ShowsPage';
-export * from './CalendarioStubPage';
+export * from './CalendarioPage';
 export * from './DisponibilidadStubPage';
 export * from './ContactosStubPage';

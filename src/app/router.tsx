@@ -16,7 +16,7 @@ import { TagmagShell } from '@/features/modules/TagmagShell';
 import { HerramientasShell } from '@/features/modules/HerramientasShell';
 import { BookingDashboardPage } from '@/features/booking/pages/BookingDashboardPage';
 import { ShowsPage } from '@/features/booking/pages/ShowsPage';
-import { CalendarioStubPage } from '@/features/booking/pages/CalendarioStubPage';
+import { CalendarioPage } from '@/features/booking/pages/CalendarioPage';
 import { DisponibilidadStubPage } from '@/features/booking/pages/DisponibilidadStubPage';
 import { ContactosStubPage } from '@/features/booking/pages/ContactosStubPage';
 import { EtraDashboardPage } from '@/features/etra/pages/EtraDashboardPage';
@@ -53,7 +53,7 @@ export function AppRouter() {
       <Route element={<ConceptOneShell />}>
         <Route path="/conceptone" element={<BookingDashboardPage />} />
         <Route path="/shows" element={<ShowsPage />} />
-        <Route path="/calendario-c1" element={<CalendarioStubPage />} />
+        <Route path="/calendario-c1" element={<CalendarioPage />} />
         <Route path="/disponibilidad" element={<DisponibilidadStubPage />} />
         <Route path="/contactos" element={<ContactosStubPage />} />
       </Route>
