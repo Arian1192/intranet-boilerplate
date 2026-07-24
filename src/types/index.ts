@@ -127,6 +127,20 @@ export interface Show {
   exception: boolean;
 }
 
+export type CalendarEventType = 'show' | 'hold';
+export interface CalendarEvent {
+  id: string;
+  date: string; // 'YYYY-MM-DD'
+  type: CalendarEventType;
+  artist: string;
+  venue?: string | null;
+  city?: string | null;
+  event?: string;
+  paymentStatus?: PaymentStatus;
+  holdTitle?: string;
+  etapa?: ShowStatus;
+}
+
 export interface LogisticsItem {
   id: string;
   title: string;
