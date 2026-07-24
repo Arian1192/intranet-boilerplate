@@ -61,8 +61,18 @@ describe('seedProyecciones', () => {
 
   it('ticketing y mesasVip guardan las filas observadas (para Fase B)', () => {
     expect(p.ticketing.length).toBe(7);
-    expect(p.ticketing[0]).toEqual({ id: 'tk-1', orden: 0, release: 'Early Access - acceso antes de las 7:30pm', entradas: 100, precio: 8 });
+    expect(p.ticketing[0]).toEqual({ id: 'tk-1', orden: 0, release: 'Early Access - acceso antes de las 7:30pm', entradas: 100, precio: 8, entradasReal: 20 });
     expect(p.mesasVip.length).toBe(3);
     expect(p.mesasVip.map((v) => v.zona)).toEqual(['Zona 1', 'Zona 2', 'Zona 3']);
+  });
+
+  it('siembra entradasReal (evidencia del live) que dan 745,00€ de ticketing real', () => {
+    expect(p.ticketing.map((r) => r.entradasReal)).toEqual([20, 20, 0, 9, 28, 5, 0]);
+    const brutoReal = p.ticketing.reduce((a, r) => a + (r.entradasReal ?? 0) * r.precio, 0);
+    expect(brutoReal).toBeCloseTo(745, 2);
+  });
+
+  it('mesasReal = 0 en las 3 zonas VIP', () => {
+    expect(p.mesasVip.map((z) => z.mesasReal)).toEqual([0, 0, 0]);
   });
 });
