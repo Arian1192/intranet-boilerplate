@@ -1,7 +1,8 @@
 import { formatCurrency } from '@/lib/format';
 import { cn } from '@/lib/utils';
-import type { ArtStatus, PaymentStatus, Show, ShowStatus } from '@/types';
+import type { ArtStatus, Show, ShowStatus } from '@/types';
 import { etapaLabel } from '../data/etapaLabels';
+import { PaymentChip } from './PaymentChip';
 
 export interface ShowCardProps {
   show: Show;
@@ -15,14 +16,6 @@ const etapaChip: Record<ShowStatus, string> = {
   'pending-payment': 'bg-rose-50 text-rose-700',
   'pending-settlement': 'bg-indigo-50 text-indigo-700',
   done: 'bg-green-50 text-green-700',
-};
-
-const pagoChip: Record<PaymentStatus, string> = {
-  'No abonado': 'bg-slate-100 text-slate-500',
-  'Parcialmente abonado': 'bg-amber-50 text-amber-700',
-  'Pendiente liquidar': 'bg-indigo-50 text-indigo-700',
-  Liquidado: 'bg-green-50 text-green-700',
-  Incidencia: 'bg-red-50 text-red-700',
 };
 
 const arteChip: Record<ArtStatus, string> = {
@@ -73,9 +66,7 @@ export function ShowCard({ show }: ShowCardProps) {
 
       {/* Pago + arte */}
       <div className="flex w-40 shrink-0 flex-col items-end gap-1">
-        <span className={cn('inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium', pagoChip[show.paymentStatus])}>
-          {show.paymentStatus}
-        </span>
+        <PaymentChip status={show.paymentStatus} />
         <span className={cn('inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium', arteChip[show.artStatus])}>
           {show.artStatus}
         </span>

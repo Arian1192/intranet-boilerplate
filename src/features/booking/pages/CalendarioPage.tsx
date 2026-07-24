@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { MonthNav, MonthGrid } from '@/features/booking/components';
+import { MonthNav, MonthGrid, DayAgenda } from '@/features/booking/components';
 import { eventsForMonth } from '../data/calendar';
 
 export function CalendarioPage() {
@@ -34,6 +34,8 @@ export function CalendarioPage() {
         <MonthNav year={year} month={month} onPrev={goPrev} onNext={goNext} />
         <MonthGrid year={year} month={month} events={events} />
       </div>
+
+      <DayAgenda events={events} />
     </div>
   );
 }

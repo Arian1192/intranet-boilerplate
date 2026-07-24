@@ -6,3 +6,7 @@ export * from './FiltrosDrawer';
 export * from './RangoPopover';
 export * from './MonthNav';
 export * from './MonthGrid';
+export * from './PaymentChip';
+export * from './AgendaShowCard';
+export * from './AgendaHoldCard';
+export * from './DayAgenda';
