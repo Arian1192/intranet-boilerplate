@@ -38,4 +38,21 @@ describe('ShowsPage', () => {
     expect(screen.getByText('C1-2026-014')).toBeInTheDocument();
     expect(screen.queryByText('C1-2026-006')).not.toBeInTheDocument();
   });
+
+  it('el drawer de Filtros filtra por Fase y por Estado de pago', async () => {
+    renderShows();
+    await screen.findByText('C1-2026-006');
+    fireEvent.click(screen.getByRole('button', { name: 'Filtros' }));
+    fireEvent.change(screen.getByLabelText('Fase'), { target: { value: 'liquidado' } });
+    expect(screen.getByText('2 shows')).toBeInTheDocument(); // 005 y 014
+    fireEvent.change(screen.getByLabelText('Estado de pago'), { target: { value: 'Parcialmente abonado' } });
+    expect(screen.getByText('1 show')).toBeInTheDocument(); // solo 005
+  });
+
+  it('deep-link ?status=confirmed pre-selecciona Etapa=Confirmado', async () => {
+    renderShows('/shows?status=confirmed');
+    await screen.findByText('6 shows');
+    fireEvent.click(screen.getByRole('button', { name: 'Filtros' }));
+    expect((screen.getByLabelText('Etapa') as HTMLSelectElement).value).toBe('confirmed');
+  });
 });

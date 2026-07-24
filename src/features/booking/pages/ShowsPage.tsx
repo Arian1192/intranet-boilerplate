@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useSearchParams } from 'react-router';
-import { ShowCard, ShowsToolbar } from '@/features/booking/components';
+import { ShowCard, ShowsToolbar, FiltrosDrawer } from '@/features/booking/components';
+import type { ShowsFiltros } from '@/features/booking/components';
 import type { Show, ShowStatus } from '@/types';
 import { useShows } from '../hooks/useShows';
 
@@ -26,15 +27,25 @@ function matchesQuery(show: Show, q: string): boolean {
   );
 }
 
+const filtrosVacios: ShowsFiltros = { etapa: '', fase: '', pago: '', artista: '' };
+
 export function ShowsPage() {
   const { shows, isLoading, error } = useShows();
   const [searchParams] = useSearchParams();
-  const selectedStatus = searchParams.get('status');
   const [query, setQuery] = useState('');
+  const [filtrosAbierto, setFiltrosAbierto] = useState(false);
+  const [filtros, setFiltros] = useState<ShowsFiltros>(() => {
+    const status = searchParams.get('status');
+    return isShowStatus(status) ? { ...filtrosVacios, etapa: status } : filtrosVacios;
+  });
 
   const shownShows = shows.filter(
     (show) =>
-      (!isShowStatus(selectedStatus) || show.etapa === selectedStatus) && matchesQuery(show, query)
+      matchesQuery(show, query) &&
+      (!filtros.etapa || show.etapa === filtros.etapa) &&
+      (!filtros.fase || show.fase === filtros.fase) &&
+      (!filtros.pago || show.paymentStatus === filtros.pago) &&
+      (!filtros.artista || show.artist === filtros.artista)
   );
 
   if (isLoading) {
@@ -53,13 +64,19 @@ export function ShowsPage() {
         onQueryChange={setQuery}
         rangoLabel="Última semana → Todo el futuro"
         onToggleRango={() => {}}
-        onOpenFiltros={() => {}}
+        onOpenFiltros={() => setFiltrosAbierto(true)}
       />
       <div className="overflow-hidden rounded-xl border border-slate-100 bg-white shadow-sm">
         {shownShows.map((show) => (
           <ShowCard key={show.id} show={show} />
         ))}
       </div>
+      <FiltrosDrawer
+        abierto={filtrosAbierto}
+        filtros={filtros}
+        onChange={setFiltros}
+        onClose={() => setFiltrosAbierto(false)}
+      />
     </div>
   );
 }
