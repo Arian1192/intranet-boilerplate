@@ -1,10 +1,13 @@
 import { CollapsibleSection } from './CollapsibleSection';
 import { entradasObjetivo } from '../data/calculos-escenarios';
+import { asistenciaReal } from '../data/calculos-real';
 import type { EventoAforo, Proyeccion } from '../data/types';
 
 interface Props {
   proyeccion: Proyeccion;
   onUpdate: (patch: Partial<Proyeccion>) => void;
+  /** 'real' muestra en el resumen la asistencia ejecutada (Σ entradasReal + invitaciones). */
+  modo?: 'prevision' | 'real';
 }
 
 const FECHA_CORTA = new Intl.DateTimeFormat('es-ES', { day: 'numeric', month: 'short', year: 'numeric' });
@@ -14,7 +17,7 @@ function formatFechaCorta(iso: string): string {
   return FECHA_CORTA.format(new Date(`${iso}T00:00:00`)).replace('.', '');
 }
 
-export function EventoAforoCard({ proyeccion, onUpdate }: Props) {
+export function EventoAforoCard({ proyeccion, onUpdate, modo = 'prevision' }: Props) {
   const { eventoAforo, ticketing, ajustesEscenarios } = proyeccion;
   const inputClass = 'h-9 w-full rounded-lg border border-slate-200 px-2 text-sm';
 
@@ -28,11 +31,12 @@ export function EventoAforoCard({ proyeccion, onUpdate }: Props) {
     ticketing, ajustesEscenarios, 'base', eventoAforo.invitaciones, eventoAforo.asistenciaForzada
   );
   const asistenciaProyectada = entradasBase + eventoAforo.invitaciones;
+  const paxResumen = modo === 'real' ? asistenciaReal(proyeccion) : asistenciaProyectada;
 
   return (
     <CollapsibleSection
       title="Evento y aforo"
-      summary={`${formatFechaCorta(eventoAforo.fecha)} · ${eventoAforo.aforoMaximo} · ${eventoAforo.duracionHoras}h · ${asistenciaProyectada} pax`}
+      summary={`${formatFechaCorta(eventoAforo.fecha)} · ${eventoAforo.aforoMaximo} · ${eventoAforo.duracionHoras}h · ${paxResumen} pax`}
     >
       <div className="space-y-4">
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">

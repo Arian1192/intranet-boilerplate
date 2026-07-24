@@ -26,12 +26,13 @@ describe('ProyeccionDetailPage', () => {
     expect(screen.getByText('Resultado por acuerdo')).toBeInTheDocument();
   });
 
-  it('switching to Previsión shows the real Fase B tab; Real keeps its placeholder', async () => {
+  it('switching to Previsión shows the Fase B tab; Real shows the Fase C real tab', async () => {
     renderDetail();
     await userEvent.click(screen.getByRole('button', { name: 'Previsión' }));
     expect(screen.getByRole('heading', { name: 'Ticketing' })).toBeInTheDocument();
     await userEvent.click(screen.getByRole('button', { name: 'Real' }));
-    expect(screen.getByText('Esta vista se construye en la Fase C.')).toBeInTheDocument();
+    expect(screen.getByText('Asistencia real')).toBeInTheDocument();
+    expect(screen.queryByText(/Esta vista se construye/)).not.toBeInTheDocument();
   });
 
   it('editing the header marks it dirty, and Guardar clears it', async () => {
