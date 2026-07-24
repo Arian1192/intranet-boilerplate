@@ -2,7 +2,8 @@ import { useState } from 'react';
 import { Link, useParams } from 'react-router';
 import { UnderlineTabs } from '@/components/ui';
 import { useProyecciones } from '../data/proyecciones-context';
-import { ProyeccionHeader } from '../components/ProyeccionHeader';
+import { ProyeccionToolbar } from '../components/ProyeccionToolbar';
+import { ProyeccionEstadoCard } from '../components/ProyeccionEstadoCard';
 import { AcuerdoTab } from '../components/AcuerdoTab';
 import { PrevisionTab } from '../components/PrevisionTab';
 import { RealTab } from '../components/RealTab';
@@ -21,6 +22,8 @@ export function ProyeccionDetailPage() {
   const { proyecciones, actualizar } = useProyecciones();
   const [tab, setTab] = useState<Tab>('acuerdo');
   const [isDirty, setIsDirty] = useState(false);
+  const [comentariosAbierto, setComentariosAbierto] = useState(false);
+  const [infoAbierta, setInfoAbierta] = useState(false);
 
   const proyeccion = proyecciones.find((p) => p.id === id);
 
@@ -40,8 +43,19 @@ export function ProyeccionDetailPage() {
 
   return (
     <div className="space-y-6">
-      <ProyeccionHeader proyeccion={proyeccion} isDirty={isDirty} onUpdate={handleUpdate} onGuardar={() => setIsDirty(false)} />
+      <ProyeccionToolbar
+        proyeccion={proyeccion}
+        isDirty={isDirty}
+        comentariosAbierto={comentariosAbierto}
+        infoAbierta={infoAbierta}
+        onGuardar={() => setIsDirty(false)}
+        onToggleComentarios={() => setComentariosAbierto((o) => !o)}
+        onToggleInfo={() => setInfoAbierta((o) => !o)}
+      />
+      {/* El panel de Comentarios (Task 9) se inserta aquí, entre la toolbar y la tarjeta ESTADO. */}
+      <ProyeccionEstadoCard proyeccion={proyeccion} onUpdate={handleUpdate} />
       <UnderlineTabs options={TAB_OPTIONS} value={tab} onChange={setTab} />
+      {/* El panel "¿Cómo se calcula?" (Task 10) se inserta aquí, bajo las tabs. */}
       {tab === 'acuerdo' && <AcuerdoTab proyeccion={proyeccion} onUpdate={handleUpdate} />}
       {tab === 'prevision' && <PrevisionTab proyeccion={proyeccion} onUpdate={handleUpdate} />}
       {tab === 'real' && <RealTab proyeccion={proyeccion} onUpdate={handleUpdate} />}

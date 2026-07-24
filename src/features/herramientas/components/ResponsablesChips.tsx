@@ -4,9 +4,10 @@ import type { Responsable } from '../data/types';
 interface Props {
   responsables: Responsable[];
   onRemove: (id: string) => void;
+  onAnadir?: () => void;
 }
 
-export function ResponsablesChips({ responsables, onRemove }: Props) {
+export function ResponsablesChips({ responsables, onRemove, onAnadir }: Props) {
   return (
     <div className="flex flex-wrap items-center gap-2">
       {responsables.map((r) => (
@@ -26,8 +27,7 @@ export function ResponsablesChips({ responsables, onRemove }: Props) {
           </button>
         </span>
       ))}
-      {/* Picker inerte esta fase — se activa en Fase C */}
-      <Button variant="ghost" size="sm">＋ Añadir</Button>
+      <Button variant="ghost" size="sm" onClick={onAnadir}>＋ Añadir</Button>
     </div>
   );
 }
