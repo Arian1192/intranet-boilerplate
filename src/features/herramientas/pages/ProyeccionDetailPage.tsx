@@ -4,6 +4,7 @@ import { UnderlineTabs } from '@/components/ui';
 import { useProyecciones } from '../data/proyecciones-context';
 import { ProyeccionToolbar } from '../components/ProyeccionToolbar';
 import { ProyeccionEstadoCard } from '../components/ProyeccionEstadoCard';
+import { ComentariosPanel } from '../components/ComentariosPanel';
 import { AcuerdoTab } from '../components/AcuerdoTab';
 import { PrevisionTab } from '../components/PrevisionTab';
 import { RealTab } from '../components/RealTab';
@@ -52,7 +53,19 @@ export function ProyeccionDetailPage() {
         onToggleComentarios={() => setComentariosAbierto((o) => !o)}
         onToggleInfo={() => setInfoAbierta((o) => !o)}
       />
-      {/* El panel de Comentarios (Task 9) se inserta aquí, entre la toolbar y la tarjeta ESTADO. */}
+      {comentariosAbierto && (
+        <ComentariosPanel
+          comentarios={proyeccion.comentarios}
+          onEnviar={(texto) =>
+            handleUpdate({
+              comentarios: [
+                ...proyeccion.comentarios,
+                { id: crypto.randomUUID(), autor: 'Tú', texto, fecha: new Date().toISOString() },
+              ],
+            })
+          }
+        />
+      )}
       <ProyeccionEstadoCard proyeccion={proyeccion} onUpdate={handleUpdate} />
       <UnderlineTabs options={TAB_OPTIONS} value={tab} onChange={setTab} />
       {/* El panel "¿Cómo se calcula?" (Task 10) se inserta aquí, bajo las tabs. */}

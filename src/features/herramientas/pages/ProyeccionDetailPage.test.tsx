@@ -44,6 +44,14 @@ describe('ProyeccionDetailPage', () => {
     expect(screen.getByText('Guardado')).toBeInTheDocument();
   });
 
+  it('toggling Comentarios muestra/oculta el panel "Notas y comentarios"', async () => {
+    renderDetail();
+    expect(screen.queryByText('Notas y comentarios')).not.toBeInTheDocument();
+    await userEvent.click(screen.getByRole('button', { name: 'Comentarios' }));
+    expect(screen.getByText('Notas y comentarios')).toBeInTheDocument();
+    expect(screen.getByText('Sin comentarios todavía.')).toBeInTheDocument();
+  });
+
   it('shows "Proyección no encontrada" for an unknown id', () => {
     renderDetail('id-inexistente');
     expect(screen.getByText('Proyección no encontrada.')).toBeInTheDocument();
