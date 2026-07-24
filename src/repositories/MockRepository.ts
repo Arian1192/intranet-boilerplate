@@ -108,13 +108,12 @@ export class MockRepository implements Repository {
   async getBookingDashboard(): Promise<BookingDashboard> {
     return this.delay({
       kpis: [
-        { id: '1', label: 'TENTATIVE', amount: 2000, count: 1, status: 'tentative' },
-        { id: '2', label: 'OFERTA', amount: 0, count: 0, status: 'offer' },
-        { id: '3', label: 'CONFIRMADO', amount: 7000, count: 4, status: 'confirmed' },
-        { id: '4', label: 'CONTRATO', amount: 0, count: 0, status: 'contract' },
-        { id: '5', label: 'PENDIENTE PAGO', amount: 800, count: 1, status: 'pending-payment' },
-        { id: '6', label: 'PENDIENTE LIQUIDAR', amount: 0, count: 0, status: 'pending-settlement' },
-        { id: '7', label: 'CELEBRADO', amount: 0, count: 0, status: 'done' },
+        { id: '1', label: 'TENTATIVE', amount: 5679.48, count: 7, status: 'tentative' },
+        { id: '2', label: 'CONFIRMADO', amount: 10200, count: 8, status: 'confirmed' },
+        { id: '3', label: 'CONTRATO', amount: 0, count: 0, status: 'contract' },
+        { id: '4', label: 'PENDIENTE COBRO', amount: 0, count: 0, status: 'pending-payment' },
+        { id: '5', label: 'PENDIENTE LIQUIDAR', amount: 1850, count: 3, status: 'pending-settlement' },
+        { id: '6', label: 'LIQUIDADO', amount: 3500, count: 2, status: 'done' },
       ],
       advancing: [
         {

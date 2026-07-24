@@ -21,9 +21,9 @@ const statusLabels: Record<Kpi['status'], string> = {
   offer: 'Oferta',
   confirmed: 'Confirmado',
   contract: 'Contrato',
-  'pending-payment': 'Pendiente pago',
+  'pending-payment': 'Pendiente cobro',
   'pending-settlement': 'Pendiente liquidar',
-  done: 'Celebrado',
+  done: 'Liquidado',
 };
 
 export function KpiCard({ kpi }: KpiCardProps) {
@@ -35,7 +35,7 @@ export function KpiCard({ kpi }: KpiCardProps) {
       type="button"
       title={`Ver shows en ${label}`}
       className={`rounded-xl px-3 py-2.5 text-left text-white transition-transform hover:-translate-y-0.5 ${statusStyles[kpi.status]}`}
-      onClick={() => navigate(`/conceptone/shows?status=${kpi.status}`)}
+      onClick={() => navigate(`/shows?status=${kpi.status}`)}
     >
       <div className="text-lg font-bold leading-tight">{formatCurrency(kpi.amount)}</div>
       <div className="text-[11px] font-medium uppercase tracking-wide opacity-90">{label}</div>
