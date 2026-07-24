@@ -1,6 +1,7 @@
+import { useState } from 'react';
 import { useSearchParams } from 'react-router';
-import { ShowCard } from '@/features/booking/components';
-import type { ShowStatus } from '@/types';
+import { ShowCard, ShowsToolbar } from '@/features/booking/components';
+import type { Show, ShowStatus } from '@/types';
 import { useShows } from '../hooks/useShows';
 
 const validStatuses: ShowStatus[] = [
@@ -17,13 +18,24 @@ function isShowStatus(value: string | null): value is ShowStatus {
   return value !== null && validStatuses.includes(value as ShowStatus);
 }
 
+function matchesQuery(show: Show, q: string): boolean {
+  const needle = q.trim().toLowerCase();
+  if (!needle) return true;
+  return [show.artist, show.event, show.venue ?? ''].some((field) =>
+    field.toLowerCase().includes(needle)
+  );
+}
+
 export function ShowsPage() {
   const { shows, isLoading, error } = useShows();
   const [searchParams] = useSearchParams();
   const selectedStatus = searchParams.get('status');
-  const shownShows = isShowStatus(selectedStatus)
-    ? shows.filter((show) => show.etapa === selectedStatus)
-    : shows;
+  const [query, setQuery] = useState('');
+
+  const shownShows = shows.filter(
+    (show) =>
+      (!isShowStatus(selectedStatus) || show.etapa === selectedStatus) && matchesQuery(show, query)
+  );
 
   if (isLoading) {
     return <div className="py-12 text-center text-slate-500">Cargando...</div>;
@@ -35,10 +47,14 @@ export function ShowsPage() {
 
   return (
     <div>
-      <h1 className="text-2xl font-semibold text-slate-900">Shows</h1>
-      <p className="mb-5 mt-1 text-sm text-slate-400">
-        {shownShows.length} {shownShows.length === 1 ? 'show' : 'shows'}
-      </p>
+      <ShowsToolbar
+        count={shownShows.length}
+        query={query}
+        onQueryChange={setQuery}
+        rangoLabel="Última semana → Todo el futuro"
+        onToggleRango={() => {}}
+        onOpenFiltros={() => {}}
+      />
       <div className="overflow-hidden rounded-xl border border-slate-100 bg-white shadow-sm">
         {shownShows.map((show) => (
           <ShowCard key={show.id} show={show} />

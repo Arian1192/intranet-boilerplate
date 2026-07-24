@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom';
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import { MemoryRouter } from 'react-router';
 import { describe, expect, it } from 'vitest';
 import { RepositoryProvider, MockRepository } from '@/repositories';
@@ -28,5 +28,14 @@ describe('ShowsPage', () => {
     expect(await screen.findByText('6 shows')).toBeInTheDocument();
     expect(screen.getByText('C1-2026-006')).toBeInTheDocument();
     expect(screen.queryByText('C1-2026-012')).not.toBeInTheDocument(); // tentative queda fuera
+  });
+
+  it('el buscador filtra por artista/evento/venue', async () => {
+    renderShows();
+    await screen.findByText('C1-2026-006');
+    fireEvent.change(screen.getByPlaceholderText('Buscar artista, evento, venue…'), { target: { value: 'Florentia' } });
+    expect(screen.getByText('1 show')).toBeInTheDocument();
+    expect(screen.getByText('C1-2026-014')).toBeInTheDocument();
+    expect(screen.queryByText('C1-2026-006')).not.toBeInTheDocument();
   });
 });
