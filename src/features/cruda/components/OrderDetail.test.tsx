@@ -5,6 +5,7 @@ import { OrderDetail } from './OrderDetail';
 import { orders } from '../data/seed';
 
 const cr = orders.find((o) => o.id === 'CR00103')!;
+const cr104 = orders.find((o) => o.id === 'CR00104')!;
 
 test('shows header, stepper, lines and totals; editing qty recalculates', () => {
   render(<OrderDetail order={cr} onBack={vi.fn()} />);
@@ -19,6 +20,19 @@ test('shows header, stepper, lines and totals; editing qty recalculates', () => 
   const qtyInputs = screen.getAllByLabelText('Cantidad');
   fireEvent.change(qtyInputs[0], { target: { value: '10' } });
   expect(screen.getByText('190,00 €')).toBeInTheDocument();
+});
+
+test('la cabecera lleva el badge Reposición solo si el pedido lo es', () => {
+  const { unmount } = render(<OrderDetail order={cr104} onBack={vi.fn()} />);
+  const heading = screen.getByRole('heading', { name: /CR00104/ });
+  expect(heading).toHaveTextContent('Colección');
+  expect(heading).toHaveTextContent('Reposición');
+  unmount();
+
+  render(<OrderDetail order={cr} onBack={vi.fn()} />);
+  const plain = screen.getByRole('heading', { name: /CR00103/ });
+  expect(plain).toHaveTextContent('Colección');
+  expect(plain).not.toHaveTextContent('Reposición');
 });
 
 test('back button fires onBack', () => {

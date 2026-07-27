@@ -21,6 +21,9 @@ export function OrderDetail({ order, onBack }: { order: Order; onBack: () => voi
           <h2 className="flex items-center gap-2 text-2xl font-bold text-slate-900">
             {order.id}
             <Badge variant="neutral">{order.businessLine}</Badge>
+            {order.reposicion && (
+              <span className="rounded-full bg-sky-100 px-2 py-0.5 text-xs font-medium text-sky-700">Reposición</span>
+            )}
           </h2>
           <span className="text-xl font-semibold text-slate-900">{eur(order.headerTotal)}</span>
         </div>
