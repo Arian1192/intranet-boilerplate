@@ -38,6 +38,19 @@ describe('CreativosPage', () => {
     expect(within(table).queryByText('Video Pomo 26/07')).not.toBeInTheDocument();
   });
 
+  // D5: los pills "+ Alba" / "+ Carlos" no son un filtro, son atajos de alta pre-asignada.
+  it('the "Asignar a" shortcuts carry the live titles and open the alta pre-assigned', () => {
+    render(<CreativosPage />);
+    const alba = screen.getByRole('button', { name: '+ Alba' });
+    const carlos = screen.getByRole('button', { name: '+ Carlos' });
+    expect(alba).toHaveAttribute('title', 'Nueva creatividad para Alba Gelabert');
+    expect(carlos).toHaveAttribute('title', 'Nueva creatividad para Carlos Pego');
+
+    fireEvent.click(alba);
+    const drawer = screen.getByRole('complementary');
+    expect(within(drawer).getByRole('button', { name: 'Alba' })).toBeInTheDocument();
+  });
+
   // El título del drawer sigue siendo "Nueva pieza": el recon del 27-jul no abrió el drawer,
   // así que la única evidencia de esa cabecera es la captura del 10-jul (ver ours-vs-live.md).
   it('opens and closes the alta drawer', () => {

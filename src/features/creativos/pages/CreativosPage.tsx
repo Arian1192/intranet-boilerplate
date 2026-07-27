@@ -8,11 +8,26 @@ import { PiecesKanban } from '../components/PiecesKanban';
 import { PiecesTable } from '../components/PiecesTable';
 import { NuevaPiezaDrawer } from '../components/NuevaPiezaDrawer';
 
+/**
+ * D5: los pills de "Asignar a" no filtran — son atajos de alta con el responsable ya puesto.
+ * Los nombres completos salen del `title` del live (`live-2026-07-27-20-board-structure.json`).
+ */
+const ASSIGN_SHORTCUTS = [
+  { name: 'Alba', fullName: 'Alba Gelabert' },
+  { name: 'Carlos', fullName: 'Carlos Pego' },
+];
+
 export function CreativosPage() {
   const [filter, setFilter] = useState<CreativosFilter>('Todas');
+  const [drawerAssignee, setDrawerAssignee] = useState<string | undefined>(undefined);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const stats = deriveStats(allPieces);
   const visible = filterPieces(allPieces, filter, CURRENT_USER);
+
+  const openDrawer = (assignee?: string) => {
+    setDrawerAssignee(assignee);
+    setDrawerOpen(true);
+  };
 
   return (
     <div className="space-y-4">
@@ -24,17 +39,21 @@ export function CreativosPage() {
           </p>
         </div>
         <div className="flex items-center gap-2">
-          <span className="text-sm text-slate-400">Asignar a:</span>
-          {['Alba', 'Carlos'].map((name) => (
-            <button
-              key={name}
-              type="button"
-              className="rounded-full border border-slate-300 px-2.5 py-1 text-xs font-medium text-slate-600 hover:border-brand-400 hover:text-brand-600"
-            >
-              + {name}
-            </button>
-          ))}
-          <Button variant="primary" size="sm" onClick={() => setDrawerOpen(true)}>
+          <div className="flex flex-wrap items-center gap-1.5">
+            <span className="text-xs text-slate-400">Asignar a:</span>
+            {ASSIGN_SHORTCUTS.map(({ name, fullName }) => (
+              <button
+                key={name}
+                type="button"
+                title={`Nueva creatividad para ${fullName}`}
+                onClick={() => openDrawer(name)}
+                className="rounded-full border border-slate-300 px-2.5 py-1 text-xs font-medium text-slate-600 hover:border-brand-400 hover:text-brand-600"
+              >
+                + {name}
+              </button>
+            ))}
+          </div>
+          <Button variant="primary" size="sm" onClick={() => openDrawer()}>
             + Nueva creatividad
           </Button>
         </div>
@@ -57,7 +76,11 @@ export function CreativosPage() {
       <PiecesKanban pieces={visible} />
       <PiecesTable pieces={visible} />
 
-      <NuevaPiezaDrawer open={drawerOpen} onClose={() => setDrawerOpen(false)} />
+      <NuevaPiezaDrawer
+        open={drawerOpen}
+        assignee={drawerAssignee}
+        onClose={() => setDrawerOpen(false)}
+      />
     </div>
   );
 }
