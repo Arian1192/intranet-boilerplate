@@ -38,6 +38,31 @@ describe('CreativosPage', () => {
     expect(within(table).queryByText('Video Pomo 26/07')).not.toBeInTheDocument();
   });
 
+  // D6: control segmentado a la izquierda de los filtros. En Calendario la tabla desaparece.
+  it('switches between Tablero and Calendario, hiding the table in Calendario', () => {
+    render(<CreativosPage />);
+    const tablero = screen.getByRole('button', { name: 'Tablero' });
+    const calendario = screen.getByRole('button', { name: 'Calendario' });
+    expect(tablero).toHaveClass('bg-white', 'text-slate-800', 'shadow-sm');
+    expect(calendario).toHaveClass('text-slate-500');
+    expect(screen.getByRole('table')).toBeInTheDocument();
+
+    fireEvent.click(calendario);
+    expect(screen.queryByRole('table')).not.toBeInTheDocument();
+    expect(screen.queryAllByText('Briefing')).toHaveLength(0); // ni el kanban
+    expect(screen.getByRole('button', { name: 'Calendario' })).toHaveClass('bg-white', 'shadow-sm');
+
+    // Cabecera, stats, filtros y Recursos siguen visibles en ambas vistas
+    expect(screen.getByRole('heading', { name: 'Creativos', level: 1 })).toBeInTheDocument();
+    expect(screen.getByText('Creatividades activas')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Todas' })).toBeInTheDocument();
+    expect(screen.getByText('Editar')).toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole('button', { name: 'Tablero' }));
+    expect(screen.getByRole('table')).toBeInTheDocument();
+    expect(screen.getAllByText('Briefing').length).toBeGreaterThan(0);
+  });
+
   // D5: los pills "+ Alba" / "+ Carlos" no son un filtro, son atajos de alta pre-asignada.
   it('the "Asignar a" shortcuts carry the live titles and open the alta pre-assigned', () => {
     render(<CreativosPage />);

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui';
+import { cn } from '@/lib/utils';
 import { pieces as allPieces, CURRENT_USER } from '../data/seed';
 import { filterPieces, deriveStats, type CreativosFilter } from '../data/creativos';
 import { CreativosStatCard } from '../components/CreativosStatCard';
@@ -17,8 +18,13 @@ const ASSIGN_SHORTCUTS = [
   { name: 'Carlos', fullName: 'Carlos Pego' },
 ];
 
+/** D6: control segmentado a la izquierda de la fila de filtros. "Tablero" por defecto. */
+const VIEWS = ['Tablero', 'Calendario'] as const;
+type CreativosView = (typeof VIEWS)[number];
+
 export function CreativosPage() {
   const [filter, setFilter] = useState<CreativosFilter>('Todas');
+  const [view, setView] = useState<CreativosView>('Tablero');
   const [drawerAssignee, setDrawerAssignee] = useState<string | undefined>(undefined);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const stats = deriveStats(allPieces);
@@ -66,15 +72,36 @@ export function CreativosPage() {
         <CreativosStatCard value={stats.atrasadas} label="Atrasadas" valueClassName="text-rose-600" />
       </div>
 
-      <div className="flex items-center justify-between">
-        <FilterChips active={filter} onChange={setFilter} />
-        <span className="text-xs text-slate-400">
+      <div className="flex items-center justify-between gap-3">
+        <div className="flex flex-wrap items-center gap-2">
+          <div className="inline-flex items-center rounded-lg bg-slate-100 p-0.5">
+            {VIEWS.map((v) => (
+              <button
+                key={v}
+                type="button"
+                onClick={() => setView(v)}
+                className={cn(
+                  'rounded-md px-3 py-1 text-xs font-medium',
+                  view === v ? 'bg-white text-slate-800 shadow-sm' : 'text-slate-500 hover:text-slate-700'
+                )}
+              >
+                {v}
+              </button>
+            ))}
+          </div>
+          <FilterChips active={filter} onChange={setFilter} />
+        </div>
+        <span className="shrink-0 text-xs text-slate-400">
           Recursos: — <span className="text-brand-600 hover:underline">Editar</span>
         </span>
       </div>
 
-      <PiecesKanban pieces={visible} />
-      <PiecesTable pieces={visible} />
+      {view === 'Tablero' ? (
+        <>
+          <PiecesKanban pieces={visible} />
+          <PiecesTable pieces={visible} />
+        </>
+      ) : null}
 
       <NuevaPiezaDrawer
         open={drawerOpen}
