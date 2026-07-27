@@ -1,0 +1,178 @@
+{
+  "url": "/cruda",
+  "title": "Black Moose Group · Intranet",
+  "headings": [
+    {
+      "tag": "H1",
+      "text": "Pedidos"
+    },
+    {
+      "tag": "H2",
+      "text": "CR00104ColecciónReposición"
+    },
+    {
+      "tag": "H3",
+      "text": "Líneas del pedido"
+    },
+    {
+      "tag": "H3",
+      "text": "Portal de reposiciones (CRUDA)"
+    }
+  ],
+  "buttons": [
+    "CRUDA",
+    "9+",
+    "← Todos los pedidos",
+    "Borrador",
+    "Confirmado",
+    "En producción",
+    "Enviado",
+    "Entregado",
+    "Facturado",
+    "Cancelado",
+    "Anular",
+    "Descontar del stock",
+    "Hoja de pedido (PDF)",
+    "Modificar",
+    "Extras",
+    "✕",
+    "+ Añadir línea",
+    "Quitar acceso",
+    "Invitar",
+    "Enviar",
+    "Reportar con captura"
+  ],
+  "links": [
+    {
+      "text": "Pedidos",
+      "href": "/cruda"
+    },
+    {
+      "text": "Catálogo",
+      "href": "/cruda/catalogo"
+    },
+    {
+      "text": "test Admin T",
+      "href": "/perfil"
+    },
+    {
+      "text": "Mis avisos",
+      "href": "/incidencias"
+    }
+  ],
+  "tabs": [
+    "Pedidos",
+    "Catálogo"
+  ],
+  "selects": [
+    {
+      "name": "",
+      "options": [
+        "Libre…",
+        "(Test) Camiseta A&F"
+      ],
+      "value": "Libre…"
+    },
+    {
+      "name": "",
+      "options": [
+        "Sin variantes"
+      ],
+      "value": "Sin variantes"
+    }
+  ],
+  "inputs": [
+    {
+      "type": "number",
+      "name": "",
+      "placeholder": "",
+      "value": "100"
+    },
+    {
+      "type": "number",
+      "name": "",
+      "placeholder": "",
+      "value": "0"
+    },
+    {
+      "type": "number",
+      "name": "",
+      "placeholder": "",
+      "value": ""
+    },
+    {
+      "type": "number",
+      "name": "",
+      "placeholder": "",
+      "value": ""
+    },
+    {
+      "type": "text",
+      "name": "",
+      "placeholder": "",
+      "value": ""
+    },
+    {
+      "type": "number",
+      "name": "",
+      "placeholder": "",
+      "value": "1"
+    },
+    {
+      "type": "number",
+      "name": "",
+      "placeholder": "",
+      "value": "0"
+    },
+    {
+      "type": "email",
+      "name": "",
+      "placeholder": "email@cliente.com",
+      "value": ""
+    },
+    {
+      "type": "textarea",
+      "name": "",
+      "placeholder": "Pregunta o cuenta qué falla…",
+      "value": ""
+    }
+  ],
+  "tables": [
+    {
+      "headers": [
+        "DESCRIPCIÓN",
+        "SKU",
+        "TALLA",
+        "COLOR",
+        "CANT.",
+        "PRECIO €",
+        "DTO %",
+        "NETO €",
+        "PVP €",
+        "×",
+        "SUBTOTAL",
+        "EXTRAS",
+        ""
+      ],
+      "rowCount": 1,
+      "rows": [
+        [
+          "(Test) Camiseta A&F · Algodón",
+          "4878test02",
+          "M",
+          "Crudo",
+          "",
+          "16,50 €",
+          "",
+          "16,50 €",
+          "",
+          "",
+          "1650,00 €",
+          "Extras",
+          "✕"
+        ]
+      ]
+    }
+  ],
+  "innerText": "/ CRUDA Pedidos Catálogo 9+ test Admin T Pedidos Hojas de pedido de CRUDA: producto, cantidades y estado. ← Todos los pedidos CR00104 Colección Reposición 1650,00 € Borrador Confirmado En producción Enviado Entregado Facturado Cancelado Anular Descontar del stock Hoja de pedido (PDF) Colección TAGMAG Fecha: 20 jul 2026 Reposición solicitada desde el portal de cliente. Modificar LÍNEAS DEL PEDIDO DESCRIPCIÓN SKU TALLA COLOR CANT. PRECIO € DTO % NETO € PVP € × SUBTOTAL EXTRAS (Test) Camiseta A&F · Algodón 4878test02 M Crudo 16,50 € 16,50 € 1650,00 € Extras ✕ AÑADIR LÍNEA Producto Libre… (Test) Camiseta A&F Variante Sin variantes Descripción * Cant. Precio + Añadir línea Bruto: 1650,00 € Total: 1650,00 € PORTAL DE REPOSICIONES (CRUDA) Da acceso a este cliente para que pida sus reposiciones de forma autónoma. Verá solo su catálogo y sus pedidos. hello@carlospego.com Quitar acceso Invitar Se le enviará un email para crear su contraseña. Requiere permiso de gestión de usuarios. ? CRUDA El stock se descuenta al confirmar el pedido No al crearlo. Un pedido en borrador no reserva nada, así que dos comerciales pueden vender la misma última unidad: confírmalo cuanto antes. Enviar Reportar con captura Mis avisos"
+}
