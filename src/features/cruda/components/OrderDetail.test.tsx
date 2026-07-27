@@ -35,6 +35,19 @@ test('la cabecera lleva el badge Reposición solo si el pedido lo es', () => {
   expect(plain).not.toHaveTextContent('Reposición');
 });
 
+test('la fila meta muestra la nota de origen o el responsable, según el pedido', () => {
+  const { unmount } = render(<OrderDetail order={cr104} onBack={vi.fn()} />);
+  expect(screen.getByText('TAGMAG')).toBeInTheDocument();
+  expect(screen.getByText('Fecha: 20 jul 2026')).toBeInTheDocument();
+  expect(screen.getByText('Reposición solicitada desde el portal de cliente.')).toBeInTheDocument();
+  expect(screen.queryByText(/Resp\.:/)).not.toBeInTheDocument();
+  unmount();
+
+  render(<OrderDetail order={cr} onBack={vi.fn()} />);
+  expect(screen.getByText('Resp.: Israel Cuenca')).toBeInTheDocument();
+  expect(screen.queryByText(/portal de cliente/)).not.toBeInTheDocument();
+});
+
 test('back button fires onBack', () => {
   const onBack = vi.fn();
   render(<OrderDetail order={cr} onBack={onBack} />);

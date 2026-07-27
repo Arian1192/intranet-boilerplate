@@ -47,11 +47,15 @@ export function OrderDetail({ order, onBack }: { order: Order; onBack: () => voi
         </div>
 
         <div className="flex items-center justify-between border-t border-slate-100 pt-4">
-          <div className="flex flex-wrap items-center gap-2 text-sm text-slate-500">
-            <Badge variant="neutral">{order.businessLine}</Badge>
-            <span className="font-medium text-slate-800">{order.client}</span>
-            <span>Fecha: {order.dateLabel}</span>
-            {order.responsible && <span>Resp.: {order.responsible}</span>}
+          <div className="space-y-1 text-sm text-slate-500">
+            <div className="flex flex-wrap items-center gap-2">
+              <Badge variant="neutral">{order.businessLine}</Badge>
+              <span className="font-medium text-slate-800">{order.client}</span>
+              <span>Fecha: {order.dateLabel}</span>
+              {order.responsible && <span>Resp.: {order.responsible}</span>}
+            </div>
+            {/* El live la pinta en su propia línea bajo la fila meta, no inline. */}
+            {order.portalNote && <p>{order.portalNote}</p>}
           </div>
           <Button variant="secondary">Modificar</Button>
         </div>
