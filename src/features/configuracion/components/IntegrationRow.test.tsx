@@ -10,11 +10,14 @@ describe('IntegrationRow', () => {
     render(<IntegrationRow integration={integration} snapshot={snapshotFor('precio-vuelos', '30d')} />);
     expect(screen.getByText('Precio de vuelos')).toBeInTheDocument();
     expect(screen.getByText(/FlightAPI/)).toBeInTheDocument();
-    expect(screen.getByText('1')).toBeInTheDocument();
-    expect(screen.getByText('10.6 s')).toBeInTheDocument();
+    expect(screen.getByText('5')).toBeInTheDocument();
+    expect(screen.getByText('5.9 s')).toBeInTheDocument();
+    expect(screen.getByText('Errores').nextElementSibling?.textContent).toBe('3');
     const porUsoHeader = screen.getByText('Por uso');
-    expect(porUsoHeader.nextElementSibling?.textContent).toMatch(/42,89/);
-    expect(screen.getByText('1 de 30.000 incluidas')).toBeInTheDocument();
+    expect(porUsoHeader.nextElementSibling?.textContent).toMatch(/8,58/);
+    expect(screen.getByText('5 de 30.000 incluidas')).toBeInTheDocument();
+    expect(screen.getByText('estimar')).toBeInTheDocument();
+    expect(screen.getByText('estimar_roundtrip')).toBeInTheDocument();
   });
 
   it('ia: expande las 4 sub-funciones', () => {
@@ -30,16 +33,22 @@ describe('IntegrationRow', () => {
     expect(screen.getByText(/0,0150/)).toBeInTheDocument();
   });
 
-  it('perfiles-artista: por uso "—" cuando perUse es null', () => {
+  it('perfiles-artista: refleja uso, por uso y subfilas live', () => {
     const integration = integrations().find((i) => i.id === 'perfiles-artista')!;
     render(<IntegrationRow integration={integration} snapshot={snapshotFor('perfiles-artista', '30d')} />);
-    expect(screen.getByText('—')).toBeInTheDocument();
+    expect(screen.getByText('58')).toBeInTheDocument();
+    expect(screen.getByText('0.7 s')).toBeInTheDocument();
+    expect(screen.getByText(/0,1900/)).toBeInTheDocument();
+    expect(screen.getByText('refrescar')).toBeInTheDocument();
+    expect(screen.getByText('perfil')).toBeInTheDocument();
+    expect(screen.getByText('buscar')).toBeInTheDocument();
   });
 
-  it('firma-contratos: sin snapshot, no revienta y no muestra métricas', () => {
+  it('firma-contratos: snapshot con cero usos y gasto cero', () => {
     const integration = integrations().find((i) => i.id === 'firma-contratos')!;
-    render(<IntegrationRow integration={integration} snapshot={undefined} />);
+    render(<IntegrationRow integration={integration} snapshot={snapshotFor('firma-contratos', '30d')} />);
     expect(screen.getByText('Firma de contratos')).toBeInTheDocument();
-    expect(screen.queryByText('Usos')).toBeNull();
+    expect(screen.getByText('Usos').nextElementSibling?.textContent).toBe('0');
+    expect(screen.getByText('Gasto').nextElementSibling?.textContent).toMatch(/0,00/);
   });
 });

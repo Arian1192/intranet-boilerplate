@@ -1,12 +1,12 @@
 import '@testing-library/jest-dom';
 import { describe, it, expect } from 'vitest';
-import { integrations, snapshotFor, totalsFor, usageBanners } from './uso';
+import { integrations, snapshotFor, totalsFor, usageBanners, usageFailures } from './uso';
 
 describe('uso data', () => {
-  it('6 integraciones en el orden del live', () => {
+  it('7 integraciones en el orden del live', () => {
     const list = integrations();
     expect(list.map((i) => i.id)).toEqual([
-      'precio-vuelos', 'ia', 'correo-saliente', 'firma-contratos', 'perfiles-artista', 'horarios-vuelos',
+      'precio-vuelos', 'perfiles-artista', 'ia', 'vat', 'firma-contratos', 'correo-saliente', 'horarios-vuelos',
     ]);
   });
 
@@ -19,30 +19,40 @@ describe('uso data', () => {
 
   it('snapshotFor(precio-vuelos, 30d) trae el importe incluido y por-uso', () => {
     const s = snapshotFor('precio-vuelos', '30d')!;
-    expect(s.usos).toBe(1);
-    expect(s.perUse).toBe(42.89);
-    expect(s.includedNote).toBe('1 de 30.000 incluidas');
+    expect(s.usos).toBe(5);
+    expect(s.errors).toBe(3);
+    expect(s.perUse).toBe(8.58);
+    expect(s.includedNote).toBe('5 de 30.000 incluidas');
   });
 
-  it('snapshotFor(perfiles-artista) perUse es null (nunca usado, sin cifra)', () => {
+  it('snapshotFor(perfiles-artista) refleja el uso live de Spotify/Deezer', () => {
     const s = snapshotFor('perfiles-artista', '30d')!;
-    expect(s.perUse).toBeNull();
+    expect(s.usos).toBe(58);
+    expect(s.perUse).toBe(0.19);
   });
 
-  it('snapshotFor(firma-contratos) no tiene fila de métricas en el live', () => {
-    expect(snapshotFor('firma-contratos', '30d')).toBeUndefined();
+  it('snapshotFor(vat) conserva los 4 errores live', () => {
+    const s = snapshotFor('vat', '30d')!;
+    expect(s.usos).toBe(4);
+    expect(s.errors).toBe(4);
   });
 
   it('totalsFor(30d) coincide con el live', () => {
     const t = totalsFor('30d');
     expect(t.cuotaFijaMes).toBeCloseTo(53.89);
     expect(t.gastoTotalPeriodo).toBeCloseTo(53.92);
-    expect(t.errores).toBe(0);
+    expect(t.errores).toBe(7);
   });
 
-  it('usageBanners: 3 banners, el primero con link Rellenar precios', () => {
+  it('usageBanners: 2 banners, el primero con link Rellenar precios', () => {
     const banners = usageBanners();
-    expect(banners).toHaveLength(3);
+    expect(banners).toHaveLength(2);
     expect(banners[0].linkLabel).toBe('Rellenar precios');
+  });
+
+  it('usageFailures lista los últimos 7 fallos live', () => {
+    const failures = usageFailures();
+    expect(failures).toHaveLength(7);
+    expect(failures[0]).toMatchObject({ integration: 'vat', message: 'CONFIG_GB' });
   });
 });

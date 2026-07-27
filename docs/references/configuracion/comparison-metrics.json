@@ -8,10 +8,10 @@
   },
   {
     "view": "uso",
-    "ours": "1440x1200",
+    "ours": "1440x1821",
     "live": "1440x1726",
-    "rms_pct": 13.15,
-    "changed_pct": 11.17
+    "rms_pct": 12.45,
+    "changed_pct": 10.55
   },
   {
     "view": "incidencias",
@@ -24,8 +24,8 @@
     "view": "documentos",
     "ours": "1440x1200",
     "live": "1440x1200",
-    "rms_pct": 14.94,
-    "changed_pct": 12.65
+    "rms_pct": 14.39,
+    "changed_pct": 12.09
   },
   {
     "view": "notificaciones",

@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-07-27T07:13:18.124Z",
+  "capturedAt": "2026-07-27T07:23:06.931Z",
   "base": "http://127.0.0.1:5183",
   "viewport": {
     "width": 1440,
@@ -18,7 +18,7 @@
       "route": "/configuracion/uso",
       "file": "docs/references/configuracion/ours-uso.png",
       "width": 1440,
-      "height": 1200
+      "height": 1821
     },
     {
       "slug": "incidencias",

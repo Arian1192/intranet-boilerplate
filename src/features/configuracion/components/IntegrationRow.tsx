@@ -2,7 +2,12 @@ import { Plug } from 'lucide-react';
 import { formatCurrency, formatCurrencyPrecise } from '@/lib/format';
 import type { Integration, IntegrationUsageSnapshot } from '../data/uso';
 
-const DOT: Record<'green' | 'amber', string> = { green: 'bg-emerald-500', amber: 'bg-amber-500' };
+const DOT: Record<Integration['statusDot'], string> = {
+  green: 'bg-emerald-500',
+  amber: 'bg-amber-500',
+  red: 'bg-rose-500',
+  slate: 'bg-slate-300',
+};
 
 export interface IntegrationRowProps {
   integration: Integration;
@@ -42,6 +47,12 @@ export function IntegrationRow({ integration, snapshot }: IntegrationRowProps) {
               <p className="font-semibold text-slate-800">{snapshot.tarda}</p>
             </div>
           )}
+          {snapshot?.errors !== undefined && (
+            <div>
+              <p className="text-[10px] font-semibold uppercase tracking-wide text-slate-400">Errores</p>
+              <p className="font-semibold text-rose-600">{snapshot.errors}</p>
+            </div>
+          )}
           {snapshot?.tokensLabel && (
             <div>
               <p className="text-[10px] font-semibold uppercase tracking-wide text-slate-400">Tokens</p>
@@ -61,7 +72,9 @@ export function IntegrationRow({ integration, snapshot }: IntegrationRowProps) {
           {snapshot && 'perUse' in snapshot && (
             <div>
               <p className="text-[10px] font-semibold uppercase tracking-wide text-slate-400">Por uso</p>
-              <p className="font-semibold text-slate-800">{snapshot.perUse == null ? '—' : formatCurrency(snapshot.perUse)}</p>
+              <p className="font-semibold text-slate-800">
+                {snapshot.perUse == null ? '—' : snapshot.perUse < 1 ? formatCurrencyPrecise(snapshot.perUse, 4) : formatCurrency(snapshot.perUse)}
+              </p>
             </div>
           )}
         </div>
@@ -77,6 +90,22 @@ export function IntegrationRow({ integration, snapshot }: IntegrationRowProps) {
                 <span>{s.usos} usos</span>
                 <span>{s.tokensIn} → {s.tokensOut}</span>
                 <span className="font-medium text-slate-700">{formatCurrencyPrecise(s.spend, 4)}</span>
+              </span>
+            </div>
+          ))}
+        </div>
+      )}
+      {integration.detailRows && (
+        <div className="mt-3 divide-y divide-slate-50 border-t border-slate-50 pt-2">
+          {integration.detailRows.map((row) => (
+            <div key={row.id} className="flex flex-wrap items-center justify-between gap-3 py-1.5 text-sm">
+              <span className="text-slate-700">
+                {row.label} <span className="text-slate-400">—</span>
+              </span>
+              <span className="flex items-center gap-5 text-slate-500">
+                {row.usos !== undefined && <span>{row.usos} usos</span>}
+                {row.errors !== undefined && <span className="text-rose-600">{row.errors} err.</span>}
+                {row.spend !== undefined && <span className="font-medium text-slate-700">{formatCurrency(row.spend)}</span>}
               </span>
             </div>
           ))}

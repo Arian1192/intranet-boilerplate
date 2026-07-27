@@ -4,7 +4,7 @@ import { StatCard, SegmentedControl } from '@/components/ui';
 import { ConfigPageHeader } from '../components/ConfigPageHeader';
 import { UsageBanner } from '../components/UsageBanner';
 import { IntegrationRow } from '../components/IntegrationRow';
-import { integrations, snapshotFor, totalsFor, usageBanners, type UsagePeriod } from '../data/uso';
+import { integrations, snapshotFor, totalsFor, usageBanners, usageFailures, type UsagePeriod } from '../data/uso';
 
 const PERIODS: { label: string; value: UsagePeriod }[] = [
   { label: '7 días', value: '7d' },
@@ -25,6 +25,7 @@ export function UsoPage() {
   const list = integrations();
   const totals = totalsFor(period);
   const banners = usageBanners();
+  const failures = usageFailures();
 
   return (
     <div className="space-y-6">
@@ -48,7 +49,7 @@ export function UsoPage() {
           value={formatCurrency(totals.gastoTotalPeriodo)}
           caption="Cuota prorrateada + consumo"
         />
-        <StatCard label="Errores" value={String(totals.errores)} />
+        <StatCard label="Errores" value={String(totals.errores)} valueClassName={totals.errores > 0 ? 'text-rose-600' : undefined} />
       </div>
 
       <div className="space-y-3">
@@ -65,6 +66,19 @@ export function UsoPage() {
             snapshot={snapshotFor(integration.id, period)}
           />
         ))}
+      </div>
+
+      <div className="rounded-xl border border-slate-100 bg-white p-4">
+        <h2 className="text-base font-semibold text-slate-800">Últimos fallos</h2>
+        <div className="mt-3 divide-y divide-slate-50">
+          {failures.map((failure) => (
+            <div key={failure.id} className="grid grid-cols-[90px_120px_1fr] gap-2 py-2 text-sm">
+              <span className="text-slate-400">{failure.date}</span>
+              <span className="text-slate-700">{failure.integration}</span>
+              <span className="text-rose-600">{failure.message}</span>
+            </div>
+          ))}
+        </div>
       </div>
 
       <div className="flex items-center gap-3 text-sm text-slate-500">

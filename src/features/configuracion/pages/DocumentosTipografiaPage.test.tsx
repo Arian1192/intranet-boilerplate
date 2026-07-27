@@ -14,14 +14,16 @@ describe('DocumentosTipografiaPage', () => {
     ].forEach((label) => expect(screen.getByText(label)).toBeInTheDocument());
   });
 
-  it('el panel "Así se verá" refleja el tamaño de texto en vivo', () => {
+  it('el panel "Así se verá" arranca con los valores observados en live y refleja cambios en vivo', () => {
     render(<DocumentosTipografiaPage />);
     const h1 = screen.getByText('Rider de Charlotte de Witte');
-    expect(h1).toHaveStyle({ fontSize: `${16 * 1.9}px` });
+    expect(h1).toHaveStyle({ fontSize: `${16 * 1.75}px`, lineHeight: '1.12' });
+    expect(screen.getByText('Interlineado').parentElement).toHaveTextContent('1,35');
+    expect(screen.getByText('Aire entre párrafos').parentElement).toHaveTextContent('3 px');
 
     const slider = screen.getAllByRole('slider')[0];
     fireEvent.change(slider, { target: { value: '20' } });
-    expect(screen.getByText('Rider de Charlotte de Witte')).toHaveStyle({ fontSize: `${20 * 1.9}px` });
+    expect(screen.getByText('Rider de Charlotte de Witte')).toHaveStyle({ fontSize: `${20 * 1.75}px` });
   });
 
   it('"Volver a los valores de fábrica" resetea tras un cambio', async () => {

@@ -28,7 +28,7 @@ export function DocumentosTipografiaPage() {
           {dirty ? 'Cambios sin guardar' : 'Guardado'}
         </span>
       </div>
-      <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_360px]">
+      <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
         <div className="divide-y divide-slate-100 rounded-xl border border-slate-100 bg-white px-4">
           <TypographySlider
             label="Tamaño del texto" value={settings.textSize} unit="px" min={10} max={24} step={1}

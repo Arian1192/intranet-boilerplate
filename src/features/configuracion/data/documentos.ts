@@ -10,10 +10,10 @@ export interface TypographySettings {
 
 export const FACTORY_DEFAULTS: TypographySettings = {
   textSize: 16,
-  lineHeight: 1.45,
-  paragraphGap: 4,
-  h1Scale: 1.9,
-  h2Scale: 1.5,
+  lineHeight: 1.35,
+  paragraphGap: 3,
+  h1Scale: 1.75,
+  h2Scale: 1.4,
   h3Scale: 1.15,
-  headingLineHeight: 1.2,
+  headingLineHeight: 1.12,
 };

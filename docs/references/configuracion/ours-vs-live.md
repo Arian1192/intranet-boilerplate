@@ -10,9 +10,9 @@ Capturas generadas para PR #11 en `docs/references/configuracion/`.
 | Vista | Ruta | Ours | Live | RMS | Px cambiados |
 |---|---|---:|---:|---:|---:|
 | Plantillas de correo | `/configuracion` | `ours-plantillas-correo.png` (1440x3953) | `live-plantillas-correo.png` (1440x4181) | 11.53% | 10.31% |
-| Uso y coste | `/configuracion/uso` | `ours-uso.png` (1440x1200) | `live-uso.png` (1440x1726) | 13.15% | 11.17% |
+| Uso y coste | `/configuracion/uso` | `ours-uso.png` (1440x1821) | `live-uso.png` (1440x1726) | 12.45% | 10.55% |
 | Incidencias | `/configuracion/incidencias` | `ours-incidencias.png` (1440x1200) | `live-incidencias.png` (1440x1200) | 12.23% | 9.22% |
-| Documentos (tipografía) | `/configuracion/documentos` | `ours-documentos.png` (1440x1200) | `live-documentos.png` (1440x1200) | 14.94% | 12.65% |
+| Documentos (tipografía) | `/configuracion/documentos` | `ours-documentos.png` (1440x1200) | `live-documentos.png` (1440x1200) | 14.39% | 12.09% |
 | Notificaciones | `/configuracion/notificaciones` | `ours-notificaciones.png` (1440x3073) | `live-notificaciones.png` (1440x3523) | 9.66% | 7.77% |
 | Comisiones de bookers | `/configuracion/comisiones` | `ours-comisiones.png` (1440x1554) | `live-comisiones.png` (1440x1601) | 10.37% | 7.29% |
 | Control de comisiones | `/configuracion/comisiones-pagos` | `ours-comisiones-pagos.png` (1440x1200) | `live-comisiones-pagos.png` (1440x1200) | 9.44% | 4.91% |
@@ -23,9 +23,9 @@ Capturas generadas para PR #11 en `docs/references/configuracion/`.
 
 ## Observaciones
 
-- La vista **Configuración → Incidencias** ya no reimplementa filas/filtros: usa `IncidenciaStatFilter`, `IncidenciaList` e `IncidenciaDetailDialog` de `@/features/incidencias`, por lo que conserva la presentación compartida (badge `rose` para nuevas, clip de adjunto, avatar compartido y detalle modal).
-- Las diferencias visibles restantes se concentran en datos/entorno: live tiene datos actuales distintos en Incidencias (12 filas; conteos 2/1/1/6/2) frente al seed local compartido por `listIncidencias` (8 filas; conteos 1/1/0/2/4), además de usuario/logo de entorno.
-- Las alturas distintas en páginas largas reflejan diferencias de contenido live vs seed local; las capturas locales y live mantienen el ancho de 1440px.
+- La vista **Configuración → Incidencias** ya no reimplementa filas/filtros: usa `IncidenciaStatFilter`, `IncidenciaList` e `IncidenciaDetailDialog` de `@/features/incidencias`, por lo que conserva la presentación compartida (badge `rose` para nuevas, clip de adjunto, avatar compartido y detalle modal). La diferencia visual principal es de datos live: 12 filas y conteos 2/1/1/6/2 frente al seed local compartido por `listIncidencias` (8 filas y conteos 1/1/0/2/4), más shell/usuario de entorno.
+- Tras revisar los pares de RMS alto, se corrigieron divergencias estructurales en **Documentos** (grid de dos columnas y valores tipográficos live: 16 px, 1,35, 3 px, 1,75x, 1,40x, 1,15x, 1,12) y **Uso** (datos/estructura live: 7 integraciones, errores, subfilas, último fallos y 2 avisos). Quedan alineados layout de contenido, tokens de color y estructura de tarjetas/listas.
+- Las diferencias visibles restantes se concentran en datos/entorno y shell: logo/nombre de intranet vs live, usuario/avatar, icono del widget de ayuda y datos dinámicos live. Las alturas distintas en páginas largas reflejan diferencias de contenido live vs seed local o envoltura de texto; las capturas locales y live mantienen el ancho de 1440px.
 
 ## Artefactos auxiliares
 
