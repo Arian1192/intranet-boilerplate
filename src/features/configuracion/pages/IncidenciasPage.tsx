@@ -1,11 +1,27 @@
-import { listIncidencias, countByEstado } from '@/features/incidencias/data/incidencias';
+import { useState } from 'react';
+import {
+  listIncidencias,
+  countByEstado,
+  filterByEstado,
+  INCIDENCIA_ESTADOS,
+} from '@/features/incidencias/data/incidencias';
+import type { Incidencia, IncidenciaEstado } from '@/features/incidencias/data/incidencias';
+import { IncidenciaStatFilter } from '@/features/incidencias/components/IncidenciaStatFilter';
+import { IncidenciaList } from '@/features/incidencias/components/IncidenciaList';
+import { IncidenciaDetailDialog } from '@/features/incidencias/components/IncidenciaDetailDialog';
 import { ConfigPageHeader } from '../components/ConfigPageHeader';
-import { IncidentCountPill } from '../components/IncidentCountPill';
-import { IncidenciaRow } from '../components/IncidenciaRow';
 
 export function IncidenciasPage() {
+  const [estadoFilter, setEstadoFilter] = useState<IncidenciaEstado | null>(null);
+  const [abierta, setAbierta] = useState<Incidencia | null>(null);
+
   const list = listIncidencias();
   const counts = countByEstado(list);
+  const filtered = filterByEstado(list, estadoFilter);
+
+  const toggle = (estado: IncidenciaEstado) => {
+    setEstadoFilter((current) => (current === estado ? null : estado));
+  };
 
   return (
     <div className="space-y-4">
@@ -13,18 +29,20 @@ export function IncidenciasPage() {
         title="Incidencias"
         subtitle="Lo que el equipo reporta desde el panel de ayuda. Responder es lo que hace que sigan reportando."
       />
-      <div className="grid grid-cols-2 gap-3 sm:grid-cols-5">
-        <IncidentCountPill label="NUEVAS" count={counts.nueva} tone="red" />
-        <IncidentCountPill label="AUTO" count={counts.auto} tone="sky" />
-        <IncidentCountPill label="EN CURSO" count={counts.en_curso} tone="neutral" />
-        <IncidentCountPill label="RESUELTAS" count={counts.resuelta} tone="emerald" />
-        <IncidentCountPill label="DESCARTADAS" count={counts.descartada} tone="neutral" />
-      </div>
-      <div className="rounded-xl border border-slate-100 bg-white">
-        {list.map((i) => (
-          <IncidenciaRow key={i.id} incidencia={i} />
+      <div role="group" aria-label="Filtrar por estado" className="flex flex-wrap gap-2">
+        {INCIDENCIA_ESTADOS.map((estado) => (
+          <IncidenciaStatFilter
+            key={estado.id}
+            estado={estado.id}
+            label={estado.label}
+            count={counts[estado.id]}
+            selected={estadoFilter === estado.id}
+            onToggle={() => toggle(estado.id)}
+          />
         ))}
       </div>
+      <IncidenciaList items={filtered} onOpen={setAbierta} />
+      {abierta && <IncidenciaDetailDialog incidencia={abierta} onClose={() => setAbierta(null)} />}
     </div>
   );
 }
