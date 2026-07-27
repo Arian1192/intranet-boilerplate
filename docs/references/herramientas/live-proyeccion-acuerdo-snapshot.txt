@@ -1,0 +1,260 @@
+- generic [ref=e1] clickable [onclick]
+  - banner
+    - link "Black Moose Group" [ref=e3]
+      - image "Black Moose Group"
+    - StaticText "/"
+    - button "Herramientas" [ref=e21]
+      - StaticText "Herramientas"
+      - image
+    - navigation
+      - link "Herramientas" [ref=e22]
+      - link "Proyecciones" [ref=e23]
+    - link "Mi trabajo" [ref=e4]
+      - image
+    - button "Notificaciones" [ref=e24]
+      - image
+      - StaticText "9+"
+    - link "test Admin test" [ref=e5]
+      - StaticText "test"
+      - StaticText "Admin"
+      - StaticText "T"
+  - main
+    - button "← Volver" [ref=e6]
+      - StaticText "← Volver"
+    - button "PQ @ SLS Barcelona" [ref=e7]
+    - button "i" [ref=e8]
+    - paragraph
+      - StaticText "Guardado"
+    - button "Comentarios" [ref=e9]
+    - button "PDF Ventas" [ref=e10]
+    - button "PDF Explotación" [ref=e11]
+    - button "Excel" [ref=e12]
+    - button "Guardar" [ref=e13]
+    - StaticText "ESTADO"
+    - button "Borrador" [ref=e14]
+    - button "En junta" [ref=e15]
+    - button "Aprobada" [ref=e16]
+    - button "Rechazada" [ref=e17]
+    - LabelText
+      - StaticText "REUNIÓN"
+      - Date "REUNIÓN": 2026-07-20
+        - generic
+          - spinbutton "Día Día" [ref=e84]: 20
+            - StaticText "20"
+          - StaticText "/"
+          - spinbutton "Mes Mes" [ref=e85]: 7
+            - StaticText "07"
+          - StaticText "/"
+          - spinbutton "Año Año" [ref=e86]: 2026
+            - StaticText "2026"
+        - button "Mostrar selector de fecha" [ref=e54]
+    - StaticText "RESPONSABLES"
+    - image "Jack Howell"
+    - StaticText "Jack"
+    - button "Quitar" [ref=e25]
+      - StaticText "✕"
+    - StaticText "TC"
+    - StaticText "Tony"
+    - button "Quitar" [ref=e26]
+      - StaticText "✕"
+    - button "＋ Añadir" [ref=e27]
+      - StaticText "＋"
+      - StaticText "Añadir"
+    - button "Convertir en evento →" [ref=e28]
+    - button "Acuerdo" [ref=e18]
+    - button "Previsión" [ref=e19]
+    - button "Real" [ref=e20]
+    - generic
+      - button "Acuerdo con el venue / promotor" [ref=e29]
+        - image
+        - heading "Acuerdo con el venue / promotor" [level=3, ref=e55]
+      - checkbox "Aplicar acuerdo (si no, el resultado es el 100% del evento)" [checked=true, ref=e30]
+      - StaticText "Ticketing"
+      - LabelText
+        - StaticText "NOS LLEVAMOS %"
+        - spinbutton "NOS LLEVAMOS %" [ref=e56]: 100
+          - StaticText "100"
+      - LabelText
+        - StaticText "SOBRE"
+        - generic
+          - button "SOBRE Bruto" [ref=e73]
+            - StaticText "Neto"
+          - button "Bruto" [ref=e74]
+      - LabelText
+        - StaticText "DEDUC. FIJA €"
+        - spinbutton "DEDUC. FIJA €" [ref=e57]: 0
+          - StaticText "0"
+      - LabelText
+        - StaticText "DEDUC. %"
+        - spinbutton "DEDUC. %" [ref=e58]: 0
+          - StaticText "0"
+      - LabelText
+        - StaticText "NUESTRO INGRESO"
+        - StaticText "4181,82€"
+      - StaticText "Mesas VIP"
+      - LabelText
+        - StaticText "NOS LLEVAMOS %"
+        - spinbutton "NOS LLEVAMOS %" [ref=e59]: 10
+          - StaticText "10"
+      - LabelText
+        - StaticText "SOBRE"
+        - generic
+          - button "SOBRE Bruto" [ref=e75]
+            - StaticText "Neto"
+          - button "Bruto" [ref=e76]
+      - LabelText
+        - StaticText "DEDUC. FIJA €"
+        - spinbutton "DEDUC. FIJA €" [ref=e60]: 0
+          - StaticText "0"
+      - LabelText
+        - StaticText "DEDUC. %"
+        - spinbutton "DEDUC. %" [ref=e61]: 18
+          - StaticText "18"
+      - LabelText
+        - StaticText "NUESTRO INGRESO"
+        - StaticText "953,44€"
+      - StaticText "Barras"
+      - LabelText
+        - StaticText "NOS LLEVAMOS %"
+        - spinbutton "NOS LLEVAMOS %" [ref=e62]: 10
+          - StaticText "10"
+      - LabelText
+        - StaticText "SOBRE"
+        - generic
+          - button "SOBRE Bruto" [ref=e77]
+            - StaticText "Neto"
+          - button "Bruto" [ref=e78]
+      - LabelText
+        - StaticText "DEDUC. FIJA €"
+        - spinbutton "DEDUC. FIJA €" [ref=e63]: 0
+          - StaticText "0"
+      - LabelText
+        - StaticText "DEDUC. %"
+        - spinbutton "DEDUC. %" [ref=e64]: 18
+          - StaticText "18"
+      - LabelText
+        - StaticText "NUESTRO INGRESO"
+        - StaticText "1118,18€"
+      - StaticText "Comida"
+      - LabelText
+        - StaticText "NOS LLEVAMOS %"
+        - spinbutton "NOS LLEVAMOS %" [ref=e65]: 10
+          - StaticText "10"
+      - LabelText
+        - StaticText "SOBRE"
+        - generic
+          - button "SOBRE Bruto" [ref=e79]
+            - StaticText "Neto"
+          - button "Bruto" [ref=e80]
+      - LabelText
+        - StaticText "DEDUC. FIJA €"
+        - spinbutton "DEDUC. FIJA €" [ref=e66]: 0
+          - StaticText "0"
+      - LabelText
+        - StaticText "DEDUC. %"
+        - spinbutton "DEDUC. %" [ref=e67]: 25
+          - StaticText "25"
+      - LabelText
+        - StaticText "NUESTRO INGRESO"
+        - StaticText "76,70€"
+      - StaticText "Merchandising"
+      - LabelText
+        - StaticText "NOS LLEVAMOS %"
+        - spinbutton "NOS LLEVAMOS %" [ref=e68]: 100
+          - StaticText "100"
+      - LabelText
+        - StaticText "SOBRE"
+        - generic
+          - button "SOBRE Bruto" [ref=e81]
+            - StaticText "Neto"
+          - button "Bruto" [ref=e82]
+      - LabelText
+        - StaticText "DEDUC. FIJA €"
+        - spinbutton "DEDUC. FIJA €" [ref=e69]: 0
+          - StaticText "0"
+      - LabelText
+        - StaticText "DEDUC. %"
+        - spinbutton "DEDUC. %" [ref=e70]: 0
+          - StaticText "0"
+      - LabelText
+        - StaticText "NUESTRO INGRESO"
+        - StaticText "0,00€"
+      - paragraph
+        - StaticText "Ej. PQ @ SLS: ticketing 100%; barras y VIP 10% sobre bruto tras descontar el % de coste del venue."
+    - generic
+      - button "¿Quién paga cada gasto?" [ref=e31]
+        - image
+        - heading "¿Quién paga cada gasto?" [level=3, ref=e71]
+      - paragraph
+        - StaticText "Asigna quién paga por categoría (toda de golpe) o línea a línea."
+      - StaticText "ARTÍSTICA"
+      - StaticText "-2400,00€"
+      - button "Nosotros" [ref=e32]
+      - button "Venue" [ref=e33]
+      - StaticText "US TWO - AF"
+      - StaticText "-2000,00€"
+      - button "Nosotros" [ref=e34]
+      - button "Venue" [ref=e35]
+      - StaticText "US TWO - BF"
+      - StaticText "-400,00€"
+      - button "Nosotros" [ref=e36]
+      - button "Venue" [ref=e37]
+      - StaticText "PROMOCIÓN"
+      - StaticText "-1500,00€"
+      - button "Nosotros" [ref=e38]
+      - button "Venue" [ref=e39]
+      - StaticText "PleaseQuiet"
+      - StaticText "-1500,00€"
+      - button "Nosotros" [ref=e40]
+      - button "Venue" [ref=e41]
+      - StaticText "STAFF"
+      - StaticText "-270,00€"
+      - button "Nosotros" [ref=e42]
+      - button "Venue" [ref=e43]
+      - StaticText "Fotografía / Vídeo"
+      - StaticText "-150,00€"
+      - button "Nosotros" [ref=e44]
+      - button "Venue" [ref=e45]
+      - StaticText "Taquilla - Patricia"
+      - StaticText "-120,00€"
+      - button "Nosotros" [ref=e46]
+      - button "Venue" [ref=e47]
+      - StaticText "PUBLICIDAD"
+      - StaticText "-1300,00€"
+      - button "Nosotros" [ref=e48]
+      - button "Venue" [ref=e49]
+      - StaticText "Inversión Meta"
+      - StaticText "-1000,00€"
+      - button "Nosotros" [ref=e50]
+      - button "Venue" [ref=e51]
+      - StaticText "Euphoric Media Fee"
+      - StaticText "-300,00€"
+      - button "Nosotros" [ref=e52]
+      - button "Venue" [ref=e53]
+      - StaticText "Pagamos nosotros"
+      - StaticText "-5470,00€"
+      - StaticText "Paga el venue"
+      - StaticText "0,00€"
+    - generic
+      - button "Resultado por acuerdo" [ref=e72]
+        - image
+        - heading "Resultado por acuerdo" [level=3, ref=e83]
+      - StaticText "NUESTROS INGRESOS"
+      - strong
+        - StaticText "6330,14€"
+      - StaticText "GASTOS QUE ASUMIMOS"
+      - strong
+        - StaticText "-5470,00€"
+      - StaticText "BENEFICIO POR ACUERDO"
+      - StaticText "860,14€"
+      - StaticText "MARGEN S/ INGRESOS"
+      - strong
+        - StaticText "13.6%"
+      - paragraph
+        - StaticText "El evento completo deja "
+        - strong
+          - StaticText "24.998,18€"
+        - StaticText " (82% margen)."
+  - button "? Ayuda" [ref=e2]
+    - StaticText "?"
+    - StaticText "Ayuda"

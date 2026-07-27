@@ -1,0 +1,603 @@
+- generic [ref=e1] clickable [onclick]
+  - banner
+    - link "Black Moose Group" [ref=e3]
+      - image "Black Moose Group"
+    - StaticText "/"
+    - button "Herramientas" [ref=e24]
+      - StaticText "Herramientas"
+      - image
+    - navigation
+      - link "Herramientas" [ref=e25]
+      - link "Proyecciones" [ref=e26]
+    - link "Mi trabajo" [ref=e4]
+      - image
+    - button "Notificaciones" [ref=e27]
+      - image
+      - StaticText "9+"
+    - link "test Admin test" [ref=e5]
+      - StaticText "test"
+      - StaticText "Admin"
+      - StaticText "T"
+  - main
+    - button "← Volver" [ref=e6]
+      - StaticText "← Volver"
+    - button "PQ @ SLS Barcelona" [ref=e7]
+    - button "i" [ref=e8]
+    - paragraph
+      - StaticText "Guardado"
+    - button "Comentarios" [ref=e9]
+    - button "PDF Ventas" [ref=e10]
+    - button "PDF Explotación" [ref=e11]
+    - button "Excel" [ref=e12]
+    - button "Guardar" [ref=e13]
+    - StaticText "ESTADO"
+    - button "Borrador" [ref=e14]
+    - button "En junta" [ref=e15]
+    - button "Aprobada" [ref=e16]
+    - button "Rechazada" [ref=e17]
+    - LabelText
+      - StaticText "REUNIÓN"
+      - Date "REUNIÓN": 2026-07-20
+        - generic
+          - spinbutton "Día Día" [ref=e323]: 20
+            - StaticText "20"
+          - StaticText "/"
+          - spinbutton "Mes Mes" [ref=e324]: 7
+            - StaticText "07"
+          - StaticText "/"
+          - spinbutton "Año Año" [ref=e325]: 2026
+            - StaticText "2026"
+        - button "Mostrar selector de fecha" [ref=e151]
+    - StaticText "RESPONSABLES"
+    - image "Jack Howell"
+    - StaticText "Jack"
+    - button "Quitar" [ref=e28]
+      - StaticText "✕"
+    - StaticText "TC"
+    - StaticText "Tony"
+    - button "Quitar" [ref=e29]
+      - StaticText "✕"
+    - button "＋ Añadir" [ref=e30]
+      - StaticText "＋"
+      - StaticText "Añadir"
+    - button "Convertir en evento →" [ref=e31]
+    - button "Acuerdo" [ref=e18]
+    - button "Previsión" [ref=e19]
+    - button "Real" [ref=e20]
+    - StaticText "ESCENARIO"
+    - button "Pesimista · 50%" [ref=e21]
+      - StaticText "Pesimista · 50%"
+    - button "Base · 75%" [ref=e22]
+      - StaticText "Base · 75%"
+    - button "Optimista · 100%" [ref=e23]
+      - StaticText "Optimista · 100%"
+    - StaticText "Ves el resultado por acuerdo."
+    - StaticText "INGRESOS POR ACUERDO"
+    - strong
+      - StaticText "6330,14€"
+    - StaticText "Total 33.515,00€"
+    - StaticText "INVERSIÓN QUE ASUMIMOS"
+    - strong
+      - StaticText "-5470,00€"
+    - StaticText "Total -5470,00€"
+    - StaticText "BENEFICIO POR ACUERDO"
+    - strong
+      - StaticText "860,14€"
+    - StaticText "Total 24.998,18€"
+    - StaticText "MARGEN POR ACUERDO"
+    - strong
+      - StaticText "13.6%"
+    - StaticText "PUNTO DE EQUILIBRIO"
+    - strong
+      - StaticText "77%"
+    - StaticText "461 entradas"
+    - StaticText "ASISTENCIA"
+    - strong
+      - StaticText "500 / 600"
+    - StaticText "83% ocupación"
+    - generic
+      - button "Resultado por acuerdo" [ref=e32]
+        - image
+        - heading "Resultado por acuerdo" [level=3, ref=e152]
+      - StaticText "NUESTROS INGRESOS"
+      - strong
+        - StaticText "6330,14€"
+      - StaticText "GASTOS QUE ASUMIMOS"
+      - strong
+        - StaticText "-5470,00€"
+      - StaticText "BENEFICIO POR ACUERDO"
+      - StaticText "860,14€"
+      - StaticText "MARGEN S/ INGRESOS"
+      - strong
+        - StaticText "13.6%"
+      - paragraph
+        - StaticText "Evento completo: 24.998,18€ (82%)."
+    - generic
+      - button "Escenarios" [ref=e33]
+        - image
+        - heading "Escenarios" [level=3, ref=e153]
+      - table
+        - rowgroup
+          - row
+            - columnheader "ESCENARIO" [ref=e326]
+            - columnheader "Bº POR ACUERDO" [ref=e327]
+            - columnheader "MARGEN" [ref=e328]
+        - row
+          - cell "Pesimista" [ref=e167]
+          - cell "-1134,69€" [ref=e168]
+          - cell "-26.2%" [ref=e169]
+            - StaticText "-26.2%"
+        - row
+          - cell "Base" [ref=e170]
+          - cell "860,14€" [ref=e171]
+          - cell "13.6%" [ref=e172]
+            - StaticText "13.6%"
+        - row
+          - cell "Optimista" [ref=e173]
+          - cell "2604,97€" [ref=e174]
+          - cell "32.3%" [ref=e175]
+            - StaticText "32.3%"
+    - generic
+      - button "Gasto por categoría" [ref=e34]
+        - image
+        - heading "Gasto por categoría" [level=3, ref=e154]
+      - StaticText "Artística"
+      - StaticText "2400,00€"
+      - StaticText " · "
+      - StaticText "44"
+      - StaticText "%"
+      - StaticText "Promoción"
+      - StaticText "1500,00€"
+      - StaticText " · "
+      - StaticText "27"
+      - StaticText "%"
+      - StaticText "Publicidad"
+      - StaticText "1300,00€"
+      - StaticText " · "
+      - StaticText "24"
+      - StaticText "%"
+      - StaticText "Staff"
+      - StaticText "270,00€"
+      - StaticText " · "
+      - StaticText "5"
+      - StaticText "%"
+    - button "Ajustes de escenarios y breakeven Base 75% · BE 77%" [ref=e35]
+      - image
+      - heading "Ajustes de escenarios y breakeven" [level=3, ref=e155]
+      - StaticText "Base 75% · BE 77%"
+    - button "Evento y aforo 18 jul 2026 · 600 · 6h · 500 pax" [ref=e36]
+      - image
+      - heading "Evento y aforo" [level=3, ref=e156]
+      - StaticText "18 jul 2026 · 600 · 6h · 500 pax"
+    - generic
+      - button "Ticketing" [ref=e37]
+        - image
+        - heading "Ticketing" [level=3, ref=e157]
+      - checkbox "Desglosar por ticketera (Fourvenues, RA, DICE…)" [checked=false, ref=e38]
+      - button "+ Añadir" [ref=e39]
+      - StaticText "RELEASE"
+      - StaticText "ENTRADAS"
+      - StaticText "PRECIO €"
+      - StaticText "FACTURACIÓN"
+      - textbox "Release" [ref=e40]: Early Access - acceso antes de las 7:30pm
+        - StaticText "Early Access - acceso antes de las 7:30pm"
+      - spinbutton [ref=e41]: 100
+        - StaticText "100"
+      - spinbutton [ref=e42]: 8
+        - StaticText "8"
+      - StaticText "800,00€"
+      - button "↑" [disabled, ref=e43]
+      - button "↓" [ref=e44]
+      - button "×" [ref=e45]
+      - textbox "Release" [ref=e46]: Online · Release 1
+        - StaticText "Online · Release 1"
+      - spinbutton [ref=e47]: 200
+        - StaticText "200"
+      - spinbutton [ref=e48]: 10
+        - StaticText "10"
+      - StaticText "2000,00€"
+      - button "↑" [ref=e49]
+      - button "↓" [ref=e50]
+      - button "×" [ref=e51]
+      - textbox "Release" [ref=e52]: Online · Release 3
+        - StaticText "Online · Release 3"
+      - spinbutton [ref=e53]: 150
+        - StaticText "150"
+      - spinbutton [ref=e54]: 12
+        - StaticText "12"
+      - StaticText "1800,00€"
+      - button "↑" [ref=e55]
+      - button "↓" [ref=e56]
+      - button "×" [ref=e57]
+      - textbox "Release" [ref=e58]: Online · Release 2
+        - StaticText "Online · Release 2"
+      - spinbutton [ref=e59]: 50
+        - StaticText "50"
+      - spinbutton [ref=e60]: 15
+        - StaticText "15"
+      - StaticText "750,00€"
+      - button "↑" [ref=e61]
+      - button "↓" [ref=e62]
+      - button "×" [ref=e63]
+      - textbox "Release" [ref=e64]: Pack 2 Entradas
+        - StaticText "Pack 2 Entradas"
+      - spinbutton [ref=e65]: 50
+        - StaticText "50"
+      - spinbutton [ref=e66]: 7.5
+        - StaticText "7,5"
+      - StaticText "375,00€"
+      - button "↑" [ref=e67]
+      - button "↓" [ref=e68]
+      - button "×" [ref=e69]
+      - textbox "Release" [ref=e70]: Pack 5 Entradas
+        - StaticText "Pack 5 Entradas"
+      - spinbutton [ref=e71]: 50
+        - StaticText "50"
+      - spinbutton [ref=e72]: 8
+        - StaticText "8"
+      - StaticText "400,00€"
+      - button "↑" [ref=e73]
+      - button "↓" [ref=e74]
+      - button "×" [ref=e75]
+      - textbox "Release" [ref=e76]: Taquilla
+        - StaticText "Taquilla"
+      - spinbutton [ref=e77]: 0
+        - StaticText "0"
+      - spinbutton [ref=e78]: 0
+        - StaticText "0"
+      - StaticText "0,00€"
+      - button "↑" [ref=e79]
+      - button "↓" [disabled, ref=e80]
+      - button "×" [ref=e81]
+      - StaticText "Total ticketing"
+      - StaticText "· "
+      - StaticText "600 entradas"
+      - StaticText "4600,00€"
+      - StaticText "Por acuerdo"
+      - StaticText " "
+      - StaticText "4181,82€"
+    - generic
+      - button "Mesas VIP" [ref=e82]
+        - image
+        - heading "Mesas VIP" [level=3, ref=e158]
+      - button "+ Añadir" [ref=e83]
+      - StaticText "ZONA"
+      - StaticText "MESAS"
+      - StaticText "PROB. %"
+      - StaticText "PRECIO €"
+      - StaticText "FACTURACIÓN"
+      - textbox "Zona" [ref=e84]: Zona 1
+        - StaticText "Zona 1"
+      - spinbutton [ref=e85]: 5
+        - StaticText "5"
+      - spinbutton [ref=e86]: 85
+        - StaticText "85"
+      - spinbutton [ref=e87]: 1200
+        - StaticText "1200"
+      - StaticText "5100,00€"
+      - button "×" [ref=e88]
+      - textbox "Zona" [ref=e89]: Zona 2
+        - StaticText "Zona 2"
+      - spinbutton [ref=e90]: 6
+        - StaticText "6"
+      - spinbutton [ref=e91]: 75
+        - StaticText "75"
+      - spinbutton [ref=e92]: 900
+        - StaticText "900"
+      - StaticText "4050,00€"
+      - button "×" [ref=e93]
+      - textbox "Zona" [ref=e94]: Zona 3
+        - StaticText "Zona 3"
+      - spinbutton [ref=e95]: 8
+        - StaticText "8"
+      - spinbutton [ref=e96]: 65
+        - StaticText "65"
+      - spinbutton [ref=e97]: 700
+        - StaticText "700"
+      - StaticText "3640,00€"
+      - button "×" [ref=e98]
+      - StaticText "Total VIP"
+      - StaticText "12.790,00€"
+      - StaticText "Por acuerdo"
+      - StaticText " "
+      - StaticText "953,44€"
+    - generic
+      - button "Barras, comida y merch" [ref=e99]
+        - image
+        - heading "Barras, comida y merch" [level=3, ref=e159]
+      - image
+      - StaticText "Barras"
+      - StaticText "15.000,00€"
+      - StaticText "Por acuerdo"
+      - StaticText " "
+      - StaticText "1118,18€"
+      - LabelText
+        - StaticText "CONSUMICIONES / HORA"
+        - spinbutton "CONSUMICIONES / HORA" [ref=e160]: 0.5
+          - StaticText "0,5"
+      - LabelText
+        - StaticText "PRECIO MEDIO €"
+        - spinbutton "PRECIO MEDIO €" [ref=e161]: 10
+          - StaticText "10"
+      - paragraph
+        - StaticText "3.0 cons./pax en 6h"
+      - image
+      - StaticText "Comida"
+      - StaticText "1125,00€"
+      - StaticText "Por acuerdo"
+      - StaticText " "
+      - StaticText "76,70€"
+      - LabelText
+        - StaticText "% QUE CONSUME"
+        - spinbutton "% QUE CONSUME" [ref=e162]: 15
+          - StaticText "15"
+      - LabelText
+        - StaticText "TICKET MEDIO €"
+        - spinbutton "TICKET MEDIO €" [ref=e163]: 15
+          - StaticText "15"
+      - image
+      - StaticText "Merch"
+      - StaticText "0,00€"
+      - StaticText "Por acuerdo"
+      - StaticText " "
+      - StaticText "0,00€"
+      - LabelText
+        - StaticText "% CONVERSIÓN"
+        - spinbutton "% CONVERSIÓN" [ref=e164]: 0
+          - StaticText "0"
+      - LabelText
+        - StaticText "PRECIO MEDIO €"
+        - spinbutton "PRECIO MEDIO €" [ref=e165]: 0
+          - StaticText "0"
+      - StaticText "Barras, comida y merch"
+      - StaticText "16.125,00€"
+      - StaticText "Por acuerdo"
+      - StaticText " "
+      - StaticText "1194,89€"
+    - generic
+      - button "Gastos" [ref=e100]
+        - image
+        - heading "Gastos" [level=3, ref=e166]
+      - button "+ Añadir" [ref=e101]
+      - StaticText "CATEGORÍA"
+      - StaticText "CONCEPTO"
+      - StaticText "BASE"
+      - StaticText "VALOR"
+      - StaticText "IMPORTE"
+      - StaticText "PAGA"
+      - combobox "Categoría" [expanded=false, ref=e102]: Artística
+        - MenuListPopup
+          - option "Artística" [selected, ref=e176]
+          - option "Publicidad" [ref=e177]
+          - option "Promoción" [ref=e178]
+          - option "Staff" [ref=e179]
+          - option "Alquileres" [ref=e180]
+          - option "Sonido" [ref=e181]
+          - option "Iluminación" [ref=e182]
+          - option "Efectos" [ref=e183]
+          - option "Producción" [ref=e184]
+          - option "Seguridad" [ref=e185]
+          - option "Barras" [ref=e186]
+          - option "Comida" [ref=e187]
+          - option "Ticketing" [ref=e188]
+          - option "Otros" [ref=e189]
+      - textbox "Concepto" [ref=e103]: US TWO - AF
+        - StaticText "US TWO - AF"
+      - combobox "Base" [expanded=false, ref=e104]: Importe fijo €
+        - MenuListPopup
+          - option "Importe fijo €" [selected, ref=e190]
+          - option "% facturación neta" [ref=e191]
+          - option "% ticketing neto" [ref=e192]
+          - option "% VIP neto" [ref=e193]
+          - option "% barras neto" [ref=e194]
+          - option "% comida neta" [ref=e195]
+          - option "% merch neto" [ref=e196]
+      - spinbutton [ref=e105]: 2000
+        - StaticText "2000"
+      - StaticText "-2000,00€"
+      - button "Nosotros" [ref=e106]
+      - button "Venue" [ref=e107]
+      - button "×" [ref=e108]
+      - combobox "Categoría" [expanded=false, ref=e109]: Artística
+        - MenuListPopup
+          - option "Artística" [selected, ref=e197]
+          - option "Publicidad" [ref=e198]
+          - option "Promoción" [ref=e199]
+          - option "Staff" [ref=e200]
+          - option "Alquileres" [ref=e201]
+          - option "Sonido" [ref=e202]
+          - option "Iluminación" [ref=e203]
+          - option "Efectos" [ref=e204]
+          - option "Producción" [ref=e205]
+          - option "Seguridad" [ref=e206]
+          - option "Barras" [ref=e207]
+          - option "Comida" [ref=e208]
+          - option "Ticketing" [ref=e209]
+          - option "Otros" [ref=e210]
+      - textbox "Concepto" [ref=e110]: US TWO - BF
+        - StaticText "US TWO - BF"
+      - combobox "Base" [expanded=false, ref=e111]: Importe fijo €
+        - MenuListPopup
+          - option "Importe fijo €" [selected, ref=e211]
+          - option "% facturación neta" [ref=e212]
+          - option "% ticketing neto" [ref=e213]
+          - option "% VIP neto" [ref=e214]
+          - option "% barras neto" [ref=e215]
+          - option "% comida neta" [ref=e216]
+          - option "% merch neto" [ref=e217]
+      - spinbutton [ref=e112]: 400
+        - StaticText "400"
+      - StaticText "-400,00€"
+      - button "Nosotros" [ref=e113]
+      - button "Venue" [ref=e114]
+      - button "×" [ref=e115]
+      - combobox "Categoría" [expanded=false, ref=e116]: Promoción
+        - MenuListPopup
+          - option "Artística" [ref=e218]
+          - option "Publicidad" [ref=e219]
+          - option "Promoción" [selected, ref=e220]
+          - option "Staff" [ref=e221]
+          - option "Alquileres" [ref=e222]
+          - option "Sonido" [ref=e223]
+          - option "Iluminación" [ref=e224]
+          - option "Efectos" [ref=e225]
+          - option "Producción" [ref=e226]
+          - option "Seguridad" [ref=e227]
+          - option "Barras" [ref=e228]
+          - option "Comida" [ref=e229]
+          - option "Ticketing" [ref=e230]
+          - option "Otros" [ref=e231]
+      - textbox "Concepto" [ref=e117]: PleaseQuiet
+        - StaticText "PleaseQuiet"
+      - combobox "Base" [expanded=false, ref=e118]: Importe fijo €
+        - MenuListPopup
+          - option "Importe fijo €" [selected, ref=e232]
+          - option "% facturación neta" [ref=e233]
+          - option "% ticketing neto" [ref=e234]
+          - option "% VIP neto" [ref=e235]
+          - option "% barras neto" [ref=e236]
+          - option "% comida neta" [ref=e237]
+          - option "% merch neto" [ref=e238]
+      - spinbutton [ref=e119]: 1500
+        - StaticText "1500"
+      - StaticText "-1500,00€"
+      - button "Nosotros" [ref=e120]
+      - button "Venue" [ref=e121]
+      - button "×" [ref=e122]
+      - combobox "Categoría" [expanded=false, ref=e123]: Staff
+        - MenuListPopup
+          - option "Artística" [ref=e239]
+          - option "Publicidad" [ref=e240]
+          - option "Promoción" [ref=e241]
+          - option "Staff" [selected, ref=e242]
+          - option "Alquileres" [ref=e243]
+          - option "Sonido" [ref=e244]
+          - option "Iluminación" [ref=e245]
+          - option "Efectos" [ref=e246]
+          - option "Producción" [ref=e247]
+          - option "Seguridad" [ref=e248]
+          - option "Barras" [ref=e249]
+          - option "Comida" [ref=e250]
+          - option "Ticketing" [ref=e251]
+          - option "Otros" [ref=e252]
+      - textbox "Concepto" [ref=e124]: Fotografía / Vídeo
+        - StaticText "Fotografía / Vídeo"
+      - combobox "Base" [expanded=false, ref=e125]: Importe fijo €
+        - MenuListPopup
+          - option "Importe fijo €" [selected, ref=e253]
+          - option "% facturación neta" [ref=e254]
+          - option "% ticketing neto" [ref=e255]
+          - option "% VIP neto" [ref=e256]
+          - option "% barras neto" [ref=e257]
+          - option "% comida neta" [ref=e258]
+          - option "% merch neto" [ref=e259]
+      - spinbutton [ref=e126]: 150
+        - StaticText "150"
+      - StaticText "-150,00€"
+      - button "Nosotros" [ref=e127]
+      - button "Venue" [ref=e128]
+      - button "×" [ref=e129]
+      - combobox "Categoría" [expanded=false, ref=e130]: Staff
+        - MenuListPopup
+          - option "Artística" [ref=e260]
+          - option "Publicidad" [ref=e261]
+          - option "Promoción" [ref=e262]
+          - option "Staff" [selected, ref=e263]
+          - option "Alquileres" [ref=e264]
+          - option "Sonido" [ref=e265]
+          - option "Iluminación" [ref=e266]
+          - option "Efectos" [ref=e267]
+          - option "Producción" [ref=e268]
+          - option "Seguridad" [ref=e269]
+          - option "Barras" [ref=e270]
+          - option "Comida" [ref=e271]
+          - option "Ticketing" [ref=e272]
+          - option "Otros" [ref=e273]
+      - textbox "Concepto" [ref=e131]: Taquilla - Patricia
+        - StaticText "Taquilla - Patricia"
+      - combobox "Base" [expanded=false, ref=e132]: Importe fijo €
+        - MenuListPopup
+          - option "Importe fijo €" [selected, ref=e274]
+          - option "% facturación neta" [ref=e275]
+          - option "% ticketing neto" [ref=e276]
+          - option "% VIP neto" [ref=e277]
+          - option "% barras neto" [ref=e278]
+          - option "% comida neta" [ref=e279]
+          - option "% merch neto" [ref=e280]
+      - spinbutton [ref=e133]: 120
+        - StaticText "120"
+      - StaticText "-120,00€"
+      - button "Nosotros" [ref=e134]
+      - button "Venue" [ref=e135]
+      - button "×" [ref=e136]
+      - combobox "Categoría" [expanded=false, ref=e137]: Publicidad
+        - MenuListPopup
+          - option "Artística" [ref=e281]
+          - option "Publicidad" [selected, ref=e282]
+          - option "Promoción" [ref=e283]
+          - option "Staff" [ref=e284]
+          - option "Alquileres" [ref=e285]
+          - option "Sonido" [ref=e286]
+          - option "Iluminación" [ref=e287]
+          - option "Efectos" [ref=e288]
+          - option "Producción" [ref=e289]
+          - option "Seguridad" [ref=e290]
+          - option "Barras" [ref=e291]
+          - option "Comida" [ref=e292]
+          - option "Ticketing" [ref=e293]
+          - option "Otros" [ref=e294]
+      - textbox "Concepto" [ref=e138]: Inversión Meta
+        - StaticText "Inversión Meta"
+      - combobox "Base" [expanded=false, ref=e139]: Importe fijo €
+        - MenuListPopup
+          - option "Importe fijo €" [selected, ref=e295]
+          - option "% facturación neta" [ref=e296]
+          - option "% ticketing neto" [ref=e297]
+          - option "% VIP neto" [ref=e298]
+          - option "% barras neto" [ref=e299]
+          - option "% comida neta" [ref=e300]
+          - option "% merch neto" [ref=e301]
+      - spinbutton [ref=e140]: 1000
+        - StaticText "1000"
+      - StaticText "-1000,00€"
+      - button "Nosotros" [ref=e141]
+      - button "Venue" [ref=e142]
+      - button "×" [ref=e143]
+      - combobox "Categoría" [expanded=false, ref=e144]: Publicidad
+        - MenuListPopup
+          - option "Artística" [ref=e302]
+          - option "Publicidad" [selected, ref=e303]
+          - option "Promoción" [ref=e304]
+          - option "Staff" [ref=e305]
+          - option "Alquileres" [ref=e306]
+          - option "Sonido" [ref=e307]
+          - option "Iluminación" [ref=e308]
+          - option "Efectos" [ref=e309]
+          - option "Producción" [ref=e310]
+          - option "Seguridad" [ref=e311]
+          - option "Barras" [ref=e312]
+          - option "Comida" [ref=e313]
+          - option "Ticketing" [ref=e314]
+          - option "Otros" [ref=e315]
+      - textbox "Concepto" [ref=e145]: Euphoric Media Fee
+        - StaticText "Euphoric Media Fee"
+      - combobox "Base" [expanded=false, ref=e146]: Importe fijo €
+        - MenuListPopup
+          - option "Importe fijo €" [selected, ref=e316]
+          - option "% facturación neta" [ref=e317]
+          - option "% ticketing neto" [ref=e318]
+          - option "% VIP neto" [ref=e319]
+          - option "% barras neto" [ref=e320]
+          - option "% comida neta" [ref=e321]
+          - option "% merch neto" [ref=e322]
+      - spinbutton [ref=e147]: 300
+        - StaticText "300"
+      - StaticText "-300,00€"
+      - button "Nosotros" [ref=e148]
+      - button "Venue" [ref=e149]
+      - button "×" [ref=e150]
+      - StaticText "Total gastos"
+      - StaticText "-5470,00€"
+  - button "? Ayuda" [ref=e2]
+    - StaticText "?"
+    - StaticText "Ayuda"
