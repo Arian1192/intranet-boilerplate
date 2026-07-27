@@ -1,0 +1,439 @@
+{
+  "route": "/configuracion",
+  "realRoute": "/configuracion",
+  "reachable": true,
+  "headings": [
+    "Configuración",
+    "Plantillas de correo"
+  ],
+  "subTabs": [
+    "Uso y coste",
+    "Incidencias",
+    "Cuentas (auditoría)",
+    "Documentos (tipografía)",
+    "Plantillas de correo",
+    "Notificaciones",
+    "Comisiones de bookers",
+    "Control de comisiones",
+    "Contratos",
+    "Alertas de eventos",
+    "RRHH (coste y avisos)",
+    "Festivos"
+  ],
+  "bodyText": "/ Configuración 9+ test Admin T SISTEMA Uso y coste Incidencias Cuentas (auditoría) MI TRABAJO Documentos (tipografía) COMUNICACIÓN Plantillas de correo Notificaciones CONCEPTONE · BOOKING Comisiones de bookers Control de comisiones Contratos PRODUCCIÓN Alertas de eventos EQUIPO RRHH (coste y avisos) Festivos Plantillas de correo Escribe el correo como un correo. La marca —logo, tipografía, botón y pie— la pone el sistema: aquí solo va el mensaje. Las variables van entre llaves, p. ej. {{nombre}}. Bienvenida — portal de cliente Invitación a un cliente al portal de reposiciones (CRUDA). Editar Vista previa invitacion_portal Asunto — lo que se lee en la bandeja Título — el titular al abrir el correo Mensaje B i U S • 1. ☑ 🔗 A A A ✕ Hola {{nombre}}, Te damos acceso a tu portal de CRUDA para que gestiones tus reposiciones de forma autónoma: pides, ves el estado y consultas tu histórico sin esperar a nadie. Crea tu contraseña para entrar. El enlace caduca en 24 horas. Botón — vacío = sin botón Enlace del botón Variables: {{nombre}} {{link}} Guardar Sin cambios Bienvenida — usuario de la intranet Invitación a un usuario nuevo de la intranet. Editar Vista previa invitacion_usuario Asunto — lo que se lee en la bandeja Título — el titular al abrir el correo Mensaje B i U S • 1. ☑ 🔗 A A A ✕ Hola {{nombre}}, Te hemos dado acceso a la intranet de Black Moose. Desde ahí gestionas tu trabajo, tus vacaciones y todo lo demás. Para entrar, crea tu contraseña. El enlace caduca en 24 horas: si se te pasa, pídenos otro y listo. Botón — vacío = sin botón Enlace del botón Variables: {{nombre}} {{link}} Guardar Sin cambios Liquidación de show (artista) Informe de liquidación de show que se envía al artista (con el PDF adjunto). Editar Vista previa liquidacion_show Asunto — lo que se lee en la bandeja Título — el titular al abrir el correo Mensaje B i U S • 1. ☑ 🔗 A A A ✕ Hola {{artista}}, Adjuntamos la liquidación del show {{show}} ({{codigo}}) del {{fecha}}. Fee bruto {{fee_bruto}} Booking fee {{booking_fee}} Management fee {{management_fee}} Gastos {{gastos_total}} Neto al artista {{neto_artista}} Tienes el detalle completo en el PDF adjunto. Cualquier duda, respóndenos a este correo. Botón — vacío = sin botón Enlace del botón Variables: {{artista}} {{show}} {{codigo}} {{fecha}} {{neto_artista}} {{fee_bruto}} {{booking_fee}} {{management_fee}} {{gastos_total}} {{gastos_detalle}} Guardar Sin cambios Restablecer contraseña Correo para restablecer la contraseña (lo lanza un administrador). Editar Vista previa reset_password Asunto — lo que se lee en la bandeja Título — el titular al abrir el correo Mensaje B i U S • 1. ☑ 🔗 A A A ✕ Hola {{nombre}}, Hemos recibido una petición para cambiar la contraseña de tu cuenta de Black Moose. Si has sido tú, entra desde el botón. Si no, ignora este correo: tu contraseña no cambia hasta que alguien la ponga desde ese enlace. Botón — vacío = sin botón Enlace del botón Variables: {{nombre}} {{link}} Guardar Sin cambios Vacaciones — aprobada Email al empleado cuando se aprueba su solicitud de vacaciones/ausencia. Editar Vista previa vacaciones_aprobada Asunto — lo que se lee en la bandeja Título — el titular al abrir el correo Mensaje B i U S • 1. ☑ 🔗 A A A ✕ Hola {{nombre}}, Tu solicitud de {{tipo}} ha sido aprobada. Desde el {{desde}} hasta el {{hasta}} ({{dias}} días hábiles). {{notas}} Botón — vacío = sin botón Enlace del botón Variables: {{nombre}} {{tipo}} {{desde}} {{hasta}} {{dias}} {{notas}} {{estado}} Guardar Sin cambios Vacaciones — rechazada Email al empleado cuando se rechaza su solicitud de vacaciones/ausencia. Editar Vista previa vacaciones_rechazada Asunto — lo que se lee en la bandeja Título — el titular al abrir el correo Mensaje B i U S • 1. ☑ 🔗 A A A ✕ Hola {{nombre}}, Tu solicitud de {{tipo}} (del {{desde}} al {{hasta}}) no ha podido aprobarse. {{notas}} Si necesitas darle una vuelta, habla con tu responsable. Botón — vacío = sin botón Enlace del botón Variables: {{nombre}} {{tipo}} {{desde}} {{hasta}} {{dias}} {{notas}} {{estado}} Guardar Sin cambios Salen por Resend desde no-reply@blackmoose.es con copia a quien los lanza. En invitaciones, {{link}} es el enlace para crear la contraseña: va en el botón, no en el texto. ? Ayuda",
+  "perTabText": {
+    "Uso y coste": "/ Configuración 9+ test Admin T SISTEMA Uso y coste Incidencias Cuentas (auditoría) MI TRABAJO Documentos (tipografía) COMUNICACIÓN Plantillas de correo Notificaciones CONCEPTONE · BOOKING Comisiones de bookers Control de comisiones Contratos PRODUCCIÓN Alertas de eventos EQUIPO RRHH (coste y avisos) Festivos Uso del sistema Qué integraciones funcionan y cuánto está costando todo esto. Se mide aquí, llamada a llamada. 7 días 30 días 90 días Un año CUOTA FIJA · AL MES 53,89 € GASTO TOTAL · 30 DÍAS 53,92 € Cuota prorrateada + consumo ERRORES 0 3 suscripciones sin importe. Salen a 0 €, y eso no es que sean gratis: es que no le has dicho lo que pagas. Rellenar precios Estás pagando y no lo usas: Perfiles de artista. Ninguna llamada en 30 días. 12 tarifas de IA sin verificar contra una factura real. El coste que ves es un orden de magnitud, no una cifra contable. 💸 Precio de vuelos cuota 42,89 €/mes FlightAPI · Funciona · última vez 21/7/2026 1 de 30.000 incluidas USOS 1 TARDA 10.6 s POR USO 42,89 € ✨ Inteligencia artificial por uso Anthropic / Google / OpenAI · Funciona · última vez 21/7/2026 USOS 28 TOKENS 92k → 3k TARDA 11.2 s GASTO 0,0300 € Triaje de incidenciasgemini-flash-latest 11 usos 44k → 1k 0,0154 € Chat de ayudagemini-flash-latest 12 usos 46k → 923 0,0150 € copysgemini-flash-latest 3 usos 1k → 695 0,0019 € mejorargemini-flash-latest 2 usos 490 → 159 0,0005 € 📧 Correo saliente por uso Resend · Sin usar en este periodo USOS 0 GASTO 0,00 € 🖋️ Firma de contratos por uso Signaturit · Sin usar en este periodo USOS 0 GASTO 0,00 € 🎧 Perfiles de artista cuota 11,00 €/mes Spotify / Deezer · Lo pagas y no lo has usado USOS 0 POR USO — 🛫 Horarios de vuelos por uso AeroDataBox (RapidAPI) · Sin usar en este periodo USOS 0 GASTO 0,00 € Cuotas y tarifas · Actualizar ? Ayuda",
+    "Incidencias": "/ Configuración 9+ test Admin T SISTEMA Uso y coste Incidencias Cuentas (auditoría) MI TRABAJO Documentos (tipografía) COMUNICACIÓN Plantillas de correo Notificaciones CONCEPTONE · BOOKING Comisiones de bookers Control de comisiones Contratos PRODUCCIÓN Alertas de eventos EQUIPO RRHH (coste y avisos) Festivos Incidencias Lo que el equipo reporta desde el panel de ayuda. Responder es lo que hace que sigan reportando. NUEVAS 1 AUTO 1 EN CURSO 0 RESUELTAS 2 DESCARTADAS 4 DESCARTADAS Idea viendo como crear un cliente y pone una dirección de correo. Puede haber más de un contacto, si es Marketing, Dirección o administración? / — FV RESUELTAS Me gustaría hacer la solicitud de 2 cosas: 1. Que se pudiera crear un nuevo evento haciendo clic en el calendario el día que quieras el evento. 2. Que hi hagues l'opció de poder canviar l'dioma al català també, ja que som una empresa basada a Barcelona 3. No funciona la generción de copys por iA 📎 /euphoric/calendario — AG DESCARTADAS Idea Me gustaría hacer la solicitud de 2 cosas: 1. Que se pudiera crear un nuevo evento haciendo clic en el calendario el día que quieras el evento. 2. Que hi hagues l'opció de poder canviar l'dioma al català també, ja que som una empresa basada a Barcelona / — AG DESCARTADAS Esto debería estar enlazado con no... 📎 /euphoric/campanas — NUEVAS Idea En el apartat de contactes del Signer/Buyer molaria afegir la opcio de posar TEL /shows/nuevo — JC DESCARTADAS Idea Esto podrías darle color por favor, en cada pestaña igual. 📎 /shows/95a152d1-d546-400b-904d-195f84400c66 — RESUELTAS Idea En logística del deal si se selecciona traslados internos tiene que salir siempre predefinido coche privado. Y luego, debería salir automáticamente la cantidad de pasajeros dependiendo de cuantos \"miembros\" haya en la ficha de ese artista. Lo mismo con la cantidad de habitaciones, por defecto los artistas quieren una habitación para cada uno de ellos y lo mismo con los billetes de vuelo / tren, etc. 📎 /shows/08ea3304-af17-4722-84d5-d3b63347fe74 — AUTO Idea ¿por qué no puedo seleccionar ida y vuelta en la estimación de vuelo? /shows/08ea3304-af17-4722-84d5-d3b63347fe74 — ? Ayuda",
+    "Cuentas (auditoría)": "/ Team Equipo Calendario Fichas 9+ test Admin T Usuarios Alta, permisos y estado de los usuarios de la intranet del grupo. USUARIOS DE LA INTRANET Alta por invitación, permisos por usuario y desactivación (sin borrado). Invitar Administrador (acceso total) PARA EMPEZAR RÁPIDO Booker Logística Advancing / Finanzas Marketing Project Manager Copiar permisos de… Fran Hinojosa Veredas Sadkiel Jack Howell Tony Carrerira Jassi Gonzalez Montes gelabertalba Alba Gelabert Aldo Messina Yenifer Bernardo hello Israel Cuenca Juan (Staff Level Test) Oscar Buch Alex González Joe Coe test Carlos Pego Son sellos, no roles: marcan casillas y desaparecen. Nada queda atado a la plantilla — después se toca una a una. Aplicar una plantilla reemplaza lo que hubiera de ConceptOne (si solo sumara, un ex-booker se quedaría viendo los fees). CONCEPTONE · NAVEGACIÓN Qué páginas ve en el menú. SECCIÓN VER EDITAR Dashboard Las cajas del pipeline y lo que necesita atención. — Importes (€) en las cajas del Dashboard Sin esto ve el NÚMERO de shows en cada caja, no el dinero. — Shows El listado. Sin esto no llega a ninguna ficha. — Disponibilidad — Contactos — Artistas El listado de artistas. Lo que ve DENTRO se decide abajo. — Analítica Fees, bookers, comisiones. Es dinero. — Ajustes de ConceptOne Comisiones y exclusividad, plantillas de contrato, alertas. CONCEPTONE · FICHA DE SHOW Pestaña a pestaña. Lo que no marques, no lo ve: la pestaña ni aparece. SECCIÓN VER EDITAR Crear shows nuevos — Evento Artista, fecha, venue, aforo. Oferta El DEAL: fee, taquilla, IVA, comisión del booker. Es el dinero del show. Logística del deal Qué cubre el promotor (vuelos, hotel, ground, dietas) y el rider del show. Set Times Artwork Contactos del show Signer, payer, promotor. Itinerario y gastos Vuelos, hotel, traslados… y los gastos del show (cerrarlos incluido). Contrato Generar, mandar a firmar y subir el firmado. Pagos Plan de cobro al promotor. Liquidación Cuentas finales y pagos al artista. Enviar el informe al artista El correo con la liquidación. Vive en la pestaña Liquidación. — Eliminar shows No hay botón en ninguna pantalla: hoy esto solo protege la API. — CONCEPTONE · FICHA DE ARTISTA Un artista es un proyecto: aquí está desde su Spotify hasta su IBAN. SECCIÓN VER EDITAR Ficha artista Foto, redes, Spotify, estilos. La cara pública del proyecto. Ficha personal Miembros, nombres legales, DNI/pasaporte. Sin esto no se compra un vuelo. Condiciones económicas Booking fee %, management fee %, territorios, mail de liquidaciones. Rider técnico / hospitality Vive en la pestaña Condiciones, pero es OTRO permiso: lo necesita producción, no finanzas. Documentación Contrato con el artista Roster Vista de tarjetas (foto + redes) de todo el roster, con acceso rápido a la Ficha artista. ETRA AGENCY Ver Etra (cuentas, acciones, cobertura) Gestionar tareas (crear/editar acciones) Editar Etra (cuentas, cobertura, obligaciones) Ver facturación / retainer Editar facturación / retainer Ver Seeding (inventario, envíos, influencers) Editar Seeding (inventario, envíos, influencers) TEAM · RRHH Y USUARIOS Ver Team (equipo del grupo) Editar personas, empresas y horas Ver condiciones económicas Editar condiciones económicas Aprobar / rechazar vacaciones Gestionar usuarios de la intranet CRM · CLIENTES Ver CRM (clientes y contactos) Editar CRM (clientes y contactos) Ver pipeline de ventas Gestionar pipeline (oportunidades, etapas, objetivos) Ver KPIs comerciales CRUDA · ROPA / MERCH Ver CRUDA (pedidos y catálogo) Editar CRUDA (pedidos, catálogo) PRODUCCIÓN · EVENTOS Ver Producción (eventos, vídeo, foto) Editar Producción (eventos, tareas, presupuesto) EUPHORIC MEDIA · MARKETING Ver Euphoric (cuentas, campañas, calendario) Editar Euphoric (cuentas, campañas, contenido) CREATIVOS · DISEÑO Ver Creativos (tablero de piezas) Editar Creativos (piezas, estados, adjuntos) MIXMAG Ver Mixmag (contenidos, revistas) Editar Mixmag (escribir, maquetar, producir) PUBLICAR en Mixmag (web, revista, redes) Ver campañas de anunciantes e importes TAGMAG Ver TAGMAG (contenidos, revistas) Editar TAGMAG (escribir, maquetar, producir) PUBLICAR en TAGMAG Ver tarifas, campañas e importes HERRAMIENTAS · UTILIDADES Ver Proyecciones (P&L de eventos) Crear y editar proyecciones BLACK MOOSE · GRUPO Escribir novedades del grupo 1 cuenta usa la intranet sin ficha en Team. No salen en el directorio, no tienen vacaciones y no cuentan en el coste del equipo. test@blackmoose.es Créales la ficha en Team → Fichas y usa «Vincular una cuenta existente» para enlazarla con su cuenta (no crees una cuenta nueva: la duplicarías). Todos Internos Portales Sin vincular a Team 17 usuarios NOMBRE EMAIL ESTADO ACCIONES Fran Hinojosa VeredasAdmin🧑‍💼 Team fran@blackmoose.es Activo Restablecer pwd Desactivar SadkielInterno🧑‍💼 Team sadkiel@blackmoose.es Activo Restablecer pwd Desactivar Jack HowellAdmin🧑‍💼 Team jack@blackmoose.es Activo Restablecer pwd Desactivar Tony CarreriraAdmin🧑‍💼 Team tony@blackmoose.es Activo Restablecer pwd Desactivar Jassi Gonzalez MontesAdmin🧑‍💼 Team jassi@blackmoose.es Pendiente Reenviar Restablecer pwd Desactivar gelabertalbaPortal gelabertalba@gmail.com Activo Restablecer pwd Desactivar Alba GelabertInterno🧑‍💼 Team alba@blackmoose.es Activo Restablecer pwd Desactivar Aldo MessinaInterno🧑‍💼 Team aldo@conceptoneagency.com Pendiente Reenviar Restablecer pwd Desactivar Yenifer BernardoInterno🧑‍💼 Team yenifer@conceptoneagency.com Pendiente Reenviar Restablecer pwd Desactivar helloPortal hello@carlospego.com Activo Restablecer pwd Desactivar Israel CuencaInterno🧑‍💼 Team israel@blackmoose.es Activo Restablecer pwd Desactivar Juan (Staff Level Test)Interno🧑‍💼 Team cpegomunoz@gmail.com Activo Restablecer pwd Desactivar Oscar BuchInterno🧑‍💼 Team oscar@conceptoneagency.com Activo Restablecer pwd Desactivar Alex GonzálezInterno🧑‍💼 Team alex@conceptoneagency.com Activo Restablecer pwd Desactivar Joe CoeInterno🧑‍💼 Team joe@conceptoneagency.com Activo Restablecer pwd Desactivar testAdminSin ficha Team test@blackmoose.es Activo Restablecer pwd Desactivar Carlos PegoAdmin🧑‍💼 Team carlos@blackmoose.es Activo Restablecer pwd Desactivar ? Ayuda"
+  },
+  "tokens": {
+    "buttons": [
+      {
+        "text": "Team",
+        "tag": "BUTTON",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(71, 85, 105)",
+        "borderRadius": "8px",
+        "fontSize": "14px",
+        "fontWeight": "600",
+        "padding": "4px 8px"
+      },
+      {
+        "text": "9+",
+        "tag": "BUTTON",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(100, 116, 139)",
+        "borderRadius": "8px",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "padding": "0px"
+      },
+      {
+        "text": "Invitar",
+        "tag": "BUTTON",
+        "backgroundColor": "rgb(68, 68, 76)",
+        "color": "rgb(255, 255, 255)",
+        "borderRadius": "8px",
+        "fontSize": "14px",
+        "fontWeight": "500",
+        "padding": "8px 16px"
+      },
+      {
+        "text": "Booker",
+        "tag": "BUTTON",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "color": "rgb(71, 85, 105)",
+        "borderRadius": "9999px",
+        "fontSize": "12px",
+        "fontWeight": "500",
+        "padding": "4px 10px"
+      },
+      {
+        "text": "Logística",
+        "tag": "BUTTON",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "color": "rgb(71, 85, 105)",
+        "borderRadius": "9999px",
+        "fontSize": "12px",
+        "fontWeight": "500",
+        "padding": "4px 10px"
+      },
+      {
+        "text": "Advancing / Finanzas",
+        "tag": "BUTTON",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "color": "rgb(71, 85, 105)",
+        "borderRadius": "9999px",
+        "fontSize": "12px",
+        "fontWeight": "500",
+        "padding": "4px 10px"
+      },
+      {
+        "text": "Marketing",
+        "tag": "BUTTON",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "color": "rgb(71, 85, 105)",
+        "borderRadius": "9999px",
+        "fontSize": "12px",
+        "fontWeight": "500",
+        "padding": "4px 10px"
+      },
+      {
+        "text": "Project Manager",
+        "tag": "BUTTON",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "color": "rgb(71, 85, 105)",
+        "borderRadius": "9999px",
+        "fontSize": "12px",
+        "fontWeight": "500",
+        "padding": "4px 10px"
+      },
+      {
+        "text": "Todos",
+        "tag": "BUTTON",
+        "backgroundColor": "rgb(246, 246, 247)",
+        "color": "rgb(55, 55, 61)",
+        "borderRadius": "6px",
+        "fontSize": "14px",
+        "fontWeight": "500",
+        "padding": "4px 12px"
+      },
+      {
+        "text": "Internos",
+        "tag": "BUTTON",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(100, 116, 139)",
+        "borderRadius": "6px",
+        "fontSize": "14px",
+        "fontWeight": "500",
+        "padding": "4px 12px"
+      },
+      {
+        "text": "Portales",
+        "tag": "BUTTON",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(100, 116, 139)",
+        "borderRadius": "6px",
+        "fontSize": "14px",
+        "fontWeight": "500",
+        "padding": "4px 12px"
+      },
+      {
+        "text": "Restablecer pwd",
+        "tag": "BUTTON",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(100, 116, 139)",
+        "borderRadius": "0px",
+        "fontSize": "12px",
+        "fontWeight": "500",
+        "padding": "0px"
+      },
+      {
+        "text": "Desactivar",
+        "tag": "BUTTON",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(239, 68, 68)",
+        "borderRadius": "0px",
+        "fontSize": "12px",
+        "fontWeight": "500",
+        "padding": "0px"
+      },
+      {
+        "text": "Restablecer pwd",
+        "tag": "BUTTON",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(100, 116, 139)",
+        "borderRadius": "0px",
+        "fontSize": "12px",
+        "fontWeight": "500",
+        "padding": "0px"
+      }
+    ],
+    "badges": [
+      {
+        "text": "Admin",
+        "tag": "SPAN",
+        "backgroundColor": "rgb(236, 236, 237)",
+        "color": "rgb(55, 55, 61)",
+        "borderRadius": "9999px",
+        "fontSize": "12px",
+        "fontWeight": "500",
+        "padding": "2px 10px"
+      },
+      {
+        "text": "🧑‍💼 Team",
+        "tag": "SPAN",
+        "backgroundColor": "rgb(237, 233, 254)",
+        "color": "rgb(109, 40, 217)",
+        "borderRadius": "9999px",
+        "fontSize": "12px",
+        "fontWeight": "500",
+        "padding": "2px 10px"
+      },
+      {
+        "text": "Activo",
+        "tag": "SPAN",
+        "backgroundColor": "rgb(209, 250, 229)",
+        "color": "rgb(4, 120, 87)",
+        "borderRadius": "9999px",
+        "fontSize": "12px",
+        "fontWeight": "500",
+        "padding": "2px 10px"
+      },
+      {
+        "text": "Interno",
+        "tag": "SPAN",
+        "backgroundColor": "rgb(241, 245, 249)",
+        "color": "rgb(100, 116, 139)",
+        "borderRadius": "9999px",
+        "fontSize": "12px",
+        "fontWeight": "500",
+        "padding": "2px 10px"
+      },
+      {
+        "text": "🧑‍💼 Team",
+        "tag": "SPAN",
+        "backgroundColor": "rgb(237, 233, 254)",
+        "color": "rgb(109, 40, 217)",
+        "borderRadius": "9999px",
+        "fontSize": "12px",
+        "fontWeight": "500",
+        "padding": "2px 10px"
+      },
+      {
+        "text": "Activo",
+        "tag": "SPAN",
+        "backgroundColor": "rgb(209, 250, 229)",
+        "color": "rgb(4, 120, 87)",
+        "borderRadius": "9999px",
+        "fontSize": "12px",
+        "fontWeight": "500",
+        "padding": "2px 10px"
+      },
+      {
+        "text": "Admin",
+        "tag": "SPAN",
+        "backgroundColor": "rgb(236, 236, 237)",
+        "color": "rgb(55, 55, 61)",
+        "borderRadius": "9999px",
+        "fontSize": "12px",
+        "fontWeight": "500",
+        "padding": "2px 10px"
+      },
+      {
+        "text": "🧑‍💼 Team",
+        "tag": "SPAN",
+        "backgroundColor": "rgb(237, 233, 254)",
+        "color": "rgb(109, 40, 217)",
+        "borderRadius": "9999px",
+        "fontSize": "12px",
+        "fontWeight": "500",
+        "padding": "2px 10px"
+      },
+      {
+        "text": "Activo",
+        "tag": "SPAN",
+        "backgroundColor": "rgb(209, 250, 229)",
+        "color": "rgb(4, 120, 87)",
+        "borderRadius": "9999px",
+        "fontSize": "12px",
+        "fontWeight": "500",
+        "padding": "2px 10px"
+      },
+      {
+        "text": "Admin",
+        "tag": "SPAN",
+        "backgroundColor": "rgb(236, 236, 237)",
+        "color": "rgb(55, 55, 61)",
+        "borderRadius": "9999px",
+        "fontSize": "12px",
+        "fontWeight": "500",
+        "padding": "2px 10px"
+      },
+      {
+        "text": "🧑‍💼 Team",
+        "tag": "SPAN",
+        "backgroundColor": "rgb(237, 233, 254)",
+        "color": "rgb(109, 40, 217)",
+        "borderRadius": "9999px",
+        "fontSize": "12px",
+        "fontWeight": "500",
+        "padding": "2px 10px"
+      },
+      {
+        "text": "Activo",
+        "tag": "SPAN",
+        "backgroundColor": "rgb(209, 250, 229)",
+        "color": "rgb(4, 120, 87)",
+        "borderRadius": "9999px",
+        "fontSize": "12px",
+        "fontWeight": "500",
+        "padding": "2px 10px"
+      },
+      {
+        "text": "Admin",
+        "tag": "SPAN",
+        "backgroundColor": "rgb(236, 236, 237)",
+        "color": "rgb(55, 55, 61)",
+        "borderRadius": "9999px",
+        "fontSize": "12px",
+        "fontWeight": "500",
+        "padding": "2px 10px"
+      },
+      {
+        "text": "🧑‍💼 Team",
+        "tag": "SPAN",
+        "backgroundColor": "rgb(237, 233, 254)",
+        "color": "rgb(109, 40, 217)",
+        "borderRadius": "9999px",
+        "fontSize": "12px",
+        "fontWeight": "500",
+        "padding": "2px 10px"
+      },
+      {
+        "text": "Pendiente",
+        "tag": "SPAN",
+        "backgroundColor": "rgb(254, 243, 199)",
+        "color": "rgb(180, 83, 9)",
+        "borderRadius": "9999px",
+        "fontSize": "12px",
+        "fontWeight": "500",
+        "padding": "2px 10px"
+      }
+    ],
+    "tableHeaders": [
+      {
+        "text": "Sección",
+        "tag": "TH",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(148, 163, 184)",
+        "borderRadius": "0px",
+        "fontSize": "11px",
+        "fontWeight": "500",
+        "padding": "6px 12px"
+      },
+      {
+        "text": "Ver",
+        "tag": "TH",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(148, 163, 184)",
+        "borderRadius": "0px",
+        "fontSize": "11px",
+        "fontWeight": "500",
+        "padding": "6px 1px"
+      },
+      {
+        "text": "Editar",
+        "tag": "TH",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(148, 163, 184)",
+        "borderRadius": "0px",
+        "fontSize": "11px",
+        "fontWeight": "500",
+        "padding": "6px 1px"
+      },
+      {
+        "text": "Sección",
+        "tag": "TH",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(148, 163, 184)",
+        "borderRadius": "0px",
+        "fontSize": "11px",
+        "fontWeight": "500",
+        "padding": "6px 12px"
+      },
+      {
+        "text": "Ver",
+        "tag": "TH",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(148, 163, 184)",
+        "borderRadius": "0px",
+        "fontSize": "11px",
+        "fontWeight": "500",
+        "padding": "6px 1px"
+      },
+      {
+        "text": "Editar",
+        "tag": "TH",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(148, 163, 184)",
+        "borderRadius": "0px",
+        "fontSize": "11px",
+        "fontWeight": "500",
+        "padding": "6px 1px"
+      },
+      {
+        "text": "Sección",
+        "tag": "TH",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(148, 163, 184)",
+        "borderRadius": "0px",
+        "fontSize": "11px",
+        "fontWeight": "500",
+        "padding": "6px 12px"
+      },
+      {
+        "text": "Ver",
+        "tag": "TH",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(148, 163, 184)",
+        "borderRadius": "0px",
+        "fontSize": "11px",
+        "fontWeight": "500",
+        "padding": "6px 1px"
+      },
+      {
+        "text": "Editar",
+        "tag": "TH",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(148, 163, 184)",
+        "borderRadius": "0px",
+        "fontSize": "11px",
+        "fontWeight": "500",
+        "padding": "6px 1px"
+      },
+      {
+        "text": "Nombre",
+        "tag": "TH",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(100, 116, 139)",
+        "borderRadius": "0px",
+        "fontSize": "12px",
+        "fontWeight": "500",
+        "padding": "12px 16px"
+      }
+    ],
+    "cards": [
+      {
+        "text": "Usuarios de la intranetAlta por invitación, permisos por usu",
+        "tag": "SECTION",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "color": "rgb(30, 41, 59)",
+        "borderRadius": "12px",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "padding": "20px"
+      }
+    ]
+  }
+}
