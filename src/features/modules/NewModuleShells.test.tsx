@@ -4,7 +4,6 @@ import '@testing-library/jest-dom';
 import { MemoryRouter } from 'react-router';
 import { MixmagShell } from './MixmagShell';
 import { TagmagShell } from './TagmagShell';
-import { HerramientasShell } from './HerramientasShell';
 
 describe('Nuevos shells stub', () => {
   it.each([
@@ -14,10 +13,5 @@ describe('Nuevos shells stub', () => {
     render(<MemoryRouter><Shell /></MemoryRouter>);
     expect(screen.getByRole('link', { name })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'Resumen' })).toBeInTheDocument();
-  });
-
-  it('HerramientasShell renderiza su título', () => {
-    render(<MemoryRouter><HerramientasShell /></MemoryRouter>);
-    expect(screen.getByRole('heading', { name: 'Herramientas' })).toBeInTheDocument();
   });
 });

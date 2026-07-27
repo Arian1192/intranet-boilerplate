@@ -18,6 +18,9 @@ import { IncidenciasShell } from '@/features/modules/IncidenciasShell';
 import { MixmagShell } from '@/features/modules/MixmagShell';
 import { TagmagShell } from '@/features/modules/TagmagShell';
 import { HerramientasShell } from '@/features/modules/HerramientasShell';
+import { HerramientasResumenPage } from '@/features/herramientas/pages/HerramientasResumenPage';
+import { ProyeccionesListPage } from '@/features/herramientas/pages/ProyeccionesListPage';
+import { ProyeccionDetailPage } from '@/features/herramientas/pages/ProyeccionDetailPage';
 import { BookingDashboardPage } from '@/features/booking/pages/BookingDashboardPage';
 import { ShowsPage } from '@/features/booking/pages/ShowsPage';
 import { LogisticsPage } from '@/features/booking/pages/LogisticsPage';
@@ -115,7 +118,11 @@ export function AppRouter() {
         <Route path="campanas" element={<RedaccionCampanasPage />} />
         <Route path="revistas" element={<RevistasPage />} />
       </Route>
-      <Route path="/herramientas" element={<HerramientasShell />} />
+      <Route path="/herramientas" element={<HerramientasShell />}>
+        <Route index element={<HerramientasResumenPage />} />
+        <Route path="proyecciones" element={<ProyeccionesListPage />} />
+        <Route path="proyecciones/:id" element={<ProyeccionDetailPage />} />
+      </Route>
     </Routes>
   );
 }
