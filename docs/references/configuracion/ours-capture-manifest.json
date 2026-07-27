@@ -1,0 +1,87 @@
+{
+  "capturedAt": "2026-07-27T07:23:06.931Z",
+  "base": "http://127.0.0.1:5183",
+  "viewport": {
+    "width": 1440,
+    "height": 1200
+  },
+  "results": [
+    {
+      "slug": "plantillas-correo",
+      "route": "/configuracion",
+      "file": "docs/references/configuracion/ours-plantillas-correo.png",
+      "width": 1440,
+      "height": 3953
+    },
+    {
+      "slug": "uso",
+      "route": "/configuracion/uso",
+      "file": "docs/references/configuracion/ours-uso.png",
+      "width": 1440,
+      "height": 1821
+    },
+    {
+      "slug": "incidencias",
+      "route": "/configuracion/incidencias",
+      "file": "docs/references/configuracion/ours-incidencias.png",
+      "width": 1440,
+      "height": 1200
+    },
+    {
+      "slug": "documentos",
+      "route": "/configuracion/documentos",
+      "file": "docs/references/configuracion/ours-documentos.png",
+      "width": 1440,
+      "height": 1200
+    },
+    {
+      "slug": "notificaciones",
+      "route": "/configuracion/notificaciones",
+      "file": "docs/references/configuracion/ours-notificaciones.png",
+      "width": 1440,
+      "height": 3073
+    },
+    {
+      "slug": "comisiones",
+      "route": "/configuracion/comisiones",
+      "file": "docs/references/configuracion/ours-comisiones.png",
+      "width": 1440,
+      "height": 1554
+    },
+    {
+      "slug": "comisiones-pagos",
+      "route": "/configuracion/comisiones-pagos",
+      "file": "docs/references/configuracion/ours-comisiones-pagos.png",
+      "width": 1440,
+      "height": 1200
+    },
+    {
+      "slug": "contratos",
+      "route": "/configuracion/contratos",
+      "file": "docs/references/configuracion/ours-contratos.png",
+      "width": 1440,
+      "height": 1200
+    },
+    {
+      "slug": "alertas",
+      "route": "/configuracion/alertas",
+      "file": "docs/references/configuracion/ours-alertas.png",
+      "width": 1440,
+      "height": 1200
+    },
+    {
+      "slug": "rrhh",
+      "route": "/configuracion/rrhh",
+      "file": "docs/references/configuracion/ours-rrhh.png",
+      "width": 1440,
+      "height": 1726
+    },
+    {
+      "slug": "festivos",
+      "route": "/configuracion/festivos",
+      "file": "docs/references/configuracion/ours-festivos.png",
+      "width": 1440,
+      "height": 1804
+    }
+  ]
+}

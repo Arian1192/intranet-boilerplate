@@ -8,17 +8,20 @@ const DEFAULT_PLACEHOLDER = 'Qué necesita la pieza: mensaje, formato, maquetaci
 const toolBtn = 'grid h-7 min-w-[28px] place-items-center rounded px-1 text-slate-600 hover:bg-slate-100';
 
 export interface RichTextEditorProps {
+  content?: string;
   placeholder?: string;
+  onChange?: (html: string) => void;
   className?: string;
 }
 
-export function RichTextEditor({ placeholder = DEFAULT_PLACEHOLDER, className }: RichTextEditorProps) {
+export function RichTextEditor({ content = '', placeholder = DEFAULT_PLACEHOLDER, onChange, className }: RichTextEditorProps) {
   const editor = useEditor({
     extensions: [StarterKit, TextStyle, FontSize, Placeholder.configure({ placeholder })],
-    content: '',
+    content,
     editorProps: {
       attributes: { class: 'min-h-[90px] px-3 py-2 text-sm leading-snug outline-none' },
     },
+    onUpdate: ({ editor: e }) => onChange?.(e.getHTML()),
   });
 
   const marks: [string, string, string, () => void][] = [

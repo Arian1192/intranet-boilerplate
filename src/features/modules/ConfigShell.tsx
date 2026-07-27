@@ -1,12 +1,5 @@
-import { ModuleShell } from './ModuleShell';
+import { ConfiguracionShell } from '@/features/configuracion/ConfiguracionShell';
 
 export function ConfigShell() {
-  return (
-    <ModuleShell
-      
-      title="Configuración"
-      description="Plantillas de correo y ajustes generales de la intranet."
-      tabs={['Dashboard', 'Plantillas', 'General']}
-    />
-  );
+  return <ConfiguracionShell />;
 }

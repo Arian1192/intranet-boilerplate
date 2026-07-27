@@ -1,0 +1,79 @@
+[
+  {
+    "view": "plantillas-correo",
+    "ours": "1440x3953",
+    "live": "1440x4181",
+    "rms_pct": 11.53,
+    "changed_pct": 10.31
+  },
+  {
+    "view": "uso",
+    "ours": "1440x1821",
+    "live": "1440x1726",
+    "rms_pct": 12.45,
+    "changed_pct": 10.55
+  },
+  {
+    "view": "incidencias",
+    "ours": "1440x1200",
+    "live": "1440x1200",
+    "rms_pct": 12.23,
+    "changed_pct": 9.22
+  },
+  {
+    "view": "documentos",
+    "ours": "1440x1200",
+    "live": "1440x1200",
+    "rms_pct": 14.39,
+    "changed_pct": 12.09
+  },
+  {
+    "view": "notificaciones",
+    "ours": "1440x3073",
+    "live": "1440x3523",
+    "rms_pct": 9.66,
+    "changed_pct": 7.77
+  },
+  {
+    "view": "comisiones",
+    "ours": "1440x1554",
+    "live": "1440x1601",
+    "rms_pct": 10.37,
+    "changed_pct": 7.29
+  },
+  {
+    "view": "comisiones-pagos",
+    "ours": "1440x1200",
+    "live": "1440x1200",
+    "rms_pct": 9.44,
+    "changed_pct": 4.91
+  },
+  {
+    "view": "contratos",
+    "ours": "1440x1200",
+    "live": "1440x1200",
+    "rms_pct": 8.51,
+    "changed_pct": 4.02
+  },
+  {
+    "view": "alertas",
+    "ours": "1440x1200",
+    "live": "1440x1200",
+    "rms_pct": 10.99,
+    "changed_pct": 8.54
+  },
+  {
+    "view": "rrhh",
+    "ours": "1440x1726",
+    "live": "1440x1586",
+    "rms_pct": 10.85,
+    "changed_pct": 8.37
+  },
+  {
+    "view": "festivos",
+    "ours": "1440x1804",
+    "live": "1440x1526",
+    "rms_pct": 10.99,
+    "changed_pct": 9.61
+  }
+]

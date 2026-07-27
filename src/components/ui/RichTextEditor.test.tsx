@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom';
 import { render, screen, fireEvent } from '@testing-library/react';
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
 import { RichTextEditor } from './RichTextEditor';
 
 const flush = () => new Promise((r) => setTimeout(r, 50));
@@ -15,5 +15,12 @@ describe('RichTextEditor', () => {
     expect(container.querySelector('.ProseMirror, [contenteditable="true"]')).not.toBeNull();
     fireEvent.click(screen.getByRole('button', { name: 'Negrita' }));
     fireEvent.click(screen.getByRole('button', { name: 'Quitar formato' }));
+  });
+
+  it('acepta contenido inicial (content) y prop onChange sin errores', async () => {
+    const onChange = vi.fn();
+    render(<RichTextEditor content="<p>Hola</p>" onChange={onChange} />);
+    await flush();
+    expect(screen.getByText('Hola')).toBeInTheDocument();
   });
 });
