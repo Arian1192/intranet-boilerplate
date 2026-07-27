@@ -20,7 +20,7 @@ export function CreativosPage() {
         <div>
           <h1 className="text-2xl font-semibold text-slate-800">Creativos</h1>
           <p className="text-sm text-slate-500">
-            Tablero de piezas del equipo de diseño: Euphoric, clientes del CRM y empresas internas.
+            Tablero de creatividades del equipo de diseño: Euphoric, clientes del CRM y empresas internas.
           </p>
         </div>
         <div className="flex items-center gap-2">
@@ -35,13 +35,13 @@ export function CreativosPage() {
             </button>
           ))}
           <Button variant="primary" size="sm" onClick={() => setDrawerOpen(true)}>
-            + Nueva pieza
+            + Nueva creatividad
           </Button>
         </div>
       </div>
 
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-        <CreativosStatCard value={stats.activas} label="Piezas activas" />
+        <CreativosStatCard value={stats.activas} label="Creatividades activas" />
         <CreativosStatCard value={stats.pendAprobar} label="Pend. aprobar" valueClassName="text-amber-600" />
         <CreativosStatCard value={stats.correcciones} label="En correcciones" valueClassName="text-rose-600" />
         <CreativosStatCard value={stats.atrasadas} label="Atrasadas" valueClassName="text-rose-600" />
