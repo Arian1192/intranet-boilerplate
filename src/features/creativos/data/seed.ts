@@ -15,6 +15,13 @@ export interface CreativePiece {
   checklist?: { done: number; total: number };
   clientApproval?: string;
   isOverdue?: boolean;
+  /**
+   * Marcador libre que el live pinta al extremo derecho de la fila del responsable.
+   * HUECO: la evidencia del 27-jul solo muestra `🎬` en `Video Pomo 26/07`, y NO depende del
+   * tipo (`Flyer Claptone 02/08` también es Vídeo y no lo lleva). Sin regla derivable de la
+   * evidencia, se modela como dato por creatividad en vez de inventar la semántica.
+   */
+  icon?: string;
 }
 
 export const CURRENT_USER = 'Carlos';
