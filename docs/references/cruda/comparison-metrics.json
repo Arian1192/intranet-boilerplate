@@ -1,0 +1,34 @@
+[
+  {
+    "view": "pedidos",
+    "ours": "1620x1200",
+    "live": "1440x900",
+    "compared": "1440x900",
+    "rms_pct": 13.06,
+    "changed_pct": 10.61
+  },
+  {
+    "view": "pedido-CR00104-detalle",
+    "ours": "1440x1200",
+    "live": "1440x1005",
+    "compared": "1440x1005",
+    "rms_pct": 10.47,
+    "changed_pct": 8.18
+  },
+  {
+    "view": "catalogo",
+    "ours": "1440x1200",
+    "live": "1440x1069",
+    "compared": "1440x1069",
+    "rms_pct": 10.51,
+    "changed_pct": 8.2
+  },
+  {
+    "view": "analitica",
+    "ours": "1440x1200",
+    "live": "1440x900",
+    "compared": "1440x900",
+    "rms_pct": 12.27,
+    "changed_pct": 9.55
+  }
+]
