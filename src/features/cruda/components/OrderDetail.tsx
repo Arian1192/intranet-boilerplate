@@ -38,10 +38,8 @@ export function OrderDetail({ order, onBack }: { order: Order; onBack: () => voi
               {s}
             </button>
           ))}
+          {/* El live las pinta a la derecha de la propia barra de estados, no en una fila aparte. */}
           <button type="button" className="ml-auto text-sm text-slate-400 hover:text-slate-600">Anular</button>
-        </div>
-
-        <div className="flex flex-wrap gap-2">
           <button type="button" className="rounded-lg border border-red-200 px-3 py-1.5 text-sm text-red-600 hover:bg-red-50">Descontar del stock</button>
           <button type="button" className="rounded-lg border border-slate-200 px-3 py-1.5 text-sm text-slate-600 hover:bg-slate-50">Hoja de pedido (PDF)</button>
         </div>

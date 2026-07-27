@@ -64,6 +64,14 @@ test('el portal muestra el acceso ya concedido con Quitar acceso; el invitar sig
   expect(screen.getByRole('button', { name: 'Invitar' })).toBeInTheDocument();
 });
 
+test('las acciones van en la misma fila que la barra de estados', () => {
+  render(<OrderDetail order={cr104} onBack={vi.fn()} />);
+  const statusRow = screen.getByRole('button', { name: 'Borrador' }).parentElement as HTMLElement;
+  expect(statusRow).toContainElement(screen.getByRole('button', { name: 'Anular' }));
+  expect(statusRow).toContainElement(screen.getByRole('button', { name: 'Descontar del stock' }));
+  expect(statusRow).toContainElement(screen.getByRole('button', { name: 'Hoja de pedido (PDF)' }));
+});
+
 test('back button fires onBack', () => {
   const onBack = vi.fn();
   render(<OrderDetail order={cr} onBack={onBack} />);
