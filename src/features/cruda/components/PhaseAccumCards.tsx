@@ -1,6 +1,7 @@
 import { Card, ProgressBar } from '@/components/ui';
 import { cn } from '@/lib/utils';
 import { eur } from '../data/format';
+import { CrudaStatusChip } from './CrudaStatusChip';
 import type { PhaseAccum } from '../data/types';
 
 interface Props {
@@ -24,8 +25,9 @@ export function PhaseAccumCards({ items, fullWidth = false, className }: Props) 
       >
         {items.map((item) => (
           <Card key={item.status} className={cn('p-4', !fullWidth && 'min-w-[180px] shrink-0')}>
-            <div className="flex items-center justify-between">
-              <span className="text-sm font-medium text-slate-600">{item.status}</span>
+            <div className="flex items-center justify-between gap-2">
+              {/* El live pinta la fase como chip de estado, el mismo de la lista de pedidos. */}
+              <CrudaStatusChip status={item.status} />
               <span className="text-xs text-slate-400">{item.count}</span>
             </div>
             <p className="mt-2 text-lg font-semibold text-slate-800">{eur(item.amount)}</p>
