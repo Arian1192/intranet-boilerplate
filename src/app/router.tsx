@@ -23,9 +23,9 @@ import { ProyeccionesListPage } from '@/features/herramientas/pages/Proyecciones
 import { ProyeccionDetailPage } from '@/features/herramientas/pages/ProyeccionDetailPage';
 import { BookingDashboardPage } from '@/features/booking/pages/BookingDashboardPage';
 import { ShowsPage } from '@/features/booking/pages/ShowsPage';
-import { LogisticsPage } from '@/features/booking/pages/LogisticsPage';
-import { ArtistsPage } from '@/features/booking/pages/ArtistsPage';
-import { AnalyticsPage } from '@/features/booking/pages/AnalyticsPage';
+import { CalendarioPage as BookingCalendarioPage } from '@/features/booking/pages/CalendarioPage';
+import { DisponibilidadPage } from '@/features/booking/pages/DisponibilidadPage';
+import { ContactosPage } from '@/features/booking/pages/ContactosPage';
 import { EtraDashboardPage } from '@/features/etra/pages/EtraDashboardPage';
 import { ActionsPage } from '@/features/etra/pages/ActionsPage';
 import { ActionDetailPage } from '@/features/etra/pages/ActionDetailPage';
@@ -57,12 +57,12 @@ export function AppRouter() {
     <Routes>
       <Route path="/login" element={<LoginPage />} />
       <Route path="/" element={<DashboardPage />} />
-      <Route path="/conceptone" element={<ConceptOneShell />}>
-        <Route index element={<BookingDashboardPage />} />
-        <Route path="shows" element={<ShowsPage />} />
-        <Route path="logistica" element={<LogisticsPage />} />
-        <Route path="artistas" element={<ArtistsPage />} />
-        <Route path="analitica" element={<AnalyticsPage />} />
+      <Route element={<ConceptOneShell />}>
+        <Route path="/conceptone" element={<BookingDashboardPage />} />
+        <Route path="/shows" element={<ShowsPage />} />
+        <Route path="/calendario-c1" element={<BookingCalendarioPage />} />
+        <Route path="/disponibilidad" element={<DisponibilidadPage />} />
+        <Route path="/contactos" element={<ContactosPage />} />
       </Route>
       <Route path="/etra" element={<EtraShell />}>
         <Route index element={<EtraDashboardPage />} />
