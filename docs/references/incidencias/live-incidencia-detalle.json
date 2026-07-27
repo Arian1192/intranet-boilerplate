@@ -1,0 +1,33 @@
+{
+ "url": "/incidencias",
+ "hasDialog": true,
+ "dialogClass": "fixed inset-0 z-50 flex items-center justify-center bg-slate-900/30 p-4",
+ "dialogHTML": "<div class=\"fixed inset-0 z-50 flex items-center justify-center bg-slate-900/30 p-4\"><div class=\"flex max-h-[85vh] w-[min(46rem,100%)] flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-2xl\"><div class=\"flex items-center justify-between border-b border-slate-100 px-4 py-3\"><div class=\"flex items-center gap-2\"><span class=\"rounded px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide bg-slate-100 text-slate-500\">Descartadas</span><span class=\"flex items-center gap-1.5 text-xs text-slate-500\"><span class=\"grid shrink-0 place-items-center rounded-full font-semibold text-white\" aria-label=\"Fran Hinojosa Veredas\" style=\"width: 16px; height: 16px; background-color: rgb(234, 88, 12); font-size: 7px;\">FV</span>Fran Hinojosa Veredas</span><span class=\"text-xs text-slate-400\">· —</span></div><div class=\"flex items-center gap-2\"><button class=\"rounded-lg border border-slate-200 px-2.5 py-1 text-xs font-medium text-slate-600 transition hover:border-slate-300 hover:text-slate-900\" title=\"Copia la incidencia con su contexto y las instrucciones, lista para pegar en Claude\">Copiar para Claude</button><button class=\"rounded p-1 text-slate-300 hover:bg-slate-100 hover:text-slate-600\">✕</button></div></div><div class=\"min-h-0 flex-1 space-y-4 overflow-y-auto p-4\"><p class=\"whitespace-pre-wrap text-sm leading-relaxed text-slate-700\">viendo como crear un cliente y pone una dirección de correo. Puede haber más de un contacto, si es Marketing, Dirección o administración?</p><details class=\"rounded-lg border border-slate-200 bg-slate-50\"><summary class=\"cursor-pointer px-3 py-2 text-xs font-medium text-slate-500\">Contexto técnico</summary><pre class=\"overflow-x-auto px-3 pb-3 text-[11px] leading-relaxed text-slate-500\">{\n  \"url\": \"https://workspace.blackmoose.es/#\",\n  \"ruta\": \"/\",\n  \"zoom\": 1,\n  \"cuando\": \"2026-07-21T15:56:28.757Z\",\n  \"idioma\": \"es-ES\",\n  \"ventana\": \"1920×992\",\n  \"pantalla\": \"1920×1080\",\n  \"navegador\": \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36\",\n  \"conversacion\": [\n    {\n      \"rol\": \"usuario\",\n      \"texto\": \"viendo como crear un cliente y pone una dirección de correo. Puede haber más de un contacto, si es Marketing, Dirección o administración?\"\n    }\n  ],\n  \"errores_consola\": []\n}</pre></details><div><label class=\"label\">Respuesta</label><textarea class=\"input min-h-[70px] text-sm\" placeholder=\"Qué era, qué has hecho. Se le manda al que lo reportó.\" style=\"\"></textarea></div></div><div class=\"flex justify-end gap-2 border-t border-slate-100 bg-slate-50 px-4 py-3\"><button class=\"btn-ghost text-sm\">Descartar</button><button class=\"btn-secondary text-sm\">En curso</button><button class=\"btn-primary text-sm\">Resuelta</button></div></div></div>",
+ "headings": [
+  "Incidencias"
+ ],
+ "buttons": [
+  "Espacios",
+  "9+",
+  "Nuevas1",
+  "Auto1",
+  "En curso0",
+  "Resueltas2",
+  "Descartadas4",
+  "DescartadasIdeaviendo como crear un cliente y pone una dirección de correo. Puede haber más de un contacto, si es Marketing, Dirección o administración?/—FV",
+  "ResueltasMe gustaría hacer la solicitud de 2 cosas: 1. Que se pudiera crear un nuevo evento haciendo clic en el calendario el día que quieras el evento. 2. Que hi hagues l'opció de poder canviar l'dioma al català també, ja que som una empresa basada a Barcelona 3. No funciona la generción de copys por iA📎/euphoric/calendario—AG",
+  "DescartadasIdeaMe gustaría hacer la solicitud de 2 cosas: 1. Que se pudiera crear un nuevo evento haciendo clic en el calendario el día que quieras el evento. 2. Que hi hagues l'opció de poder canviar l'dioma al català també, ja que som una empresa basada a Barcelona/—AG",
+  "DescartadasEsto debería estar enlazado con no...📎/euphoric/campanas—",
+  "NuevasIdeaEn el apartat de contactes del Signer/Buyer molaria afegir la opcio de posar TEL/shows/nuevo—JC",
+  "DescartadasIdeaEsto podrías darle color por favor, en cada pestaña igual.📎/shows/95a152d1-d546-400b-904d-195f84400c66—",
+  "ResueltasIdeaEn logística del deal si se selecciona traslados internos tiene que salir siempre predefinido coche privado. Y luego, debería salir automáticamente la cantidad de pasajeros dependiendo de cuantos \"miembros\" haya en la ficha de ese artista. Lo mismo con la cantidad de habitaciones, por defecto los artistas quieren una habitación para cada uno de ellos y lo mismo con los billetes de vuelo / tren, etc.📎/shows/08ea3304-af17-4722-84d5-d3b63347fe74—",
+  "AutoIdea¿por qué no puedo seleccionar ida y vuelta en la estimación de vuelo?/shows/08ea3304-af17-4722-84d5-d3b63347fe74—",
+  "Copiar para Claude",
+  "✕",
+  "Descartar",
+  "En curso",
+  "Resuelta",
+  "Enviar",
+  "Reportar con captura"
+ ]
+}

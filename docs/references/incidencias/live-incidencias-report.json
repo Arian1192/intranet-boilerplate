@@ -1,0 +1,35 @@
+{
+  "realRoute": "https://bookings.conceptoneagency.com/incidencias",
+  "bodyText": "/\nEspacios\n9+\ntest\nAdmin\nT\nIncidencias\n\nLo que el equipo reporta desde el panel de ayuda. Responder es lo que hace que sigan reportando.\n\nNUEVAS\n1\nAUTO\n1\nEN CURSO\n0\nRESUELTAS\n2\nDESCARTADAS\n4\nDESCARTADAS\nIdea\nviendo como crear un cliente y pone una dirección de correo. Puede haber más de un contacto, si es Marketing, Dirección o administración?\n/\n—\nFV\nRESUELTAS\nMe gustaría hacer la solicitud de 2 cosas: 1. Que se pudiera crear un nuevo evento haciendo clic en el calendario el día que quieras el evento. 2. Que hi hagues l'opció de poder canviar l'dioma al català també, ja que som una empresa basada a Barcelona 3. No funciona la generción de copys por iA\n📎\n/euphoric/calendario\n—\nAG\nDESCARTADAS\nIdea\nMe gustaría hacer la solicitud de 2 cosas: 1. Que se pudiera crear un nuevo evento haciendo clic en el calendario el día que quieras el evento. 2. Que hi hagues l'opció de poder canviar l'dioma al català també, ja que som una empresa basada a Barcelona\n/\n—\nAG\nDESCARTADAS\nEsto debería estar enlazado con no...\n📎\n/euphoric/campanas\n—\nNUEVAS\nIdea\nEn el apartat de contactes del Signer/Buyer molaria afegir la opcio de posar TEL\n/shows/nuevo\n—\nJC\nDESCARTADAS\nIdea\nEsto podrías darle color por favor, en cada pestaña igual.\n📎\n/shows/95a152d1-d546-400b-904d-195f84400c66\n—\nRESUELTAS\nIdea\nEn logística del deal si se selecciona traslados internos tiene que salir siempre predefinido coche privado. Y luego, debería salir automáticamente la cantidad de pasajeros dependiendo de cuantos \"miembros\" haya en la ficha de ese artista. Lo mismo con la cantidad de habitaciones, por defecto los artistas quieren una habitación para cada uno de ellos y lo mismo con los billetes de vuelo / tren, etc.\n📎\n/shows/08ea3304-af17-4722-84d5-d3b63347fe74\n—\nAUTO\nIdea\n¿por qué no puedo seleccionar ida y vuelta en la estimación de vuelo?\n/shows/08ea3304-af17-4722-84d5-d3b63347fe74\n—\n?\nAyuda",
+  "headings": [
+    "H2: Incidencias"
+  ],
+  "subNav": [],
+  "perTab": {
+    "NUEVAS": {
+      "slug": "nuevas",
+      "screenshot": "/home/arian/dev/Boilerplate/docs/references/incidencias/live-incidencias-nuevas.png",
+      "text": "/\nEspacios\n9+\ntest\nAdmin\nT\nIncidencias\n\nLo que el equipo reporta desde el panel de ayuda. Responder es lo que hace que sigan reportando.\n\nNUEVAS\n1\nAUTO\n1\nEN CURSO\n0\nRESUELTAS\n2\nDESCARTADAS\n4\nNUEVAS\nIdea\nEn el apartat de contactes del Signer/Buyer molaria afegir la opcio de posar TEL\n/shows/nuevo\n—\nJC\n?\nAyuda"
+    },
+    "AUTO": {
+      "slug": "auto",
+      "screenshot": "/home/arian/dev/Boilerplate/docs/references/incidencias/live-incidencias-auto.png",
+      "text": "/\nEspacios\n9+\ntest\nAdmin\nT\nIncidencias\n\nLo que el equipo reporta desde el panel de ayuda. Responder es lo que hace que sigan reportando.\n\nNUEVAS\n1\nAUTO\n1\nEN CURSO\n0\nRESUELTAS\n2\nDESCARTADAS\n4\nAUTO\nIdea\n¿por qué no puedo seleccionar ida y vuelta en la estimación de vuelo?\n/shows/08ea3304-af17-4722-84d5-d3b63347fe74\n—\n?\nAyuda"
+    },
+    "EN CURSO": {
+      "slug": "en-curso",
+      "screenshot": "/home/arian/dev/Boilerplate/docs/references/incidencias/live-incidencias-en-curso.png",
+      "text": "/\nEspacios\n9+\ntest\nAdmin\nT\nIncidencias\n\nLo que el equipo reporta desde el panel de ayuda. Responder es lo que hace que sigan reportando.\n\nNUEVAS\n1\nAUTO\n1\nEN CURSO\n0\nRESUELTAS\n2\nDESCARTADAS\n4\n\nNada en este estado.\n\n?\nAyuda"
+    },
+    "RESUELTAS": {
+      "slug": "resueltas",
+      "screenshot": "/home/arian/dev/Boilerplate/docs/references/incidencias/live-incidencias-resueltas.png",
+      "text": "/\nEspacios\n9+\ntest\nAdmin\nT\nIncidencias\n\nLo que el equipo reporta desde el panel de ayuda. Responder es lo que hace que sigan reportando.\n\nNUEVAS\n1\nAUTO\n1\nEN CURSO\n0\nRESUELTAS\n2\nDESCARTADAS\n4\nRESUELTAS\nMe gustaría hacer la solicitud de 2 cosas: 1. Que se pudiera crear un nuevo evento haciendo clic en el calendario el día que quieras el evento. 2. Que hi hagues l'opció de poder canviar l'dioma al català també, ja que som una empresa basada a Barcelona 3. No funciona la generción de copys por iA\n📎\n/euphoric/calendario\n—\nAG\nRESUELTAS\nIdea\nEn logística del deal si se selecciona traslados internos tiene que salir siempre predefinido coche privado. Y luego, debería salir automáticamente la cantidad de pasajeros dependiendo de cuantos \"miembros\" haya en la ficha de ese artista. Lo mismo con la cantidad de habitaciones, por defecto los artistas quieren una habitación para cada uno de ellos y lo mismo con los billetes de vuelo / tren, etc.\n📎\n/shows/08ea3304-af17-4722-84d5-d3b63347fe74\n—\n?\nAyuda"
+    },
+    "DESCARTADAS": {
+      "slug": "descartadas",
+      "screenshot": "/home/arian/dev/Boilerplate/docs/references/incidencias/live-incidencias-descartadas.png",
+      "text": "/\nEspacios\n9+\ntest\nAdmin\nT\nIncidencias\n\nLo que el equipo reporta desde el panel de ayuda. Responder es lo que hace que sigan reportando.\n\nNUEVAS\n1\nAUTO\n1\nEN CURSO\n0\nRESUELTAS\n2\nDESCARTADAS\n4\nDESCARTADAS\nIdea\nviendo como crear un cliente y pone una dirección de correo. Puede haber más de un contacto, si es Marketing, Dirección o administración?\n/\n—\nFV\nDESCARTADAS\nIdea\nMe gustaría hacer la solicitud de 2 cosas: 1. Que se pudiera crear un nuevo evento haciendo clic en el calendario el día que quieras el evento. 2. Que hi hagues l'opció de poder canviar l'dioma al català també, ja que som una empresa basada a Barcelona\n/\n—\nAG\nDESCARTADAS\nEsto debería estar enlazado con no...\n📎\n/euphoric/campanas\n—\nDESCARTADAS\nIdea\nEsto podrías darle color por favor, en cada pestaña igual.\n📎\n/shows/95a152d1-d546-400b-904d-195f84400c66\n—\n?\nAyuda"
+    }
+  }
+}

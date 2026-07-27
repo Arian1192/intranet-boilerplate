@@ -14,7 +14,8 @@ export interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
     | 'sky'
     | 'indigo'
     | 'pink'
-    | 'rose';
+    | 'rose'
+    | 'violet';
   size?: 'sm' | 'md';
 }
 
@@ -38,6 +39,7 @@ export function Badge({ className, variant = 'neutral', size = 'md', ...props }:
           'bg-indigo-100 text-indigo-700': variant === 'indigo',
           'bg-pink-50 text-pink-600': variant === 'pink',
           'bg-rose-100 text-rose-700': variant === 'rose',
+          'bg-violet-100 text-violet-700': variant === 'violet',
         },
         className
       )}

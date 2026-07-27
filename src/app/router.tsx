@@ -8,17 +8,24 @@ import { CrudaShell } from '@/features/modules/CrudaShell';
 import { EuphoricShell } from '@/features/modules/EuphoricShell';
 import { CreativosShell } from '@/features/modules/CreativosShell';
 import { CRMShell } from '@/features/modules/CRMShell';
-import { TeamShell } from '@/features/modules/TeamShell';
+import { TeamShell } from '@/features/team/TeamShell';
+import { EquipoPage } from '@/features/team/pages/EquipoPage';
+import { CalendarioPage } from '@/features/team/pages/CalendarioPage';
+import { FichasPage } from '@/features/team/pages/FichasPage';
 import { ConfigShell } from '@/features/modules/ConfigShell';
 import { MiTrabajoShell } from '@/features/modules/MiTrabajoShell';
+import { IncidenciasShell } from '@/features/modules/IncidenciasShell';
 import { MixmagShell } from '@/features/modules/MixmagShell';
 import { TagmagShell } from '@/features/modules/TagmagShell';
 import { HerramientasShell } from '@/features/modules/HerramientasShell';
+import { HerramientasResumenPage } from '@/features/herramientas/pages/HerramientasResumenPage';
+import { ProyeccionesListPage } from '@/features/herramientas/pages/ProyeccionesListPage';
+import { ProyeccionDetailPage } from '@/features/herramientas/pages/ProyeccionDetailPage';
 import { BookingDashboardPage } from '@/features/booking/pages/BookingDashboardPage';
 import { ShowsPage } from '@/features/booking/pages/ShowsPage';
-import { LogisticsPage } from '@/features/booking/pages/LogisticsPage';
-import { ArtistsPage } from '@/features/booking/pages/ArtistsPage';
-import { AnalyticsPage } from '@/features/booking/pages/AnalyticsPage';
+import { CalendarioPage as BookingCalendarioPage } from '@/features/booking/pages/CalendarioPage';
+import { DisponibilidadPage } from '@/features/booking/pages/DisponibilidadPage';
+import { ContactosPage } from '@/features/booking/pages/ContactosPage';
 import { EtraDashboardPage } from '@/features/etra/pages/EtraDashboardPage';
 import { ActionsPage } from '@/features/etra/pages/ActionsPage';
 import { ActionDetailPage } from '@/features/etra/pages/ActionDetailPage';
@@ -50,12 +57,12 @@ export function AppRouter() {
     <Routes>
       <Route path="/login" element={<LoginPage />} />
       <Route path="/" element={<DashboardPage />} />
-      <Route path="/conceptone" element={<ConceptOneShell />}>
-        <Route index element={<BookingDashboardPage />} />
-        <Route path="shows" element={<ShowsPage />} />
-        <Route path="logistica" element={<LogisticsPage />} />
-        <Route path="artistas" element={<ArtistsPage />} />
-        <Route path="analitica" element={<AnalyticsPage />} />
+      <Route element={<ConceptOneShell />}>
+        <Route path="/conceptone" element={<BookingDashboardPage />} />
+        <Route path="/shows" element={<ShowsPage />} />
+        <Route path="/calendario-c1" element={<BookingCalendarioPage />} />
+        <Route path="/disponibilidad" element={<DisponibilidadPage />} />
+        <Route path="/contactos" element={<ContactosPage />} />
       </Route>
       <Route path="/etra" element={<EtraShell />}>
         <Route index element={<EtraDashboardPage />} />
@@ -91,9 +98,14 @@ export function AppRouter() {
         <Route path="pipeline" element={<PipelinePage />} />
         <Route path="crecimiento" element={<CrecimientoPage />} />
       </Route>
-      <Route path="/personal" element={<TeamShell />} />
+      <Route path="/personal" element={<TeamShell />}>
+        <Route index element={<EquipoPage />} />
+        <Route path="calendario" element={<CalendarioPage />} />
+        <Route path="fichas" element={<FichasPage />} />
+      </Route>
       <Route path="/configuracion" element={<ConfigShell />} />
       <Route path="/mi-trabajo" element={<MiTrabajoShell />} />
+      <Route path="/incidencias" element={<IncidenciasShell />} />
       <Route path="/mixmag" element={<MixmagShell />}>
         <Route index element={<RedaccionResumenPage />} />
         <Route path="contenidos" element={<ContenidosPage />} />
@@ -106,7 +118,11 @@ export function AppRouter() {
         <Route path="campanas" element={<RedaccionCampanasPage />} />
         <Route path="revistas" element={<RevistasPage />} />
       </Route>
-      <Route path="/herramientas" element={<HerramientasShell />} />
+      <Route path="/herramientas" element={<HerramientasShell />}>
+        <Route index element={<HerramientasResumenPage />} />
+        <Route path="proyecciones" element={<ProyeccionesListPage />} />
+        <Route path="proyecciones/:id" element={<ProyeccionDetailPage />} />
+      </Route>
     </Routes>
   );
 }

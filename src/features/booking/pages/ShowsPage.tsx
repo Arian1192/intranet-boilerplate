@@ -1,7 +1,10 @@
+import { useState } from 'react';
 import { useSearchParams } from 'react-router';
-import { DataTable } from '@/features/booking/components';
-import type { ShowStatus } from '@/types';
+import { ShowCard, ShowsToolbar, FiltrosDrawer, RangoPopover } from '@/features/booking/components';
+import type { ShowsFiltros } from '@/features/booking/components';
+import type { Show, ShowStatus } from '@/types';
 import { useShows } from '../hooks/useShows';
+import { dentroDeRango, desdeLabel, hastaLabel, rangoPorDefecto, type Rango } from '../data/rango';
 
 const validStatuses: ShowStatus[] = [
   'tentative',
@@ -17,13 +20,37 @@ function isShowStatus(value: string | null): value is ShowStatus {
   return value !== null && validStatuses.includes(value as ShowStatus);
 }
 
+function matchesQuery(show: Show, q: string): boolean {
+  const needle = q.trim().toLowerCase();
+  if (!needle) return true;
+  return [show.artist, show.event, show.venue ?? ''].some((field) =>
+    field.toLowerCase().includes(needle)
+  );
+}
+
+const filtrosVacios: ShowsFiltros = { etapa: '', fase: '', pago: '', artista: '' };
+
 export function ShowsPage() {
   const { shows, isLoading, error } = useShows();
   const [searchParams] = useSearchParams();
-  const selectedStatus = searchParams.get('status');
-  const filteredShows = isShowStatus(selectedStatus)
-    ? shows.filter((show) => show.status === selectedStatus)
-    : shows;
+  const [query, setQuery] = useState('');
+  const [filtrosAbierto, setFiltrosAbierto] = useState(false);
+  const [rangoAbierto, setRangoAbierto] = useState(false);
+  const [rango, setRango] = useState<Rango>(rangoPorDefecto);
+  const [filtros, setFiltros] = useState<ShowsFiltros>(() => {
+    const status = searchParams.get('status');
+    return isShowStatus(status) ? { ...filtrosVacios, etapa: status } : filtrosVacios;
+  });
+
+  const shownShows = shows.filter(
+    (show) =>
+      matchesQuery(show, query) &&
+      dentroDeRango(show.date, rango) &&
+      (!filtros.etapa || show.etapa === filtros.etapa) &&
+      (!filtros.fase || show.fase === filtros.fase) &&
+      (!filtros.pago || show.paymentStatus === filtros.pago) &&
+      (!filtros.artista || show.artist === filtros.artista)
+  );
 
   if (isLoading) {
     return <div className="py-12 text-center text-slate-500">Cargando...</div>;
@@ -34,9 +61,34 @@ export function ShowsPage() {
   }
 
   return (
-    <div className="space-y-6">
-      <h1 className="text-2xl font-semibold text-slate-900">Shows</h1>
-      <DataTable shows={filteredShows} />
+    <div>
+      <div className="relative">
+        <ShowsToolbar
+          count={shownShows.length}
+          query={query}
+          onQueryChange={setQuery}
+          rangoLabel={`${desdeLabel(rango.desde)} → ${hastaLabel(rango.hasta)}`}
+          onToggleRango={() => setRangoAbierto((v) => !v)}
+          onOpenFiltros={() => setFiltrosAbierto(true)}
+        />
+        <RangoPopover
+          abierto={rangoAbierto}
+          rango={rango}
+          onChange={setRango}
+          onClose={() => setRangoAbierto(false)}
+        />
+      </div>
+      <div className="overflow-hidden rounded-xl border border-slate-100 bg-white shadow-sm">
+        {shownShows.map((show) => (
+          <ShowCard key={show.id} show={show} />
+        ))}
+      </div>
+      <FiltrosDrawer
+        abierto={filtrosAbierto}
+        filtros={filtros}
+        onChange={setFiltros}
+        onClose={() => setFiltrosAbierto(false)}
+      />
     </div>
   );
 }

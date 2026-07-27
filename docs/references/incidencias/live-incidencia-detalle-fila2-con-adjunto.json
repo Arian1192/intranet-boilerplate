@@ -1,0 +1,59 @@
+{
+ "overlayClass": "fixed inset-0 z-50 flex items-center justify-center bg-slate-900/30 p-4",
+ "cardClass": "flex max-h-[85vh] w-[min(46rem,100%)] flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-2xl",
+ "detailsSummary": "Contexto técnico",
+ "detailsClass": "rounded-lg border border-slate-200 bg-slate-50",
+ "detailsBody": "Contexto técnico{ \"url\": \"https://workspace.blackmoose.es/euphoric/calendario\", \"ruta\": \"/euphoric/calendario\", \"zoom\": 1, \"cuando\": \"2026-07-20T13:27:22.685Z\", \"idioma\": \"es-ES\", \"ventana\": \"1783×896\", \"pantalla\": \"1920×1080\", \"navegador\": \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36\", \"conversacion\": [ { \"rol\": \"usuario\", \"texto\": \"Me gustaría hacer la solicitud de 2 cosas:\\n1. Que se pudiera crear un nuevo evento haciendo clic en el calendario el día que quieras el evento.\\n2. Que hi hagues l'opció de poder canviar l'dioma al català també, ja que som una empresa basada a Barcelona\" }, { \"rol\": \"asistente\", \"texto\": \"Quedan anotadas tus dos sugerencias: la de crear eventos directamente haciendo clic en el calendario y la de añadir el catalán como idioma de la intranet. Se lo paso al equipo de desarrollo para que lo tengan en cuenta.\" }, { \"rol\": \"usuario\", \"texto\": \"Solicitud 3: crear publicaciones y piezas de creatividades automáticas para eventos de SIGHT. También que se puedan crear desde la card del evento.\" }, { \"rol\": \"asistente\", \"texto\": \"No he podido procesar eso. Te lo paso a una persona.\" } ], \"errores_consola\": [] }",
+ "respuestaLabel": "Respuesta",
+ "textareaPlaceholder": "Qué era, qué has hecho. Se le manda al que lo reportó.",
+ "textareaClass": "input min-h-[70px] text-sm",
+ "buttons": [
+  {
+   "text": "Copiar para Claude",
+   "className": "rounded-lg border border-slate-200 px-2.5 py-1 text-xs font-medium text-slate-600 transition hover:border-slate-300 hover:text-slate-900"
+  },
+  {
+   "text": "✕",
+   "className": "rounded p-1 text-slate-300 hover:bg-slate-100 hover:text-slate-600"
+  },
+  {
+   "text": "Descartar",
+   "className": "btn-ghost text-sm"
+  },
+  {
+   "text": "En curso",
+   "className": "btn-secondary text-sm"
+  },
+  {
+   "text": "Resuelta",
+   "className": "btn-primary text-sm"
+  }
+ ],
+ "headerSpans": [
+  {
+   "text": "ResueltasAGAlba Gelabert· —",
+   "className": "flex items-center gap-2"
+  },
+  {
+   "text": "Resueltas",
+   "className": "rounded px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide bg-emerald-100 text-emerald-700"
+  },
+  {
+   "text": "AGAlba Gelabert",
+   "className": "flex items-center gap-1.5 text-xs text-slate-500"
+  },
+  {
+   "text": "AG",
+   "className": "grid shrink-0 place-items-center rounded-full font-semibold text-white"
+  },
+  {
+   "text": "· —",
+   "className": "text-xs text-slate-400"
+  },
+  {
+   "text": "Copiar para Claude✕",
+   "className": "flex items-center gap-2"
+  }
+ ],
+ "bodyHTML": "<div class=\"flex max-h-[85vh] w-[min(46rem,100%)] flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-2xl\"><div class=\"flex items-center justify-between border-b border-slate-100 px-4 py-3\"><div class=\"flex items-center gap-2\"><span class=\"rounded px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide bg-emerald-100 text-emerald-700\">Resueltas</span><span class=\"flex items-center gap-1.5 text-xs text-slate-500\"><span class=\"grid shrink-0 place-items-center rounded-full font-semibold text-white\" aria-label=\"Alba Gelabert\" style=\"width: 16px; height: 16px; background-color: rgb(22, 163, 74); font-size: 7px;\">AG</span>Alba Gelabert</span><span class=\"text-xs text-slate-400\">· —</span></div><div class=\"flex items-center gap-2\"><button class=\"rounded-lg border border-slate-200 px-2.5 py-1 text-xs font-medium text-slate-600 transition hover:border-slate-300 hover:text-slate-900\" title=\"Copia la incidencia con su contexto y las instrucciones, lista para pegar en Claude\">Copiar para Claude</button><button class=\"rounded p-1 text-slate-300 hover:bg-slate-100 hover:text-slate-600\">✕</button></div></div><div class=\"min-h-0 flex-1 space-y-4 overflow-y-auto p-4\"><p class=\"whitespace-pre-wrap text-sm leading-relaxed text-slate-700\">Me gustaría hacer la solicitud de 2 cosas:\n1. Que se pudiera crear un nuevo evento haciendo clic en el calendario el día que quieras el evento.\n2. Que hi hagues l'opció de poder canviar l'dioma al català també, ja que som una empresa basada a Barcelona\n3. No funciona la generción de copys por iA</p><img src=\"https://olbfwvqsuhcxvgonywrg.supabase.co/storage/v1/object/sign/incidencias/c58851ec-865f-4a0c-a0c2-93c9195f76b5/1784554040564.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82ZmZlNzRjOC1iMmFjLTQ0ZGEtOTZlOS1lZDg4N2NjYjk4MWEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbmNpZGVuY2lhcy9jNTg4NTFlYy04NjVmLTRhMGMtYTBjMi05M2M5MTk1Zjc2YjUvMTc4NDU1NDA0MDU2NC5qcGciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzg0NzIyODU0LCJleHAiOjE3ODQ3MjMxNTR9.pjO603RxXhhVmVztKaia4-kBZw_W1QZTeK6BzGmPEgI\" alt=\"Captura\" class=\"w-full rounded-lg border border-slate-200\"><details class=\"rounded-lg border border-slate-200 bg-slate-50\" open=\"\"><summary class=\"cursor-pointer px-3 py-2 text-xs font-medium text-slate-500\">Contexto técnico</summary><pre class=\"overflow-x-auto px-3 pb-3 text-[11px] leading-relaxed text-slate-500\">{\n  \"url\": \"https://workspace.blackmoose.es/euphoric/calendario\",\n  \"ruta\": \"/euphoric/calendario\",\n  \"zoom\": 1,\n  \"cuando\": \"2026-07-20T13:27:22.685Z\",\n  \"idioma\": \"es-ES\",\n  \"ventana\": \"1783×896\",\n  \"pantalla\": \"1920×1080\",\n  \"navegador\": \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36\",\n  \"conversacion\": [\n    {\n      \"rol\": \"usuario\",\n      \"texto\": \"Me gustaría hacer la solicitud de 2 cosas:\\n1. Que se pudiera crear un nuevo evento haciendo clic en el calendario el día que quieras el evento.\\n2. Que hi hagues l'opció de poder canviar l'dioma al català també, ja que som una empresa basada a Barcelona\"\n    },\n    {\n      \"rol\": \"asistente\",\n      \"texto\": \"Quedan anotadas tus dos sugerencias: la de crear eventos directamente haciendo clic en el calendario y la de añadir el catalán como idioma de la intranet. Se lo paso al equipo de desarrollo para que lo tengan en cuenta.\"\n    },\n    {\n      \"rol\": \"usuario\",\n      \"texto\": \"Solicitud 3: crear publicaciones y piezas de creatividades automáticas para eventos de SIGHT. También que se puedan crear desde la card del evento.\"\n    },\n    {\n      \"rol\": \"asistente\",\n      \"texto\": \"No he podido procesar eso. Te lo paso a una persona.\"\n    }\n  ],\n  \"errores_consola\": []\n}</pre></details><div class=\"rounded-lg border border-slate-200 bg-slate-50 p-3\"><p class=\"text-xs font-medium text-slate-500\">Hipótesis del triaje<span class=\"ml-1.5 rounded bg-slate-200 px-1.5 py-0.5 text-[10px] uppercase tracking-wide text-slate-600\">fallo</span></p><p class=\"mt-1 whitespace-pre-wrap text-sm text-slate-600\">El usuario reporta tres cosas: dos son ideas de mejora (crear evento desde calendario y traducción al catalán) y la tercera es un fallo técnico (no funciona la generación de copys por IA). Al incluir un fallo de sistema que no está contemplado en el manual, se clasifica como fallo y se deja la respuesta al usuario en null para que lo revise un técnico.</p><p class=\"mt-2 text-[11px] text-slate-400\">Especulación: el triaje no lee el código, solo el manual y el contexto.</p></div><div><label class=\"label\">Respuesta</label><textarea class=\"input min-h-[70px] text-sm\" placeholder=\"Qué era, qué has hecho. Se le manda al que lo reportó.\" style=\"\">1. Ya puedes crear un evento haciendo click en un día del calendario, más rápido imposible!\n2. Sens dubte! Ho deixem per futures actualitzacions, primer és necessari tenir l'Àngles pels companys que no parlen ni Català ni Castellà.\n3. Ya está arreglado y mejorado, ahora no solo te genera copys sino que puedes escoger qué contexto utiliza y pedirle que haga una creación desde cero, una modificación, una traducción o que te acorte un texto. Tanto en castellano como en inglés. Cogerá el @ de los artistas si lo tiene en su ficha de artista, sino te pondrá el nombre para que lo sustituyas al subir el post. Por eso es muy importante mantener las fichas de los artistas actualizadas.</textarea></div></div><div class=\"flex justify-end gap-2 border-t border-slate-100 bg-slate-50 px-4 py-3\"><button class=\"btn-ghost text-sm\">Descartar</button><button class=\"btn-secondary text-sm\">En curso</button><button class=\"btn-primary text-sm\">Resuelta</button></div></div>"
+}

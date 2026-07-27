@@ -1,0 +1,224 @@
+[
+  {
+    "kind": "button",
+    "tag": "BUTTON",
+    "text": "Espacios",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(71, 85, 105)",
+    "borderRadius": "8px",
+    "fontSize": "14px",
+    "fontWeight": "600",
+    "padding": "4px 8px",
+    "border": "0px solid rgb(229, 231, 235)"
+  },
+  {
+    "kind": "button",
+    "tag": "BUTTON",
+    "text": "9+",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(100, 116, 139)",
+    "borderRadius": "8px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "padding": "0px",
+    "border": "0px solid rgb(229, 231, 235)"
+  },
+  {
+    "kind": "button",
+    "tag": "BUTTON",
+    "text": "NUEVAS\n1",
+    "backgroundColor": "rgb(255, 255, 255)",
+    "color": "rgb(30, 41, 59)",
+    "borderRadius": "8px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "padding": "6px 10px",
+    "border": "1px solid rgb(226, 232, 240)"
+  },
+  {
+    "kind": "button",
+    "tag": "BUTTON",
+    "text": "AUTO\n1",
+    "backgroundColor": "rgb(255, 255, 255)",
+    "color": "rgb(30, 41, 59)",
+    "borderRadius": "8px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "padding": "6px 10px",
+    "border": "1px solid rgb(226, 232, 240)"
+  },
+  {
+    "kind": "button",
+    "tag": "BUTTON",
+    "text": "EN CURSO\n0",
+    "backgroundColor": "rgba(248, 250, 252, 0.6)",
+    "color": "rgb(30, 41, 59)",
+    "borderRadius": "8px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "padding": "6px 10px",
+    "border": "1px solid rgb(241, 245, 249)"
+  },
+  {
+    "kind": "button",
+    "tag": "BUTTON",
+    "text": "RESUELTAS\n2",
+    "backgroundColor": "rgb(255, 255, 255)",
+    "color": "rgb(30, 41, 59)",
+    "borderRadius": "8px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "padding": "6px 10px",
+    "border": "1px solid rgb(226, 232, 240)"
+  },
+  {
+    "kind": "button",
+    "tag": "BUTTON",
+    "text": "DESCARTADAS\n4",
+    "backgroundColor": "rgb(255, 255, 255)",
+    "color": "rgb(30, 41, 59)",
+    "borderRadius": "8px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "padding": "6px 10px",
+    "border": "1px solid rgb(226, 232, 240)"
+  },
+  {
+    "kind": "button",
+    "tag": "BUTTON",
+    "text": "DESCARTADAS\nIdea\nviendo como crear un cl",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(30, 41, 59)",
+    "borderRadius": "0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "padding": "10px 16px",
+    "border": "0px solid rgb(229, 231, 235)"
+  },
+  {
+    "kind": "button",
+    "tag": "BUTTON",
+    "text": "RESUELTAS\nMe gustaría hacer la solicitud",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(30, 41, 59)",
+    "borderRadius": "0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "padding": "10px 16px",
+    "border": ""
+  },
+  {
+    "kind": "button",
+    "tag": "BUTTON",
+    "text": "DESCARTADAS\nIdea\nMe gustaría hacer la so",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(30, 41, 59)",
+    "borderRadius": "0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "padding": "10px 16px",
+    "border": ""
+  },
+  {
+    "kind": "button",
+    "tag": "BUTTON",
+    "text": "DESCARTADAS\nEsto debería estar enlazado ",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(30, 41, 59)",
+    "borderRadius": "0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "padding": "10px 16px",
+    "border": ""
+  },
+  {
+    "kind": "button",
+    "tag": "BUTTON",
+    "text": "NUEVAS\nIdea\nEn el apartat de contactes d",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(30, 41, 59)",
+    "borderRadius": "0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "padding": "10px 16px",
+    "border": ""
+  },
+  {
+    "kind": "button",
+    "tag": "BUTTON",
+    "text": "DESCARTADAS\nIdea\nEsto podrías darle colo",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(30, 41, 59)",
+    "borderRadius": "0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "padding": "10px 16px",
+    "border": ""
+  },
+  {
+    "kind": "button",
+    "tag": "BUTTON",
+    "text": "RESUELTAS\nIdea\nEn logística del deal si ",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(30, 41, 59)",
+    "borderRadius": "0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "padding": "10px 16px",
+    "border": ""
+  },
+  {
+    "kind": "h2",
+    "tag": "H2",
+    "text": "Incidencias",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(30, 41, 59)",
+    "borderRadius": "0px",
+    "fontSize": "18px",
+    "fontWeight": "600",
+    "padding": "0px",
+    "border": "0px solid rgb(229, 231, 235)"
+  },
+  {
+    "kind": "ADDENDUM_manual_dom_inspection",
+    "note": "Extracted via direct DOM query (outerHTML/computed style) since generic heuristics above missed the exact row/badge markup. Container: div.overflow-hidden.rounded-xl.border.border-slate-200.bg-white > div.divide-y.divide-slate-50 > button rows.",
+    "statFilterCard": {
+      "className_unselected_normal": "rounded-lg border px-2.5 py-1.5 text-left transition border-slate-200 bg-white hover:border-slate-300 min-w-[92px]",
+      "className_unselected_zeroCount": "rounded-lg border px-2.5 py-1.5 text-left transition border-slate-100 bg-slate-50/60 min-w-[92px]",
+      "className_selected": "rounded-lg border px-2.5 py-1.5 text-left transition border-slate-800 bg-white shadow-sm min-w-[92px]",
+      "behavior": "Toggle filter: click selects (border-slate-800 + shadow-sm) and filters list to that status; click again deselects and list returns to unfiltered (all statuses, ordered as originally fetched). Label span classes below; count is a separate bold text-lg-ish line under the label (font-semibold text-slate-900 by default, text-slate-300 for zero-count EN CURSO)."
+    },
+    "statusBadgeLabelSpan_insideCard": {
+      "NUEVAS": "block truncate rounded px-1 py-0.5 text-[10px] font-semibold uppercase tracking-wide bg-rose-100 text-rose-700",
+      "AUTO": "block truncate rounded px-1 py-0.5 text-[10px] font-semibold uppercase tracking-wide bg-sky-100 text-sky-700",
+      "EN CURSO (zero count)": "block truncate rounded px-1 py-0.5 text-[10px] font-semibold uppercase tracking-wide bg-transparent text-slate-300",
+      "RESUELTAS": "block truncate rounded px-1 py-0.5 text-[10px] font-semibold uppercase tracking-wide bg-emerald-100 text-emerald-700",
+      "DESCARTADAS": "block truncate rounded px-1 py-0.5 text-[10px] font-semibold uppercase tracking-wide bg-slate-100 text-slate-500"
+    },
+    "listRow": {
+      "container": "div.overflow-hidden.rounded-xl.border.border-slate-200.bg-white > div.divide-y.divide-slate-50",
+      "rowButton_className": "flex w-full items-center gap-3 px-4 py-2.5 text-left transition-colors hover:bg-slate-50",
+      "statusBadge_span_className": "w-24 shrink-0 truncate rounded px-1.5 py-0.5 text-center text-[10px] font-semibold uppercase tracking-wide + bg/text color per status (same palette as statFilterCard but w-24 text-center variant, e.g. Descartadas: bg-slate-100 text-slate-500; Resueltas: bg-emerald-100 text-emerald-700)",
+      "typeTagChip_span_className (optional, only on some rows)": "shrink-0 rounded bg-violet-100 px-1.5 py-0.5 text-[10px] font-medium text-violet-700 — text observed: 'Idea' (only tag value seen in seed data; presumably a report-type enum e.g. Idea/Bug/Duda)",
+      "mainText_span_className": "min-w-0 flex-1 truncate text-sm text-slate-800 (single line, ellipsis; original multi-line text collapses to first visual line)",
+      "attachmentIcon_span_className (optional)": "shrink-0 text-[11px] text-slate-400, content: paperclip emoji 📎 — shown only when the incidencia was reported with a screenshot attached",
+      "routePath_span_className": "hidden w-40 shrink-0 truncate text-[11px] text-slate-400 lg:block — shows the app route where it was reported, e.g. '/', '/euphoric/calendario', '/shows/nuevo', '/shows/08ea3304-af17-4722-84d5-d3b63347fe74', '/euphoric/campanas', '/shows/95a152d1-d546-400b-904d-195f84400c66'",
+      "trailingDash_span_className": "w-20 shrink-0 text-right text-[11px] text-slate-400, content: '—' (em dash) — placeholder column, empty in all seed rows (likely reserved for a future response/assignee summary)",
+      "avatar_span_className": "outer: w-[18px] shrink-0; inner: grid shrink-0 place-items-center rounded-full font-semibold text-white, inline style width:18px height:18px font-size:8px background-color:<per-user color>, aria-label=<full name>, text=<2-letter initials>",
+      "avatar_colors_observed": {
+        "FV (Fran Hinojosa Veredas)": "rgb(234, 88, 12) — orange-600",
+        "AG (Alba Gelabert)": "rgb(22, 163, 74) — green-600",
+        "JC": "blue (exact rgb not captured, seen as blue circle in screenshot)",
+        "unlabeled/no-name rows": "gray silhouette avatar placeholder (default person icon, no initials) — used when reporter identity unknown/anonymous"
+      }
+    },
+    "emptyState": {
+      "text": "Nada en este estado.",
+      "className_approx": "centered gray text (text-slate-400), shown in place of the list container's rows when filtered status has 0 items (observed for EN CURSO)"
+    },
+    "pageHeader": {
+      "h2": "Incidencias (18px / 600 / slate-800)",
+      "subtitle": "Lo que el equipo reporta desde el panel de ayuda. Responder es lo que hace que sigan reportando. (text-slate-500, ~14px)"
+    }
+  }
+]

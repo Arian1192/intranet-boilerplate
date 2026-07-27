@@ -108,13 +108,12 @@ export class MockRepository implements Repository {
   async getBookingDashboard(): Promise<BookingDashboard> {
     return this.delay({
       kpis: [
-        { id: '1', label: 'TENTATIVE', amount: 2000, count: 1, status: 'tentative' },
-        { id: '2', label: 'OFERTA', amount: 0, count: 0, status: 'offer' },
-        { id: '3', label: 'CONFIRMADO', amount: 7000, count: 4, status: 'confirmed' },
-        { id: '4', label: 'CONTRATO', amount: 0, count: 0, status: 'contract' },
-        { id: '5', label: 'PENDIENTE PAGO', amount: 800, count: 1, status: 'pending-payment' },
-        { id: '6', label: 'PENDIENTE LIQUIDAR', amount: 0, count: 0, status: 'pending-settlement' },
-        { id: '7', label: 'CELEBRADO', amount: 0, count: 0, status: 'done' },
+        { id: '1', label: 'TENTATIVE', amount: 5679.48, count: 7, status: 'tentative' },
+        { id: '2', label: 'CONFIRMADO', amount: 10200, count: 8, status: 'confirmed' },
+        { id: '3', label: 'CONTRATO', amount: 0, count: 0, status: 'contract' },
+        { id: '4', label: 'PENDIENTE COBRO', amount: 0, count: 0, status: 'pending-payment' },
+        { id: '5', label: 'PENDIENTE LIQUIDAR', amount: 1850, count: 3, status: 'pending-settlement' },
+        { id: '6', label: 'LIQUIDADO', amount: 3500, count: 2, status: 'done' },
       ],
       advancing: [
         {
@@ -190,10 +189,20 @@ export class MockRepository implements Repository {
 
   async getShows(): Promise<Show[]> {
     return this.delay([
-      { id: 's1', name: 'Evento Primavera', client: 'Cliente A', date: '15 jul 2026', status: 'confirmed', amount: 3500 },
-      { id: 's2', name: 'Proyecto Q3', client: 'Cliente B', date: '18 jul 2026', status: 'pending-payment', amount: 800 },
-      { id: 's3', name: 'Campaña Verano', client: 'Cliente C', date: '25 jul 2026', status: 'confirmed', amount: 2200 },
-      { id: 's4', name: 'Lanzamiento Producto', client: 'Cliente D', date: '04 sept 2026', status: 'contract', amount: 1500 },
+      { id: 's12', code: 'C1-2026-012', date: '18 jul 2026', artist: 'Abdon', event: 'FUNDAYS', venue: 'Bassment', country: 'España', etapa: 'tentative', fase: 'tentative', dealType: 'All In', fee: 0, bf: 0, mf: 0, paymentStatus: 'No abonado', artStatus: 'Arte no subido', exception: false },
+      { id: 's06', code: 'C1-2026-006', date: '18 jul 2026', artist: 'Los Canarios', event: 'FUEGO', venue: 'Edén Ibiza', country: 'España', etapa: 'confirmed', fase: 'confirmed', dealType: 'Landed', fee: 3000, bf: 600, mf: 449.58, paymentStatus: 'No abonado', artStatus: 'Arte no subido', exception: true },
+      { id: 's15', code: 'C1-2026-015', date: '21 jul 2026', artist: 'Test Artist', event: 'SIGHT', venue: 'Ku Barcelona', country: 'España', etapa: 'confirmed', fase: 'confirmed', dealType: 'All In', fee: 0, bf: 0, mf: 0, paymentStatus: 'No abonado', artStatus: 'Arte no subido', exception: false },
+      { id: 's14', code: 'C1-2026-014', date: '25 jul 2026', artist: 'Florentia', event: 'Summer Opening Festival', venue: 'Paseo de Santiago, Torreperogil', country: 'España', etapa: 'done', fase: 'liquidado', dealType: 'Landed', fee: 1000, bf: 200, mf: 0, paymentStatus: 'Liquidado', artStatus: 'Arte pendiente', exception: false },
+      { id: 's19', code: 'C1-2026-019', date: '26 jul 2026', artist: 'Pau Guilera', event: 'the next', venue: 'Marina Beach Club', country: 'España', etapa: 'confirmed', fase: 'confirmed', dealType: 'Landed', fee: 700, bf: 140, mf: 0, paymentStatus: 'No abonado', artStatus: 'Arte no subido', exception: false },
+      { id: 's21', code: 'C1-2026-021', date: '26 jul 2026', artist: 'Abdon', event: 'SIGHT', venue: 'Ku Barcelona', country: 'España', etapa: 'confirmed', fase: 'confirmed', dealType: 'All In', fee: 1000, bf: 200, mf: 200, paymentStatus: 'No abonado', artStatus: 'Arte no subido', exception: false },
+      { id: 's18', code: 'C1-2026-018', date: '01 ago 2026', artist: 'Milan', event: 'Casa del Mar', venue: 'Casa del Mar', country: 'USA', etapa: 'tentative', fase: 'tentative', dealType: 'All In', fee: 350.56, bf: 70.11, mf: 0, paymentStatus: 'No abonado', artStatus: 'Arte no subido', exception: false },
+      { id: 's20', code: 'C1-2026-020', date: '01 ago 2026', artist: 'Los Canarios', event: 'Solart Fest', venue: 'Hangar 37', country: 'España', etapa: 'confirmed', fase: 'confirmed', dealType: '+++', fee: 2000, bf: 400, mf: 400, paymentStatus: 'No abonado', artStatus: 'Arte no subido', exception: false },
+      { id: 's05', code: 'C1-2026-005', date: '04 sept 2026', artist: 'Brenda Serna', event: 'Alcazar de San Juan', venue: null, country: null, etapa: 'done', fase: 'liquidado', dealType: 'All In', fee: 2500, bf: 500, mf: 0, paymentStatus: 'Parcialmente abonado', artStatus: 'Arte no subido', exception: false },
+      { id: 's13', code: 'C1-2026-013', date: '18 sept 2026', artist: 'Sergio Saffe', event: 'el Tebo', venue: 'el Tebo', country: 'Chile', etapa: 'tentative', fase: 'tentative', dealType: 'All In', fee: 875, bf: 175, mf: 0, paymentStatus: 'No abonado', artStatus: 'Arte no subido', exception: false },
+      { id: 's16', code: 'C1-2026-016', date: '25 sept 2026', artist: 'Marian Ariss', event: 'Kevin de Vries Cordoba', venue: 'La Fábrica', country: 'Argentina', etapa: 'tentative', fase: 'tentative', dealType: 'All In', fee: 1226.96, bf: 245.39, mf: 0, paymentStatus: 'No abonado', artStatus: 'Arte no subido', exception: false },
+      { id: 's17', code: 'C1-2026-017', date: '26 sept 2026', artist: 'Marian Ariss', event: 'Kevin de Vries Buenos Aires', venue: 'Mandarine Park', country: 'Argentina', etapa: 'tentative', fase: 'tentative', dealType: 'All In', fee: 1226.96, bf: 245.39, mf: 0, paymentStatus: 'No abonado', artStatus: 'Arte no subido', exception: false },
+      { id: 's11', code: 'C1-2026-011', date: '26 sept 2026', artist: 'ART NO LOGIA', event: 'Jiwa', venue: 'Boho Beer Garden', country: 'Reino Unido', etapa: 'confirmed', fase: 'confirmed', dealType: 'All In', fee: 1800, bf: 360, mf: 272, paymentStatus: 'No abonado', artStatus: 'Arte no subido', exception: false },
+      { id: 's07', code: 'C1-2026-007', date: null, artist: 'Andrea Castells', event: 'Sephora Opening', venue: null, country: null, etapa: 'tentative', fase: 'tentative', dealType: 'All In', fee: 2000, bf: 400, mf: 0, paymentStatus: 'No abonado', artStatus: 'Arte no subido', exception: false },
     ]);
   }
 

@@ -19,7 +19,7 @@ export function BookingDashboardPage() {
     <div>
       <h1 className="mb-5 text-2xl font-semibold leading-8 text-slate-800">Dashboard</h1>
 
-      <div className="mb-6 grid grid-cols-2 gap-2 sm:grid-cols-4 lg:grid-cols-7">
+      <div className="mb-6 grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-6">
         {data.kpis.map((kpi) => (
           <KpiCard key={kpi.id} kpi={kpi} />
         ))}

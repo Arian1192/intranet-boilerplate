@@ -11,6 +11,7 @@ export interface SegmentedControlProps<T extends string> {
   onChange: (value: T) => void;
   fullWidth?: boolean;
   className?: string;
+  tone?: 'light' | 'dark';
 }
 
 export function SegmentedControl<T extends string>({
@@ -19,7 +20,10 @@ export function SegmentedControl<T extends string>({
   onChange,
   fullWidth = false,
   className,
+  tone = 'light',
 }: SegmentedControlProps<T>) {
+  const activeClass =
+    tone === 'dark' ? 'bg-[#44444C] text-white' : 'bg-white text-slate-800 shadow-sm';
   return (
     <div
       className={cn(
@@ -35,7 +39,7 @@ export function SegmentedControl<T extends string>({
           onClick={() => onChange(option.value)}
           className={cn(
             'rounded-md px-3 py-1 text-sm font-medium transition-colors',
-            value === option.value ? 'bg-white text-slate-800 shadow-sm' : 'text-slate-500 hover:text-slate-700'
+            value === option.value ? activeClass : 'text-slate-500 hover:text-slate-700'
           )}
         >
           {option.label}

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { HelpCircle, X } from 'lucide-react';
+import { Link } from 'react-router';
 import { ReportDialog } from './ReportDialog';
 
 export function HelpPanel() {
@@ -67,9 +68,9 @@ export function HelpPanel() {
             >
               Reportar con captura
             </button>
-            <button type="button" className="hover:text-slate-600">
+            <Link to="/incidencias" className="hover:text-slate-600">
               Mis avisos
-            </button>
+            </Link>
           </div>
         </div>
       ) : (

@@ -45,4 +45,9 @@ describe('Badge', () => {
     render(<Badge variant="rose">Cambios</Badge>);
     expect(screen.getByText('Cambios')).toHaveClass('bg-rose-100', 'text-rose-700');
   });
+
+  it('renders the violet variant', () => {
+    render(<Badge variant="violet" size="sm">Idea</Badge>);
+    expect(screen.getByText('Idea')).toHaveClass('bg-violet-100', 'text-violet-700');
+  });
 });
