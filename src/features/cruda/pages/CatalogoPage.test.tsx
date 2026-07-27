@@ -16,6 +16,30 @@ test('renders all catalog sections', () => {
   expect(screen.getByText('Colores')).toBeInTheDocument();
 });
 
+test('el catálogo cuadra con las cifras del live', () => {
+  render(<CatalogoPage />);
+  // productos más vendidos
+  expect(screen.getByText('960')).toBeInTheDocument();
+  expect(screen.getByText('16.358,35 €')).toBeInTheDocument();
+  // tabla de productos
+  expect(screen.getByText('3 variantes')).toBeInTheDocument();
+  // chip de colección + celda de la tabla de productos
+  expect(screen.getAllByText('Top Sales')).toHaveLength(2);
+  expect(screen.getByText('340 uds')).toBeInTheDocument();
+  expect(screen.getByText('16,50 €')).toBeInTheDocument();
+  expect(screen.getByText('8,50 €')).toBeInTheDocument();
+  // alertas de stock
+  expect(screen.getByText('340 uds · valor a coste 2720,00 €')).toBeInTheDocument();
+  expect(screen.getByText('1 variante(s) en o por debajo del mínimo:')).toBeInTheDocument();
+  expect(screen.getByText('· Algodón / L / Crudo')).toBeInTheDocument();
+  expect(screen.getByText('40')).toBeInTheDocument();
+  expect(screen.getByText('50')).toBeInTheDocument();
+  // extras
+  expect(screen.getByText('0,70 €')).toBeInTheDocument();
+  expect(screen.getByText('2,50 €')).toBeInTheDocument();
+  expect(screen.getByText('0,15 €')).toBeInTheDocument();
+});
+
 test('opening a product row shows the product modal', () => {
   render(<CatalogoPage />);
   // Product name renders in ProductsTable, TopProductsTable, and StockAlerts

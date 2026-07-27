@@ -36,8 +36,8 @@ export const products: Product[] = [
     type: 'variantes',
     active: true,
     notes: '',
-    soldUnits: 860,
-    soldValue: 14708.35,
+    soldUnits: 960,
+    soldValue: 16358.35,
     variants: [
       { id: 'v1', sku: '4878test01', finish: 'Algodón', size: 'S', color: 'Crudo', price: 16.5, cost: 8, pvp: 41.03, multiplier: 2.49, stock: 150, min: 50 },
       { id: 'v2', sku: '4878test02', finish: 'Algodón', size: 'M', color: 'Crudo', price: 16.5, cost: 8, pvp: 45, multiplier: 2.73, stock: 150, min: 50 },
