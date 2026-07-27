@@ -63,6 +63,20 @@ describe('CreativosPage', () => {
     expect(screen.getAllByText('Briefing').length).toBeGreaterThan(0);
   });
 
+  // D6/Tarea 9: la vista Calendario pinta la rejilla del mes y respeta el filtro activo.
+  it('renders the month grid in Calendario and applies the active filter to it', () => {
+    render(<CreativosPage today={new Date(2026, 6, 27)} />);
+    fireEvent.click(screen.getByRole('button', { name: 'Calendario' }));
+    expect(screen.getByText('Julio 2026')).toBeInTheDocument();
+    expect(screen.getByText('Lun')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Hoy' })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Video Pomo 26/07' })).toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole('button', { name: 'Diseño' }));
+    expect(screen.queryByRole('button', { name: 'Video Pomo 26/07' })).not.toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Pack Sold Out · Pack Sold Out' })).toBeInTheDocument();
+  });
+
   // D5: los pills "+ Alba" / "+ Carlos" no son un filtro, son atajos de alta pre-asignada.
   it('the "Asignar a" shortcuts carry the live titles and open the alta pre-assigned', () => {
     render(<CreativosPage />);

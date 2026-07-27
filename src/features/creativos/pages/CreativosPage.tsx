@@ -8,6 +8,7 @@ import { FilterChips } from '../components/FilterChips';
 import { PiecesKanban } from '../components/PiecesKanban';
 import { PiecesTable } from '../components/PiecesTable';
 import { NuevaPiezaDrawer } from '../components/NuevaPiezaDrawer';
+import { CreativosCalendar } from '../components/CreativosCalendar';
 
 /**
  * D5: los pills de "Asignar a" no filtran — son atajos de alta con el responsable ya puesto.
@@ -22,7 +23,12 @@ const ASSIGN_SHORTCUTS = [
 const VIEWS = ['Tablero', 'Calendario'] as const;
 type CreativosView = (typeof VIEWS)[number];
 
-export function CreativosPage() {
+export interface CreativosPageProps {
+  /** Solo para fijar el mes inicial del calendario en los tests. Por defecto, hoy. */
+  today?: Date;
+}
+
+export function CreativosPage({ today }: CreativosPageProps = {}) {
   const [filter, setFilter] = useState<CreativosFilter>('Todas');
   const [view, setView] = useState<CreativosView>('Tablero');
   const [drawerAssignee, setDrawerAssignee] = useState<string | undefined>(undefined);
@@ -101,7 +107,9 @@ export function CreativosPage() {
           <PiecesKanban pieces={visible} />
           <PiecesTable pieces={visible} />
         </>
-      ) : null}
+      ) : (
+        <CreativosCalendar pieces={visible} today={today ?? new Date()} />
+      )}
 
       <NuevaPiezaDrawer
         open={drawerOpen}
