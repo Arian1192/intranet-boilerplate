@@ -20,15 +20,22 @@ describe('CreativosPage', () => {
     expect(screen.queryByText('Piezas activas')).not.toBeInTheDocument();
   });
 
-  it('filtering by "Vídeo" narrows both the kanban and the table to the video piece', () => {
+  it('renders the live stat values (2 / 0 / 0 / 2) and the live kanban counts', () => {
     render(<CreativosPage />);
-    // Before: the table has 3 data rows
-    expect(screen.getAllByText('SIGHT').length).toBeGreaterThan(1);
-    fireEvent.click(screen.getByRole('button', { name: 'Vídeo' }));
-    // After: only the vídeo piece (p1) remains — its meta line is unique to video
-    expect(screen.queryByText('Test')).not.toBeInTheDocument();
+    const table = screen.getByRole('table');
+    expect(within(table).getAllByRole('row')).toHaveLength(4); // header + 3 creatividades
+    expect(within(table).getByText('Pack Sold Out · Pack Sold Out')).toBeInTheDocument();
+    expect(within(table).getByText('Video Pomo 26/07')).toBeInTheDocument();
+    expect(within(table).getByText('Flyer Claptone 02/08')).toBeInTheDocument();
+  });
+
+  it('filtering by "Diseño" narrows both the kanban and the table to the estático piece', () => {
+    render(<CreativosPage />);
+    fireEvent.click(screen.getByRole('button', { name: 'Diseño' }));
     const table = screen.getByRole('table');
     expect(within(table).getAllByRole('row')).toHaveLength(2); // header + 1 data row
+    expect(within(table).getByText('Pack Sold Out · Pack Sold Out')).toBeInTheDocument();
+    expect(within(table).queryByText('Video Pomo 26/07')).not.toBeInTheDocument();
   });
 
   // El título del drawer sigue siendo "Nueva pieza": el recon del 27-jul no abrió el drawer,
