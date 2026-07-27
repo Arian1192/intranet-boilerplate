@@ -69,8 +69,14 @@ export function OrderDetail({ order, onBack }: { order: Order; onBack: () => voi
       <Card className="space-y-3 p-6">
         <h3 className="text-xs font-semibold uppercase tracking-wide text-slate-400">Portal de reposiciones (CRUDA)</h3>
         <p className="text-sm text-slate-500">Da acceso a este cliente para que pida sus reposiciones de forma autónoma. Verá solo su catálogo y sus pedidos.</p>
+        {order.portalEmail && (
+          <div className="flex items-center justify-between rounded-lg border border-slate-200 px-3 py-2">
+            <span className="text-sm text-slate-700">{order.portalEmail}</span>
+            <button type="button" className="text-sm text-slate-500 hover:text-slate-700">Quitar acceso</button>
+          </div>
+        )}
         <div className="flex gap-2">
-          <input placeholder="email@cliente.com" className="h-10 flex-1 rounded-lg border border-slate-200 px-3 text-sm" />
+          <input type="email" placeholder="email@cliente.com" className="h-10 flex-1 rounded-lg border border-slate-200 px-3 text-sm" />
           <Button variant="secondary">Invitar</Button>
         </div>
         <p className="text-xs text-slate-400">Se le enviará un email para crear su contraseña. Requiere permiso de gestión de usuarios.</p>

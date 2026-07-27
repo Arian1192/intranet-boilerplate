@@ -48,6 +48,22 @@ test('la fila meta muestra la nota de origen o el responsable, según el pedido'
   expect(screen.queryByText(/portal de cliente/)).not.toBeInTheDocument();
 });
 
+test('el portal muestra el acceso ya concedido con Quitar acceso; el invitar sigue vacío', () => {
+  const { unmount } = render(<OrderDetail order={cr104} onBack={vi.fn()} />);
+  // el live pinta el email concedido como texto, no como valor del input de invitar
+  expect(screen.getByText('hello@carlospego.com')).toBeInTheDocument();
+  expect(screen.getByRole('button', { name: 'Quitar acceso' })).toBeInTheDocument();
+  const invite = screen.getByPlaceholderText('email@cliente.com') as HTMLInputElement;
+  expect(invite.value).toBe('');
+  expect(screen.getByRole('button', { name: 'Invitar' })).toBeInTheDocument();
+  unmount();
+
+  render(<OrderDetail order={cr} onBack={vi.fn()} />);
+  expect(screen.queryByRole('button', { name: 'Quitar acceso' })).not.toBeInTheDocument();
+  expect(screen.getByPlaceholderText('email@cliente.com')).toBeInTheDocument();
+  expect(screen.getByRole('button', { name: 'Invitar' })).toBeInTheDocument();
+});
+
 test('back button fires onBack', () => {
   const onBack = vi.fn();
   render(<OrderDetail order={cr} onBack={onBack} />);
