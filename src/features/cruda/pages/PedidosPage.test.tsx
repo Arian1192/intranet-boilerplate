@@ -30,6 +30,15 @@ test('selecting an order shows its detail; back returns to the list', () => {
   expect(screen.getByText('En curso (activos)')).toBeInTheDocument();
 });
 
+test('la columna derecha no estira la página: la fila de fases scrollea dentro', () => {
+  const { container } = render(<MemoryRouter><PedidosPage /></MemoryRouter>);
+  const grid = container.querySelector('div.grid') as HTMLElement;
+  expect(grid.className).toContain('lg:grid-cols-[360px_1fr]');
+  // sin min-w-0 la pista 1fr crece con su contenido y el documento desborda a 1620px
+  const rightColumn = grid.children[1] as HTMLElement;
+  expect(rightColumn.className).toContain('min-w-0');
+});
+
 test('new order button shows the creation form', () => {
   render(<MemoryRouter><PedidosPage /></MemoryRouter>);
   fireEvent.click(screen.getByRole('button', { name: '+ Nuevo pedido' }));
