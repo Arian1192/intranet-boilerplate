@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Badge, Button, Card } from '@/components/ui';
 import { cn } from '@/lib/utils';
-import { EuphoricCalendar } from '../components/EuphoricCalendar';
+import { EuphoricCalendar, TodayButton } from '../components/EuphoricCalendar';
 import { EventForm } from '../components/EventForm';
 import { events, todayIso } from '../data/seed';
 import type { EventItem } from '../data/types';
@@ -65,10 +65,15 @@ function EventosCalendario({ events: visibleEvents }: { events: EventItem[] }) {
         monthLabel={`${MONTHS_ES[month]} ${year}`}
         onPrevMonth={() => goToMonth(-1)}
         onNextMonth={() => goToMonth(1)}
-        onToday={() => {
-          setYear(TODAY_YEAR);
-          setMonth(TODAY_MONTH - 1);
-        }}
+        headerLayout="leading"
+        headerActions={
+          <TodayButton
+            onClick={() => {
+              setYear(TODAY_YEAR);
+              setMonth(TODAY_MONTH - 1);
+            }}
+          />
+        }
         today={{ year: TODAY_YEAR, month: TODAY_MONTH - 1, day: TODAY_DAY }}
         renderDay={renderDay}
       />

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Button, Card, SegmentedControl } from '@/components/ui';
 import { cn } from '@/lib/utils';
-import { EuphoricCalendar } from '../components/EuphoricCalendar';
+import { EuphoricCalendar, TodayButton } from '../components/EuphoricCalendar';
 import { PieceBoard } from '../components/PieceBoard';
 import { PieceDrawer } from '../components/PieceDrawer';
 import { StatusChip } from '../components/StatusChip';
@@ -189,7 +189,8 @@ function PiecesCalendar({ pieces: visiblePieces }: { pieces: Piece[] }) {
         monthLabel={`${MONTH_LABELS[cursor.month]} ${cursor.year}`}
         onPrevMonth={() => setCursor((value) => addMonths(value, -1))}
         onNextMonth={() => setCursor((value) => addMonths(value, 1))}
-        onToday={() => setCursor(TODAY)}
+        headerLayout="leading"
+        headerActions={<TodayButton onClick={() => setCursor(TODAY)} />}
         today={{ year: TODAY.year, month: TODAY.month, day: TODAY_DAY }}
         renderDay={renderDay}
       />

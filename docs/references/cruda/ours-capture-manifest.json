@@ -1,0 +1,34 @@
+[
+  {
+    "name": "pedidos",
+    "path": "/cruda",
+    "file": "ours-2026-07-27-pedidos.png",
+    "width": 1620,
+    "height": 1200,
+    "at": "2026-07-27T11:05:28.999Z"
+  },
+  {
+    "name": "pedido-CR00104-detalle",
+    "path": "/cruda",
+    "file": "ours-2026-07-27-pedido-CR00104-detalle.png",
+    "width": 1440,
+    "height": 1200,
+    "at": "2026-07-27T11:05:30.552Z"
+  },
+  {
+    "name": "catalogo",
+    "path": "/cruda/catalogo",
+    "file": "ours-2026-07-27-catalogo.png",
+    "width": 1440,
+    "height": 1200,
+    "at": "2026-07-27T11:05:31.844Z"
+  },
+  {
+    "name": "analitica",
+    "path": "/cruda/analitica",
+    "file": "ours-2026-07-27-analitica.png",
+    "width": 1440,
+    "height": 1200,
+    "at": "2026-07-27T11:05:33.103Z"
+  }
+]

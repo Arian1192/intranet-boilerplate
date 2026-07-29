@@ -27,6 +27,18 @@ describe('NuevaPiezaDrawer', () => {
     expect(ratio).toHaveClass('bg-brand-50');
   });
 
+  it('leaves "Responsable" unassigned by default (retrocompatible)', () => {
+    render(<NuevaPiezaDrawer open onClose={() => {}} />);
+    expect(screen.getAllByRole('button', { name: /Asignar/ })).toHaveLength(2);
+  });
+
+  it('pre-assigns the responsable when the assignee prop is given', () => {
+    render(<NuevaPiezaDrawer open onClose={() => {}} assignee="Alba" />);
+    expect(screen.getByRole('button', { name: 'Alba' })).toBeInTheDocument();
+    // "Aprueba" sigue sin asignar
+    expect(screen.getAllByRole('button', { name: /Asignar/ })).toHaveLength(1);
+  });
+
   it('calls onClose from the ✕, Cerrar, Guardar and overlay', () => {
     const onClose = vi.fn();
     const { container } = render(<NuevaPiezaDrawer open onClose={onClose} />);

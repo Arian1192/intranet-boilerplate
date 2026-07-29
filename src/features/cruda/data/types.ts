@@ -35,6 +35,10 @@ export interface Order {
   amount: number; // amount shown in the list row
   headerTotal: number; // total shown in the detail header (may differ from lines total)
   responsible?: string;
+  /** Nota de origen del pedido (espeja la columna `nota_origen` del pedido en Supabase). */
+  portalNote?: string;
+  /** Email con acceso concedido al portal de reposiciones (espeja `portal_email` del pedido en Supabase). */
+  portalEmail?: string;
   lines: OrderLine[];
 }
 

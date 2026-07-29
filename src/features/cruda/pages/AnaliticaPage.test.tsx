@@ -7,6 +7,10 @@ test('renders stat cards, chart and reused panels', () => {
   render(<AnaliticaPage />);
   expect(screen.getByRole('heading', { name: 'Analítica CRUDA', level: 1 })).toBeInTheDocument();
   expect(screen.getByText('En curso (activos)')).toBeInTheDocument();
+  // se alimenta del mismo seed que Pedidos: ambas pantallas se mueven juntas (DD3)
+  expect(screen.getAllByText('17.264,85 €').length).toBeGreaterThanOrEqual(2);
+  expect(screen.getByText('5 pedidos')).toBeInTheDocument();
+  expect(screen.getByText('8300,00 €')).toBeInTheDocument();
   expect(screen.getByText('Facturado (histórico)')).toBeInTheDocument();
   expect(screen.getByText('Ventas facturadas por mes · 2026')).toBeInTheDocument();
   expect(screen.getByText('Jul')).toBeInTheDocument();

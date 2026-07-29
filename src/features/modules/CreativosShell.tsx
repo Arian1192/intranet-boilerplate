@@ -4,7 +4,7 @@ import type { User } from '@/types';
 
 const mockUser: User = { id: '1', email: 'test@example.com', name: 'Test User', role: 'Admin' };
 
-const tabs = [{ label: 'Piezas', href: '/creativos' }];
+const tabs = [{ label: 'Creatividades', href: '/creativos' }];
 
 export function CreativosShell() {
   return (

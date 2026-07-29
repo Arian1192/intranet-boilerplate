@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Button, SegmentedControl, Select } from '@/components/ui';
 import { cn } from '@/lib/utils';
-import { EuphoricCalendar, EventPill, PublicationCell } from '../components/EuphoricCalendar';
+import { EuphoricCalendar, EventPill, PublicationCell, TodayButton } from '../components/EuphoricCalendar';
 import { PublicationKanban } from '../components/PublicationKanban';
 import { PublicationTable } from '../components/PublicationTable';
 import { accounts, events, publications, todayIso } from '../data/seed';
@@ -117,7 +117,8 @@ function CalendarioView({ publications: visiblePublications }: { publications: P
         monthLabel={`${MONTH_LABELS[cursor.month]} ${cursor.year}`}
         onPrevMonth={() => setCursor((value) => addMonths(value, -1))}
         onNextMonth={() => setCursor((value) => addMonths(value, 1))}
-        onToday={() => setCursor(TODAY)}
+        headerLayout="leading"
+        headerActions={<TodayButton onClick={() => setCursor(TODAY)} />}
         today={{ year: TODAY.year, month: TODAY.month, day: TODAY_DAY }}
         renderDay={renderDay}
       />

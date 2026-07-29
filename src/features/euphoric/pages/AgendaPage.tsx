@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui';
 import { cn } from '@/lib/utils';
-import { EuphoricCalendar } from '../components/EuphoricCalendar';
+import { EuphoricCalendar, TodayButton } from '../components/EuphoricCalendar';
 import { accounts, agendaEntries, events, pieces, publications, todayIso } from '../data/seed';
 import type { AgendaEntryKind } from '../data/types';
 
@@ -159,7 +159,8 @@ export function AgendaPage() {
           monthLabel={`${MONTH_LABELS[cursor.month]} ${cursor.year}`}
           onPrevMonth={() => setCursor((value) => addMonths(value, -1))}
           onNextMonth={() => setCursor((value) => addMonths(value, 1))}
-          onToday={() => setCursor({ year: TODAY_YEAR, month: TODAY_MONTH - 1 })}
+          headerLayout="leading"
+          headerActions={<TodayButton onClick={() => setCursor({ year: TODAY_YEAR, month: TODAY_MONTH - 1 })} />}
           today={{ year: TODAY_YEAR, month: TODAY_MONTH - 1, day: TODAY_DAY }}
           renderDay={renderDay}
         />
