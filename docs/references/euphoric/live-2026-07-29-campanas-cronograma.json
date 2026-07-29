@@ -1,0 +1,90 @@
+{
+  "url": "https://bookings.conceptoneagency.com/euphoric/campanas",
+  "title": "Black Moose Group · Intranet",
+  "links": [
+    {
+      "text": "",
+      "href": "/",
+      "title": ""
+    },
+    {
+      "text": "Cuentas",
+      "href": "/euphoric/cuentas",
+      "title": ""
+    },
+    {
+      "text": "Campañas",
+      "href": "/euphoric/campanas",
+      "title": ""
+    },
+    {
+      "text": "Publicaciones",
+      "href": "/euphoric/calendario",
+      "title": ""
+    },
+    {
+      "text": "Creatividades",
+      "href": "/euphoric/piezas",
+      "title": ""
+    },
+    {
+      "text": "Eventos",
+      "href": "/euphoric/eventos",
+      "title": ""
+    },
+    {
+      "text": "Agenda",
+      "href": "/euphoric/agenda",
+      "title": ""
+    },
+    {
+      "text": "Negocio",
+      "href": "/euphoric/negocio",
+      "title": ""
+    },
+    {
+      "text": "",
+      "href": "/euphoric/artistas",
+      "title": "Artistas"
+    },
+    {
+      "text": "",
+      "href": "/euphoric/ajustes",
+      "title": "Ajustes"
+    },
+    {
+      "text": "",
+      "href": "/mi-trabajo",
+      "title": "Inicio · pendientes, documentos y creatividades"
+    },
+    {
+      "text": "test Admin T",
+      "href": "/perfil",
+      "title": ""
+    },
+    {
+      "text": "Mis avisos",
+      "href": "/incidencias",
+      "title": ""
+    }
+  ],
+  "buttons": [
+    "Euphoric Media",
+    "9+",
+    "+ Nueva campaña",
+    "Tablero",
+    "Cronograma",
+    "Gestión",
+    "1 sem",
+    "2 sem",
+    "3 sem",
+    "4 sem",
+    "Genérico Julio",
+    "Enviar",
+    "Reportar con captura"
+  ],
+  "headings": [
+    "H1: Campañas"
+  ],
+  "text": "Campañas\nCampañas y proyectos de marketing: RRSS, paid media, contenido y lanzamientos.\n+ Nueva campaña\nTablero\nCronograma\nGestión\nCampañas activas · próximas 3 semanas\n1 sem\n2 sem\n3 sem\n4 sem\n29 jul\n05 ago\n12 ago\nGenérico Julio\nLas barras van de la fecha de inicio a la de fin de cada campaña. Clic para abrir."
+}

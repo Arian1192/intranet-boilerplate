@@ -1,0 +1,84 @@
+{
+  "url": "https://bookings.conceptoneagency.com/euphoric/ajustes",
+  "title": "Black Moose Group · Intranet",
+  "links": [
+    {
+      "text": "",
+      "href": "/",
+      "title": ""
+    },
+    {
+      "text": "Cuentas",
+      "href": "/euphoric/cuentas",
+      "title": ""
+    },
+    {
+      "text": "Campañas",
+      "href": "/euphoric/campanas",
+      "title": ""
+    },
+    {
+      "text": "Publicaciones",
+      "href": "/euphoric/calendario",
+      "title": ""
+    },
+    {
+      "text": "Creatividades",
+      "href": "/euphoric/piezas",
+      "title": ""
+    },
+    {
+      "text": "Eventos",
+      "href": "/euphoric/eventos",
+      "title": ""
+    },
+    {
+      "text": "Agenda",
+      "href": "/euphoric/agenda",
+      "title": ""
+    },
+    {
+      "text": "Negocio",
+      "href": "/euphoric/negocio",
+      "title": ""
+    },
+    {
+      "text": "",
+      "href": "/euphoric/artistas",
+      "title": "Artistas"
+    },
+    {
+      "text": "",
+      "href": "/euphoric/ajustes",
+      "title": "Ajustes"
+    },
+    {
+      "text": "",
+      "href": "/mi-trabajo",
+      "title": "Inicio · pendientes, documentos y creatividades"
+    },
+    {
+      "text": "test Admin T",
+      "href": "/perfil",
+      "title": ""
+    },
+    {
+      "text": "Mis avisos",
+      "href": "/incidencias",
+      "title": ""
+    }
+  ],
+  "buttons": [
+    "Euphoric Media",
+    "9+",
+    "Guardar ajustes",
+    "Enviar",
+    "Reportar con captura"
+  ],
+  "headings": [
+    "H1: Ajustes · Euphoric Media",
+    "H2: COLORES DEL DEADLINE DE LAS CREATIVIDADES",
+    "H2: RENTABILIDAD"
+  ],
+  "text": "Ajustes · Euphoric Media\nParámetros de funcionamiento del espacio de Euphoric.\nCOLORES DEL DEADLINE DE LAS CREATIVIDADES\nCada creatividad se pinta con un color según los días que faltan hasta su fecha límite:\n🟢 verde = falta más que el umbral amarillo.\n🟡 amarillo = faltan entre el umbral amarillo y el rojo (incluido).\n🔴 rojo = faltan 2 días o menos (incluye hoy y las fechas ya pasadas).\nAmarillo cuando faltan (días) ≤\nA partir de este umbral (o menos), la creatividad deja de estar en verde.\nRojo cuando faltan (días) ≤\nA este umbral o menos (incluye hoy y pasados), la creatividad se pinta en rojo.\nRENTABILIDAD\nCoste interno por hora que se usa para calcular la rentabilidad de cada cliente (horas imputadas × coste/hora). Hasta que integremos costes reales por persona, se aplica este valor por defecto.\nCoste interno por hora (€)\nGuardar ajustes"
+}

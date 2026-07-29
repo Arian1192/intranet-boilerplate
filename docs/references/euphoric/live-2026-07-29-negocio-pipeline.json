@@ -1,0 +1,110 @@
+{
+  "url": "https://bookings.conceptoneagency.com/euphoric/negocio/pipeline",
+  "title": "Black Moose Group · Intranet",
+  "links": [
+    {
+      "text": "",
+      "href": "/",
+      "title": ""
+    },
+    {
+      "text": "Cuentas",
+      "href": "/euphoric/cuentas",
+      "title": ""
+    },
+    {
+      "text": "Campañas",
+      "href": "/euphoric/campanas",
+      "title": ""
+    },
+    {
+      "text": "Publicaciones",
+      "href": "/euphoric/calendario",
+      "title": ""
+    },
+    {
+      "text": "Creatividades",
+      "href": "/euphoric/piezas",
+      "title": ""
+    },
+    {
+      "text": "Eventos",
+      "href": "/euphoric/eventos",
+      "title": ""
+    },
+    {
+      "text": "Agenda",
+      "href": "/euphoric/agenda",
+      "title": ""
+    },
+    {
+      "text": "Negocio",
+      "href": "/euphoric/negocio",
+      "title": ""
+    },
+    {
+      "text": "",
+      "href": "/euphoric/artistas",
+      "title": "Artistas"
+    },
+    {
+      "text": "",
+      "href": "/euphoric/ajustes",
+      "title": "Ajustes"
+    },
+    {
+      "text": "",
+      "href": "/mi-trabajo",
+      "title": "Inicio · pendientes, documentos y creatividades"
+    },
+    {
+      "text": "test Admin T",
+      "href": "/perfil",
+      "title": ""
+    },
+    {
+      "text": "Dirección",
+      "href": "/euphoric/negocio",
+      "title": ""
+    },
+    {
+      "text": "Pipeline",
+      "href": "/euphoric/negocio/pipeline",
+      "title": ""
+    },
+    {
+      "text": "Presupuestos",
+      "href": "/euphoric/negocio/presupuestos",
+      "title": ""
+    },
+    {
+      "text": "Analítica",
+      "href": "/euphoric/negocio/analitica",
+      "title": ""
+    },
+    {
+      "text": "Tiempos",
+      "href": "/euphoric/negocio/tiempos",
+      "title": ""
+    },
+    {
+      "text": "Mis avisos",
+      "href": "/incidencias",
+      "title": ""
+    }
+  ],
+  "buttons": [
+    "Euphoric Media",
+    "9+",
+    "+ Nuevo lead",
+    "Mogli Marbella",
+    "Editar",
+    "→ Convertir a Activo",
+    "Enviar",
+    "Reportar con captura"
+  ],
+  "headings": [
+    "H1: Pipeline · Euphoric"
+  ],
+  "text": "Dirección\nPipeline\nPresupuestos\nAnalítica\nTiempos\nPipeline · Euphoric\nOportunidades comerciales en curso. Arrastra un lead a Activo cuando cierres.\n+ Nuevo lead\nLEADS EN PIPELINE\n1\nVALOR TOTAL\n1150,00 €\nFORECAST PONDERADO\n115,00 €\nΣ valor × probabilidad\nFrío · <30%\n1\nValor 1150,00 € · Forecast 115,00 €\nMogli Marbella\n10%\n1150,00 €\n≈ 115,00 €\nFV\nFran\n01 mar 2027\nEditar\n→ Convertir a Activo\nTemplado · 30–70%\n0\nValor 0,00 € · Forecast 0,00 €\nSin leads\nCaliente · >70%\n0\nValor 0,00 € · Forecast 0,00 €\nSin leads"
+}
