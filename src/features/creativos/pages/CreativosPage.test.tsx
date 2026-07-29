@@ -90,6 +90,18 @@ describe('CreativosPage', () => {
     expect(within(drawer).getByRole('button', { name: 'Alba' })).toBeInTheDocument();
   });
 
+  // Barrido del 29-jul: el live añadió un tercer atajo, "+ Maf"
+  // (evidencia `barrido-2026-07-29/40-creativos-asignar-a.json`).
+  it('carries the third shortcut "+ Maf" added by the live on 2026-07-29', () => {
+    render(<CreativosPage />);
+    const maf = screen.getByRole('button', { name: '+ Maf' });
+    expect(maf).toHaveAttribute('title', 'Nueva creatividad para Maf');
+
+    fireEvent.click(maf);
+    const drawer = screen.getByRole('complementary');
+    expect(within(drawer).getByRole('button', { name: 'Maf' })).toBeInTheDocument();
+  });
+
   // El título del drawer sigue siendo "Nueva pieza": el recon del 27-jul no abrió el drawer,
   // así que la única evidencia de esa cabecera es la captura del 10-jul (ver ours-vs-live.md).
   it('opens and closes the alta drawer', () => {

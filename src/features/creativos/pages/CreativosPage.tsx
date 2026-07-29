@@ -13,10 +13,13 @@ import { CreativosCalendar } from '../components/CreativosCalendar';
 /**
  * D5: los pills de "Asignar a" no filtran — son atajos de alta con el responsable ya puesto.
  * Los nombres completos salen del `title` del live (`live-2026-07-27-20-board-structure.json`).
+ * "Maf" lo añadió el live entre el 27 y el 29 de julio, con `title` sin apellido — es el
+ * nombre que el propio live pinta en la ficha (barrido del 29-jul, `40-creativos-asignar-a.json`).
  */
 const ASSIGN_SHORTCUTS = [
   { name: 'Alba', fullName: 'Alba Gelabert' },
   { name: 'Carlos', fullName: 'Carlos Pego' },
+  { name: 'Maf', fullName: 'Maf' },
 ];
 
 /** D6: control segmentado a la izquierda de la fila de filtros. "Tablero" por defecto. */
