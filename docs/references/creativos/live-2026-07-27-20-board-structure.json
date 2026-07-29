@@ -1,0 +1,128 @@
+{
+  "assignBar": {
+    "text": "Asignar a: + Alba + Carlos",
+    "html": "<div class=\"flex flex-wrap items-center gap-1.5\"><span class=\"text-xs text-slate-400\">Asignar a:</span><button class=\"rounded-full border border-slate-300 px-2.5 py-1 text-xs font-medium text-slate-600 hover:border-brand-400 hover:text-brand-600\" title=\"Nueva creatividad para Alba Gelabert\">+ Alba</button><button class=\"rounded-full border border-slate-300 px-2.5 py-1 text-xs font-medium text-slate-600 hover:border-brand-400 hover:text-brand-600\" title=\"Nueva creatividad para Carlos Pego\">+ Carlos</button></div>"
+  },
+  "assignButtons": [
+    {
+      "text": "+ Alba",
+      "title": "Nueva creatividad para Alba Gelabert",
+      "aria": null,
+      "disabled": false
+    },
+    {
+      "text": "+ Carlos",
+      "title": "Nueva creatividad para Carlos Pego",
+      "aria": null,
+      "disabled": false
+    }
+  ],
+  "columnsRaw": [
+    {
+      "state": "Briefing",
+      "text": "Briefing 1 AG Alba 🎬 Video Pomo 26/07 SIGHT · Vídeo · v1 23 jul 2026 ☑ 0/1 En producción 1 Carlos Pack Sold Out · Pack Sold Out SIGHT · Estático · v1 10 jul 2026 ☑ 0/3 Revisión 0 — Cambios 0 — Aprobado 1 Carlos Flyer Claptone 02/08 SIGHT · Vídeo · v1 22 jul 2026 ☑ 2/3 CREATIVIDAD CLIENTE TIPO DEADLINE ESTADO CLIENTE APROB. Pack Sold Out · Pack Sold Out v1 SIGHT Estático 10 jul 2026 En producción "
+    }
+  ],
+  "controls": [
+    {
+      "text": "Creativos",
+      "pressed": null,
+      "cls": "flex items-center gap-1 rounded-lg px-2 py-1 text-sm font-semibold text-slate-600 hover:bg-slate-100 hover:text-slate-90"
+    },
+    {
+      "text": "9+",
+      "pressed": null,
+      "cls": "relative grid h-9 w-9 place-items-center rounded-lg text-slate-500 hover:bg-slate-100"
+    },
+    {
+      "text": "+ Alba",
+      "pressed": null,
+      "cls": "rounded-full border border-slate-300 px-2.5 py-1 text-xs font-medium text-slate-600 hover:border-brand-400 hover:text-br"
+    },
+    {
+      "text": "+ Carlos",
+      "pressed": null,
+      "cls": "rounded-full border border-slate-300 px-2.5 py-1 text-xs font-medium text-slate-600 hover:border-brand-400 hover:text-br"
+    },
+    {
+      "text": "+ Nueva creatividad",
+      "pressed": null,
+      "cls": "btn-primary text-sm"
+    },
+    {
+      "text": "Tablero",
+      "pressed": null,
+      "cls": "rounded-md px-3 py-1 text-xs font-medium bg-white text-slate-800 shadow-sm"
+    },
+    {
+      "text": "Calendario",
+      "pressed": null,
+      "cls": "rounded-md px-3 py-1 text-xs font-medium text-slate-500 hover:text-slate-700"
+    },
+    {
+      "text": "Todas",
+      "pressed": null,
+      "cls": "rounded-full px-3 py-1 text-xs font-medium bg-brand-600 text-white"
+    },
+    {
+      "text": "Mías",
+      "pressed": null,
+      "cls": "rounded-full px-3 py-1 text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200"
+    },
+    {
+      "text": "Diseño",
+      "pressed": null,
+      "cls": "rounded-full px-3 py-1 text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200"
+    },
+    {
+      "text": "Vídeo",
+      "pressed": null,
+      "cls": "rounded-full px-3 py-1 text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200"
+    },
+    {
+      "text": "Pend. aprobar",
+      "pressed": null,
+      "cls": "rounded-full px-3 py-1 text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200"
+    },
+    {
+      "text": "Correcciones",
+      "pressed": null,
+      "cls": "rounded-full px-3 py-1 text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200"
+    },
+    {
+      "text": "Atrasadas",
+      "pressed": null,
+      "cls": "rounded-full px-3 py-1 text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200"
+    },
+    {
+      "text": "Editar",
+      "pressed": null,
+      "cls": "text-xs text-slate-400 hover:text-brand-600"
+    },
+    {
+      "text": "AG Alba 🎬 Video Pomo 26/07 SIGHT · Vídeo · v1 23 jul 2026 ☑ 0/1",
+      "pressed": null,
+      "cls": "block w-full rounded-lg border border-slate-200 bg-white p-2.5 text-left hover:border-brand-300 hover:shadow-sm"
+    },
+    {
+      "text": "Carlos Pack Sold Out · Pack Sold Out SIGHT · Estático · v1 10 jul 2026 ☑ 0/3",
+      "pressed": null,
+      "cls": "block w-full rounded-lg border border-slate-200 bg-white p-2.5 text-left hover:border-brand-300 hover:shadow-sm"
+    },
+    {
+      "text": "Carlos Flyer Claptone 02/08 SIGHT · Vídeo · v1 22 jul 2026 ☑ 2/3",
+      "pressed": null,
+      "cls": "block w-full rounded-lg border border-slate-200 bg-white p-2.5 text-left hover:border-brand-300 hover:shadow-sm"
+    },
+    {
+      "text": "Enviar",
+      "pressed": null,
+      "cls": "h-[34px] shrink-0 rounded-lg bg-slate-800 px-2.5 text-xs font-medium text-white transition hover:bg-slate-900 disabled:o"
+    },
+    {
+      "text": "Reportar con captura",
+      "pressed": null,
+      "cls": "text-[11px] text-slate-400 transition hover:text-slate-700"
+    }
+  ]
+}

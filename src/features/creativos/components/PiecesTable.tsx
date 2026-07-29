@@ -1,12 +1,13 @@
 import { Badge } from '@/components/ui';
 import type { CreativePiece } from '../data/seed';
-import { STATUS_VARIANT, PRIORITY_VARIANT } from '../data/creativos';
+import { STATUS_VARIANT } from '../data/creativos';
+import { DeadlineBadge } from './DeadlineBadge';
 
 export interface PiecesTableProps {
   pieces: CreativePiece[];
 }
 
-const HEADERS = ['PIEZA', 'CLIENTE', 'TIPO', 'PRIORIDAD', 'DEADLINE', 'ESTADO', 'CLIENTE APROB.'];
+const HEADERS = ['CREATIVIDAD', 'CLIENTE', 'TIPO', 'DEADLINE', 'ESTADO', 'CLIENTE APROB.'];
 
 export function PiecesTable({ pieces }: PiecesTableProps) {
   return (
@@ -31,9 +32,8 @@ export function PiecesTable({ pieces }: PiecesTableProps) {
               <td className="px-4 py-3 text-sm text-slate-600">{piece.client}</td>
               <td className="px-4 py-3 text-sm text-slate-600">{piece.type}</td>
               <td className="px-4 py-3">
-                <Badge variant={PRIORITY_VARIANT[piece.priority]}>{piece.priority}</Badge>
+                <DeadlineBadge deadline={piece.deadline} overdue={piece.isOverdue} />
               </td>
-              <td className="px-4 py-3 text-sm text-slate-600">{piece.deadline}</td>
               <td className="px-4 py-3">
                 <Badge variant={STATUS_VARIANT[piece.status]}>{piece.status}</Badge>
               </td>

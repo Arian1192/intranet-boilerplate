@@ -1,14 +1,20 @@
 import { useState } from 'react';
 import { Calendar } from 'lucide-react';
 import { Badge, Button, RichTextEditor } from '@/components/ui';
+import { cn } from '@/lib/utils';
 import { SegmentedButtons } from './drawer/SegmentedButtons';
 
 export interface NuevaPiezaDrawerProps {
   open: boolean;
   onClose: () => void;
+  /**
+   * Responsable pre-asignado, para los atajos "+ Alba" / "+ Carlos" de la cabecera (D5).
+   * Opcional y aditivo: sin él, el drawer se comporta como siempre (sin responsable).
+   */
+  assignee?: string;
 }
 
-export function NuevaPiezaDrawer({ open, onClose }: NuevaPiezaDrawerProps) {
+export function NuevaPiezaDrawer({ open, onClose, assignee }: NuevaPiezaDrawerProps) {
   const [priority, setPriority] = useState('Media');
   const [ratios, setRatios] = useState<string[]>([]);
   const [approval, setApproval] = useState('Sin enviar');
@@ -39,22 +45,36 @@ export function NuevaPiezaDrawer({ open, onClose }: NuevaPiezaDrawerProps) {
 
             {/* Responsable / Aprueba */}
             <div className="flex flex-wrap items-center gap-x-6 gap-y-2 rounded-lg bg-slate-50 px-3 py-2 sm:col-span-2">
-              {['Responsable', 'Aprueba'].map((role) => (
-                <div key={role}>
-                  <div className="mb-0.5 text-[11px] font-semibold uppercase tracking-wide text-slate-400">
-                    {role}
+              {['Responsable', 'Aprueba'].map((role) => {
+                const person = role === 'Responsable' ? assignee : undefined;
+                return (
+                  <div key={role}>
+                    <div className="mb-0.5 text-[11px] font-semibold uppercase tracking-wide text-slate-400">
+                      {role}
+                    </div>
+                    <button
+                      type="button"
+                      className={cn(
+                        'inline-flex items-center gap-2 rounded-full py-1 pl-1 pr-3 text-sm hover:bg-slate-200',
+                        person ? 'text-slate-700' : 'text-slate-400'
+                      )}
+                    >
+                      <span
+                        aria-hidden
+                        className={cn(
+                          'grid h-7 w-7 shrink-0 place-items-center rounded-full',
+                          person
+                            ? 'bg-slate-200 text-xs font-medium text-slate-600'
+                            : 'border border-dashed border-slate-300 text-slate-400'
+                        )}
+                      >
+                        {person ? person.charAt(0) : '＋'}
+                      </span>
+                      <span>{person ?? 'Asignar'}</span>
+                    </button>
                   </div>
-                  <button
-                    type="button"
-                    className="inline-flex items-center gap-2 rounded-full py-1 pl-1 pr-3 text-sm text-slate-400 hover:bg-slate-200"
-                  >
-                    <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full border border-dashed border-slate-300 text-slate-400">
-                      ＋
-                    </span>
-                    <span>Asignar</span>
-                  </button>
-                </div>
-              ))}
+                );
+              })}
             </div>
 
             {/* Tipo / Departamento (celda 1-col con grid interno) */}

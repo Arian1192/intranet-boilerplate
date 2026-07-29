@@ -13,11 +13,12 @@ describe('PiecesKanban', () => {
     expect(screen.getByText('Aprobado')).toHaveClass('bg-emerald-100', 'text-emerald-700');
   });
 
-  it('shows a dash for empty columns and the piece in its column', () => {
+  it('shows a dash for empty columns and each creatividad in its column', () => {
     render(<PiecesKanban pieces={pieces} />);
-    // "Test" (Revisión) is rendered as a card
-    expect(screen.getByText('Test')).toBeInTheDocument();
-    // Cambios + Aprobado are empty → two em-dash placeholders
+    expect(screen.getByText('Video Pomo 26/07')).toBeInTheDocument(); // Briefing
+    expect(screen.getByText('Pack Sold Out · Pack Sold Out')).toBeInTheDocument(); // En producción
+    expect(screen.getByText('Flyer Claptone 02/08')).toBeInTheDocument(); // Aprobado
+    // Revisión + Cambios are empty → two em-dash placeholders (live: Revisión 0 · Cambios 0)
     expect(screen.getAllByText('—')).toHaveLength(2);
   });
 });

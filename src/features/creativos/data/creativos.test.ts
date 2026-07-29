@@ -8,28 +8,38 @@ describe('creativos helpers', () => {
     expect(STATUS_COLUMNS).toEqual(['Briefing', 'En producción', 'Revisión', 'Cambios', 'Aprobado']);
   });
 
-  it('filterPieces: Todas returns all; Vídeo keeps only video; Diseño excludes video', () => {
-    expect(filterPieces(pieces, 'Todas', CURRENT_USER)).toHaveLength(3);
-    expect(filterPieces(pieces, 'Vídeo', CURRENT_USER).map((p) => p.id)).toEqual(['p1']);
-    expect(filterPieces(pieces, 'Diseño', CURRENT_USER).map((p) => p.id)).toEqual(['p2', 'p3']);
+  it('seeds the 3 creatividades of the live in the table order of the live', () => {
+    expect(pieces.map((p) => p.title)).toEqual([
+      'Pack Sold Out · Pack Sold Out',
+      'Video Pomo 26/07',
+      'Flyer Claptone 02/08',
+    ]);
+    expect(pieces.map((p) => p.clientApproval)).toEqual([undefined, undefined, undefined]);
   });
 
-  it('filterPieces: Atrasadas keeps overdue; Pend. aprobar keeps Revisión; Correcciones keeps Cambios', () => {
-    expect(filterPieces(pieces, 'Atrasadas', CURRENT_USER).map((p) => p.id)).toEqual(['p3']);
-    expect(filterPieces(pieces, 'Pend. aprobar', CURRENT_USER).map((p) => p.id)).toEqual(['p3']);
+  it('filterPieces: Todas returns all; Vídeo keeps only video; Diseño excludes video', () => {
+    expect(filterPieces(pieces, 'Todas', CURRENT_USER)).toHaveLength(3);
+    expect(filterPieces(pieces, 'Vídeo', CURRENT_USER).map((p) => p.id)).toEqual(['p1', 'p3']);
+    expect(filterPieces(pieces, 'Diseño', CURRENT_USER).map((p) => p.id)).toEqual(['p2']);
+  });
+
+  it('filterPieces: Atrasadas excludes the approved one; Mías keeps Carlos', () => {
+    expect(filterPieces(pieces, 'Atrasadas', CURRENT_USER).map((p) => p.id)).toEqual(['p2', 'p1']);
+    expect(filterPieces(pieces, 'Mías', CURRENT_USER).map((p) => p.id)).toEqual(['p2', 'p3']);
+    expect(filterPieces(pieces, 'Pend. aprobar', CURRENT_USER)).toHaveLength(0);
     expect(filterPieces(pieces, 'Correcciones', CURRENT_USER)).toHaveLength(0);
   });
 
-  it('groupByStatus buckets pieces into every column', () => {
+  it('groupByStatus reproduces the live column counts', () => {
     const g = groupByStatus(pieces);
     expect(g['Briefing'].map((p) => p.id)).toEqual(['p1']);
     expect(g['En producción'].map((p) => p.id)).toEqual(['p2']);
-    expect(g['Revisión'].map((p) => p.id)).toEqual(['p3']);
+    expect(g['Revisión']).toEqual([]);
     expect(g['Cambios']).toEqual([]);
-    expect(g['Aprobado']).toEqual([]);
+    expect(g['Aprobado'].map((p) => p.id)).toEqual(['p3']);
   });
 
-  it('deriveStats matches the live counts', () => {
-    expect(deriveStats(pieces)).toEqual({ activas: 3, pendAprobar: 1, correcciones: 0, atrasadas: 1 });
+  it('deriveStats matches the live counts (2 / 0 / 0 / 2)', () => {
+    expect(deriveStats(pieces)).toEqual({ activas: 2, pendAprobar: 0, correcciones: 0, atrasadas: 2 });
   });
 });
