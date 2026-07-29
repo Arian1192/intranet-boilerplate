@@ -34,7 +34,8 @@ export function NovedadesTab() {
   const archivar = (id: string) => setItems((prev) => prev.filter((n) => n.id !== id));
 
   return (
-    <div className="space-y-3">
+    // El live estrecha el feed a una columna centrada de 768px.
+    <div className="mx-auto max-w-3xl space-y-3">
       <div className="flex flex-wrap items-center gap-3">
         <input
           type="search"
