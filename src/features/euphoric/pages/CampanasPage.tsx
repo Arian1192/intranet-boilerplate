@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Card, Button, Select, SegmentedControl, MasterDetailList } from '@/components/ui';
 import { CampaignBoard } from '../components/CampaignBoard';
 import { StatusChip } from '../components/StatusChip';
-import { campaigns } from '../data/seed';
+import { campaigns, todayIso } from '../data/seed';
 import { campaignStatusLabel } from '../data/labels';
 import type { Campaign, CampaignStatus } from '../data/types';
 
@@ -56,11 +56,19 @@ const RULER_WEEKS = 3;
 
 function CampaignGantt({ campaigns: allCampaigns }: { campaigns: Campaign[] }) {
   const [range, setRange] = useState<WeekRange>('3');
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
+  const [year, month, day] = todayIso.split('-').map(Number);
+  const today = new Date(year, month - 1, day);
   const totalDays = RULER_WEEKS * 7;
   const markers = Array.from({ length: RULER_WEEKS }, (_, index) => addDays(today, index * 7));
-  const activeCampaigns = allCampaigns.filter((campaign) => campaign.status === 'en-curso');
+  const windowEnd = addDays(today, totalDays);
+  // El live pinta toda campaña que solape la ventana (Genérico Julio sale aunque esté Finalizada).
+  const activeCampaigns = allCampaigns.filter((campaign) => {
+    if (campaign.status === 'cancelada') return false;
+    const start = parseSpanishDate(campaign.startLabel);
+    const end = parseSpanishDate(campaign.endLabel);
+    if (!start || !end) return false;
+    return start <= windowEnd && end >= today;
+  });
 
   return (
     <Card className="p-5">

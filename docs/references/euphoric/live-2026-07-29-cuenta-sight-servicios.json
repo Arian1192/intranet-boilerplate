@@ -1,0 +1,96 @@
+{
+  "url": "https://bookings.conceptoneagency.com/euphoric/cuentas",
+  "title": "Black Moose Group · Intranet",
+  "links": [
+    {
+      "text": "",
+      "href": "/",
+      "title": ""
+    },
+    {
+      "text": "Cuentas",
+      "href": "/euphoric/cuentas",
+      "title": ""
+    },
+    {
+      "text": "Campañas",
+      "href": "/euphoric/campanas",
+      "title": ""
+    },
+    {
+      "text": "Publicaciones",
+      "href": "/euphoric/calendario",
+      "title": ""
+    },
+    {
+      "text": "Creatividades",
+      "href": "/euphoric/piezas",
+      "title": ""
+    },
+    {
+      "text": "Eventos",
+      "href": "/euphoric/eventos",
+      "title": ""
+    },
+    {
+      "text": "Agenda",
+      "href": "/euphoric/agenda",
+      "title": ""
+    },
+    {
+      "text": "Negocio",
+      "href": "/euphoric/negocio",
+      "title": ""
+    },
+    {
+      "text": "",
+      "href": "/euphoric/artistas",
+      "title": "Artistas"
+    },
+    {
+      "text": "",
+      "href": "/euphoric/ajustes",
+      "title": "Ajustes"
+    },
+    {
+      "text": "",
+      "href": "/mi-trabajo",
+      "title": "Inicio · pendientes, documentos y creatividades"
+    },
+    {
+      "text": "test Admin T",
+      "href": "/perfil",
+      "title": ""
+    },
+    {
+      "text": "Mis avisos",
+      "href": "/incidencias",
+      "title": ""
+    }
+  ],
+  "buttons": [
+    "Euphoric Media",
+    "9+",
+    "+ Nueva cuenta",
+    "Mogli Marbella Cliente Pausada",
+    "Opium Bcn Cliente · Paid media Activa",
+    "SIGHT Cliente · Redes sociales, Paid media, Contenido Activa",
+    "Eliminar",
+    "General",
+    "Servicios",
+    "Rentabilidad",
+    "Solicitudes",
+    "Branding",
+    "BDD",
+    "Automatizaciones",
+    "+ Contratar servicio",
+    "Enviar",
+    "Reportar con captura"
+  ],
+  "headings": [
+    "H1: Cuentas",
+    "H2: SIGHT",
+    "H3: Servicios contratados"
+  ],
+  "text": "Cuentas\nClientes y marcas que gestiona Euphoric. Los clientes externos se enlazan al CRM del grupo.\n+ Nueva cuenta\nMogli Marbella\nCliente\nPausada\nOpium Bcn\nCliente · Paid media\nActiva\nSIGHT\nCliente · Redes sociales, Paid media, Contenido\nActiva\nSIGHT\nSana\nEliminar\nGeneral\nServicios\nRentabilidad\nSolicitudes\nBranding\nBDD\nAutomatizaciones\nServicios contratados\nPacks, recurrentes y proyectos de esta cuenta. Los packs muestran el consumo del periodo.\n+ Contratar servicio\nSin servicios contratados."
+}

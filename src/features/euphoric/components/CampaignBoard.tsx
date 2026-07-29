@@ -15,7 +15,11 @@ const COUNT_VARIANT: Record<CampaignStatus, BadgeProps['variant']> = {
 
 export function CampaignBoard({ campaigns }: { campaigns: Campaign[] }) {
   return (
-    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
+    <div
+      role="region"
+      aria-label="Tablero de campañas"
+      className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5"
+    >
       {COLUMN_ORDER.map((status) => {
         const items = campaigns.filter((campaign) => campaign.status === status);
         return (

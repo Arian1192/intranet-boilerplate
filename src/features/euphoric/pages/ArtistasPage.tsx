@@ -42,9 +42,38 @@ export function ArtistasPage() {
           </div>
         )}
         renderDetail={(artist) => (
-          <div>
-            <h2 className="text-lg font-semibold text-slate-800">{artist.name}</h2>
-            <p className="text-sm text-slate-500">{artist.kind}</p>
+          <div className="space-y-5">
+            <div className="flex items-start justify-between gap-3">
+              <div>
+                <h2 className="text-lg font-semibold text-slate-800">{artist.name}</h2>
+                <p className="text-sm text-slate-500">{artist.kind}</p>
+              </div>
+              <button type="button" className="text-sm text-slate-400 hover:text-slate-600">
+                Eliminar artista
+              </button>
+            </div>
+
+            <div className="space-y-3 rounded-xl border border-slate-200 p-4">
+              <h4 className="text-sm font-semibold text-slate-700">Foto y perfil del artista</h4>
+              <div className="flex items-center gap-4">
+                <Avatar fallback={artist.name} className="h-16 w-16 bg-brand-100 text-brand-700" />
+                <div className="flex flex-wrap gap-2">
+                  <Button variant="secondary" size="sm">
+                    Refrescar
+                  </Button>
+                  <Button variant="secondary" size="sm">
+                    Cambiar
+                  </Button>
+                  <Button variant="secondary" size="sm">
+                    Desvincular
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex justify-end">
+              <Button>Guardar</Button>
+            </div>
           </div>
         )}
       />

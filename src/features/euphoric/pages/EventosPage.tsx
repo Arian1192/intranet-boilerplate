@@ -1,16 +1,12 @@
 import { useState } from 'react';
-import { Badge, Button, Input, MasterDetailList, SegmentedControl } from '@/components/ui';
-import { EuphoricCalendar, EventPill } from '../components/EuphoricCalendar';
+import { Badge, Button, Card } from '@/components/ui';
+import { cn } from '@/lib/utils';
+import { EuphoricCalendar, TodayButton } from '../components/EuphoricCalendar';
 import { EventForm } from '../components/EventForm';
-import { events } from '../data/seed';
+import { events, todayIso } from '../data/seed';
 import type { EventItem } from '../data/types';
 
-type EventosView = 'lista' | 'calendario';
-
-const VIEW_OPTIONS: { label: string; value: EventosView }[] = [
-  { label: 'Lista', value: 'lista' },
-  { label: 'Calendario', value: 'calendario' },
-];
+const [TODAY_YEAR, TODAY_MONTH, TODAY_DAY] = todayIso.split('-').map(Number);
 
 const KIND_LABEL: Record<EventItem['kind'], string> = {
   marketing: 'Marketing',
@@ -22,57 +18,12 @@ const MONTHS_ES = [
   'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre',
 ];
 
-interface EventosListaProps {
-  creating: boolean;
-  onCreatingChange: (creating: boolean) => void;
-}
-
-function EventosLista({ creating, onCreatingChange }: EventosListaProps) {
-  const [search, setSearch] = useState('');
-  const filtered = events.filter((event) => event.name.toLowerCase().includes(search.toLowerCase()));
-
-  return (
-    <MasterDetailList
-      items={filtered}
-      emptyState="Selecciona un evento o crea uno nuevo."
-      detailOverride={creating ? <EventForm onSave={() => onCreatingChange(false)} /> : undefined}
-      listTop={
-        <Input
-          placeholder="Buscar evento…"
-          value={search}
-          onChange={(event) => setSearch(event.target.value)}
-        />
-      }
-      renderRow={(event) => (
-        <div className="flex items-start justify-between gap-3">
-          <div>
-            <p className="font-medium text-slate-900">{event.name}</p>
-            <p className="text-sm text-slate-500">
-              {event.dateLabel} · {event.city}
-              {event.euphoricCount !== undefined && ` · ${event.euphoricCount} en Euphoric`}
-            </p>
-          </div>
-          <Badge variant={event.kind === 'marketing' ? 'neutral' : 'pink'}>{KIND_LABEL[event.kind]}</Badge>
-        </div>
-      )}
-      renderDetail={(event) => (
-        <div>
-          <h2 className="text-lg font-semibold text-slate-800">{event.name}</h2>
-          <p className="text-sm text-slate-500">
-            {event.dateLabel} · {event.city}
-          </p>
-        </div>
-      )}
-    />
-  );
-}
-
-function EventosCalendario() {
-  const [year, setYear] = useState(2026);
-  const [month, setMonth] = useState(6); // Julio 2026 (0-indexed)
+function EventosCalendario({ events: visibleEvents }: { events: EventItem[] }) {
+  const [year, setYear] = useState(TODAY_YEAR);
+  const [month, setMonth] = useState(TODAY_MONTH - 1);
 
   const eventsByDate = new Map<string, EventItem[]>();
-  events.forEach((event) => {
+  visibleEvents.forEach((event) => {
     const list = eventsByDate.get(event.isoDate) ?? [];
     list.push(event);
     eventsByDate.set(event.isoDate, list);
@@ -84,7 +35,15 @@ function EventosCalendario() {
     return (
       <>
         {dayEvents.map((event) => (
-          <EventPill key={event.id} name={event.name} tone={event.kind === 'marketing' ? 'violet' : 'rose'} />
+          <div key={event.id} className="space-y-0.5 rounded-md bg-slate-50 p-1.5">
+            <p className="line-clamp-2 text-[11px] font-medium text-slate-700">{event.name}</p>
+            <p className="text-[10px] text-slate-400">
+              {[event.account, event.city].filter(Boolean).join(' · ')}
+            </p>
+            <Badge variant={event.kind === 'marketing' ? 'neutral' : 'pink'} size="sm">
+              {KIND_LABEL[event.kind]}
+            </Badge>
+          </div>
         ))}
       </>
     );
@@ -99,14 +58,23 @@ function EventosCalendario() {
   };
 
   return (
-    <div className="space-y-4">
+    <div role="region" aria-label="Calendario de eventos" className="space-y-4">
       <EuphoricCalendar
         year={year}
         month={month}
         monthLabel={`${MONTHS_ES[month]} ${year}`}
         onPrevMonth={() => goToMonth(-1)}
         onNextMonth={() => goToMonth(1)}
-        today={{ year: 2026, month: 6, day: 9 }}
+        headerLayout="leading"
+        headerActions={
+          <TodayButton
+            onClick={() => {
+              setYear(TODAY_YEAR);
+              setMonth(TODAY_MONTH - 1);
+            }}
+          />
+        }
+        today={{ year: TODAY_YEAR, month: TODAY_MONTH - 1, day: TODAY_DAY }}
         renderDay={renderDay}
       />
       <p className="text-center text-sm text-slate-400">
@@ -116,36 +84,56 @@ function EventosCalendario() {
   );
 }
 
+function FilterChip({ active, children, onClick }: { active: boolean; children: React.ReactNode; onClick: () => void }) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className={cn(
+        'rounded-full border px-3 py-1 text-sm font-medium transition-colors',
+        active ? 'border-brand-600 bg-brand-600 text-white' : 'border-slate-200 text-slate-500 hover:text-slate-700'
+      )}
+    >
+      {children}
+    </button>
+  );
+}
+
 export function EventosPage() {
-  const [view, setView] = useState<EventosView>('lista');
   const [creating, setCreating] = useState(false);
+  const [accountFilter, setAccountFilter] = useState('todas');
+
+  const accountFilters = ['todas', ...new Set(events.map((event) => event.account).filter(Boolean))];
+  const visibleEvents =
+    accountFilter === 'todas' ? events : events.filter((event) => event.account === accountFilter);
 
   return (
     <div className="space-y-6">
-      <div>
-        <h1 className="text-2xl font-semibold text-slate-900">Eventos</h1>
-        <p className="text-slate-500">
-          Base de eventos del grupo (compartida). Crea aquí los eventos de marketing; solo aparecen en
-          Producción si marcas que los produce Black Moose.
-        </p>
+      <div className="flex items-start justify-between gap-4">
+        <div>
+          <h1 className="text-2xl font-semibold text-slate-900">Eventos</h1>
+          <p className="text-slate-500">
+            Base de eventos del grupo (compartida). Crea aquí los eventos de marketing; solo aparecen en
+            Producción si marcas que los produce Black Moose.
+          </p>
+        </div>
+        <Button onClick={() => setCreating(true)}>+ Nuevo evento</Button>
       </div>
 
-      <div className="flex items-center gap-3">
-        <SegmentedControl options={VIEW_OPTIONS} value={view} onChange={setView} />
-        <Button
-          onClick={() => {
-            setCreating(true);
-            setView('lista');
-          }}
-        >
-          + Nuevo evento
-        </Button>
+      <div className="flex flex-wrap items-center gap-2">
+        {accountFilters.map((name) => (
+          <FilterChip key={name} active={accountFilter === name} onClick={() => setAccountFilter(name)}>
+            {name === 'todas' ? 'Todas' : name}
+          </FilterChip>
+        ))}
       </div>
 
-      {view === 'lista' ? (
-        <EventosLista creating={creating} onCreatingChange={setCreating} />
+      {creating ? (
+        <Card className="p-6">
+          <EventForm onSave={() => setCreating(false)} />
+        </Card>
       ) : (
-        <EventosCalendario />
+        <EventosCalendario events={visibleEvents} />
       )}
     </div>
   );

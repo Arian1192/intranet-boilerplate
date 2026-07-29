@@ -51,6 +51,13 @@ import { EventosPage } from '@/features/euphoric/pages/EventosPage';
 import { CuentasPage } from '@/features/euphoric/pages/CuentasPage';
 import { AnaliticaPage } from '@/features/euphoric/pages/AnaliticaPage';
 import { ArtistasPage } from '@/features/euphoric/pages/ArtistasPage';
+import { AgendaPage } from '@/features/euphoric/pages/AgendaPage';
+import { AjustesPage } from '@/features/euphoric/pages/AjustesPage';
+import { NegocioLayout } from '@/features/euphoric/components/NegocioLayout';
+import { DireccionPage } from '@/features/euphoric/pages/negocio/DireccionPage';
+import { PipelinePage as EuphoricPipelinePage } from '@/features/euphoric/pages/negocio/PipelinePage';
+import { PresupuestosPage } from '@/features/euphoric/pages/negocio/PresupuestosPage';
+import { TiemposPage } from '@/features/euphoric/pages/negocio/TiemposPage';
 import { ResumenPage as RedaccionResumenPage } from '@/features/redaccion/pages/ResumenPage';
 import { RevistasPage } from '@/features/redaccion/pages/RevistasPage';
 import { ContenidosPage } from '@/features/redaccion/pages/ContenidosPage';
@@ -93,8 +100,16 @@ export function AppRouter() {
         <Route path="piezas" element={<PiezasPage />} />
         <Route path="eventos" element={<EventosPage />} />
         <Route path="cuentas" element={<CuentasPage />} />
+        <Route path="agenda" element={<AgendaPage />} />
+        <Route path="negocio" element={<NegocioLayout />}>
+          <Route index element={<DireccionPage />} />
+          <Route path="pipeline" element={<EuphoricPipelinePage />} />
+          <Route path="presupuestos" element={<PresupuestosPage />} />
+          <Route path="analitica" element={<AnaliticaPage />} />
+          <Route path="tiempos" element={<TiemposPage />} />
+        </Route>
         <Route path="artistas" element={<ArtistasPage />} />
-        <Route path="analitica" element={<AnaliticaPage />} />
+        <Route path="ajustes" element={<AjustesPage />} />
       </Route>
       <Route path="/creativos" element={<CreativosShell />}>
         <Route index element={<CreativosPage />} />

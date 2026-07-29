@@ -248,3 +248,16 @@ export function EventPill({ name, tone = 'rose' }: EventPillProps) {
     </div>
   );
 }
+
+/** Botón "Hoy" del live, pensado para el `headerActions` del calendario. */
+export function TodayButton({ onClick }: { onClick: () => void }) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className="rounded-md px-2 py-1 text-sm text-slate-500 hover:bg-slate-50 hover:text-slate-700"
+    >
+      Hoy
+    </button>
+  );
+}

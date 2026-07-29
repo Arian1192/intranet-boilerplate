@@ -4,7 +4,10 @@ import { formatCurrencyEs } from '../data/format';
 import { accounts, campaigns, publications, analytics } from '../data/seed';
 
 export function AnaliticaPage() {
-  const chartData = accounts.map((account) => ({ label: account.name, value: account.retainer }));
+  // El live solo grafica las cuentas activas (Mogli está pausada y sin retainer).
+  const chartData = accounts
+    .filter((account) => account.status === 'Activa')
+    .map((account) => ({ label: account.name, value: account.retainer }));
   const maxRetainer = Math.max(...chartData.map((item) => item.value), 0);
   const chartMax = Math.max(Math.ceil(maxRetainer / 200) * 200, 200);
 
