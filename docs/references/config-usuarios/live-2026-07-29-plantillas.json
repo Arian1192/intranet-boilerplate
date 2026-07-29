@@ -1,0 +1,368 @@
+{
+  "Booker": [
+    {
+      "clave": "Dashboard",
+      "col": "ver"
+    },
+    {
+      "clave": "Importes (€) en las cajas del Dashboard",
+      "col": "ver"
+    },
+    {
+      "clave": "Shows",
+      "col": "ver"
+    },
+    {
+      "clave": "Disponibilidad",
+      "col": "ver"
+    },
+    {
+      "clave": "Contactos",
+      "col": "ver"
+    },
+    {
+      "clave": "Artistas",
+      "col": "ver"
+    },
+    {
+      "clave": "Crear shows nuevos",
+      "col": "ver"
+    },
+    {
+      "clave": "Evento",
+      "col": "ver"
+    },
+    {
+      "clave": "Evento",
+      "col": "editar"
+    },
+    {
+      "clave": "Oferta",
+      "col": "ver"
+    },
+    {
+      "clave": "Oferta",
+      "col": "editar"
+    },
+    {
+      "clave": "Logística del deal",
+      "col": "ver"
+    },
+    {
+      "clave": "Logística del deal",
+      "col": "editar"
+    },
+    {
+      "clave": "Set Times",
+      "col": "ver"
+    },
+    {
+      "clave": "Set Times",
+      "col": "editar"
+    },
+    {
+      "clave": "Artwork",
+      "col": "ver"
+    },
+    {
+      "clave": "Artwork",
+      "col": "editar"
+    },
+    {
+      "clave": "Contactos del show",
+      "col": "ver"
+    },
+    {
+      "clave": "Contactos del show",
+      "col": "editar"
+    },
+    {
+      "clave": "Itinerario y gastos",
+      "col": "ver"
+    },
+    {
+      "clave": "Ficha artista",
+      "col": "ver"
+    },
+    {
+      "clave": "Rider técnico / hospitality",
+      "col": "ver"
+    }
+  ],
+  "Logística": [
+    {
+      "clave": "Dashboard",
+      "col": "ver"
+    },
+    {
+      "clave": "Shows",
+      "col": "ver"
+    },
+    {
+      "clave": "Disponibilidad",
+      "col": "ver"
+    },
+    {
+      "clave": "Contactos",
+      "col": "ver"
+    },
+    {
+      "clave": "Artistas",
+      "col": "ver"
+    },
+    {
+      "clave": "Gastos",
+      "col": "ver"
+    },
+    {
+      "clave": "Gastos",
+      "col": "editar"
+    },
+    {
+      "clave": "Evento",
+      "col": "ver"
+    },
+    {
+      "clave": "Logística del deal",
+      "col": "ver"
+    },
+    {
+      "clave": "Set Times",
+      "col": "ver"
+    },
+    {
+      "clave": "Contactos del show",
+      "col": "ver"
+    },
+    {
+      "clave": "Itinerario y gastos",
+      "col": "ver"
+    },
+    {
+      "clave": "Itinerario y gastos",
+      "col": "editar"
+    },
+    {
+      "clave": "Ficha artista",
+      "col": "ver"
+    },
+    {
+      "clave": "Ficha personal",
+      "col": "ver"
+    },
+    {
+      "clave": "Rider técnico / hospitality",
+      "col": "ver"
+    },
+    {
+      "clave": "Rider técnico / hospitality",
+      "col": "editar"
+    }
+  ],
+  "Advancing / Finanzas": [
+    {
+      "clave": "Dashboard",
+      "col": "ver"
+    },
+    {
+      "clave": "Importes (€) en las cajas del Dashboard",
+      "col": "ver"
+    },
+    {
+      "clave": "Shows",
+      "col": "ver"
+    },
+    {
+      "clave": "Artistas",
+      "col": "ver"
+    },
+    {
+      "clave": "Analítica",
+      "col": "ver"
+    },
+    {
+      "clave": "Cobros",
+      "col": "ver"
+    },
+    {
+      "clave": "Cobros",
+      "col": "editar"
+    },
+    {
+      "clave": "Gastos",
+      "col": "ver"
+    },
+    {
+      "clave": "Gastos",
+      "col": "editar"
+    },
+    {
+      "clave": "Evento",
+      "col": "ver"
+    },
+    {
+      "clave": "Oferta",
+      "col": "ver"
+    },
+    {
+      "clave": "Contactos del show",
+      "col": "ver"
+    },
+    {
+      "clave": "Itinerario y gastos",
+      "col": "ver"
+    },
+    {
+      "clave": "Contrato",
+      "col": "ver"
+    },
+    {
+      "clave": "Contrato",
+      "col": "editar"
+    },
+    {
+      "clave": "Pagos",
+      "col": "ver"
+    },
+    {
+      "clave": "Pagos",
+      "col": "editar"
+    },
+    {
+      "clave": "Liquidación",
+      "col": "ver"
+    },
+    {
+      "clave": "Liquidación",
+      "col": "editar"
+    },
+    {
+      "clave": "Enviar el informe al artista",
+      "col": "ver"
+    },
+    {
+      "clave": "Ficha artista",
+      "col": "ver"
+    },
+    {
+      "clave": "Condiciones económicas",
+      "col": "ver"
+    },
+    {
+      "clave": "Condiciones económicas",
+      "col": "editar"
+    },
+    {
+      "clave": "Documentación",
+      "col": "ver"
+    }
+  ],
+  "Marketing": [
+    {
+      "clave": "Dashboard",
+      "col": "ver"
+    },
+    {
+      "clave": "Shows",
+      "col": "ver"
+    },
+    {
+      "clave": "Artistas",
+      "col": "ver"
+    },
+    {
+      "clave": "Evento",
+      "col": "ver"
+    },
+    {
+      "clave": "Set Times",
+      "col": "ver"
+    },
+    {
+      "clave": "Artwork",
+      "col": "ver"
+    },
+    {
+      "clave": "Artwork",
+      "col": "editar"
+    },
+    {
+      "clave": "Ficha artista",
+      "col": "ver"
+    },
+    {
+      "clave": "Ficha artista",
+      "col": "editar"
+    }
+  ],
+  "Project Manager": [
+    {
+      "clave": "Dashboard",
+      "col": "ver"
+    },
+    {
+      "clave": "Shows",
+      "col": "ver"
+    },
+    {
+      "clave": "Disponibilidad",
+      "col": "ver"
+    },
+    {
+      "clave": "Contactos",
+      "col": "ver"
+    },
+    {
+      "clave": "Artistas",
+      "col": "ver"
+    },
+    {
+      "clave": "Evento",
+      "col": "ver"
+    },
+    {
+      "clave": "Set Times",
+      "col": "ver"
+    },
+    {
+      "clave": "Contactos del show",
+      "col": "ver"
+    },
+    {
+      "clave": "Itinerario y gastos",
+      "col": "ver"
+    },
+    {
+      "clave": "Ficha artista",
+      "col": "ver"
+    },
+    {
+      "clave": "Ficha artista",
+      "col": "editar"
+    },
+    {
+      "clave": "Ficha personal",
+      "col": "ver"
+    },
+    {
+      "clave": "Ficha personal",
+      "col": "editar"
+    },
+    {
+      "clave": "Rider técnico / hospitality",
+      "col": "ver"
+    },
+    {
+      "clave": "Documentación",
+      "col": "ver"
+    },
+    {
+      "clave": "Documentación",
+      "col": "editar"
+    }
+  ],
+  "__admin": {
+    "deshabilitados": 0,
+    "total": 2
+  }
+}

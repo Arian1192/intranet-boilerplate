@@ -15,7 +15,7 @@ const SIDEBAR_SECTIONS: SidebarSection[] = [
     items: [
       { label: 'Uso y coste', href: '/configuracion/uso' },
       { label: 'Incidencias', href: '/configuracion/incidencias' },
-      { label: 'Cuentas (auditoría)', href: '/personal', external: true },
+      { label: 'Cuentas (auditoría)', href: '/personal/usuarios', external: true },
     ],
   },
   {

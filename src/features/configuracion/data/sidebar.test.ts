@@ -34,10 +34,10 @@ describe('sidebar data', () => {
     ]);
   });
 
-  it('Cuentas (auditoría) es un link de salida a /personal', () => {
+  it('Cuentas (auditoría) es un link de salida a /personal/usuarios', () => {
     const sections = sidebarSections();
     const item = sections.flatMap((s) => s.items).find((i) => i.label === 'Cuentas (auditoría)')!;
-    expect(item.href).toBe('/personal');
+    expect(item.href).toBe('/personal/usuarios');
     expect(item.external).toBe(true);
   });
 

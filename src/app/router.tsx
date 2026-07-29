@@ -10,6 +10,7 @@ import { CreativosShell } from '@/features/modules/CreativosShell';
 import { CRMShell } from '@/features/modules/CRMShell';
 import { TeamShell } from '@/features/team/TeamShell';
 import { EquipoPage } from '@/features/team/pages/EquipoPage';
+import { UsuariosPage } from '@/features/team/usuarios/UsuariosPage';
 import { CalendarioPage } from '@/features/team/pages/CalendarioPage';
 import { FichasPage } from '@/features/team/pages/FichasPage';
 import { ConfigShell } from '@/features/modules/ConfigShell';
@@ -136,6 +137,7 @@ export function AppRouter() {
         <Route index element={<EquipoPage />} />
         <Route path="calendario" element={<CalendarioPage />} />
         <Route path="fichas" element={<FichasPage />} />
+        <Route path="usuarios" element={<UsuariosPage />} />
       </Route>
       <Route path="/configuracion" element={<ConfigShell />}>
         <Route index element={<PlantillasCorreoPage />} />
