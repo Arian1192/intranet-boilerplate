@@ -29,7 +29,7 @@ export const cobros: Cobro[] = [
     pagado: 0,
     vencimiento: '2026-07-06',
     cliente: 'Recaba Inversiones Turisticas, S.L.',
-    factura: 'Recaba Inversiones Turisticas, S.L.',
+    factura: 'Proforma PRO260314',
   },
   {
     id: 'solart-fest',
@@ -198,7 +198,6 @@ export interface FacturaAgrupada {
   shows: string[];
   total: number;
   pagado: number;
-  vencimiento: string | null;
 }
 
 /** Agrupa por factura emitida; los shows sin facturar no entran. */
@@ -219,10 +218,14 @@ export function agruparPorFactura(list: Cobro[]): FacturaAgrupada[] {
         shows: [cobro.show],
         total: cobro.total,
         pagado: cobro.pagado,
-        vencimiento: cobro.vencimiento,
       });
     }
   }
 
   return [...porFactura.values()];
+}
+
+/** '1 show' / '3 shows', como la coletilla de cada factura en el live. */
+export function etiquetaShows(shows: string[]): string {
+  return `${shows.length} ${shows.length === 1 ? 'show' : 'shows'}`;
 }

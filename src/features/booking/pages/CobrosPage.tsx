@@ -9,6 +9,7 @@ import {
   agruparPorFactura,
   formatFechaCorta,
   formatImporte,
+  etiquetaShows,
   diaRelativo,
   pendiente,
   estaVencido,
@@ -78,24 +79,30 @@ export function CobrosPage() {
             { value: 'factura', label: 'Por factura', count: facturas.length },
           ]}
         />
-        <SegmentedCount
-          aria-label="Filtro de cobros"
-          value={filtro}
-          onChange={setFiltro}
-          options={[
-            { value: 'Todos', label: 'Todos', count: filterCobros(todosLosCobros, 'Todos').length },
-            {
-              value: 'Vencidos',
-              label: 'Vencidos',
-              count: filterCobros(todosLosCobros, 'Vencidos').length,
-            },
-          ]}
-        />
+        {vista === 'show' && (
+          <SegmentedCount
+            aria-label="Filtro de cobros"
+            value={filtro}
+            onChange={setFiltro}
+            options={[
+              {
+                value: 'Todos',
+                label: 'Todos',
+                count: filterCobros(todosLosCobros, 'Todos').length,
+              },
+              {
+                value: 'Vencidos',
+                label: 'Vencidos',
+                count: filterCobros(todosLosCobros, 'Vencidos').length,
+              },
+            ]}
+          />
+        )}
       </div>
 
-      <Card className="mt-4 overflow-hidden p-0">
-        <div className="overflow-x-auto">
-          {vista === 'show' ? (
+      {vista === 'show' ? (
+        <Card className="mt-4 overflow-hidden p-0">
+          <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b border-slate-100 text-xs text-slate-500">
@@ -152,46 +159,47 @@ export function CobrosPage() {
                 })}
               </tbody>
             </table>
-          ) : (
-            <table className="w-full text-sm">
-              <thead>
-                <tr className="border-b border-slate-100 text-xs text-slate-500">
-                  <th className="px-4 py-3 text-left font-medium">FACTURA</th>
-                  <th className="px-4 py-3 text-left font-medium">SHOWS</th>
-                  <th className="px-4 py-3 text-right font-medium">TOTAL</th>
-                  <th className="px-4 py-3 text-right font-medium">PAGADO</th>
-                  <th className="px-4 py-3 text-right font-medium">Pendiente</th>
-                  <th className="px-4 py-3 text-left font-medium">Vencimiento</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-slate-100">
-                {facturas.map((factura) => (
-                  <tr key={factura.factura}>
-                    <td className="px-4 py-3 font-medium text-slate-800">{factura.factura}</td>
-                    <td className="px-4 py-3 text-slate-600">{factura.shows.join(', ')}</td>
-                    <td className="px-4 py-3 text-right text-slate-600">
-                      {formatImporte(factura.total)}
-                    </td>
-                    <td className="px-4 py-3 text-right text-slate-500">
-                      {formatImporte(factura.pagado)}
-                    </td>
-                    <td className="px-4 py-3 text-right font-semibold text-slate-800">
-                      {formatImporte(factura.total - factura.pagado)}
-                    </td>
-                    <td className="px-4 py-3 text-slate-600">
-                      {factura.vencimiento ? (
-                        formatFechaCorta(factura.vencimiento)
-                      ) : (
-                        <span className="text-slate-400">—</span>
-                      )}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          )}
+          </div>
+        </Card>
+      ) : (
+        <div className="mt-4">
+          <div className="flex items-center gap-4 px-4 pb-2 text-xs text-slate-400">
+            <span className="flex-1">CLIENTE / FACTURA</span>
+            <span className="w-28 text-right">IMPORTE</span>
+            <span className="w-28 text-right">COBRADO</span>
+            <span className="w-28 text-right">PENDIENTE</span>
+            <span className="w-4" />
+          </div>
+          <div className="space-y-3">
+            {facturas.map((factura) => (
+              <Card key={factura.factura} className="flex items-center gap-4 px-4 py-3">
+                <span className="flex-1 truncate">
+                  <span className="text-slate-800">{factura.cliente ?? '—'}</span>{' '}
+                  <span className="text-xs text-slate-400">
+                    {factura.factura} · {etiquetaShows(factura.shows)}
+                  </span>
+                </span>
+                <span className="w-28 text-right text-sm text-slate-500">
+                  {formatImporte(factura.total)}
+                </span>
+                <span className="w-28 text-right text-sm text-emerald-700">
+                  {formatImporte(factura.pagado)}
+                </span>
+                <span className="w-28 text-right text-sm font-semibold text-slate-900">
+                  {formatImporte(factura.total - factura.pagado)}
+                </span>
+                <button
+                  type="button"
+                  aria-label={`Desplegar ${factura.factura}`}
+                  className="w-4 shrink-0 text-slate-400 hover:text-slate-600"
+                >
+                  ▾
+                </button>
+              </Card>
+            ))}
+          </div>
         </div>
-      </Card>
+      )}
     </div>
   );
 }

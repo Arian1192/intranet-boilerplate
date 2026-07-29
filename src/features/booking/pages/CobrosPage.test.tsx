@@ -90,11 +90,25 @@ describe('CobrosPage', () => {
     expect(screen.queryByText('SANITY')).toBeNull();
   });
 
-  it('el conmutador Por factura cambia la tabla a la única factura emitida', async () => {
+  it('Por factura cambia a la vista de facturas emitidas, con sus columnas', async () => {
     const user = userEvent.setup();
     render(<CobrosPage />);
     await user.click(screen.getByRole('button', { name: 'Por factura 1' }));
-    expect(screen.getByRole('columnheader', { name: 'FACTURA' })).toBeInTheDocument();
-    expect(screen.getAllByRole('row').slice(1)).toHaveLength(1);
+
+    for (const cabecera of ['CLIENTE / FACTURA', 'IMPORTE', 'COBRADO', 'PENDIENTE']) {
+      expect(screen.getByText(cabecera)).toBeInTheDocument();
+    }
+    expect(screen.getByText('Recaba Inversiones Turisticas, S.L.')).toBeInTheDocument();
+    expect(screen.getByText('Proforma PRO260314 · 1 show')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Desplegar Proforma PRO260314' })).toBeInTheDocument();
+    expect(screen.queryByRole('table')).toBeNull();
+  });
+
+  it('el filtro Todos/Vencidos sólo existe en la vista Por show', async () => {
+    const user = userEvent.setup();
+    render(<CobrosPage />);
+    expect(screen.getByRole('group', { name: 'Filtro de cobros' })).toBeInTheDocument();
+    await user.click(screen.getByRole('button', { name: 'Por factura 1' }));
+    expect(screen.queryByRole('group', { name: 'Filtro de cobros' })).toBeNull();
   });
 });
