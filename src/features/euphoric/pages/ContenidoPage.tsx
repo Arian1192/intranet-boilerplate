@@ -4,10 +4,10 @@ import { cn } from '@/lib/utils';
 import { EuphoricCalendar, EventPill, PublicationCell } from '../components/EuphoricCalendar';
 import { PublicationKanban } from '../components/PublicationKanban';
 import { PublicationTable } from '../components/PublicationTable';
-import { events, publications } from '../data/seed';
+import { accounts, events, publications, todayIso } from '../data/seed';
+import type { Publication, EventItem } from '../data/types';
 
 type ContenidoView = 'calendario' | 'lista' | 'kanban';
-type AccountFilter = 'todas' | 'SIGHT';
 
 const VIEW_OPTIONS: { label: string; value: ContenidoView }[] = [
   { label: 'Calendario', value: 'calendario' },
@@ -32,7 +32,8 @@ const MONTH_LABELS = [
   'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre',
 ];
 
-const TODAY = { year: 2026, month: 6 };
+const [TODAY_YEAR, TODAY_MONTH, TODAY_DAY] = todayIso.split('-').map(Number);
+const TODAY = { year: TODAY_YEAR, month: TODAY_MONTH - 1 };
 
 function addMonths(cursor: { year: number; month: number }, delta: number) {
   const total = cursor.year * 12 + cursor.month + delta;
@@ -54,18 +55,18 @@ function FilterChip({ active, children, onClick }: { active: boolean; children: 
   );
 }
 
-function CalendarioView() {
+function CalendarioView({ publications: visiblePublications }: { publications: Publication[] }) {
   const [cursor, setCursor] = useState(TODAY);
   const [showEvents, setShowEvents] = useState(true);
 
-  const publicationsByDate = new Map<string, typeof publications>();
-  publications.forEach((pub) => {
+  const publicationsByDate = new Map<string, Publication[]>();
+  visiblePublications.forEach((pub) => {
     const list = publicationsByDate.get(pub.isoDate) ?? [];
     list.push(pub);
     publicationsByDate.set(pub.isoDate, list);
   });
 
-  const eventsByDate = new Map<string, typeof events>();
+  const eventsByDate = new Map<string, EventItem[]>();
   events.forEach((event) => {
     const list = eventsByDate.get(event.isoDate) ?? [];
     list.push(event);
@@ -119,7 +120,7 @@ function CalendarioView() {
         monthLabel={`${MONTH_LABELS[cursor.month]} ${cursor.year}`}
         onPrevMonth={() => setCursor((value) => addMonths(value, -1))}
         onNextMonth={() => setCursor((value) => addMonths(value, 1))}
-        today={{ year: TODAY.year, month: TODAY.month, day: 9 }}
+        today={{ year: TODAY.year, month: TODAY.month, day: TODAY_DAY }}
         renderDay={renderDay}
       />
     </div>
@@ -128,8 +129,10 @@ function CalendarioView() {
 
 export function ContenidoPage() {
   const [view, setView] = useState<ContenidoView>('calendario');
-  const [accountFilter, setAccountFilter] = useState<AccountFilter>('todas');
+  const [accountFilter, setAccountFilter] = useState('todas');
   const [channel, setChannel] = useState('Todos los canales');
+
+  const accountFilters = ['todas', ...accounts.filter((account) => account.status === 'Activa').map((a) => a.name)];
 
   const filteredPublications = publications.filter((pub) => {
     if (accountFilter !== 'todas' && pub.account !== accountFilter) return false;
@@ -141,7 +144,7 @@ export function ContenidoPage() {
     <div className="space-y-6">
       <div className="flex items-start justify-between gap-4">
         <div>
-          <h1 className="text-2xl font-semibold text-slate-900">Contenido</h1>
+          <h1 className="text-2xl font-semibold text-slate-900">Publicaciones</h1>
           <p className="text-slate-500">Community management: planifica y controla el estado de las publicaciones.</p>
         </div>
         <div className="flex flex-col items-end gap-2">
@@ -162,17 +165,16 @@ export function ContenidoPage() {
 
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div className="flex items-center gap-2">
-          <FilterChip active={accountFilter === 'todas'} onClick={() => setAccountFilter('todas')}>
-            Todas
-          </FilterChip>
-          <FilterChip active={accountFilter === 'SIGHT'} onClick={() => setAccountFilter('SIGHT')}>
-            SIGHT
-          </FilterChip>
+          {accountFilters.map((name) => (
+            <FilterChip key={name} active={accountFilter === name} onClick={() => setAccountFilter(name)}>
+              {name === 'todas' ? 'Todas' : name}
+            </FilterChip>
+          ))}
         </div>
         <SegmentedControl options={VIEW_OPTIONS} value={view} onChange={setView} />
       </div>
 
-      {view === 'calendario' && <CalendarioView />}
+      {view === 'calendario' && <CalendarioView publications={filteredPublications} />}
       {view === 'lista' && <PublicationTable publications={filteredPublications} />}
       {view === 'kanban' && <PublicationKanban publications={filteredPublications} />}
     </div>

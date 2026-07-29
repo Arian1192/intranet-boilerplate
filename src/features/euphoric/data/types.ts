@@ -51,11 +51,15 @@ export interface Campaign {
 }
 export interface Piece {
   id: string; title: string; client: string; type: string; priority: PiecePriority;
-  deadlineLabel: string; status: PieceStatus; owner: string;
+  /** Fecha límite en ISO; vacía cuando la creatividad no tiene deadline. */
+  isoDeadline: string;
+  deadlineLabel: string; status: PieceStatus; owner: string; version: string;
   clientApproval: string; checklistDone: number; checklistTotal: number;
 }
 export interface EventItem {
   id: string; name: string; dateLabel: string; isoDate: string; city: string;
+  /** Cuenta de Euphoric a la que pertenece el evento; vacía en los eventos del grupo. */
+  account: string;
   kind: EventKind; euphoricCount?: number;
 }
 export interface Publication {

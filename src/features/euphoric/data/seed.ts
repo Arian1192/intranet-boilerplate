@@ -66,32 +66,49 @@ export const campaigns: Campaign[] = [
   { id: 'cmp-generico-julio', name: 'Genérico Julio', account: 'SIGHT', type: 'Paid media', startLabel: '10 jul 2026', endLabel: '31 ago 2026', status: 'finalizada', owner: 'Sin asignar', budget: 600, spent: 0 },
 ];
 
+/** Nombres largos de evento que se repiten en publicaciones y creatividades. */
+const EV_CLAPTONE = 'SIGHT: Claptone, Vite b2b Miganova, Tomi & Kesh , Alexanders Som, Luka Kuhnow';
+const EV_JAMES = 'SIGHT: James Hype, Alex Now, La Cintia, Pau Guilera';
+const EV_SONNY = 'SIGHT: Sonny Fodera, Xandro, Marcel BS, Jose Fajardo';
+const EV_ODEN = 'SIGHT: Oden & Fatzo, KOKO b2b Bizza, Jan, Caste';
+const EV_PATRICK = 'SIGHT: Patrick Topping, ACA, Luca 606, Nicholls';
+const EV_NICOLE = 'SIGHT: Nicole Moudaber, Miane, Galgo, Janse';
+
 export const pieces: Piece[] = [
-  { id: 'pz-1', title: 'Pack Sold Out · Pack Sold Out', client: 'SIGHT', type: 'Estático', priority: 'media', deadlineLabel: '10 jul 2026', status: 'revision', owner: 'Carlos', clientApproval: '—', checklistDone: 0, checklistTotal: 3 },
-  { id: 'pz-2', title: 'Pack Sold Out · Pack Sold Out', client: 'SIGHT', type: 'Vídeo', priority: 'media', deadlineLabel: '10 jul 2026', status: 'briefing', owner: 'Carlos', clientApproval: '—', checklistDone: 0, checklistTotal: 3 },
-  { id: 'pz-3', title: 'Test', client: 'SIGHT', type: 'Estático', priority: 'alta', deadlineLabel: '09 jul 2026', status: 'en-produccion', owner: 'Carlos', clientApproval: '—', checklistDone: 0, checklistTotal: 0 },
+  { id: 'pz-flyer-sonny', title: `Flyer ${EV_SONNY}`, client: 'SIGHT', type: 'Estático', priority: 'media', isoDeadline: '2026-07-17', deadlineLabel: '17 jul 2026', status: 'briefing', owner: 'Sin asignar', version: 'v1', clientApproval: '—', checklistDone: 0, checklistTotal: 0 },
+  { id: 'pz-settimes-sonny', title: `Set Times ${EV_SONNY}`, client: 'SIGHT', type: 'Estático', priority: 'media', isoDeadline: '2026-08-11', deadlineLabel: '11 ago 2026', status: 'briefing', owner: 'Sin asignar', version: 'v1', clientApproval: '—', checklistDone: 0, checklistTotal: 0 },
+  { id: 'pz-settimes-james', title: `Set Times ${EV_JAMES}`, client: 'SIGHT', type: 'Estático', priority: 'media', isoDeadline: '2026-08-04', deadlineLabel: '04 ago 2026', status: 'briefing', owner: 'Alba', version: 'v1', clientApproval: '—', checklistDone: 0, checklistTotal: 0 },
+  { id: 'pz-flyer-james', title: `Flyer ${EV_JAMES}`, client: 'SIGHT', type: 'Estático', priority: 'media', isoDeadline: '2026-07-10', deadlineLabel: '10 jul 2026', status: 'briefing', owner: 'Alba', version: 'v1', clientApproval: 'Pendiente cliente', checklistDone: 0, checklistTotal: 0 },
+  { id: 'pz-claptone-opium', title: 'Claptone', client: 'Opium Bcn', type: 'Estático', priority: 'media', isoDeadline: '', deadlineLabel: '—', status: 'briefing', owner: 'Sin asignar', version: 'v1', clientApproval: '—', checklistDone: 0, checklistTotal: 0 },
+  { id: 'pz-pack-sold-out', title: 'Pack Sold Out · Pack Sold Out', client: 'SIGHT', type: 'Estático', priority: 'media', isoDeadline: '2026-07-10', deadlineLabel: '10 jul 2026', status: 'en-produccion', owner: 'Carlos', version: 'v1', clientApproval: '—', checklistDone: 0, checklistTotal: 3 },
+  { id: 'pz-settimes-claptone', title: `Set Times ${EV_CLAPTONE}`, client: 'SIGHT', type: 'Estático', priority: 'media', isoDeadline: '2026-07-28', deadlineLabel: '28 jul 2026', status: 'cambios', owner: 'Alba', version: 'v1', clientApproval: 'Pendiente cliente', checklistDone: 0, checklistTotal: 0 },
+  { id: 'pz-video-pomo', title: 'Video Pomo 26/07', client: 'SIGHT', type: 'Vídeo', priority: 'media', isoDeadline: '2026-08-08', deadlineLabel: '08 ago 2026', status: 'aprobado', owner: 'Alba', version: 'v1', clientApproval: '—', checklistDone: 0, checklistTotal: 1 },
+  { id: 'pz-flyer-claptone', title: `Flyer ${EV_CLAPTONE}`, client: 'SIGHT', type: 'Estático', priority: 'media', isoDeadline: '2026-07-03', deadlineLabel: '03 jul 2026', status: 'aprobado', owner: 'Sin asignar', version: 'v1', clientApproval: '—', checklistDone: 0, checklistTotal: 0 },
+  { id: 'pz-flyer-claptone-0208', title: 'Flyer Claptone 02/08', client: 'SIGHT', type: 'Vídeo', priority: 'media', isoDeadline: '2026-07-22', deadlineLabel: '22 jul 2026', status: 'aprobado', owner: 'Carlos', version: 'v1', clientApproval: '—', checklistDone: 2, checklistTotal: 3 },
 ];
 
 export const events: EventItem[] = [
-  { id: 'ev-oden', name: 'SIGHT: Oden & Fatzo, KOKO b2b Bizza, Jan, Caste', dateLabel: '19 jul 2026', isoDate: '2026-07-19', city: 'Barcelona', kind: 'marketing', euphoricCount: 1 },
-  { id: 'ev-quiet', name: 'Please Quiet x SIGHT', dateLabel: '18 jul 2026', isoDate: '2026-07-18', city: 'Barcelona', kind: 'produccion' },
-  { id: 'ev-mixmag', name: 'Mixmag Intimate Sessions: BLOND:ISH', dateLabel: '15 jul 2026', isoDate: '2026-07-15', city: 'Ibiza', kind: 'produccion' },
-  { id: 'ev-patrick', name: 'SIGHT: Patrick Topping, ACA, Luca 606, Nicholls', dateLabel: '12 jul 2026', isoDate: '2026-07-12', city: 'Barcelona', kind: 'marketing', euphoricCount: 3 },
+  { id: 'ev-nicole', name: EV_NICOLE, dateLabel: '05 jul 2026', isoDate: '2026-07-05', city: 'Barcelona', account: 'SIGHT', kind: 'marketing' },
+  { id: 'ev-patrick', name: EV_PATRICK, dateLabel: '12 jul 2026', isoDate: '2026-07-12', city: 'Barcelona', account: 'SIGHT', kind: 'marketing' },
+  { id: 'ev-mixmag', name: 'Mixmag Intimate Sessions: BLOND:ISH', dateLabel: '15 jul 2026', isoDate: '2026-07-15', city: 'Ibiza', account: '', kind: 'produccion' },
+  { id: 'ev-quiet', name: 'Please Quiet x SIGHT', dateLabel: '18 jul 2026', isoDate: '2026-07-18', city: 'Barcelona', account: 'SIGHT', kind: 'produccion' },
+  { id: 'ev-levi', name: 'Levi', dateLabel: '19 jul 2026', isoDate: '2026-07-19', city: 'Barcelona', account: 'SIGHT', kind: 'marketing' },
+  { id: 'ev-oden', name: EV_ODEN, dateLabel: '26 jul 2026', isoDate: '2026-07-26', city: 'Barcelona', account: 'SIGHT', kind: 'marketing' },
+  { id: 'ev-claptone', name: EV_CLAPTONE, dateLabel: '02 ago 2026', isoDate: '2026-08-02', city: 'Barcelona', account: 'SIGHT', kind: 'marketing' },
+  { id: 'ev-james', name: EV_JAMES, dateLabel: '09 ago 2026', isoDate: '2026-08-09', city: 'Barcelona', account: 'SIGHT', kind: 'marketing' },
+  { id: 'ev-sonny', name: EV_SONNY, dateLabel: '16 ago 2026', isoDate: '2026-08-16', city: '', account: 'SIGHT', kind: 'marketing' },
 ];
 
 export const publications: Publication[] = [
-  {
-    id: 'pub-settimes', name: 'Set Times', dateLabel: '10 jul 2026', isoDate: '2026-07-10', channel: 'Instagram',
-    account: 'SIGHT', status: 'En producción', type: 'Post', eventName: 'SIGHT: Patrick Topping, ACA, Luca 606, Nicholls',
-    time: '12:00', textApproval: 'Aprobado', imageApproval: 'Pendiente', kanbanColumn: 'falta-arte',
-  },
-  {
-    id: 'pub-settimes-claptone',
-    name: 'Set Times SIGHT: Claptone, Vite b2b Miganova, Tomi & Kesh , Alexanders Som, Luka Kuhnow',
-    dateLabel: '01 ago 2026', isoDate: '2026-08-01', channel: 'Instagram', account: 'SIGHT', status: 'Idea', type: 'Reel',
-    eventName: 'SIGHT: Claptone, Vite b2b Miganova, Tomi & Kesh , Alexanders Som, Luka Kuhnow',
-    time: '', textApproval: 'Pendiente', imageApproval: 'Pendiente', kanbanColumn: 'falta-copy',
-  },
+  { id: 'pub-salida-claptone', name: `Salida ${EV_CLAPTONE}`, dateLabel: '03 jul 2026', isoDate: '2026-07-03', channel: 'Instagram', account: 'SIGHT', status: 'Idea', type: 'Reel', eventName: EV_CLAPTONE, time: '17:00', textApproval: 'Pendiente', imageApproval: 'Pendiente', kanbanColumn: 'falta-copy' },
+  { id: 'pub-settimes', name: 'Set Times', dateLabel: '10 jul 2026', isoDate: '2026-07-10', channel: 'Instagram', account: 'SIGHT', status: 'En producción', type: 'Post', eventName: EV_PATRICK, time: '12:00', textApproval: 'Aprobado', imageApproval: 'Pendiente', kanbanColumn: 'falta-copy' },
+  { id: 'pub-salida-james', name: `Salida ${EV_JAMES}`, dateLabel: '10 jul 2026', isoDate: '2026-07-10', channel: 'Instagram', account: 'SIGHT', status: 'Idea', type: 'Reel', eventName: EV_JAMES, time: '17:00', textApproval: 'Pendiente', imageApproval: 'Pendiente', kanbanColumn: 'falta-copy' },
+  { id: 'pub-salida-sonny', name: `Salida ${EV_SONNY}`, dateLabel: '17 jul 2026', isoDate: '2026-07-17', channel: 'Instagram', account: 'SIGHT', status: 'Idea', type: 'Reel', eventName: EV_SONNY, time: '17:00', textApproval: 'Pendiente', imageApproval: 'Pendiente', kanbanColumn: 'falta-copy' },
+  { id: 'pub-video-promo-0208', name: 'Video Promo SIGHT 02/08', dateLabel: '21 jul 2026', isoDate: '2026-07-21', channel: 'Instagram', account: 'SIGHT', status: 'Publicado', type: 'Reel', time: '11:00', textApproval: 'Aprobado', imageApproval: 'Pendiente', kanbanColumn: 'publicado' },
+  { id: 'pub-video-promo-2607', name: 'Video Promo 26/07', dateLabel: '22 jul 2026', isoDate: '2026-07-22', channel: 'Instagram', account: 'SIGHT', status: 'Idea', type: 'Reel', eventName: EV_ODEN, time: '12:00', textApproval: 'Pendiente', imageApproval: 'Pendiente', kanbanColumn: 'falta-arte' },
+  { id: 'pub-settimes-claptone', name: `Set Times ${EV_CLAPTONE}`, dateLabel: '01 ago 2026', isoDate: '2026-08-01', channel: 'Instagram', account: 'SIGHT', status: 'Idea', type: 'Reel', eventName: EV_CLAPTONE, time: '12:00', textApproval: 'Pendiente', imageApproval: 'Aprobado', kanbanColumn: 'falta-aprobacion' },
+  { id: 'pub-settimes-james', name: `Set Times ${EV_JAMES}`, dateLabel: '08 ago 2026', isoDate: '2026-08-08', channel: 'Instagram', account: 'SIGHT', status: 'Idea', type: 'Reel', eventName: EV_JAMES, time: '12:00', textApproval: 'Pendiente', imageApproval: 'Pendiente', kanbanColumn: 'falta-copy' },
+  { id: 'pub-settimes-sonny', name: `Set Times ${EV_SONNY}`, dateLabel: '15 ago 2026', isoDate: '2026-08-15', channel: 'Instagram', account: 'SIGHT', status: 'Idea', type: 'Reel', eventName: EV_SONNY, time: '12:00', textApproval: 'Pendiente', imageApproval: 'Pendiente', kanbanColumn: 'falta-copy' },
 ];
 
 export const artists: Artist[] = [
@@ -140,14 +157,14 @@ export const artists: Artist[] = [
 ];
 
 export const analytics = {
-  mrr: 800,
-  activeAccounts: 1,
-  totalAccounts: 1,
-  campaignBudget: 600,
-  campaignSpent: 0,
-  contentByStatus: [
-    { label: 'Idea', count: 0 }, { label: 'En producción', count: 1 }, { label: 'Revisión', count: 0 },
-    { label: 'Aprobado', count: 0 }, { label: 'Programado', count: 0 }, { label: 'Publicado', count: 0 },
-  ],
-  contentByChannel: [{ label: 'Instagram', count: 1 }],
+  mrr: accounts.filter((account) => account.status === 'Activa').reduce((total, account) => total + account.retainer, 0),
+  activeAccounts: accounts.filter((account) => account.status === 'Activa').length,
+  totalAccounts: accounts.length,
+  campaignBudget: campaigns.reduce((total, campaign) => total + campaign.budget, 0),
+  campaignSpent: campaigns.reduce((total, campaign) => total + campaign.spent, 0),
+  contentByStatus: ['Idea', 'En producción', 'Revisión', 'Aprobado', 'Programado', 'Publicado'].map((label) => ({
+    label,
+    count: publications.filter((publication) => publication.status === label).length,
+  })),
+  contentByChannel: [{ label: 'Instagram', count: publications.filter((p) => p.channel === 'Instagram').length }],
 };
