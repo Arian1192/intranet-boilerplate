@@ -37,6 +37,10 @@ import { ShowsPage } from '@/features/booking/pages/ShowsPage';
 import { CalendarioPage as BookingCalendarioPage } from '@/features/booking/pages/CalendarioPage';
 import { DisponibilidadPage } from '@/features/booking/pages/DisponibilidadPage';
 import { ContactosPage } from '@/features/booking/pages/ContactosPage';
+import { OfertasPage } from '@/features/booking/pages/OfertasPage';
+import { CobrosPage } from '@/features/booking/pages/CobrosPage';
+import { GastosPage } from '@/features/booking/pages/GastosPage';
+import { EstrategiasPage } from '@/features/booking/pages/EstrategiasPage';
 import { EtraDashboardPage } from '@/features/etra/pages/EtraDashboardPage';
 import { ActionsPage } from '@/features/etra/pages/ActionsPage';
 import { ActionDetailPage } from '@/features/etra/pages/ActionDetailPage';
@@ -71,9 +75,13 @@ export function AppRouter() {
       <Route element={<ConceptOneShell />}>
         <Route path="/conceptone" element={<BookingDashboardPage />} />
         <Route path="/shows" element={<ShowsPage />} />
-        <Route path="/calendario-c1" element={<BookingCalendarioPage />} />
+        <Route path="/ofertas" element={<OfertasPage />} />
+        <Route path="/cobros" element={<CobrosPage />} />
+        <Route path="/gastos" element={<GastosPage />} />
         <Route path="/disponibilidad" element={<DisponibilidadPage />} />
+        <Route path="/calendario-c1" element={<BookingCalendarioPage />} />
         <Route path="/contactos" element={<ContactosPage />} />
+        <Route path="/management/estrategias" element={<EstrategiasPage />} />
       </Route>
       <Route path="/etra" element={<EtraShell />}>
         <Route index element={<EtraDashboardPage />} />
