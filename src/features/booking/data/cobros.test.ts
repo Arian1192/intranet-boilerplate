@@ -103,8 +103,11 @@ describe('cobros — seed espejo del live', () => {
     expect(agruparPorFactura(cobros)).toHaveLength(1);
   });
 
-  it('formatImporte no separa miles, como el live', () => {
+  it('formatImporte escribe los euros como el live', () => {
+    // es-ES no agrupa los millares de 4 dígitos, y el live usa espacio normal.
     expect(formatImporte(9631.6)).toBe('9631,60 €');
     expect(formatImporte(0)).toBe('0,00 €');
+    expect(formatImporte(11433.78)).toBe('11.433,78 €');
+    expect(formatImporte(1016.4)).not.toContain(' ');
   });
 });

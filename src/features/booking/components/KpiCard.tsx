@@ -11,7 +11,7 @@ const statusStyles: Record<Kpi['status'], string> = {
   tentative: 'bg-slate-500',
   offer: 'bg-sky-400',
   confirmed: 'bg-sky-500',
-  contract: 'bg-blue-500',
+  contract: 'bg-amber-500',
   'pending-payment': 'bg-rose-500',
   'pending-settlement': 'bg-indigo-600',
   done: 'bg-emerald-600',

@@ -47,7 +47,8 @@ describe('KpiCard', () => {
       'text-white',
       'transition-transform',
       'hover:-translate-y-0.5',
-      'bg-blue-500'
+      // El tile de Contrato es ámbar en el live (245,158,11), no azul.
+      'bg-amber-500'
     );
     expect(screen.getByText(/0,00/)).toHaveClass('text-lg', 'font-bold', 'leading-tight');
     expect(screen.getByText('Contrato')).toHaveClass('text-[11px]', 'font-medium', 'uppercase', 'tracking-wide', 'opacity-90');

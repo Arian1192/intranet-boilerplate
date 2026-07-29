@@ -1,6 +1,11 @@
 import { useState } from 'react';
 import { Card, Input, Button } from '@/components/ui';
-import { KpiCard, ShowListItem } from '@/features/booking/components';
+import {
+  KpiCard,
+  ShowListItem,
+  FichasRevisarBanner,
+  PosiblesGigsPanel,
+} from '@/features/booking/components';
 import { useBookingDashboard } from '../hooks/useBookingDashboard';
 
 export function BookingDashboardPage() {
@@ -23,6 +28,14 @@ export function BookingDashboardPage() {
         {data.kpis.map((kpi) => (
           <KpiCard key={kpi.id} kpi={kpi} />
         ))}
+      </div>
+
+      <div className="mb-4">
+        <FichasRevisarBanner fichas={data.fichasRevisar} />
+      </div>
+
+      <div className="mb-6">
+        <PosiblesGigsPanel gigs={data.posiblesGigs} />
       </div>
 
       <div className="mb-6 grid gap-6 lg:grid-cols-2">

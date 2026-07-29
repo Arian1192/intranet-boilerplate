@@ -1,3 +1,5 @@
+import { formatCurrency } from '@/lib/format';
+
 /** Fecha del barrido del live: las etiquetas D±n y los vencimientos se leen contra ella. */
 export const HOY = '2026-07-29';
 
@@ -118,9 +120,13 @@ export function formatFechaCorta(iso: string): string {
   return `${day} ${MESES[Number(month) - 1]} ${year}`;
 }
 
-/** Importes de Cobros: sin separador de miles, como el live ('9631,60 €'). */
+/**
+ * Importes en euros como los escribe el live: agrupación es-ES (que no separa
+ * los millares de 4 dígitos: '9631,60 €' pero '11.433,78 €') y espacio normal
+ * antes del símbolo, no el duro que mete Intl.
+ */
 export function formatImporte(amount: number): string {
-  return `${amount.toFixed(2).replace('.', ',')} €`;
+  return formatCurrency(amount).replace(' ', ' ');
 }
 
 const MS_DIA = 24 * 60 * 60 * 1000;

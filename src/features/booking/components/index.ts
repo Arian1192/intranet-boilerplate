@@ -14,3 +14,6 @@ export * from './EstiloChips';
 export * from './MensajeDisponibilidad';
 export * from './VenueCard';
 export * from './EmpresaRow';
+export * from './SegmentedCount';
+export * from './FichasRevisarBanner';
+export * from './PosiblesGigsPanel';
