@@ -1,0 +1,108 @@
+{
+  "url": "/cruda/analitica",
+  "title": "Black Moose Group · Intranet",
+  "headings": [
+    {
+      "tag": "H1",
+      "text": "Analítica CRUDA"
+    },
+    {
+      "tag": "H2",
+      "text": "Ventas facturadas por mes · 2026"
+    },
+    {
+      "tag": "H2",
+      "text": "Dinero acumulado por fase"
+    },
+    {
+      "tag": "H2",
+      "text": "Productos más vendidos"
+    },
+    {
+      "tag": "H2",
+      "text": "Alertas de stock"
+    }
+  ],
+  "buttons": [
+    "CRUDA",
+    "9+",
+    "Enviar",
+    "Reportar con captura"
+  ],
+  "links": [
+    {
+      "text": "Pedidos",
+      "href": "/cruda"
+    },
+    {
+      "text": "Catálogo",
+      "href": "/cruda/catalogo"
+    },
+    {
+      "text": "test Admin T",
+      "href": "/perfil"
+    },
+    {
+      "text": "Mis avisos",
+      "href": "/incidencias"
+    }
+  ],
+  "tabs": [
+    "Pedidos",
+    "Catálogo"
+  ],
+  "selects": [
+    {
+      "name": "",
+      "options": [
+        "2023",
+        "2024",
+        "2025",
+        "2026",
+        "2027"
+      ],
+      "value": "2026"
+    }
+  ],
+  "inputs": [
+    {
+      "type": "textarea",
+      "name": "",
+      "placeholder": "Pregunta o cuenta qué falla…",
+      "value": ""
+    }
+  ],
+  "tables": [
+    {
+      "headers": [
+        "Producto",
+        "Unidades",
+        "Valor"
+      ],
+      "rowCount": 1,
+      "rows": [
+        [
+          "(Test) Camiseta A&F",
+          "960",
+          "16.358,35 €"
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "Variante",
+        "Stock",
+        "Mín."
+      ],
+      "rowCount": 1,
+      "rows": [
+        [
+          "(Test) Camiseta A&F · Algodón / L / Crudo",
+          "40",
+          "50"
+        ]
+      ]
+    }
+  ],
+  "innerText": "/ CRUDA Pedidos Catálogo 9+ test Admin T Analítica CRUDA Ventas, líneas de negocio, productos y stock. 2023 2024 2025 2026 2027 EN CURSO (ACTIVOS) 17.264,85 € 5 pedidos FACTURADO (HISTÓRICO) 2540,25 € COLECCIÓN 17.264,85 € en curso PRODUCCIÓN (CUSTOM) 0,00 € en curso VENTAS FACTURADAS POR MES · 2026 · Ene · Feb · Mar · Abr · May · Jun 3K€ Jul · Ago · Sep · Oct · Nov · Dic DINERO ACUMULADO POR FASE Borrador 2 6424,60 € Confirmado 2 8300,00 € En producción 0 0,00 € Enviado 0 0,00 € Entregado 0 0,00 € Facturado 1 2540,25 € PRODUCTOS MÁS VENDIDOS Producto Unidades Valor (Test) Camiseta A&F 960 16.358,35 € ALERTAS DE STOCK 340 uds · valor a coste 2720,00 € 1 variante(s) en o por debajo del mínimo: Variante Stock Mín. (Test) Camiseta A&F · Algodón / L / Crudo 40 50 ? CRUDA El stock se descuenta al confirmar el pedido No al crearlo. Un pedido en borrador no reserva nada, así que dos comerciales pueden vender la misma última unidad: confírmalo cuanto antes. Enviar Reportar con captura Mis avisos"
+}
