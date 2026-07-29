@@ -1,17 +1,18 @@
 import { Outlet } from 'react-router';
-import { BarChart2, Users } from 'lucide-react';
+import { Settings, Users } from 'lucide-react';
 import { AppLayout } from '@/components/layout';
 import type { User } from '@/types';
 
 const mockUser: User = { id: '1', email: 'test@example.com', name: 'Test User', role: 'Admin' };
 
 const tabs = [
-  { label: 'Resumen', href: '/euphoric' },
-  { label: 'Campañas', href: '/euphoric/campanas' },
-  { label: 'Contenido', href: '/euphoric/calendario' },
-  { label: 'Piezas', href: '/euphoric/piezas' },
-  { label: 'Eventos', href: '/euphoric/eventos' },
   { label: 'Cuentas', href: '/euphoric/cuentas' },
+  { label: 'Campañas', href: '/euphoric/campanas' },
+  { label: 'Publicaciones', href: '/euphoric/calendario' },
+  { label: 'Creatividades', href: '/euphoric/piezas' },
+  { label: 'Eventos', href: '/euphoric/eventos' },
+  { label: 'Agenda', href: '/euphoric/agenda' },
+  { label: 'Negocio', href: '/euphoric/negocio' },
 ];
 
 export function EuphoricShell() {
@@ -24,7 +25,7 @@ export function EuphoricShell() {
         tabs,
         iconActions: [
           { icon: Users, href: '/euphoric/artistas', label: 'Artistas' },
-          { icon: BarChart2, href: '/euphoric/analitica', label: 'Analítica' },
+          { icon: Settings, href: '/euphoric/ajustes', label: 'Ajustes' },
         ],
       }}
     >

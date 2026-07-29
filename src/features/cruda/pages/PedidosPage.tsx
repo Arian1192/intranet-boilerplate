@@ -45,7 +45,8 @@ export function PedidosPage() {
       {header}
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-[360px_1fr]">
         <OrderList orders={orders} onSelect={(id) => setMode({ kind: 'detail', id })} onNew={() => setMode({ kind: 'new' })} />
-        <div className="space-y-6">
+        {/* min-w-0: sin él la pista 1fr crece con la fila de fases y la página desborda en horizontal. */}
+        <div className="min-w-0 space-y-6">
           <OrderSummaryPanel summary={orderSummary} />
           <PhaseAccumCards items={phaseAccum} />
         </div>

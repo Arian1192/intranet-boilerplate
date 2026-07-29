@@ -7,13 +7,14 @@ const APPROVAL_VARIANT: Record<string, BadgeProps['variant']> = {
   Pendiente: 'warning',
 };
 
-const COLUMNS: { id: PublicationKanbanColumn; label: string; subtitle: string }[] = [
-  { id: 'falta-copy', label: 'Falta copy', subtitle: 'Sin texto todavía' },
-  { id: 'falta-arte', label: 'Falta arte', subtitle: 'Texto pendiente' },
-  { id: 'falta-aprobacion', label: 'Falta aprobación', subtitle: 'Todo aprobado' },
-  { id: 'listo', label: 'Listo para programar', subtitle: 'Vacío' },
-  { id: 'programado', label: 'Programado', subtitle: 'Vacío' },
-  { id: 'publicado', label: 'Publicado', subtitle: 'Vacío' },
+/** El live solo muestra un texto bajo el título cuando la columna está vacía. */
+const COLUMNS: { id: PublicationKanbanColumn; label: string; emptyLabel: string }[] = [
+  { id: 'falta-copy', label: 'Falta copy', emptyLabel: 'Vacío' },
+  { id: 'falta-arte', label: 'Falta arte', emptyLabel: 'Vacío' },
+  { id: 'falta-aprobacion', label: 'Falta aprobación', emptyLabel: 'Vacío' },
+  { id: 'listo', label: 'Listo para programar', emptyLabel: 'Todo aprobado' },
+  { id: 'programado', label: 'Programado', emptyLabel: 'Vacío' },
+  { id: 'publicado', label: 'Publicado', emptyLabel: 'Vacío' },
 ];
 
 export function PublicationKanban({ publications }: { publications: Publication[] }) {
@@ -29,7 +30,7 @@ export function PublicationKanban({ publications }: { publications: Publication[
                 {items.length}
               </Badge>
             </div>
-            <p className="mb-3 text-xs text-slate-400">{column.subtitle}</p>
+            {items.length === 0 && <p className="mb-3 text-xs text-slate-400">{column.emptyLabel}</p>}
             <div className="space-y-3">
               {items.map((pub) => (
                 <div key={pub.id} className="rounded-lg border border-slate-100 bg-white p-3 shadow-sm">

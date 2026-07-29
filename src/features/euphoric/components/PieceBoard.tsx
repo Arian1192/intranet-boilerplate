@@ -1,13 +1,17 @@
 import { Avatar, Badge, Card } from '@/components/ui';
 import type { Piece, PieceStatus } from '../data/types';
-import { PRIORITY_LABEL, PRIORITY_VARIANT, pieceStatusLabel } from '../data/labels';
+import { PRIORITY_VARIANT, pieceStatusLabel } from '../data/labels';
 import { StatusChip } from './StatusChip';
 
 const COLUMN_ORDER: PieceStatus[] = ['briefing', 'en-produccion', 'revision', 'cambios', 'aprobado'];
 
 export function PieceBoard({ pieces }: { pieces: Piece[] }) {
   return (
-    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
+    <div
+      role="region"
+      aria-label="Tablero de creatividades"
+      className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5"
+    >
       {COLUMN_ORDER.map((status) => {
         const items = pieces.filter((piece) => piece.status === status);
         return (
@@ -26,17 +30,22 @@ export function PieceBoard({ pieces }: { pieces: Piece[] }) {
                       <Avatar fallback={piece.owner} size="sm" />
                       <span className="text-sm font-medium text-slate-700">{piece.owner}</span>
                     </div>
-                    <p className="font-semibold text-slate-900">{piece.title}</p>
+                    <p className="font-semibold text-slate-900">
+                      {piece.type === 'Vídeo' && <span aria-hidden="true">🎬 </span>}
+                      {piece.title}
+                    </p>
                     <p className="text-sm text-slate-400">
-                      {piece.client} · {piece.type} · v1
+                      {piece.client} · {piece.type} · {piece.version}
                     </p>
                     <div className="mt-2 flex flex-wrap items-center gap-2 text-sm text-slate-500">
-                      <Badge variant={PRIORITY_VARIANT[piece.priority]}>{PRIORITY_LABEL[piece.priority]}</Badge>
-                      <span>📅 {piece.deadlineLabel}</span>
+                      <span>{piece.deadlineLabel}</span>
                       {piece.checklistTotal > 0 && (
                         <span>
-                          ✓ {piece.checklistDone}/{piece.checklistTotal}
+                          ☑ {piece.checklistDone}/{piece.checklistTotal}
                         </span>
+                      )}
+                      {piece.clientApproval !== '—' && (
+                        <Badge variant={PRIORITY_VARIANT.media}>{piece.clientApproval}</Badge>
                       )}
                     </div>
                   </Card>

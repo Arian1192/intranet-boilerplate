@@ -10,9 +10,40 @@ export type PublicationKanbanColumn =
   | 'programado'
   | 'publicado';
 
+export type AccountHealth = 'Sana' | 'Riesgo' | 'Crítica';
+export type PaymentStatus = 'Al corriente' | 'Pendiente' | 'Retraso';
+export type CommercialStatus = 'Lead' | 'Activo' | 'Finalizado';
+
+/** Base de datos de contactos subida y limpiada para una cuenta. */
+export interface AccountDatabase {
+  id: string; name: string; eventName: string; cleanContacts: number; totalContacts: number; state: string;
+}
+/** Plantilla que genera publicaciones solas al crear un evento de la cuenta. */
+export interface PublicationTemplate {
+  id: string; title: string; offsetDays: number; time: string; channel: string; format: string; active: boolean;
+}
+/** Plantilla que genera creatividades solas al crear un evento de la cuenta. */
+export interface CreativeTemplate {
+  id: string; name: string; type: string; department: string; deadlineOffsetDays: number;
+  linkedPublication: string; active: boolean;
+}
+
 export interface Account {
   id: string; name: string; kind: string; services: string[];
   status: 'Activa' | 'Pausada' | 'Inactiva'; retainer: number;
+  health: AccountHealth;
+  commercialStatus: CommercialStatus;
+  tier: string;
+  sector: string;
+  startDate: string;
+  monthlyHours: string;
+  contractSigned: boolean;
+  paymentStatus: PaymentStatus;
+  crmClient: string;
+  approvalLink: string;
+  databases: AccountDatabase[];
+  publicationTemplates: PublicationTemplate[];
+  creativeTemplates: CreativeTemplate[];
 }
 export interface Campaign {
   id: string; name: string; account: string; type: string;
@@ -20,11 +51,15 @@ export interface Campaign {
 }
 export interface Piece {
   id: string; title: string; client: string; type: string; priority: PiecePriority;
-  deadlineLabel: string; status: PieceStatus; owner: string;
+  /** Fecha límite en ISO; vacía cuando la creatividad no tiene deadline. */
+  isoDeadline: string;
+  deadlineLabel: string; status: PieceStatus; owner: string; version: string;
   clientApproval: string; checklistDone: number; checklistTotal: number;
 }
 export interface EventItem {
   id: string; name: string; dateLabel: string; isoDate: string; city: string;
+  /** Cuenta de Euphoric a la que pertenece el evento; vacía en los eventos del grupo. */
+  account: string;
   kind: EventKind; euphoricCount?: number;
 }
 export interface Publication {
@@ -34,4 +69,45 @@ export interface Publication {
 }
 export interface Artist {
   id: string; name: string; kind: 'Agencia' | 'Externo';
+}
+
+export type LeadStage = 'frio' | 'templado' | 'caliente';
+
+/** Oportunidad comercial del pipeline de Negocio. */
+export interface Lead {
+  id: string; name: string; probability: number; value: number;
+  owner: string; ownerInitials: string; closeDateLabel: string; stage: LeadStage;
+}
+
+/** Servicio del catálogo de Presupuestos. */
+export interface CatalogService {
+  id: string; name: string; department: string; detail: string;
+  unit: string; rate: number; minimum: number; cost: number;
+}
+
+/** Dedicación asignada de una persona o de un departamento. */
+export interface Dedication {
+  id: string; label: string; hoursPerMonth: number; cost: number;
+}
+
+/** Aviso de la portada de Negocio. */
+export interface BusinessAlert {
+  id: string; account: string; message: string; tag: string;
+}
+
+/** Tiempo medio que pasa un elemento en una fase. */
+export interface PhaseTime {
+  id: string; entity: string; phase: string; average: string; times: string;
+}
+
+/** Elemento que lleva más tiempo parado en su fase. */
+export interface StalledItem {
+  id: string; title: string; entity: string; status: string; account: string; age: string;
+}
+
+export type AgendaEntryKind = 'Reunión' | 'Lanzamiento' | 'Grabación' | 'Entrega' | 'Renovación' | 'Otro';
+
+/** Entrada propia de la agenda (la capa que no viene de publicaciones, creatividades ni eventos). */
+export interface AgendaEntry {
+  id: string; title: string; isoDate: string; time: string; kind: AgendaEntryKind; account: string;
 }

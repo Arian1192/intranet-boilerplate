@@ -1,0 +1,98 @@
+{
+  "url": "/creativos",
+  "title": "Black Moose Group · Intranet",
+  "headings": [
+    {
+      "tag": "H1",
+      "text": "Creativos"
+    }
+  ],
+  "buttons": [
+    "Creativos",
+    "9+",
+    "+ Alba",
+    "+ Carlos",
+    "+ Nueva creatividad",
+    "Tablero",
+    "Calendario",
+    "Todas",
+    "Mías",
+    "Diseño",
+    "Vídeo",
+    "Pend. aprobar",
+    "Correcciones",
+    "Atrasadas",
+    "Editar",
+    "AG Alba 🎬 Video Pomo 26/07 SIGHT · Vídeo · v1 23 jul 2026 ☑ 0/1",
+    "Carlos Pack Sold Out · Pack Sold Out SIGHT · Estático · v1 10 jul 2026 ☑ 0/3",
+    "Carlos Flyer Claptone 02/08 SIGHT · Vídeo · v1 22 jul 2026 ☑ 2/3",
+    "Enviar",
+    "Reportar con captura"
+  ],
+  "links": [
+    {
+      "text": "Creatividades",
+      "href": "/creativos"
+    },
+    {
+      "text": "test Admin T",
+      "href": "/perfil"
+    },
+    {
+      "text": "Mis avisos",
+      "href": "/incidencias"
+    }
+  ],
+  "tabs": [
+    "Creatividades"
+  ],
+  "selects": [],
+  "inputs": [
+    {
+      "type": "textarea",
+      "name": "",
+      "placeholder": "Pregunta o cuenta qué falla…",
+      "value": ""
+    }
+  ],
+  "tables": [
+    {
+      "headers": [
+        "CREATIVIDAD",
+        "CLIENTE",
+        "TIPO",
+        "DEADLINE",
+        "ESTADO",
+        "CLIENTE APROB."
+      ],
+      "rowCount": 3,
+      "rows": [
+        [
+          "Pack Sold Out · Pack Sold Out v1",
+          "SIGHT",
+          "Estático",
+          "10 jul 2026",
+          "En producción",
+          "—"
+        ],
+        [
+          "Video Pomo 26/07 v1",
+          "SIGHT",
+          "Vídeo",
+          "23 jul 2026",
+          "Briefing",
+          "—"
+        ],
+        [
+          "Flyer Claptone 02/08 v1",
+          "SIGHT",
+          "Vídeo",
+          "22 jul 2026",
+          "Aprobado",
+          "—"
+        ]
+      ]
+    }
+  ],
+  "innerText": "/ Creativos Creatividades 9+ test Admin T Creativos Tablero de creatividades del equipo de diseño: Euphoric, clientes del CRM y empresas internas. Asignar a: + Alba + Carlos + Nueva creatividad 2 Creatividades activas 0 Pend. aprobar 0 En correcciones 2 Atrasadas Tablero Calendario Todas Mías Diseño Vídeo Pend. aprobar Correcciones Atrasadas Recursos: — Editar Briefing 1 AG Alba 🎬 Video Pomo 26/07 SIGHT · Vídeo · v1 23 jul 2026 ☑ 0/1 En producción 1 Carlos Pack Sold Out · Pack Sold Out SIGHT · Estático · v1 10 jul 2026 ☑ 0/3 Revisión 0 — Cambios 0 — Aprobado 1 Carlos Flyer Claptone 02/08 SIGHT · Vídeo · v1 22 jul 2026 ☑ 2/3 CREATIVIDAD CLIENTE TIPO DEADLINE ESTADO CLIENTE APROB. Pack Sold Out · Pack Sold Out v1 SIGHT Estático 10 jul 2026 En producción — Video Pomo 26/07 v1 SIGHT Vídeo 23 jul 2026 Briefing — Flyer Claptone 02/08 v1 SIGHT Vídeo 22 jul 2026 Aprobado — ? Creativos Tu cola son los encargos, no los mensajes Todo lo que hay aquí viene de una pieza o una campaña de algún espacio. Si te piden algo por otro canal, pide que lo abran aquí: si no, no existe. Enviar Reportar con captura Mis avisos"
+}

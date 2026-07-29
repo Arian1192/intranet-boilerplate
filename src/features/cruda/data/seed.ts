@@ -36,8 +36,8 @@ export const products: Product[] = [
     type: 'variantes',
     active: true,
     notes: '',
-    soldUnits: 860,
-    soldValue: 14708.35,
+    soldUnits: 960,
+    soldValue: 16358.35,
     variants: [
       { id: 'v1', sku: '4878test01', finish: 'Algodón', size: 'S', color: 'Crudo', price: 16.5, cost: 8, pvp: 41.03, multiplier: 2.49, stock: 150, min: 50 },
       { id: 'v2', sku: '4878test02', finish: 'Algodón', size: 'M', color: 'Crudo', price: 16.5, cost: 8, pvp: 45, multiplier: 2.73, stock: 150, min: 50 },
@@ -58,7 +58,24 @@ const cr00103Lines: OrderLine[] = [
   { id: 'l3', description: '(Test) Camiseta A&F · Algodón', sku: '4878test03', size: 'L', color: 'Crudo', qty: 50, price: 16.5, discountPct: 0, pvp: 45, multiplier: 2.73, extrasPerUnit: 2.5, extrasCount: 1 },
 ];
 
+const cr00104Lines: OrderLine[] = [
+  { id: 'l1', description: '(Test) Camiseta A&F · Algodón', sku: '4878test02', size: 'M', color: 'Crudo', qty: 100, price: 16.5, discountPct: 0, pvp: 0, multiplier: 0, extrasPerUnit: 0, extrasCount: 0 },
+];
+
 export const orders: Order[] = [
+  {
+    id: 'CR00104',
+    client: 'TAGMAG',
+    dateLabel: '20 jul 2026',
+    businessLine: 'Colección',
+    status: 'Confirmado',
+    reposicion: true,
+    amount: 1650,
+    headerTotal: 1650,
+    portalNote: 'Reposición solicitada desde el portal de cliente.',
+    portalEmail: 'hello@carlospego.com',
+    lines: cr00104Lines,
+  },
   { id: 'CR00103', client: 'New Era', dateLabel: '07 jul 2026', businessLine: 'Colección', status: 'Confirmado', amount: 6650, headerTotal: 5782.5, responsible: 'Israel Cuenca', lines: cr00103Lines },
   { id: 'CR00102', client: 'TAGMAG', dateLabel: '06 jul 2026', businessLine: 'Colección', status: 'Borrador', reposicion: true, amount: 3730, headerTotal: 3730, lines: [] },
   { id: 'CR00101', client: 'TAGMAG', dateLabel: '06 jul 2026', businessLine: 'Colección', status: 'Facturado', amount: 2540.25, headerTotal: 2540.25, lines: [] },
@@ -66,16 +83,16 @@ export const orders: Order[] = [
 ];
 
 export const orderSummary: OrderSummary = {
-  activeAmount: 15614.85,
-  activeCount: 4,
+  activeAmount: 17264.85,
+  activeCount: 5,
   invoicedAmount: 2540.25,
-  coleccionAmount: 15614.85,
+  coleccionAmount: 17264.85,
   produccionAmount: 0,
 };
 
 export const phaseAccum: PhaseAccum[] = [
   { status: 'Borrador', count: 2, amount: 6424.6 },
-  { status: 'Confirmado', count: 1, amount: 6650 },
+  { status: 'Confirmado', count: 2, amount: 8300 },
   { status: 'En producción', count: 0, amount: 0 },
   { status: 'Enviado', count: 0, amount: 0 },
   { status: 'Entregado', count: 0, amount: 0 },

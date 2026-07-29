@@ -1,0 +1,64 @@
+[
+  {
+    "tag": "HEADER",
+    "cls": "sticky top-0 z-20 border-b border-slate-200 bg-white/90 backdrop-blur",
+    "text": "/ Creativos Creatividades 9+ test Admin T",
+    "items": [
+      {
+        "t": "",
+        "href": "/",
+        "aria": null,
+        "cls": "flex items-center gap-2"
+      },
+      {
+        "t": "Creativos",
+        "href": null,
+        "aria": null,
+        "cls": "flex items-center gap-1 rounded-lg px-2 py-1 text-sm font-semibold text-slate-600 hover:bg-slate-100 hover:text-slate-900"
+      },
+      {
+        "t": "Creatividades",
+        "href": "/creativos",
+        "aria": "page",
+        "cls": "shrink-0 rounded-lg px-3 py-1.5 text-sm font-medium transition-colors bg-brand-50 text-brand-700"
+      },
+      {
+        "t": "",
+        "href": "/mi-trabajo",
+        "aria": null,
+        "cls": "grid h-9 w-9 place-items-center rounded-lg transition-colors text-slate-500 hover:bg-slate-100 hover:text-slate-800"
+      },
+      {
+        "t": "9+",
+        "href": null,
+        "aria": null,
+        "cls": "relative grid h-9 w-9 place-items-center rounded-lg text-slate-500 hover:bg-slate-100"
+      },
+      {
+        "t": "test Admin T",
+        "href": "/perfil",
+        "aria": null,
+        "cls": "hidden items-center gap-3 rounded-lg px-2 py-1 hover:bg-slate-100 md:flex"
+      },
+      {
+        "t": "",
+        "href": null,
+        "aria": null,
+        "cls": "grid h-9 w-9 place-items-center rounded-lg text-slate-600 hover:bg-slate-100 md:hidden"
+      }
+    ]
+  },
+  {
+    "tag": "NAV",
+    "cls": "hidden flex-1 items-center gap-0.5 overflow-x-auto md:flex",
+    "text": "Creatividades",
+    "items": [
+      {
+        "t": "Creatividades",
+        "href": "/creativos",
+        "aria": "page",
+        "cls": "shrink-0 rounded-lg px-3 py-1.5 text-sm font-medium transition-colors bg-brand-50 text-brand-700"
+      }
+    ]
+  }
+]

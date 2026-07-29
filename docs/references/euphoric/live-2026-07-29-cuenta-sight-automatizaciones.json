@@ -1,0 +1,106 @@
+{
+  "url": "https://bookings.conceptoneagency.com/euphoric/cuentas",
+  "title": "Black Moose Group · Intranet",
+  "links": [
+    {
+      "text": "",
+      "href": "/",
+      "title": ""
+    },
+    {
+      "text": "Cuentas",
+      "href": "/euphoric/cuentas",
+      "title": ""
+    },
+    {
+      "text": "Campañas",
+      "href": "/euphoric/campanas",
+      "title": ""
+    },
+    {
+      "text": "Publicaciones",
+      "href": "/euphoric/calendario",
+      "title": ""
+    },
+    {
+      "text": "Creatividades",
+      "href": "/euphoric/piezas",
+      "title": ""
+    },
+    {
+      "text": "Eventos",
+      "href": "/euphoric/eventos",
+      "title": ""
+    },
+    {
+      "text": "Agenda",
+      "href": "/euphoric/agenda",
+      "title": ""
+    },
+    {
+      "text": "Negocio",
+      "href": "/euphoric/negocio",
+      "title": ""
+    },
+    {
+      "text": "",
+      "href": "/euphoric/artistas",
+      "title": "Artistas"
+    },
+    {
+      "text": "",
+      "href": "/euphoric/ajustes",
+      "title": "Ajustes"
+    },
+    {
+      "text": "",
+      "href": "/mi-trabajo",
+      "title": "Inicio · pendientes, documentos y creatividades"
+    },
+    {
+      "text": "test Admin T",
+      "href": "/perfil",
+      "title": ""
+    },
+    {
+      "text": "Mis avisos",
+      "href": "/incidencias",
+      "title": ""
+    }
+  ],
+  "buttons": [
+    "Euphoric Media",
+    "9+",
+    "+ Nueva cuenta",
+    "Mogli Marbella Cliente Pausada",
+    "Opium Bcn Cliente · Paid media Activa",
+    "SIGHT Cliente · Redes sociales, Paid media, Contenido Activa",
+    "Eliminar",
+    "General",
+    "Servicios",
+    "Rentabilidad",
+    "Solicitudes",
+    "Branding",
+    "BDD",
+    "Automatizaciones",
+    "+ Añadir publicación",
+    "＋",
+    "Eliminar",
+    "＋",
+    "Eliminar",
+    "+ Añadir creatividad",
+    "＋ Asignar",
+    "Eliminar",
+    "＋ Asignar",
+    "Eliminar",
+    "Enviar",
+    "Reportar con captura"
+  ],
+  "headings": [
+    "H1: Cuentas",
+    "H2: SIGHT",
+    "H4: Plantillas de publicación",
+    "H4: Plantillas de creatividad"
+  ],
+  "text": "Cuentas\nClientes y marcas que gestiona Euphoric. Los clientes externos se enlazan al CRM del grupo.\n+ Nueva cuenta\nMogli Marbella\nCliente\nPausada\nOpium Bcn\nCliente · Paid media\nActiva\nSIGHT\nCliente · Redes sociales, Paid media, Contenido\nActiva\nSIGHT\nSana\nEliminar\nGeneral\nServicios\nRentabilidad\nSolicitudes\nBranding\nBDD\nAutomatizaciones\nAl crear un evento de esta cuenta se generan solas las publicaciones y creatividades de abajo.\nAl crear un evento de esta cuenta se generarán solas las publicaciones y creatividades de abajo. La fecha/deadline de cada una es relativa a la fecha del evento (offset en días; negativo = antes, p.ej. D-3). En los títulos y nombres puedes usar las variables {evento}, {ciudad} y {fecha}.\nPlantillas de publicación\n+ Añadir publicación\nTítulo\nOffset (días) · D-1\nHora (opc.)\nCanal\nInstagram\nFacebook\nGoogle\nTikTok\nYouTube\nLinkedIn\nX / Twitter\nOtro\nFormato\nReel\nPost\nStory\nCarrusel\nVídeo\nOtro\nResponsables\n＋\nActiva\nEliminar\nTítulo\nOffset (días) · D-30\nHora (opc.)\nCanal\nInstagram\nFacebook\nGoogle\nTikTok\nYouTube\nLinkedIn\nX / Twitter\nOtro\nFormato\nReel\nPost\nStory\nCarrusel\nVídeo\nOtro\nResponsables\n＋\nActiva\nEliminar\nPlantillas de creatividad\n+ Añadir creatividad\nNombre\nTipo\nEstático\nAnimado\nVídeo\nDepartamento\nDiseño\nVídeo\nOtro\nDeadline (días) · D-30\nPublicación enlazada\n— sin publicación —\nSet Times {evento}\nSalida {evento}\nResponsable\n＋\nAsignar\nActiva\nEliminar\nNombre\nTipo\nEstático\nAnimado\nVídeo\nDepartamento\nDiseño\nVídeo\nOtro\nDeadline (días) · D-5\nPublicación enlazada\n— sin publicación —\nSet Times {evento}\nSalida {evento}\nResponsable\n＋\nAsignar\nActiva\nEliminar"
+}

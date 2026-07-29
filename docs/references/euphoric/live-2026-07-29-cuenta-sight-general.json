@@ -1,0 +1,107 @@
+{
+  "url": "https://bookings.conceptoneagency.com/euphoric/cuentas",
+  "title": "Black Moose Group · Intranet",
+  "links": [
+    {
+      "text": "",
+      "href": "/",
+      "title": ""
+    },
+    {
+      "text": "Cuentas",
+      "href": "/euphoric/cuentas",
+      "title": ""
+    },
+    {
+      "text": "Campañas",
+      "href": "/euphoric/campanas",
+      "title": ""
+    },
+    {
+      "text": "Publicaciones",
+      "href": "/euphoric/calendario",
+      "title": ""
+    },
+    {
+      "text": "Creatividades",
+      "href": "/euphoric/piezas",
+      "title": ""
+    },
+    {
+      "text": "Eventos",
+      "href": "/euphoric/eventos",
+      "title": ""
+    },
+    {
+      "text": "Agenda",
+      "href": "/euphoric/agenda",
+      "title": ""
+    },
+    {
+      "text": "Negocio",
+      "href": "/euphoric/negocio",
+      "title": ""
+    },
+    {
+      "text": "",
+      "href": "/euphoric/artistas",
+      "title": "Artistas"
+    },
+    {
+      "text": "",
+      "href": "/euphoric/ajustes",
+      "title": "Ajustes"
+    },
+    {
+      "text": "",
+      "href": "/mi-trabajo",
+      "title": "Inicio · pendientes, documentos y creatividades"
+    },
+    {
+      "text": "test Admin T",
+      "href": "/perfil",
+      "title": ""
+    },
+    {
+      "text": "Mis avisos",
+      "href": "/incidencias",
+      "title": ""
+    }
+  ],
+  "buttons": [
+    "Euphoric Media",
+    "9+",
+    "+ Nueva cuenta",
+    "Mogli Marbella Cliente Pausada",
+    "Opium Bcn Cliente · Paid media Activa",
+    "SIGHT Cliente · Redes sociales, Paid media, Contenido Activa",
+    "Eliminar",
+    "General",
+    "Servicios",
+    "Rentabilidad",
+    "Solicitudes",
+    "Branding",
+    "BDD",
+    "Automatizaciones",
+    "Al corriente",
+    "Pendiente",
+    "Retraso",
+    "Redes sociales",
+    "Paid media",
+    "Contenido",
+    "＋ Sin asignar",
+    "＋ Sin asignar",
+    "＋ Añadir contacto",
+    "Copiar",
+    "Invitar",
+    "Guardar",
+    "Enviar",
+    "Reportar con captura"
+  ],
+  "headings": [
+    "H1: Cuentas",
+    "H2: SIGHT",
+    "H3: PORTAL DE CLIENTE"
+  ],
+  "text": "Cuentas\nClientes y marcas que gestiona Euphoric. Los clientes externos se enlazan al CRM del grupo.\n+ Nueva cuenta\nMogli Marbella\nCliente\nPausada\nOpium Bcn\nCliente · Paid media\nActiva\nSIGHT\nCliente · Redes sociales, Paid media, Contenido\nActiva\nSIGHT\nSana\nEliminar\nGeneral\nServicios\nRentabilidad\nSolicitudes\nBranding\nBDD\nAutomatizaciones\nNombre de la cuenta *\nCuenta interna del grupo (no es cliente externo)\nCliente en el CRM\nEnlaza la cuenta con la ficha del cliente en el CRM del grupo.\nEstado comercial\nLead\nActivo\nFinalizado\nTier\n—\nTier 1 · Gran cuenta\nTier 2 · Estándar\nSector\n—\nHotel\nRestaurante\nOcio nocturno\nFestival\nRetail\nInmobiliaria\nOtro\nEstado\nActiva\nPausada\nBaja\nRetainer mensual (€)\nFecha de inicio\nHoras mensuales contratadas\nContrato firmado\nEstado de pago\nAl corriente\nPendiente\nRetraso\nManual por ahora; se automatizará al integrar Holded.\nServicios\nRedes sociales\nPaid media\nContenido\nResponsable\n＋\nSin asignar\nResp. de aprobar\n＋\nSin asignar\nSe autocompleta en las piezas de esta cuenta.\nContactos\n＋ Añadir contacto\nSin contactos.\nNotas\nENLACE DE APROBACIÓN DEL CLIENTE\nComparte este enlace con el cliente para que apruebe o pida cambios en sus piezas y publicaciones, sin entrar a la intranet.\nCopiar\nPORTAL DE CLIENTE\nDa acceso al cliente para ver su contenido, campañas, eventos, aprobar piezas, gestionar su branding y subir bases de datos. Verá solo lo de esta cuenta.\nInvitar\nSe le enviará un email para crear su contraseña. Requiere permiso de gestión de usuarios.\nGuardar"
+}

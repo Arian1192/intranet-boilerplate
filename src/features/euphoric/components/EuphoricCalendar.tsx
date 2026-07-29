@@ -18,6 +18,19 @@ export interface EuphoricCalendarProps {
   today?: EuphoricCalendarToday;
   /** Render the content of a day cell, keyed by ISO date ('YYYY-MM-DD'). */
   renderDay?: (isoDate: string) => ReactNode;
+  /**
+   * Header layout. `'split'` (default, comportamiento histórico de Euphoric) = `← Julio 2026 →`
+   * repartido a lo ancho. `'leading'` = `← → Julio 2026 {headerActions}` pegado a la izquierda,
+   * que es como lo pinta el calendario de Creativos en el live.
+   */
+  headerLayout?: 'split' | 'leading';
+  /** Contenido extra a la derecha del rótulo del mes (p. ej. el botón "Hoy" de Creativos). */
+  headerActions?: ReactNode;
+  /**
+   * Fuerza siempre 6 semanas rellenando con días del mes siguiente. Por defecto `false`
+   * (la rejilla crece solo hasta completar la última semana), que es lo que usa Euphoric.
+   */
+  fixedSixWeeks?: boolean;
 }
 
 interface CalendarCell {
@@ -36,7 +49,7 @@ function shiftMonth(year: number, month: number, delta: number): { year: number;
   return { year: Math.floor(total / 12), month: ((total % 12) + 12) % 12 };
 }
 
-function buildWeeks(year: number, month: number): CalendarCell[][] {
+function buildWeeks(year: number, month: number, fixedSixWeeks = false): CalendarCell[][] {
   const firstDay = new Date(year, month, 1);
   const daysInMonth = new Date(year, month + 1, 0).getDate();
   const mondayIndex = (firstDay.getDay() + 6) % 7; // Monday = 0
@@ -54,8 +67,9 @@ function buildWeeks(year: number, month: number): CalendarCell[][] {
   }
 
   const next = shiftMonth(year, month, 1);
+  const target = fixedSixWeeks ? 42 : 0;
   let trailDay = 1;
-  while (cells.length % 7 !== 0) {
+  while (cells.length % 7 !== 0 || cells.length < target) {
     cells.push({ year: next.year, month: next.month, day: trailDay, inMonth: false });
     trailDay++;
   }
@@ -83,30 +97,49 @@ export function EuphoricCalendar({
   onNextMonth,
   today,
   renderDay,
+  headerLayout = 'split',
+  headerActions,
+  fixedSixWeeks = false,
 }: EuphoricCalendarProps) {
-  const weeks = buildWeeks(year, month);
+  const weeks = buildWeeks(year, month, fixedSixWeeks);
+
+  const prevButton = (
+    <button
+      type="button"
+      onClick={onPrevMonth}
+      aria-label="Mes anterior"
+      className="rounded-md px-2 py-1 text-sm text-slate-400 hover:bg-slate-50 hover:text-slate-600"
+    >
+      ←
+    </button>
+  );
+  const nextButton = (
+    <button
+      type="button"
+      onClick={onNextMonth}
+      aria-label="Mes siguiente"
+      className="rounded-md px-2 py-1 text-sm text-slate-400 hover:bg-slate-50 hover:text-slate-600"
+    >
+      →
+    </button>
+  );
 
   return (
     <div className="rounded-xl border border-slate-100 bg-white p-5 shadow-sm">
-      <div className="mb-4 flex items-center justify-between">
-        <button
-          type="button"
-          onClick={onPrevMonth}
-          aria-label="Mes anterior"
-          className="rounded-md px-2 py-1 text-sm text-slate-400 hover:bg-slate-50 hover:text-slate-600"
-        >
-          ←
-        </button>
-        <h3 className="text-base font-semibold text-slate-900">{monthLabel}</h3>
-        <button
-          type="button"
-          onClick={onNextMonth}
-          aria-label="Mes siguiente"
-          className="rounded-md px-2 py-1 text-sm text-slate-400 hover:bg-slate-50 hover:text-slate-600"
-        >
-          →
-        </button>
-      </div>
+      {headerLayout === 'leading' ? (
+        <div className="mb-4 flex items-center gap-1">
+          {prevButton}
+          {nextButton}
+          <h3 className="ml-1 text-base font-semibold text-slate-900">{monthLabel}</h3>
+          {headerActions}
+        </div>
+      ) : (
+        <div className="mb-4 flex items-center justify-between">
+          {prevButton}
+          <h3 className="text-base font-semibold text-slate-900">{monthLabel}</h3>
+          {nextButton}
+        </div>
+      )}
 
       <div className="grid grid-cols-7 text-center text-xs uppercase text-slate-400">
         {WEEKDAYS.map((day) => (
@@ -213,5 +246,18 @@ export function EventPill({ name, tone = 'rose' }: EventPillProps) {
       <span className="shrink-0">📍</span>
       <span className="line-clamp-2">{name}</span>
     </div>
+  );
+}
+
+/** Botón "Hoy" del live, pensado para el `headerActions` del calendario. */
+export function TodayButton({ onClick }: { onClick: () => void }) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className="rounded-md px-2 py-1 text-sm text-slate-500 hover:bg-slate-50 hover:text-slate-700"
+    >
+      Hoy
+    </button>
   );
 }

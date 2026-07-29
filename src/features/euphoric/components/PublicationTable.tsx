@@ -23,7 +23,7 @@ export function PublicationTable({ publications }: { publications: Publication[]
             <th className="px-4 py-3">CUENTA</th>
             <th className="px-4 py-3">EVENTO</th>
             <th className="px-4 py-3">TEXTO</th>
-            <th className="px-4 py-3">IMAGEN</th>
+            <th className="px-4 py-3">CREATIVIDAD</th>
             <th className="px-4 py-3">ESTADO</th>
           </tr>
         </thead>
