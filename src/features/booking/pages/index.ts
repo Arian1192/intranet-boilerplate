@@ -3,3 +3,7 @@ export * from './ShowsPage';
 export * from './CalendarioPage';
 export * from './DisponibilidadPage';
 export * from './ContactosPage';
+export * from './OfertasPage';
+export * from './CobrosPage';
+export * from './GastosPage';
+export * from './EstrategiasPage';

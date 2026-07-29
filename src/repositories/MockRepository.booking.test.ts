@@ -9,16 +9,31 @@ describe('MockRepository booking', () => {
     expect(data.kpis.map((k) => k.status)).toEqual([
       'tentative', 'confirmed', 'contract', 'pending-payment', 'pending-settlement', 'done',
     ]);
-    const tentative = data.kpis[0];
-    expect(tentative.amount).toBeCloseTo(5679.48, 2);
-    expect(tentative.count).toBe(7);
-    const liquidado = data.kpis[5];
-    expect(liquidado.amount).toBe(3500);
-    expect(liquidado.count).toBe(2);
+    // Cifras del barrido del live (29 jul 2026).
+    expect(data.kpis.map((k) => [k.amount, k.count])).toEqual([
+      [11433.78, 12],
+      [11100, 9],
+      [0, 0],
+      [800, 1],
+      [6150, 6],
+      [1000, 1],
+    ]);
     expect(data.kpis.some((k) => k.status === 'offer')).toBe(false);
-    expect(data.advancing.length).toBeGreaterThan(0);
-    expect(data.logistics.length).toBeGreaterThan(0);
-    expect(data.upcomingShows.length).toBeGreaterThan(0);
+    expect(data.advancing).toHaveLength(5);
+    expect(data.logistics).toHaveLength(5);
+    expect(data.upcomingShows).toHaveLength(10);
+  });
+
+  it('el panel de atención trae fichas a revisar y los posibles gigs del live', async () => {
+    const repo = new MockRepository();
+    const data = await repo.getBookingDashboard();
+    expect(data.fichasRevisar).toEqual({ artistas: 40, datos: 111, documentos: 50, bios: 33 });
+    expect(data.posiblesGigs).toHaveLength(5);
+    expect(data.posiblesGigs.every((gig) => gig.artista === 'Bizza')).toBe(true);
+    expect(data.posiblesGigs[0].titulo).toBe(
+      'Tentative - Playa de las Américas - Papagayo Tenerife'
+    );
+    expect(data.posiblesGigs[4].fecha).toBe('31 oct 2026');
   });
 
   it('getShows devuelve los 14 shows del live con datos exactos', async () => {

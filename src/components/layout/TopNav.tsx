@@ -7,10 +7,28 @@ import { EspaciosDropdown } from './EspaciosDropdown';
 import type { User } from '@/types';
 import type { LucideIcon } from 'lucide-react';
 
+export interface ModuleNavItem {
+  label: string;
+  href: string;
+}
+
+/**
+ * Navegación de dos niveles: áreas del módulo en la barra superior y secciones
+ * en una segunda barra. El estado activo lo decide quien la usa (el shell del
+ * módulo), porque un área puede estar activa en rutas distintas a su href.
+ */
+export interface ModuleNav {
+  areas: ModuleNavItem[];
+  activeArea?: string | null;
+  sections?: ModuleNavItem[];
+  activeSection?: string | null;
+}
+
 export interface ModuleHeader {
   name: string;
   href?: string;
   tabs?: { label: string; href: string }[];
+  nav?: ModuleNav;
   actionLabel?: string;
   iconActions?: { icon: LucideIcon; href: string; label: string }[];
 }
@@ -64,6 +82,22 @@ export function TopNav({ user, notificationCount = 0, module }: TopNavProps) {
                   {tab.label}
                 </NavLink>
               ))}
+              {module.nav?.areas.map((area) => {
+                const isActive = module.nav?.activeArea === area.label;
+                return (
+                  <Link
+                    key={area.href}
+                    to={area.href}
+                    aria-current={isActive ? 'page' : undefined}
+                    className={cn(
+                      'rounded-lg px-3 py-1.5 text-sm font-medium transition-colors',
+                      isActive ? 'bg-slate-100 text-slate-900' : 'text-slate-600 hover:bg-slate-100'
+                    )}
+                  >
+                    {area.label}
+                  </Link>
+                );
+              })}
             </nav>
           )}
         </div>
@@ -114,6 +148,34 @@ export function TopNav({ user, notificationCount = 0, module }: TopNavProps) {
           <UserMenu user={user} />
         </div>
       </div>
+
+      {module?.nav?.sections && (
+        <div className="border-t border-slate-200">
+          <nav
+            className="mx-auto flex h-11 max-w-7xl items-center gap-1 px-4"
+            aria-label={`Secciones de ${module.name}`}
+          >
+            {module.nav.sections.map((section) => {
+              const isActive = module.nav?.activeSection === section.label;
+              return (
+                <Link
+                  key={section.href}
+                  to={section.href}
+                  aria-current={isActive ? 'page' : undefined}
+                  className={cn(
+                    'rounded-lg px-3 py-1.5 text-sm font-medium transition-colors',
+                    isActive
+                      ? 'bg-[#44444C] text-white'
+                      : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
+                  )}
+                >
+                  {section.label}
+                </Link>
+              );
+            })}
+          </nav>
+        </div>
+      )}
     </header>
   );
 }

@@ -27,6 +27,9 @@ export function ShowListItem({ item, variant = 'list' }: ShowListItemProps) {
         </span>
         <div className="min-w-0 flex-1">
           <div className="truncate font-medium text-slate-800">{item.title}</div>
+          {item.location && (
+            <div className="truncate text-xs text-slate-500">{item.location}</div>
+          )}
         </div>
         {item.badges[0] && (
           <Badge variant="sky" className="shrink-0">

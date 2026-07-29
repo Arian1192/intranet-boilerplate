@@ -82,10 +82,31 @@ export interface ShowSummary {
   date: string;
   daysLeft: number;
   badges: string[];
+  /** Sólo en Próximos shows: ciudad y país del show. */
+  location?: string;
+}
+
+/** Resumen del aviso «Fichas a revisar» del panel de atención. */
+export interface FichasRevisar {
+  artistas: number;
+  datos: number;
+  documentos: number;
+  bios: number;
+}
+
+/** Fecha del Google Calendar del artista que todavía no es un show. */
+export interface PosibleGig {
+  id: string;
+  artista: string;
+  titulo: string;
+  fecha: string;
+  detalle: string;
 }
 
 export interface BookingDashboard {
   kpis: Kpi[];
+  fichasRevisar: FichasRevisar;
+  posiblesGigs: PosibleGig[];
   advancing: ShowSummary[];
   logistics: ShowSummary[];
   upcomingShows: ShowSummary[];
