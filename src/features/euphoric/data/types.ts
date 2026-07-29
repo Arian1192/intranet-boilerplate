@@ -71,6 +71,40 @@ export interface Artist {
   id: string; name: string; kind: 'Agencia' | 'Externo';
 }
 
+export type LeadStage = 'frio' | 'templado' | 'caliente';
+
+/** Oportunidad comercial del pipeline de Negocio. */
+export interface Lead {
+  id: string; name: string; probability: number; value: number;
+  owner: string; ownerInitials: string; closeDateLabel: string; stage: LeadStage;
+}
+
+/** Servicio del catálogo de Presupuestos. */
+export interface CatalogService {
+  id: string; name: string; department: string; detail: string;
+  unit: string; rate: number; minimum: number; cost: number;
+}
+
+/** Dedicación asignada de una persona o de un departamento. */
+export interface Dedication {
+  id: string; label: string; hoursPerMonth: number; cost: number;
+}
+
+/** Aviso de la portada de Negocio. */
+export interface BusinessAlert {
+  id: string; account: string; message: string; tag: string;
+}
+
+/** Tiempo medio que pasa un elemento en una fase. */
+export interface PhaseTime {
+  id: string; entity: string; phase: string; average: string; times: string;
+}
+
+/** Elemento que lleva más tiempo parado en su fase. */
+export interface StalledItem {
+  id: string; title: string; entity: string; status: string; account: string; age: string;
+}
+
 export type AgendaEntryKind = 'Reunión' | 'Lanzamiento' | 'Grabación' | 'Entrega' | 'Renovación' | 'Otro';
 
 /** Entrada propia de la agenda (la capa que no viene de publicaciones, creatividades ni eventos). */
