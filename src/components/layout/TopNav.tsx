@@ -165,7 +165,7 @@ export function TopNav({ user, notificationCount = 0, module }: TopNavProps) {
                   className={cn(
                     'rounded-lg px-3 py-1.5 text-sm font-medium transition-colors',
                     isActive
-                      ? 'bg-slate-800 text-white'
+                      ? 'bg-[#44444C] text-white'
                       : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
                   )}
                 >

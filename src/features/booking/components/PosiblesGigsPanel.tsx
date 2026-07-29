@@ -38,7 +38,7 @@ export function PosiblesGigsPanel({ gigs }: PosiblesGigsPanelProps) {
             <div className="flex shrink-0 items-center gap-2">
               <button
                 type="button"
-                className="rounded-lg bg-slate-800 px-3 py-1.5 text-xs font-semibold text-white hover:bg-slate-900"
+                className="rounded-lg bg-slate-900 px-3 py-1.5 text-xs font-semibold text-white hover:bg-slate-800"
               >
                 Upgrade a Show →
               </button>

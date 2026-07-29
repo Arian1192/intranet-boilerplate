@@ -50,7 +50,7 @@ export function CobrosPage() {
             las facturas conciliadas en Holded.
           </p>
         </div>
-        <Button className="shrink-0">Facturar el mes…</Button>
+        <Button className="shrink-0 bg-[#44444C] hover:bg-slate-800">Facturar el mes…</Button>
       </div>
 
       <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
