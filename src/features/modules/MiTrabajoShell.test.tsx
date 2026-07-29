@@ -8,9 +8,11 @@ vi.mock('@blocknote/react', () => ({ useCreateBlockNote: () => ({}) }));
 vi.mock('@blocknote/mantine', () => ({ BlockNoteView: () => <div /> }));
 
 describe('MiTrabajoShell', () => {
-  it('renders the page inside the app layout', () => {
+  it('renders the tab switcher inside the app layout, landing on Pendientes', () => {
     render(<MemoryRouter><MiTrabajoShell /></MemoryRouter>);
-    expect(screen.getByText('Documentos')).toBeInTheDocument();
-    expect(screen.getByRole('heading', { name: 'Tareas' })).toBeInTheDocument();
+    // El live ya no aterriza en el editor: /mi-trabajo abre Pendientes.
+    expect(screen.getByRole('tablist', { name: 'Secciones de Mi trabajo' })).toBeInTheDocument();
+    expect(screen.getByText('No te toca nada ahora mismo')).toBeInTheDocument();
+    expect(screen.queryByRole('heading', { name: 'Tareas' })).not.toBeInTheDocument();
   });
 });
