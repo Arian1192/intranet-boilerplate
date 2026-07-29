@@ -1,11 +1,16 @@
 import type { Account, Campaign, Piece, EventItem, Publication, Artist } from './types';
 
+/** Fecha de referencia del calco (día de la captura del live). */
+export const todayIso = '2026-07-29';
+
 export const accounts: Account[] = [
+  { id: 'acc-mogli', name: 'Mogli Marbella', kind: 'Cliente', services: [], status: 'Pausada', retainer: 0 },
+  { id: 'acc-opium', name: 'Opium Bcn', kind: 'Cliente', services: ['Paid media'], status: 'Activa', retainer: 2000 },
   { id: 'acc-sight', name: 'SIGHT', kind: 'Cliente', services: ['Redes sociales', 'Paid media', 'Contenido'], status: 'Activa', retainer: 800 },
 ];
 
 export const campaigns: Campaign[] = [
-  { id: 'cmp-generico-julio', name: 'Genérico Julio', account: 'SIGHT', type: 'Paid media', startLabel: '10 jul 2026', endLabel: '31 ago 2026', status: 'en-curso', owner: 'Sin asignar', budget: 600, spent: 0 },
+  { id: 'cmp-generico-julio', name: 'Genérico Julio', account: 'SIGHT', type: 'Paid media', startLabel: '10 jul 2026', endLabel: '31 ago 2026', status: 'finalizada', owner: 'Sin asignar', budget: 600, spent: 0 },
 ];
 
 export const pieces: Piece[] = [
@@ -26,6 +31,13 @@ export const publications: Publication[] = [
     id: 'pub-settimes', name: 'Set Times', dateLabel: '10 jul 2026', isoDate: '2026-07-10', channel: 'Instagram',
     account: 'SIGHT', status: 'En producción', type: 'Post', eventName: 'SIGHT: Patrick Topping, ACA, Luca 606, Nicholls',
     time: '12:00', textApproval: 'Aprobado', imageApproval: 'Pendiente', kanbanColumn: 'falta-arte',
+  },
+  {
+    id: 'pub-settimes-claptone',
+    name: 'Set Times SIGHT: Claptone, Vite b2b Miganova, Tomi & Kesh , Alexanders Som, Luka Kuhnow',
+    dateLabel: '01 ago 2026', isoDate: '2026-08-01', channel: 'Instagram', account: 'SIGHT', status: 'Idea', type: 'Reel',
+    eventName: 'SIGHT: Claptone, Vite b2b Miganova, Tomi & Kesh , Alexanders Som, Luka Kuhnow',
+    time: '', textApproval: 'Pendiente', imageApproval: 'Pendiente', kanbanColumn: 'falta-copy',
   },
 ];
 
