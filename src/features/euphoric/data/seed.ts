@@ -1,4 +1,4 @@
-import type { Account, Campaign, Piece, EventItem, Publication, Artist } from './types';
+import type { Account, AgendaEntry, Campaign, Piece, EventItem, Publication, Artist } from './types';
 
 /** Fecha de referencia del calco (día de la captura del live). */
 export const todayIso = '2026-07-29';
@@ -110,6 +110,17 @@ export const publications: Publication[] = [
   { id: 'pub-settimes-james', name: `Set Times ${EV_JAMES}`, dateLabel: '08 ago 2026', isoDate: '2026-08-08', channel: 'Instagram', account: 'SIGHT', status: 'Idea', type: 'Reel', eventName: EV_JAMES, time: '12:00', textApproval: 'Pendiente', imageApproval: 'Pendiente', kanbanColumn: 'falta-copy' },
   { id: 'pub-settimes-sonny', name: `Set Times ${EV_SONNY}`, dateLabel: '15 ago 2026', isoDate: '2026-08-15', channel: 'Instagram', account: 'SIGHT', status: 'Idea', type: 'Reel', eventName: EV_SONNY, time: '12:00', textApproval: 'Pendiente', imageApproval: 'Pendiente', kanbanColumn: 'falta-copy' },
 ];
+
+export const agendaEntries: AgendaEntry[] = [
+  { id: 'ag-board', title: 'Board Meeting', isoDate: '2026-07-29', time: '11:00', kind: 'Reunión', account: '' },
+];
+
+/** Umbrales de color del deadline y coste/hora del espacio (Ajustes). */
+export const spaceSettings = {
+  deadlineYellowDays: 7,
+  deadlineRedDays: 2,
+  hourlyCost,
+};
 
 export const artists: Artist[] = [
   { id: 'aaron-martin', name: 'Aaron Martin', kind: 'Agencia' },

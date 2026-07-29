@@ -189,6 +189,7 @@ function PiecesCalendar({ pieces: visiblePieces }: { pieces: Piece[] }) {
         monthLabel={`${MONTH_LABELS[cursor.month]} ${cursor.year}`}
         onPrevMonth={() => setCursor((value) => addMonths(value, -1))}
         onNextMonth={() => setCursor((value) => addMonths(value, 1))}
+        onToday={() => setCursor(TODAY)}
         today={{ year: TODAY.year, month: TODAY.month, day: TODAY_DAY }}
         renderDay={renderDay}
       />

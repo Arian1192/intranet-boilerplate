@@ -15,6 +15,7 @@ export interface EuphoricCalendarProps {
   monthLabel: string;
   onPrevMonth?: () => void;
   onNextMonth?: () => void;
+  onToday?: () => void;
   today?: EuphoricCalendarToday;
   /** Render the content of a day cell, keyed by ISO date ('YYYY-MM-DD'). */
   renderDay?: (isoDate: string) => ReactNode;
@@ -81,6 +82,7 @@ export function EuphoricCalendar({
   monthLabel,
   onPrevMonth,
   onNextMonth,
+  onToday,
   today,
   renderDay,
 }: EuphoricCalendarProps) {
@@ -88,7 +90,8 @@ export function EuphoricCalendar({
 
   return (
     <div className="rounded-xl border border-slate-100 bg-white p-5 shadow-sm">
-      <div className="mb-4 flex items-center justify-between">
+      {/* El live agrupa la navegación a la izquierda: ← → Mes Año · Hoy */}
+      <div className="mb-4 flex items-center gap-3">
         <button
           type="button"
           onClick={onPrevMonth}
@@ -97,7 +100,6 @@ export function EuphoricCalendar({
         >
           ←
         </button>
-        <h3 className="text-base font-semibold text-slate-900">{monthLabel}</h3>
         <button
           type="button"
           onClick={onNextMonth}
@@ -106,6 +108,16 @@ export function EuphoricCalendar({
         >
           →
         </button>
+        <h3 className="text-base font-semibold text-slate-900">{monthLabel}</h3>
+        {onToday && (
+          <button
+            type="button"
+            onClick={onToday}
+            className="rounded-md px-2 py-1 text-sm text-slate-500 hover:bg-slate-50 hover:text-slate-700"
+          >
+            Hoy
+          </button>
+        )}
       </div>
 
       <div className="grid grid-cols-7 text-center text-xs uppercase text-slate-400">

@@ -110,9 +110,6 @@ function CalendarioView({ publications: visiblePublications }: { publications: P
         >
           <span className="h-1.5 w-1.5 rounded-full bg-red-500" /> Eventos
         </button>
-        <Button variant="secondary" size="sm" onClick={() => setCursor(TODAY)}>
-          Hoy
-        </Button>
       </div>
       <EuphoricCalendar
         year={cursor.year}
@@ -120,6 +117,7 @@ function CalendarioView({ publications: visiblePublications }: { publications: P
         monthLabel={`${MONTH_LABELS[cursor.month]} ${cursor.year}`}
         onPrevMonth={() => setCursor((value) => addMonths(value, -1))}
         onNextMonth={() => setCursor((value) => addMonths(value, 1))}
+        onToday={() => setCursor(TODAY)}
         today={{ year: TODAY.year, month: TODAY.month, day: TODAY_DAY }}
         renderDay={renderDay}
       />

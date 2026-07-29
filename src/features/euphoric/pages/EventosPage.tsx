@@ -65,6 +65,10 @@ function EventosCalendario({ events: visibleEvents }: { events: EventItem[] }) {
         monthLabel={`${MONTHS_ES[month]} ${year}`}
         onPrevMonth={() => goToMonth(-1)}
         onNextMonth={() => goToMonth(1)}
+        onToday={() => {
+          setYear(TODAY_YEAR);
+          setMonth(TODAY_MONTH - 1);
+        }}
         today={{ year: TODAY_YEAR, month: TODAY_MONTH - 1, day: TODAY_DAY }}
         renderDay={renderDay}
       />

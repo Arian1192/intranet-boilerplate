@@ -70,3 +70,10 @@ export interface Publication {
 export interface Artist {
   id: string; name: string; kind: 'Agencia' | 'Externo';
 }
+
+export type AgendaEntryKind = 'Reunión' | 'Lanzamiento' | 'Grabación' | 'Entrega' | 'Renovación' | 'Otro';
+
+/** Entrada propia de la agenda (la capa que no viene de publicaciones, creatividades ni eventos). */
+export interface AgendaEntry {
+  id: string; title: string; isoDate: string; time: string; kind: AgendaEntryKind; account: string;
+}
