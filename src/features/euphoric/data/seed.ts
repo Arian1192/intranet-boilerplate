@@ -3,10 +3,63 @@ import type { Account, Campaign, Piece, EventItem, Publication, Artist } from '.
 /** Fecha de referencia del calco (día de la captura del live). */
 export const todayIso = '2026-07-29';
 
+/** Coste interno por hora del espacio (Ajustes · Rentabilidad). */
+export const hourlyCost = 25;
+
+const accountDefaults = {
+  health: 'Sana' as const,
+  tier: '—',
+  sector: '—',
+  startDate: '',
+  monthlyHours: '',
+  contractSigned: false,
+  paymentStatus: 'Al corriente' as const,
+  crmClient: '',
+  databases: [],
+  publicationTemplates: [],
+  creativeTemplates: [],
+};
+
 export const accounts: Account[] = [
-  { id: 'acc-mogli', name: 'Mogli Marbella', kind: 'Cliente', services: [], status: 'Pausada', retainer: 0 },
-  { id: 'acc-opium', name: 'Opium Bcn', kind: 'Cliente', services: ['Paid media'], status: 'Activa', retainer: 2000 },
-  { id: 'acc-sight', name: 'SIGHT', kind: 'Cliente', services: ['Redes sociales', 'Paid media', 'Contenido'], status: 'Activa', retainer: 800 },
+  {
+    ...accountDefaults,
+    id: 'acc-mogli', name: 'Mogli Marbella', kind: 'Cliente', services: [], status: 'Pausada', retainer: 0,
+    commercialStatus: 'Lead',
+    // Enlace de aprobación con token de mentira: el del live es una URL real y no se copia.
+    approvalLink: 'https://bookings.conceptoneagency.com/aprobar/mock-mogli-marbella',
+  },
+  {
+    ...accountDefaults,
+    id: 'acc-opium', name: 'Opium Bcn', kind: 'Cliente', services: ['Paid media'], status: 'Activa', retainer: 2000,
+    commercialStatus: 'Activo',
+    approvalLink: 'https://bookings.conceptoneagency.com/aprobar/mock-opium-bcn',
+  },
+  {
+    ...accountDefaults,
+    id: 'acc-sight', name: 'SIGHT', kind: 'Cliente', services: ['Redes sociales', 'Paid media', 'Contenido'],
+    status: 'Activa', retainer: 800, commercialStatus: 'Activo',
+    approvalLink: 'https://bookings.conceptoneagency.com/aprobar/mock-sight',
+    databases: [
+      {
+        id: 'bdd-fourvenues', name: 'Fourvenues Tickets',
+        eventName: 'SIGHT: Oden & Fatzo, KOKO b2b Bizza, Jan, Caste',
+        cleanContacts: 258, totalContacts: 408, state: 'Listo',
+      },
+      {
+        id: 'bdd-fv', name: 'fv',
+        eventName: 'SIGHT: Nicole Moudaber, Miane, Galgo, Janse',
+        cleanContacts: 84, totalContacts: 158, state: 'Listo',
+      },
+    ],
+    publicationTemplates: [
+      { id: 'tpl-pub-settimes', title: 'Set Times {evento}', offsetDays: -1, time: '12:00', channel: 'Instagram', format: 'Reel', active: true },
+      { id: 'tpl-pub-salida', title: 'Salida {evento}', offsetDays: -30, time: '17:00', channel: 'Instagram', format: 'Reel', active: true },
+    ],
+    creativeTemplates: [
+      { id: 'tpl-crv-flyer', name: 'Flyer {evento}', type: 'Estático', department: 'Diseño', deadlineOffsetDays: -30, linkedPublication: 'Salida {evento}', active: true },
+      { id: 'tpl-crv-settimes', name: 'Set Times {evento}', type: 'Estático', department: 'Diseño', deadlineOffsetDays: -5, linkedPublication: 'Set Times {evento}', active: true },
+    ],
+  },
 ];
 
 export const campaigns: Campaign[] = [
