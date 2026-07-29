@@ -4,17 +4,21 @@ export default {
   theme: {
     extend: {
       colors: {
+        // Carbón neutro (re-tema del live). Los stops 50/100/400/500/600/700
+        // salen del live; 200/300 se interpolan entre 100 y 400 siguiendo la
+        // curva de las rampas neutras de Tailwind (200 al ~16 % del tramo,
+        // 300 al ~41 %, como slate) y 800/900 continúan oscureciendo desde 700.
         brand: {
-          50: '#F7F3FB',
-          100: '#EDE9FE',
-          200: '#DDD6FE',
-          300: '#C4B5FD',
-          400: '#A78BFA',
-          500: '#8B5CF6',
-          600: '#773C9F',
-          700: '#633383',
-          800: '#5B21B6',
-          900: '#4C1D95',
+          50: '#F6F6F7',
+          100: '#ECECED',
+          200: '#DBDBDE',
+          300: '#C1C1C6',
+          400: '#84848D',
+          500: '#5F5F68',
+          600: '#44444C',
+          700: '#37373D',
+          800: '#2B2B30',
+          900: '#1F1F23',
         },
         status: {
           info: '#3B82F6',
