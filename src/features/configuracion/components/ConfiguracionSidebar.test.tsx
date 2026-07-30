@@ -36,10 +36,10 @@ describe('ConfiguracionSidebar', () => {
     expect(screen.getByText('Plantillas de correo').closest('a')).not.toHaveClass('bg-slate-100');
   });
 
-  it('"Cuentas (auditoría)" es un link de salida a /personal y nunca queda activo', () => {
+  it('"Cuentas (auditoría)" es un link de salida a /personal/usuarios y nunca queda activo', () => {
     renderAt('/configuracion');
     const link = screen.getByText('Cuentas (auditoría)').closest('a')!;
-    expect(link).toHaveAttribute('href', '/personal');
+    expect(link).toHaveAttribute('href', '/personal/usuarios');
     expect(link).not.toHaveClass('bg-slate-100');
   });
 });

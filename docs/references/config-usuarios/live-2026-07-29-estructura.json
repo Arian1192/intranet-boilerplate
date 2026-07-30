@@ -1,0 +1,890 @@
+{
+  "bloques": [
+    {
+      "titulo": "TAGMAG",
+      "sub": null,
+      "filas": [
+        {
+          "nombre": "Dashboard",
+          "nota": "Las cajas del pipeline y lo que necesita atención.",
+          "ver": "check",
+          "editar": "na"
+        },
+        {
+          "nombre": "Importes (€) en las cajas del Dashboard",
+          "nota": "Sin esto ve el NÚMERO de shows en cada caja, no el dinero.",
+          "ver": "check",
+          "editar": "na"
+        },
+        {
+          "nombre": "Shows",
+          "nota": "El listado. Sin esto no llega a ninguna ficha.",
+          "ver": "check",
+          "editar": "na"
+        },
+        {
+          "nombre": "Disponibilidad",
+          "nota": null,
+          "ver": "check",
+          "editar": "na"
+        },
+        {
+          "nombre": "Contactos",
+          "nota": null,
+          "ver": "check",
+          "editar": "na"
+        },
+        {
+          "nombre": "Artistas",
+          "nota": "El listado de artistas. Lo que ve DENTRO se decide abajo.",
+          "ver": "check",
+          "editar": "na"
+        },
+        {
+          "nombre": "Analítica",
+          "nota": "Fees, bookers, comisiones. Es dinero.",
+          "ver": "check",
+          "editar": "na"
+        },
+        {
+          "nombre": "Cobros",
+          "nota": "Facturas y saldos de promotores. Editar = emitir/vincular facturas y «Facturar el mes».",
+          "ver": "check",
+          "editar": "check"
+        },
+        {
+          "nombre": "Gastos",
+          "nota": "Movimientos de Holded. Editar = conciliar (asignar un movimiento a un show).",
+          "ver": "check",
+          "editar": "check"
+        },
+        {
+          "nombre": "Ajustes de ConceptOne",
+          "nota": "Comisiones y exclusividad, plantillas de contrato, alertas, recordatorios de cobro.",
+          "ver": "check",
+          "editar": "check"
+        }
+      ]
+    },
+    {
+      "titulo": "TAGMAG",
+      "sub": null,
+      "filas": [
+        {
+          "nombre": "Crear shows nuevos",
+          "nota": null,
+          "ver": "check",
+          "editar": "na"
+        },
+        {
+          "nombre": "Evento",
+          "nota": "Artista, fecha, venue, aforo.",
+          "ver": "check",
+          "editar": "check"
+        },
+        {
+          "nombre": "Oferta",
+          "nota": "El DEAL: fee, taquilla, IVA, comisión del booker. Es el dinero del show.",
+          "ver": "check",
+          "editar": "check"
+        },
+        {
+          "nombre": "Logística del deal",
+          "nota": "Qué cubre el promotor (vuelos, hotel, ground, dietas) y el rider del show.",
+          "ver": "check",
+          "editar": "check"
+        },
+        {
+          "nombre": "Set Times",
+          "nota": null,
+          "ver": "check",
+          "editar": "check"
+        },
+        {
+          "nombre": "Artwork",
+          "nota": null,
+          "ver": "check",
+          "editar": "check"
+        },
+        {
+          "nombre": "Contactos del show",
+          "nota": "Signer, payer, promotor.",
+          "ver": "check",
+          "editar": "check"
+        },
+        {
+          "nombre": "Itinerario y gastos",
+          "nota": "Vuelos, hotel, traslados… y los gastos del show (cerrarlos incluido).",
+          "ver": "check",
+          "editar": "check"
+        },
+        {
+          "nombre": "Contrato",
+          "nota": "Generar, mandar a firmar y subir el firmado.",
+          "ver": "check",
+          "editar": "check"
+        },
+        {
+          "nombre": "Pagos",
+          "nota": "Plan de cobro al promotor.",
+          "ver": "check",
+          "editar": "check"
+        },
+        {
+          "nombre": "Liquidación",
+          "nota": "Cuentas finales y pagos al artista.",
+          "ver": "check",
+          "editar": "check"
+        },
+        {
+          "nombre": "Enviar el informe al artista",
+          "nota": "El correo con la liquidación. Vive en la pestaña Liquidación.",
+          "ver": "check",
+          "editar": "na"
+        },
+        {
+          "nombre": "Eliminar shows",
+          "nota": "No hay botón en ninguna pantalla: hoy esto solo protege la API.",
+          "ver": "check",
+          "editar": "na"
+        }
+      ]
+    },
+    {
+      "titulo": "TAGMAG",
+      "sub": null,
+      "filas": [
+        {
+          "nombre": "Ficha artista",
+          "nota": "Foto, redes, Spotify, estilos. La cara pública del proyecto.",
+          "ver": "check",
+          "editar": "check"
+        },
+        {
+          "nombre": "Ficha personal",
+          "nota": "Miembros, nombres legales, DNI/pasaporte. Sin esto no se compra un vuelo.",
+          "ver": "check",
+          "editar": "check"
+        },
+        {
+          "nombre": "Condiciones económicas",
+          "nota": "Booking fee %, management fee %, territorios, mail de liquidaciones.",
+          "ver": "check",
+          "editar": "check"
+        },
+        {
+          "nombre": "Rider técnico / hospitality",
+          "nota": "Vive en la pestaña Condiciones, pero es OTRO permiso: lo necesita producción, no finanzas.",
+          "ver": "check",
+          "editar": "check"
+        },
+        {
+          "nombre": "Documentación",
+          "nota": null,
+          "ver": "check",
+          "editar": "check"
+        },
+        {
+          "nombre": "Contrato con el artista",
+          "nota": null,
+          "ver": "check",
+          "editar": "check"
+        },
+        {
+          "nombre": "Roster",
+          "nota": "Vista de tarjetas (foto + redes) de todo el roster, con acceso rápido a la Ficha artista.",
+          "ver": "check",
+          "editar": "check"
+        }
+      ]
+    },
+    {
+      "titulo": "TAGMAG",
+      "sub": null,
+      "filas": [
+        {
+          "nombre": "Incidencias",
+          "nota": "Registro operativo de incidentes. Cada persona ve solo los suyos (reportados/owner/participante) salvo el permiso de dirección. Solo un admin puede borrarlos.",
+          "ver": "check",
+          "editar": "check"
+        },
+        {
+          "nombre": "Incidencias · Dirección (todas + confidenciales)",
+          "nota": "Acceso total a todas e incidentes confidenciales (conducta, staff). Solo dirección/Management.",
+          "ver": "check",
+          "editar": "check"
+        },
+        {
+          "nombre": "Estrategias de artista",
+          "nota": "Estrategias de management por artista (shows, música, patrocinios, conexiones).",
+          "ver": "check",
+          "editar": "check"
+        }
+      ]
+    },
+    {
+      "titulo": "TAGMAG",
+      "sub": null,
+      "filas": [
+        {
+          "nombre": "Maf",
+          "nota": "Interno",
+          "ver": "vacio",
+          "editar": "vacio"
+        },
+        {
+          "nombre": "Patricia Pareja Casalí",
+          "nota": "Interno",
+          "ver": "vacio",
+          "editar": "vacio"
+        },
+        {
+          "nombre": "Alberto Egea",
+          "nota": "Interno",
+          "ver": "vacio",
+          "editar": "vacio"
+        },
+        {
+          "nombre": "Fran Hinojosa Veredas",
+          "nota": "Admin",
+          "ver": "vacio",
+          "editar": "vacio"
+        },
+        {
+          "nombre": "Sadkiel",
+          "nota": "Interno",
+          "ver": "vacio",
+          "editar": "vacio"
+        },
+        {
+          "nombre": "Jack Howell",
+          "nota": "Admin",
+          "ver": "vacio",
+          "editar": "vacio"
+        },
+        {
+          "nombre": "Tony Carrerira",
+          "nota": "Admin",
+          "ver": "vacio",
+          "editar": "vacio"
+        },
+        {
+          "nombre": "Jassi Gonzalez Montes",
+          "nota": "Admin",
+          "ver": "vacio",
+          "editar": "vacio"
+        },
+        {
+          "nombre": "gelabertalba",
+          "nota": "Portal",
+          "ver": "vacio",
+          "editar": "vacio"
+        },
+        {
+          "nombre": "Alba G",
+          "nota": "Interno",
+          "ver": "vacio",
+          "editar": "vacio"
+        },
+        {
+          "nombre": "Aldo Messina",
+          "nota": "Interno",
+          "ver": "vacio",
+          "editar": "vacio"
+        },
+        {
+          "nombre": "Yenifer Bernardo",
+          "nota": "Interno",
+          "ver": "vacio",
+          "editar": "vacio"
+        },
+        {
+          "nombre": "hello",
+          "nota": "Portal",
+          "ver": "vacio",
+          "editar": "vacio"
+        },
+        {
+          "nombre": "Israel Cuenca",
+          "nota": "Interno",
+          "ver": "vacio",
+          "editar": "vacio"
+        },
+        {
+          "nombre": "Juan (Staff Level Test)",
+          "nota": "Interno",
+          "ver": "vacio",
+          "editar": "vacio"
+        },
+        {
+          "nombre": "Oscar Buch",
+          "nota": "Interno",
+          "ver": "vacio",
+          "editar": "vacio"
+        },
+        {
+          "nombre": "Alex González",
+          "nota": "Interno",
+          "ver": "vacio",
+          "editar": "vacio"
+        },
+        {
+          "nombre": "Joe Coe",
+          "nota": "Interno",
+          "ver": "vacio",
+          "editar": "vacio"
+        },
+        {
+          "nombre": "test",
+          "nota": "Admin",
+          "ver": "vacio",
+          "editar": "vacio"
+        },
+        {
+          "nombre": "Carlos Pego",
+          "nota": "Admin",
+          "ver": "vacio",
+          "editar": "vacio"
+        }
+      ]
+    }
+  ],
+  "cajas": [
+    {
+      "titulo": "TAGMAG",
+      "items": [
+        "Ver TAGMAG (contenidos, revistas)",
+        "Editar TAGMAG (escribir, maquetar, producir)",
+        "PUBLICAR en TAGMAG",
+        "Ver tarifas, campañas e importes"
+      ]
+    }
+  ],
+  "plantillas": [
+    "Booker",
+    "Logística",
+    "Advancing / Finanzas",
+    "Marketing",
+    "Project Manager"
+  ],
+  "selects": [
+    {
+      "cls": "rounded-full border border-slate-200 bg-white px-2.5 py-1 text-xs font-medium text-slate-600",
+      "opts": [
+        "Copiar permisos de…",
+        "Maf",
+        "Patricia Pareja Casalí",
+        "Alberto Egea",
+        "Fran Hinojosa Veredas",
+        "Sadkiel",
+        "Jack Howell",
+        "Tony Carrerira",
+        "Jassi Gonzalez Montes",
+        "gelabertalba",
+        "Alba G",
+        "Aldo Messina",
+        "Yenifer Bernardo",
+        "hello",
+        "Israel Cuenca",
+        "Juan (Staff Level Test)",
+        "Oscar Buch",
+        "Alex González",
+        "Joe Coe",
+        "test",
+        "Carlos Pego"
+      ]
+    }
+  ],
+  "inputs": [
+    {
+      "type": "email",
+      "placeholder": "email@dominio.com",
+      "cls": "input"
+    },
+    {
+      "type": "text",
+      "placeholder": "Nombre (obligatorio)",
+      "cls": "input"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600 focus:ring-brand-500"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "mt-0.5 h-4 w-4 shrink-0 rounded border-slate-300 text-brand-600 focus:ring-brand-500"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "mt-0.5 h-4 w-4 shrink-0 rounded border-slate-300 text-brand-600 focus:ring-brand-500"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "mt-0.5 h-4 w-4 shrink-0 rounded border-slate-300 text-brand-600 focus:ring-brand-500"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "mt-0.5 h-4 w-4 shrink-0 rounded border-slate-300 text-brand-600 focus:ring-brand-500"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "mt-0.5 h-4 w-4 shrink-0 rounded border-slate-300 text-brand-600 focus:ring-brand-500"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "mt-0.5 h-4 w-4 shrink-0 rounded border-slate-300 text-brand-600 focus:ring-brand-500"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "mt-0.5 h-4 w-4 shrink-0 rounded border-slate-300 text-brand-600 focus:ring-brand-500"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "mt-0.5 h-4 w-4 shrink-0 rounded border-slate-300 text-brand-600 focus:ring-brand-500"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "mt-0.5 h-4 w-4 shrink-0 rounded border-slate-300 text-brand-600 focus:ring-brand-500"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "mt-0.5 h-4 w-4 shrink-0 rounded border-slate-300 text-brand-600 focus:ring-brand-500"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "mt-0.5 h-4 w-4 shrink-0 rounded border-slate-300 text-brand-600 focus:ring-brand-500"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "mt-0.5 h-4 w-4 shrink-0 rounded border-slate-300 text-brand-600 focus:ring-brand-500"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "mt-0.5 h-4 w-4 shrink-0 rounded border-slate-300 text-brand-600 focus:ring-brand-500"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "mt-0.5 h-4 w-4 shrink-0 rounded border-slate-300 text-brand-600 focus:ring-brand-500"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "mt-0.5 h-4 w-4 shrink-0 rounded border-slate-300 text-brand-600 focus:ring-brand-500"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "mt-0.5 h-4 w-4 shrink-0 rounded border-slate-300 text-brand-600 focus:ring-brand-500"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "mt-0.5 h-4 w-4 shrink-0 rounded border-slate-300 text-brand-600 focus:ring-brand-500"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "mt-0.5 h-4 w-4 shrink-0 rounded border-slate-300 text-brand-600 focus:ring-brand-500"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "mt-0.5 h-4 w-4 shrink-0 rounded border-slate-300 text-brand-600 focus:ring-brand-500"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "mt-0.5 h-4 w-4 shrink-0 rounded border-slate-300 text-brand-600 focus:ring-brand-500"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "mt-0.5 h-4 w-4 shrink-0 rounded border-slate-300 text-brand-600 focus:ring-brand-500"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "mt-0.5 h-4 w-4 shrink-0 rounded border-slate-300 text-brand-600 focus:ring-brand-500"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "mt-0.5 h-4 w-4 shrink-0 rounded border-slate-300 text-brand-600 focus:ring-brand-500"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "mt-0.5 h-4 w-4 shrink-0 rounded border-slate-300 text-brand-600 focus:ring-brand-500"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "mt-0.5 h-4 w-4 shrink-0 rounded border-slate-300 text-brand-600 focus:ring-brand-500"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "mt-0.5 h-4 w-4 shrink-0 rounded border-slate-300 text-brand-600 focus:ring-brand-500"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "mt-0.5 h-4 w-4 shrink-0 rounded border-slate-300 text-brand-600 focus:ring-brand-500"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "mt-0.5 h-4 w-4 shrink-0 rounded border-slate-300 text-brand-600 focus:ring-brand-500"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "mt-0.5 h-4 w-4 shrink-0 rounded border-slate-300 text-brand-600 focus:ring-brand-500"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "mt-0.5 h-4 w-4 shrink-0 rounded border-slate-300 text-brand-600 focus:ring-brand-500"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "mt-0.5 h-4 w-4 shrink-0 rounded border-slate-300 text-brand-600 focus:ring-brand-500"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "mt-0.5 h-4 w-4 shrink-0 rounded border-slate-300 text-brand-600 focus:ring-brand-500"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "mt-0.5 h-4 w-4 shrink-0 rounded border-slate-300 text-brand-600 focus:ring-brand-500"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "mt-0.5 h-4 w-4 shrink-0 rounded border-slate-300 text-brand-600 focus:ring-brand-500"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "mt-0.5 h-4 w-4 shrink-0 rounded border-slate-300 text-brand-600 focus:ring-brand-500"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "mt-0.5 h-4 w-4 shrink-0 rounded border-slate-300 text-brand-600 focus:ring-brand-500"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "mt-0.5 h-4 w-4 shrink-0 rounded border-slate-300 text-brand-600 focus:ring-brand-500"
+    },
+    {
+      "type": "checkbox",
+      "placeholder": "",
+      "cls": "h-4 w-4 rounded border-slate-300 text-brand-600"
+    }
+  ],
+  "filtros": [
+    "Todos",
+    "Internos",
+    "Portales"
+  ]
+}

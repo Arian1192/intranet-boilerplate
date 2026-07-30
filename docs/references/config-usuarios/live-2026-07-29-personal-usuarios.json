@@ -1,0 +1,893 @@
+{
+  "path": "/personal/usuarios",
+  "h1": {
+    "tag": "h1",
+    "cls": "text-2xl font-semibold text-slate-800",
+    "text": "Usuarios",
+    "fontSize": "24px",
+    "fontWeight": "600",
+    "color": "rgb(30, 41, 59)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "radius": "0px",
+    "padding": "0px",
+    "textTransform": "none",
+    "rect": {
+      "x": 96,
+      "y": 81,
+      "w": 1248,
+      "h": 32
+    }
+  },
+  "sub": {
+    "tag": "p",
+    "cls": "text-sm text-slate-500",
+    "text": "Alta, permisos y estado de los usuarios de la intranet del grupo.",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "color": "rgb(100, 116, 139)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "radius": "0px",
+    "padding": "0px",
+    "textTransform": "none",
+    "rect": {
+      "x": 96,
+      "y": 113,
+      "w": 1248,
+      "h": 20
+    }
+  },
+  "ths": [
+    {
+      "text": "Sección",
+      "tag": "th",
+      "cls": "px-3 py-1.5 text-left font-medium",
+      "fontSize": "11px",
+      "fontWeight": "500",
+      "color": "rgb(148, 163, 184)",
+      "bg": "rgba(0, 0, 0, 0)",
+      "radius": "0px",
+      "padding": "6px 12px",
+      "textTransform": "uppercase",
+      "rect": {
+        "x": 131,
+        "y": 534,
+        "w": 1050,
+        "h": 33
+      }
+    },
+    {
+      "text": "Ver",
+      "tag": "th",
+      "cls": "w-16 py-1.5 text-center font-medium",
+      "fontSize": "11px",
+      "fontWeight": "500",
+      "color": "rgb(148, 163, 184)",
+      "bg": "rgba(0, 0, 0, 0)",
+      "radius": "0px",
+      "padding": "6px 1px",
+      "textTransform": "uppercase",
+      "rect": {
+        "x": 1181,
+        "y": 534,
+        "w": 64,
+        "h": 33
+      }
+    },
+    {
+      "text": "Editar",
+      "tag": "th",
+      "cls": "w-16 py-1.5 text-center font-medium",
+      "fontSize": "11px",
+      "fontWeight": "500",
+      "color": "rgb(148, 163, 184)",
+      "bg": "rgba(0, 0, 0, 0)",
+      "radius": "0px",
+      "padding": "6px 1px",
+      "textTransform": "uppercase",
+      "rect": {
+        "x": 1245,
+        "y": 534,
+        "w": 64,
+        "h": 33
+      }
+    }
+  ],
+  "filas": [
+    [
+      "DashboardLas cajas del pipeline y lo que necesita atención.",
+      "",
+      "—"
+    ],
+    [
+      "Importes (€) en las cajas del DashboardSin esto ve el NÚMERO de shows en cada caja, no el dinero.",
+      "",
+      "—"
+    ],
+    [
+      "ShowsEl listado. Sin esto no llega a ninguna ficha.",
+      "",
+      "—"
+    ],
+    [
+      "Disponibilidad",
+      "",
+      "—"
+    ],
+    [
+      "Contactos",
+      "",
+      "—"
+    ],
+    [
+      "ArtistasEl listado de artistas. Lo que ve DENTRO se decide abajo.",
+      "",
+      "—"
+    ],
+    [
+      "AnalíticaFees, bookers, comisiones. Es dinero.",
+      "",
+      "—"
+    ],
+    [
+      "CobrosFacturas y saldos de promotores. Editar = emitir/vincular facturas y «Facturar el mes».",
+      "",
+      ""
+    ],
+    [
+      "GastosMovimientos de Holded. Editar = conciliar (asignar un movimiento a un show).",
+      "",
+      ""
+    ],
+    [
+      "Ajustes de ConceptOneComisiones y exclusividad, plantillas de contrato, alertas, recordatorios de cobro.",
+      "",
+      ""
+    ]
+  ],
+  "navs": [
+    {
+      "label": null,
+      "items": [
+        {
+          "t": "Equipo",
+          "href": "/personal"
+        },
+        {
+          "t": "Calendario",
+          "href": "/personal/calendario"
+        },
+        {
+          "t": "Fichas",
+          "href": "/personal/fichas"
+        },
+        {
+          "t": "",
+          "href": "/personal/analitica"
+        }
+      ]
+    }
+  ],
+  "badges": [
+    {
+      "tag": "span",
+      "cls": "ml-2 badge bg-slate-100 text-slate-500",
+      "text": "Interno",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "color": "rgb(100, 116, 139)",
+      "bg": "rgb(241, 245, 249)",
+      "radius": "9999px",
+      "padding": "2px 10px",
+      "textTransform": "none",
+      "rect": {
+        "x": 167,
+        "y": 3399,
+        "w": 63,
+        "h": 20
+      }
+    },
+    {
+      "tag": "span",
+      "cls": "ml-2 badge bg-violet-100 text-violet-700",
+      "text": "🧑‍💼 Team",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "color": "rgb(109, 40, 217)",
+      "bg": "rgb(237, 233, 254)",
+      "radius": "9999px",
+      "padding": "2px 10px",
+      "textTransform": "none",
+      "rect": {
+        "x": 238,
+        "y": 3399,
+        "w": 70,
+        "h": 20
+      }
+    },
+    {
+      "tag": "span",
+      "cls": "badge bg-emerald-100 text-emerald-700",
+      "text": "Activo",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "color": "rgb(4, 120, 87)",
+      "bg": "rgb(209, 250, 229)",
+      "radius": "9999px",
+      "padding": "2px 10px",
+      "textTransform": "none",
+      "rect": {
+        "x": 865,
+        "y": 3399,
+        "w": 57,
+        "h": 20
+      }
+    },
+    {
+      "tag": "span",
+      "cls": "ml-2 badge bg-slate-100 text-slate-500",
+      "text": "Interno",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "color": "rgb(100, 116, 139)",
+      "bg": "rgb(241, 245, 249)",
+      "radius": "9999px",
+      "padding": "2px 10px",
+      "textTransform": "none",
+      "rect": {
+        "x": 287,
+        "y": 3445,
+        "w": 63,
+        "h": 20
+      }
+    },
+    {
+      "tag": "span",
+      "cls": "ml-2 badge bg-violet-100 text-violet-700",
+      "text": "🧑‍💼 Team",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "color": "rgb(109, 40, 217)",
+      "bg": "rgb(237, 233, 254)",
+      "radius": "9999px",
+      "padding": "2px 10px",
+      "textTransform": "none",
+      "rect": {
+        "x": 357,
+        "y": 3445,
+        "w": 70,
+        "h": 20
+      }
+    },
+    {
+      "tag": "span",
+      "cls": "badge bg-emerald-100 text-emerald-700",
+      "text": "Activo",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "color": "rgb(4, 120, 87)",
+      "bg": "rgb(209, 250, 229)",
+      "radius": "9999px",
+      "padding": "2px 10px",
+      "textTransform": "none",
+      "rect": {
+        "x": 865,
+        "y": 3445,
+        "w": 57,
+        "h": 20
+      }
+    },
+    {
+      "tag": "span",
+      "cls": "ml-2 badge bg-slate-100 text-slate-500",
+      "text": "Interno",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "color": "rgb(100, 116, 139)",
+      "bg": "rgb(241, 245, 249)",
+      "radius": "9999px",
+      "padding": "2px 10px",
+      "textTransform": "none",
+      "rect": {
+        "x": 231,
+        "y": 3491,
+        "w": 63,
+        "h": 20
+      }
+    },
+    {
+      "tag": "span",
+      "cls": "ml-2 badge bg-violet-100 text-violet-700",
+      "text": "🧑‍💼 Team",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "color": "rgb(109, 40, 217)",
+      "bg": "rgb(237, 233, 254)",
+      "radius": "9999px",
+      "padding": "2px 10px",
+      "textTransform": "none",
+      "rect": {
+        "x": 302,
+        "y": 3491,
+        "w": 70,
+        "h": 20
+      }
+    },
+    {
+      "tag": "span",
+      "cls": "badge bg-emerald-100 text-emerald-700",
+      "text": "Activo",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "color": "rgb(4, 120, 87)",
+      "bg": "rgb(209, 250, 229)",
+      "radius": "9999px",
+      "padding": "2px 10px",
+      "textTransform": "none",
+      "rect": {
+        "x": 865,
+        "y": 3491,
+        "w": 57,
+        "h": 20
+      }
+    },
+    {
+      "tag": "span",
+      "cls": "ml-2 badge bg-brand-100 text-brand-700",
+      "text": "Admin",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "color": "rgb(55, 55, 61)",
+      "bg": "rgb(236, 236, 237)",
+      "radius": "9999px",
+      "padding": "2px 10px",
+      "textTransform": "none",
+      "rect": {
+        "x": 296,
+        "y": 3537,
+        "w": 58,
+        "h": 20
+      }
+    },
+    {
+      "tag": "span",
+      "cls": "ml-2 badge bg-violet-100 text-violet-700",
+      "text": "🧑‍💼 Team",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "color": "rgb(109, 40, 217)",
+      "bg": "rgb(237, 233, 254)",
+      "radius": "9999px",
+      "padding": "2px 10px",
+      "textTransform": "none",
+      "rect": {
+        "x": 363,
+        "y": 3537,
+        "w": 70,
+        "h": 20
+      }
+    },
+    {
+      "tag": "span",
+      "cls": "badge bg-emerald-100 text-emerald-700",
+      "text": "Activo",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "color": "rgb(4, 120, 87)",
+      "bg": "rgb(209, 250, 229)",
+      "radius": "9999px",
+      "padding": "2px 10px",
+      "textTransform": "none",
+      "rect": {
+        "x": 865,
+        "y": 3537,
+        "w": 57,
+        "h": 20
+      }
+    },
+    {
+      "tag": "span",
+      "cls": "ml-2 badge bg-slate-100 text-slate-500",
+      "text": "Interno",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "color": "rgb(100, 116, 139)",
+      "bg": "rgb(241, 245, 249)",
+      "radius": "9999px",
+      "padding": "2px 10px",
+      "textTransform": "none",
+      "rect": {
+        "x": 192,
+        "y": 3583,
+        "w": 63,
+        "h": 20
+      }
+    },
+    {
+      "tag": "span",
+      "cls": "ml-2 badge bg-violet-100 text-violet-700",
+      "text": "🧑‍💼 Team",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "color": "rgb(109, 40, 217)",
+      "bg": "rgb(237, 233, 254)",
+      "radius": "9999px",
+      "padding": "2px 10px",
+      "textTransform": "none",
+      "rect": {
+        "x": 263,
+        "y": 3583,
+        "w": 70,
+        "h": 20
+      }
+    },
+    {
+      "tag": "span",
+      "cls": "badge bg-emerald-100 text-emerald-700",
+      "text": "Activo",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "color": "rgb(4, 120, 87)",
+      "bg": "rgb(209, 250, 229)",
+      "radius": "9999px",
+      "padding": "2px 10px",
+      "textTransform": "none",
+      "rect": {
+        "x": 865,
+        "y": 3583,
+        "w": 57,
+        "h": 20
+      }
+    },
+    {
+      "tag": "span",
+      "cls": "ml-2 badge bg-brand-100 text-brand-700",
+      "text": "Admin",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "color": "rgb(55, 55, 61)",
+      "bg": "rgb(236, 236, 237)",
+      "radius": "9999px",
+      "padding": "2px 10px",
+      "textTransform": "none",
+      "rect": {
+        "x": 221,
+        "y": 3629,
+        "w": 58,
+        "h": 20
+      }
+    },
+    {
+      "tag": "span",
+      "cls": "ml-2 badge bg-violet-100 text-violet-700",
+      "text": "🧑‍💼 Team",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "color": "rgb(109, 40, 217)",
+      "bg": "rgb(237, 233, 254)",
+      "radius": "9999px",
+      "padding": "2px 10px",
+      "textTransform": "none",
+      "rect": {
+        "x": 287,
+        "y": 3629,
+        "w": 70,
+        "h": 20
+      }
+    },
+    {
+      "tag": "span",
+      "cls": "badge bg-emerald-100 text-emerald-700",
+      "text": "Activo",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "color": "rgb(4, 120, 87)",
+      "bg": "rgb(209, 250, 229)",
+      "radius": "9999px",
+      "padding": "2px 10px",
+      "textTransform": "none",
+      "rect": {
+        "x": 865,
+        "y": 3629,
+        "w": 57,
+        "h": 20
+      }
+    },
+    {
+      "tag": "span",
+      "cls": "ml-2 badge bg-brand-100 text-brand-700",
+      "text": "Admin",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "color": "rgb(55, 55, 61)",
+      "bg": "rgb(236, 236, 237)",
+      "radius": "9999px",
+      "padding": "2px 10px",
+      "textTransform": "none",
+      "rect": {
+        "x": 239,
+        "y": 3675,
+        "w": 58,
+        "h": 20
+      }
+    },
+    {
+      "tag": "span",
+      "cls": "ml-2 badge bg-violet-100 text-violet-700",
+      "text": "🧑‍💼 Team",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "color": "rgb(109, 40, 217)",
+      "bg": "rgb(237, 233, 254)",
+      "radius": "9999px",
+      "padding": "2px 10px",
+      "textTransform": "none",
+      "rect": {
+        "x": 306,
+        "y": 3675,
+        "w": 70,
+        "h": 20
+      }
+    },
+    {
+      "tag": "span",
+      "cls": "badge bg-emerald-100 text-emerald-700",
+      "text": "Activo",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "color": "rgb(4, 120, 87)",
+      "bg": "rgb(209, 250, 229)",
+      "radius": "9999px",
+      "padding": "2px 10px",
+      "textTransform": "none",
+      "rect": {
+        "x": 865,
+        "y": 3675,
+        "w": 57,
+        "h": 20
+      }
+    },
+    {
+      "tag": "span",
+      "cls": "ml-2 badge bg-brand-100 text-brand-700",
+      "text": "Admin",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "color": "rgb(55, 55, 61)",
+      "bg": "rgb(236, 236, 237)",
+      "radius": "9999px",
+      "padding": "2px 10px",
+      "textTransform": "none",
+      "rect": {
+        "x": 296,
+        "y": 3721,
+        "w": 58,
+        "h": 20
+      }
+    },
+    {
+      "tag": "span",
+      "cls": "ml-2 badge bg-violet-100 text-violet-700",
+      "text": "🧑‍💼 Team",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "color": "rgb(109, 40, 217)",
+      "bg": "rgb(237, 233, 254)",
+      "radius": "9999px",
+      "padding": "2px 10px",
+      "textTransform": "none",
+      "rect": {
+        "x": 362,
+        "y": 3721,
+        "w": 70,
+        "h": 20
+      }
+    },
+    {
+      "tag": "span",
+      "cls": "badge bg-amber-100 text-amber-700",
+      "text": "Pendiente",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "color": "rgb(180, 83, 9)",
+      "bg": "rgb(254, 243, 199)",
+      "radius": "9999px",
+      "padding": "2px 10px",
+      "textTransform": "none",
+      "rect": {
+        "x": 865,
+        "y": 3721,
+        "w": 80,
+        "h": 20
+      }
+    },
+    {
+      "tag": "span",
+      "cls": "ml-2 badge bg-blue-50 text-blue-600",
+      "text": "Portal",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "color": "rgb(37, 99, 235)",
+      "bg": "rgb(239, 246, 255)",
+      "radius": "9999px",
+      "padding": "2px 10px",
+      "textTransform": "none",
+      "rect": {
+        "x": 230,
+        "y": 3767,
+        "w": 54,
+        "h": 20
+      }
+    },
+    {
+      "tag": "span",
+      "cls": "badge bg-emerald-100 text-emerald-700",
+      "text": "Activo",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "color": "rgb(4, 120, 87)",
+      "bg": "rgb(209, 250, 229)",
+      "radius": "9999px",
+      "padding": "2px 10px",
+      "textTransform": "none",
+      "rect": {
+        "x": 865,
+        "y": 3767,
+        "w": 57,
+        "h": 20
+      }
+    },
+    {
+      "tag": "span",
+      "cls": "ml-2 badge bg-slate-100 text-slate-500",
+      "text": "Interno",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "color": "rgb(100, 116, 139)",
+      "bg": "rgb(241, 245, 249)",
+      "radius": "9999px",
+      "padding": "2px 10px",
+      "textTransform": "none",
+      "rect": {
+        "x": 187,
+        "y": 3813,
+        "w": 63,
+        "h": 20
+      }
+    },
+    {
+      "tag": "span",
+      "cls": "ml-2 badge bg-violet-100 text-violet-700",
+      "text": "🧑‍💼 Team",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "color": "rgb(109, 40, 217)",
+      "bg": "rgb(237, 233, 254)",
+      "radius": "9999px",
+      "padding": "2px 10px",
+      "textTransform": "none",
+      "rect": {
+        "x": 258,
+        "y": 3813,
+        "w": 70,
+        "h": 20
+      }
+    },
+    {
+      "tag": "span",
+      "cls": "badge bg-emerald-100 text-emerald-700",
+      "text": "Activo",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "color": "rgb(4, 120, 87)",
+      "bg": "rgb(209, 250, 229)",
+      "radius": "9999px",
+      "padding": "2px 10px",
+      "textTransform": "none",
+      "rect": {
+        "x": 865,
+        "y": 3813,
+        "w": 57,
+        "h": 20
+      }
+    },
+    {
+      "tag": "span",
+      "cls": "ml-2 badge bg-slate-100 text-slate-500",
+      "text": "Interno",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "color": "rgb(100, 116, 139)",
+      "bg": "rgb(241, 245, 249)",
+      "radius": "9999px",
+      "padding": "2px 10px",
+      "textTransform": "none",
+      "rect": {
+        "x": 233,
+        "y": 3859,
+        "w": 63,
+        "h": 20
+      }
+    },
+    {
+      "tag": "span",
+      "cls": "ml-2 badge bg-violet-100 text-violet-700",
+      "text": "🧑‍💼 Team",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "color": "rgb(109, 40, 217)",
+      "bg": "rgb(237, 233, 254)",
+      "radius": "9999px",
+      "padding": "2px 10px",
+      "textTransform": "none",
+      "rect": {
+        "x": 304,
+        "y": 3859,
+        "w": 70,
+        "h": 20
+      }
+    },
+    {
+      "tag": "span",
+      "cls": "badge bg-emerald-100 text-emerald-700",
+      "text": "Activo",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "color": "rgb(4, 120, 87)",
+      "bg": "rgb(209, 250, 229)",
+      "radius": "9999px",
+      "padding": "2px 10px",
+      "textTransform": "none",
+      "rect": {
+        "x": 865,
+        "y": 3859,
+        "w": 57,
+        "h": 20
+      }
+    },
+    {
+      "tag": "span",
+      "cls": "ml-2 badge bg-slate-100 text-slate-500",
+      "text": "Interno",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "color": "rgb(100, 116, 139)",
+      "bg": "rgb(241, 245, 249)",
+      "radius": "9999px",
+      "padding": "2px 10px",
+      "textTransform": "none",
+      "rect": {
+        "x": 257,
+        "y": 3905,
+        "w": 63,
+        "h": 20
+      }
+    },
+    {
+      "tag": "span",
+      "cls": "ml-2 badge bg-violet-100 text-violet-700",
+      "text": "🧑‍💼 Team",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "color": "rgb(109, 40, 217)",
+      "bg": "rgb(237, 233, 254)",
+      "radius": "9999px",
+      "padding": "2px 10px",
+      "textTransform": "none",
+      "rect": {
+        "x": 328,
+        "y": 3905,
+        "w": 70,
+        "h": 20
+      }
+    },
+    {
+      "tag": "span",
+      "cls": "badge bg-emerald-100 text-emerald-700",
+      "text": "Activo",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "color": "rgb(4, 120, 87)",
+      "bg": "rgb(209, 250, 229)",
+      "radius": "9999px",
+      "padding": "2px 10px",
+      "textTransform": "none",
+      "rect": {
+        "x": 865,
+        "y": 3905,
+        "w": 57,
+        "h": 20
+      }
+    },
+    {
+      "tag": "span",
+      "cls": "ml-2 badge bg-blue-50 text-blue-600",
+      "text": "Portal",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "color": "rgb(37, 99, 235)",
+      "bg": "rgb(239, 246, 255)",
+      "radius": "9999px",
+      "padding": "2px 10px",
+      "textTransform": "none",
+      "rect": {
+        "x": 175,
+        "y": 3951,
+        "w": 54,
+        "h": 20
+      }
+    },
+    {
+      "tag": "span",
+      "cls": "badge bg-emerald-100 text-emerald-700",
+      "text": "Activo",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "color": "rgb(4, 120, 87)",
+      "bg": "rgb(209, 250, 229)",
+      "radius": "9999px",
+      "padding": "2px 10px",
+      "textTransform": "none",
+      "rect": {
+        "x": 865,
+        "y": 3951,
+        "w": 57,
+        "h": 20
+      }
+    },
+    {
+      "tag": "span",
+      "cls": "ml-2 badge bg-slate-100 text-slate-500",
+      "text": "Interno",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "color": "rgb(100, 116, 139)",
+      "bg": "rgb(241, 245, 249)",
+      "radius": "9999px",
+      "padding": "2px 10px",
+      "textTransform": "none",
+      "rect": {
+        "x": 236,
+        "y": 3997,
+        "w": 63,
+        "h": 20
+      }
+    },
+    {
+      "tag": "span",
+      "cls": "ml-2 badge bg-violet-100 text-violet-700",
+      "text": "🧑‍💼 Team",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "color": "rgb(109, 40, 217)",
+      "bg": "rgb(237, 233, 254)",
+      "radius": "9999px",
+      "padding": "2px 10px",
+      "textTransform": "none",
+      "rect": {
+        "x": 307,
+        "y": 3997,
+        "w": 70,
+        "h": 20
+      }
+    },
+    {
+      "tag": "span",
+      "cls": "badge bg-emerald-100 text-emerald-700",
+      "text": "Activo",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "color": "rgb(4, 120, 87)",
+      "bg": "rgb(209, 250, 229)",
+      "radius": "9999px",
+      "padding": "2px 10px",
+      "textTransform": "none",
+      "rect": {
+        "x": 865,
+        "y": 3997,
+        "w": 57,
+        "h": 20
+      }
+    }
+  ],
+  "mainHtml": "<div><div class=\"mb-6\"><h1 class=\"text-2xl font-semibold text-slate-800\">Usuarios</h1><p class=\"text-sm text-slate-500\">Alta, permisos y estado de los usuarios de la intranet del grupo.</p></div><section class=\"card p-5\"><h2 class=\"mb-1 text-sm font-semibold uppercase tracking-wide text-slate-500\">Usuarios de la intranet</h2><p class=\"mb-4 text-xs text-slate-400\">Alta por invitación, permisos por usuario y desactivación (sin borrado).</p><div class=\"mb-5 space-y-3 rounded-lg border border-dashed border-slate-300 p-3\"><div class=\"grid gap-2 sm:grid-cols-[1fr_1fr_auto]\"><input class=\"input\" type=\"email\" placeholder=\"email@dominio.com\" value=\"\" style=\"\"><input class=\"input\" placeholder=\"Nombre (obligatorio)\" value=\"\" style=\"\"><button class=\"btn-primary shrink-0\">Invitar</button></div><div class=\"space-y-3\"><label class=\"flex cursor-pointer items-center gap-2 rounded-lg bg-brand-50 px-3 py-2 text-sm font-medium text-brand-700\"><input type=\"checkbox\" class=\"h-4 w-4 rounded border-slate-300 text-brand-600 focus:ring-brand-500\" style=\"\">Administrador (acceso total)</label><div class=\"space-y-4\"><div class=\"rounded-lg border border-slate-200 bg-slate-50 p-3\"><p class=\"text-xs font-semibold uppercase tracking-wide text-slate-400\">Para empezar rápido</p><div class=\"mt-2 flex flex-wrap items-center gap-1.5\"><button type=\"button\" title=\"Negocia el deal y persigue la oferta. Ve el dinero de sus shows, no el contrato ni la liquidación.\" class=\"rounded-full border border-slate-200 bg-white px-2.5 py-1 text-xs font-medium text-slate-600 hover:border-brand-300 hover:bg-brand-50 hover:text-brand-700\">Booker</button><button type=\"button\" title=\"Mueve al artista. Necesita pasaportes y rider; NO necesita ver el fee.\" class=\"rounded-full border border-slate-200 bg-white px-2.5 py-1 text-xs font-medium text-slate-600 hover:border-brand-300 hover:bg-brand-50 hover:text-brand-700\">Logística</button><button type=\"button\" title=\"El papel y el dinero: contrato, cobro, liquidación.\" class=\"rounded-full border border-slate-200 bg-white px-2.5 py-1 text-xs font-medium text-slate-600 hover:border-brand-300 hover:bg-brand-50 hover:text-brand-700\">Advancing / Finanzas</button><button type=\"button\" title=\"La cara pública del artista y el artwork del show.\" class=\"rounded-full border border-slate-200 bg-white px-2.5 py-1 text-xs font-medium text-slate-600 hover:border-brand-300 hover:bg-brand-50 hover:text-brand-700\">Marketing</button><button type=\"button\" title=\"Cuida el proyecto: sus personas y sus papeles.\" class=\"rounded-full border border-slate-200 bg-white px-2.5 py-1 text-xs font-medium text-slate-600 hover:border-brand-300 hover:bg-brand-50 hover:text-brand-700\">Project Manager</button><select class=\"rounded-full border border-slate-200 bg-white px-2.5 py-1 text-xs font-medium text-slate-600\"><option value=\"\">Copiar permisos de…</option><option value=\"216fc33e-5d3a-45b7-9a72-57401d70fd33\">Maf</option><option value=\"2d9d8ee2-1909-4680-b75d-5dfda55c1402\">Patricia Pareja Casalí</option><option value=\"528fc883-f35a-4636-9ef8-5ca19730314a\">Alberto Egea</option><option value=\"60b751ce-dfb9-48d7-a904-9b4513bc01ed\">Fran Hinojosa Veredas</option><option value=\"e5b62b0b-3b83-41f2-af5c-cc73103e1d47\">Sadkiel</option><option value=\"1ae53418-c5dc-4a68-aa3a-7867c77ebe0e\">Jack Howell</option><option value=\"f22e7a6f-bfd3-40cb-86a7-8f791441e517\">Tony Carrerira</option><option value=\"f401c939-24b7-45bf-9f5b-0fc2fc066f68\">Jassi Gonzalez Montes</option><option value=\"0473e240-b646-4eac-9a94-415b8df469e9\">gelabertalba</option><option value=\"c58851ec-865f-4a0c-a0c2-93c9195f76b5\">Alba G</option><option value=\"ea744472-c12d-4ba7-a690-32a685f27c36\">Aldo Messina</option><option value=\"81e17ca8-a946-4845-a996-62a409c89543\">Yenifer Bernardo</option><option value=\"1c30a122-6a9a-4911-94ea-87eea771c49d\">hello</option><option value=\"f426210a-b60e-48c9-b541-e4aadcaf117e\">Israel Cuenca</option><option value=\"b77fdb28-7f11-43b9-9de9-38d71f3b2b9d\">Juan (Staff Level Test)</option><option value=\"c86e0b4f-3dde-4bfc-b106-3a624c28a5c0\">Oscar Buch</option><option value=\"8e3f9e46-e919-4561-ae2a-fca65e23bfad\">Alex González</option><option value=\"5229bf66-a16c-43de-afa2-9be74c1218e8\">Joe Coe</option><option value=\"899001e3-20eb-4a5c-a7f7-8c1f2f4321d1\">test</option><option value=\"afc4f7d5-8412-4576-95f1-ae709d3bcf0c\">Carlos Pego</option></select></div><p class=\"mt-2 text-xs leading-relaxed text-slate-400\">Son <strong>sellos, no roles</strong>: marcan casillas y desaparecen. Nada queda atado a la plantilla — después se toca una a una. Aplicar una plantilla <strong>reemplaza</strong> lo que hubiera de ConceptOne (si solo sumara, un ex-booker se quedaría viendo los fees).</p></div><div class=\"rounded-lg border border-slate-200\"><div class=\"border-b border-slate-100 px-3 py-2\"><div class=\"text-xs font-semibold uppercase tracking-wide text-slate-400\">ConceptOne · Navegación</div><p class=\"text-xs text-slate-400\">Qué páginas ve en el menú.</p></div><table class=\"w-full text-sm\"><thead><tr class=\"border-b border-slate-100 text-[11px] uppercase tracking-wide text-slate-400\"><th class=\"px-3 py-1.5 text-left font-medium\">Sección</th><th class=\"w-16 py-1.5 text-center font-medium\">Ver</th><th class=\"w-16 py-1.5 text-center font-medium\">Editar</th></tr></thead><tbody><tr class=\"border-b border-slate-50 last:border-0 hover:bg-slate-50/60\"><td class=\"px-3 py-1.5\"><div class=\"font-medium text-slate-700\">Dashboard</div><div class=\"text-xs leading-snug text-slate-400\">Las cajas del pipeline y lo que necesita atención.</div></td><td class=\"text-center\"><input type=\"checkbox\" class=\"h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50\" style=\"\"></td><td class=\"text-center\"><span class=\"text-xs text-slate-300\">—</span></td></tr><tr class=\"border-b border-slate-50 last:border-0 hover:bg-slate-50/60\"><td class=\"px-3 py-1.5\"><div class=\"font-medium text-slate-700\">Importes (€) en las cajas del Dashboard</div><div class=\"text-xs leading-snug text-slate-400\">Sin esto ve el NÚMERO de shows en cada caja, no el dinero.</div></td><td class=\"text-center\"><input type=\"checkbox\" class=\"h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50\" style=\"\"></td><td class=\"text-center\"><span class=\"text-xs text-slate-300\">—</span></td></tr><tr class=\"border-b border-slate-50 last:border-0 hover:bg-slate-50/60\"><td class=\"px-3 py-1.5\"><div class=\"font-medium text-slate-700\">Shows</div><div class=\"text-xs leading-snug text-slate-400\">El listado. Sin esto no llega a ninguna ficha.</div></td><td class=\"text-center\"><input type=\"checkbox\" class=\"h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50\" style=\"\"></td><td class=\"text-center\"><span class=\"text-xs text-slate-300\">—</span></td></tr><tr class=\"border-b border-slate-50 last:border-0 hover:bg-slate-50/60\"><td class=\"px-3 py-1.5\"><div class=\"font-medium text-slate-700\">Disponibilidad</div></td><td class=\"text-center\"><input type=\"checkbox\" class=\"h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50\" style=\"\"></td><td class=\"text-center\"><span class=\"text-xs text-slate-300\">—</span></td></tr><tr class=\"border-b border-slate-50 last:border-0 hover:bg-slate-50/60\"><td class=\"px-3 py-1.5\"><div class=\"font-medium text-slate-700\">Contactos</div></td><td class=\"text-center\"><input type=\"checkbox\" class=\"h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50\" style=\"\"></td><td class=\"text-center\"><span class=\"text-xs text-slate-300\">—</span></td></tr><tr class=\"border-b border-slate-50 last:border-0 hover:bg-slate-50/60\"><td class=\"px-3 py-1.5\"><div class=\"font-medium text-slate-700\">Artistas</div><div class=\"text-xs leading-snug text-slate-400\">El listado de artistas. Lo que ve DENTRO se decide abajo.</div></td><td class=\"text-center\"><input type=\"checkbox\" class=\"h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50\" style=\"\"></td><td class=\"text-center\"><span class=\"text-xs text-slate-300\">—</span></td></tr><tr class=\"border-b border-slate-50 last:border-0 hover:bg-slate-50/60\"><td class=\"px-3 py-1.5\"><div class=\"font-medium text-slate-700\">Analítica</div><div class=\"text-xs leading-snug text-slate-400\">Fees, bookers, comisiones. Es dinero.</div></td><td class=\"text-center\"><input type=\"checkbox\" class=\"h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50\" style=\"\"></td><td class=\"text-center\"><span class=\"text-xs text-slate-300\">—</span></td></tr><tr class=\"border-b border-slate-50 last:border-0 hover:bg-slate-50/60\"><td class=\"px-3 py-1.5\"><div class=\"font-medium text-slate-700\">Cobros</div><div class=\"text-xs leading-snug text-slate-400\">Facturas y saldos de promotores. Editar = emitir/vincular facturas y «Facturar el mes».</div></td><td class=\"text-center\"><input type=\"checkbox\" class=\"h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50\" style=\"\"></td><td class=\"text-center\"><input type=\"checkbox\" class=\"h-4 w-4 rounded border-slate-300 text-brand-600\" style=\"\"></td></tr><tr class=\"border-b border-slate-50 last:border-0 hover:bg-slate-50/60\"><td class=\"px-3 py-1.5\"><div class=\"font-medium text-slate-700\">Gastos</div><div class=\"text-xs leading-snug text-slate-400\">Movimientos de Holded. Editar = conciliar (asignar un movimiento a un show).</div></td><td class=\"text-center\"><input type=\"checkbox\" class=\"h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50\" style=\"\"></td><td class=\"text-center\"><input type=\"checkbox\" class=\"h-4 w-4 rounded border-slate-300 text-brand-600\" style=\"\"></td></tr><tr class=\"border-b border-slate-50 last:border-0 hover:bg-slate-50/60\"><td class=\"px-3 py-1.5\"><div class=\"font-medium text-slate-700\">Ajustes de ConceptOne</div><div class=\"text-xs leading-snug text-slate-400\">Comisiones y exclusividad, plantillas de contrato, alertas, recordatorios de cobro.</div></td><td class=\"text-center\"><input type=\"checkbox\" class=\"h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50\" style=\"\"></td><td class=\"text-center\"><input type=\"checkbox\" class=\"h-4 w-4 rounded border-slate-300 text-brand-600\" style=\"\"></td></tr></tbody></table></div><div class=\"rounded-lg border border-slate-200\"><div class=\"border-b border-slate-100 px-3 py-2\"><div class=\"text-xs font-semibold uppercase tracking-wide text-slate-400\">ConceptOne · Ficha de show</div><p class=\"text-xs text-slate-400\">Pestaña a pestaña. Lo que no marques, no lo ve: la pestaña ni aparece.</p></div><table class=\"w-full text-sm\"><thead><tr class=\"border-b border-slate-100 text-[11px] uppercase tracking-wide text-slate-400\"><th class=\"px-3 py-1.5 text-left font-medium\">Sección</th><th class=\"w-16 py-1.5 text-center font-medium\">Ver</th><th class=\"w-16 py-1.5 text-center font-medium\">Editar</th></tr></thead><tbody><tr class=\"border-b border-slate-50 last:border-0 hover:bg-slate-50/60\"><td class=\"px-3 py-1.5\"><div class=\"font-medium text-slate-700\">Crear shows nuevos</div></td><td class=\"text-center\"><input type=\"checkbox\" class=\"h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50\" style=\"\"></td><td class=\"text-center\"><span class=\"text-xs text-slate-300\">—</span></td></tr><tr class=\"border-b border-slate-50 last:border-0 hover:bg-slate-50/60\"><td class=\"px-3 py-1.5\"><div class=\"font-medium text-slate-700\">Evento</div><div class=\"text-xs leading-snug text-slate-400\">Artista, fecha, venue, aforo.</div></td><td class=\"text-center\"><input type=\"checkbox\" class=\"h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50\" style=\"\"></td><td class=\"text-center\"><input type=\"checkbox\" class=\"h-4 w-4 rounded border-slate-300 text-brand-600\" style=\"\"></td></tr><tr class=\"border-b border-slate-50 last:border-0 hover:bg-slate-50/60\"><td class=\"px-3 py-1.5\"><div class=\"font-medium text-slate-700\">Oferta</div><div class=\"text-xs leading-snug text-slate-400\">El DEAL: fee, taquilla, IVA, comisión del booker. Es el dinero del show.</div></td><td class=\"text-center\"><input type=\"checkbox\" class=\"h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50\" style=\"\"></td><td class=\"text-center\"><input type=\"checkbox\" class=\"h-4 w-4 rounded border-slate-300 text-brand-600\" style=\"\"></td></tr><tr class=\"border-b border-slate-50 last:border-0 hover:bg-slate-50/60\"><td class=\"px-3 py-1.5\"><div class=\"font-medium text-slate-700\">Logística del deal</div><div class=\"text-xs leading-snug text-slate-400\">Qué cubre el promotor (vuelos, hotel, ground, dietas) y el rider del show.</div></td><td class=\"text-center\"><input type=\"checkbox\" class=\"h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50\" style=\"\"></td><td class=\"text-center\"><input type=\"checkbox\" class=\"h-4 w-4 rounded border-slate-300 text-brand-600\" style=\"\"></td></tr><tr class=\"border-b border-slate-50 last:border-0 hover:bg-slate-50/60\"><td class=\"px-3 py-1.5\"><div class=\"font-medium text-slate-700\">Set Times</div></td><td class=\"text-center\"><input type=\"checkbox\" class=\"h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50\" style=\"\"></td><td class=\"text-center\"><input type=\"checkbox\" class=\"h-4 w-4 rounded border-slate-300 text-brand-600\" style=\"\"></td></tr><tr class=\"border-b border-slate-50 last:border-0 hover:bg-slate-50/60\"><td class=\"px-3 py-1.5\"><div class=\"font-medium text-slate-700\">Artwork</div></td><td class=\"text-center\"><input type=\"checkbox\" class=\"h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50\" style=\"\"></td><td class=\"text-center\"><input type=\"checkbox\" class=\"h-4 w-4 rounded border-slate-300 text-brand-600\" style=\"\"></td></tr><tr class=\"border-b border-slate-50 last:border-0 hover:bg-slate-50/60\"><td class=\"px-3 py-1.5\"><div class=\"font-medium text-slate-700\">Contactos del show</div><div class=\"text-xs leading-snug text-slate-400\">Signer, payer, promotor.</div></td><td class=\"text-center\"><input type=\"checkbox\" class=\"h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50\" style=\"\"></td><td class=\"text-center\"><input type=\"checkbox\" class=\"h-4 w-4 rounded border-slate-300 text-brand-600\" style=\"\"></td></tr><tr class=\"border-b border-slate-50 last:border-0 hover:bg-slate-50/60\"><td class=\"px-3 py-1.5\"><div class=\"font-medium text-slate-700\">Itinerario y gastos</div><div class=\"text-xs leading-snug text-slate-400\">Vuelos, hotel, traslados… y los gastos del show (cerrarlos incluido).</div></td><td class=\"text-center\"><input type=\"checkbox\" class=\"h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50\" style=\"\"></td><td class=\"text-center\"><input type=\"checkbox\" class=\"h-4 w-4 rounded border-slate-300 text-brand-600\" style=\"\"></td></tr><tr class=\"border-b border-slate-50 last:border-0 hover:bg-slate-50/60\"><td class=\"px-3 py-1.5\"><div class=\"font-medium text-slate-700\">Contrato</div><div class=\"text-xs leading-snug text-slate-400\">Generar, mandar a firmar y subir el firmado.</div></td><td class=\"text-center\"><input type=\"checkbox\" class=\"h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50\" style=\"\"></td><td class=\"text-center\"><input type=\"checkbox\" class=\"h-4 w-4 rounded border-slate-300 text-brand-600\" style=\"\"></td></tr><tr class=\"border-b border-slate-50 last:border-0 hover:bg-slate-50/60\"><td class=\"px-3 py-1.5\"><div class=\"font-medium text-slate-700\">Pagos</div><div class=\"text-xs leading-snug text-slate-400\">Plan de cobro al promotor.</div></td><td class=\"text-center\"><input type=\"checkbox\" class=\"h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50\" style=\"\"></td><td class=\"text-center\"><input type=\"checkbox\" class=\"h-4 w-4 rounded border-slate-300 text-brand-600\" style=\"\"></td></tr><tr class=\"border-b border-slate-50 last:border-0 hover:bg-slate-50/60\"><td class=\"px-3 py-1.5\"><div class=\"font-medium text-slate-700\">Liquidación</div><div class=\"text-xs leading-snug text-slate-400\">Cuentas finales y pagos al artista.</div></td><td class=\"text-center\"><input type=\"checkbox\" class=\"h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50\" style=\"\"></td><td class=\"text-center\"><input type=\"checkbox\" class=\"h-4 w-4 rounded border-slate-300 text-brand-600\" style=\"\"></td></tr><tr class=\"border-b border-slate-50 last:border-0 hover:bg-slate-50/60\"><td class=\"px-3 py-1.5\"><div class=\"font-medium text-slate-700\">Enviar el informe al artista</div><div class=\"text-xs leading-snug text-slate-400\">El correo con la liquidación. Vive en la pestaña Liquidación.</div></td><td class=\"text-center\"><input type=\"checkbox\" class=\"h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50\" style=\"\"></td><td class=\"text-center\"><span class=\"text-xs text-slate-300\">—</span></td></tr><tr class=\"border-b border-slate-50 last:border-0 hover:bg-slate-50/60\"><td class=\"px-3 py-1.5\"><div class=\"font-medium text-slate-700\">Eliminar shows</div><div class=\"text-xs leading-snug text-slate-400\">No hay botón en ninguna pantalla: hoy esto solo protege la API.</div></td><td class=\"text-center\"><input type=\"checkbox\" class=\"h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50\" style=\"\"></td><td class=\"text-center\"><span class=\"text-xs text-slate-300\">—</span></td></tr></tbody></table></div><div class=\"rounded-lg border border-slate-200\"><div class=\"border-b border-slate-100 px-3 py-2\"><div class=\"text-xs font-semibold uppercase tracking-wide text-slate-400\">ConceptOne · Ficha de artista</div><p class=\"text-xs text-slate-400\">Un artista es un proyecto: aquí está desde su Spotify hasta su IBAN.</p></div><table class=\"w-full text-sm\"><thead><tr class=\"border-b border-slate-100 text-[11px] uppercase tracking-wide text-slate-400\"><th class=\"px-3 py-1.5 text-left font-medium\">Sección</th><th class=\"w-16 py-1.5 text-center font-medium\">Ver</th><th class=\"w-16 py-1.5 text-center font-medium\">Editar</th></tr></thead><tbody><tr class=\"border-b border-slate-50 last:border-0 hover:bg-slate-50/60\"><td class=\"px-3 py-1.5\"><div class=\"font-medium text-slate-700\">Ficha artista</div><div class=\"text-xs leading-snug text-slate-400\">Foto, redes, Spotify, estilos. La cara pública del proyecto.</div></td><td class=\"text-center\"><input type=\"checkbox\" class=\"h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50\" style=\"\"></td><td class=\"text-center\"><input type=\"checkbox\" class=\"h-4 w-4 rounded border-slate-300 text-brand-600\" style=\"\"></td></tr><tr class=\"border-b border-slate-50 last:border-0 hover:bg-slate-50/60\"><td class=\"px-3 py-1.5\"><div class=\"font-medium text-slate-700\">Ficha personal</div><div class=\"text-xs leading-snug text-slate-400\">Miembros, nombres legales, DNI/pasaporte. Sin esto no se compra un vuelo.</div></td><td class=\"text-center\"><input type=\"checkbox\" class=\"h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50\" style=\"\"></td><td class=\"text-center\"><input type=\"checkbox\" class=\"h-4 w-4 rounded border-slate-300 text-brand-600\" style=\"\"></td></tr><tr class=\"border-b border-slate-50 last:border-0 hover:bg-slate-50/60\"><td class=\"px-3 py-1.5\"><div class=\"font-medium text-slate-700\">Condiciones económicas</div><div class=\"text-xs leading-snug text-slate-400\">Booking fee %, management fee %, territorios, mail de liquidaciones.</div></td><td class=\"text-center\"><input type=\"checkbox\" class=\"h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50\" style=\"\"></td><td class=\"text-center\"><input type=\"checkbox\" class=\"h-4 w-4 rounded border-slate-300 text-brand-600\" style=\"\"></td></tr><tr class=\"border-b border-slate-50 last:border-0 hover:bg-slate-50/60\"><td class=\"px-3 py-1.5\"><div class=\"font-medium text-slate-700\">Rider técnico / hospitality</div><div class=\"text-xs leading-snug text-slate-400\">Vive en la pestaña Condiciones, pero es OTRO permiso: lo necesita producción, no finanzas.</div></td><td class=\"text-center\"><input type=\"checkbox\" class=\"h-4 w-4 rounded border-slate-300 text-brand-600 disabled:opacity-50\" style=\"\"></td><td class=\"text-center\"><input type=\"checkbox\" class=\"h-4 w-4 rounded border-slate-300 text-brand-600\" style=\"\"></td></tr><tr class"
+}
