@@ -9,15 +9,22 @@ export interface CajasPermisosProps {
 /** Las 11 cajas de permisos por módulo: checkboxes sueltos, sin columnas Ver/Editar. */
 export function CajasPermisos({ activos, onToggle }: CajasPermisosProps) {
   return (
-    <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+    <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
       {CAJAS_PERMISOS.map((caja) => (
-        <section key={caja.titulo} className="rounded-lg border border-slate-200 p-3">
-          <h3 className="mb-2 text-xs font-semibold uppercase tracking-wide text-brand-600">
+        <section
+          key={caja.titulo}
+          className="rounded-lg border border-slate-200 bg-slate-50/50 p-3"
+        >
+          {/* slate-400, como todo subtítulo interno del live; brand-600 aquí solo va en el check. */}
+          <h3 className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-400">
             {caja.titulo}
           </h3>
           <div className="space-y-1.5">
             {caja.items.map((item) => (
-              <label key={item} className="flex items-start gap-2 text-xs text-slate-600">
+              <label
+                key={item}
+                className="flex cursor-pointer items-start gap-2 text-sm text-slate-700"
+              >
                 <input
                   type="checkbox"
                   checked={activos.has(item)}
