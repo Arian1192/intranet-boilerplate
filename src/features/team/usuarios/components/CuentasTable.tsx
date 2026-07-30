@@ -7,11 +7,11 @@ type Filtro = (typeof FILTROS)[number];
 
 const COLOR_TIPO: Record<TipoCuenta, string> = {
   Admin: 'bg-brand-100 text-brand-700',
-  Interno: 'bg-slate-100 text-slate-600',
-  Portal: 'bg-sky-100 text-sky-700',
+  Interno: 'bg-slate-100 text-slate-500',
+  Portal: 'bg-blue-50 text-blue-600',
 };
 
-const pill = 'inline-flex items-center rounded-full px-2 py-0.5 text-[10px] font-medium';
+const pill = 'inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium';
 
 export function CuentasTable({ cuentas = seed }: { cuentas?: Cuenta[] }) {
   const [filtro, setFiltro] = useState<Filtro>('Todos');
@@ -91,14 +91,24 @@ export function CuentasTable({ cuentas = seed }: { cuentas?: Cuenta[] }) {
                 <span className="flex flex-wrap items-center gap-1.5">
                   <span className="text-slate-700">{c.nombre}</span>
                   <span className={cn(pill, COLOR_TIPO[c.tipo])}>{c.tipo}</span>
-                  <span
-                    className={cn(
-                      pill,
-                      c.ficha === 'team' ? 'bg-slate-100 text-slate-500' : 'bg-amber-100 text-amber-700'
-                    )}
-                  >
-                    {c.ficha === 'team' ? '🧑‍💼 Team' : 'Sin ficha Team'}
-                  </span>
+                  {/*
+                    Una cuenta de portal es de alguien de fuera: no usa la intranet, así que la
+                    ficha en Team ni aplica y el live no le pinta el badge (ni «Team» ni «Sin
+                    ficha Team»). Por eso tampoco entra en el recuento del aviso ámbar. El badge
+                    sí sale en las Admin: la condición es el tipo Portal, no «solo Interno».
+                  */}
+                  {c.tipo !== 'Portal' && (
+                    <span
+                      className={cn(
+                        pill,
+                        c.ficha === 'team'
+                          ? 'bg-violet-100 text-violet-700'
+                          : 'bg-amber-100 text-amber-700'
+                      )}
+                    >
+                      {c.ficha === 'team' ? '🧑‍💼 Team' : 'Sin ficha Team'}
+                    </span>
+                  )}
                 </span>
               </td>
               <td className="py-2 pr-4 text-slate-500">{c.email}</td>

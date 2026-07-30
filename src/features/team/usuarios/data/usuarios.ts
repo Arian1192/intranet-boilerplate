@@ -301,6 +301,16 @@ export const PLANTILLAS = [
   'Project Manager',
 ] as const;
 
+/** El live cuelga de cada plantilla un `title` que explica a quién sirve el sello. */
+export const AYUDA_PLANTILLA: Record<string, string> = {
+  Booker:
+    'Negocia el deal y persigue la oferta. Ve el dinero de sus shows, no el contrato ni la liquidación.',
+  Logística: 'Mueve al artista. Necesita pasaportes y rider; NO necesita ver el fee.',
+  'Advancing / Finanzas': 'El papel y el dinero: contrato, cobro, liquidación.',
+  Marketing: 'La cara pública del artista y el artwork del show.',
+  'Project Manager': 'Cuida el proyecto: sus personas y sus papeles.',
+};
+
 export type TipoCuenta = 'Admin' | 'Interno' | 'Portal';
 export type EstadoCuenta = 'Activo' | 'Pendiente';
 

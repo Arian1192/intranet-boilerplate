@@ -9,29 +9,40 @@ export interface MatrizPermisosProps {
 
 export function MatrizPermisos({ bloque, activos, onToggle }: MatrizPermisosProps) {
   return (
-    <section className="mt-5">
-      <h3 className="text-xs font-semibold uppercase tracking-wide text-brand-600">{bloque.titulo}</h3>
-      <p className="text-xs text-slate-400">{bloque.sub}</p>
+    <section className="rounded-lg border border-slate-200">
+      {/* El live encabeza cada bloque con una franja propia separada por un filete. */}
+      <div className="border-b border-slate-100 px-3 py-2">
+        {/* El live usa un div; mantenemos h3 por accesibilidad — mismas clases, mismo píxel. */}
+        <h3 className="text-xs font-semibold uppercase tracking-wide text-slate-400">
+          {bloque.titulo}
+        </h3>
+        <p className="text-xs text-slate-400">{bloque.sub}</p>
+      </div>
 
-      <table className="mt-2 w-full text-sm">
+      <table className="w-full text-sm">
         <thead>
-          <tr className="border-b border-slate-100 text-[10px] uppercase tracking-wide text-slate-400">
-            <th className="py-1 text-left font-medium">Sección</th>
-            <th className="w-16 py-1 text-center font-medium">Ver</th>
-            <th className="w-16 py-1 text-center font-medium">Editar</th>
+          <tr className="border-b border-slate-100 text-[11px] uppercase tracking-wide text-slate-400">
+            <th className="px-3 py-1.5 text-left font-medium">Sección</th>
+            <th className="w-16 py-1.5 text-center font-medium">Ver</th>
+            <th className="w-16 py-1.5 text-center font-medium">Editar</th>
           </tr>
         </thead>
         <tbody>
           {bloque.filas.map((fila) => (
-            <tr key={fila.nombre} className="border-b border-slate-50">
-              <td className="py-1.5 pr-4">
-                <div className="text-slate-700">{fila.nombre}</div>
-                {fila.nota && <div className="text-xs text-slate-400">{fila.nota}</div>}
+            <tr
+              key={fila.nombre}
+              className="border-b border-slate-50 last:border-0 hover:bg-slate-50/60"
+            >
+              <td className="px-3 py-1.5">
+                <div className="font-medium text-slate-700">{fila.nombre}</div>
+                {fila.nota && (
+                  <div className="text-xs leading-snug text-slate-400">{fila.nota}</div>
+                )}
               </td>
               {(['ver', 'editar'] as const).map((col) => {
                 const k = clave(fila.nombre, col);
                 return (
-                  <td key={col} className="py-1.5 text-center">
+                  <td key={col} className="text-center">
                     {fila[col] === 'check' ? (
                       <input
                         type="checkbox"
@@ -41,7 +52,7 @@ export function MatrizPermisos({ bloque, activos, onToggle }: MatrizPermisosProp
                         className="h-4 w-4 rounded border-slate-300 text-brand-600 focus:ring-brand-500"
                       />
                     ) : (
-                      <span className="text-slate-300">—</span>
+                      <span className="text-xs text-slate-300">—</span>
                     )}
                   </td>
                 );

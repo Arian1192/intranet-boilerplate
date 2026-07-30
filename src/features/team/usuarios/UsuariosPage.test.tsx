@@ -136,6 +136,20 @@ describe('UsuariosPage — tabla de cuentas', () => {
     expect(screen.queryByText('maf@blackmoose.es')).not.toBeInTheDocument();
   });
 
+  it('una cuenta Portal no lleva badge de ficha, y las Admin sí', () => {
+    render(<UsuariosPage />);
+    // El live pinta exactamente 2 filas Portal y ninguna con badge de ficha:
+    // 20 cuentas − 2 portales = 18 badges de ficha, de los cuales 17 «Team» y 1 «Sin ficha Team».
+    expect(screen.getAllByText('Portal')).toHaveLength(2);
+    expect(screen.getAllByText('🧑‍💼 Team')).toHaveLength(17);
+    expect(screen.getAllByText('Sin ficha Team')).toHaveLength(1);
+
+    // La condición es el tipo Portal, no «solo Interno»: las Admin sí lo llevan.
+    fireEvent.click(screen.getByRole('button', { name: 'Portales' }));
+    expect(screen.queryByText('🧑‍💼 Team')).not.toBeInTheDocument();
+    expect(screen.queryByText('Sin ficha Team')).not.toBeInTheDocument();
+  });
+
   it('el filtro Internos excluye los portales', () => {
     render(<UsuariosPage />);
     fireEvent.click(screen.getByRole('button', { name: 'Internos' }));

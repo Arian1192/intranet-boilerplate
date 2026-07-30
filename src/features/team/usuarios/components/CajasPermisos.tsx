@@ -9,7 +9,7 @@ export interface CajasPermisosProps {
 /** Las 11 cajas de permisos por módulo: checkboxes sueltos, sin columnas Ver/Editar. */
 export function CajasPermisos({ activos, onToggle }: CajasPermisosProps) {
   return (
-    <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+    <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
       {CAJAS_PERMISOS.map((caja) => (
         <section key={caja.titulo} className="rounded-lg border border-slate-200 p-3">
           <h3 className="mb-2 text-xs font-semibold uppercase tracking-wide text-brand-600">
