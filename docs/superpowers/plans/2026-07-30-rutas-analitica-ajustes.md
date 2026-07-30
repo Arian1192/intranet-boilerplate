@@ -5,7 +5,7 @@
 
 **Spec:** `docs/superpowers/specs/2026-07-30-rutas-analitica-ajustes-design.md` — léela entera antes de la
 Tarea 1. Los datos de seed de `/crm/kpis` y `/personal/analitica` están en su §2.
-**Base:** `main` = `4578550`. **Baseline en verde: 249 ficheros / 965 tests** (verificado 2026-07-30 09:51).
+**Base:** `main` = `2e0ac9a`. **Baseline en verde: 252 ficheros / 998 tests** (verificado 2026-07-30 10:06).
 
 **Este plan cubre CINCO ramas.** No las ejecutes todas en la misma: mira el bloque de la que te toque.
 La spec §5 dice cuál es cuál. Las cinco tocan `src/app/router.tsx`, así que **el merge va en serie**.
@@ -82,7 +82,7 @@ Configuración que ya tenemos. Solo cambia el `h1` y el shell que los envuelve.
 
 ### A3 — Cierre de la rama A
 
-- [ ] `npx vitest run` verde con **≥ 249/965**. `tsc --noEmit` y lint limpios. Pegar las tres salidas.
+- [ ] `npx vitest run` verde con **≥ 252/998**. `tsc --noEmit` y lint limpios. Pegar las tres salidas.
 - [ ] Confirmar que `/configuracion/comisiones` y `/configuracion/alertas` **no han cambiado** (los dos
       tests de regresión en verde).
 - [ ] PR sobre `main`. **`gh pr edit` está roto** (peta con `GraphQL: Projects (classic) is being
@@ -210,7 +210,7 @@ por módulo. **Una implementación, dos rutas cada una.**
 
 ## Verificación final (todas las ramas)
 
-- [ ] `npx vitest run` → **≥ 249 ficheros y ≥ 965 tests**, verde. Pegar la salida literal.
+- [ ] `npx vitest run` → **≥ 252 ficheros y ≥ 998 tests**, verde. Pegar la salida literal.
 - [ ] `npx tsc --noEmit` → sin salida. Pegar comando y resultado.
 - [ ] Lint `--max-warnings 0` → limpio. Pegar la salida.
 - [ ] `git diff --stat main` → confirmar que **no** aparece `src/components/layout/TopNav.tsx`.

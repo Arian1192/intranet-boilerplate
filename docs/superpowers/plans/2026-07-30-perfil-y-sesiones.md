@@ -4,10 +4,10 @@
 > `superpowers:executing-plans` para ejecutar este plan tarea a tarea. Los pasos usan checkbox (`- [ ]`).
 
 **Spec:** `docs/superpowers/specs/2026-07-30-perfil-y-sesiones-design.md` — léela entera antes de la Tarea 1.
-**Rama:** `feature/perfil-y-sesiones`, base `main` = `4578550`.
+**Rama:** `feature/perfil-y-sesiones`, base `main` = `2e0ac9a`.
 **Evidencia de partida:** `docs/references/barrido-2026-07-30/d-perfil.png` y el volcado de texto de
 `/perfil`. **Es evidencia incompleta a propósito**: la Tarea 1 la completa.
-**Baseline que hay que mantener en verde:** **249 ficheros / 965 tests** (verificado 2026-07-30 09:51).
+**Baseline que hay que mantener en verde:** **252 ficheros / 998 tests** (verificado 2026-07-30 10:06).
 
 ## Restricciones globales
 
@@ -25,8 +25,8 @@
 
 ## Tarea 0 — Punto de partida verificado
 
-- [ ] `git switch -c feature/perfil-y-sesiones` desde `main` (`4578550`).
-- [ ] `npx vitest run` → **249 ficheros / 965 tests** verde. Pegar la salida.
+- [ ] `git switch -c feature/perfil-y-sesiones` desde `main` (`2e0ac9a`).
+- [ ] `npx vitest run` → **252 ficheros / 998 tests** verde. Pegar la salida.
 - [ ] `npx tsc --noEmit` y lint → limpios.
 - [ ] Sin commit.
 
@@ -116,7 +116,7 @@ completa, pero **no** clases ni `getComputedStyle`. Sin este paso, la pantalla s
 
 ## Tarea 6 — Cierre y verificación
 
-- [ ] `npx vitest run` → **≥ 249 ficheros y ≥ 965 tests**, verde. Pegar la salida literal.
+- [ ] `npx vitest run` → **≥ 252 ficheros y ≥ 998 tests**, verde. Pegar la salida literal.
 - [ ] `npx tsc --noEmit` → sin salida. Pegar comando y resultado.
 - [ ] Lint `--max-warnings 0` → limpio. Pegar la salida.
 - [ ] `git diff --stat main` → confirmar que **no** aparece `TopNav.tsx` ni `src/lib/constants.ts`.

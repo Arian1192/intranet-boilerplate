@@ -1,6 +1,6 @@
 # Panel de Ayuda contextual · Design
 
-**Rama sugerida:** `feature/ayuda-contextual` (base `main`, `4578550`) · **PR:** una sola al cierre.
+**Rama sugerida:** `feature/ayuda-contextual` (base `main`, `2e0ac9a`) · **PR:** una sola al cierre.
 **Ficheros:** `src/components/layout/HelpPanel.tsx`, `src/components/layout/AppLayout.tsx`,
 y un módulo de datos nuevo `src/components/layout/help-tips.ts`.
 **Evidencia:** `docs/references/barrido-2026-07-30/` —

@@ -1,6 +1,12 @@
 # Barrido del live 2026-07-30 — informe de deltas
 
 **Ejecutor:** Faena A (`wA:pC`). **Base de comparación:** `main` = `4578550` (249 ficheros / 965 tests).
+
+> **Nota posterior al barrido.** Mientras se escribía este informe se fusionó la **PR #21**
+> (`feature/config-usuarios`): `main` es ahora `2e0ac9a` con **252 ficheros / 998 tests** (medido
+> 2026-07-30 10:06). Las comparaciones de este informe se hicieron contra `4578550` y **se dejan tal cual**,
+> porque es la base real en el momento de la captura. Los cuatro planes de §5 sí llevan el baseline nuevo,
+> que es el que tiene que usar quien los ejecute.
 **Live:** `bookings.conceptoneagency.com` — capturado entre **09:05 y 10:15 CEST del 2026-07-30**.
 **Evidencia:** `docs/references/barrido-2026-07-30/` (96 PNG + volcados HTML/JSON sin truncar),
 `docs/references/config-usuarios/` (encargo de las 11 cajas de permisos),
@@ -297,10 +303,14 @@ parametrizado (`RedaccionShell`).
    en 8.ª posición y CRUDA en 9.ª; el grid del Home no se mueve porque agrupa por `category`.
 2. **`StatusChip` de Euphoric: 2 tonos.** `'En producción' → 'sky'`, `'Cambios' → 'rose'`
    (`src/features/euphoric/components/StatusChip.tsx`). `Badge` ya tiene las dos variantes correctas.
-3. **Título de las 11 cajas de permisos: `brand-600` → `text-slate-400`.** Solo aplica a la PR #21
-   (`feature/config-usuarios`), no a `main`. Ya reportado con evidencia doble en
-   `docs/references/config-usuarios/2026-07-30-cajas-permisos-live.md`. **No tocar los checkbox**, que
-   en el live sí llevan `text-brand-600 focus:ring-brand-500`.
+3. ~~**Título de las 11 cajas de permisos: `brand-600` → `text-slate-400`.**~~ **✅ HECHO** — la PR #21 se
+   fusionó (`ff094e6`, en `main` desde `2e0ac9a`). Verificado en el código fusionado:
+   `src/features/team/usuarios/components/CajasPermisos.tsx:19` usa
+   `mb-2 text-xs font-semibold uppercase tracking-wide text-slate-400`, el grid es
+   `grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4` y la caja
+   `rounded-lg border border-slate-200 bg-slate-50/50 p-3` — los tres exactos.
+   Y el aviso se respetó: los `checkbox` **mantienen** `text-brand-600 focus:ring-brand-500` (línea 32).
+   Evidencia: `docs/references/config-usuarios/2026-07-30-cajas-permisos-live.md`.
 4. **La fila de secciones de ConceptOne no debe ser sticky.** En el live vive **fuera** del `<header>`,
    en `div.hidden border-b border-slate-200 bg-slate-50/70 md:block` con un interior
    `mx-auto flex w-full max-w-7xl items-center gap-1 overflow-x-auto px-4 py-1.5`; nosotros la metemos
@@ -339,7 +349,7 @@ PR #21. **No hace falta spec transversal de color** (queda como arreglo suelto n
 | # | Trabajo | Talla | Por qué en este orden |
 |---|---|---|---|
 | 1 | **TopNav: módulo activo + logo + iconos de acción + usuario** (§2.1, §2.3) | **M** | Es la única cosa que se ve en **todas** las pantallas. Además desbloquea las 11 rutas de §3, que cuelgan de sus iconos: sin la cabecera, esas rutas no tendrían por dónde entrar. |
-| 2 | **Arreglos sueltos 1, 2, 4, 5, 6** | **S** | Cinco cambios de pocas líneas con evidencia cerrada. Barato y quita ruido antes de meter pantallas nuevas. El nº 3 va por la PR #21, no por aquí. |
+| 2 | **Arreglos sueltos 1, 2, 4, 5, 6, 7** | **S** | Seis cambios de pocas líneas con evidencia cerrada. Barato y quita ruido antes de meter pantallas nuevas. El nº 3 ya está **hecho** (PR #21 fusionada). |
 | 3 | **Tablero de piezas unificado** (§2.5) | **M** | Ya hay ejecutor esperando y la evidencia es concluyente. Cuanto antes converja, menos deriva acumulan las dos copias. |
 | 4 | **Panel de Ayuda contextual** (§2.2) | **L** | El más caro por volumen de copy (20 tarjetas literales), pero es mecánico y aislado: una fuente de datos + un componente. Lo pongo después de la cabecera porque no bloquea a nadie. |
 | 5 | **11 rutas de analítica y ajustes** (§3) | **L** | El grueso en pantallas nuevas, pero divisible: `/conceptone/ajustes` y `/produccion/ajustes` son re-enrutado (S), `/tagmag/*` sale del gemelo de Mixmag, y los 3 grandes (`/reporte`, `/mixmag/analitica`, `/mixmag/ajustes`) admiten un agente cada uno. |

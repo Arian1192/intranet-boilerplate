@@ -1,6 +1,6 @@
 # `/perfil` — Mi perfil y Mis sesiones · Design
 
-**Rama sugerida:** `feature/perfil-y-sesiones` (base `main`, `4578550`) · **PR:** una sola al cierre.
+**Rama sugerida:** `feature/perfil-y-sesiones` (base `main`, `2e0ac9a`) · **PR:** una sola al cierre.
 **Ficheros:** `src/features/perfil/` (nuevo), `src/app/router.tsx`.
 **Depende de:** `feature/topnav-modulo-activo` sólo para el **enlace** (el bloque de usuario del TopNav pasa
 a `<Link to="/perfil">`). Se puede desarrollar en paralelo; navegando a mano funciona igual.

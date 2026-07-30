@@ -1,6 +1,6 @@
 # TopNav — el desplegable es el módulo activo, logo por ruta e iconos de acción · Design
 
-**Rama sugerida:** `feature/topnav-modulo-activo` (base `main`, `4578550`) · **PR:** una sola al cierre.
+**Rama sugerida:** `feature/topnav-modulo-activo` (base `main`, `2e0ac9a`) · **PR:** una sola al cierre.
 **Ficheros:** `src/components/layout/{TopNav,EspaciosDropdown,UserMenu}.tsx`, `src/lib/constants.ts`,
 `src/lib/icons.ts`, `src/components/ui/Avatar.tsx`, los 12 `*Shell.tsx` de `src/features/modules/`
 (+ `RedaccionShell`), `src/features/booking/data/nav.ts`.

@@ -5,10 +5,10 @@
 
 **Spec:** `docs/superpowers/specs/2026-07-30-ayuda-contextual-design.md` — **léela entera antes de la
 Tarea 1**; los 20 textos literales de los consejos están en su tabla D2 y son la fuente para el seed.
-**Rama:** `feature/ayuda-contextual`, base `main` = `4578550`.
+**Rama:** `feature/ayuda-contextual`, base `main` = `2e0ac9a`.
 **Evidencia:** `docs/references/barrido-2026-07-30/ayuda-contextual-inventario.json` (los 81 conjuntos
 ruta→contenido, volcados del live) y `ayuda-{team-contextual,mixmag-campanas-3tips,generico}.html`.
-**Baseline que hay que mantener en verde:** **249 ficheros / 965 tests** (verificado 2026-07-30 09:51).
+**Baseline que hay que mantener en verde:** **252 ficheros / 998 tests** (verificado 2026-07-30 10:06).
 
 ## Restricciones globales
 
@@ -27,8 +27,8 @@ ruta→contenido, volcados del live) y `ayuda-{team-contextual,mixmag-campanas-3
 
 ## Tarea 0 — Punto de partida verificado
 
-- [ ] `git switch -c feature/ayuda-contextual` desde `main` (`4578550`).
-- [ ] `npx vitest run` → **249 ficheros / 965 tests** verde. Pegar la salida.
+- [ ] `git switch -c feature/ayuda-contextual` desde `main` (`2e0ac9a`).
+- [ ] `npx vitest run` → **252 ficheros / 998 tests** verde. Pegar la salida.
 - [ ] `npx tsc --noEmit` y lint → limpios.
 - [ ] Leer `src/components/layout/HelpPanel.tsx` entero y anotar qué tests lo cubren hoy:
       `npx vitest run src/components/layout 2>&1 | tail -20`.
@@ -179,7 +179,7 @@ Primero la lógica pura, que es lo que tiene reglas. La UI viene después.
       **parar**: falta o sobra copy.
 - [ ] Repasar los 20 textos **carácter a carácter** contra la tabla D2 de la spec, prestando atención a
       `«»`, `≠`, `—` y las tildes. Este es el fallo más probable de toda la rama.
-- [ ] `npx vitest run` → **≥ 249 ficheros y ≥ 965 tests**, verde. Pegar la salida literal.
+- [ ] `npx vitest run` → **≥ 252 ficheros y ≥ 998 tests**, verde. Pegar la salida literal.
 - [ ] `npx tsc --noEmit` → sin salida. Pegar comando y resultado.
 - [ ] Lint `--max-warnings 0` → limpio. Pegar la salida.
 - [ ] `git diff --stat main` → confirmar que **solo** se han tocado `help-tips.ts`, `help-tips.test.ts`,

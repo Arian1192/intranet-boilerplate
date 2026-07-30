@@ -1,6 +1,6 @@
 # Las 11 rutas de analítica y ajustes que el live tiene y nosotros no · Design
 
-**Rama sugerida:** varias (ver §5 «Troceado»). Base `main`, `4578550`.
+**Rama sugerida:** varias (ver §5 «Troceado»). Base `main`, `2e0ac9a`.
 **Depende de:** `feature/topnav-modulo-activo` — los iconos que llevan a estas rutas los declara esa rama.
 Se puede empezar antes de que se fusione, pero **no se toca `TopNav.tsx` aquí**.
 **Evidencia:** `docs/references/barrido-2026-07-30/` — `c1-reporte.png`, `c-mixmag-analitica.png`,

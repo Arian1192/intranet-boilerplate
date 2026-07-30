@@ -4,9 +4,9 @@
 > `superpowers:executing-plans` para ejecutar este plan tarea a tarea. Los pasos usan checkbox (`- [ ]`).
 
 **Spec:** `docs/superpowers/specs/2026-07-30-topnav-modulo-activo-design.md` — léela entera antes de la Tarea 1.
-**Rama:** `feature/topnav-modulo-activo`, base `main` = `4578550`.
+**Rama:** `feature/topnav-modulo-activo`, base `main` = `2e0ac9a`.
 **Evidencia:** `docs/references/barrido-2026-07-30/` (capturas del live del 2026-07-30).
-**Baseline que hay que mantener en verde:** **249 ficheros / 965 tests** (`npx vitest run`, verificado
+**Baseline que hay que mantener en verde:** **252 ficheros / 998 tests** (`npx vitest run`, verificado
 2026-07-30 09:51, 56 s).
 
 Este plan es **autosuficiente**: todas las clases y valores del live están escritos aquí dentro. No hace
@@ -29,8 +29,8 @@ falta abrir ninguna captura salvo donde se indique explícitamente.
 
 ## Tarea 0 — Punto de partida verificado
 
-- [ ] `git switch -c feature/topnav-modulo-activo` desde `main` (`4578550`).
-- [ ] `npx vitest run` → confirmar **249 ficheros / 965 tests** en verde. Pegar la salida en el informe.
+- [ ] `git switch -c feature/topnav-modulo-activo` desde `main` (`2e0ac9a`).
+- [ ] `npx vitest run` → confirmar **252 ficheros / 998 tests** en verde. Pegar la salida en el informe.
 - [ ] `npx tsc --noEmit` y el lint del repo → limpios.
 - [ ] Guardar la lista de los tests que tocan la cabecera, que son los que van a moverse por diseño:
       `npx vitest run src/components/layout src/features/modules 2>&1 | tail -30`. Anotar cuántos son.
@@ -255,7 +255,7 @@ Esta es la tarea con más riesgo de romper tests ajenos. Hacerla **al final** y 
 
 ## Tarea 11 — Cierre y verificación
 
-- [ ] `npx vitest run` → **≥ 249 ficheros y ≥ 965 tests**, todo verde. Pegar la salida literal.
+- [ ] `npx vitest run` → **≥ 252 ficheros y ≥ 998 tests**, todo verde. Pegar la salida literal.
 - [ ] `npx tsc --noEmit` → sin salida. Pegar el comando y el resultado.
 - [ ] Lint con `--max-warnings 0` → limpio. Pegar la salida.
 - [ ] `grep -rn "Test User\|44444C\|opacity-70" src` → vacío (o justificado línea a línea).
