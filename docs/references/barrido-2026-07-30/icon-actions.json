@@ -1,0 +1,172 @@
+{
+  "/conceptone": {
+    "navX": 290,
+    "navRight": 972,
+    "icons": [
+      {
+        "href": "/artistas",
+        "title": "Artistas",
+        "aria": "Artistas",
+        "cls": "grid h-9 w-9 shrink-0 place-items-center rounded-lg transition-colors text-slate-500 hover:bg-slate-100 hover:text-slate-800",
+        "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"shrink-0\"><circle cx=\"12\" cy=\"8\" r=\"4\"></circle><path d=\"M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1\"></path></svg>",
+        "x": 822
+      },
+      {
+        "href": "/management/incidentes",
+        "title": "Incidencias",
+        "aria": "Incidencias",
+        "cls": "grid h-9 w-9 shrink-0 place-items-center rounded-lg transition-colors text-slate-500 hover:bg-slate-100 hover:text-slate-800",
+        "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"shrink-0\"><path d=\"M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z\"></path><line x1=\"12\" y1=\"9\" x2=\"12\" y2=\"13.5\"></line><line x1=\"12\" y1=\"17\" x2=\"12.01\" y2=\"17\"></line></svg>",
+        "x": 860
+      },
+      {
+        "href": "/reporte",
+        "title": "Analítica",
+        "aria": "Analítica",
+        "cls": "grid h-9 w-9 shrink-0 place-items-center rounded-lg transition-colors text-slate-500 hover:bg-slate-100 hover:text-slate-800",
+        "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"shrink-0\"><path d=\"M3 3v18h18\"></path><rect x=\"7\" y=\"12\" width=\"3\" height=\"6\"></rect><rect x=\"12\" y=\"8\" width=\"3\" height=\"10\"></rect><rect x=\"17\" y=\"5\" width=\"3\" height=\"13\"></rect></svg>",
+        "x": 898
+      },
+      {
+        "href": "/conceptone/ajustes",
+        "title": "Ajustes",
+        "aria": "Ajustes",
+        "cls": "grid h-9 w-9 shrink-0 place-items-center rounded-lg transition-colors text-slate-500 hover:bg-slate-100 hover:text-slate-800",
+        "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"shrink-0\"><circle cx=\"12\" cy=\"12\" r=\"3\"></circle><path d=\"M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z\"></path></svg>",
+        "x": 936
+      }
+    ],
+    "action": [
+      "+Añadir showShow"
+    ]
+  },
+  "/produccion": {
+    "navX": 282,
+    "navRight": 1134,
+    "icons": [
+      {
+        "href": "/produccion/ajustes",
+        "title": "Ajustes",
+        "aria": "Ajustes",
+        "cls": "grid h-9 w-9 shrink-0 place-items-center rounded-lg transition-colors text-slate-500 hover:bg-slate-100 hover:text-slate-800",
+        "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"shrink-0\"><circle cx=\"12\" cy=\"12\" r=\"3\"></circle><path d=\"M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z\"></path></svg>",
+        "x": 1098
+      }
+    ],
+    "action": []
+  },
+  "/euphoric": {
+    "navX": 316,
+    "navRight": 1134,
+    "icons": [
+      {
+        "href": "/euphoric/artistas",
+        "title": "Artistas",
+        "aria": "Artistas",
+        "cls": "grid h-9 w-9 shrink-0 place-items-center rounded-lg transition-colors text-slate-500 hover:bg-slate-100 hover:text-slate-800",
+        "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"shrink-0\"><circle cx=\"12\" cy=\"8\" r=\"4\"></circle><path d=\"M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1\"></path></svg>",
+        "x": 1060
+      },
+      {
+        "href": "/euphoric/ajustes",
+        "title": "Ajustes",
+        "aria": "Ajustes",
+        "cls": "grid h-9 w-9 shrink-0 place-items-center rounded-lg transition-colors text-slate-500 hover:bg-slate-100 hover:text-slate-800",
+        "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"shrink-0\"><circle cx=\"12\" cy=\"12\" r=\"3\"></circle><path d=\"M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z\"></path></svg>",
+        "x": 1098
+      }
+    ],
+    "action": []
+  },
+  "/mixmag": {
+    "navX": 256,
+    "navRight": 1134,
+    "icons": [
+      {
+        "href": "/mixmag/analitica",
+        "title": "Analítica",
+        "aria": "Analítica",
+        "cls": "grid h-9 w-9 shrink-0 place-items-center rounded-lg transition-colors text-slate-500 hover:bg-slate-100 hover:text-slate-800",
+        "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"shrink-0\"><path d=\"M3 3v18h18\"></path><rect x=\"7\" y=\"12\" width=\"3\" height=\"6\"></rect><rect x=\"12\" y=\"8\" width=\"3\" height=\"10\"></rect><rect x=\"17\" y=\"5\" width=\"3\" height=\"13\"></rect></svg>",
+        "x": 1060
+      },
+      {
+        "href": "/mixmag/ajustes",
+        "title": "Ajustes",
+        "aria": "Ajustes",
+        "cls": "grid h-9 w-9 shrink-0 place-items-center rounded-lg transition-colors text-slate-500 hover:bg-slate-100 hover:text-slate-800",
+        "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"shrink-0\"><circle cx=\"12\" cy=\"12\" r=\"3\"></circle><path d=\"M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z\"></path></svg>",
+        "x": 1098
+      }
+    ],
+    "action": []
+  },
+  "/tagmag": {
+    "navX": 262,
+    "navRight": 1134,
+    "icons": [
+      {
+        "href": "/tagmag/analitica",
+        "title": "Analítica",
+        "aria": "Analítica",
+        "cls": "grid h-9 w-9 shrink-0 place-items-center rounded-lg transition-colors text-slate-500 hover:bg-slate-100 hover:text-slate-800",
+        "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"shrink-0\"><path d=\"M3 3v18h18\"></path><rect x=\"7\" y=\"12\" width=\"3\" height=\"6\"></rect><rect x=\"12\" y=\"8\" width=\"3\" height=\"10\"></rect><rect x=\"17\" y=\"5\" width=\"3\" height=\"13\"></rect></svg>",
+        "x": 1060
+      },
+      {
+        "href": "/tagmag/ajustes",
+        "title": "Ajustes",
+        "aria": "Ajustes",
+        "cls": "grid h-9 w-9 shrink-0 place-items-center rounded-lg transition-colors text-slate-500 hover:bg-slate-100 hover:text-slate-800",
+        "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"shrink-0\"><circle cx=\"12\" cy=\"12\" r=\"3\"></circle><path d=\"M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z\"></path></svg>",
+        "x": 1098
+      }
+    ],
+    "action": []
+  },
+  "/cruda": {
+    "navX": 249,
+    "navRight": 1134,
+    "icons": [
+      {
+        "href": "/cruda/analitica",
+        "title": "Analítica",
+        "aria": "Analítica",
+        "cls": "grid h-9 w-9 shrink-0 place-items-center rounded-lg transition-colors text-slate-500 hover:bg-slate-100 hover:text-slate-800",
+        "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"shrink-0\"><path d=\"M3 3v18h18\"></path><rect x=\"7\" y=\"12\" width=\"3\" height=\"6\"></rect><rect x=\"12\" y=\"8\" width=\"3\" height=\"10\"></rect><rect x=\"17\" y=\"5\" width=\"3\" height=\"13\"></rect></svg>",
+        "x": 1098
+      }
+    ],
+    "action": []
+  },
+  "/crm": {
+    "navX": 229,
+    "navRight": 1134,
+    "icons": [
+      {
+        "href": "/crm/kpis",
+        "title": "Analítica",
+        "aria": "Analítica",
+        "cls": "grid h-9 w-9 shrink-0 place-items-center rounded-lg transition-colors text-slate-500 hover:bg-slate-100 hover:text-slate-800",
+        "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"shrink-0\"><path d=\"M3 3v18h18\"></path><rect x=\"7\" y=\"12\" width=\"3\" height=\"6\"></rect><rect x=\"12\" y=\"8\" width=\"3\" height=\"10\"></rect><rect x=\"17\" y=\"5\" width=\"3\" height=\"13\"></rect></svg>",
+        "x": 1098
+      }
+    ],
+    "action": []
+  },
+  "/personal": {
+    "navX": 236,
+    "navRight": 1134,
+    "icons": [
+      {
+        "href": "/personal/analitica",
+        "title": "Analítica",
+        "aria": "Analítica",
+        "cls": "grid h-9 w-9 shrink-0 place-items-center rounded-lg transition-colors text-slate-500 hover:bg-slate-100 hover:text-slate-800",
+        "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"shrink-0\"><path d=\"M3 3v18h18\"></path><rect x=\"7\" y=\"12\" width=\"3\" height=\"6\"></rect><rect x=\"12\" y=\"8\" width=\"3\" height=\"10\"></rect><rect x=\"17\" y=\"5\" width=\"3\" height=\"13\"></rect></svg>",
+        "x": 1098
+      }
+    ],
+    "action": []
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "dropdownActivo": {
+    "text": "Team",
+    "cls": "block rounded-md px-3 py-1.5 text-sm hover:bg-slate-50 font-semibold text-brand-700",
+    "color": "rgb(55, 55, 61)",
+    "fontWeight": "600"
+  },
+  "rampaBrand": {
+    "text-brand-50": "rgb(30, 41, 59)",
+    "bg-brand-50": "rgb(246, 246, 247)",
+    "text-brand-100": "rgb(30, 41, 59)",
+    "bg-brand-100": "rgb(236, 236, 237)",
+    "text-brand-200": "rgb(30, 41, 59)",
+    "bg-brand-200": "rgba(0, 0, 0, 0)",
+    "text-brand-300": "rgb(30, 41, 59)",
+    "bg-brand-300": "rgba(0, 0, 0, 0)",
+    "text-brand-400": "rgb(132, 132, 141)",
+    "bg-brand-400": "rgb(132, 132, 141)",
+    "text-brand-500": "rgb(95, 95, 104)",
+    "bg-brand-500": "rgb(95, 95, 104)",
+    "text-brand-600": "rgb(68, 68, 76)",
+    "bg-brand-600": "rgb(68, 68, 76)",
+    "text-brand-700": "rgb(55, 55, 61)",
+    "bg-brand-700": "rgba(0, 0, 0, 0)",
+    "text-brand-800": "rgb(43, 43, 48)",
+    "bg-brand-800": "rgba(0, 0, 0, 0)",
+    "text-brand-900": "rgb(30, 41, 59)",
+    "bg-brand-900": "rgba(0, 0, 0, 0)"
+  },
+  "panelesAcento": [
+    {
+      "t": "📋 Fichas a revisar",
+      "cls": "text-sm font-semibold uppercase tracking-wide text-rose-700",
+      "color": "rgb(190, 18, 60)",
+      "fs": "14px",
+      "fw": "600",
+      "tt": "uppercase",
+      "boxCls": "mb-6 rounded-xl border border-rose-200 bg-rose-50/50",
+      "boxBg": "rgba(255, 241, 242, 0.5)",
+      "boxBorder": "rgb(254, 205, 211)"
+    },
+    {
+      "t": "Advancing",
+      "cls": "text-sm font-semibold uppercase tracking-wide text-slate-600",
+      "color": "rgb(71, 85, 105)",
+      "fs": "14px",
+      "fw": "600",
+      "tt": "uppercase",
+      "boxCls": "flex items-center justify-between border-b border-slate-100 px-5 py-3",
+      "boxBg": "rgba(0, 0, 0, 0)",
+      "boxBorder": "rgb(241, 245, 249)"
+    },
+    {
+      "t": "Logística",
+      "cls": "text-sm font-semibold uppercase tracking-wide text-slate-600",
+      "color": "rgb(71, 85, 105)",
+      "fs": "14px",
+      "fw": "600",
+      "tt": "uppercase",
+      "boxCls": "flex items-center justify-between border-b border-slate-100 px-5 py-3",
+      "boxBg": "rgba(0, 0, 0, 0)",
+      "boxBorder": "rgb(241, 245, 249)"
+    },
+    {
+      "t": "Próximos shows",
+      "cls": "text-sm font-semibold uppercase tracking-wide text-slate-500",
+      "color": "rgb(100, 116, 139)",
+      "fs": "14px",
+      "fw": "600",
+      "tt": "uppercase",
+      "boxCls": "border-b border-slate-100 px-5 py-3",
+      "boxBg": "rgba(0, 0, 0, 0)",
+      "boxBorder": "rgb(241, 245, 249)"
+    },
+    {
+      "t": "Notas urgentes",
+      "cls": "text-sm font-semibold uppercase tracking-wide text-slate-500",
+      "color": "rgb(100, 116, 139)",
+      "fs": "14px",
+      "fw": "600",
+      "tt": "uppercase",
+      "boxCls": "border-b border-slate-100 px-5 py-3",
+      "boxBg": "rgba(0, 0, 0, 0)",
+      "boxBorder": "rgb(241, 245, 249)"
+    }
+  ],
+  "seccionesC1": {
+    "inHeader": false,
+    "rowCls": "mx-auto flex w-full max-w-7xl items-center gap-1 overflow-x-auto px-4 py-1.5",
+    "rowTag": "DIV",
+    "rowBg": "rgba(0, 0, 0, 0)",
+    "rowRect": {
+      "y": 57,
+      "h": 40
+    },
+    "items": [
+      {
+        "t": "Dashboard",
+        "h": "/conceptone",
+        "cls": "shrink-0 rounded-md px-3 py-1 text-sm font-medium transition-colors bg-brand-600 text-white",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(68, 68, 76)",
+        "cur": "page"
+      },
+      {
+        "t": "Shows",
+        "h": "/shows",
+        "cls": "shrink-0 rounded-md px-3 py-1 text-sm font-medium transition-colors text-slate-600 hover:bg-slate-200/70",
+        "color": "rgb(71, 85, 105)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "cur": null
+      },
+      {
+        "t": "Ofertas",
+        "h": "/ofertas",
+        "cls": "shrink-0 rounded-md px-3 py-1 text-sm font-medium transition-colors text-slate-600 hover:bg-slate-200/70",
+        "color": "rgb(71, 85, 105)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "cur": null
+      },
+      {
+        "t": "Cobros",
+        "h": "/cobros",
+        "cls": "shrink-0 rounded-md px-3 py-1 text-sm font-medium transition-colors text-slate-600 hover:bg-slate-200/70",
+        "color": "rgb(71, 85, 105)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "cur": null
+      },
+      {
+        "t": "Gastos",
+        "h": "/gastos",
+        "cls": "shrink-0 rounded-md px-3 py-1 text-sm font-medium transition-colors text-slate-600 hover:bg-slate-200/70",
+        "color": "rgb(71, 85, 105)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "cur": null
+      },
+      {
+        "t": "Disponibilidad",
+        "h": "/disponibilidad",
+        "cls": "shrink-0 rounded-md px-3 py-1 text-sm font-medium transition-colors text-slate-600 hover:bg-slate-200/70",
+        "color": "rgb(71, 85, 105)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "cur": null
+      }
+    ],
+    "activeStyle": {
+      "color": "rgb(71, 85, 105)",
+      "bg": "rgba(0, 0, 0, 0)"
+    },
+    "html": "<div class=\"mx-auto flex w-full max-w-7xl items-center gap-1 overflow-x-auto px-4 py-1.5\"><a aria-current=\"page\" class=\"shrink-0 rounded-md px-3 py-1 text-sm font-medium transition-colors bg-brand-600 text-white\" href=\"/conceptone\">Dashboard</a><a class=\"shrink-0 rounded-md px-3 py-1 text-sm font-medium transition-colors text-slate-600 hover:bg-slate-200/70\" href=\"/shows\">Shows</a><a class=\"shrink-0 rounded-md px-3 py-1 text-sm font-medium transition-colors text-slate-600 hover:bg-slate-200/70\" href=\"/ofertas\">Ofertas</a><a class=\"shrink-0 rounded-md px-3 py-1 text-sm font-medium transition-colors text-slate-600 hover:bg-slate-200/70\" href=\"/cobros\">Cobros</a><a class=\"shrink-0 rounded-md px-3 py-1 text-sm font-medium transition-colors text-slate-600 hover:bg-slate-200/70\" href=\"/gastos\">Gastos</a><a class=\"shrink-0 rounded-md px-3 py-1 text-sm font-medium transition-colors text-slate-600 hover:bg-slate-200/70\" href=\"/disponibilidad\">Disponibilidad</a></div>"
+  },
+  "logo": {
+    "src": "/logo_antlers.svg",
+    "alt": "Black Moose Group",
+    "cls": "h-5 w-auto",
+    "h": "20px",
+    "w": "27.0625px"
+  }
+}

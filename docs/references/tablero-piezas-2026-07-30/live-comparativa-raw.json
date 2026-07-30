@@ -1,0 +1,1152 @@
+{
+  "creativos": {
+    "path": "/creativos",
+    "h1": "Creativos",
+    "h1cls": "text-2xl font-semibold text-slate-800",
+    "bajada": "Tablero de creatividades del equipo de diseño: Euphoric, clientes del CRM y empresas internas.",
+    "bajadaCls": "text-sm text-slate-500",
+    "stats": [
+      {
+        "text": "7Creatividades activas",
+        "cls": "card px-4 py-3",
+        "style": {
+          "color": "rgb(30, 41, 59)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(226, 232, 240)",
+          "borderWidth": "1px",
+          "borderStyle": "solid",
+          "borderRadius": "12px",
+          "padding": "12px 16px",
+          "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px",
+          "fontSize": "16px",
+          "fontWeight": "400"
+        }
+      },
+      {
+        "text": "0Pend. aprobar",
+        "cls": "card px-4 py-3",
+        "style": {
+          "color": "rgb(30, 41, 59)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(226, 232, 240)",
+          "borderWidth": "1px",
+          "borderStyle": "solid",
+          "borderRadius": "12px",
+          "padding": "12px 16px",
+          "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px",
+          "fontSize": "16px",
+          "fontWeight": "400"
+        }
+      },
+      {
+        "text": "1En correcciones",
+        "cls": "card px-4 py-3",
+        "style": {
+          "color": "rgb(30, 41, 59)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(226, 232, 240)",
+          "borderWidth": "1px",
+          "borderStyle": "solid",
+          "borderRadius": "12px",
+          "padding": "12px 16px",
+          "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px",
+          "fontSize": "16px",
+          "fontWeight": "400"
+        }
+      },
+      {
+        "text": "4Atrasadas",
+        "cls": "card px-4 py-3",
+        "style": {
+          "color": "rgb(30, 41, 59)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(226, 232, 240)",
+          "borderWidth": "1px",
+          "borderStyle": "solid",
+          "borderRadius": "12px",
+          "padding": "12px 16px",
+          "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px",
+          "fontSize": "16px",
+          "fontWeight": "400"
+        }
+      }
+    ],
+    "chips": [
+      {
+        "t": "+ Alba",
+        "cls": "rounded-full border border-slate-300 px-2.5 py-1 text-xs font-medium text-slate-600 hover:border-brand-400 hover:text-brand-600",
+        "style": {
+          "color": "rgb(71, 85, 105)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderColor": "rgb(203, 213, 225)",
+          "borderWidth": "1px",
+          "borderStyle": "solid",
+          "borderRadius": "9999px",
+          "padding": "4px 10px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "+ Carlos",
+        "cls": "rounded-full border border-slate-300 px-2.5 py-1 text-xs font-medium text-slate-600 hover:border-brand-400 hover:text-brand-600",
+        "style": {
+          "color": "rgb(71, 85, 105)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderColor": "rgb(203, 213, 225)",
+          "borderWidth": "1px",
+          "borderStyle": "solid",
+          "borderRadius": "9999px",
+          "padding": "4px 10px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "+ Maf",
+        "cls": "rounded-full border border-slate-300 px-2.5 py-1 text-xs font-medium text-slate-600 hover:border-brand-400 hover:text-brand-600",
+        "style": {
+          "color": "rgb(71, 85, 105)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderColor": "rgb(203, 213, 225)",
+          "borderWidth": "1px",
+          "borderStyle": "solid",
+          "borderRadius": "9999px",
+          "padding": "4px 10px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "+ Nueva creatividad",
+        "cls": "btn-primary text-sm",
+        "style": {
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(68, 68, 76)",
+          "borderColor": "rgb(229, 231, 235)",
+          "borderWidth": "0px",
+          "borderStyle": "solid",
+          "borderRadius": "8px",
+          "padding": "8px 16px",
+          "boxShadow": "none",
+          "fontSize": "14px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "Tablero",
+        "cls": "rounded-md px-3 py-1 text-xs font-medium bg-white text-slate-800 shadow-sm",
+        "style": {
+          "color": "rgb(30, 41, 59)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(229, 231, 235)",
+          "borderWidth": "0px",
+          "borderStyle": "solid",
+          "borderRadius": "6px",
+          "padding": "4px 12px",
+          "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "Calendario",
+        "cls": "rounded-md px-3 py-1 text-xs font-medium text-slate-500 hover:text-slate-700",
+        "style": {
+          "color": "rgb(100, 116, 139)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderColor": "rgb(229, 231, 235)",
+          "borderWidth": "0px",
+          "borderStyle": "solid",
+          "borderRadius": "6px",
+          "padding": "4px 12px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "Todas",
+        "cls": "rounded-full px-3 py-1 text-xs font-medium bg-brand-600 text-white",
+        "style": {
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(68, 68, 76)",
+          "borderColor": "rgb(229, 231, 235)",
+          "borderWidth": "0px",
+          "borderStyle": "solid",
+          "borderRadius": "9999px",
+          "padding": "4px 12px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "Mías",
+        "cls": "rounded-full px-3 py-1 text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200",
+        "style": {
+          "color": "rgb(71, 85, 105)",
+          "backgroundColor": "rgb(241, 245, 249)",
+          "borderColor": "rgb(229, 231, 235)",
+          "borderWidth": "0px",
+          "borderStyle": "solid",
+          "borderRadius": "9999px",
+          "padding": "4px 12px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "Diseño",
+        "cls": "rounded-full px-3 py-1 text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200",
+        "style": {
+          "color": "rgb(71, 85, 105)",
+          "backgroundColor": "rgb(241, 245, 249)",
+          "borderColor": "rgb(229, 231, 235)",
+          "borderWidth": "0px",
+          "borderStyle": "solid",
+          "borderRadius": "9999px",
+          "padding": "4px 12px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "Vídeo",
+        "cls": "rounded-full px-3 py-1 text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200",
+        "style": {
+          "color": "rgb(71, 85, 105)",
+          "backgroundColor": "rgb(241, 245, 249)",
+          "borderColor": "rgb(229, 231, 235)",
+          "borderWidth": "0px",
+          "borderStyle": "solid",
+          "borderRadius": "9999px",
+          "padding": "4px 12px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "Pend. aprobar",
+        "cls": "rounded-full px-3 py-1 text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200",
+        "style": {
+          "color": "rgb(71, 85, 105)",
+          "backgroundColor": "rgb(241, 245, 249)",
+          "borderColor": "rgb(229, 231, 235)",
+          "borderWidth": "0px",
+          "borderStyle": "solid",
+          "borderRadius": "9999px",
+          "padding": "4px 12px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "Correcciones",
+        "cls": "rounded-full px-3 py-1 text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200",
+        "style": {
+          "color": "rgb(71, 85, 105)",
+          "backgroundColor": "rgb(241, 245, 249)",
+          "borderColor": "rgb(229, 231, 235)",
+          "borderWidth": "0px",
+          "borderStyle": "solid",
+          "borderRadius": "9999px",
+          "padding": "4px 12px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "Atrasadas",
+        "cls": "rounded-full px-3 py-1 text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200",
+        "style": {
+          "color": "rgb(71, 85, 105)",
+          "backgroundColor": "rgb(241, 245, 249)",
+          "borderColor": "rgb(229, 231, 235)",
+          "borderWidth": "0px",
+          "borderStyle": "solid",
+          "borderRadius": "9999px",
+          "padding": "4px 12px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "Editar",
+        "cls": "text-xs text-slate-400 hover:text-brand-600",
+        "style": {
+          "color": "rgb(148, 163, 184)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderColor": "rgb(229, 231, 235)",
+          "borderWidth": "0px",
+          "borderStyle": "solid",
+          "borderRadius": "0px",
+          "padding": "0px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "400"
+        }
+      }
+    ],
+    "selects": [],
+    "pastillas": [
+      {
+        "t": "Briefing",
+        "cls": "badge bg-slate-100 text-slate-600",
+        "style": {
+          "color": "rgb(71, 85, 105)",
+          "backgroundColor": "rgb(241, 245, 249)",
+          "borderColor": "rgb(229, 231, 235)",
+          "borderWidth": "0px",
+          "borderStyle": "solid",
+          "borderRadius": "9999px",
+          "padding": "2px 10px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "En producción",
+        "cls": "badge bg-sky-100 text-sky-700",
+        "style": {
+          "color": "rgb(3, 105, 161)",
+          "backgroundColor": "rgb(224, 242, 254)",
+          "borderColor": "rgb(229, 231, 235)",
+          "borderWidth": "0px",
+          "borderStyle": "solid",
+          "borderRadius": "9999px",
+          "padding": "2px 10px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "Revisión",
+        "cls": "badge bg-amber-100 text-amber-700",
+        "style": {
+          "color": "rgb(180, 83, 9)",
+          "backgroundColor": "rgb(254, 243, 199)",
+          "borderColor": "rgb(229, 231, 235)",
+          "borderWidth": "0px",
+          "borderStyle": "solid",
+          "borderRadius": "9999px",
+          "padding": "2px 10px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "Aprobado",
+        "cls": "badge bg-emerald-100 text-emerald-700",
+        "style": {
+          "color": "rgb(4, 120, 87)",
+          "backgroundColor": "rgb(209, 250, 229)",
+          "borderColor": "rgb(229, 231, 235)",
+          "borderWidth": "0px",
+          "borderStyle": "solid",
+          "borderRadius": "9999px",
+          "padding": "2px 10px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "Briefing",
+        "cls": "badge bg-slate-100 text-slate-600",
+        "style": {
+          "color": "rgb(71, 85, 105)",
+          "backgroundColor": "rgb(241, 245, 249)",
+          "borderColor": "rgb(229, 231, 235)",
+          "borderWidth": "0px",
+          "borderStyle": "solid",
+          "borderRadius": "9999px",
+          "padding": "2px 10px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "Briefing",
+        "cls": "badge bg-slate-100 text-slate-600",
+        "style": {
+          "color": "rgb(71, 85, 105)",
+          "backgroundColor": "rgb(241, 245, 249)",
+          "borderColor": "rgb(229, 231, 235)",
+          "borderWidth": "0px",
+          "borderStyle": "solid",
+          "borderRadius": "9999px",
+          "padding": "2px 10px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "Aprobado",
+        "cls": "badge bg-emerald-100 text-emerald-700",
+        "style": {
+          "color": "rgb(4, 120, 87)",
+          "backgroundColor": "rgb(209, 250, 229)",
+          "borderColor": "rgb(229, 231, 235)",
+          "borderWidth": "0px",
+          "borderStyle": "solid",
+          "borderRadius": "9999px",
+          "padding": "2px 10px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "Briefing",
+        "cls": "badge bg-slate-100 text-slate-600",
+        "style": {
+          "color": "rgb(71, 85, 105)",
+          "backgroundColor": "rgb(241, 245, 249)",
+          "borderColor": "rgb(229, 231, 235)",
+          "borderWidth": "0px",
+          "borderStyle": "solid",
+          "borderRadius": "9999px",
+          "padding": "2px 10px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "Briefing",
+        "cls": "badge bg-slate-100 text-slate-600",
+        "style": {
+          "color": "rgb(71, 85, 105)",
+          "backgroundColor": "rgb(241, 245, 249)",
+          "borderColor": "rgb(229, 231, 235)",
+          "borderWidth": "0px",
+          "borderStyle": "solid",
+          "borderRadius": "9999px",
+          "padding": "2px 10px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "Aprobado",
+        "cls": "badge bg-emerald-100 text-emerald-700",
+        "style": {
+          "color": "rgb(4, 120, 87)",
+          "backgroundColor": "rgb(209, 250, 229)",
+          "borderColor": "rgb(229, 231, 235)",
+          "borderWidth": "0px",
+          "borderStyle": "solid",
+          "borderRadius": "9999px",
+          "padding": "2px 10px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "Aprobado",
+        "cls": "badge bg-emerald-100 text-emerald-700",
+        "style": {
+          "color": "rgb(4, 120, 87)",
+          "backgroundColor": "rgb(209, 250, 229)",
+          "borderColor": "rgb(229, 231, 235)",
+          "borderWidth": "0px",
+          "borderStyle": "solid",
+          "borderRadius": "9999px",
+          "padding": "2px 10px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "En producción",
+        "cls": "badge bg-sky-100 text-sky-700",
+        "style": {
+          "color": "rgb(3, 105, 161)",
+          "backgroundColor": "rgb(224, 242, 254)",
+          "borderColor": "rgb(229, 231, 235)",
+          "borderWidth": "0px",
+          "borderStyle": "solid",
+          "borderRadius": "9999px",
+          "padding": "2px 10px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "Briefing",
+        "cls": "badge bg-slate-100 text-slate-600",
+        "style": {
+          "color": "rgb(71, 85, 105)",
+          "backgroundColor": "rgb(241, 245, 249)",
+          "borderColor": "rgb(229, 231, 235)",
+          "borderWidth": "0px",
+          "borderStyle": "solid",
+          "borderRadius": "9999px",
+          "padding": "2px 10px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      }
+    ],
+    "kanbanCols": [
+      {
+        "cls": "grid grid-cols-2 gap-3 sm:grid-cols-3 xl:grid-cols-5",
+        "cols": [
+          "Briefing5Sin asignarFlyer SIGHT: Sonny Fodera, Xandro, Marce",
+          "En producción1CarlosPack Sold Out · Pack Sold OutSIGHT · Est",
+          "Revisión0—",
+          "Cambios1AlbaSet Times SIGHT: Claptone, Vite b2b Miganova, To",
+          "Aprobado3Alba🎬Video Pomo 26/07SIGHT · Vídeo · v108 ago 2026"
+        ]
+      }
+    ],
+    "tables": [
+      {
+        "cls": "w-full min-w-[880px] text-sm",
+        "heads": [
+          {
+            "t": "Creatividad",
+            "cls": "px-4 py-2"
+          },
+          {
+            "t": "Cliente",
+            "cls": "px-4 py-2"
+          },
+          {
+            "t": "Tipo",
+            "cls": "px-4 py-2"
+          },
+          {
+            "t": "Deadline",
+            "cls": "px-4 py-2"
+          },
+          {
+            "t": "Estado",
+            "cls": "px-4 py-2"
+          },
+          {
+            "t": "Cliente aprob.",
+            "cls": "px-4 py-2"
+          }
+        ],
+        "rows": 10,
+        "firstRow": [
+          "Flyer SIGHT: Sonny Fodera, Xandro, Marcel BS, Jose Fajardo v1",
+          "SIGHT",
+          "Estático",
+          "17 jul 2026",
+          "Briefing",
+          "—"
+        ]
+      }
+    ],
+    "acciones": [
+      "+ Alba",
+      "+ Carlos",
+      "+ Maf",
+      "+ Nueva creatividad",
+      "Tablero",
+      "Calendario",
+      "Sin asignarFlyer SIGHT: Sonny Fodera, Xandro, Marcel BS, Jose FajardoSIGHT · Estático · v117 jul 2026",
+      "Sin asignarSet Times SIGHT: Sonny Fodera, Xandro, Marcel BS, Jose FajardoSIGHT · Estático · v111 ago 2026",
+      "Sin asignarClaptoneOpium Bcn · Estático · v1",
+      "Sin asignarFlyer SIGHT: Claptone, Vite b2b Miganova, Tomi & Kesh , Alexanders Som, Luka KuhnowSIGHT · Estático · v103 jul 2026"
+    ],
+    "mainText": "Creativos Tablero de creatividades del equipo de diseño: Euphoric, clientes del CRM y empresas internas. Asignar a: + Alba + Carlos + Maf + Nueva creatividad 7 Creatividades activas 0 Pend. aprobar 1 En correcciones 4 Atrasadas Tablero Calendario Todas Mías Diseño Vídeo Pend. aprobar Correcciones Atrasadas Recursos: — Editar Briefing 5 Sin asignar Flyer SIGHT: Sonny Fodera, Xandro, Marcel BS, Jose Fajardo SIGHT · Estático · v1 17 jul 2026 Sin asignar Set Times SIGHT: Sonny Fodera, Xandro, Marcel BS, Jose Fajardo SIGHT · Estático · v1 11 ago 2026 Alba Set Times SIGHT: James Hype, Alex Now, La Cintia, Pau Guilera SIGHT · Estático · v1 04 ago 2026 Alba Flyer SIGHT: James Hype, Alex Now, La Cintia, Pau Guilera SIGHT · Estático · v1 10 jul 2026 Pendiente cliente Sin asignar Claptone Opium Bcn · Estático · v1 En producción 1 Carlos Pack Sold Out · Pack Sold Out SIGHT · Estático · v1 10 jul 2026 ☑ 0/3 Revisión 0 — Cambios 1 Alba Set Times SIGHT: Claptone, Vite b2b Miganova, Tomi & Kesh , Alexanders Som, Luka Kuhnow SIGHT · Estático · v1 28 jul 2026 Pendiente cliente Aprobado 3 Alba 🎬 Video Pomo 26/07 SIGHT · Vídeo · v1 08 ago 2026 ☑ 0/1 Sin asignar Flyer SIGHT: Claptone, Vite b2b Miganova, Tomi & Kesh , Alexanders Som, Luka Kuhnow SIGHT · Estático · v1 03 jul 2026 Carlos Flyer Claptone 02/08 SIGHT · Vídeo · v1 22 jul 2026 ☑ 2/3 CREATIVIDAD CLIENTE TIPO DEADLINE ESTADO CLIENTE APROB. Flyer SIGHT: Sonny Fodera, Xandro, Marcel BS, Jose Fajardo v1 SIGHT Estático 17 jul 2026 Briefing — Set Times SIGHT: Sonny Fodera, Xandro, Marcel BS, Jose Fajardo v1 SIGHT Estático 11 ago 2026 Briefing — Video Pomo 26/07 v1 SIGHT Vídeo 08 ago 2026 Aprobado — Set Times SIGHT: Claptone, Vite b2b Miganova, Tomi & Kesh , Alexanders Som, Luka Kuhnow v1 SIGHT Estático 28 jul 2026 Cambios Pendiente cliente Set Times SIGHT: James Hype, Alex Now, La Cintia, Pau Guilera v1 SIGHT Estático 04 ago 2026 Briefing — Flyer SIGHT: James Hype, Alex Now, La Cintia, Pau Guilera v1 SIGHT Estático 10 jul 2026 Briefing Pendiente cliente Flyer SIGHT: Claptone, Vite b2b Miganova, Tomi & Kesh , Alexanders Som, Luka Kuhnow v1 SIGHT Estático 03 jul 2026 Aprobado — Flyer Claptone 02/08 v1 SIGHT Vídeo 22 jul 2026 Aprobado — Pack Sold Out · Pack Sold Out v1 SIGHT Estático 10 jul 2026 En producción — Claptone v1 Opium Bcn Estático — Briefing —"
+  },
+  "euphoric-piezas": {
+    "path": "/euphoric/piezas",
+    "h1": "Creatividades",
+    "h1cls": "text-2xl font-semibold text-slate-800",
+    "bajada": "Content creation: seguimiento de artes por estado de producción.",
+    "bajadaCls": "text-sm text-slate-500",
+    "stats": [
+      {
+        "text": "7Creatividades activas",
+        "cls": "card px-4 py-3",
+        "style": {
+          "color": "rgb(30, 41, 59)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(226, 232, 240)",
+          "borderWidth": "1px",
+          "borderStyle": "solid",
+          "borderRadius": "12px",
+          "padding": "12px 16px",
+          "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px",
+          "fontSize": "16px",
+          "fontWeight": "400"
+        }
+      },
+      {
+        "text": "0Pend. aprobar",
+        "cls": "card px-4 py-3",
+        "style": {
+          "color": "rgb(30, 41, 59)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(226, 232, 240)",
+          "borderWidth": "1px",
+          "borderStyle": "solid",
+          "borderRadius": "12px",
+          "padding": "12px 16px",
+          "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px",
+          "fontSize": "16px",
+          "fontWeight": "400"
+        }
+      },
+      {
+        "text": "1En correcciones",
+        "cls": "card px-4 py-3",
+        "style": {
+          "color": "rgb(30, 41, 59)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(226, 232, 240)",
+          "borderWidth": "1px",
+          "borderStyle": "solid",
+          "borderRadius": "12px",
+          "padding": "12px 16px",
+          "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px",
+          "fontSize": "16px",
+          "fontWeight": "400"
+        }
+      },
+      {
+        "text": "4Atrasadas",
+        "cls": "card px-4 py-3",
+        "style": {
+          "color": "rgb(30, 41, 59)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(226, 232, 240)",
+          "borderWidth": "1px",
+          "borderStyle": "solid",
+          "borderRadius": "12px",
+          "padding": "12px 16px",
+          "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px",
+          "fontSize": "16px",
+          "fontWeight": "400"
+        }
+      }
+    ],
+    "chips": [
+      {
+        "t": "+ Alba",
+        "cls": "rounded-full border border-slate-300 px-2.5 py-1 text-xs font-medium text-slate-600 hover:border-brand-400 hover:text-brand-600",
+        "style": {
+          "color": "rgb(71, 85, 105)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderColor": "rgb(203, 213, 225)",
+          "borderWidth": "1px",
+          "borderStyle": "solid",
+          "borderRadius": "9999px",
+          "padding": "4px 10px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "+ Carlos",
+        "cls": "rounded-full border border-slate-300 px-2.5 py-1 text-xs font-medium text-slate-600 hover:border-brand-400 hover:text-brand-600",
+        "style": {
+          "color": "rgb(71, 85, 105)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderColor": "rgb(203, 213, 225)",
+          "borderWidth": "1px",
+          "borderStyle": "solid",
+          "borderRadius": "9999px",
+          "padding": "4px 10px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "+ Maf",
+        "cls": "rounded-full border border-slate-300 px-2.5 py-1 text-xs font-medium text-slate-600 hover:border-brand-400 hover:text-brand-600",
+        "style": {
+          "color": "rgb(71, 85, 105)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderColor": "rgb(203, 213, 225)",
+          "borderWidth": "1px",
+          "borderStyle": "solid",
+          "borderRadius": "9999px",
+          "padding": "4px 10px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "+ Nueva creatividad",
+        "cls": "btn-primary text-sm",
+        "style": {
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(68, 68, 76)",
+          "borderColor": "rgb(229, 231, 235)",
+          "borderWidth": "0px",
+          "borderStyle": "solid",
+          "borderRadius": "8px",
+          "padding": "8px 16px",
+          "boxShadow": "none",
+          "fontSize": "14px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "Tablero",
+        "cls": "rounded-md px-3 py-1 text-xs font-medium bg-white text-slate-800 shadow-sm",
+        "style": {
+          "color": "rgb(30, 41, 59)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(229, 231, 235)",
+          "borderWidth": "0px",
+          "borderStyle": "solid",
+          "borderRadius": "6px",
+          "padding": "4px 12px",
+          "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "Calendario",
+        "cls": "rounded-md px-3 py-1 text-xs font-medium text-slate-500 hover:text-slate-700",
+        "style": {
+          "color": "rgb(100, 116, 139)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderColor": "rgb(229, 231, 235)",
+          "borderWidth": "0px",
+          "borderStyle": "solid",
+          "borderRadius": "6px",
+          "padding": "4px 12px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "Todas",
+        "cls": "rounded-full px-3 py-1 text-xs font-medium bg-brand-600 text-white",
+        "style": {
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(68, 68, 76)",
+          "borderColor": "rgb(229, 231, 235)",
+          "borderWidth": "0px",
+          "borderStyle": "solid",
+          "borderRadius": "9999px",
+          "padding": "4px 12px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "Mías",
+        "cls": "rounded-full px-3 py-1 text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200",
+        "style": {
+          "color": "rgb(71, 85, 105)",
+          "backgroundColor": "rgb(241, 245, 249)",
+          "borderColor": "rgb(229, 231, 235)",
+          "borderWidth": "0px",
+          "borderStyle": "solid",
+          "borderRadius": "9999px",
+          "padding": "4px 12px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "Diseño",
+        "cls": "rounded-full px-3 py-1 text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200",
+        "style": {
+          "color": "rgb(71, 85, 105)",
+          "backgroundColor": "rgb(241, 245, 249)",
+          "borderColor": "rgb(229, 231, 235)",
+          "borderWidth": "0px",
+          "borderStyle": "solid",
+          "borderRadius": "9999px",
+          "padding": "4px 12px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "Vídeo",
+        "cls": "rounded-full px-3 py-1 text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200",
+        "style": {
+          "color": "rgb(71, 85, 105)",
+          "backgroundColor": "rgb(241, 245, 249)",
+          "borderColor": "rgb(229, 231, 235)",
+          "borderWidth": "0px",
+          "borderStyle": "solid",
+          "borderRadius": "9999px",
+          "padding": "4px 12px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "Pend. aprobar",
+        "cls": "rounded-full px-3 py-1 text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200",
+        "style": {
+          "color": "rgb(71, 85, 105)",
+          "backgroundColor": "rgb(241, 245, 249)",
+          "borderColor": "rgb(229, 231, 235)",
+          "borderWidth": "0px",
+          "borderStyle": "solid",
+          "borderRadius": "9999px",
+          "padding": "4px 12px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "Correcciones",
+        "cls": "rounded-full px-3 py-1 text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200",
+        "style": {
+          "color": "rgb(71, 85, 105)",
+          "backgroundColor": "rgb(241, 245, 249)",
+          "borderColor": "rgb(229, 231, 235)",
+          "borderWidth": "0px",
+          "borderStyle": "solid",
+          "borderRadius": "9999px",
+          "padding": "4px 12px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "Atrasadas",
+        "cls": "rounded-full px-3 py-1 text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200",
+        "style": {
+          "color": "rgb(71, 85, 105)",
+          "backgroundColor": "rgb(241, 245, 249)",
+          "borderColor": "rgb(229, 231, 235)",
+          "borderWidth": "0px",
+          "borderStyle": "solid",
+          "borderRadius": "9999px",
+          "padding": "4px 12px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "Editar",
+        "cls": "text-xs text-slate-400 hover:text-brand-600",
+        "style": {
+          "color": "rgb(148, 163, 184)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderColor": "rgb(229, 231, 235)",
+          "borderWidth": "0px",
+          "borderStyle": "solid",
+          "borderRadius": "0px",
+          "padding": "0px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "400"
+        }
+      }
+    ],
+    "selects": [],
+    "pastillas": [
+      {
+        "t": "Briefing",
+        "cls": "badge bg-slate-100 text-slate-600",
+        "style": {
+          "color": "rgb(71, 85, 105)",
+          "backgroundColor": "rgb(241, 245, 249)",
+          "borderColor": "rgb(229, 231, 235)",
+          "borderWidth": "0px",
+          "borderStyle": "solid",
+          "borderRadius": "9999px",
+          "padding": "2px 10px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "En producción",
+        "cls": "badge bg-sky-100 text-sky-700",
+        "style": {
+          "color": "rgb(3, 105, 161)",
+          "backgroundColor": "rgb(224, 242, 254)",
+          "borderColor": "rgb(229, 231, 235)",
+          "borderWidth": "0px",
+          "borderStyle": "solid",
+          "borderRadius": "9999px",
+          "padding": "2px 10px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "Revisión",
+        "cls": "badge bg-amber-100 text-amber-700",
+        "style": {
+          "color": "rgb(180, 83, 9)",
+          "backgroundColor": "rgb(254, 243, 199)",
+          "borderColor": "rgb(229, 231, 235)",
+          "borderWidth": "0px",
+          "borderStyle": "solid",
+          "borderRadius": "9999px",
+          "padding": "2px 10px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "Aprobado",
+        "cls": "badge bg-emerald-100 text-emerald-700",
+        "style": {
+          "color": "rgb(4, 120, 87)",
+          "backgroundColor": "rgb(209, 250, 229)",
+          "borderColor": "rgb(229, 231, 235)",
+          "borderWidth": "0px",
+          "borderStyle": "solid",
+          "borderRadius": "9999px",
+          "padding": "2px 10px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "Briefing",
+        "cls": "badge bg-slate-100 text-slate-600",
+        "style": {
+          "color": "rgb(71, 85, 105)",
+          "backgroundColor": "rgb(241, 245, 249)",
+          "borderColor": "rgb(229, 231, 235)",
+          "borderWidth": "0px",
+          "borderStyle": "solid",
+          "borderRadius": "9999px",
+          "padding": "2px 10px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "Briefing",
+        "cls": "badge bg-slate-100 text-slate-600",
+        "style": {
+          "color": "rgb(71, 85, 105)",
+          "backgroundColor": "rgb(241, 245, 249)",
+          "borderColor": "rgb(229, 231, 235)",
+          "borderWidth": "0px",
+          "borderStyle": "solid",
+          "borderRadius": "9999px",
+          "padding": "2px 10px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "Aprobado",
+        "cls": "badge bg-emerald-100 text-emerald-700",
+        "style": {
+          "color": "rgb(4, 120, 87)",
+          "backgroundColor": "rgb(209, 250, 229)",
+          "borderColor": "rgb(229, 231, 235)",
+          "borderWidth": "0px",
+          "borderStyle": "solid",
+          "borderRadius": "9999px",
+          "padding": "2px 10px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "Briefing",
+        "cls": "badge bg-slate-100 text-slate-600",
+        "style": {
+          "color": "rgb(71, 85, 105)",
+          "backgroundColor": "rgb(241, 245, 249)",
+          "borderColor": "rgb(229, 231, 235)",
+          "borderWidth": "0px",
+          "borderStyle": "solid",
+          "borderRadius": "9999px",
+          "padding": "2px 10px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "Briefing",
+        "cls": "badge bg-slate-100 text-slate-600",
+        "style": {
+          "color": "rgb(71, 85, 105)",
+          "backgroundColor": "rgb(241, 245, 249)",
+          "borderColor": "rgb(229, 231, 235)",
+          "borderWidth": "0px",
+          "borderStyle": "solid",
+          "borderRadius": "9999px",
+          "padding": "2px 10px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "Aprobado",
+        "cls": "badge bg-emerald-100 text-emerald-700",
+        "style": {
+          "color": "rgb(4, 120, 87)",
+          "backgroundColor": "rgb(209, 250, 229)",
+          "borderColor": "rgb(229, 231, 235)",
+          "borderWidth": "0px",
+          "borderStyle": "solid",
+          "borderRadius": "9999px",
+          "padding": "2px 10px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "Aprobado",
+        "cls": "badge bg-emerald-100 text-emerald-700",
+        "style": {
+          "color": "rgb(4, 120, 87)",
+          "backgroundColor": "rgb(209, 250, 229)",
+          "borderColor": "rgb(229, 231, 235)",
+          "borderWidth": "0px",
+          "borderStyle": "solid",
+          "borderRadius": "9999px",
+          "padding": "2px 10px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "En producción",
+        "cls": "badge bg-sky-100 text-sky-700",
+        "style": {
+          "color": "rgb(3, 105, 161)",
+          "backgroundColor": "rgb(224, 242, 254)",
+          "borderColor": "rgb(229, 231, 235)",
+          "borderWidth": "0px",
+          "borderStyle": "solid",
+          "borderRadius": "9999px",
+          "padding": "2px 10px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "t": "Briefing",
+        "cls": "badge bg-slate-100 text-slate-600",
+        "style": {
+          "color": "rgb(71, 85, 105)",
+          "backgroundColor": "rgb(241, 245, 249)",
+          "borderColor": "rgb(229, 231, 235)",
+          "borderWidth": "0px",
+          "borderStyle": "solid",
+          "borderRadius": "9999px",
+          "padding": "2px 10px",
+          "boxShadow": "none",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        }
+      }
+    ],
+    "kanbanCols": [
+      {
+        "cls": "grid grid-cols-2 gap-3 sm:grid-cols-3 xl:grid-cols-5",
+        "cols": [
+          "Briefing5Sin asignarFlyer SIGHT: Sonny Fodera, Xandro, Marce",
+          "En producción1CarlosPack Sold Out · Pack Sold OutSIGHT · Est",
+          "Revisión0—",
+          "Cambios1AlbaSet Times SIGHT: Claptone, Vite b2b Miganova, To",
+          "Aprobado3Alba🎬Video Pomo 26/07SIGHT · Vídeo · v108 ago 2026"
+        ]
+      }
+    ],
+    "tables": [
+      {
+        "cls": "w-full min-w-[880px] text-sm",
+        "heads": [
+          {
+            "t": "Creatividad",
+            "cls": "px-4 py-2"
+          },
+          {
+            "t": "Cliente",
+            "cls": "px-4 py-2"
+          },
+          {
+            "t": "Tipo",
+            "cls": "px-4 py-2"
+          },
+          {
+            "t": "Deadline",
+            "cls": "px-4 py-2"
+          },
+          {
+            "t": "Estado",
+            "cls": "px-4 py-2"
+          },
+          {
+            "t": "Cliente aprob.",
+            "cls": "px-4 py-2"
+          }
+        ],
+        "rows": 10,
+        "firstRow": [
+          "Flyer SIGHT: Sonny Fodera, Xandro, Marcel BS, Jose Fajardo v1",
+          "SIGHT",
+          "Estático",
+          "17 jul 2026",
+          "Briefing",
+          "—"
+        ]
+      }
+    ],
+    "acciones": [
+      "+ Alba",
+      "+ Carlos",
+      "+ Maf",
+      "+ Nueva creatividad",
+      "Tablero",
+      "Calendario",
+      "Sin asignarFlyer SIGHT: Sonny Fodera, Xandro, Marcel BS, Jose FajardoSIGHT · Estático · v117 jul 2026",
+      "Sin asignarSet Times SIGHT: Sonny Fodera, Xandro, Marcel BS, Jose FajardoSIGHT · Estático · v111 ago 2026",
+      "Sin asignarClaptoneOpium Bcn · Estático · v1",
+      "Sin asignarFlyer SIGHT: Claptone, Vite b2b Miganova, Tomi & Kesh , Alexanders Som, Luka KuhnowSIGHT · Estático · v103 jul 2026"
+    ],
+    "mainText": "Creatividades Content creation: seguimiento de artes por estado de producción. Asignar a: + Alba + Carlos + Maf + Nueva creatividad 7 Creatividades activas 0 Pend. aprobar 1 En correcciones 4 Atrasadas Tablero Calendario Todas Mías Diseño Vídeo Pend. aprobar Correcciones Atrasadas Recursos: — Editar Briefing 5 Sin asignar Flyer SIGHT: Sonny Fodera, Xandro, Marcel BS, Jose Fajardo SIGHT · Estático · v1 17 jul 2026 Sin asignar Set Times SIGHT: Sonny Fodera, Xandro, Marcel BS, Jose Fajardo SIGHT · Estático · v1 11 ago 2026 Alba Set Times SIGHT: James Hype, Alex Now, La Cintia, Pau Guilera SIGHT · Estático · v1 04 ago 2026 Alba Flyer SIGHT: James Hype, Alex Now, La Cintia, Pau Guilera SIGHT · Estático · v1 10 jul 2026 Pendiente cliente Sin asignar Claptone Opium Bcn · Estático · v1 En producción 1 Carlos Pack Sold Out · Pack Sold Out SIGHT · Estático · v1 10 jul 2026 ☑ 0/3 Revisión 0 — Cambios 1 Alba Set Times SIGHT: Claptone, Vite b2b Miganova, Tomi & Kesh , Alexanders Som, Luka Kuhnow SIGHT · Estático · v1 28 jul 2026 Pendiente cliente Aprobado 3 Alba 🎬 Video Pomo 26/07 SIGHT · Vídeo · v1 08 ago 2026 ☑ 0/1 Sin asignar Flyer SIGHT: Claptone, Vite b2b Miganova, Tomi & Kesh , Alexanders Som, Luka Kuhnow SIGHT · Estático · v1 03 jul 2026 Carlos Flyer Claptone 02/08 SIGHT · Vídeo · v1 22 jul 2026 ☑ 2/3 CREATIVIDAD CLIENTE TIPO DEADLINE ESTADO CLIENTE APROB. Flyer SIGHT: Sonny Fodera, Xandro, Marcel BS, Jose Fajardo v1 SIGHT Estático 17 jul 2026 Briefing — Set Times SIGHT: Sonny Fodera, Xandro, Marcel BS, Jose Fajardo v1 SIGHT Estático 11 ago 2026 Briefing — Video Pomo 26/07 v1 SIGHT Vídeo 08 ago 2026 Aprobado — Set Times SIGHT: Claptone, Vite b2b Miganova, Tomi & Kesh , Alexanders Som, Luka Kuhnow v1 SIGHT Estático 28 jul 2026 Cambios Pendiente cliente Set Times SIGHT: James Hype, Alex Now, La Cintia, Pau Guilera v1 SIGHT Estático 04 ago 2026 Briefing — Flyer SIGHT: James Hype, Alex Now, La Cintia, Pau Guilera v1 SIGHT Estático 10 jul 2026 Briefing Pendiente cliente Flyer SIGHT: Claptone, Vite b2b Miganova, Tomi & Kesh , Alexanders Som, Luka Kuhnow v1 SIGHT Estático 03 jul 2026 Aprobado — Flyer Claptone 02/08 v1 SIGHT Vídeo 22 jul 2026 Aprobado — Pack Sold Out · Pack Sold Out v1 SIGHT Estático 10 jul 2026 En producción — Claptone v1 Opium Bcn Estático — Briefing —"
+  }
+}

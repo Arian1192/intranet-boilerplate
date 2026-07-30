@@ -1,0 +1,681 @@
+{
+  "/conceptone": {
+    "cabecera": "ConceptOne",
+    "tarjetas": [
+      {
+        "titulo": "El panel de atención no es una lista de tareas",
+        "cuerpo": "Es lo que está en riesgo por fecha: cuanto más cerca el show, más arriba. Si algo no debería estar ahí, es que le falta un dato al show."
+      }
+    ],
+    "generico": null
+  },
+  "/shows": {
+    "cabecera": "ConceptOne",
+    "tarjetas": [
+      {
+        "titulo": "El fee va en la moneda del deal",
+        "cuerpo": "Si el acuerdo es en dólares, se guarda en dólares y se convierte con el tipo de cambio del show. Meter el equivalente en euros a mano hace que la liquidación no cuadre."
+      },
+      {
+        "titulo": "Cerrar gastos es lo que congela la liquidación",
+        "cuerpo": "Mientras no cierres gastos, la cifra sigue moviéndose. Ciérralos cuando el show haya pasado y tengas todas las facturas."
+      }
+    ],
+    "generico": null
+  },
+  "/ofertas": {
+    "cabecera": "Ayuda",
+    "tarjetas": [],
+    "generico": "Pregunta lo que quieras de esta pantalla, o cuenta qué está fallando."
+  },
+  "/cobros": {
+    "cabecera": "Ayuda",
+    "tarjetas": [],
+    "generico": "Pregunta lo que quieras de esta pantalla, o cuenta qué está fallando."
+  },
+  "/gastos": {
+    "cabecera": "Ayuda",
+    "tarjetas": [],
+    "generico": "Pregunta lo que quieras de esta pantalla, o cuenta qué está fallando."
+  },
+  "/disponibilidad": {
+    "cabecera": "Ayuda",
+    "tarjetas": [],
+    "generico": "Pregunta lo que quieras de esta pantalla, o cuenta qué está fallando."
+  },
+  "/calendario-c1": {
+    "cabecera": "Ayuda",
+    "tarjetas": [],
+    "generico": "Pregunta lo que quieras de esta pantalla, o cuenta qué está fallando."
+  },
+  "/contactos": {
+    "cabecera": "Ayuda",
+    "tarjetas": [],
+    "generico": "Pregunta lo que quieras de esta pantalla, o cuenta qué está fallando."
+  },
+  "/artistas": {
+    "cabecera": "Ayuda",
+    "tarjetas": [],
+    "generico": "Pregunta lo que quieras de esta pantalla, o cuenta qué está fallando."
+  },
+  "/management/estrategias": {
+    "cabecera": "Ayuda",
+    "tarjetas": [],
+    "generico": "Pregunta lo que quieras de esta pantalla, o cuenta qué está fallando."
+  },
+  "/management/incidentes": {
+    "cabecera": "Ayuda",
+    "tarjetas": [],
+    "generico": "Pregunta lo que quieras de esta pantalla, o cuenta qué está fallando."
+  },
+  "/reporte": {
+    "cabecera": "Ayuda",
+    "tarjetas": [],
+    "generico": "Pregunta lo que quieras de esta pantalla, o cuenta qué está fallando."
+  },
+  "/conceptone/ajustes": {
+    "cabecera": "ConceptOne",
+    "tarjetas": [
+      {
+        "titulo": "El panel de atención no es una lista de tareas",
+        "cuerpo": "Es lo que está en riesgo por fecha: cuanto más cerca el show, más arriba. Si algo no debería estar ahí, es que le falta un dato al show."
+      }
+    ],
+    "generico": null
+  },
+  "/etra": {
+    "cabecera": "Ayuda",
+    "tarjetas": [],
+    "generico": "Pregunta lo que quieras de esta pantalla, o cuenta qué está fallando."
+  },
+  "/etra/tareas": {
+    "cabecera": "Ayuda",
+    "tarjetas": [],
+    "generico": "Pregunta lo que quieras de esta pantalla, o cuenta qué está fallando."
+  },
+  "/etra/seeding": {
+    "cabecera": "Ayuda",
+    "tarjetas": [],
+    "generico": "Pregunta lo que quieras de esta pantalla, o cuenta qué está fallando."
+  },
+  "/etra/cuentas": {
+    "cabecera": "Ayuda",
+    "tarjetas": [],
+    "generico": "Pregunta lo que quieras de esta pantalla, o cuenta qué está fallando."
+  },
+  "/produccion": {
+    "cabecera": "Producción",
+    "tarjetas": [
+      {
+        "titulo": "Los módulos se activan por evento",
+        "cuerpo": "Un evento no tiene por qué tener catering, ni backline, ni patrocinios. Activa solo lo que aplique: los módulos apagados no te piden datos ni te generan alertas."
+      }
+    ],
+    "generico": null
+  },
+  "/produccion/ajustes": {
+    "cabecera": "Producción",
+    "tarjetas": [
+      {
+        "titulo": "Los módulos se activan por evento",
+        "cuerpo": "Un evento no tiene por qué tener catering, ni backline, ni patrocinios. Activa solo lo que aplique: los módulos apagados no te piden datos ni te generan alertas."
+      }
+    ],
+    "generico": null
+  },
+  "/euphoric": {
+    "cabecera": "Euphoric Media",
+    "tarjetas": [
+      {
+        "titulo": "El arte se pide a Creativos",
+        "cuerpo": "Desde la pieza, «Pedir arte» crea el encargo en el tablero de Creativos. Pedirlo por mensaje privado hace que el diseñador no lo tenga en su cola."
+      }
+    ],
+    "generico": null
+  },
+  "/euphoric/cuentas": {
+    "cabecera": "Euphoric Media",
+    "tarjetas": [
+      {
+        "titulo": "El arte se pide a Creativos",
+        "cuerpo": "Desde la pieza, «Pedir arte» crea el encargo en el tablero de Creativos. Pedirlo por mensaje privado hace que el diseñador no lo tenga en su cola."
+      }
+    ],
+    "generico": null
+  },
+  "/euphoric/campanas": {
+    "cabecera": "Euphoric Media",
+    "tarjetas": [
+      {
+        "titulo": "El arte se pide a Creativos",
+        "cuerpo": "Desde la pieza, «Pedir arte» crea el encargo en el tablero de Creativos. Pedirlo por mensaje privado hace que el diseñador no lo tenga en su cola."
+      }
+    ],
+    "generico": null
+  },
+  "/euphoric/calendario": {
+    "cabecera": "Euphoric Media",
+    "tarjetas": [
+      {
+        "titulo": "El arte se pide a Creativos",
+        "cuerpo": "Desde la pieza, «Pedir arte» crea el encargo en el tablero de Creativos. Pedirlo por mensaje privado hace que el diseñador no lo tenga en su cola."
+      }
+    ],
+    "generico": null
+  },
+  "/euphoric/piezas": {
+    "cabecera": "Euphoric Media",
+    "tarjetas": [
+      {
+        "titulo": "El arte se pide a Creativos",
+        "cuerpo": "Desde la pieza, «Pedir arte» crea el encargo en el tablero de Creativos. Pedirlo por mensaje privado hace que el diseñador no lo tenga en su cola."
+      }
+    ],
+    "generico": null
+  },
+  "/euphoric/eventos": {
+    "cabecera": "Euphoric Media",
+    "tarjetas": [
+      {
+        "titulo": "El arte se pide a Creativos",
+        "cuerpo": "Desde la pieza, «Pedir arte» crea el encargo en el tablero de Creativos. Pedirlo por mensaje privado hace que el diseñador no lo tenga en su cola."
+      }
+    ],
+    "generico": null
+  },
+  "/euphoric/agenda": {
+    "cabecera": "Euphoric Media",
+    "tarjetas": [
+      {
+        "titulo": "El arte se pide a Creativos",
+        "cuerpo": "Desde la pieza, «Pedir arte» crea el encargo en el tablero de Creativos. Pedirlo por mensaje privado hace que el diseñador no lo tenga en su cola."
+      }
+    ],
+    "generico": null
+  },
+  "/euphoric/negocio": {
+    "cabecera": "Euphoric Media",
+    "tarjetas": [
+      {
+        "titulo": "El arte se pide a Creativos",
+        "cuerpo": "Desde la pieza, «Pedir arte» crea el encargo en el tablero de Creativos. Pedirlo por mensaje privado hace que el diseñador no lo tenga en su cola."
+      }
+    ],
+    "generico": null
+  },
+  "/euphoric/artistas": {
+    "cabecera": "Euphoric Media",
+    "tarjetas": [
+      {
+        "titulo": "El arte se pide a Creativos",
+        "cuerpo": "Desde la pieza, «Pedir arte» crea el encargo en el tablero de Creativos. Pedirlo por mensaje privado hace que el diseñador no lo tenga en su cola."
+      }
+    ],
+    "generico": null
+  },
+  "/euphoric/ajustes": {
+    "cabecera": "Euphoric Media",
+    "tarjetas": [
+      {
+        "titulo": "El arte se pide a Creativos",
+        "cuerpo": "Desde la pieza, «Pedir arte» crea el encargo en el tablero de Creativos. Pedirlo por mensaje privado hace que el diseñador no lo tenga en su cola."
+      }
+    ],
+    "generico": null
+  },
+  "/mixmag": {
+    "cabecera": "Mixmag",
+    "tarjetas": [
+      {
+        "titulo": "Tarifas y packs viven en la tuerca",
+        "cuerpo": "El tarifario, los productos y los packs de Mixmag están en la Configuración de este espacio (icono de tuerca), no en la configuración general."
+      }
+    ],
+    "generico": null
+  },
+  "/mixmag/contenidos": {
+    "cabecera": "Mixmag",
+    "tarjetas": [
+      {
+        "titulo": "Panel para leer, kanban para arrastrar",
+        "cuerpo": "El panel separa Redes, Web y Revista —tres equipos distintos— y las cajas de estado filtran al pulsarlas. El kanban es para mover piezas de fase."
+      },
+      {
+        "titulo": "Web y revista se escriben a folio completo",
+        "cuerpo": "Al abrir un artículo entras en el editor a página completa. Los posts de redes abren en un cajón lateral, que es lo que necesita un copy de dos líneas."
+      }
+    ],
+    "generico": null
+  },
+  "/mixmag/campanas": {
+    "cabecera": "Mixmag",
+    "tarjetas": [
+      {
+        "titulo": "La campaña ES el presupuesto",
+        "cuerpo": "Añade líneas de tarifa y el importe se calcula solo. Luego pulsa «Generar contenidos» y las piezas pactadas nacen ya enlazadas: no las crees a mano."
+      },
+      {
+        "titulo": "Vendida ≠ publicada",
+        "cuerpo": "«Sale desde» es cuándo se publica. La analítica cuenta la venta el día que aceptas la campaña, que es cuando de verdad ocurrió."
+      },
+      {
+        "titulo": "Los packs se despliegan",
+        "cuerpo": "Un pack entra como sus líneas, con el descuento repartido. La suma cuadra al céntimo con el precio del pack: si no cuadra, es un fallo, repórtalo."
+      }
+    ],
+    "generico": null
+  },
+  "/mixmag/revistas": {
+    "cabecera": "Mixmag",
+    "tarjetas": [
+      {
+        "titulo": "Tarifas y packs viven en la tuerca",
+        "cuerpo": "El tarifario, los productos y los packs de Mixmag están en la Configuración de este espacio (icono de tuerca), no en la configuración general."
+      }
+    ],
+    "generico": null
+  },
+  "/mixmag/analitica": {
+    "cabecera": "Mixmag",
+    "tarjetas": [
+      {
+        "titulo": "Tarifas y packs viven en la tuerca",
+        "cuerpo": "El tarifario, los productos y los packs de Mixmag están en la Configuración de este espacio (icono de tuerca), no en la configuración general."
+      }
+    ],
+    "generico": null
+  },
+  "/mixmag/ajustes": {
+    "cabecera": "Mixmag",
+    "tarjetas": [
+      {
+        "titulo": "Tarifas y packs viven en la tuerca",
+        "cuerpo": "El tarifario, los productos y los packs de Mixmag están en la Configuración de este espacio (icono de tuerca), no en la configuración general."
+      }
+    ],
+    "generico": null
+  },
+  "/tagmag": {
+    "cabecera": "TAGMAG",
+    "tarjetas": [
+      {
+        "titulo": "Tarifas y packs viven en la tuerca",
+        "cuerpo": "El tarifario y los packs de TAGMAG están en la Configuración de este espacio. Son suyos: no los comparte con Mixmag."
+      }
+    ],
+    "generico": null
+  },
+  "/tagmag/contenidos": {
+    "cabecera": "TAGMAG",
+    "tarjetas": [
+      {
+        "titulo": "«Pendiente de revisión» es del robot",
+        "cuerpo": "Ahí caen las noticias que trae la ingesta, con su puntuación. Lo primero que se decide no es cómo escribirla, sino si merece la pena: por eso «Aprobado» va antes que «Borrador»."
+      }
+    ],
+    "generico": null
+  },
+  "/tagmag/campanas": {
+    "cabecera": "TAGMAG",
+    "tarjetas": [
+      {
+        "titulo": "Tarifas y packs viven en la tuerca",
+        "cuerpo": "El tarifario y los packs de TAGMAG están en la Configuración de este espacio. Son suyos: no los comparte con Mixmag."
+      }
+    ],
+    "generico": null
+  },
+  "/tagmag/revistas": {
+    "cabecera": "TAGMAG",
+    "tarjetas": [
+      {
+        "titulo": "Tarifas y packs viven en la tuerca",
+        "cuerpo": "El tarifario y los packs de TAGMAG están en la Configuración de este espacio. Son suyos: no los comparte con Mixmag."
+      }
+    ],
+    "generico": null
+  },
+  "/tagmag/analitica": {
+    "cabecera": "TAGMAG",
+    "tarjetas": [
+      {
+        "titulo": "Tarifas y packs viven en la tuerca",
+        "cuerpo": "El tarifario y los packs de TAGMAG están en la Configuración de este espacio. Son suyos: no los comparte con Mixmag."
+      }
+    ],
+    "generico": null
+  },
+  "/tagmag/ajustes": {
+    "cabecera": "TAGMAG",
+    "tarjetas": [
+      {
+        "titulo": "Tarifas y packs viven en la tuerca",
+        "cuerpo": "El tarifario y los packs de TAGMAG están en la Configuración de este espacio. Son suyos: no los comparte con Mixmag."
+      }
+    ],
+    "generico": null
+  },
+  "/creativos": {
+    "cabecera": "Creativos",
+    "tarjetas": [
+      {
+        "titulo": "Tu cola son los encargos, no los mensajes",
+        "cuerpo": "Todo lo que hay aquí viene de una pieza o una campaña de algún espacio. Si te piden algo por otro canal, pide que lo abran aquí: si no, no existe."
+      }
+    ],
+    "generico": null
+  },
+  "/cruda": {
+    "cabecera": "CRUDA",
+    "tarjetas": [
+      {
+        "titulo": "El stock se descuenta al confirmar el pedido",
+        "cuerpo": "No al crearlo. Un pedido en borrador no reserva nada, así que dos comerciales pueden vender la misma última unidad: confírmalo cuanto antes."
+      }
+    ],
+    "generico": null
+  },
+  "/cruda/catalogo": {
+    "cabecera": "CRUDA",
+    "tarjetas": [
+      {
+        "titulo": "El stock se descuenta al confirmar el pedido",
+        "cuerpo": "No al crearlo. Un pedido en borrador no reserva nada, así que dos comerciales pueden vender la misma última unidad: confírmalo cuanto antes."
+      }
+    ],
+    "generico": null
+  },
+  "/cruda/analitica": {
+    "cabecera": "CRUDA",
+    "tarjetas": [
+      {
+        "titulo": "El stock se descuenta al confirmar el pedido",
+        "cuerpo": "No al crearlo. Un pedido en borrador no reserva nada, así que dos comerciales pueden vender la misma última unidad: confírmalo cuanto antes."
+      }
+    ],
+    "generico": null
+  },
+  "/crm": {
+    "cabecera": "CRM",
+    "tarjetas": [
+      {
+        "titulo": "Una empresa, una ficha",
+        "cuerpo": "Si el mismo cliente compra en CRUDA y en Euphoric, es la misma organización con dos oportunidades. Duplicar la ficha es cómo se pierde el histórico."
+      }
+    ],
+    "generico": null
+  },
+  "/crm/pipeline": {
+    "cabecera": "CRM",
+    "tarjetas": [
+      {
+        "titulo": "Una empresa, una ficha",
+        "cuerpo": "Si el mismo cliente compra en CRUDA y en Euphoric, es la misma organización con dos oportunidades. Duplicar la ficha es cómo se pierde el histórico."
+      }
+    ],
+    "generico": null
+  },
+  "/crm/crecimiento": {
+    "cabecera": "CRM",
+    "tarjetas": [
+      {
+        "titulo": "Una empresa, una ficha",
+        "cuerpo": "Si el mismo cliente compra en CRUDA y en Euphoric, es la misma organización con dos oportunidades. Duplicar la ficha es cómo se pierde el histórico."
+      }
+    ],
+    "generico": null
+  },
+  "/crm/kpis": {
+    "cabecera": "CRM",
+    "tarjetas": [
+      {
+        "titulo": "Una empresa, una ficha",
+        "cuerpo": "Si el mismo cliente compra en CRUDA y en Euphoric, es la misma organización con dos oportunidades. Duplicar la ficha es cómo se pierde el histórico."
+      }
+    ],
+    "generico": null
+  },
+  "/personal": {
+    "cabecera": "Team",
+    "tarjetas": [
+      {
+        "titulo": "Los accesos se dan desde la ficha",
+        "cuerpo": "Crear la persona y darle acceso son dos cosas: una persona puede estar en el directorio sin cuenta. Los permisos se editan en su ficha, no en una lista aparte."
+      }
+    ],
+    "generico": null
+  },
+  "/personal/calendario": {
+    "cabecera": "Team",
+    "tarjetas": [
+      {
+        "titulo": "Los accesos se dan desde la ficha",
+        "cuerpo": "Crear la persona y darle acceso son dos cosas: una persona puede estar en el directorio sin cuenta. Los permisos se editan en su ficha, no en una lista aparte."
+      }
+    ],
+    "generico": null
+  },
+  "/personal/fichas": {
+    "cabecera": "Team",
+    "tarjetas": [
+      {
+        "titulo": "Los accesos se dan desde la ficha",
+        "cuerpo": "Crear la persona y darle acceso son dos cosas: una persona puede estar en el directorio sin cuenta. Los permisos se editan en su ficha, no en una lista aparte."
+      }
+    ],
+    "generico": null
+  },
+  "/personal/analitica": {
+    "cabecera": "Team",
+    "tarjetas": [
+      {
+        "titulo": "Los accesos se dan desde la ficha",
+        "cuerpo": "Crear la persona y darle acceso son dos cosas: una persona puede estar en el directorio sin cuenta. Los permisos se editan en su ficha, no en una lista aparte."
+      }
+    ],
+    "generico": null
+  },
+  "/personal/usuarios": {
+    "cabecera": "Team",
+    "tarjetas": [
+      {
+        "titulo": "Los accesos se dan desde la ficha",
+        "cuerpo": "Crear la persona y darle acceso son dos cosas: una persona puede estar en el directorio sin cuenta. Los permisos se editan en su ficha, no en una lista aparte."
+      }
+    ],
+    "generico": null
+  },
+  "/herramientas": {
+    "cabecera": "Ayuda",
+    "tarjetas": [],
+    "generico": "Pregunta lo que quieras de esta pantalla, o cuenta qué está fallando."
+  },
+  "/herramientas/proyecciones": {
+    "cabecera": "Ayuda",
+    "tarjetas": [],
+    "generico": "Pregunta lo que quieras de esta pantalla, o cuenta qué está fallando."
+  },
+  "/incidencias": {
+    "cabecera": "Ayuda",
+    "tarjetas": [],
+    "generico": "Pregunta lo que quieras de esta pantalla, o cuenta qué está fallando."
+  },
+  "/mi-trabajo": {
+    "cabecera": "Mi trabajo",
+    "tarjetas": [
+      {
+        "titulo": "Páginas dentro de páginas",
+        "cuerpo": "No hay carpetas: un documento puede contener otros. Pulsa el «+» sobre un documento de la lista para crear uno dentro."
+      },
+      {
+        "titulo": "Enlazar otro documento",
+        "cuerpo": "Escribe «@» dentro del texto y busca por título. Enlaza al documento, no a una URL que mañana no exista."
+      },
+      {
+        "titulo": "El asistente lee lo que selecciones",
+        "cuerpo": "Selecciona un trozo de texto y aparece el botón del asistente en la barra flotante: trabaja sobre esa selección, no sobre todo el documento."
+      }
+    ],
+    "generico": null
+  },
+  "/perfil": {
+    "cabecera": "Ayuda",
+    "tarjetas": [],
+    "generico": "Pregunta lo que quieras de esta pantalla, o cuenta qué está fallando."
+  },
+  "/configuracion": {
+    "cabecera": "Ayuda",
+    "tarjetas": [],
+    "generico": "Pregunta lo que quieras de esta pantalla, o cuenta qué está fallando."
+  },
+  "/configuracion/uso": {
+    "cabecera": "Ayuda",
+    "tarjetas": [],
+    "generico": "Pregunta lo que quieras de esta pantalla, o cuenta qué está fallando."
+  },
+  "/configuracion/incidencias": {
+    "cabecera": "Ayuda",
+    "tarjetas": [],
+    "generico": "Pregunta lo que quieras de esta pantalla, o cuenta qué está fallando."
+  },
+  "/configuracion/documentos": {
+    "cabecera": "Ayuda",
+    "tarjetas": [],
+    "generico": "Pregunta lo que quieras de esta pantalla, o cuenta qué está fallando."
+  },
+  "/configuracion/notificaciones": {
+    "cabecera": "Ayuda",
+    "tarjetas": [],
+    "generico": "Pregunta lo que quieras de esta pantalla, o cuenta qué está fallando."
+  },
+  "/configuracion/comisiones": {
+    "cabecera": "Ayuda",
+    "tarjetas": [],
+    "generico": "Pregunta lo que quieras de esta pantalla, o cuenta qué está fallando."
+  },
+  "/configuracion/comisiones-pagos": {
+    "cabecera": "Ayuda",
+    "tarjetas": [],
+    "generico": "Pregunta lo que quieras de esta pantalla, o cuenta qué está fallando."
+  },
+  "/configuracion/contratos": {
+    "cabecera": "Ayuda",
+    "tarjetas": [],
+    "generico": "Pregunta lo que quieras de esta pantalla, o cuenta qué está fallando."
+  },
+  "/configuracion/alertas": {
+    "cabecera": "Ayuda",
+    "tarjetas": [],
+    "generico": "Pregunta lo que quieras de esta pantalla, o cuenta qué está fallando."
+  },
+  "/configuracion/rrhh": {
+    "cabecera": "Ayuda",
+    "tarjetas": [],
+    "generico": "Pregunta lo que quieras de esta pantalla, o cuenta qué está fallando."
+  },
+  "/configuracion/festivos": {
+    "cabecera": "Ayuda",
+    "tarjetas": [],
+    "generico": "Pregunta lo que quieras de esta pantalla, o cuenta qué está fallando."
+  },
+  "/euphoric/negocio/pipeline": {
+    "cabecera": "Euphoric Media",
+    "tarjetas": [
+      {
+        "titulo": "El arte se pide a Creativos",
+        "cuerpo": "Desde la pieza, «Pedir arte» crea el encargo en el tablero de Creativos. Pedirlo por mensaje privado hace que el diseñador no lo tenga en su cola."
+      }
+    ],
+    "generico": null
+  },
+  "/euphoric/negocio/presupuestos": {
+    "cabecera": "Euphoric Media",
+    "tarjetas": [
+      {
+        "titulo": "El arte se pide a Creativos",
+        "cuerpo": "Desde la pieza, «Pedir arte» crea el encargo en el tablero de Creativos. Pedirlo por mensaje privado hace que el diseñador no lo tenga en su cola."
+      }
+    ],
+    "generico": null
+  },
+  "/euphoric/negocio/analitica": {
+    "cabecera": "Euphoric Media",
+    "tarjetas": [
+      {
+        "titulo": "El arte se pide a Creativos",
+        "cuerpo": "Desde la pieza, «Pedir arte» crea el encargo en el tablero de Creativos. Pedirlo por mensaje privado hace que el diseñador no lo tenga en su cola."
+      }
+    ],
+    "generico": null
+  },
+  "/euphoric/negocio/tiempos": {
+    "cabecera": "Euphoric Media",
+    "tarjetas": [
+      {
+        "titulo": "El arte se pide a Creativos",
+        "cuerpo": "Desde la pieza, «Pedir arte» crea el encargo en el tablero de Creativos. Pedirlo por mensaje privado hace que el diseñador no lo tenga en su cola."
+      }
+    ],
+    "generico": null
+  },
+  "/creativos/ajustes": {
+    "cabecera": "Creativos",
+    "tarjetas": [
+      {
+        "titulo": "Tu cola son los encargos, no los mensajes",
+        "cuerpo": "Todo lo que hay aquí viene de una pieza o una campaña de algún espacio. Si te piden algo por otro canal, pide que lo abran aquí: si no, no existe."
+      }
+    ],
+    "generico": null
+  },
+  "/etra/ajustes": {
+    "cabecera": "Ayuda",
+    "tarjetas": [],
+    "generico": "Pregunta lo que quieras de esta pantalla, o cuenta qué está fallando."
+  },
+  "/crm/ajustes": {
+    "cabecera": "CRM",
+    "tarjetas": [
+      {
+        "titulo": "Una empresa, una ficha",
+        "cuerpo": "Si el mismo cliente compra en CRUDA y en Euphoric, es la misma organización con dos oportunidades. Duplicar la ficha es cómo se pierde el histórico."
+      }
+    ],
+    "generico": null
+  },
+  "/herramientas/ajustes": {
+    "cabecera": "Ayuda",
+    "tarjetas": [],
+    "generico": "Pregunta lo que quieras de esta pantalla, o cuenta qué está fallando."
+  },
+  "/personal/ajustes": {
+    "cabecera": "Team",
+    "tarjetas": [
+      {
+        "titulo": "Los accesos se dan desde la ficha",
+        "cuerpo": "Crear la persona y darle acceso son dos cosas: una persona puede estar en el directorio sin cuenta. Los permisos se editan en su ficha, no en una lista aparte."
+      }
+    ],
+    "generico": null
+  },
+  "/cruda/ajustes": {
+    "cabecera": "CRUDA",
+    "tarjetas": [
+      {
+        "titulo": "El stock se descuenta al confirmar el pedido",
+        "cuerpo": "No al crearlo. Un pedido en borrador no reserva nada, así que dos comerciales pueden vender la misma última unidad: confírmalo cuanto antes."
+      }
+    ],
+    "generico": null
+  },
+  "/creativos/analitica": {
+    "cabecera": "Creativos",
+    "tarjetas": [
+      {
+        "titulo": "Tu cola son los encargos, no los mensajes",
+        "cuerpo": "Todo lo que hay aquí viene de una pieza o una campaña de algún espacio. Si te piden algo por otro canal, pide que lo abran aquí: si no, no existe."
+      }
+    ],
+    "generico": null
+  }
+}
