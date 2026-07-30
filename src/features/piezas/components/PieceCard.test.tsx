@@ -84,6 +84,18 @@ describe('PieceCard', () => {
     expect(screen.queryByText('Pendiente cliente')).not.toBeInTheDocument();
   });
 
+  // El dominio real son 4 valores (panel de alta del live). «Sin enviar» es el default y NO pinta
+  // badge: el caso «negativo» es un valor con nombre, no la ausencia del dato.
+  it('trata «Sin enviar» igual que la ausencia: sin badge', () => {
+    const { unmount } = render(<PieceCard piece={{ ...overdue, clientApproval: 'Sin enviar' }} />);
+    expect(screen.queryByText('Sin enviar')).not.toBeInTheDocument();
+    unmount();
+
+    // Los otros dos valores del dominio sí lo pintan.
+    render(<PieceCard piece={{ ...overdue, clientApproval: 'Aprobado cliente' }} />);
+    expect(screen.getByText('Aprobado cliente')).toHaveClass('bg-amber-100', 'text-[10px]');
+  });
+
   // Sin responsable el live no pinta píldora: span pelado en slate-300.
   it('renders «Sin asignar» as a bare span, with no pill', () => {
     render(<PieceCard piece={{ ...overdue, assignee: 'Sin asignar' }} />);

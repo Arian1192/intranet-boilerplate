@@ -1,6 +1,6 @@
 import { Badge } from '@/components/ui';
 import type { CreativePiece } from '../data/seed';
-import { tonoDeadline } from '../data/tablero';
+import { aprobacion, pintaAprobacion, tonoDeadline } from '../data/tablero';
 import { DeadlineBadge } from './DeadlineBadge';
 
 export interface PieceCardProps {
@@ -78,9 +78,9 @@ export function PieceCard({ piece }: PieceCardProps) {
           El live usa su utilidad `.badge` (px-2.5 py-0.5 rounded-full 12px/500) con `text-[10px]`
           encima. Nuestro <Badge> md es esa misma utilidad, así que basta con bajar el tamaño.
         */}
-        {piece.clientApproval && (
+        {pintaAprobacion(piece) && (
           <Badge variant="amber" className="text-[10px]">
-            {piece.clientApproval}
+            {aprobacion(piece)}
           </Badge>
         )}
       </div>

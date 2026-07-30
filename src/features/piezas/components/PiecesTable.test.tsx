@@ -58,4 +58,11 @@ describe('PiecesTable', () => {
     expect(conAprob).not.toHaveClass('text-[10px]');
     expect(screen.getByText('—')).toHaveClass('text-slate-300');
   });
+
+  // «Sin enviar» es el default del live y pinta la raya, igual que la ausencia del campo.
+  it('pinta la raya también cuando la aprobación es «Sin enviar»', () => {
+    render(<PiecesTable pieces={[{ ...fixtures[0], clientApproval: 'Sin enviar' }]} />);
+    expect(screen.queryByText('Sin enviar')).not.toBeInTheDocument();
+    expect(screen.getByText('—')).toHaveClass('text-slate-300');
+  });
 });

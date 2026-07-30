@@ -1,4 +1,16 @@
 export type PieceStatus = 'Briefing' | 'En producción' | 'Revisión' | 'Cambios' | 'Aprobado';
+
+/**
+ * Dominio completo de la aprobación del cliente, tomado de los 4 toggles del panel de alta del live
+ * (`docs/references/tablero-piezas-2026-07-30/README.md`, addenda, campo 20). El tablero solo dejaba
+ * ver `'Pendiente cliente'`, porque era el único valor presente en las 10 creatividades: la
+ * enumeración real vive en el formulario, no en la vista de lectura.
+ */
+export type AprobacionCliente =
+  | 'Sin enviar'
+  | 'Pendiente cliente'
+  | 'Aprobado cliente'
+  | 'Cambios cliente';
 export type PiecePriority = 'Alta' | 'Media' | 'Baja';
 export type PieceType = 'Estático' | 'Vídeo' | 'Animado';
 
@@ -14,10 +26,14 @@ export interface CreativePiece {
   status: PieceStatus;
   checklist?: { done: number; total: number };
   /**
-   * Flag propio de la pieza, **ortogonal al estado**: en el live sale en una tarjeta Briefing y en
-   * otra Cambios, y no sale en ninguna Aprobado. Se pinta en la tarjeta y en la tabla.
+   * Aprobación del cliente. Campo propio de la pieza y **ortogonal al estado**: en el live sale en
+   * una tarjeta Briefing y en otra Cambios, y en ninguna Aprobado.
+   *
+   * Ausente ⇒ `'Sin enviar'`, que es el valor por defecto del live. Ojo: el caso «negativo» **no es
+   * ausencia de dato, es un valor con nombre** — el panel de alta lo trae preseleccionado. Se deja
+   * opcional solo para no repetirlo en cada pieza del seed; resuélvelo siempre con `aprobacion()`.
    */
-  clientApproval?: string;
+  clientApproval?: AprobacionCliente;
   /** Avatar real del live (Supabase Storage). Sin él se cae a la inicial. */
   avatarUrl?: string;
   /** El live pone el nombre largo en el `alt` y el corto en el texto de al lado. */

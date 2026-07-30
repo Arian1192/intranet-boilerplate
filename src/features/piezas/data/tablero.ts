@@ -1,5 +1,5 @@
 import type { BadgeProps } from '@/components/ui';
-import type { CreativePiece, PiecePriority, PieceStatus } from './seed';
+import type { AprobacionCliente, CreativePiece, PiecePriority, PieceStatus } from './seed';
 
 export type CreativosFilter =
   | 'Todas' | 'Mías' | 'Diseño' | 'Vídeo' | 'Pend. aprobar' | 'Correcciones' | 'Atrasadas';
@@ -78,6 +78,27 @@ export function tonoDeadline(piece: Pick<CreativePiece, 'deadline' | 'status'>):
     (Date.parse(`${iso}T00:00:00Z`) - Date.parse(`${HOY_ISO}T00:00:00Z`)) / 86_400_000
   );
   return dias <= DIAS_PROXIMO ? 'proximo' : 'holgado';
+}
+
+/** Valor por defecto de la aprobación: el live lo trae preseleccionado en el panel de alta. */
+export const APROBACION_DEFECTO: AprobacionCliente = 'Sin enviar';
+
+/** Resuelve la aprobación de una pieza. Úsalo siempre en vez de leer el campo a pelo. */
+export function aprobacion(piece: Pick<CreativePiece, 'clientApproval'>): AprobacionCliente {
+  return piece.clientApproval ?? APROBACION_DEFECTO;
+}
+
+/**
+ * `'Sin enviar'` no pinta badge: en la tarjeta no aparece nada y en la tabla sale la raya.
+ * Los otros tres sí lo pintan.
+ *
+ * SUPUESTO DECLARADO: de los tres valores «positivos», el live solo nos ha enseñado
+ * `'Pendiente cliente'`, en ámbar. `'Aprobado cliente'` y `'Cambios cliente'` no aparecen en
+ * ninguna de las 10 creatividades capturadas, así que **su color no está verificado** y de momento
+ * heredan el mismo ámbar. Si aparece evidencia de que llevan tono propio, se ajusta aquí.
+ */
+export function pintaAprobacion(piece: Pick<CreativePiece, 'clientApproval'>): boolean {
+  return aprobacion(piece) !== APROBACION_DEFECTO;
 }
 
 /** Atrasada = el badge sale en rojo. Es la misma cuenta que el live pinta en el indicador. */

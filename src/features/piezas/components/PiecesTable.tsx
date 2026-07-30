@@ -1,6 +1,6 @@
 import { Badge, Card } from '@/components/ui';
 import type { CreativePiece } from '../data/seed';
-import { STATUS_VARIANT, tonoDeadline } from '../data/tablero';
+import { STATUS_VARIANT, aprobacion, pintaAprobacion, tonoDeadline } from '../data/tablero';
 import { DeadlineBadge } from './DeadlineBadge';
 
 export interface PiecesTableProps {
@@ -51,9 +51,10 @@ export function PiecesTable({ pieces }: PiecesTableProps) {
                   <Badge variant={STATUS_VARIANT[piece.status]}>{piece.status}</Badge>
                 </td>
                 <td className="px-4 py-2">
-                  {piece.clientApproval ? (
-                    <Badge variant="amber">{piece.clientApproval}</Badge>
+                  {pintaAprobacion(piece) ? (
+                    <Badge variant="amber">{aprobacion(piece)}</Badge>
                   ) : (
+                    /* «Sin enviar» es un valor, no un hueco; el live lo pinta como raya. */
                     <span className="text-slate-300">—</span>
                   )}
                 </td>
