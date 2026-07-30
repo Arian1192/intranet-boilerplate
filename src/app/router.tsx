@@ -51,7 +51,7 @@ import { EventsPage } from '@/features/produccion/pages/EventsPage';
 import { ResumenPage } from '@/features/euphoric/pages/ResumenPage';
 import { CampanasPage } from '@/features/euphoric/pages/CampanasPage';
 import { ContenidoPage } from '@/features/euphoric/pages/ContenidoPage';
-import { PiezasPage } from '@/features/euphoric/pages/PiezasPage';
+import { PiezasPage } from '@/features/piezas/pages/PiezasPage';
 import { EventosPage } from '@/features/euphoric/pages/EventosPage';
 import { CuentasPage } from '@/features/euphoric/pages/CuentasPage';
 import { AnaliticaPage } from '@/features/euphoric/pages/AnaliticaPage';
@@ -70,7 +70,7 @@ import { CampanasPage as RedaccionCampanasPage } from '@/features/redaccion/page
 import { PedidosPage } from '@/features/cruda/pages/PedidosPage';
 import { CatalogoPage } from '@/features/cruda/pages/CatalogoPage';
 import { AnaliticaPage as CrudaAnaliticaPage } from '@/features/cruda/pages/AnaliticaPage';
-import { CreativosPage } from '@/features/creativos/pages/CreativosPage';
+import { CreativosPage } from '@/features/piezas/pages/CreativosPage';
 import { ClientesPage } from '@/features/crm/pages/ClientesPage';
 import { PipelinePage } from '@/features/crm/pages/PipelinePage';
 import { CrecimientoPage } from '@/features/crm/pages/CrecimientoPage';
