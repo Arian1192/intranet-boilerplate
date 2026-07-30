@@ -45,6 +45,46 @@ export function deadlineToIso(deadline: string): string | null {
   return `${match[3]}-${String(month + 1).padStart(2, '0')}-${match[1].padStart(2, '0')}`;
 }
 
+/**
+ * Fecha a la que se fija el calco. El live deriva en horas, así que el tablero se pinta contra la
+ * foto del barrido (30-jul-2026) y no contra `new Date()`: si no, los tonos del deadline cambiarían
+ * solos y los tests dejarían de ser deterministas. Mismo criterio que ya usaba euphoric con su
+ * `todayIso`.
+ */
+export const HOY_ISO = '2026-07-30';
+
+export type TonoDeadline = 'vencido' | 'proximo' | 'holgado' | 'sin-urgencia';
+
+/**
+ * Días que el live considera «próximo». **No es derivable de la captura**: el único par que lo
+ * acota es `04 ago` (+5 días, ámbar) frente a `11 ago` (+12 días, esmeralda), así que el umbral
+ * está en algún punto entre 6 y 11. Se elige 7 por ser el corte natural de una semana y queda
+ * declarado como supuesto: si aparece evidencia, se ajusta aquí.
+ */
+const DIAS_PROXIMO = 7;
+
+/**
+ * Tono del badge de deadline. Verificado contra las 10 tarjetas de
+ * `docs/references/tablero-piezas-2026-07-30/kanban-detalle.json`: los 3 «sin urgencia» del live
+ * son exactamente las 3 creatividades **Aprobado**, dos de ellas con el deadline ya pasado — o
+ * sea que aprobar anula la urgencia, gane o no la fecha.
+ */
+export function tonoDeadline(piece: Pick<CreativePiece, 'deadline' | 'status'>): TonoDeadline {
+  if (piece.status === 'Aprobado') return 'sin-urgencia';
+  const iso = deadlineToIso(piece.deadline);
+  if (iso === null) return 'sin-urgencia';
+  if (iso < HOY_ISO) return 'vencido';
+  const dias = Math.round(
+    (Date.parse(`${iso}T00:00:00Z`) - Date.parse(`${HOY_ISO}T00:00:00Z`)) / 86_400_000
+  );
+  return dias <= DIAS_PROXIMO ? 'proximo' : 'holgado';
+}
+
+/** Atrasada = el badge sale en rojo. Es la misma cuenta que el live pinta en el indicador. */
+export function isOverdue(piece: Pick<CreativePiece, 'deadline' | 'status'>): boolean {
+  return tonoDeadline(piece) === 'vencido';
+}
+
 export function filterPieces(
   list: CreativePiece[],
   filter: CreativosFilter,
@@ -62,7 +102,7 @@ export function filterPieces(
     case 'Correcciones':
       return list.filter((p) => p.status === 'Cambios');
     case 'Atrasadas':
-      return list.filter((p) => p.isOverdue);
+      return list.filter(isOverdue);
     case 'Todas':
     default:
       return list;
@@ -81,6 +121,6 @@ export function deriveStats(list: CreativePiece[]) {
     activas: list.filter((p) => p.status !== 'Aprobado').length,
     pendAprobar: list.filter((p) => p.status === 'Revisión').length,
     correcciones: list.filter((p) => p.status === 'Cambios').length,
-    atrasadas: list.filter((p) => p.isOverdue).length,
+    atrasadas: list.filter(isOverdue).length,
   };
 }

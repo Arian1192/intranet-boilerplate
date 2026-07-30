@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom';
 import { render, screen, fireEvent, within } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
-import { CreativosPage } from './CreativosPage';
+import { CreativosPage } from './pages/CreativosPage';
 
 describe('CreativosPage', () => {
   it('renders header, the 4 stat cards with live counts, and the Nueva creatividad action', () => {
@@ -82,7 +82,7 @@ describe('CreativosPage', () => {
     render(<CreativosPage />);
     const alba = screen.getByRole('button', { name: '+ Alba' });
     const carlos = screen.getByRole('button', { name: '+ Carlos' });
-    expect(alba).toHaveAttribute('title', 'Nueva creatividad para Alba Gelabert');
+    expect(alba).toHaveAttribute('title', 'Nueva creatividad para Alba G');
     expect(carlos).toHaveAttribute('title', 'Nueva creatividad para Carlos Pego');
 
     fireEvent.click(alba);

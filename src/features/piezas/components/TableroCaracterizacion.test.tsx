@@ -25,12 +25,12 @@ const cincoEstados: CreativePiece[] = [
   {
     id: 'c1', assignee: 'Alba', title: 'Video Pomo 26/07', client: 'SIGHT', type: 'Vídeo',
     version: 'v1', priority: 'Alta', deadline: '23 jul 2026', status: 'Briefing',
-    checklist: { done: 0, total: 1 }, isOverdue: true, icon: '🎬',
+    checklist: { done: 0, total: 1 }, icon: '🎬', iconTitle: 'Vídeo',
   },
   {
     id: 'c2', assignee: 'Carlos', title: 'Pack Sold Out', client: 'SIGHT', type: 'Estático',
     version: 'v1', priority: 'Media', deadline: '10 jul 2026', status: 'En producción',
-    checklist: { done: 0, total: 3 }, isOverdue: true,
+    checklist: { done: 0, total: 3 },
   },
   {
     id: 'c3', assignee: 'Maf', title: 'Set Times SIGHT', client: 'SIGHT', type: 'Estático',
@@ -68,42 +68,53 @@ describe('caracterización · PiecesKanban', () => {
     expect(screen.getByText('Revisión')).toHaveClass('bg-amber-100', 'text-amber-700');
   });
 
-  it('mantiene la cabecera de columna y la tipografía del contador', () => {
+  it('mantiene la cabecera de columna y el contador en píldora', () => {
     const { container } = render(<PiecesKanban pieces={cincoEstados} />);
     const cabecera = container.firstElementChild!.firstElementChild!.firstElementChild!;
     expect(cabecera).toHaveClass('mb-2', 'flex', 'items-center', 'justify-between', 'px-1');
+    // El contador del live es una píldora gris, no texto suelto.
     expect(within(cabecera as HTMLElement).getByText('1')).toHaveClass(
-      'text-xs', 'font-medium', 'text-slate-400'
+      'rounded-full', 'bg-slate-100', 'px-2', 'text-xs', 'text-slate-500'
     );
   });
 
-  it('mantiene el hueco «—» y el espaciado de la lista', () => {
+  it('mantiene la zona de arrastre gris, visible también vacía', () => {
     const { container } = render(<PiecesKanban pieces={[]} />);
     expect(screen.getAllByText('—')).toHaveLength(5);
-    expect(screen.getAllByText('—')[0]).toHaveClass('px-1', 'text-sm', 'text-slate-300');
-
-    const { container: lleno } = render(<PiecesKanban pieces={cincoEstados} />);
-    expect(lleno.querySelector('.space-y-2')).toBeInTheDocument();
-    expect(container).toBeTruthy();
+    expect(screen.getAllByText('—')[0]).toHaveClass(
+      'px-1', 'py-3', 'text-center', 'text-xs', 'text-slate-300'
+    );
+    // La caja gris es el destino del drag: existe aunque la columna esté vacía.
+    expect(container.querySelectorAll('.min-h-\\[80px\\].bg-slate-50')).toHaveLength(5);
   });
 });
 
 describe('caracterización · PieceCard', () => {
   const piece = cincoEstados[0];
 
-  it('mantiene la píldora del responsable con su inicial', () => {
+  it('mantiene la píldora del responsable', () => {
     render(<PieceCard piece={piece} />);
     const nombre = screen.getByText('Alba');
     expect(nombre).toHaveClass('text-[11px]', 'font-medium', 'text-slate-600');
     const pildora = nombre.parentElement!;
     expect(pildora).toHaveClass(
-      'inline-flex', 'items-center', 'gap-1.5', 'rounded-full', 'bg-slate-100',
+      'flex', 'shrink-0', 'items-center', 'gap-1', 'rounded-full', 'bg-slate-100',
       'py-0.5', 'pl-0.5', 'pr-2'
     );
-    // La inicial es un span aparte, no un <Avatar>.
-    expect(within(pildora).getByText('A')).toHaveClass(
-      'h-4', 'w-4', 'rounded-full', 'bg-slate-200', 'text-[9px]'
+    // Sin `avatarUrl` cae a la inicial, a los 20px del avatar real del live.
+    expect(within(pildora).getByText('A')).toHaveClass('h-5', 'w-5', 'rounded-full', 'bg-slate-200');
+  });
+
+  it('usa el avatar real cuando la pieza lo trae, con el nombre largo en el alt', () => {
+    render(
+      <PieceCard
+        piece={{ ...piece, avatarUrl: 'https://ejemplo/av.jpg', assigneeFullName: 'Alba G' }}
+      />
     );
+    const img = screen.getByRole('img', { name: 'Alba G' });
+    expect(img).toHaveClass('shrink-0', 'rounded-full', 'object-cover');
+    expect(img).toHaveStyle({ width: '20px', height: '20px' });
+    expect(screen.getByText('Alba')).toBeInTheDocument();
   });
 
   it('mantiene la tipografía del título y de la línea de meta, ambas truncadas', () => {
@@ -121,26 +132,27 @@ describe('caracterización · PieceCard', () => {
     expect(screen.getByText(/0\/1/)).toHaveClass('text-[10px]', 'text-slate-500');
   });
 
-  it('no pinta la aprobación de cliente en la tarjeta', () => {
-    // OJO: caracterización del estado ACTUAL, no una afirmación de fidelidad. El volcado del
-    // 27-jul no traía ninguna creatividad con aprobación, así que esto está SIN VERIFICAR contra
-    // el live. La captura fresca de recon debe resolverlo; si el live sí la pinta, este test cae.
+  it('mantiene el orden de la fila de badges: deadline, checklist y aprobación', () => {
     render(<PieceCard piece={{ ...piece, clientApproval: 'Pendiente cliente' }} />);
-    expect(screen.queryByText('Pendiente cliente')).not.toBeInTheDocument();
+    const fila = screen.getByText('23 jul 2026').parentElement!;
+    expect(fila).toHaveClass('mt-1.5', 'flex', 'flex-wrap', 'items-center', 'gap-1');
+    expect([...fila.children].map((n) => n.textContent)).toEqual([
+      '23 jul 2026', '☑ 0/1', 'Pendiente cliente',
+    ]);
   });
 });
 
 describe('caracterización · PiecesTable', () => {
-  it('mantiene el marco de la tabla', () => {
+  it('mantiene el marco de la tabla y su scroll horizontal', () => {
     const { container } = render(<PiecesTable pieces={cincoEstados} />);
-    expect(container.firstElementChild).toHaveClass(
-      'overflow-hidden', 'rounded-xl', 'border', 'border-slate-200', 'bg-white', 'shadow-sm'
-    );
+    expect(container.firstElementChild).toHaveClass('overflow-hidden', 'border-slate-200');
+    expect(container.querySelector('.overflow-x-auto')).toBeInTheDocument();
+    expect(screen.getByRole('table')).toHaveClass('min-w-[880px]');
   });
 
   it('mantiene las clases de cabecera y de celda', () => {
     render(<PiecesTable pieces={cincoEstados} />);
-    expect(screen.getByRole('columnheader', { name: 'CREATIVIDAD' })).toHaveClass(
+    expect(screen.getByRole('columnheader', { name: 'Creatividad' })).toHaveClass(
       'px-4', 'py-2', 'font-medium'
     );
     expect(screen.getAllByRole('columnheader')[0].parentElement).toHaveClass(
@@ -148,14 +160,15 @@ describe('caracterización · PiecesTable', () => {
       'tracking-wide', 'text-slate-400'
     );
     const fila = screen.getByText('Flyer Claptone 02/08').closest('tr')!;
-    expect(fila).toHaveClass('border-b', 'border-slate-100', 'last:border-0', 'hover:bg-slate-50');
+    expect(fila).toHaveClass('cursor-pointer', 'hover:bg-slate-50');
+    expect(fila.parentElement).toHaveClass('divide-y', 'divide-slate-100');
   });
 
   it('mantiene el título y la versión como dos spans de distinto color', () => {
     render(<PiecesTable pieces={cincoEstados} />);
-    const titulo = screen.getByText('Flyer Claptone 02/08');
-    expect(titulo).toHaveClass('text-slate-800');
-    expect(within(titulo.closest('td')!).getByText('v1')).toHaveClass('text-slate-400');
+    const celda = screen.getByText('Flyer Claptone 02/08').closest('td')!;
+    expect(celda).toHaveClass('font-medium', 'text-slate-800');
+    expect(within(celda).getByText('v1')).toHaveClass('text-xs', 'font-normal', 'text-slate-400');
   });
 
   it('mantiene una fila por creatividad, sin cabecera de más', () => {

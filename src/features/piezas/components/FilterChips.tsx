@@ -1,5 +1,5 @@
 import { cn } from '@/lib/utils';
-import { FILTERS, type CreativosFilter } from '../data/creativos';
+import { FILTERS, type CreativosFilter } from '../data/tablero';
 
 export interface FilterChipsProps {
   active: CreativosFilter;

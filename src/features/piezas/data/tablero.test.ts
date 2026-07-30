@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { pieces, CURRENT_USER } from './seed';
-import { filterPieces, groupByStatus, deriveStats, STATUS_COLUMNS, FILTERS } from './creativos';
+import { filterPieces, groupByStatus, deriveStats, STATUS_COLUMNS, FILTERS } from './tablero';
 
 describe('creativos helpers', () => {
   it('exposes the 7 filters and 5 status columns in order', () => {

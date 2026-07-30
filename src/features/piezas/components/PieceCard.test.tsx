@@ -7,7 +7,7 @@ import type { CreativePiece } from '../data/seed';
 const overdue: CreativePiece = {
   id: 'f1', assignee: 'Alba', title: 'Video Pomo 26/07', client: 'SIGHT', type: 'Vídeo',
   version: 'v1', priority: 'Alta', deadline: '23 jul 2026', status: 'Briefing',
-  checklist: { done: 0, total: 1 }, isOverdue: true, icon: '🎬',
+  checklist: { done: 0, total: 1 }, icon: '🎬', iconTitle: 'Vídeo',
 };
 const approved: CreativePiece = {
   id: 'f2', assignee: 'Carlos', title: 'Flyer Claptone 02/08', client: 'SIGHT',
@@ -43,11 +43,59 @@ describe('PieceCard', () => {
       'text-left', 'hover:border-brand-300', 'hover:shadow-sm'
     );
     expect(button).not.toHaveClass('border-red-300');
-    expect(screen.getByText('23 jul 2026')).toHaveClass('bg-rose-50', 'text-rose-600');
+    // Tonos del live (30-jul): vencido en rose-100/700; aprobada, aunque venza, en slate-100/500.
+    expect(screen.getByText('23 jul 2026')).toHaveClass('bg-rose-100', 'text-rose-700');
     unmount();
 
     render(<PieceCard piece={approved} />);
-    expect(screen.getByText('22 jul 2026')).toHaveClass('bg-slate-100', 'text-slate-600');
+    expect(screen.getByText('22 jul 2026')).toHaveClass('bg-slate-100', 'text-slate-500');
+  });
+
+  // El live marca la tarjeta como arrastrable; es el destino del kanban.
+  it('is draggable', () => {
+    render(<PieceCard piece={overdue} />);
+    expect(screen.getByRole('button', { name: /Video Pomo/ })).toHaveAttribute('draggable', 'true');
+  });
+
+  // Los otros dos tonos, que solo se ven con fechas futuras.
+  it('paints the two forward-looking deadline tones', () => {
+    const { unmount } = render(
+      <PieceCard piece={{ ...overdue, deadline: '04 ago 2026' }} />
+    );
+    expect(screen.getByText('04 ago 2026')).toHaveClass('bg-amber-100', 'text-amber-800');
+    unmount();
+
+    render(<PieceCard piece={{ ...overdue, deadline: '11 ago 2026' }} />);
+    expect(screen.getByText('11 ago 2026')).toHaveClass('bg-emerald-100', 'text-emerald-700');
+  });
+
+  // R3, resuelto contra el live del 30-jul: la aprobación SÍ se pinta en la tarjeta, después del
+  // badge de deadline. El caso negativo no pinta raya, simplemente no hay badge.
+  it('renders the client approval badge after the deadline, and nothing when absent', () => {
+    const { unmount } = render(
+      <PieceCard piece={{ ...overdue, clientApproval: 'Pendiente cliente' }} />
+    );
+    expect(screen.getByText('Pendiente cliente')).toHaveClass(
+      'bg-amber-100', 'text-amber-700', 'text-[10px]'
+    );
+    unmount();
+
+    render(<PieceCard piece={overdue} />);
+    expect(screen.queryByText('Pendiente cliente')).not.toBeInTheDocument();
+  });
+
+  // Sin responsable el live no pinta píldora: span pelado en slate-300.
+  it('renders «Sin asignar» as a bare span, with no pill', () => {
+    render(<PieceCard piece={{ ...overdue, assignee: 'Sin asignar' }} />);
+    const sinAsignar = screen.getByText('Sin asignar');
+    expect(sinAsignar).toHaveClass('shrink-0', 'text-[11px]', 'text-slate-300');
+    expect(sinAsignar).not.toHaveClass('rounded-full', 'bg-slate-100');
+  });
+
+  // Sin deadline (la etiqueta del live es «—») no hay badge, no un badge con una raya dentro.
+  it('renders no deadline badge when there is no deadline', () => {
+    render(<PieceCard piece={{ ...overdue, deadline: '—' }} />);
+    expect(screen.queryByText('—')).not.toBeInTheDocument();
   });
 
   // Tarea 1: el 📅 de ours no existe en el live.

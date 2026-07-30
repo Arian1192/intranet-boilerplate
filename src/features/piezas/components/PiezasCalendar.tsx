@@ -2,9 +2,9 @@ import { useMemo, useState } from 'react';
 import { EuphoricCalendar } from '@/features/euphoric/components/EuphoricCalendar';
 import { cn } from '@/lib/utils';
 import type { CreativePiece } from '../data/seed';
-import { MONTHS_ES, deadlineToIso } from '../data/creativos';
+import { MONTHS_ES, deadlineToIso, isOverdue } from '../data/tablero';
 
-export interface CreativosCalendarProps {
+export interface PiezasCalendarProps {
   /** Creatividades ya filtradas por la página: los filtros afectan también al calendario. */
   pieces: CreativePiece[];
   today: Date;
@@ -15,7 +15,7 @@ export interface CreativosCalendarProps {
  * deadline. Reutiliza `EuphoricCalendar` — la misma rejilla Lun–Dom, con dos extensiones
  * aditivas suyas: cabecera `← → Julio 2026 Hoy` (`headerLayout="leading"`) y 6 semanas fijas.
  */
-export function CreativosCalendar({ pieces, today }: CreativosCalendarProps) {
+export function PiezasCalendar({ pieces, today }: PiezasCalendarProps) {
   const initial = { year: today.getFullYear(), month: today.getMonth() };
   const [cursor, setCursor] = useState(initial);
 
@@ -83,7 +83,7 @@ function CalendarPiece({ piece }: { piece: CreativePiece }) {
     >
       <span
         aria-hidden
-        className={cn('h-1.5 w-1.5 shrink-0 rounded-full', piece.isOverdue ? 'bg-rose-500' : 'bg-slate-300')}
+        className={cn('h-1.5 w-1.5 shrink-0 rounded-full', isOverdue(piece) ? 'bg-rose-500' : 'bg-slate-300')}
       />
       <span className="truncate">{piece.title}</span>
     </button>
