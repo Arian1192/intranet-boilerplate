@@ -265,3 +265,107 @@ consta que **no** es el tipo de la bajada. Modelarlo como dato opcional por piez
 | `kanban-card.json` / `kanban-card.html` | Tarjeta del kanban con `getComputedStyle` |
 | `kanban-detalle.json` | Las 10 tarjetas, todas las `.badge`, cabeceras de columna y badges de deadline |
 | `clases-componente-live.json` | `.badge`, `.card` y `.btn-primary` resueltos desde el CSS servido por el live |
+
+---
+
+# Addenda — el panel de alta («Nueva creatividad»), abierto por clic
+
+**Capturado:** 2026-07-30, ~10:3x CEST · abierto **por clic** en `+ Nueva creatividad` en las dos rutas.
+**Ningún formulario se ha enviado.** Abrir el panel es lectura; `Guardar` no se ha pulsado.
+
+**Por qué esta addenda:** el diff byte a byte del cuerpo de este documento cubría el `main` con el panel de
+alta **cerrado** (los aciertos de «Nueva creatividad» en aquel HTML eran el texto del botón y los `title` de
+los chips, no un panel abierto). Al converger, `/euphoric/piezas` pasa a usar el drawer de Creativos y se
+borra el de Euphoric: había que comprobarlo, no suponerlo.
+
+## RESPUESTA: SÍ. El panel de alta es EL MISMO, y aquí ni el título difiere.
+
+| Medida | Resultado |
+|---|---|
+| `aside.outerHTML` de `/creativos` | **12 988 bytes** |
+| `aside.outerHTML` de `/euphoric/piezas` | **12 988 bytes** |
+| Diff **sin normalizar absolutamente nada** | **byte-idénticos**, 0 hunks |
+| Recorte a `deviceScaleFactor: 4` (2048×4272) | **mismo SHA-256** `03b25f21f867d5d7…` |
+
+Es un resultado **más fuerte** que el del tablero: allí había que normalizar el H1 y la bajada; aquí los dos
+documentos coinciden tal cual, y el título es `Nueva creatividad` en ambos.
+
+→ **La convergencia del drawer está autorizada por la evidencia.** No hay que parametrizar nada: se puede
+borrar el `PieceDrawer` de Euphoric y usar el `NuevaPiezaDrawer` de Creativos sin condicionales por módulo.
+
+Ficheros: `live-{creativos,euphoric-piezas}-drawer-alta.html`,
+`live-{creativos,euphoric-piezas}-drawer-alta-4x.png`, `-drawer-alta-full.png`, `drawer-alta-raw.json`.
+
+## Carcasa del panel
+
+```html
+<aside class="fixed inset-y-0 right-0 w-full flex-col border-l border-slate-200 bg-white shadow-2xl
+              sm:inset-y-4 sm:w-[32rem] sm:overflow-hidden sm:rounded-2xl sm:border lg:w-[32rem]
+              z-50 sm:right-4 flex">
+  <div class="flex items-center justify-between border-b border-slate-100 px-5 py-3">   <!-- cabecera -->
+    <div class="flex min-w-0 items-center gap-2">
+      <svg class="h-4 w-4 shrink-0 text-slate-400">…</svg>  <!-- icono "imagen": rect + circle + path -->
+      <h3 class="truncate text-lg font-semibold text-slate-800">Nueva creatividad</h3>
+    </div>
+    <button class="text-slate-400 hover:text-slate-700" aria-label="Cerrar">✕</button>
+  </div>
+  <div class="flex-1 overflow-y-auto px-5 py-4">
+    <div class="grid gap-4 sm:grid-cols-2"> … campos … </div>
+  </div>
+  <div class="flex items-center justify-between gap-2 border-t border-slate-100 px-5 py-3">  <!-- pie -->
+    <span></span>
+    <div class="flex gap-2">
+      <button class="btn-secondary">Cerrar</button>
+      <button class="btn-primary">Guardar</button>
+    </div>
+  </div>
+</aside>
+```
+
+Computado: `position: fixed` · **512 px** de ancho · alto 1068 px · `top`/`right`/`bottom` = `16px` ·
+`border-radius: 16px` · borde `1px solid rgb(226,232,240)` = `slate-200` · `z-index: 50` ·
+`padding: 0` (el padding vive en las tres zonas) · `overflow: hidden`.
+
+**Cajón lateral derecho de 3 zonas** (cabecera `border-b` / cuerpo con scroll / pie `border-t`), con una
+rejilla de **2 columnas** en `sm:` y los campos anchos en `sm:col-span-2`.
+
+## Los campos, en orden
+
+Secciones, todas `text-xs font-semibold uppercase tracking-wide text-slate-500`:
+`Responsable` · `Aprueba` · `Adaptaciones / versiones` · `¿Para quién?` · `Aprobación del cliente` · `Checklist`.
+
+| # | Etiqueta | Control | Detalle |
+|---|---|---|---|
+| 1 | `Nombre *` | `input` texto `.input` | `placeholder="Ej: Reel lanzamiento v2"`, ancho completo. **El único obligatorio** |
+| 2 | *(sección)* `Responsable` | `button` `＋ Asignar` | `inline-flex items-center gap-2 rounded-full py-1 pl-1 pr-3 text-sm text-slate-400 hover:bg-slate-200` |
+| 3 | *(sección)* `Aprueba` | `button` `＋ Asignar` | mismas clases |
+| 4 | `Tipo` | `select.select w-full` | `Estático · Animado · Vídeo` |
+| 5 | `Departamento` | `select.select w-full` | `Diseño · Vídeo · Otro` |
+| 6 | `Estado` | `select.select w-full` | `Briefing · En producción · Revisión · Cambios · Aprobado` |
+| 7 | `Versión` | `input type="number"` | `min="1"`, **valor por defecto `1`** |
+| 8 | `Deadline` | `input type="date"` | el input real va oculto (`absolute inset-0 h-full w-full cursor-pointer opacity-0`) sobre un disparador visible; muestra `dd/mm/aaaa` |
+| 9 | `Tamaños / ratios` | 4 `button` toggle | `1:1` · `4:5` · `9:16` · `16:9` — `rounded-lg border px-3 py-1.5 text-sm font-medium disabled:opacity-60`, inactivo `border-slate-300 text-slate-600 hover:bg-slate-50` |
+| 10 | *(sección)* `Adaptaciones / versiones` | `button` `＋ Añadir adaptación` | `text-xs font-medium text-brand-600 hover:underline`. Lleva un `title` largo: «Genera de golpe la principal + otras versiones de la misma creatividad (estático/vídeo/animado, «Sold Out 1st Release», etc.). Comparten evento, cuenta y brief; cada una es su propia creatividad con su estado y aprobación.» |
+| — | *(sección)* `¿Para quién? · elige solo uno` | — | los tres siguientes son **mutuamente excluyentes** |
+| 11 | `Cuenta Euphoric` | `select.select w-full` | `— · Mogli Marbella · Opium Bcn · SIGHT` |
+| 12 | `Cliente (CRM)` | `input` texto | `placeholder="Cliente…"` |
+| 13 | `Empresa interna` | `select.select w-full` | `— · ConceptOne · CRUDA · Etra Agency · Euphoric Media · Mixmag Spain · TAGMAG` |
+| 14 | `Evento` | `input` texto | `placeholder="Buscar o crear evento…"` |
+| 15 | `Campaña` | `select.select w-full` | `Sin campaña · Genérico Julio` |
+| 16 | `Publicación` | `select.select w-full` | `Sin publicación` + 9 publicaciones con formato `título · YYYY-MM-DD` |
+| 17 | `Brief` | editor de texto rico | barra: `B` `i` `U` `S` `•` `1.` `☑` `🔗` `A` `A` `A` `✕`; cada botón `grid h-7 min-w-[28px] place-items-center rounded px-1 text-slate-600 hover:bg-slate-100` |
+| 18 | `Enlace al asset` | `input` texto | `placeholder="Drive / Frame.io / Dropbox…"` |
+| 19 | `Adjuntos` / `＋ Adjuntar` | `input type="file"` `.hidden` | el `input` va oculto tras la etiqueta-botón |
+| 20 | *(sección)* `Aprobación del cliente` | 4 `button` toggle | `Sin enviar` (**activo por defecto**: `border-brand-500 bg-brand-50 text-brand-700`) · `Pendiente cliente` · `Aprobado cliente` · `Cambios cliente`; inactivos `border-slate-300 text-slate-600`; todos `rounded-lg border px-2.5 py-1 text-xs font-medium disabled:opacity-60` |
+| 21 | *(sección)* `Checklist` | `button` `＋ Añadir tarea` | `text-xs text-brand-600 hover:underline`, dentro de `rounded-lg border border-slate-200 p-3` |
+| 22 | `Notas` | `textarea` | `.input min-h-[60px]`, ancho completo |
+
+Pie: `Cerrar` (`btn-secondary`) y `Guardar` (`btn-primary`).
+
+**Total: 42 controles** — 18 `label` con clase `.label`, 7 `select`, 6 `input` de texto/número/fecha,
+1 `input[type=file]`, 1 `textarea`, y el resto botones.
+
+> **Cierra un hueco del cuerpo de este documento.** Los cuatro estados posibles de la aprobación del cliente
+> son `Sin enviar` · `Pendiente cliente` · `Aprobado cliente` · `Cambios cliente`. En la tarjeta del kanban
+> solo se había observado el badge `Pendiente cliente`; aquí se ve el dominio completo. `Sin enviar` es el
+> default, y es el que la tabla pinta como `—`.
