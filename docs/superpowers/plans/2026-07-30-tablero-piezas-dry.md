@@ -1,7 +1,7 @@
 # Tablero de piezas compartido — convergencia creativos ↔ euphoric
 
 **Rama:** `feature/tablero-piezas-dry` · **Worktree:** `~/dev/worktrees/Boilerplate/tablero-dry`
-**Estado:** preparación hecha; **la ejecución espera** la captura fresca de recon (opción C → A).
+**Estado:** EJECUTADO. La captura fresca de recon (30-jul) confirmó la premisa y resolvió R1/R2/R3.
 
 ## Premisa
 
@@ -16,8 +16,14 @@ distintas, así que la duplicación es además un bug de fidelidad.
 - `/euphoric/piezas` **sí cambia de aspecto**, para converger.
 - Donde la captura fresca de recon contradiga a creativos, **manda la captura**.
 
-**Bloqueo:** no se escribe código del tablero hasta que recon confirme, de forma binaria, que hoy
-siguen siendo la misma pantalla.
+**Confirmado (recon, 30-jul):** diff byte a byte del `main` de las dos rutas — sustituyendo solo el
+H1 y solo la bajada por un marcador, los dos documentos quedan idénticos (20 198 bytes, cero hunks),
+más 7 recortes a 4× con el mismo SHA-256.
+
+**Corolario que derogó la regla original:** las dos copias nuestras estaban mal, creativos incluida
+(5 deltas en la tarjeta y varios más en columna, tabla e indicadores). La regla pasó a ser **manda
+el live**, con creativos como referencia por defecto salvo donde la captura diga otra cosa — que fue
+el caso de la aprobación de cliente, donde tenía razón euphoric.
 
 ## Fase 0 — Red de caracterización de `/creativos` ✅ HECHA
 
@@ -80,19 +86,24 @@ Los dos consumidores quedan finos: `/creativos` y `/euphoric/piezas` pasan su t�
 sus datos. **El código que se mueve es el de creativos, tal cual** — es lo que garantiza que no
 cambie un píxel.
 
-## Riesgos abiertos — los resuelve la captura de recon
+## Riesgos — RESUELTOS por la captura del 30-jul
 
-- **R1 · `'Sin asignar'`.** La píldora del responsable pinta la inicial con `charAt(0)`, así que
-  saldría una `S`. No hay evidencia de qué hace el live con esas tarjetas. **Sin verificar.**
-- **R2 · el icono.** Creativos lo modela como dato libre por pieza (su seed documenta que el `🎬`
-  del live **no** depende del tipo: `Flyer Claptone 02/08` también es Vídeo y no lo lleva);
-  euphoric lo deriva de `type === 'Vídeo'`. Son reglas incompatibles y la de creativos está
-  respaldada por evidencia. Al migrar hay que decidir qué piezas de euphoric llevan `icon`.
-- **R3 · aprobación de cliente en la tarjeta.** Euphoric la pinta como `Badge`; creativos no la
-  pinta. El volcado del 27-jul no traía ninguna pieza con aprobación, pero **la captura de euphoric
-  del 29-jul sí muestra `Pendiente cliente` en una tarjeta**, así que esto apunta a un hueco de
-  creativos. Hay un test de caracterización que fija el comportamiento actual y está marcado en el
-  código como pendiente de esta evidencia: **si el live la pinta, ese test cae y se corrige creativos.**
+- **R1 · `'Sin asignar'` — resuelto.** El live no pinta píldora: es un span pelado
+  `shrink-0 text-[11px] text-slate-300`. Le faltaba también a creativos.
+- **R2 · el icono — resuelto a favor de creativos.** Contraejemplo limpio del 30-jul: `Video Pomo
+  26/07` lo lleva y `Flyer Claptone 02/08` no, con la misma bajada `SIGHT · Vídeo · v1`. Derivarlo
+  del tipo es demostrablemente falso; se le quita la derivación a euphoric. **Límite declarado:**
+  cuál es el campo que lo dispara no se puede saber desde esta pantalla, así que se modela como
+  dato opcional por pieza y no se inventa la regla.
+- **R3 · aprobación de cliente — resuelto: el live SÍ la pinta.** Era un hueco de **creativos** y
+  euphoric tenía razón. Va en la fila de badges, después del deadline, y es un flag **ortogonal al
+  estado** (sale en una Briefing y en una Cambios, en ninguna Aprobado). El test de caracterización
+  que fijaba lo contrario cayó, como estaba previsto.
+
+- **ABIERTO · el drawer de alta.** La prueba byte a byte cubre el `main` renderizado, **no el panel
+  de alta**, que en la captura está cerrado. Al converger, `/euphoric/piezas` pasa a usar
+  `NuevaPiezaDrawer` (el de creativos, referencia por defecto) y se borra el `PieceDrawer` de
+  euphoric. Es lo correcto según la regla vigente, pero **no está verificado contra el live**.
 
 ## Fase 3 — Cierre
 
