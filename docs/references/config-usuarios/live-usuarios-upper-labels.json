@@ -1,0 +1,361 @@
+[
+  {
+    "text": "T",
+    "style": {
+      "color": "rgb(255, 255, 255)",
+      "fontSize": "13px",
+      "fontWeight": "600",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \""
+    },
+    "cls": "grid shrink-0 place-items-center rounded-full font-semibold text-white",
+    "tag": "SPAN",
+    "boxCls": "",
+    "rect": {
+      "x": 1304,
+      "y": 12,
+      "w": 32
+    }
+  },
+  {
+    "text": "Usuarios de la intranet",
+    "style": {
+      "color": "rgb(100, 116, 139)",
+      "fontSize": "14px",
+      "fontWeight": "600",
+      "letterSpacing": "0.35px",
+      "textTransform": "uppercase",
+      "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \""
+    },
+    "cls": "mb-1 text-sm font-semibold uppercase tracking-wide text-slate-500",
+    "tag": "H2",
+    "boxCls": "card p-5",
+    "boxTag": "SECTION",
+    "rect": {
+      "x": 117,
+      "y": 178,
+      "w": 1206
+    }
+  },
+  {
+    "text": "Para empezar rápido",
+    "style": {
+      "color": "rgb(148, 163, 184)",
+      "fontSize": "12px",
+      "fontWeight": "600",
+      "letterSpacing": "0.3px",
+      "textTransform": "uppercase",
+      "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \""
+    },
+    "cls": "text-xs font-semibold uppercase tracking-wide text-slate-400",
+    "tag": "P",
+    "boxCls": "rounded-lg border border-slate-200 bg-slate-50 p-3",
+    "boxTag": "DIV",
+    "rect": {
+      "x": 143,
+      "y": 358,
+      "w": 1154
+    }
+  },
+  {
+    "text": "ConceptOne · Navegación",
+    "style": {
+      "color": "rgb(148, 163, 184)",
+      "fontSize": "12px",
+      "fontWeight": "600",
+      "letterSpacing": "0.3px",
+      "textTransform": "uppercase",
+      "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \""
+    },
+    "cls": "text-xs font-semibold uppercase tracking-wide text-slate-400",
+    "tag": "DIV",
+    "boxCls": "border-b border-slate-100 px-3 py-2",
+    "boxTag": "DIV",
+    "rect": {
+      "x": 143,
+      "y": 493,
+      "w": 1154
+    }
+  },
+  {
+    "text": "ConceptOne · Ficha de show",
+    "style": {
+      "color": "rgb(148, 163, 184)",
+      "fontSize": "12px",
+      "fontWeight": "600",
+      "letterSpacing": "0.3px",
+      "textTransform": "uppercase",
+      "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \""
+    },
+    "cls": "text-xs font-semibold uppercase tracking-wide text-slate-400",
+    "tag": "DIV",
+    "boxCls": "border-b border-slate-100 px-3 py-2",
+    "boxTag": "DIV",
+    "rect": {
+      "x": 143,
+      "y": 1054,
+      "w": 1154
+    }
+  },
+  {
+    "text": "ConceptOne · Ficha de artista",
+    "style": {
+      "color": "rgb(148, 163, 184)",
+      "fontSize": "12px",
+      "fontWeight": "600",
+      "letterSpacing": "0.3px",
+      "textTransform": "uppercase",
+      "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \""
+    },
+    "cls": "text-xs font-semibold uppercase tracking-wide text-slate-400",
+    "tag": "DIV",
+    "boxCls": "border-b border-slate-100 px-3 py-2",
+    "boxTag": "DIV",
+    "rect": {
+      "x": 143,
+      "y": 1747,
+      "w": 1154
+    }
+  },
+  {
+    "text": "ConceptOne · Management",
+    "style": {
+      "color": "rgb(148, 163, 184)",
+      "fontSize": "12px",
+      "fontWeight": "600",
+      "letterSpacing": "0.3px",
+      "textTransform": "uppercase",
+      "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \""
+    },
+    "cls": "text-xs font-semibold uppercase tracking-wide text-slate-400",
+    "tag": "DIV",
+    "boxCls": "border-b border-slate-100 px-3 py-2",
+    "boxTag": "DIV",
+    "rect": {
+      "x": 143,
+      "y": 2160,
+      "w": 1154
+    }
+  },
+  {
+    "text": "Etra Agency",
+    "style": {
+      "color": "rgb(148, 163, 184)",
+      "fontSize": "12px",
+      "fontWeight": "600",
+      "letterSpacing": "0.3px",
+      "textTransform": "uppercase",
+      "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \""
+    },
+    "cls": "mb-2 text-xs font-semibold uppercase tracking-wide text-slate-400",
+    "tag": "DIV",
+    "boxCls": "rounded-lg border border-slate-200 bg-slate-50/50 p-3",
+    "boxTag": "DIV",
+    "rect": {
+      "x": 143,
+      "y": 2407,
+      "w": 260
+    }
+  },
+  {
+    "text": "Team · RRHH y usuarios",
+    "style": {
+      "color": "rgb(148, 163, 184)",
+      "fontSize": "12px",
+      "fontWeight": "600",
+      "letterSpacing": "0.3px",
+      "textTransform": "uppercase",
+      "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \""
+    },
+    "cls": "mb-2 text-xs font-semibold uppercase tracking-wide text-slate-400",
+    "tag": "DIV",
+    "boxCls": "rounded-lg border border-slate-200 bg-slate-50/50 p-3",
+    "boxTag": "DIV",
+    "rect": {
+      "x": 441,
+      "y": 2407,
+      "w": 260
+    }
+  },
+  {
+    "text": "CRM · Clientes",
+    "style": {
+      "color": "rgb(148, 163, 184)",
+      "fontSize": "12px",
+      "fontWeight": "600",
+      "letterSpacing": "0.3px",
+      "textTransform": "uppercase",
+      "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \""
+    },
+    "cls": "mb-2 text-xs font-semibold uppercase tracking-wide text-slate-400",
+    "tag": "DIV",
+    "boxCls": "rounded-lg border border-slate-200 bg-slate-50/50 p-3",
+    "boxTag": "DIV",
+    "rect": {
+      "x": 739,
+      "y": 2407,
+      "w": 260
+    }
+  },
+  {
+    "text": "CRUDA · Ropa / merch",
+    "style": {
+      "color": "rgb(148, 163, 184)",
+      "fontSize": "12px",
+      "fontWeight": "600",
+      "letterSpacing": "0.3px",
+      "textTransform": "uppercase",
+      "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \""
+    },
+    "cls": "mb-2 text-xs font-semibold uppercase tracking-wide text-slate-400",
+    "tag": "DIV",
+    "boxCls": "rounded-lg border border-slate-200 bg-slate-50/50 p-3",
+    "boxTag": "DIV",
+    "rect": {
+      "x": 1037,
+      "y": 2407,
+      "w": 260
+    }
+  },
+  {
+    "text": "Producción · Eventos",
+    "style": {
+      "color": "rgb(148, 163, 184)",
+      "fontSize": "12px",
+      "fontWeight": "600",
+      "letterSpacing": "0.3px",
+      "textTransform": "uppercase",
+      "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \""
+    },
+    "cls": "mb-2 text-xs font-semibold uppercase tracking-wide text-slate-400",
+    "tag": "DIV",
+    "boxCls": "rounded-lg border border-slate-200 bg-slate-50/50 p-3",
+    "boxTag": "DIV",
+    "rect": {
+      "x": 143,
+      "y": 2745,
+      "w": 260
+    }
+  },
+  {
+    "text": "Euphoric Media · Marketing",
+    "style": {
+      "color": "rgb(148, 163, 184)",
+      "fontSize": "12px",
+      "fontWeight": "600",
+      "letterSpacing": "0.3px",
+      "textTransform": "uppercase",
+      "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \""
+    },
+    "cls": "mb-2 text-xs font-semibold uppercase tracking-wide text-slate-400",
+    "tag": "DIV",
+    "boxCls": "rounded-lg border border-slate-200 bg-slate-50/50 p-3",
+    "boxTag": "DIV",
+    "rect": {
+      "x": 441,
+      "y": 2745,
+      "w": 260
+    }
+  },
+  {
+    "text": "Creativos · Diseño",
+    "style": {
+      "color": "rgb(148, 163, 184)",
+      "fontSize": "12px",
+      "fontWeight": "600",
+      "letterSpacing": "0.3px",
+      "textTransform": "uppercase",
+      "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \""
+    },
+    "cls": "mb-2 text-xs font-semibold uppercase tracking-wide text-slate-400",
+    "tag": "DIV",
+    "boxCls": "rounded-lg border border-slate-200 bg-slate-50/50 p-3",
+    "boxTag": "DIV",
+    "rect": {
+      "x": 739,
+      "y": 2745,
+      "w": 260
+    }
+  },
+  {
+    "text": "Mixmag",
+    "style": {
+      "color": "rgb(148, 163, 184)",
+      "fontSize": "12px",
+      "fontWeight": "600",
+      "letterSpacing": "0.3px",
+      "textTransform": "uppercase",
+      "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \""
+    },
+    "cls": "mb-2 text-xs font-semibold uppercase tracking-wide text-slate-400",
+    "tag": "DIV",
+    "boxCls": "rounded-lg border border-slate-200 bg-slate-50/50 p-3",
+    "boxTag": "DIV",
+    "rect": {
+      "x": 1037,
+      "y": 2745,
+      "w": 260
+    }
+  },
+  {
+    "text": "TAGMAG",
+    "style": {
+      "color": "rgb(148, 163, 184)",
+      "fontSize": "12px",
+      "fontWeight": "600",
+      "letterSpacing": "0.3px",
+      "textTransform": "uppercase",
+      "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \""
+    },
+    "cls": "mb-2 text-xs font-semibold uppercase tracking-wide text-slate-400",
+    "tag": "DIV",
+    "boxCls": "rounded-lg border border-slate-200 bg-slate-50/50 p-3",
+    "boxTag": "DIV",
+    "rect": {
+      "x": 143,
+      "y": 2985,
+      "w": 260
+    }
+  },
+  {
+    "text": "Herramientas · Utilidades",
+    "style": {
+      "color": "rgb(148, 163, 184)",
+      "fontSize": "12px",
+      "fontWeight": "600",
+      "letterSpacing": "0.3px",
+      "textTransform": "uppercase",
+      "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \""
+    },
+    "cls": "mb-2 text-xs font-semibold uppercase tracking-wide text-slate-400",
+    "tag": "DIV",
+    "boxCls": "rounded-lg border border-slate-200 bg-slate-50/50 p-3",
+    "boxTag": "DIV",
+    "rect": {
+      "x": 441,
+      "y": 2985,
+      "w": 260
+    }
+  },
+  {
+    "text": "Black Moose · Grupo",
+    "style": {
+      "color": "rgb(148, 163, 184)",
+      "fontSize": "12px",
+      "fontWeight": "600",
+      "letterSpacing": "0.3px",
+      "textTransform": "uppercase",
+      "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \""
+    },
+    "cls": "mb-2 text-xs font-semibold uppercase tracking-wide text-slate-400",
+    "tag": "DIV",
+    "boxCls": "rounded-lg border border-slate-200 bg-slate-50/50 p-3",
+    "boxTag": "DIV",
+    "rect": {
+      "x": 739,
+      "y": 2985,
+      "w": 260
+    }
+  }
+]

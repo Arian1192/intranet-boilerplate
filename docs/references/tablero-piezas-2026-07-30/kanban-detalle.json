@@ -1,0 +1,455 @@
+{
+  "cards": [
+    {
+      "cls": "block w-full rounded-lg border border-slate-200 bg-white p-2.5 text-left hover:border-brand-300 hover:shadow-sm",
+      "text": "Sin asignarFlyer SIGHT: Sonny Fodera, Xandro, Marcel BS, Jose FajardoSIGHT · Estático · v117 jul 2026",
+      "html": "<button draggable=\"true\" class=\"block w-full rounded-lg border border-slate-200 bg-white p-2.5 text-left hover:border-brand-300 hover:shadow-sm\"><div class=\"flex items-center gap-2\"><span class=\"shrink-0 text-[11px] text-slate-300\">Sin asignar</span></div><div class=\"mt-1 truncate text-sm font-medium text-slate-800\">Flyer SIGHT: Sonny Fodera, Xandro, Marcel BS, Jose Fajardo</div><div class=\"mt-0.5 truncate text-xs text-slate-400\">SIGHT · Estático · v1</div><div class=\"mt-1.5 flex flex-wrap items-center gap-1\"><span class=\"rounded px-1.5 py-0.5 text-[11px] font-semibold bg-rose-100 text-rose-700\">17 jul 2026</span></div></button>"
+    },
+    {
+      "cls": "block w-full rounded-lg border border-slate-200 bg-white p-2.5 text-left hover:border-brand-300 hover:shadow-sm",
+      "text": "Sin asignarSet Times SIGHT: Sonny Fodera, Xandro, Marcel BS, Jose FajardoSIGHT · Estático · v111 ago 2026",
+      "html": "<button draggable=\"true\" class=\"block w-full rounded-lg border border-slate-200 bg-white p-2.5 text-left hover:border-brand-300 hover:shadow-sm\"><div class=\"flex items-center gap-2\"><span class=\"shrink-0 text-[11px] text-slate-300\">Sin asignar</span></div><div class=\"mt-1 truncate text-sm font-medium text-slate-800\">Set Times SIGHT: Sonny Fodera, Xandro, Marcel BS, Jose Fajardo</div><div class=\"mt-0.5 truncate text-xs text-slate-400\">SIGHT · Estático · v1</div><div class=\"mt-1.5 flex flex-wrap items-center gap-1\"><span class=\"rounded px-1.5 py-0.5 text-[11px] font-semibold bg-emerald-100 text-emerald-700\">11 ago 2026</span></div></button>"
+    },
+    {
+      "cls": "block w-full rounded-lg border border-slate-200 bg-white p-2.5 text-left hover:border-brand-300 hover:shadow-sm",
+      "text": "AlbaSet Times SIGHT: James Hype, Alex Now, La Cintia, Pau GuileraSIGHT · Estático · v104 ago 2026",
+      "html": "<button draggable=\"true\" class=\"block w-full rounded-lg border border-slate-200 bg-white p-2.5 text-left hover:border-brand-300 hover:shadow-sm\"><div class=\"flex items-center gap-2\"><span class=\"flex shrink-0 items-center gap-1 rounded-full bg-slate-100 py-0.5 pl-0.5 pr-2\"><img src=\"https://olbfwvqsuhcxvgonywrg.supabase.co/storage/v1/object/public/avatares/c58851ec-865f-4a0c-a0c2-93c9195f76b5/a689beda-032e-4031-a869-f4ec7ee02dc3.jpg\" alt=\"Alba G\" class=\"shrink-0 rounded-full object-cover\" style=\"width: 20px; height: 20px;\"><span class=\"text-[11px] font-medium text-slate-600\">Alba</span></span></div><div class=\"mt-1 truncate text-sm font-medium text-slate-800\">Set Times SIGHT: James Hype, Alex Now, La Cintia, Pau Guilera</div><div class=\"mt-0.5 truncate text-xs text-slate-400\">SIGHT · Estático · v1</div><div class=\"mt-1.5 flex flex-wrap items-center gap-1\"><span class=\"rounded px-1.5 py-0.5 text-[11px] font-semibold bg-amber-100 text-amber-800\">04 ago 2026</span></div></button>"
+    },
+    {
+      "cls": "block w-full rounded-lg border border-slate-200 bg-white p-2.5 text-left hover:border-brand-300 hover:shadow-sm",
+      "text": "AlbaFlyer SIGHT: James Hype, Alex Now, La Cintia, Pau GuileraSIGHT · Estático · v110 jul 2026Pendiente cliente",
+      "html": "<button draggable=\"true\" class=\"block w-full rounded-lg border border-slate-200 bg-white p-2.5 text-left hover:border-brand-300 hover:shadow-sm\"><div class=\"flex items-center gap-2\"><span class=\"flex shrink-0 items-center gap-1 rounded-full bg-slate-100 py-0.5 pl-0.5 pr-2\"><img src=\"https://olbfwvqsuhcxvgonywrg.supabase.co/storage/v1/object/public/avatares/c58851ec-865f-4a0c-a0c2-93c9195f76b5/a689beda-032e-4031-a869-f4ec7ee02dc3.jpg\" alt=\"Alba G\" class=\"shrink-0 rounded-full object-cover\" style=\"width: 20px; height: 20px;\"><span class=\"text-[11px] font-medium text-slate-600\">Alba</span></span></div><div class=\"mt-1 truncate text-sm font-medium text-slate-800\">Flyer SIGHT: James Hype, Alex Now, La Cintia, Pau Guilera</div><div class=\"mt-0.5 truncate text-xs text-slate-400\">SIGHT · Estático · v1</div><div class=\"mt-1.5 flex flex-wrap items-center gap-1\"><span class=\"rounded px-1.5 py-0.5 text-[11px] font-semibold bg-rose-100 text-rose-700\">10 jul 2026</span><span class=\"badge text-[10px] bg-amber-100 text-amber-700\">Pendiente cliente</span></div></button>"
+    },
+    {
+      "cls": "block w-full rounded-lg border border-slate-200 bg-white p-2.5 text-left hover:border-brand-300 hover:shadow-sm",
+      "text": "Sin asignarClaptoneOpium Bcn · Estático · v1",
+      "html": "<button draggable=\"true\" class=\"block w-full rounded-lg border border-slate-200 bg-white p-2.5 text-left hover:border-brand-300 hover:shadow-sm\"><div class=\"flex items-center gap-2\"><span class=\"shrink-0 text-[11px] text-slate-300\">Sin asignar</span></div><div class=\"mt-1 truncate text-sm font-medium text-slate-800\">Claptone</div><div class=\"mt-0.5 truncate text-xs text-slate-400\">Opium Bcn · Estático · v1</div><div class=\"mt-1.5 flex flex-wrap items-center gap-1\"></div></button>"
+    },
+    {
+      "cls": "block w-full rounded-lg border border-slate-200 bg-white p-2.5 text-left hover:border-brand-300 hover:shadow-sm",
+      "text": "CarlosPack Sold Out · Pack Sold OutSIGHT · Estático · v110 jul 2026☑ 0/3",
+      "html": "<button draggable=\"true\" class=\"block w-full rounded-lg border border-slate-200 bg-white p-2.5 text-left hover:border-brand-300 hover:shadow-sm\"><div class=\"flex items-center gap-2\"><span class=\"flex shrink-0 items-center gap-1 rounded-full bg-slate-100 py-0.5 pl-0.5 pr-2\"><img src=\"https://olbfwvqsuhcxvgonywrg.supabase.co/storage/v1/object/public/avatares/afc4f7d5-8412-4576-95f1-ae709d3bcf0c/902c4ef7-adf2-4da3-aa72-2aa66643e540.png\" alt=\"Carlos Pego\" class=\"shrink-0 rounded-full object-cover\" style=\"width: 20px; height: 20px;\"><span class=\"text-[11px] font-medium text-slate-600\">Carlos</span></span></div><div class=\"mt-1 truncate text-sm font-medium text-slate-800\">Pack Sold Out · Pack Sold Out</div><div class=\"mt-0.5 truncate text-xs text-slate-400\">SIGHT · Estático · v1</div><div class=\"mt-1.5 flex flex-wrap items-center gap-1\"><span class=\"rounded px-1.5 py-0.5 text-[11px] font-semibold bg-rose-100 text-rose-700\">10 jul 2026</span><span class=\"text-[10px] text-slate-500\">☑ 0/3</span></div></button>"
+    },
+    {
+      "cls": "block w-full rounded-lg border border-slate-200 bg-white p-2.5 text-left hover:border-brand-300 hover:shadow-sm",
+      "text": "AlbaSet Times SIGHT: Claptone, Vite b2b Miganova, Tomi & Kesh , Alexanders Som, Luka KuhnowSIGHT · Estático · v128 jul 2026Pendiente cliente",
+      "html": "<button draggable=\"true\" class=\"block w-full rounded-lg border border-slate-200 bg-white p-2.5 text-left hover:border-brand-300 hover:shadow-sm\"><div class=\"flex items-center gap-2\"><span class=\"flex shrink-0 items-center gap-1 rounded-full bg-slate-100 py-0.5 pl-0.5 pr-2\"><img src=\"https://olbfwvqsuhcxvgonywrg.supabase.co/storage/v1/object/public/avatares/c58851ec-865f-4a0c-a0c2-93c9195f76b5/a689beda-032e-4031-a869-f4ec7ee02dc3.jpg\" alt=\"Alba G\" class=\"shrink-0 rounded-full object-cover\" style=\"width: 20px; height: 20px;\"><span class=\"text-[11px] font-medium text-slate-600\">Alba</span></span></div><div class=\"mt-1 truncate text-sm font-medium text-slate-800\">Set Times SIGHT: Claptone, Vite b2b Miganova, Tomi &amp; Kesh , Alexanders Som, Luka Kuhnow</div><div class=\"mt-0.5 truncate text-xs text-slate-400\">SIGHT · Estático · v1</div><div class=\"mt-1.5 flex flex-wrap items-center gap-1\"><span class=\"rounded px-1.5 py-0.5 text-[11px] font-semibold bg-rose-100 text-rose-700\">28 jul 2026</span><span class=\"badge text-[10px] bg-amber-100 text-amber-700\">Pendiente cliente</span></div></button>"
+    },
+    {
+      "cls": "block w-full rounded-lg border border-slate-200 bg-white p-2.5 text-left hover:border-brand-300 hover:shadow-sm",
+      "text": "Alba🎬Video Pomo 26/07SIGHT · Vídeo · v108 ago 2026☑ 0/1",
+      "html": "<button draggable=\"true\" class=\"block w-full rounded-lg border border-slate-200 bg-white p-2.5 text-left hover:border-brand-300 hover:shadow-sm\"><div class=\"flex items-center gap-2\"><span class=\"flex shrink-0 items-center gap-1 rounded-full bg-slate-100 py-0.5 pl-0.5 pr-2\"><img src=\"https://olbfwvqsuhcxvgonywrg.supabase.co/storage/v1/object/public/avatares/c58851ec-865f-4a0c-a0c2-93c9195f76b5/a689beda-032e-4031-a869-f4ec7ee02dc3.jpg\" alt=\"Alba G\" class=\"shrink-0 rounded-full object-cover\" style=\"width: 20px; height: 20px;\"><span class=\"text-[11px] font-medium text-slate-600\">Alba</span></span><span class=\"ml-auto shrink-0 text-xs\" title=\"Vídeo\">🎬</span></div><div class=\"mt-1 truncate text-sm font-medium text-slate-800\">Video Pomo 26/07</div><div class=\"mt-0.5 truncate text-xs text-slate-400\">SIGHT · Vídeo · v1</div><div class=\"mt-1.5 flex flex-wrap items-center gap-1\"><span class=\"rounded px-1.5 py-0.5 text-[11px] font-semibold bg-slate-100 text-slate-500\">08 ago 2026</span><span class=\"text-[10px] text-slate-500\">☑ 0/1</span></div></button>"
+    },
+    {
+      "cls": "block w-full rounded-lg border border-slate-200 bg-white p-2.5 text-left hover:border-brand-300 hover:shadow-sm",
+      "text": "Sin asignarFlyer SIGHT: Claptone, Vite b2b Miganova, Tomi & Kesh , Alexanders Som, Luka KuhnowSIGHT · Estático · v103 jul 2026",
+      "html": "<button draggable=\"true\" class=\"block w-full rounded-lg border border-slate-200 bg-white p-2.5 text-left hover:border-brand-300 hover:shadow-sm\"><div class=\"flex items-center gap-2\"><span class=\"shrink-0 text-[11px] text-slate-300\">Sin asignar</span></div><div class=\"mt-1 truncate text-sm font-medium text-slate-800\">Flyer SIGHT: Claptone, Vite b2b Miganova, Tomi &amp; Kesh , Alexanders Som, Luka Kuhnow</div><div class=\"mt-0.5 truncate text-xs text-slate-400\">SIGHT · Estático · v1</div><div class=\"mt-1.5 flex flex-wrap items-center gap-1\"><span class=\"rounded px-1.5 py-0.5 text-[11px] font-semibold bg-slate-100 text-slate-500\">03 jul 2026</span></div></button>"
+    },
+    {
+      "cls": "block w-full rounded-lg border border-slate-200 bg-white p-2.5 text-left hover:border-brand-300 hover:shadow-sm",
+      "text": "CarlosFlyer Claptone 02/08SIGHT · Vídeo · v122 jul 2026☑ 2/3",
+      "html": "<button draggable=\"true\" class=\"block w-full rounded-lg border border-slate-200 bg-white p-2.5 text-left hover:border-brand-300 hover:shadow-sm\"><div class=\"flex items-center gap-2\"><span class=\"flex shrink-0 items-center gap-1 rounded-full bg-slate-100 py-0.5 pl-0.5 pr-2\"><img src=\"https://olbfwvqsuhcxvgonywrg.supabase.co/storage/v1/object/public/avatares/afc4f7d5-8412-4576-95f1-ae709d3bcf0c/902c4ef7-adf2-4da3-aa72-2aa66643e540.png\" alt=\"Carlos Pego\" class=\"shrink-0 rounded-full object-cover\" style=\"width: 20px; height: 20px;\"><span class=\"text-[11px] font-medium text-slate-600\">Carlos</span></span></div><div class=\"mt-1 truncate text-sm font-medium text-slate-800\">Flyer Claptone 02/08</div><div class=\"mt-0.5 truncate text-xs text-slate-400\">SIGHT · Vídeo · v1</div><div class=\"mt-1.5 flex flex-wrap items-center gap-1\"><span class=\"rounded px-1.5 py-0.5 text-[11px] font-semibold bg-slate-100 text-slate-500\">22 jul 2026</span><span class=\"text-[10px] text-slate-500\">☑ 2/3</span></div></button>"
+    }
+  ],
+  "badges": [
+    {
+      "t": "Briefing",
+      "cls": "badge bg-slate-100 text-slate-600",
+      "color": "rgb(71, 85, 105)",
+      "bg": "rgb(241, 245, 249)",
+      "r": "9999px",
+      "p": "2px 10px",
+      "fs": "12px",
+      "fw": "500"
+    },
+    {
+      "t": "Pendiente cliente",
+      "cls": "badge text-[10px] bg-amber-100 text-amber-700",
+      "color": "rgb(180, 83, 9)",
+      "bg": "rgb(254, 243, 199)",
+      "r": "9999px",
+      "p": "2px 10px",
+      "fs": "10px",
+      "fw": "500"
+    },
+    {
+      "t": "En producción",
+      "cls": "badge bg-sky-100 text-sky-700",
+      "color": "rgb(3, 105, 161)",
+      "bg": "rgb(224, 242, 254)",
+      "r": "9999px",
+      "p": "2px 10px",
+      "fs": "12px",
+      "fw": "500"
+    },
+    {
+      "t": "Revisión",
+      "cls": "badge bg-amber-100 text-amber-700",
+      "color": "rgb(180, 83, 9)",
+      "bg": "rgb(254, 243, 199)",
+      "r": "9999px",
+      "p": "2px 10px",
+      "fs": "12px",
+      "fw": "500"
+    },
+    {
+      "t": "Cambios",
+      "cls": "badge bg-rose-100 text-rose-700",
+      "color": "rgb(190, 18, 60)",
+      "bg": "rgb(255, 228, 230)",
+      "r": "9999px",
+      "p": "2px 10px",
+      "fs": "12px",
+      "fw": "500"
+    },
+    {
+      "t": "Pendiente cliente",
+      "cls": "badge text-[10px] bg-amber-100 text-amber-700",
+      "color": "rgb(180, 83, 9)",
+      "bg": "rgb(254, 243, 199)",
+      "r": "9999px",
+      "p": "2px 10px",
+      "fs": "10px",
+      "fw": "500"
+    },
+    {
+      "t": "Aprobado",
+      "cls": "badge bg-emerald-100 text-emerald-700",
+      "color": "rgb(4, 120, 87)",
+      "bg": "rgb(209, 250, 229)",
+      "r": "9999px",
+      "p": "2px 10px",
+      "fs": "12px",
+      "fw": "500"
+    },
+    {
+      "t": "Briefing",
+      "cls": "badge bg-slate-100 text-slate-600",
+      "color": "rgb(71, 85, 105)",
+      "bg": "rgb(241, 245, 249)",
+      "r": "9999px",
+      "p": "2px 10px",
+      "fs": "12px",
+      "fw": "500"
+    },
+    {
+      "t": "Briefing",
+      "cls": "badge bg-slate-100 text-slate-600",
+      "color": "rgb(71, 85, 105)",
+      "bg": "rgb(241, 245, 249)",
+      "r": "9999px",
+      "p": "2px 10px",
+      "fs": "12px",
+      "fw": "500"
+    },
+    {
+      "t": "Aprobado",
+      "cls": "badge bg-emerald-100 text-emerald-700",
+      "color": "rgb(4, 120, 87)",
+      "bg": "rgb(209, 250, 229)",
+      "r": "9999px",
+      "p": "2px 10px",
+      "fs": "12px",
+      "fw": "500"
+    },
+    {
+      "t": "Cambios",
+      "cls": "badge bg-rose-100 text-rose-700",
+      "color": "rgb(190, 18, 60)",
+      "bg": "rgb(255, 228, 230)",
+      "r": "9999px",
+      "p": "2px 10px",
+      "fs": "12px",
+      "fw": "500"
+    },
+    {
+      "t": "Pendiente cliente",
+      "cls": "badge bg-amber-100 text-amber-700",
+      "color": "rgb(180, 83, 9)",
+      "bg": "rgb(254, 243, 199)",
+      "r": "9999px",
+      "p": "2px 10px",
+      "fs": "12px",
+      "fw": "500"
+    },
+    {
+      "t": "Briefing",
+      "cls": "badge bg-slate-100 text-slate-600",
+      "color": "rgb(71, 85, 105)",
+      "bg": "rgb(241, 245, 249)",
+      "r": "9999px",
+      "p": "2px 10px",
+      "fs": "12px",
+      "fw": "500"
+    },
+    {
+      "t": "Briefing",
+      "cls": "badge bg-slate-100 text-slate-600",
+      "color": "rgb(71, 85, 105)",
+      "bg": "rgb(241, 245, 249)",
+      "r": "9999px",
+      "p": "2px 10px",
+      "fs": "12px",
+      "fw": "500"
+    },
+    {
+      "t": "Pendiente cliente",
+      "cls": "badge bg-amber-100 text-amber-700",
+      "color": "rgb(180, 83, 9)",
+      "bg": "rgb(254, 243, 199)",
+      "r": "9999px",
+      "p": "2px 10px",
+      "fs": "12px",
+      "fw": "500"
+    },
+    {
+      "t": "Aprobado",
+      "cls": "badge bg-emerald-100 text-emerald-700",
+      "color": "rgb(4, 120, 87)",
+      "bg": "rgb(209, 250, 229)",
+      "r": "9999px",
+      "p": "2px 10px",
+      "fs": "12px",
+      "fw": "500"
+    },
+    {
+      "t": "Aprobado",
+      "cls": "badge bg-emerald-100 text-emerald-700",
+      "color": "rgb(4, 120, 87)",
+      "bg": "rgb(209, 250, 229)",
+      "r": "9999px",
+      "p": "2px 10px",
+      "fs": "12px",
+      "fw": "500"
+    },
+    {
+      "t": "En producción",
+      "cls": "badge bg-sky-100 text-sky-700",
+      "color": "rgb(3, 105, 161)",
+      "bg": "rgb(224, 242, 254)",
+      "r": "9999px",
+      "p": "2px 10px",
+      "fs": "12px",
+      "fw": "500"
+    },
+    {
+      "t": "Briefing",
+      "cls": "badge bg-slate-100 text-slate-600",
+      "color": "rgb(71, 85, 105)",
+      "bg": "rgb(241, 245, 249)",
+      "r": "9999px",
+      "p": "2px 10px",
+      "fs": "12px",
+      "fw": "500"
+    }
+  ],
+  "colHeads": [
+    {
+      "t": "Briefing5",
+      "cls": "mb-2 flex items-center justify-between px-1",
+      "html": "<div class=\"mb-2 flex items-center justify-between px-1\"><span class=\"badge bg-slate-100 text-slate-600\">Briefing</span><span class=\"rounded-full bg-slate-100 px-2 text-xs text-slate-500\">5</span></div>"
+    },
+    {
+      "t": "En producción1",
+      "cls": "mb-2 flex items-center justify-between px-1",
+      "html": "<div class=\"mb-2 flex items-center justify-between px-1\"><span class=\"badge bg-sky-100 text-sky-700\">En producción</span><span class=\"rounded-full bg-slate-100 px-2 text-xs text-slate-500\">1</span></div>"
+    },
+    {
+      "t": "Revisión0",
+      "cls": "mb-2 flex items-center justify-between px-1",
+      "html": "<div class=\"mb-2 flex items-center justify-between px-1\"><span class=\"badge bg-amber-100 text-amber-700\">Revisión</span><span class=\"rounded-full bg-slate-100 px-2 text-xs text-slate-500\">0</span></div>"
+    },
+    {
+      "t": "Cambios1",
+      "cls": "mb-2 flex items-center justify-between px-1",
+      "html": "<div class=\"mb-2 flex items-center justify-between px-1\"><span class=\"badge bg-rose-100 text-rose-700\">Cambios</span><span class=\"rounded-full bg-slate-100 px-2 text-xs text-slate-500\">1</span></div>"
+    },
+    {
+      "t": "Aprobado3",
+      "cls": "mb-2 flex items-center justify-between px-1",
+      "html": "<div class=\"mb-2 flex items-center justify-between px-1\"><span class=\"badge bg-emerald-100 text-emerald-700\">Aprobado</span><span class=\"rounded-full bg-slate-100 px-2 text-xs text-slate-500\">3</span></div>"
+    }
+  ],
+  "deadlines": [
+    {
+      "t": "17 jul 2026",
+      "cls": "rounded px-1.5 py-0.5 text-[11px] font-semibold bg-rose-100 text-rose-700",
+      "color": "rgb(190, 18, 60)",
+      "bg": "rgb(255, 228, 230)",
+      "r": "4px",
+      "p": "2px 6px",
+      "fs": "11px",
+      "fw": "600"
+    },
+    {
+      "t": "11 ago 2026",
+      "cls": "rounded px-1.5 py-0.5 text-[11px] font-semibold bg-emerald-100 text-emerald-700",
+      "color": "rgb(4, 120, 87)",
+      "bg": "rgb(209, 250, 229)",
+      "r": "4px",
+      "p": "2px 6px",
+      "fs": "11px",
+      "fw": "600"
+    },
+    {
+      "t": "04 ago 2026",
+      "cls": "rounded px-1.5 py-0.5 text-[11px] font-semibold bg-amber-100 text-amber-800",
+      "color": "rgb(146, 64, 14)",
+      "bg": "rgb(254, 243, 199)",
+      "r": "4px",
+      "p": "2px 6px",
+      "fs": "11px",
+      "fw": "600"
+    },
+    {
+      "t": "10 jul 2026",
+      "cls": "rounded px-1.5 py-0.5 text-[11px] font-semibold bg-rose-100 text-rose-700",
+      "color": "rgb(190, 18, 60)",
+      "bg": "rgb(255, 228, 230)",
+      "r": "4px",
+      "p": "2px 6px",
+      "fs": "11px",
+      "fw": "600"
+    },
+    {
+      "t": "10 jul 2026",
+      "cls": "rounded px-1.5 py-0.5 text-[11px] font-semibold bg-rose-100 text-rose-700",
+      "color": "rgb(190, 18, 60)",
+      "bg": "rgb(255, 228, 230)",
+      "r": "4px",
+      "p": "2px 6px",
+      "fs": "11px",
+      "fw": "600"
+    },
+    {
+      "t": "28 jul 2026",
+      "cls": "rounded px-1.5 py-0.5 text-[11px] font-semibold bg-rose-100 text-rose-700",
+      "color": "rgb(190, 18, 60)",
+      "bg": "rgb(255, 228, 230)",
+      "r": "4px",
+      "p": "2px 6px",
+      "fs": "11px",
+      "fw": "600"
+    },
+    {
+      "t": "08 ago 2026",
+      "cls": "rounded px-1.5 py-0.5 text-[11px] font-semibold bg-slate-100 text-slate-500",
+      "color": "rgb(100, 116, 139)",
+      "bg": "rgb(241, 245, 249)",
+      "r": "4px",
+      "p": "2px 6px",
+      "fs": "11px",
+      "fw": "600"
+    },
+    {
+      "t": "03 jul 2026",
+      "cls": "rounded px-1.5 py-0.5 text-[11px] font-semibold bg-slate-100 text-slate-500",
+      "color": "rgb(100, 116, 139)",
+      "bg": "rgb(241, 245, 249)",
+      "r": "4px",
+      "p": "2px 6px",
+      "fs": "11px",
+      "fw": "600"
+    },
+    {
+      "t": "22 jul 2026",
+      "cls": "rounded px-1.5 py-0.5 text-[11px] font-semibold bg-slate-100 text-slate-500",
+      "color": "rgb(100, 116, 139)",
+      "bg": "rgb(241, 245, 249)",
+      "r": "4px",
+      "p": "2px 6px",
+      "fs": "11px",
+      "fw": "600"
+    },
+    {
+      "t": "17 jul 2026",
+      "cls": "rounded px-1.5 py-0.5 text-xs font-semibold bg-rose-100 text-rose-700",
+      "color": "rgb(190, 18, 60)",
+      "bg": "rgb(255, 228, 230)",
+      "r": "4px",
+      "p": "2px 6px",
+      "fs": "12px",
+      "fw": "600"
+    },
+    {
+      "t": "11 ago 2026",
+      "cls": "rounded px-1.5 py-0.5 text-xs font-semibold bg-emerald-100 text-emerald-700",
+      "color": "rgb(4, 120, 87)",
+      "bg": "rgb(209, 250, 229)",
+      "r": "4px",
+      "p": "2px 6px",
+      "fs": "12px",
+      "fw": "600"
+    },
+    {
+      "t": "08 ago 2026",
+      "cls": "rounded px-1.5 py-0.5 text-xs font-semibold bg-slate-100 text-slate-500",
+      "color": "rgb(100, 116, 139)",
+      "bg": "rgb(241, 245, 249)",
+      "r": "4px",
+      "p": "2px 6px",
+      "fs": "12px",
+      "fw": "600"
+    },
+    {
+      "t": "28 jul 2026",
+      "cls": "rounded px-1.5 py-0.5 text-xs font-semibold bg-rose-100 text-rose-700",
+      "color": "rgb(190, 18, 60)",
+      "bg": "rgb(255, 228, 230)",
+      "r": "4px",
+      "p": "2px 6px",
+      "fs": "12px",
+      "fw": "600"
+    },
+    {
+      "t": "04 ago 2026",
+      "cls": "rounded px-1.5 py-0.5 text-xs font-semibold bg-amber-100 text-amber-800",
+      "color": "rgb(146, 64, 14)",
+      "bg": "rgb(254, 243, 199)",
+      "r": "4px",
+      "p": "2px 6px",
+      "fs": "12px",
+      "fw": "600"
+    },
+    {
+      "t": "10 jul 2026",
+      "cls": "rounded px-1.5 py-0.5 text-xs font-semibold bg-rose-100 text-rose-700",
+      "color": "rgb(190, 18, 60)",
+      "bg": "rgb(255, 228, 230)",
+      "r": "4px",
+      "p": "2px 6px",
+      "fs": "12px",
+      "fw": "600"
+    },
+    {
+      "t": "03 jul 2026",
+      "cls": "rounded px-1.5 py-0.5 text-xs font-semibold bg-slate-100 text-slate-500",
+      "color": "rgb(100, 116, 139)",
+      "bg": "rgb(241, 245, 249)",
+      "r": "4px",
+      "p": "2px 6px",
+      "fs": "12px",
+      "fw": "600"
+    },
+    {
+      "t": "22 jul 2026",
+      "cls": "rounded px-1.5 py-0.5 text-xs font-semibold bg-slate-100 text-slate-500",
+      "color": "rgb(100, 116, 139)",
+      "bg": "rgb(241, 245, 249)",
+      "r": "4px",
+      "p": "2px 6px",
+      "fs": "12px",
+      "fw": "600"
+    },
+    {
+      "t": "10 jul 2026",
+      "cls": "rounded px-1.5 py-0.5 text-xs font-semibold bg-rose-100 text-rose-700",
+      "color": "rgb(190, 18, 60)",
+      "bg": "rgb(255, 228, 230)",
+      "r": "4px",
+      "p": "2px 6px",
+      "fs": "12px",
+      "fw": "600"
+    }
+  ]
+}

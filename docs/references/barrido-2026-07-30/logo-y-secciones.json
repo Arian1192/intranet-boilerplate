@@ -1,0 +1,194 @@
+{
+  "/": {
+    "logo": {
+      "src": "/logo_blackmoose.svg",
+      "alt": "Black Moose Group",
+      "cls": "h-5 w-auto"
+    },
+    "secciones": null,
+    "gigs": null
+  },
+  "/conceptone": {
+    "logo": {
+      "src": "/logo_antlers.svg",
+      "alt": "Black Moose Group",
+      "cls": "h-5 w-auto"
+    },
+    "secciones": {
+      "tag": "DIV",
+      "cls": "hidden border-b border-slate-200 bg-slate-50/70 md:block",
+      "bg": "rgba(248, 250, 252, 0.7)",
+      "border": "rgb(226, 232, 240) / 1px",
+      "items": [
+        "Dashboard->/conceptone",
+        "Shows->/shows",
+        "Ofertas->/ofertas",
+        "Cobros->/cobros",
+        "Gastos->/gastos",
+        "Disponibilidad->/disponibilidad"
+      ],
+      "html": "<div class=\"hidden border-b border-slate-200 bg-slate-50/70 md:block\"><div class=\"mx-auto flex w-full max-w-7xl items-center gap-1 overflow-x-auto px-4 py-1.5\"><a aria-current=\"page\" class=\"shrink-0 rounded-md px-3 py-1 text-sm font-medium transition-colors bg-brand-600 text-white\" href=\"/conceptone\">Dashboard</a><a class=\"shrink-0 rounded-md px-3 py-1 text-sm font-medium transition-colors text-sl"
+    },
+    "gigs": null
+  },
+  "/shows": {
+    "logo": {
+      "src": "/logo_antlers.svg",
+      "alt": "Black Moose Group",
+      "cls": "h-5 w-auto"
+    },
+    "secciones": {
+      "tag": "DIV",
+      "cls": "hidden border-b border-slate-200 bg-slate-50/70 md:block",
+      "bg": "rgba(248, 250, 252, 0.7)",
+      "border": "rgb(226, 232, 240) / 1px",
+      "items": [
+        "Dashboard->/conceptone",
+        "Shows->/shows",
+        "Ofertas->/ofertas",
+        "Cobros->/cobros",
+        "Gastos->/gastos",
+        "Disponibilidad->/disponibilidad"
+      ],
+      "html": "<div class=\"hidden border-b border-slate-200 bg-slate-50/70 md:block\"><div class=\"mx-auto flex w-full max-w-7xl items-center gap-1 overflow-x-auto px-4 py-1.5\"><a class=\"shrink-0 rounded-md px-3 py-1 text-sm font-medium transition-colors text-slate-600 hover:bg-slate-200/70\" href=\"/conceptone\">Dashboard</a><a aria-current=\"page\" class=\"shrink-0 rounded-md px-3 py-1 text-sm font-medium transition-c"
+    },
+    "gigs": null
+  },
+  "/etra": {
+    "logo": {
+      "src": "/logo_antlers.svg",
+      "alt": "Black Moose Group",
+      "cls": "h-5 w-auto"
+    },
+    "secciones": null,
+    "gigs": null
+  },
+  "/produccion": {
+    "logo": {
+      "src": "/logo_antlers.svg",
+      "alt": "Black Moose Group",
+      "cls": "h-5 w-auto"
+    },
+    "secciones": null,
+    "gigs": null
+  },
+  "/euphoric": {
+    "logo": {
+      "src": "/logo_antlers.svg",
+      "alt": "Black Moose Group",
+      "cls": "h-5 w-auto"
+    },
+    "secciones": null,
+    "gigs": null
+  },
+  "/mixmag": {
+    "logo": {
+      "src": "/logo_antlers.svg",
+      "alt": "Black Moose Group",
+      "cls": "h-5 w-auto"
+    },
+    "secciones": null,
+    "gigs": null
+  },
+  "/tagmag": {
+    "logo": {
+      "src": "/logo_antlers.svg",
+      "alt": "Black Moose Group",
+      "cls": "h-5 w-auto"
+    },
+    "secciones": null,
+    "gigs": null
+  },
+  "/creativos": {
+    "logo": {
+      "src": "/logo_antlers.svg",
+      "alt": "Black Moose Group",
+      "cls": "h-5 w-auto"
+    },
+    "secciones": null,
+    "gigs": null
+  },
+  "/cruda": {
+    "logo": {
+      "src": "/logo_antlers.svg",
+      "alt": "Black Moose Group",
+      "cls": "h-5 w-auto"
+    },
+    "secciones": null,
+    "gigs": null
+  },
+  "/crm": {
+    "logo": {
+      "src": "/logo_antlers.svg",
+      "alt": "Black Moose Group",
+      "cls": "h-5 w-auto"
+    },
+    "secciones": null,
+    "gigs": null
+  },
+  "/personal": {
+    "logo": {
+      "src": "/logo_antlers.svg",
+      "alt": "Black Moose Group",
+      "cls": "h-5 w-auto"
+    },
+    "secciones": null,
+    "gigs": null
+  },
+  "/herramientas": {
+    "logo": {
+      "src": "/logo_antlers.svg",
+      "alt": "Black Moose Group",
+      "cls": "h-5 w-auto"
+    },
+    "secciones": null,
+    "gigs": null
+  },
+  "/configuracion": {
+    "logo": {
+      "src": "/logo_antlers.svg",
+      "alt": "Black Moose Group",
+      "cls": "h-5 w-auto"
+    },
+    "secciones": {
+      "tag": "MAIN",
+      "cls": "mx-auto w-full max-w-7xl flex-1 px-4 py-6",
+      "bg": "rgba(0, 0, 0, 0)",
+      "border": "rgb(229, 231, 235) / 0px",
+      "items": [
+        "Uso y coste->/configuracion/uso",
+        "Incidencias->/configuracion/incidencias",
+        "Cuentas (auditoría)->/personal/usuarios",
+        "Documentos (tipografía)->/configuracion/documentos",
+        "Plantillas de correo->/configuracion",
+        "Notificaciones->/configuracion/notificaciones",
+        "Comisiones de bookers->/configuracion/comisiones",
+        "Control de comisiones->/configuracion/comisiones-pagos",
+        "Contratos->/configuracion/contratos",
+        "Alertas de eventos->/configuracion/alertas",
+        "RRHH (coste y avisos)->/configuracion/rrhh",
+        "Festivos->/configuracion/festivos"
+      ],
+      "html": "<main class=\"mx-auto w-full max-w-7xl flex-1 px-4 py-6\"><div class=\"flex flex-col gap-6 md:flex-row\"><aside class=\"md:w-60 md:shrink-0\"><div class=\"mb-3 md:hidden\"><h1 class=\"text-lg font-semibold text-slate-800\">Configuración</h1></div><nav class=\"space-y-4 md:sticky md:top-20\"><div><div class=\"px-3 pb-1 text-[11px] font-semibold uppercase tracking-wide text-slate-400\">Sistema</div><div class=\"sp"
+    },
+    "gigs": null
+  },
+  "/incidencias": {
+    "logo": {
+      "src": "/logo_antlers.svg",
+      "alt": "Black Moose Group",
+      "cls": "h-5 w-auto"
+    },
+    "secciones": null,
+    "gigs": null
+  },
+  "/mi-trabajo": {
+    "logo": {
+      "src": "/logo_antlers.svg",
+      "alt": "Black Moose Group",
+      "cls": "h-5 w-auto"
+    },
+    "secciones": null,
+    "gigs": null
+  }
+}
