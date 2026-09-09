@@ -42,6 +42,20 @@ import { OfertasPage } from '@/features/booking/pages/OfertasPage';
 import { CobrosPage } from '@/features/booking/pages/CobrosPage';
 import { GastosPage } from '@/features/booking/pages/GastosPage';
 import { EstrategiasPage } from '@/features/booking/pages/EstrategiasPage';
+import { ToursPage } from '@/features/booking/pages/ToursPage';
+import { LiquidacionesPage } from '@/features/booking/pages/LiquidacionesPage';
+import { PendientesPage } from '@/features/booking/pages/PendientesPage';
+import { ArtistasPage as C1ArtistasPage } from '@/features/booking/pages/ArtistasPage';
+import { ReportePage } from '@/features/booking/pages/ReportePage';
+import { AjustesPage as ConceptOneAjustesPage } from '@/features/booking/pages/AjustesPage';
+import { RosterPage } from '@/features/booking/pages/management/RosterPage';
+import { InsightsPage } from '@/features/booking/pages/management/InsightsPage';
+import { ContratosPage as ManagementContratosPage } from '@/features/booking/pages/management/ContratosPage';
+import { ActivacionesPage } from '@/features/booking/pages/management/ActivacionesPage';
+import { CampanasPage as ManagementCampanasPage } from '@/features/booking/pages/management/CampanasPage';
+import { ContentPage } from '@/features/booking/pages/management/ContentPage';
+import { IncidentesPage } from '@/features/booking/pages/management/IncidentesPage';
+import { IncidentesAnaliticaPage } from '@/features/booking/pages/management/IncidentesAnaliticaPage';
 import { EtraDashboardPage } from '@/features/etra/pages/EtraDashboardPage';
 import { ActionsPage } from '@/features/etra/pages/ActionsPage';
 import { ActionDetailPage } from '@/features/etra/pages/ActionDetailPage';
@@ -81,15 +95,32 @@ export function AppRouter() {
       <Route path="/login" element={<LoginPage />} />
       <Route path="/" element={<DashboardPage />} />
       <Route element={<ConceptOneShell />}>
+        {/* Bookings */}
         <Route path="/conceptone" element={<BookingDashboardPage />} />
         <Route path="/shows" element={<ShowsPage />} />
+        <Route path="/tours" element={<ToursPage />} />
         <Route path="/ofertas" element={<OfertasPage />} />
         <Route path="/cobros" element={<CobrosPage />} />
         <Route path="/gastos" element={<GastosPage />} />
+        <Route path="/liquidaciones" element={<LiquidacionesPage />} />
         <Route path="/disponibilidad" element={<DisponibilidadPage />} />
         <Route path="/calendario-c1" element={<BookingCalendarioPage />} />
         <Route path="/contactos" element={<ContactosPage />} />
+        <Route path="/conceptone/pendientes" element={<PendientesPage />} />
+        {/* Management */}
+        <Route path="/management/roster" element={<RosterPage />} />
+        <Route path="/management/insights" element={<InsightsPage />} />
         <Route path="/management/estrategias" element={<EstrategiasPage />} />
+        <Route path="/management/contratos" element={<ManagementContratosPage />} />
+        <Route path="/management/activaciones" element={<ActivacionesPage />} />
+        <Route path="/management/campanas" element={<ManagementCampanasPage />} />
+        <Route path="/management/content" element={<ContentPage />} />
+        <Route path="/management/incidentes" element={<IncidentesPage />} />
+        <Route path="/management/incidentes/analitica" element={<IncidentesAnaliticaPage />} />
+        {/* Más */}
+        <Route path="/artistas" element={<C1ArtistasPage />} />
+        <Route path="/reporte" element={<ReportePage />} />
+        <Route path="/conceptone/ajustes" element={<ConceptOneAjustesPage />} />
       </Route>
       <Route path="/etra" element={<EtraShell />}>
         <Route index element={<EtraDashboardPage />} />

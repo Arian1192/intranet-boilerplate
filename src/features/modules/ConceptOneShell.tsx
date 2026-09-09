@@ -1,39 +1,33 @@
-import { Outlet, useLocation } from 'react-router';
-import { AppLayout } from '@/components/layout';
-import {
-  CONCEPTONE_AREAS,
-  BOOKINGS_SECTIONS,
-  activeArea,
-  activeSection,
-  showsSectionBar,
-} from '@/features/booking/data/nav';
+import { Outlet } from 'react-router';
+import { ApxRail } from '@/features/booking/shell/ApxRail';
+import { ApxShell } from '@/features/booking/shell/ApxShell';
 import type { User } from '@/types';
 
+// El live entra con la cuenta `test`, rol `admin`, y así se rotula el perfil del
+// pie del rail.
 const mockUser: User = {
   id: '1',
   email: 'test@example.com',
-  name: 'Test User',
-  role: 'Admin',
+  name: 'test',
+  role: 'admin',
 };
 
+/**
+ * ConceptOne ya no cuelga del `AppLayout` compartido: tiene carcasa propia.
+ *
+ * El rail flota (`position: fixed`) y `.apx-shift` guarda el margen de 58 px, de
+ * modo que el contenido no se re-maqueta cuando el rail se expande al hover.
+ * Las clases del `<main>` son las del live (`conceptone.main.html`).
+ */
 export function ConceptOneShell() {
-  const { pathname } = useLocation();
-
   return (
-    <AppLayout
-      user={mockUser}
-      module={{
-        name: 'ConceptOne',
-        nav: {
-          areas: CONCEPTONE_AREAS,
-          activeArea: activeArea(pathname),
-          sections: showsSectionBar(pathname) ? BOOKINGS_SECTIONS : undefined,
-          activeSection: activeSection(pathname),
-        },
-        actionLabel: '+ Añadir show',
-      }}
-    >
-      <Outlet />
-    </AppLayout>
+    <ApxShell>
+      <ApxRail user={mockUser} />
+      <div className="apx-shift">
+        <main className="mx-auto w-full max-w-7xl flex-1 px-2 py-4 sm:px-4 sm:py-6">
+          <Outlet />
+        </main>
+      </div>
+    </ApxShell>
   );
 }
