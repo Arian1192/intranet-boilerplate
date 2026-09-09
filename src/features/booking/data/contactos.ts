@@ -13,6 +13,15 @@ export interface Venue {
   aforo: number | null;
 }
 
+/**
+ * **Ya no se pinta en ninguna pantalla.** La pestaña «Empresas» de `/contactos`
+ * resultó ser el explorador de organizaciones del CRM (medido en el live el
+ * 2026-09-09), así que esta lista plana de 117 empresas dejó de tener sitio.
+ *
+ * No se borra: salió de un recon real (`empresas-full.json`) y puede hacer
+ * falta en otro sitio. Pero que quede dicho, para que nadie lea su test y
+ * deduzca que hay una pantalla enseñándolas.
+ */
 export interface Empresa {
   id: string;
   name: string;

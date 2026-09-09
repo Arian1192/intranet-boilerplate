@@ -4,36 +4,39 @@ export interface VenueCardProps {
   venue: Venue;
 }
 
+/**
+ * Tarjeta de venue de `/contactos`.
+ *
+ * Calcada del live el 2026-09-09: la tarjeta entera **es un botón** con la
+ * clase `card`, el subtítulo es `dirección · ciudad · país`, y los badges van
+ * en este orden — primero el aforo, después el «Ubicado» —, que es el contrario
+ * del que teníamos. El ✎ es un adorno dentro del propio botón, no otro botón.
+ */
 export function VenueCard({ venue }: VenueCardProps) {
   const ubicacion = [venue.city, venue.country].filter(Boolean).join(' · ');
+  const subtitulo = ubicacion ? `${venue.address} · ${ubicacion}` : venue.address;
 
   return (
-    <div role="group" aria-label={venue.name} className="relative rounded-xl border border-slate-100 bg-white p-4 shadow-sm">
-      {/* Editar ✎ inerte (spec D2) */}
-      <button
-        type="button"
-        aria-label={`Editar ${venue.name}`}
-        className="absolute right-3 top-3 text-slate-300 hover:text-slate-500"
-      >
-        ✎
-      </button>
-      <h3 className="pr-6 font-semibold text-slate-900">{venue.name}</h3>
-      <p className="mt-0.5 truncate text-sm text-slate-500">
-        {venue.address}
-        {ubicacion && ` · ${ubicacion}`}
-      </p>
-      <div className="mt-2 flex flex-wrap gap-2">
-        {venue.ubicado && (
-          <span className="inline-flex items-center rounded-full bg-green-50 px-2.5 py-0.5 text-xs font-medium text-green-700">
-            📍 Ubicado
+    <button
+      type="button"
+      aria-label={`Ficha de ${venue.name}`}
+      className="card flex items-start gap-3 p-3 text-left transition-shadow hover:shadow-md"
+    >
+      <span className="min-w-0 flex-1">
+        <span className="block truncate font-medium text-slate-800">{venue.name}</span>
+        <span className="block truncate text-xs text-slate-500">{subtitulo}</span>
+        {(venue.aforo !== null || venue.ubicado) && (
+          <span className="mt-1 flex flex-wrap items-center gap-1.5">
+            {venue.aforo !== null && (
+              <span className="badge bg-slate-100 text-slate-600">Aforo {venue.aforo}</span>
+            )}
+            {venue.ubicado && (
+              <span className="badge bg-emerald-100 text-emerald-700">📍 Ubicado</span>
+            )}
           </span>
         )}
-        {venue.aforo !== null && (
-          <span className="inline-flex items-center rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-600">
-            Aforo {venue.aforo}
-          </span>
-        )}
-      </div>
-    </div>
+      </span>
+      <span className="shrink-0 text-slate-300">✎</span>
+    </button>
   );
 }
