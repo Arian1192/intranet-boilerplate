@@ -52,6 +52,38 @@
   .btn-primary:disabled {
     @apply cursor-not-allowed opacity-50;
   }
+
+  /*
+   * `.btn-secondary` le faltaba la base igual que a las de arriba, y ya había
+   * código en `main` usándola: los cuatro botones de `TourDetallePage` (Fase A)
+   * se pintaban sin borde ni relleno, porque `apx.css` sólo declara
+   * `border-color`, `background` y `color` dentro de `.apx` — sin `border-width`
+   * eso no pinta ningún borde.
+   *
+   * Doble medida en el live el 2026-09-09 a las 11:55 CEST sobre el botón
+   * `Cancelar` del modal `Editar campaña`
+   * (`docs/references/conceptone-v3-2026-09-09/f2d-btn-secondary-medida.txt`),
+   * y las dos coinciden al valor exacto:
+   *
+   * - Su regla CSS: `border-width: 1px`, `rgb(203 213 225)` = `slate-300`,
+   *   `rgb(255 255 255)` = `white`, `rgb(51 65 85)` = `slate-700`, y en `hover`
+   *   `rgb(248 250 252)` = `slate-50`. El resto del bloque es idéntico al de
+   *   `.btn`, foco en `rgb(95 95 104)` = `brand-500` incluido.
+   * - `getComputedStyle`: `border-radius: 8px`, `border-width: 1px`,
+   *   `padding: 8px 16px`, `font-size: 14px`, `font-weight: 500`,
+   *   `line-height: 20px`, `gap: 8px`. Los tres colores salen ahí remapeados por
+   *   `apx.css` (`--line`, `--surface`, `--ink`), que es justo lo que debe pasar
+   *   dentro de `.apx`.
+   */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-50;
+  }
+  .btn-secondary:focus {
+    @apply outline-none ring-2 ring-brand-500 ring-offset-1;
+  }
+  .btn-secondary:disabled {
+    @apply cursor-not-allowed opacity-50;
+  }
   .card {
     @apply rounded-xl border border-slate-200 bg-white shadow-sm;
   }
