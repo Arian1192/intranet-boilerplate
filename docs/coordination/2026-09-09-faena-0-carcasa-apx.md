@@ -16,9 +16,12 @@ arrancan las demás en paralelo.
 
 Todo lo que dice el **§2 del spec** (D1 a D5), más el registro de rutas:
 
-1. `src/features/booking/shell/apx.css` — tokens `.apx` light, bloque `.apx[data-theme="dark"]` y las
-   **49 reglas `!important`**. Se copian **literales** de `docs/references/conceptone-v3-2026-09-09/apx.css`
-   (líneas 1-83). No las reescribas «mejor»: es un calco.
+1. `src/features/booking/shell/apx.css` — **el fichero entero** de
+   `docs/references/conceptone-v3-2026-09-09/apx.css`: las **208 reglas**, no solo las 83 primeras.
+   Además de los tokens y el bloque oscuro, las líneas 84-208 traen los componentes (`.btn-*`, `.input`,
+   `.card`, `.badge`, las pastillas…) y **27 reglas que remapean `brand-*` de carbón a violeta dentro de
+   `.apx`**: sin ellas el módulo queda con acentos carbón en una carcasa violeta. No las reescribas
+   «mejor»: es un calco.
 2. `ApxShell.tsx` — wrapper `.apx`, estado del tema, persistencia en `localStorage['apx-tema']`
    (`light` | `dark`). **En claro el atributo `data-theme` no se pone**: el claro es su ausencia.
 3. `ApxRail.tsx` — logo `/logo_antlers.svg` + `brandtxt`, CTA `Añadir show`, los 3 grupos del §2 D3 y
@@ -30,6 +33,10 @@ Todo lo que dice el **§2 del spec** (D1 a D5), más el registro de rutas:
 6. `router.tsx` — registra **las 14 rutas nuevas del §3 apuntando a stubs**. El stub es un componente
    mínimo con el `h1` y la bajada literales del spec; nada más. **Esta es la parte que desbloquea a las
    demás faenas: no la dejes fuera.**
+
+7. `public/logo_antlers.svg` y `public/logo_blackmoose.svg` — no existen en el repo. Descárgalos del
+   live con `curl` (son estáticos públicos, responden `200`) y commitéalos. Bájate los dos aunque solo
+   uses `antlers`: `blackmoose` lo necesita el plan del TopNav del 30-jul.
 
 ## Trampas conocidas
 

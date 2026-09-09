@@ -62,9 +62,18 @@ frío. Literal del live (`apx.css:1`):
 estos tokens al resto del boilerplate. Convivirán dos lenguajes visuales, que es exactamente lo que
 pasa en el live.
 
-Son **solo 11 clases**: `apx-side`, `apx-side-logo`, `apx-cta`, `apx-side-scroll`, `apx-nav-cap`,
-`apx-nav-item`, `apx-nav-lab`, `apx-nav-sep`, `apx-side-foot`, `apx-prof`, `apx-shift`. El **interior de
-las páginas sigue siendo Tailwind** con nuestras utilidades de siempre.
+Son **11 clases de carcasa**: `apx-side`, `apx-side-logo`, `apx-cta`, `apx-side-scroll`, `apx-nav-cap`,
+`apx-nav-item`, `apx-nav-lab`, `apx-nav-sep`, `apx-side-foot`, `apx-prof`, `apx-shift`. El interior de
+las páginas sigue siendo Tailwind.
+
+> **Corrección del 2026-09-09 (Faena 0).** La hoja **no acaba en la línea 83**. Las líneas 84-208
+> contienen los componentes (`.btn-primary`, `.btn-cta`, `.btn-secondary`, `.btn-ghost`, `.btn-danger`,
+> `.input`, `.select`, `.label`, `.card`, `.badge`, las pastillas `.p-accent|.p-amber|.p-mint|.p-rose`,
+> y `.fbar`, `.dd`, `.dp`, `.tpk`, `.alert`) y, sobre todo, **27 reglas que remapean nuestras utilidades
+> `brand-*` de carbón a violeta dentro de `.apx`** (`bg-brand-600` → `rgb(91,75,232)`, `text-brand-600`,
+> `ring-brand-500`, los gradientes…). Sin ellas, las páginas de ConceptOne quedarían con acentos carbón
+> dentro de una carcasa violeta. **Se copia el fichero entero, las 208 reglas.** Todo va scoped bajo
+> `.apx`, así que los otros 11 módulos no se ven afectados.
 
 ### D2 — El rail: 58 px que se expanden a 224 px al hover
 
@@ -184,11 +193,17 @@ atributo. El toggle escribe la clave y pone o quita el atributo sobre el element
 
 ```
 src/features/booking/shell/
-  apx.css          ← tokens light + dark + 49 overrides + las 11 clases
+  apx.css          ← el fichero entero de la evidencia: 208 reglas (tokens light + dark + 49
+                     overrides de utilidades + 27 remapeos de brand-* + componentes + las 11 clases)
   ApxShell.tsx     ← wrapper .apx, estado del tema, localStorage['apx-tema']
   ApxRail.tsx      ← rail: logo, CTA, 3 grupos, pie
   nav.ts           ← RAIL_GROUPS y RAIL_FOOT (sustituye a CONCEPTONE_AREAS/BOOKINGS_SECTIONS)
 ```
+
+**Assets.** El rail sirve `/logo_antlers.svg` (20×20) y el TopNav del Home sirve
+`/logo_blackmoose.svg`. **Ninguno de los dos está en el repo** (no existe `public/`). Los dos son
+estáticos públicos del live y responden `200` (1.133 y 12.106 bytes): se descargan y se commitean en
+`public/`. Descargar un estático es una lectura y no rompe la regla de solo-lectura.
 
 `ConceptOneShell.tsx` deja de usar `AppLayout` y pasa a `<ApxShell><ApxRail /><div class="apx-shift"><Outlet/></div></ApxShell>`.
 
