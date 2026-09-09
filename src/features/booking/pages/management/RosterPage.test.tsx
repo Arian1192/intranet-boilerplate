@@ -60,12 +60,34 @@ describe('RosterPage — calco del live', () => {
     expect(within(conSongstats as HTMLElement).getByText('17')).toBeInTheDocument();
   });
 
-  it('el buscador filtra por nombre', async () => {
+  it('el buscador filtra por nombre y el contador cuenta lo filtrado', async () => {
     const usuario = userEvent.setup();
     render(<RosterPage />);
     await usuario.type(screen.getByPlaceholderText('Buscar artista…'), 'bizza');
+    expect(screen.getAllByRole('row')).toHaveLength(2); // 1 + cabecera
+    expect(screen.getByText('1 artistas del roster')).toBeInTheDocument();
+  });
+
+  it('el contador no pasa a singular: el live escribe «1 artistas del roster»', async () => {
+    const usuario = userEvent.setup();
+    render(<RosterPage />);
+    await usuario.type(screen.getByPlaceholderText('Buscar artista…'), 'abd');
+    // Medido tecleando en el live el 2026-09-09 a las 11:43 CEST. Sus hermanas
+    // de Management II sí declinan («1 campaña»); ésta no. Se calca el literal.
+    expect(screen.getByText('1 artistas del roster')).toBeInTheDocument();
+    expect(screen.queryByText('1 artista del roster')).not.toBeInTheDocument();
+  });
+
+  it('los dos KPI NO se mueven al filtrar: siguen a 17 y 17', async () => {
+    const usuario = userEvent.setup();
+    render(<RosterPage />);
+    await usuario.type(screen.getByPlaceholderText('Buscar artista…'), 'abd');
     expect(screen.getAllByRole('row')).toHaveLength(2);
-    // El contador es del conjunto y no se mueve, como en /management/insights.
-    expect(screen.getByText('41 artistas del roster')).toBeInTheDocument();
+    // Cuentan quién está en management, no cuántos se ven. Medido en el live,
+    // donde con la tabla en una fila los dos siguen marcando 17.
+    const enManagement = screen.getByText('En Management', { selector: 'div' }).parentElement;
+    expect(within(enManagement as HTMLElement).getByText('17')).toBeInTheDocument();
+    const conSongstats = screen.getByText('Con Songstats activo').parentElement;
+    expect(within(conSongstats as HTMLElement).getByText('17')).toBeInTheDocument();
   });
 });

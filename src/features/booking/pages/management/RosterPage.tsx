@@ -6,7 +6,10 @@ import { ROSTER_MANAGEMENT } from '@/features/booking/data/management-roster';
  *
  * Los interruptores y el buscador funcionan en local: el módulo sigue siendo
  * seed, no hay repositorio detrás. Los dos KPI se recalculan de los propios
- * interruptores, que es lo que hace el live (17 y 17 en la foto).
+ * interruptores, que es lo que hace el live (17 y 17 en la foto), y **no** del
+ * buscador: filtrando siguen a 17 y 17. El contador de la derecha, en cambio,
+ * sí cuenta lo filtrado. Ambas cosas medidas tecleando en el live el 2026-09-09
+ * a las 11:43 CEST (`f2c-management--roster-contador.txt`).
  *
  * Las clases `brand-*` van tal cual: dentro de `.apx` el violeta lo pone
  * `apx.css` con sus reglas de remapeo. Hardcodear el violeta rompería el modo
@@ -63,12 +66,21 @@ export function RosterPage() {
           onChange={(e) => setBusqueda(e.target.value)}
         />
         {/*
-          El contador es del conjunto, no de lo filtrado: en la pantalla hermana
-          (/management/insights) está medido que no cambia al filtrar. Aquí no se
-          ha podido medir —haría falta teclear en el live y la regla de
-          solo-lectura lo prohíbe—, así que se sigue a la hermana.
+          El contador cuenta **lo filtrado**, medido en el live el 2026-09-09 a
+          las 11:43 CEST (`f2c-management--roster-contador.txt`): tecleando
+          «abd» pasa de «41 artistas del roster» a «1 artistas del roster».
+
+          Y sí, en singular sigue diciendo «artistas»: el live no cambia el
+          plural aquí, al revés que sus hermanas de Management II («1 campaña»,
+          «1 activación», «1 proyecto»). Se calca su literal, no el correcto.
+
+          Los dos KPI, en cambio, **no** se mueven al filtrar: siguen a 17 y 17
+          con la tabla en una fila. Cuentan quién está en management, no cuántos
+          se ven. Por eso se calculan sobre `roster` y no sobre `visibles`.
         */}
-        <span className="ml-auto text-xs text-slate-400">{roster.length} artistas del roster</span>
+        <span className="ml-auto text-xs text-slate-400">
+          {visibles.length} artistas del roster
+        </span>
       </div>
 
       <div className="card overflow-hidden p-0">
