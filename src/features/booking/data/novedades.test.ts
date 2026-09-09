@@ -5,7 +5,7 @@ describe('novedades — el feed del dashboard', () => {
   it('trae los 15 eventos de la captura, en el orden del live', () => {
     expect(NOVEDADES).toHaveLength(15);
     expect(NOVEDADES[0].artista).toBe('Bassel Darwish');
-    expect(NOVEDADES.at(-1)?.referencia).toBe('C1-2026-138');
+    expect(NOVEDADES[NOVEDADES.length - 1].referencia).toBe('C1-2026-138');
   });
 
   it('escribe la fecha con los tres formatos del live', () => {

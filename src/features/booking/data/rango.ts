@@ -5,7 +5,9 @@
  */
 export const HOY = '2026-07-24';
 
-export type DesdeValue = 'ultima-semana' | 'ultimos-3-dias' | 'ultimo-mes' | 'ultimo-ano' | 'todo-pasado';
+export type DesdeValue =
+  /** «Desde hoy (solo futuros)», la primera opción del live y la que activa el botón `Solo futuros`. */
+  'hoy' | 'ultima-semana' | 'ultimos-3-dias' | 'ultimo-mes' | 'ultimo-ano' | 'todo-pasado';
 export type HastaValue =
   | 'todo-futuro'
   | 'proximos-3-dias'
@@ -20,6 +22,9 @@ export interface Rango {
 }
 
 export const desdeOpciones: { value: DesdeValue; label: string }[] = [
+  // Recalco del 2026-09-09: el live abre la lista con esta opción y nosotros no
+  // la teníamos. Es la que pone el botón `Solo futuros` de la toolbar.
+  { value: 'hoy', label: 'Desde hoy (solo futuros)' },
   { value: 'ultima-semana', label: 'Última semana' },
   { value: 'ultimos-3-dias', label: 'Últimos 3 días' },
   { value: 'ultimo-mes', label: 'Último mes' },
@@ -46,8 +51,19 @@ export function hastaLabel(value: HastaValue): string {
 }
 
 const MESES: Record<string, number> = {
-  ene: 0, feb: 1, mar: 2, abr: 3, may: 4, jun: 5,
-  jul: 6, ago: 7, sep: 8, sept: 8, oct: 9, nov: 10, dic: 11,
+  ene: 0,
+  feb: 1,
+  mar: 2,
+  abr: 3,
+  may: 4,
+  jun: 5,
+  jul: 6,
+  ago: 7,
+  sep: 8,
+  sept: 8,
+  oct: 9,
+  nov: 10,
+  dic: 11,
 };
 
 /** Parsea "DD mmm YYYY" (es-ES, p.ej. "04 sept 2026") a Date a medianoche. `null` si no parsea. */
@@ -80,22 +96,35 @@ function addYears(base: Date, years: number): Date {
 
 function limiteInferior(desde: DesdeValue, hoy: Date): Date | null {
   switch (desde) {
-    case 'todo-pasado': return null;
-    case 'ultima-semana': return addDays(hoy, -7);
-    case 'ultimos-3-dias': return addDays(hoy, -3);
-    case 'ultimo-mes': return addMonths(hoy, -1);
-    case 'ultimo-ano': return addYears(hoy, -1);
+    case 'todo-pasado':
+      return null;
+    case 'hoy':
+      return hoy;
+    case 'ultima-semana':
+      return addDays(hoy, -7);
+    case 'ultimos-3-dias':
+      return addDays(hoy, -3);
+    case 'ultimo-mes':
+      return addMonths(hoy, -1);
+    case 'ultimo-ano':
+      return addYears(hoy, -1);
   }
 }
 
 function limiteSuperior(hasta: HastaValue, hoy: Date): Date | null {
   switch (hasta) {
-    case 'todo-futuro': return null;
-    case 'hasta-hoy': return hoy;
-    case 'proximos-3-dias': return addDays(hoy, 3);
-    case 'proxima-semana': return addDays(hoy, 7);
-    case 'proximo-mes': return addMonths(hoy, 1);
-    case 'proximo-ano': return addYears(hoy, 1);
+    case 'todo-futuro':
+      return null;
+    case 'hasta-hoy':
+      return hoy;
+    case 'proximos-3-dias':
+      return addDays(hoy, 3);
+    case 'proxima-semana':
+      return addDays(hoy, 7);
+    case 'proximo-mes':
+      return addMonths(hoy, 1);
+    case 'proximo-ano':
+      return addYears(hoy, 1);
   }
 }
 
