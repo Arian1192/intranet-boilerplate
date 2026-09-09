@@ -171,6 +171,15 @@ function PanelContratos() {
     <div>
       <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
         <div>
+          {/*
+          Sí, esto es un segundo `h1` en la misma página: el de arriba es
+          `Ajustes de ConceptOne` y éste es el del panel. Es un fallo de
+          accesibilidad del live, y está calcado a propósito — el calco se fija a
+          la foto, igual que se calca «1 artistas del roster» sin declinar.
+          No lo bajes a `h2` creyendo que es un despiste nuestro: si algún día se
+          decide una pasada de accesibilidad, se hace para toda la app a la vez y
+          con su propia decisión, no aquí a escondidas.
+          */}
           <h1 className="text-2xl font-semibold text-slate-800">{contratos.titulo}</h1>
           <p className="text-sm text-slate-500">{contratos.descripcion}</p>
         </div>
@@ -225,6 +234,15 @@ function PanelComisiones() {
   return (
     <div className="space-y-4">
       <div>
+        {/*
+        Sí, esto es un segundo `h1` en la misma página: el de arriba es
+        `Ajustes de ConceptOne` y éste es el del panel. Es un fallo de
+        accesibilidad del live, y está calcado a propósito — el calco se fija a
+        la foto, igual que se calca «1 artistas del roster» sin declinar.
+        No lo bajes a `h2` creyendo que es un despiste nuestro: si algún día se
+        decide una pasada de accesibilidad, se hace para toda la app a la vez y
+        con su propia decisión, no aquí a escondidas.
+        */}
         <h1 className="text-2xl font-semibold text-slate-800">Comisiones de agentes</h1>
         <p className="text-sm text-slate-500">
           La comisión se calcula sobre el Booking Fee del show. Cada agente tiene su propio %; si un
@@ -779,6 +797,15 @@ function PanelExtrasLogistica() {
   return (
     <div>
       <div className="mb-6">
+        {/*
+        Sí, esto es un segundo `h1` en la misma página: el de arriba es
+        `Ajustes de ConceptOne` y éste es el del panel. Es un fallo de
+        accesibilidad del live, y está calcado a propósito — el calco se fija a
+        la foto, igual que se calca «1 artistas del roster» sin declinar.
+        No lo bajes a `h2` creyendo que es un despiste nuestro: si algún día se
+        decide una pasada de accesibilidad, se hace para toda la app a la vez y
+        con su propia decisión, no aquí a escondidas.
+        */}
         <h1 className="text-2xl font-semibold text-slate-800">Extras de logística</h1>
         <p className="text-sm text-slate-500">
           Peticiones estándar por línea (viaje, transporte, hospedaje, dietas). Se seleccionan con
