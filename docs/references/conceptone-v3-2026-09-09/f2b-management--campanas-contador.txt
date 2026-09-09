@@ -1,0 +1,3 @@
+https://bookings.conceptoneagency.com/management/campanas — el contador con y sin filtro — 9/9/2026, 11:24:47 CEST
+Sin filtro:            contador="11 campañas"   filas=11
+Filtrado por "Abdon": contador="3 campañas"   filas=3

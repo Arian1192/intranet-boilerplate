@@ -1,0 +1,50 @@
+https://bookings.conceptoneagency.com/management/campanas — menús de filtro abiertos — 9/9/2026, 11:24:37 CEST
+
+===== dd #0 · "Todos los artistas" =====
+padre del menú: DIV.apx
+--- 18 opciones ---
+  "Todos los artistas"   [dd-opt sel]
+  "Aaron Martin"   [dd-opt ]
+  "Abdon"   [dd-opt ]
+  "ART NO LOGIA"   [dd-opt ]
+  "Bizza"   [dd-opt ]
+  "Claudia Tejeda"   [dd-opt ]
+  "DH Moon"   [dd-opt ]
+  "Freddy Bello"   [dd-opt ]
+  "Gaston Zani"   [dd-opt ]
+  "Janse"   [dd-opt ]
+  "Londonground"   [dd-opt ]
+  "Los Canarios"   [dd-opt ]
+  "Marcel BS"   [dd-opt ]
+  "Milan Torne"   [dd-opt ]
+  "Rivellino"   [dd-opt ]
+  "Sebastian Ledher"   [dd-opt ]
+  "Tony Guerra"   [dd-opt ]
+  "Vidaloca"   [dd-opt ]
+--- outerHTML ---
+<div class="dd-menu" role="listbox" style="position: static; inset: auto; opacity: 1; transform: none; pointer-events: auto; margin: 0px;"><div role="option" aria-selected="true" class="dd-opt sel"><span style="width: 0px;"></span><span class="dd-lab">Todos los artistas</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">Aaron Martin</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">Abdon</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">ART NO LOGIA</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">Bizza</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">Claudia Tejeda</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">DH Moon</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">Freddy Bello</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">Gaston Zani</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">Janse</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">Londonground</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">Los Canarios</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">Marcel BS</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">Milan Torne</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">Rivellino</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">Sebastian Ledher</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">Tony Guerra</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">Vidaloca</span></div></div>
+
+===== dd #1 · "Todos los canales" =====
+padre del menú: DIV.apx
+--- 7 opciones ---
+  "Todos los canales"   [dd-opt sel]
+  "Google Ads"   [dd-opt ]
+  "Meta Ads"   [dd-opt ]
+  "Spotify Ads"   [dd-opt ]
+  "Playlisting"   [dd-opt ]
+  "PR"   [dd-opt ]
+  "Otro"   [dd-opt ]
+--- outerHTML ---
+<div class="dd-menu" role="listbox" style="position: static; inset: auto; opacity: 1; transform: none; pointer-events: auto; margin: 0px;"><div role="option" aria-selected="true" class="dd-opt sel"><span style="width: 0px;"></span><span class="dd-lab">Todos los canales</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">Google Ads</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">Meta Ads</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">Spotify Ads</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">Playlisting</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">PR</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">Otro</span></div></div>
+
+===== dd #2 · "Todos los estados" =====
+padre del menú: DIV.apx
+--- 6 opciones ---
+  "Todos los estados"   [dd-opt sel]
+  "Propuesta"   [dd-opt ]
+  "Aprobada"   [dd-opt ]
+  "Activa"   [dd-opt ]
+  "Completada"   [dd-opt ]
+  "Cancelada"   [dd-opt ]
+--- outerHTML ---
+<div class="dd-menu" role="listbox" style="position: static; inset: auto; opacity: 1; transform: none; pointer-events: auto; margin: 0px;"><div role="option" aria-selected="true" class="dd-opt sel"><span style="width: 0px;"></span><span class="dd-lab">Todos los estados</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">Propuesta</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">Aprobada</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">Activa</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">Completada</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">Cancelada</span></div></div>

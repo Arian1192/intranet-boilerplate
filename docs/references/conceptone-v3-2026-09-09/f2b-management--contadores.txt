@@ -1,0 +1,15 @@
+Contadores en singular y vacío — 9/9/2026, 11:25:24 CEST
+
+/management/campanas sin filtro: "11 campañas"
+  filtrado por Bizza (1 fila): "1 campaña"  filas=1
+  filtrado por Aaron Martin (0 filas): "0 campañas"  filas=1
+  vacío de la tabla: "Sin campañas."
+
+/management/activaciones sin filtro: "31 activaciónes"
+  filtrado por Milan Torne (1): "1 activación"
+  filtrado por Freddy Bello (0): "0 activaciónes"
+  cuerpo con 0: "Sin activaciones."
+
+/management/content sin filtro: "1 proyecto"
+  filtrado por Abdon (0): "0 proyectos"
+  filtrado por Londonground (1): "1 proyecto"
