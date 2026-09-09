@@ -1,0 +1,92 @@
+{
+  "capturado": "2026-09-09",
+  "ruta": "/management/insights",
+  "nota": "UUID reales del live; nuestros ids son slugs (ver management-insights.ts)",
+  "artistas": [
+    {
+      "nombre": "Janse",
+      "estado": "En declive",
+      "uuid": "d371328b-a849-40ce-9320-dee3af5c017c"
+    },
+    {
+      "nombre": "Londonground",
+      "estado": "Estable",
+      "uuid": "86ddda6c-4696-4f25-9bba-f0a856bc8387"
+    },
+    {
+      "nombre": "DH Moon",
+      "estado": "Escalando",
+      "uuid": "fc750d67-bfcb-4b4c-ab5d-166a59334c53"
+    },
+    {
+      "nombre": "ART NO LOGIA",
+      "estado": "En declive",
+      "uuid": "076af265-285c-43e0-90c1-c50358486310"
+    },
+    {
+      "nombre": "Bizza",
+      "estado": "Escalando",
+      "uuid": "a453d12b-2016-4ed1-923a-876215f7456d"
+    },
+    {
+      "nombre": "Gaston Zani",
+      "estado": "En declive",
+      "uuid": "fa468e6a-ddbb-4e96-aa09-6c975ad299c2"
+    },
+    {
+      "nombre": "Tony Guerra",
+      "estado": "En declive",
+      "uuid": "c45b5c86-7d9d-4117-a1a2-ead33a9ac58d"
+    },
+    {
+      "nombre": "Claudia Tejeda",
+      "estado": "Escalando",
+      "uuid": "6261674d-33ec-4e0f-906a-b0fd47d30aeb"
+    },
+    {
+      "nombre": "Vidaloca",
+      "estado": "Escalando",
+      "uuid": "34b5b057-aae7-4936-a882-e5a41f3f4a67"
+    },
+    {
+      "nombre": "Los Canarios",
+      "estado": "Estable",
+      "uuid": "51a96b50-5df4-4ad0-8d33-5d82ae1b9a70"
+    },
+    {
+      "nombre": "Rivellino",
+      "estado": "Escalando",
+      "uuid": "e7afcb92-4f3f-4561-a9c1-1317a827c522"
+    },
+    {
+      "nombre": "Milan Torne",
+      "estado": "Escalando",
+      "uuid": "ab4e3ab8-3d86-4c7f-9bbc-84f5cc9790ef"
+    },
+    {
+      "nombre": "Abdon",
+      "estado": "En declive",
+      "uuid": "d6f4f56a-1435-44c2-8adb-e0abb307c2f6"
+    },
+    {
+      "nombre": "Aaron Martin",
+      "estado": "En declive",
+      "uuid": "2fa99e75-fe58-417b-85ab-2b825408ed0d"
+    },
+    {
+      "nombre": "Freddy Bello",
+      "estado": "En declive",
+      "uuid": "ff727129-2e08-409c-b0f9-460b845cf916"
+    },
+    {
+      "nombre": "Marcel BS",
+      "estado": "Creciendo",
+      "uuid": "a5ed3ab2-bff0-4ad8-8054-dcfe8f29abc4"
+    },
+    {
+      "nombre": "Sebastian Ledher",
+      "estado": "Sin datos",
+      "uuid": "0d1dc9ed-6c58-4c04-a88b-c7215679a7a1"
+    }
+  ]
+}

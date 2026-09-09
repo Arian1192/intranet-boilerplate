@@ -1,0 +1,75 @@
+<!-- /management/insights/d371328b-a849-40ce-9320-dee3af5c017c · pestaña «Audiencia» — capturado 2026-09-09T10:17:30.545Z (https://bookings.conceptoneagency.com) -->
+←
+Janse
+En declive
+
+Songstats · actualizado 9/9/2026
+
+Sincronizar
+Overview
+Audiencia
+Spotify
+Beatport
+Shazam
+YouTube
+TikTok
+Instagram
+SoundCloud
+Deezer
+Tidal
+Traxsource
+OYENTES POR CIUDAD — MAPA
+Actual
+Pico
+OYENTES POR CIUDAD (SPOTIFY)
+CIUDAD	ACTUAL	PICO	FECHA PICO
+São PauloBR	1.3K	2.8K	21 ene 26
+MadridES	1.3K	2.5K	03 dic 25
+Mexico CityMX	1.2K	4K	18 dic 25
+BogotáCO	1K	1.7K	11 feb 26
+SydneyAU	993	2.6K	14 ene 26
+BerlinDE	939	4.4K	03 dic 25
+BarcelonaES	933	2.1K	03 dic 25
+LondonGB	929	2.2K	03 dic 25
+WarsawPL	886	4.9K	03 dic 25
+AthensGR	884	1.8K	11 feb 26
+HamburgDE	855	3.7K	03 dic 25
+MelbourneAU	822	1.9K	29 ene 26
+Buenos AiresAR	756	2K	29 ene 26
+FrankfurtDE	755	3.2K	03 dic 25
+BrisbaneAU	744	1.7K	14 ene 26
+MontréalCA	743	1.8K	03 dic 25
+ParisFR	727	2.7K	11 dic 25
+MunichDE	722	3.7K	03 dic 25
+SantiagoCL	695	2.7K	21 ene 26
+ViennaAT	596	2.8K	03 dic 25
+RomeIT	576	1.4K	06 ago 25
+BudapestHU	554	2.3K	03 dic 25
+ZürichCH	545	3.2K	03 dic 25
+MilanIT	512	2.2K	03 dic 25
+StuttgartDE	506	2.4K	03 dic 25
+OYENTES POR PAÍS
+DE
+4.4K
+BR
+3.6K
+AU
+3K
+ES
+2.6K
+MX
+1.7K
+PL
+1.2K
+CA
+1.1K
+IT
+1.1K
+CO
+1K
+GB
+929
+GR
+884
+BE
+800
