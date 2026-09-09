@@ -1,0 +1,164 @@
+<!-- capturado 2026-09-09 10:14:14 CEST · https://bookings.conceptoneagency.com/conceptone/ajustes -->
+ConceptOne
+Añadir show
+BOOKINGS
+Dashboard
+Shows
+Tours
+Ofertas
+Cobros
+Gastos
+Liquidaciones
+Disponibilidad
+Calendario
+Contactos
+MANAGEMENT
+Roster
+Insights
+Estrategias
+Contratos
+Activaciones
+Campañas
+Content
+Incidencias
+MÁS
+Roster
+Análisis
+Ajustes
+Black Moose
+Pendientes
+Modo noche
+Ayuda
+9+
+Notificaciones
+T
+testadmin
+Ajustes de ConceptOne
+
+Configuración del espacio de booking: administración, alertas, configuración y conexiones.
+
+ADMINISTRACIÓN
+Datos fiscalesOcultar movimientosContratosComisiones y exclusividad
+ALERTAS
+AlertasRecordatorios
+CONFIGURACIÓN
+Confirmación de showFormulario de ofertasExtras de logística
+CONEXIONES
+Calendario Google
+
+Formulario activo
+
+Si lo desactivas, el formulario embebido deja de aceptar propuestas.
+
+✓ Activo
+Campos del formulario
+ETIQUETA (ES / EN)	VISIBLE	OBLIGATORIO
+
+evento_fecha · date		
+
+importe · number		
+
+moneda · select		
+
+booking_fee_on_top · radio_si_no		
+
+retencion_pct · number		
+
+lineup · tags		
+
+set_duracion_min · number		
+
+paga_viaje · toggle		
+
+paga_alojamiento · toggle		
+
+paga_transporte · toggle		
+
+evento_nombre · text		
+
+venue · text		
+
+aforo · number		
+
+ciudad · text		
+
+venue_direccion · text		
+
+pais · text		
+
+venue_web · text		
+
+promotor_nombre · text		
+
+promotor_apellido · text		
+
+email · email		
+
+telefono · tel		
+
+promotor_empresa · text		
+
+promotor_vat · text		
+
+promotor_direccion · text		
+
+promotor_ciudad · text		
+
+promotor_region · text		
+
+promotor_cp · text		
+
+promotor_pais · text		
+
+mensaje · textarea		
+
+set_times · text		
+Mensaje de gracias (ES)
+Mensaje de gracias (EN)
+Colores del formulario
+
+Un único tema para el formulario de todos los artistas. El fondo es un degradado de dos colores sobre un color base; el acento colorea el botón de enviar.
+
+Fondo base
+#170A24
+Degradado 1
+#7C3AED
+Degradado 2
+#F59E0B
+Botón (acento)
+#0F172A
+Restablecer colores por defecto
+conceptone.
+Enviar propuesta
+Colores del embed (insertado en la web)
+
+Cuando el formulario se inserta en la web va sin cabecera. Por defecto el fondo es transparente (hereda el de la web); aquí eliges el color del texto, las líneas de los campos y el botón.
+
+Fondo transparente (heredar el de la web)
+Texto
+#FFFFFF
+Líneas campos
+#FFFFFF
+Botón
+#FFFFFF
+Texto botón
+#111111
+Restablecer
+EVENT DETAILS
+Event Date *
+Budget *
+Request booking
+Guardar cambios
+Insertar en la web (embed)
+
+Elige el artista y pega este código en la página correspondiente de la web de ConceptOne. El formulario llega con el artista ya preseleccionado.
+
+Chat · ConceptOne
+
+El panel de atención no es una lista de tareas
+
+Es lo que está en riesgo por fecha: cuanto más cerca el show, más arriba. Si algo no debería estar ahí, es que le falta un dato al show.
+
+Enviar
+Reportar con captura
+Mis avisos

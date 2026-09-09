@@ -1,0 +1,1277 @@
+<!-- capturado 2026-09-09 10:09:00 CEST · https://bookings.conceptoneagency.com/liquidaciones -->
+ConceptOne
+Añadir show
+BOOKINGS
+Dashboard
+Shows
+Tours
+Ofertas
+Cobros
+Gastos
+Liquidaciones
+Disponibilidad
+Calendario
+Contactos
+MANAGEMENT
+Roster
+Insights
+Estrategias
+Contratos
+Activaciones
+Campañas
+Content
+Incidencias
+MÁS
+Roster
+Análisis
+Ajustes
+Black Moose
+Pendientes
+Modo noche
+Ayuda
+9+
+Notificaciones
+T
+testadmin
+Liquidaciones
+
+Estado de dinero de cada show: cobros del promotor, gastos, y lo liquidado al artista.
+
+Por show
+Por artista
+PENDIENTE DE COBRAR
+172.489,88 €
+GASTOS POR RECUPERAR
+1006,43 €
+PENDIENTE DE LIQUIDAR
+124.050,25 €
+Todos los estados
+Sin liquidar
+Parcialmente liquidado
+Pendiente liquidar
+Liquidado
+Incidencia
+243 shows
+SHOW	FECHA	COBRADO	PEND. COBRAR	A RECUPERAR	NETO ARTISTA	LIQUIDADO	PEND. LIQUIDAR	ESTADO
+
+Olivia Bass
+C1-2026-155
+OASIS · Oasis · Maspalomas
+	24 dic 2026	0,00 €	960,00 €	—	800,00 €	—	800,00 €	Sin liquidar
+
+Tomi & Kesh
+C1-2026-134
+Confirmed - Stuttgart - Waranga - Heiliger Morgen
+	24 dic 2026	—	—	—	0,00 €	—	✓	Sin liquidar
+
+ART NO LOGIA
+C1-2026-121
+Oasis · Maspalomas
+	24 dic 2026	0,00 €	1800,00 €	—	1200,00 €	—	1200,00 €	Sin liquidar
+
+Freddy Bello
+C1-2026-144
+Sanpapaclub · LAB · Madrid
+	19 dic 2026	0,00 €	1452,00 €	—	800,00 €	—	800,00 €	Sin liquidar
+
+Los Canarios
+C1-2026-147
+Kopas
+	05 dic 2026	0,00 €	2160,00 €	—	1440,00 €	—	1440,00 €	Sin liquidar
+
+Freddy Bello
+C1-2026-073
+Klandestino · Independence Club · Madrid
+	27 nov 2026	1210,00 €	1210,00 €	—	1280,00 €	—	1280,00 €	Sin liquidar
+
+Bizza
+C1-2026-153
+Industrial Copera · La Zubia
+	14 nov 2026	0,00 €	871,20 €	—	480,00 €	—	480,00 €	Sin liquidar
+
+Bizza
+C1-2026-042
+CIRQ Club · Città Metropolitana di Venezia
+	31 oct 2026	—	—	—	0,00 €	—	✓	Sin liquidar
+
+Brenda Serna
+C1-2026-071
+NON Disco · NON the Club · Bolunburu
+	31 oct 2026	630,00 €	3000,00 €	—	2500,00 €	—	2500,00 €	Sin liquidar
+
+Vidaloca
+C1-2026-221
+Lula Club · Madrid
+	30 oct 2026	0,00 €	871,20 €	87,15 €	480,00 €	—	480,00 €	Sin liquidar
+
+Claudia Tejeda
+C1-2026-139
+Tormenta · El Sotano · Madrid
+	23 oct 2026	0,00 €	1742,40 €	—	960,00 €	—	960,00 €	Sin liquidar
+
+ART NO LOGIA
+C1-2026-182
+Zouk CR · Pozos
+	17 oct 2026	0,00 €	2200,00 €	—	1519,41 €	—	1519,41 €	Sin liquidar
+
+ART NO LOGIA
+C1-2026-162
+Confusión · Modo Caracas · Caracas
+	16 oct 2026	0,00 €	2000,00 €	—	1373,28 €	—	1373,28 €	Sin liquidar
+
+Sera De Villalta
+C1-2026-219
+BRO MÁLAGA · Málaga
+	11 oct 2026	0,00 €	871,20 €	—	600,00 €	—	600,00 €	Sin liquidar
+
+Aaron Martin
+C1-2026-217
+BRO MÁLAGA · Málaga
+	11 oct 2026	0,00 €	1161,60 €	—	640,00 €	—	640,00 €	Sin liquidar
+
+Aaron Martin
+C1-2026-222
+Sala Sonora Bilbao · Bilbao
+	10 oct 2026	0,00 €	726,00 €	—	500,00 €	—	500,00 €	Sin liquidar
+
+ART NO LOGIA
+C1-2026-164
+Chili Taste · Sala Omnium · Las Condes
+	09 oct 2026	0,00 €	1725,00 €	—	1184,45 €	—	1184,45 €	Sin liquidar
+
+Aaron Martin
+C1-2026-156
+Confirmed - Valencia - Marina Beach Club
+	09 oct 2026	—	—	—	0,00 €	—	✓	Sin liquidar
+
+Olivia Bass
+C1-2026-220
+NIX · Barcelona
+	09 oct 2026	0,00 €	1742,40 €	—	1200,00 €	—	1200,00 €	Sin liquidar
+
+Sera De Villalta
+C1-2026-223
+Lost City · Lost City · Quito
+	03 oct 2026	0,00 €	480,00 €	—	344,24 €	—	344,24 €	Sin liquidar
+
+Pau Guilera
+C1-2026-030
+LA Guasa · Cova Santa · Eivissa
+	03 oct 2026	—	—	—	0,00 €	—	✓	Sin liquidar
+
+Bizza
+C1-2026-041
+La Guasa · Cova Santa · Eivissa
+	03 oct 2026	—	—	—	0,00 €	—	✓	Sin liquidar
+
+Bassel Darwish
+C1-2026-157
+Palio Sabana · San José
+	03 oct 2026	0,00 €	1800,00 €	—	1235,95 €	—	1235,95 €	Sin liquidar
+
+Sera De Villalta
+C1-2026-181
+Event Garden · Guayaquil
+	02 oct 2026	0,00 €	1000,00 €	—	690,64 €	—	690,64 €	Sin liquidar
+
+Bassel Darwish
+C1-2026-159
+Senses · Zouk · Pozos
+	02 oct 2026	0,00 €	1800,00 €	—	1235,95 €	—	1235,95 €	Sin liquidar
+
+DH Moon
+C1-2026-165
+100 Room · 100 puerto madero · Buenos Aires
+	02 oct 2026	0,00 €	1300,00 €	—	716,77 €	—	716,77 €	Sin liquidar
+
+Jose Fajardo
+C1-2026-123
+Baila Ritmo · Goya · Madrid
+	02 oct 2026	0,00 €	2468,40 €	—	1700,00 €	—	1700,00 €	Sin liquidar
+
+Los Canarios
+C1-2026-149
+Monkey Beach Club · Santa cruz de Tenerife
+	27 sept 2026	0,00 €	2280,00 €	—	1520,00 €	—	1520,00 €	Sin liquidar
+
+Abdon
+C1-2026-048
+SIGHT x Pantheon · Cova Santa · Eivissa
+	27 sept 2026	0,00 €	1210,00 €	—	640,00 €	—	640,00 €	Sin liquidar
+
+Claudia Tejeda
+C1-2026-200
+Morenos · Palio Sabana · San José
+	26 sept 2026	0,00 €	1450,00 €	—	801,14 €	—	801,14 €	Sin liquidar
+
+Sera De Villalta
+C1-2026-138
+Nero Club · Chiclayo
+	26 sept 2026	0,00 €	850,00 €	—	583,71 €	—	583,71 €	Sin liquidar
+
+ART NO LOGIA
+C1-2026-011
+Jiwa · Boho Beer Garden · Birmingham
+	26 sept 2026	0,00 €	1800,00 €	—	1088,00 €	—	1088,00 €	Sin liquidar
+
+Marian Ariss
+C1-2026-017
+Kevin de Vries Buenos Aires · Mandarine Park · Buenos Aires
+	26 sept 2026	0,00 €	1400,00 €	—	981,57 €	—	981,57 €	Sin liquidar
+
+Marian Ariss
+C1-2026-016
+Kevin de Vries Cordoba · La Fábrica · Cordoba
+	25 sept 2026	0,00 €	1400,00 €	—	981,57 €	—	981,57 €	Sin liquidar
+
+Sera De Villalta
+C1-2026-152
+Raw · Raw · Antofagasta
+	25 sept 2026	0,00 €	500,00 €	—	342,76 €	—	342,76 €	Sin liquidar
+
+Sebastian Ledher
+C1-2026-044
+Hi, I'm Sci · Hi I'm Sci · Bogotá
+	24 sept 2026	744,95 €	755,05 €	—	945,65 €	—	945,65 €	Sin liquidar
+
+Los Canarios
+C1-2026-067
+WAA!!! · Opium Barcelona · Barcelona
+	23 sept 2026	0,00 €	2178,00 €	—	1200,00 €	—	1200,00 €	Sin liquidar
+
+Sera De Villalta
+C1-2026-140
+Substance
+	20 sept 2026	0,00 €	300,00 €	—	206,02 €	—	206,02 €	Sin liquidar
+
+Tomi & Kesh
+C1-2026-172
+Confirmed - São Paulo - We Are Sun
+	19 sept 2026	—	—	—	0,00 €	—	✓	Sin liquidar
+
+Sebastian Ledher
+C1-2026-143
+Sansa · Club Varadero · Las Palmas de Gran Canaria
+	19 sept 2026	0,00 €	1815,00 €	—	1080,00 €	—	1080,00 €	Sin liquidar
+
+Marcel BS
+C1-2026-163
+L'Aventure Paris · Hotel l'Aventure · Paris
+	19 sept 2026	0,00 €	1000,00 €	—	528,30 €	—	528,30 €	Sin liquidar
+
+ART NO LOGIA
+C1-2026-180
+Confirmed - București - Medusa Universe · Medusa Universe · București
+	19 sept 2026	350,00 €	1465,00 €	—	960,00 €	—	960,00 €	Sin liquidar
+
+Brenda Serna
+C1-2026-081
+Pink Cloud · Hotel el Bruc · El Bruc
+	19 sept 2026	387,20 €	1548,80 €	—	1153,29 €	—	1153,29 €	Sin liquidar
+
+Sera De Villalta
+C1-2026-141
+Zona Groove · Piket’ando · Rionegro
+	19 sept 2026	0,00 €	1500,00 €	—	635,66 €	—	635,66 €	Sin liquidar
+
+Claudia Tejeda
+C1-2026-201
+Zona Groove · Piket’ando · Rionegro
+	19 sept 2026	861,10 €	638,90 €	—	828,77 €	—	828,77 €	Sin liquidar
+
+Marian Ariss
+C1-2026-176
+Confirmed - - Sitio
+	19 sept 2026	0,00 €	2000,00 €	—	1600,00 €	—	1600,00 €	Sin liquidar
+
+Bassel Darwish
+C1-2026-158
+el Tebo · Valparaiso
+	18 sept 2026	0,00 €	2070,00 €	—	1544,94 €	—	1544,94 €	Sin liquidar
+
+Claudia Tejeda
+C1-2026-160
+Senses · Zouk · Pozos
+	18 sept 2026	0,00 €	1450,00 €	—	796,50 €	—	796,50 €	Sin liquidar
+
+Sergio Saffe
+C1-2026-013
+el Tebo · el Tebo · Valparaiso
+	18 sept 2026	—	—	—	700,00 €	—	700,00 €	Sin liquidar
+
+ACA
+C1-2026-208
+Tentative - - Paradise UNVRS
+	16 sept 2026	—	—	—	0,00 €	—	✓	Sin liquidar
+
+Brenda Serna
+C1-2026-065
+Elx al Carrer · Carpas de Elche · Elche de la Sierra
+	16 sept 2026	—	—	—	3000,00 €	—	3000,00 €	Pendiente liquidar
+
+Londonground
+C1-2026-167
+brunch
+	13 sept 2026	—	—	—	0,00 €	—	✓	Sin liquidar
+
+Bassel Darwish
+C1-2026-133
+Art Gallery · Club Room · Recoleta
+	12 sept 2026	0,00 €	2000,00 €	—	1382,24 €	—	1382,24 €	Sin liquidar
+
+ART NO LOGIA
+C1-2026-178
+Pandora Sevilla · Sevilla
+	12 sept 2026	0,00 €	871,20 €	—	480,00 €	—	480,00 €	Sin liquidar
+
+Abdon
+C1-2026-179
+Bossa Playa · Torrox
+	12 sept 2026	0,00 €	700,00 €	—	0,00 €	—	✓	Sin liquidar
+
+Claudia Tejeda
+C1-2026-175
+Pandora Sevilla · Sevilla
+	12 sept 2026	0,00 €	240,00 €	—	200,00 €	—	200,00 €	Sin liquidar
+
+Los Canarios
+C1-2026-173
+FITZ · Fitz Marbella · Marbella
+	12 sept 2026	0,00 €	2178,00 €	521,93 €	1200,00 €	—	1200,00 €	Sin liquidar
+
+Claudia Tejeda
+C1-2026-174
+POP CAAC · Sevilla
+	12 sept 2026	0,00 €	871,20 €	—	480,00 €	—	480,00 €	Sin liquidar
+
+ACA
+C1-2026-216
+Alba Lulia · Alba Iulia
+	12 sept 2026	0,00 €	1200,00 €	372,32 €	1000,00 €	—	1000,00 €	Sin liquidar
+
+Freddy Bello
+C1-2026-154
+CACAO · Luz de Gas · Barcelona
+	12 sept 2026	—	—	—	960,00 €	—	960,00 €	Pendiente liquidar
+
+ART NO LOGIA
+C1-2026-177
+POP CAAC · Sevilla
+	12 sept 2026	0,00 €	871,20 €	—	480,00 €	—	480,00 €	Sin liquidar
+
+ACA
+C1-2026-119
+Secret Sessions Eden
+	11 sept 2026	—	—	—	0,00 €	—	✓	Sin liquidar
+
+Tomi & Kesh
+C1-2026-171
+Confirmed - Itagüí, Itagüi - VIUZ
+	11 sept 2026	—	—	—	0,00 €	—	✓	Sin liquidar
+
+Milan Torne
+C1-2026-218
+Continental Bar Lounge Patio · San Jose
+	11 sept 2026	0,00 €	500,00 €	—	344,24 €	—	344,24 €	Sin liquidar
+
+Pau Guilera
+C1-2026-145
+La Guasa · Sea Sea Club · Barcelona
+	11 sept 2026	0,00 €	580,80 €	—	400,00 €	—	400,00 €	Sin liquidar
+
+Marcel BS
+C1-2026-062
+Echo · King David's Hotel · T'bilisi
+	11 sept 2026	0,00 €	600,00 €	—	384,00 €	—	384,00 €	Sin liquidar
+
+Los Canarios
+C1-2026-059
+Tentative - Playa de las Américas - Papagayo Tenerife - FOLLOW PRESENTA LOS CANARIOS
+	10 sept 2026	—	—	—	0,00 €	—	✓	Sin liquidar
+
+Gaston Zani
+C1-2026-117
+UNLOCKED XL · Terminal · Sabadell
+	10 sept 2026	0,00 €	2178,00 €	—	1200,00 €	—	1200,00 €	Sin liquidar
+
+Sera De Villalta
+C1-2026-135
+Sunwaves · Roquetes de Mar · Roquetas de Mar
+	06 sept 2026	0,00 €	302,50 €	—	200,00 €	—	200,00 €	Sin liquidar
+
+Milan Torne
+C1-2026-151
+Secret Coffee Party + Afterparty at Whiskey Row · Larimer Square · Denver
+	06 sept 2026	0,00 €	1000,00 €	—	409,35 €	—	409,35 €	Sin liquidar
+
+Tomi & Kesh
+C1-2026-124
+Confirmed - Cdad. Autónoma de Buenos Aires - The BOW - Rio electronic
+	06 sept 2026	—	—	—	0,00 €	—	✓	Sin liquidar
+
+Bizza
+C1-2026-039
+KŌDŌ · Lío Ibiza · Eivissa
+	05 sept 2026	—	—	—	400,00 €	—	400,00 €	Pendiente liquidar
+
+Brenda Serna
+C1-2026-064
+Pandora · Sevilla
+	05 sept 2026	—	—	—	2000,00 €	—	2000,00 €	Pendiente liquidar
+
+Tomi & Kesh
+C1-2026-169
+Santa Fe de la Vera Cruz - Hub
+	05 sept 2026	—	—	—	0,00 €	—	✓	Sin liquidar
+
+ART NO LOGIA
+C1-2026-115
+Panorama · El Cortijo Cádiz · Vejer de la Frontera
+	05 sept 2026	—	—	—	960,00 €	—	960,00 €	Pendiente liquidar
+
+Los Canarios
+C1-2026-058
+Kodo · Lío Ibiza · Eivissa
+	05 sept 2026	—	—	—	-154,86 €	—	✓	Pendiente liquidar
+
+Sebastian Ledher
+C1-2026-084
+La Sagrada · CDLC · Barcelona
+	05 sept 2026	—	—	—	-27,84 €	—	✓	Pendiente liquidar
+
+Abdon
+C1-2026-146
+Kova Beach Club · Marbella
+	05 sept 2026	—	—	—	960,00 €	—	960,00 €	Pendiente liquidar
+
+Rivellino
+C1-2026-215
+After Brunch · INPUT High Fidelity · Barcelona
+	05 sept 2026	0,00 €	580,80 €	—	400,00 €	—	400,00 €	Sin liquidar
+
+Londonground
+C1-2026-166
+Confirmed - Eivissa - Tantra Ibiza
+	04 sept 2026	—	—	—	0,00 €	—	✓	Sin liquidar
+
+Fran Hernandez
+C1-2026-168
+Loop · Maya Benicassim · Benicasim
+	04 sept 2026	423,50 €	423,50 €	—	560,00 €	—	560,00 €	Sin liquidar
+
+Brenda Serna
+C1-2026-005
+Alcazar de San Juan · Alcazar de San Juan · Alcázar de San Juan
+	04 sept 2026	—	—	—	2500,00 €	1000,00 €	1500,00 €	Liquidado
+
+Milan Torne
+C1-2026-130
+House of Ferns · Red Room · Santa Ana
+	03 sept 2026	0,00 €	500,00 €	—	345,68 €	—	345,68 €	Sin liquidar
+
+Los Canarios
+C1-2026-057
+Tentative - Playa de las Américas - Papagayo Tenerife - FOLLOW PRESENTA LOS CANARIOS
+	03 sept 2026	—	—	—	0,00 €	—	✓	Sin liquidar
+
+Aaron Martin
+C1-2026-214
+Marina Beach Club · Valencia
+	30 ago 2026	0,00 €	871,20 €	—	480,00 €	—	480,00 €	Sin liquidar
+
+Rivellino
+C1-2026-111
+Cova Santa - Pantheon · Cova Santa · Eivissa
+	30 ago 2026	—	—	—	408,02 €	—	408,02 €	Pendiente liquidar
+
+ART NO LOGIA
+C1-2026-161
+Viuz medellin Colombia
+	30 ago 2026	0,00 €	700,00 €	—	-836,87 €	—	✓	Sin liquidar
+
+Tomi & Kesh
+C1-2026-131
+FUEGO · Playa Soleil · Sant Josep de sa Talaia
+	30 ago 2026	—	—	—	2240,00 €	2240,00 €	✓	Liquidado
+
+Los Canarios
+C1-2026-063
+DSCR · BRØ Málaga · Málaga
+	30 ago 2026	—	—	—	1168,58 €	1168,58 €	✓	Parcialmente liquidado
+
+Abdon
+C1-2026-047
+DSCR · BRØ Málaga · Málaga
+	30 ago 2026	—	—	—	300,00 €	—	300,00 €	Sin liquidar
+
+Marcel BS
+C1-2026-066
+Pantheon · Cova Santa · Eivissa
+	30 ago 2026	0,00 €	907,50 €	—	600,00 €	—	600,00 €	Sin liquidar
+
+Bizza
+C1-2026-125
+DSCR · BRØ Málaga · Málaga
+	30 ago 2026	—	—	—	300,00 €	—	300,00 €	Sin liquidar
+
+Marian Ariss
+C1-2026-113
+SIGHT · Ku Barcelona · Barcelona
+	30 ago 2026	—	—	—	1000,00 €	1000,00 €	✓	Liquidado
+
+Brenda Serna
+C1-2026-070
+Port Electronic · Cocoa Beach Club · Puerto de Sagunto
+	29 ago 2026	—	—	—	850,00 €	850,00 €	✓	Liquidado
+
+Tomi & Kesh
+C1-2026-110
+Pforzheim - Pirate Beach
+	29 ago 2026	—	—	—	0,00 €	—	✓	Sin liquidar
+
+Sera De Villalta
+C1-2026-023
+The Coffe Party · Stackt Market · Toronto
+	29 ago 2026	0,00 €	1500,00 €	—	329,91 €	—	329,91 €	Sin liquidar
+
+ART NO LOGIA
+C1-2026-109
+Colombia Bogotá Us & Them · Life Club · Bogotá
+	29 ago 2026	0,00 €	2500,00 €	—	1465,40 €	—	1465,40 €	Sin liquidar
+
+Los Canarios
+C1-2026-142
+Boomerang Club · Palma
+	29 ago 2026	—	—	—	2400,00 €	2400,00 €	✓	Parcialmente liquidado
+
+Brenda Serna
+C1-2026-054
+Casas Ibañez · Carpa Trakatrá · Casas-Ibáñez
+	28 ago 2026	2371,60 €	677,60 €	—	1400,00 €	1400,00 €	✓	Liquidado
+
+ART NO LOGIA
+C1-2026-024
+Lucia SDQ · Santo Domingo
+	28 ago 2026	2459,45 €	540,55 €	—	1078,01 €	—	1078,01 €	Sin liquidar
+
+Sera De Villalta
+C1-2026-137
+Tantra · Eivissa
+	26 ago 2026	0,00 €	726,00 €	—	480,00 €	—	480,00 €	Sin liquidar
+
+Vidaloca
+C1-2026-127
+Tantra · Eivissa
+	25 ago 2026	0,00 €	900,00 €	—	576,00 €	—	576,00 €	Sin liquidar
+
+Andrea Castells
+C1-2026-170
+Burning Man + Las Vegas
+	25 ago 2026	—	—	—	0,00 €	—	✓	Sin liquidar
+
+Bizza
+C1-2026-038
+Pantheon · Cova Santa · Eivissa
+	23 ago 2026	—	—	—	800,00 €	800,00 €	✓	Liquidado
+
+Sebastian Ledher
+C1-2026-136
+Tantra · Eivissa
+	23 ago 2026	0,00 €	1210,00 €	—	286,20 €	—	286,20 €	Sin liquidar
+
+Rivellino
+C1-2026-106
+SIGHT · Ku Barcelona · Barcelona
+	23 ago 2026	—	—	—	800,00 €	800,00 €	✓	Liquidado
+
+Milan Torne
+C1-2026-129
+Resident Denver · Denver
+	22 ago 2026	0,00 €	1000,00 €	—	468,67 €	—	468,67 €	Sin liquidar
+
+Andrea Castells
+C1-2026-112
+Mas Sorrer
+	22 ago 2026	—	—	—	0,00 €	—	✓	Sin liquidar
+
+Los Canarios
+C1-2026-061
+Feria de Almeria · RECINTO FERIAL, ALMERÍA · Almería
+	22 ago 2026	—	—	—	991,26 €	991,26 €	✓	Liquidado
+
+ART NO LOGIA
+C1-2026-068
+Feria de Almería · RECINTO FERIAL, ALMERÍA · Almería
+	22 ago 2026	—	—	—	1280,00 €	1356,80 €	✓	Parcialmente liquidado
+
+Los Canarios
+C1-2026-082
+Festival La Palma · Recinto ferial La Palma
+	22 ago 2026	—	—	—	768,00 €	—	768,00 €	Pendiente liquidar
+
+Tomi & Kesh
+C1-2026-104
+Stuttgart - Waranga - 10 Years of Tomi & Kesh
+	22 ago 2026	—	—	—	0,00 €	—	✓	Sin liquidar
+
+Milan Torne
+C1-2026-122
+Bodywork · Palm Tree Club · Orlando
+	21 ago 2026	0,00 €	800,00 €	—	253,94 €	—	253,94 €	Sin liquidar
+
+ACA
+C1-2026-101
+E1 · E1 · London
+	21 ago 2026	—	—	—	0,00 €	—	✓	Sin liquidar
+
+Los Canarios
+C1-2026-060
+Tentative - Playa de las Américas - Papagayo Tenerife - FOLLOW PRESENTA LOS CANARIOS
+	20 ago 2026	—	—	—	0,00 €	—	✓	Sin liquidar
+
+Sebastian Ledher
+C1-2026-132
+Push Red Room · Ku Barcelona · Barcelona
+	20 ago 2026	0,00 €	871,20 €	—	-96,02 €	—	✓	Sin liquidar
+
+Bizza
+C1-2026-040
+Descaro x Follow · Papagayo Tenerife · Playa de las Américas
+	20 ago 2026	0,00 €	363,00 €	—	240,00 €	—	240,00 €	Sin liquidar
+
+Sebastian Ledher
+C1-2026-076
+Cocoa · Badhak · Málaga
+	19 ago 2026	—	—	—	-108,78 €	—	✓	Pendiente liquidar
+
+ART NO LOGIA
+C1-2026-100
+Cocoa feria de Málaga
+	19 ago 2026	—	—	—	0,00 €	—	✓	Sin liquidar
+
+Nacho Scoppa
+C1-2026-102
+Tall Ship Boston - After Brunch · Tall Ship · Boston
+	16 ago 2026	—	—	—	0,00 €	—	✓	Sin liquidar
+
+Test Artist
+C1-2026-150
+SIGHT · Bassment · Madrid
+	16 ago 2026	0,00 €	1452,00 €	—	1000,00 €	—	1000,00 €	Sin liquidar
+
+Marcel BS
+C1-2026-056
+SIGHT · Ku Barcelona · Barcelona
+	16 ago 2026	—	—	—	500,00 €	500,00 €	✓	Liquidado
+
+Jose Fajardo
+C1-2026-114
+SIGHT · Ku Barcelona · Barcelona
+	16 ago 2026	—	—	—	1000,00 €	1000,00 €	✓	Liquidado
+
+Brenda Serna
+C1-2026-074
+Medusa Festival · Cullera
+	16 ago 2026	—	—	—	0,00 €	—	✓	Sin liquidar
+
+Brenda Serna
+C1-2026-105
+Free Your Mind · Spaarnwoude Park · Spaarnwoude
+	15 ago 2026	—	—	✓	1500,00 €	1500,00 €	✓	Liquidado
+
+Nacho Scoppa
+C1-2026-099
+ELIXIR ORLANDO · Orlando
+	15 ago 2026	—	—	—	0,00 €	—	✓	Sin liquidar
+
+Florentia
+C1-2026-098
+Fabric London · London
+	15 ago 2026	—	—	—	0,00 €	—	✓	Sin liquidar
+
+Londonground
+C1-2026-096
+Cecile · Playa Soleil · Sant Josep de sa Talaia
+	14 ago 2026	—	—	—	800,00 €	800,00 €	✓	Liquidado
+
+ACA
+C1-2026-086
+LOVEFEST · Vrnjačka Banja
+	14 ago 2026	—	—	—	0,00 €	—	✓	Sin liquidar
+
+Sera De Villalta
+C1-2026-097
+VISUALIZE · Nido · Estepona
+	14 ago 2026	0,00 €	484,00 €	—	320,00 €	—	320,00 €	Sin liquidar
+
+Nacho Scoppa
+C1-2026-090
+The Ruins at Knockdown Center
+	14 ago 2026	—	—	—	0,00 €	—	✓	Sin liquidar
+
+Marcel BS
+C1-2026-053
+Twiga Monte Carlo · Monaco
+	14 ago 2026	—	—	—	2051,02 €	4225,08 €	✓	Liquidado
+
+Brenda Serna
+C1-2026-080
+Medusa Festival · Cullera
+	14 ago 2026	—	—	—	0,00 €	—	✓	Sin liquidar
+
+Los Canarios
+C1-2026-051
+Descaro · Papaya · VEJER DE LA FRONTERA
+	14 ago 2026	—	—	—	1156,60 €	—	1156,60 €	Pendiente liquidar
+
+Dhuna
+C1-2026-093
+Aquasella · Aquasella · Arriondas
+	14 ago 2026	242,00 €	1210,00 €	—	1000,00 €	—	1000,00 €	Pendiente liquidar
+
+Brenda Serna
+C1-2026-079
+Peña Nogara San Roque
+	13 ago 2026	—	—	—	0,00 €	—	✓	Sin liquidar
+
+Pau Guilera
+C1-2026-029
+SIGHT · Ku Barcelona · Barcelona
+	09 ago 2026	—	—	—	1000,00 €	1000,00 €	✓	Liquidado
+
+ART NO LOGIA
+C1-2026-091
+Dua - Cocoa Málaga · Malaga
+	09 ago 2026	—	—	—	0,00 €	—	✓	Sin liquidar
+
+LA CINTIA
+C1-2026-083
+Ku Barcelona · Ku Barcelona · Barcelona
+	09 ago 2026	0,00 €	1452,00 €	—	1000,00 €	1000,00 €	✓	Liquidado
+
+Fran Hernandez
+C1-2026-092
+Sounders · Panorama · Denia
+	09 ago 2026	0,00 €	1452,00 €	—	960,00 €	—	960,00 €	Sin liquidar
+
+Aaron Martin
+C1-2026-072
+RAEETH Goa · Vagator
+	09 ago 2026	0,00 €	500,00 €	—	400,00 €	—	400,00 €	Sin liquidar
+
+Rivellino
+C1-2026-095
+Puntapiedra · Alicante
+	08 ago 2026	—	—	—	800,00 €	968,00 €	✓	Liquidado
+
+Sera De Villalta
+C1-2026-088
+X Private Club · Madrid
+	08 ago 2026	0,00 €	605,00 €	—	400,00 €	—	400,00 €	Sin liquidar
+
+Tomi & Kesh
+C1-2026-089
+La Terrazza · San Benedetto del Tronto
+	08 ago 2026	—	—	—	0,00 €	—	✓	Sin liquidar
+
+Los Canarios
+C1-2026-049
+Tentative - - LOS SANTOS
+	08 ago 2026	—	—	—	0,00 €	—	✓	Sin liquidar
+
+Brenda Serna
+C1-2026-069
+SPAZIO · Spazio 900 · Roma
+	08 ago 2026	—	—	—	720,00 €	720,00 €	✓	Liquidado
+
+Pau Guilera
+C1-2026-028
+Homies · Boris · Barcelona
+	07 ago 2026	0,00 €	1161,60 €	—	800,00 €	—	800,00 €	Sin liquidar
+
+Los Canarios
+C1-2026-045
+Descaro · Papagayo Tenerife · Playa de las Américas
+	06 ago 2026	0,00 €	3206,50 €	—	1696,00 €	—	1696,00 €	Sin liquidar
+
+Tomi & Kesh
+C1-2026-085
+Dubrovnik
+	06 ago 2026	—	—	—	0,00 €	—	✓	Sin liquidar
+
+ACA
+C1-2026-087
+Martinez Bros Marina · Valencia
+	06 ago 2026	—	—	—	0,00 €	—	✓	Sin liquidar
+
+Los Canarios
+C1-2026-022
+Mamarela · Marmarela · Alicante
+	02 ago 2026	—	—	✓	1200,00 €	1200,00 €	✓	Liquidado
+
+Abdon
+C1-2026-037
+Fitz Mallorca · Fitz Mallorca · Palma
+	02 ago 2026	—	—	—	640,00 €	—	640,00 €	Pendiente liquidar
+
+Sebastian Ledher
+C1-2026-046
+FUEGO · Edén Ibiza · Sant Antoni de Portmany
+	01 ago 2026	—	—	—	1488,29 €	1488,29 €	✓	Liquidado
+
+Milan Torne
+C1-2026-018
+Casa del Mar · Casa del Mar · Isla Santa Catalina
+	01 ago 2026	0,00 €	424,18 €	—	280,45 €	—	280,45 €	Sin liquidar
+
+Pau Guilera
+C1-2026-027
+LOAD · Sea Sea Club · Barcelona
+	01 ago 2026	—	—	—	400,00 €	—	400,00 €	Sin liquidar
+
+Abdon
+C1-2026-036
+LOAD · Sea Sea Club · Barcelona
+	01 ago 2026	—	—	—	600,00 €	—	600,00 €	Sin liquidar
+
+Los Canarios
+C1-2026-020
+Solart Fest · Hangar 37 · San Bartolomé de Tirajana
+	01 ago 2026	0,00 €	2400,00 €	25,03 €	1600,00 €	—	1600,00 €	Sin liquidar
+
+Los Canarios
+C1-2026-050
+Solart Fest @ CARPA FUERTEVENTURA
+	30 jul 2026	—	—	—	0,00 €	—	✓	Sin liquidar
+
+Pau Guilera
+C1-2026-019
+The Next · Marina Beach Club · Valencia
+	26 jul 2026	—	—	—	400,00 €	400,00 €	✓	Liquidado
+
+Bizza
+C1-2026-033
+SIGHT · Ku Barcelona · Barcelona
+	26 jul 2026	—	—	—	800,00 €	—	800,00 €	Pendiente liquidar
+
+Marcel BS
+C1-2026-052
+Zaia Costal Club · Zaia Costal Club · Yeni İskele
+	26 jul 2026	—	—	—	891,67 €	—	891,67 €	Pendiente liquidar
+
+Florentia
+C1-2026-014
+Summer Opening Festival · Paseo de Santiago, Torreperogil · Torreperogil
+	25 jul 2026	0,00 €	1452,00 €	—	1000,00 €	500,00 €	500,00 €	Liquidado
+
+Aaron Martin
+C1-2026-213
+Solarium
+	24 jul 2026	0,00 €	484,00 €	—	320,00 €	—	320,00 €	Sin liquidar
+
+Pau Guilera
+C1-2026-031
+Ohana · Ku Barcelona · Barcelona
+	20 jul 2026	—	—	—	0,00 €	—	✓	Sin liquidar
+
+Aaron Martin
+C1-2026-212
+BRO MÁLAGA · Málaga
+	19 jul 2026	0,00 €	968,00 €	—	512,00 €	—	512,00 €	Sin liquidar
+
+Abdon
+C1-2026-012
+FUNDAYS · Bassment · Madrid
+	18 jul 2026	—	—	—	0,00 €	—	✓	Sin liquidar
+
+Bizza
+C1-2026-035
+More Amor · Es Secret · Girona
+	18 jul 2026	0,00 €	1161,60 €	—	640,00 €	—	640,00 €	Sin liquidar
+
+Los Canarios
+C1-2026-006
+FUEGO · Edén Ibiza · Sant Antoni de Portmany
+	18 jul 2026	—	—	—	1798,06 €	1798,06 €	✓	Liquidado
+
+Bizza
+C1-2026-199
+Playa Soleil · Sant Josep de sa Talaia
+	17 jul 2026	0,00 €	968,00 €	—	512,00 €	—	512,00 €	Sin liquidar
+
+Bizza
+C1-2026-034
+Cecille · Playa Soleil · Sant Josep de sa Talaia
+	17 jul 2026	—	—	—	512,00 €	—	512,00 €	Pendiente liquidar
+
+Bizza
+C1-2026-004
+Paradise - Bunker · Hï · Illes Balears
+	15 jul 2026	—	—	—	0,00 €	—	✓	Liquidado
+
+Aaron Martin
+C1-2026-211
+Cerveceria costera · Trujillo
+	21 jun 2026	0,00 €	605,00 €	—	400,00 €	—	400,00 €	Sin liquidar
+
+Bizza
+C1-2026-001
+BOTANIQ · Diverbosc · Cerdanyola del Vallès
+	21 jun 2026	—	—	—	512,00 €	—	512,00 €	Pendiente liquidar
+
+Aaron Martin
+C1-2026-210
+WonderMusic 2026 · Centro Cultural Lima · Chorrillos
+	20 jun 2026	0,00 €	1331,00 €	—	880,00 €	—	880,00 €	Sin liquidar
+
+Bizza
+C1-2026-198
+Cecille Showcase · Boris · Barcelona
+	17 jun 2026	0,00 €	968,00 €	—	512,00 €	—	512,00 €	Sin liquidar
+
+Aaron Martin
+C1-2026-209
+Bahia Invest Estepona S.L · Málaga
+	16 jun 2026	0,00 €	1452,00 €	—	800,00 €	—	800,00 €	Sin liquidar
+
+Aaron Martin
+C1-2026-207
+Resaca Club · Dua Beach · Torremolinos
+	14 jun 2026	0,00 €	726,00 €	—	500,00 €	—	500,00 €	Sin liquidar
+
+Bizza
+C1-2026-197
+Basement Club · Córdoba
+	10 jun 2026	0,00 €	726,00 €	—	480,00 €	—	480,00 €	Sin liquidar
+
+Bizza
+C1-2026-196
+Boiler · underground · Rosario, Santa Fé
+	06 jun 2026	0,00 €	1210,00 €	—	800,00 €	—	800,00 €	Sin liquidar
+
+Bizza
+C1-2026-195
+Kompaz Crew · Boris Club
+	05 jun 2026	0,00 €	605,00 €	—	400,00 €	—	400,00 €	Sin liquidar
+
+Aaron Martin
+C1-2026-206
+Bambú · Santa Cruz de Tenerife
+	31 may 2026	0,00 €	605,00 €	—	400,00 €	—	400,00 €	Sin liquidar
+
+Aaron Martin
+C1-2026-205
+Zar Society · Palma
+	24 may 2026	0,00 €	1161,60 €	—	640,00 €	—	640,00 €	Sin liquidar
+
+Bizza
+C1-2026-194
+Teatro Alicia · Lo Barnechea
+	24 may 2026	0,00 €	1210,00 €	—	690,64 €	—	690,64 €	Sin liquidar
+
+Bizza
+C1-2026-193
+Raw · Raw club · Antofagasta
+	23 may 2026	0,00 €	726,00 €	—	480,00 €	—	480,00 €	Sin liquidar
+
+Aaron Martin
+C1-2026-204
+Ayahuasca Marbella · LOV OLIVIA VALERE · Marbella
+	09 may 2026	0,00 €	605,00 €	—	400,00 €	—	400,00 €	Sin liquidar
+
+Bizza
+C1-2026-192
+Magnetic People · Tantra · Eivissa
+	08 may 2026	0,00 €	605,00 €	—	400,00 €	—	400,00 €	Sin liquidar
+
+Bizza
+C1-2026-191
+Big city jams
+	25 abr 2026	0,00 €	968,00 €	—	512,00 €	—	512,00 €	Sin liquidar
+
+Bizza
+C1-2026-190
+DEXT GONNA GEOOVE · Chica Club Barcelona · Barcelona
+	18 abr 2026	0,00 €	508,20 €	—	350,00 €	—	350,00 €	Sin liquidar
+
+Bizza
+C1-2026-189
+Marina Beach · Marina Beach Club · Valencia
+	17 abr 2026	0,00 €	1452,00 €	—	800,00 €	—	800,00 €	Sin liquidar
+
+Bizza
+C1-2026-188
+Carpe Diem · Barcelona
+	28 mar 2026	0,00 €	1161,60 €	—	640,00 €	—	640,00 €	Sin liquidar
+
+Bizza
+C1-2026-010
+SIGHT · Ku Barcelona · Barcelona
+	08 mar 2026	—	—	—	0,00 €	—	✓	Sin liquidar
+
+Aaron Martin
+C1-2026-203
+Treze Events · Maloa Club · Sabadell
+	27 feb 2026	0,00 €	1089,00 €	—	576,00 €	—	576,00 €	Sin liquidar
+
+Bizza
+C1-2026-009
+MAGNETIC PEOPLE · INPUT High Fidelity · Barcelona
+	20 feb 2026	—	—	—	320,00 €	—	320,00 €	Pendiente liquidar
+
+Bizza
+C1-2026-186
+Marmarela · Alicante
+	14 feb 2026	0,00 €	1815,00 €	—	960,00 €	—	960,00 €	Sin liquidar
+
+Bizza
+C1-2026-008
+House Club · Selva Club · Palma
+	31 ene 2026	—	—	—	520,00 €	—	520,00 €	Pendiente liquidar
+
+Bizza
+C1-2026-185
+Selva Mallorca · Selva Club · Palma
+	31 ene 2026	0,00 €	943,80 €	—	520,00 €	—	520,00 €	Sin liquidar
+
+Bizza
+C1-2026-184
+Nero Club · Chiclayo
+	24 ene 2026	0,00 €	1210,00 €	—	690,64 €	—	690,64 €	Sin liquidar
+
+Aaron Martin
+C1-2026-202
+Savana · Spazio Diaz · Milano
+	09 ene 2026	0,00 €	847,00 €	—	448,00 €	—	448,00 €	Sin liquidar
+
+Bizza
+C1-2026-002
+SIGHT · Ku Barcelona · Barcelona
+	04 ene 2026	0,00 €	605,00 €	—	400,00 €	—	400,00 €	Sin liquidar
+
+Bizza
+C1-2025-019
+MAR ELECTRONIC FESTIVAL SL · veles e vents · València
+	24 dic 2025	0,00 €	726,00 €	—	500,00 €	—	500,00 €	Sin liquidar
+
+Bizza
+C1-2025-018
+MAR ELECTRONIC FESTIVAL · MAR ELECTRONIC FESTIVAL · València
+	20 dic 2025	0,00 €	726,00 €	—	500,00 €	—	500,00 €	Sin liquidar
+
+Aaron Martin
+C1-2025-033
+Infinity Segundo Aniversario · Plateruena · Durango
+	19 dic 2025	0,00 €	1016,40 €	—	560,00 €	—	560,00 €	Sin liquidar
+
+Aaron Martin
+C1-2025-032
+Roma Eventos · Nero Club · Chiclayo
+	29 nov 2025	0,00 €	1089,00 €	—	720,00 €	—	720,00 €	Sin liquidar
+
+Aaron Martin
+C1-2025-031
+After House · Puente Piedra
+	28 nov 2025	0,00 €	605,00 €	—	345,32 €	—	345,32 €	Sin liquidar
+
+Aaron Martin
+C1-2025-030
+HIDA OPEN AIR · Hida Open Air · Buenos Aires
+	23 nov 2025	0,00 €	605,00 €	—	400,00 €	—	400,00 €	Sin liquidar
+
+Aaron Martin
+C1-2025-029
+Botánica Sala · Montevideo
+	22 nov 2025	0,00 €	847,00 €	—	560,00 €	—	560,00 €	Sin liquidar
+
+Bizza
+C1-2025-017
+Silver Room · ECS DOGANA · Catania
+	21 nov 2025	0,00 €	968,00 €	—	512,00 €	—	512,00 €	Sin liquidar
+
+Aaron Martin
+C1-2025-028
+Zona Zero South · Coronel
+	16 nov 2025	0,00 €	363,00 €	—	240,00 €	—	240,00 €	Sin liquidar
+
+Bizza
+C1-2025-016
+Dropset x Moya · Luz de Gas · Barcelona
+	15 nov 2025	0,00 €	726,00 €	—	500,00 €	—	500,00 €	Sin liquidar
+
+Aaron Martin
+C1-2025-027
+Clubbing
+	15 nov 2025	0,00 €	726,00 €	—	384,00 €	—	384,00 €	Sin liquidar
+
+Aaron Martin
+C1-2025-026
+Day Off
+	14 nov 2025	0,00 €	847,00 €	—	448,00 €	—	448,00 €	Sin liquidar
+
+Bizza
+C1-2025-015
+LOAD · Glitch Club · Cerdanyola del Valles
+	07 nov 2025	0,00 €	1161,60 €	—	640,00 €	—	640,00 €	Sin liquidar
+
+Bizza
+C1-2025-014
+Good Taste · VIUZ · Itagüí
+	02 nov 2025	0,00 €	847,00 €	—	482,89 €	—	482,89 €	Sin liquidar
+
+Bizza
+C1-2025-013
+Espacio Buena Vista · Talca
+	01 nov 2025	0,00 €	726,00 €	—	413,90 €	—	413,90 €	Sin liquidar
+
+Aaron Martin
+C1-2025-025
+Miama Dance Club · Santa Cruz de Tenerife
+	01 nov 2025	0,00 €	484,00 €	—	320,00 €	—	320,00 €	Sin liquidar
+
+Bizza
+C1-2025-012
+Day Off
+	31 oct 2025	0,00 €	1210,00 €	—	551,87 €	—	551,87 €	Sin liquidar
+
+Aaron Martin
+C1-2025-024
+True Torero · True Torero · Torremolinos
+	31 oct 2025	0,00 €	1210,00 €	—	640,00 €	—	640,00 €	Sin liquidar
+
+Bizza
+C1-2025-011
+KEDAVRA · Deeperclub
+	25 oct 2025	0,00 €	1210,00 €	—	551,87 €	—	551,87 €	Sin liquidar
+
+Aaron Martin
+C1-2025-023
+Bobbys Club Tenerife · Tenerife
+	11 oct 2025	0,00 €	1742,40 €	—	960,00 €	—	960,00 €	Sin liquidar
+
+Bizza
+C1-2025-010
+THR33
+	11 oct 2025	0,00 €	871,20 €	—	480,00 €	—	480,00 €	Sin liquidar
+
+Aaron Martin
+C1-2025-022
+The Garden · Ottimo Listening Bar · Vercelli
+	27 sept 2025	0,00 €	726,00 €	—	384,00 €	—	384,00 €	Sin liquidar
+
+Bizza
+C1-2025-009
+PRYSM · Chicago
+	05 sept 2025	0,00 €	1452,00 €	—	662,25 €	—	662,25 €	Sin liquidar
+
+Bizza
+C1-2025-008
+Negroni Bistro & Sushi Bar · Miami
+	03 sept 2025	0,00 €	1210,00 €	—	551,87 €	—	551,87 €	Sin liquidar
+
+Aaron Martin
+C1-2025-021
+Kandy · Ardales
+	29 ago 2025	0,00 €	786,50 €	—	416,00 €	—	416,00 €	Sin liquidar
+
+Bizza
+C1-2025-007
+DREAMBEACH FESTIVAL · DreamBeach Festival · Almería
+	09 ago 2025	0,00 €	871,20 €	—	480,00 €	—	480,00 €	Sin liquidar
+
+Bizza
+C1-2025-006
+DreamBeach Festival · Almería
+	08 ago 2025	0,00 €	2178,00 €	—	1200,00 €	—	1200,00 €	Sin liquidar
+
+Aaron Martin
+C1-2025-020
+Temple Porto Rotondo · Porto Rotondo
+	04 ago 2025	0,00 €	847,00 €	—	448,00 €	—	448,00 €	Sin liquidar
+
+Bizza
+C1-2025-005
+Makalali Beach · Varna
+	26 jul 2025	0,00 €	968,00 €	—	512,00 €	—	512,00 €	Sin liquidar
+
+Bizza
+C1-2025-004
+Lift Club · Zagreb
+	25 abr 2025	0,00 €	1149,50 €	—	608,00 €	—	608,00 €	Sin liquidar
+
+Bizza
+C1-2025-003
+IMPULSE · Tantra · Eivissa
+	22 abr 2025	0,00 €	605,00 €	—	400,00 €	—	400,00 €	Sin liquidar
+
+Bizza
+C1-2025-002
+Trip Club · Miraflores
+	02 abr 2025	0,00 €	605,00 €	—	344,92 €	—	344,92 €	Sin liquidar
+
+Bizza
+C1-2025-001
+SIGHT · Pacha Barcelona · Barcelona
+	30 mar 2025	0,00 €	1161,60 €	—	640,00 €	—	640,00 €	Sin liquidar
+
+Bizza
+C1-2024-003
+Extremusika · Granada
+	26 sept 2024	0,00 €	871,20 €	—	480,00 €	—	480,00 €	Sin liquidar
+
+Bizza
+C1-2024-010
+Magma · Costa Adeje
+	07 sept 2024	0,00 €	1161,60 €	—	640,00 €	—	640,00 €	Sin liquidar
+
+Bizza
+C1-2024-009
+Ayuntamiento de Trigueros · Trigueros
+	04 sept 2024	0,00 €	1016,40 €	—	560,00 €	—	560,00 €	Sin liquidar
+
+Bizza
+C1-2024-008
+Marina Valencia · Marina Beach Club · Valencia
+	09 jun 2024	0,00 €	1452,00 €	—	800,00 €	—	800,00 €	Sin liquidar
+
+Bizza
+C1-2024-007
+Secret Sauce ft Avantgart Tabldot · Toy Room Malta · St. Julian's
+	06 jun 2024	—	—	—	0,00 €	—	✓	Sin liquidar
+
+Bizza
+C1-2024-006
+Pandora Sevilla · Sevilla
+	01 jun 2024	0,00 €	726,00 €	—	500,00 €	—	500,00 €	Sin liquidar
+
+Bizza
+C1-2024-002
+Berlin Music Club · Granada
+	23 mar 2024	0,00 €	1016,40 €	—	560,00 €	—	560,00 €	Sin liquidar
+
+Bizza
+C1-2024-005
+intro block · Inca
+	24 feb 2024	0,00 €	871,20 €	—	480,00 €	—	480,00 €	Sin liquidar
+
+Bizza
+C1-2024-004
+The Boss Apress Ski · El Tarter
+	16 feb 2024	0,00 €	871,20 €	—	480,00 €	—	480,00 €	Sin liquidar
+
+Bizza
+C1-2024-001
+La Casona de Camaná · Lima
+	24 ene 2024	0,00 €	605,00 €	—	343,12 €	—	343,12 €	Sin liquidar
+
+Andrea Castells
+C1-2026-007
+Sephora Opening
+	—	—	—	—	1600,00 €	—	1600,00 €	Sin liquidar
+Chat
+
+Pregunta lo que quieras de esta pantalla, o cuenta qué está fallando.
+
+Enviar
+Reportar con captura
+Mis avisos

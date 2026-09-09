@@ -1,0 +1,156 @@
+<!-- capturado 2026-09-09 10:09:17 CEST · https://bookings.conceptoneagency.com/management/incidentes/analitica -->
+ConceptOne
+Añadir show
+BOOKINGS
+Dashboard
+Shows
+Tours
+Ofertas
+Cobros
+Gastos
+Liquidaciones
+Disponibilidad
+Calendario
+Contactos
+MANAGEMENT
+Roster
+Insights
+Estrategias
+Contratos
+Activaciones
+Campañas
+Content
+Incidencias
+MÁS
+Roster
+Análisis
+Ajustes
+Black Moose
+Pendientes
+Modo noche
+Ayuda
+9+
+Notificaciones
+T
+testadmin
+← Volver al panel de incidentes
+Analítica de incidentes
+
+Patrones, tiempos de resolución, impacto económico y calidad del reporte.
+
+Desde
+Hasta
+INCIDENTES (RANGO)
+7
+de 7 totales
+RESOLUCIÓN MEDIA
+3 d
+1 resueltos
+% PREVENTABLES
+100%
+1 de 1 con dato
+IMPACTO NETO
+0,00 €
+IMPACTO ECONÓMICO
+
+Coste incurrido + ingreso perdido − recuperado. El neto es lo que estos incidentes le han costado a la casa.
+
+COSTE INCURRIDO
+0,00 €
+INGRESO PERDIDO
+0,00 €
+RECUPERADO
+0,00 €
+NETO
+0,00 €
+POR CATEGORÍA
+	COSTE	PERDIDO	RECUP.	NETO
+Sin impacto registrado.
+POR DEPARTAMENTO
+	COSTE	PERDIDO	RECUP.	NETO
+Sin impacto registrado.
+INCIDENTES POR CATEGORÍA
+Sin categoría
+3
+Pago
+2
+Conducta del artista
+1
+Staff e interno
+1
+INCIDENTES POR DEPARTAMENTO
+ConceptOne (booking)
+7
+INCIDENTES POR MES (FECHA DE REPORTE)
+jul 26
+ago 26
+sep 26
+0
+2
+4
+6
+8
+RESOLUCIÓN MEDIA POR SEVERIDAD
+Baja
+—
+(0)
+Media
+3 d
+(1)
+Alta
+—
+(0)
+Crítica
+—
+(0)
+RESOLUCIÓN MEDIA POR DEPARTAMENTO
+ConceptOne (booking)
+3 d
+(1)
+PREVENTABLES VS NO PREVENTABLES
+
+100% de 1 clasificados eran evitables.
+
+ago 26
+0%
+25%
+50%
+75%
+100%
+COUNTERPARTIES RECURRENTES
+
+Promotores, venues y proveedores con más incidentes registrados.
+
+Marina Beach Club · Venue
+1
+Joe Coe · Staff
+1
+ABIERTOS CON MÁS DE 14 DÍAS
+
+Cola viva, por owner. Ignora el filtro de fechas.
+
+Sin owner
+4
+#2 (Test) Problema con la logística de Sebastian Ledher
+46 d
+#5 La pareja de Jose Fajardo se ha peleado con la novia del promotor.
+37 d
+#6 LondonGround confusión de management fee
+37 d
+#7 Flyer sin aprobar se sube
+29 d
+LAG MEDIO DE REPORTE POR DEPARTAMENTO
+
+Días entre que ocurre y que se reporta. Diagnóstico de cultura de reporte.
+
+ConceptOne (booking)
+0 d
+(3)
+Chat
+
+Pregunta lo que quieras de esta pantalla, o cuenta qué está fallando.
+
+Enviar
+Reportar con captura
+Mis avisos
+0%

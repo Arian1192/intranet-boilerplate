@@ -1,0 +1,155 @@
+<!-- capturado 2026-09-09 10:14:05 CEST · https://bookings.conceptoneagency.com/conceptone/ajustes -->
+ConceptOne
+Añadir show
+BOOKINGS
+Dashboard
+Shows
+Tours
+Ofertas
+Cobros
+Gastos
+Liquidaciones
+Disponibilidad
+Calendario
+Contactos
+MANAGEMENT
+Roster
+Insights
+Estrategias
+Contratos
+Activaciones
+Campañas
+Content
+Incidencias
+MÁS
+Roster
+Análisis
+Ajustes
+Black Moose
+Pendientes
+Modo noche
+Ayuda
+9+
+Notificaciones
+T
+testadmin
+Ajustes de ConceptOne
+
+Configuración del espacio de booking: administración, alertas, configuración y conexiones.
+
+ADMINISTRACIÓN
+Datos fiscalesOcultar movimientosContratosComisiones y exclusividad
+ALERTAS
+AlertasRecordatorios
+CONFIGURACIÓN
+Confirmación de showFormulario de ofertasExtras de logística
+CONEXIONES
+Calendario Google
+Comisiones de agentes
+
+La comisión se calcula sobre el Booking Fee del show. Cada agente tiene su propio %; si un artista concreto tiene un override, ese manda (se configura en la ficha del artista). El agente oficial y el aprobador de arte también se asignan en la ficha del artista.
+
+PORCENTAJE GLOBAL POR DEFECTO
+% sobre el Booking Fee
+%
+Guardar
+
+Se aplica a los agentes que no tengan un % propio abajo.
+
+EXCLUSIVIDAD Y LOGÍSTICA DE AGENDA
+
+Valores por defecto para avisar de conflictos al crear un show. Se pueden ajustar en cada show. La distancia real (km) se calcula cuando el venue tiene coordenadas (autocompletado de Google).
+
+Ventana (días)
+Radio de exclusividad (km)
+Salto logístico máx. (km)
+Guardar
+
+Exclusividad: otro show del artista dentro de la ventana de días y del radio en km. Salto logístico: dos shows a 1-2 días pero más lejos que este límite (viaje inviable).
+
+% DE COMISIÓN POR AGENTE
+AGENTE	% DE COMISIÓN
+Alba G	
+%
+(global 25%)
+
+Alberto Egea	
+%
+(global 25%)
+
+Aldo Messina	
+%
+(global 25%)
+
+Alex González	
+%
+(global 25%)
+
+Carlos Pego	
+%
+(global 25%)
+
+Fran Hinojosa Veredas	
+%
+(global 25%)
+
+Israel Cuenca	
+%
+(global 25%)
+
+Jack Howell	
+%
+(global 25%)
+
+Jassi Gonzalez Montes	
+%
+(global 25%)
+
+Joe Coe	
+%
+(global 25%)
+
+Juan (Staff Level Test)	
+%
+(global 25%)
+
+Maf	
+%
+(global 25%)
+
+Meritxell Pareja Casalí	
+%
+(global 25%)
+
+Oscar Buch	
+%
+(global 25%)
+
+Patricia Pareja Casalí	
+%
+(global 25%)
+
+Sadkiel	
+%
+(global 25%)
+
+test	
+%
+(global 25%)
+
+Tony Carrerira	
+%
+(global 25%)
+
+Yenifer Bernardo	
+%
+(global 25%)
+Chat · ConceptOne
+
+El panel de atención no es una lista de tareas
+
+Es lo que está en riesgo por fecha: cuanto más cerca el show, más arriba. Si algo no debería estar ahí, es que le falta un dato al show.
+
+Enviar
+Reportar con captura
+Mis avisos

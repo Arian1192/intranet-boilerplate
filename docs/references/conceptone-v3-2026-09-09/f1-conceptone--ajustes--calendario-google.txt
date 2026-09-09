@@ -1,0 +1,95 @@
+<!-- capturado 2026-09-09 10:14:18 CEST · https://bookings.conceptoneagency.com/conceptone/ajustes -->
+ConceptOne
+Añadir show
+BOOKINGS
+Dashboard
+Shows
+Tours
+Ofertas
+Cobros
+Gastos
+Liquidaciones
+Disponibilidad
+Calendario
+Contactos
+MANAGEMENT
+Roster
+Insights
+Estrategias
+Contratos
+Activaciones
+Campañas
+Content
+Incidencias
+MÁS
+Roster
+Análisis
+Ajustes
+Black Moose
+Pendientes
+Modo noche
+Ayuda
+9+
+Notificaciones
+T
+testadmin
+Ajustes de ConceptOne
+
+Configuración del espacio de booking: administración, alertas, configuración y conexiones.
+
+ADMINISTRACIÓN
+Datos fiscalesOcultar movimientosContratosComisiones y exclusividad
+ALERTAS
+AlertasRecordatorios
+CONFIGURACIÓN
+Confirmación de showFormulario de ofertasExtras de logística
+CONEXIONES
+Calendario Google
+SINCRONIZACIÓN CON GOOGLE CALENDAR
+
+Empuja los shows y los holds de cada artista a SU calendario de Google (una vía: la Intranet manda). El nombre del artista y cualquier dato económico nunca viajan — es su propio calendario y no hace falta.
+
+Sincronización activa
+Con esto apagado, el cron no hace nada aunque esté programado.
+Plantilla del título del evento
+
+Variables disponibles: {estado} {show} {venue} {ciudad} {artista} — esta última existe por si algún día la necesitas, pero por defecto no se usa (es el calendario del propio artista). Para los holds, el estado sale como Tentative/Hold/Confirmed y el resto del título es lo que escribiste al crearlo.
+
+QUÉ MÁS INCLUIR EN LA DESCRIPCIÓN
+
+El título ya lleva estado, venue y ciudad — aquí va el resto: el nombre de la fiesta ("Event", si lo tiene) siempre sale el primero; lo demás es configurable.
+
+Line up completo
+Dirección del venue
+Doors / curfew
+Su set time
+Nota pública
+Estado de pago (no recomendado)
+VENTANA DE LECTURA DEL CALENDARIO
+
+Cuánto hacia atrás y hacia delante miramos en Google al leer eventos que no son nuestros (para poder hacer "Upgrade a Show"). Súbela mientras migras el histórico de Gigwell, para no dejarte ninguno fuera de rango — luego puedes volver a estrecharla.
+
+Días hacia atrás
+Días hacia delante
+CUENTA DE SERVICIO DE GOOGLE
+
+Para que un calendario se sincronice, compártelo (permiso «Hacer cambios en los eventos») con este email:
+
+google-calendar-api@abstract-stream-503019-a4.iam.gserviceaccount.com
+
+El Calendar ID de cada artista se enlaza desde su ficha (pestaña Perfil). Ahora mismo hay 38 de 192 artistas con calendario enlazado.
+
+PROBAR AHORA
+Sincronizar ahora
+
+No hace falta esperar al cron (cada 15 min): esto lanza una pasada ya mismo, para todos los artistas enlazados.
+
+Chat · ConceptOne
+
+El panel de atención no es una lista de tareas
+
+Es lo que está en riesgo por fecha: cuanto más cerca el show, más arriba. Si algo no debería estar ahí, es que le falta un dato al show.
+
+Enviar
+Reportar con captura
+Mis avisos
