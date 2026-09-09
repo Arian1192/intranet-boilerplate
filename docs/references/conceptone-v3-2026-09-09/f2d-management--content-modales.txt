@@ -1,0 +1,21 @@
+https://bookings.conceptoneagency.com/management/content — los 1 modales de edición, campo a campo — 9/9/2026, 11:52:58 CEST
+Sólo se abrió y se cerró cada modal con su aspa. Ni una tecla, ni Guardar, ni Eliminar.
+
+===== fila #0 · Editar proyecto =====
+  Título = "8bit Release promo video \"LIFESTYLE\""
+  Artista = "Londonground"
+  Tipo = "Vídeo"
+  Fase = "Idea"
+  Producido por = "ConceptOne"
+  Campaña (de qué campaña forma parte) = "— Sin campaña —"
+  Brief = ""
+  Presup. cotizado (€) = ""
+  Aprobado (€) = ""
+  Real (€) = ""
+  Paga = "Artista"
+  Brief enviado = null
+  Entrega prevista = null
+  Notas = ""
+  [casilla] Proveedor externo = false
+  [casilla] Recuperable = false
+  [casilla] Aprobado = false

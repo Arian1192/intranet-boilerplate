@@ -1,0 +1,6 @@
+https://bookings.conceptoneagency.com/management/content — listas de opciones de cada select, modal a modal — 9/9/2026, 11:58:56 CEST
+
+===== fila #0 · "8bit Release promo video \"LIFESTYLE\"" =====
+  Campaña (de qué campaña forma parte)
+     opciones: ["— Sin campaña —"]
+     elegida : "— Sin campaña —"

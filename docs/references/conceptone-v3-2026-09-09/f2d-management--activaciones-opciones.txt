@@ -1,0 +1,156 @@
+https://bookings.conceptoneagency.com/management/activaciones — listas de opciones de cada select, modal a modal — 9/9/2026, 11:58:37 CEST
+
+===== fila #0 · "\"What it Do\" single release - " =====
+  Campaña (de qué campaña forma parte)
+     opciones: ["— Sin campaña —"]
+     elegida : "— Sin campaña —"
+
+===== fila #1 · "YouTube Set: Cova Santa " =====
+  Campaña (de qué campaña forma parte)
+     opciones: ["— Sin campaña —","Campaña de aumento de seguidores - Meta (Instagram)","Campaña de aumento de suscriptores en YouTube","Campaña de Views en YouTube set COVA SANTA"]
+     elegida : "— Sin campaña —"
+
+===== fila #2 · "YouTube Set: Tantra Ibiza" =====
+  Campaña (de qué campaña forma parte)
+     opciones: ["— Sin campaña —","Hey Mami - Spotify Streams + YouTube Views","YouTube: Suscriptores al canal","YouTube: Visualizaciones sobre Tantra Liveset"]
+     elegida : "— Sin campaña —"
+
+===== fila #3 · "Contactar con el Row - JASSI" =====
+  Campaña (de qué campaña forma parte)
+     opciones: ["— Sin campaña —"]
+     elegida : "— Sin campaña —"
+
+===== fila #4 · "4 Track EP - Lost in the Groove Release collab w/ Sera de Villalta" =====
+  Campaña (de qué campaña forma parte)
+     opciones: ["— Sin campaña —"]
+     elegida : "— Sin campaña —"
+
+===== fila #5 · "Brunch Show - Grabación" =====
+  Campaña (de qué campaña forma parte)
+     opciones: ["— Sin campaña —"]
+     elegida : "— Sin campaña —"
+
+===== fila #6 · "7-8 videos de Support " =====
+  Campaña (de qué campaña forma parte)
+     opciones: ["— Sin campaña —"]
+     elegida : "— Sin campaña —"
+
+===== fila #7 · "Photoshoot | De estudio y de calle" =====
+  Campaña (de qué campaña forma parte)
+     opciones: ["— Sin campaña —","Campaña general Bizza"]
+     elegida : "— Sin campaña —"
+
+===== fila #8 · "IDEA CONCEPTUAL -> Mariposas rodeando Janse -> Metamorfosi" =====
+  Campaña (de qué campaña forma parte)
+     opciones: ["— Sin campaña —"]
+     elegida : "— Sin campaña —"
+
+===== fila #9 · "Fiesta y Bullshit | Podcast o entrevista" =====
+  Campaña (de qué campaña forma parte)
+     opciones: ["— Sin campaña —","Campaña general Bizza"]
+     elegida : "Campaña general Bizza"
+
+===== fila #10 · "Clothes Sponsorship Study" =====
+  Campaña (de qué campaña forma parte)
+     opciones: ["— Sin campaña —"]
+     elegida : "— Sin campaña —"
+
+===== fila #11 · "Vlog de Lifestyle (formato largo)" =====
+  Campaña (de qué campaña forma parte)
+     opciones: ["— Sin campaña —","Hey Mami - Spotify Streams + YouTube Views","YouTube: Suscriptores al canal","YouTube: Visualizaciones sobre Tantra Liveset"]
+     elegida : "— Sin campaña —"
+
+===== fila #12 · "8bit Release \"Answer The Light\" - 4 Track EP" =====
+  Campaña (de qué campaña forma parte)
+     opciones: ["— Sin campaña —"]
+     elegida : "— Sin campaña —"
+
+===== fila #13 · "Grabación - UNVRS" =====
+  Campaña (de qué campaña forma parte)
+     opciones: ["— Sin campaña —"]
+     elegida : "— Sin campaña —"
+
+===== fila #14 · "VideoSet en Boris - Set después de Damian Lazarus" =====
+  Campaña (de qué campaña forma parte)
+     opciones: ["— Sin campaña —"]
+     elegida : "— Sin campaña —"
+
+===== fila #15 · "Clips -> Formato TikTok (del vlog)" =====
+  Campaña (de qué campaña forma parte)
+     opciones: ["— Sin campaña —","Hey Mami - Spotify Streams + YouTube Views","YouTube: Suscriptores al canal","YouTube: Visualizaciones sobre Tantra Liveset"]
+     elegida : "— Sin campaña —"
+
+===== fila #16 · "Clips -> Formato Instagram (del vlog)" =====
+  Campaña (de qué campaña forma parte)
+     opciones: ["— Sin campaña —","Hey Mami - Spotify Streams + YouTube Views","YouTube: Suscriptores al canal","YouTube: Visualizaciones sobre Tantra Liveset"]
+     elegida : "— Sin campaña —"
+
+===== fila #17 · "Cova Santa B2B Abdon" =====
+  Campaña (de qué campaña forma parte)
+     opciones: ["— Sin campaña —"]
+     elegida : "— Sin campaña —"
+
+===== fila #18 · "Lapsus VA \"Feel the ritmo\"" =====
+  Campaña (de qué campaña forma parte)
+     opciones: ["— Sin campaña —"]
+     elegida : "— Sin campaña —"
+
+===== fila #19 · "\"Everything\" EP - Machaca la Membrana" =====
+  Campaña (de qué campaña forma parte)
+     opciones: ["— Sin campaña —"]
+     elegida : "— Sin campaña —"
+
+===== fila #20 · "LEXLAY x VIDALOCA EP TBC" =====
+  Campaña (de qué campaña forma parte)
+     opciones: ["— Sin campaña —"]
+     elegida : "— Sin campaña —"
+
+===== fila #21 · "YouTube Set: Halloween Cueva (Mexico)" =====
+  Campaña (de qué campaña forma parte)
+     opciones: ["— Sin campaña —","Hey Mami - Spotify Streams + YouTube Views","YouTube: Suscriptores al canal","YouTube: Visualizaciones sobre Tantra Liveset"]
+     elegida : "— Sin campaña —"
+
+===== fila #22 · "15 DIAS EN ESPAÑA " =====
+  Campaña (de qué campaña forma parte)
+     opciones: ["— Sin campaña —","Hey Mami - Spotify Streams + YouTube Views","YouTube: Suscriptores al canal","YouTube: Visualizaciones sobre Tantra Liveset"]
+     elegida : "— Sin campaña —"
+
+===== fila #23 · "\"Realase Name TBC\" EP - Laundry" =====
+  Campaña (de qué campaña forma parte)
+     opciones: ["— Sin campaña —"]
+     elegida : "— Sin campaña —"
+
+===== fila #24 · "Posible videoset Mute Monkey | RD Punta Cana" =====
+  Campaña (de qué campaña forma parte)
+     opciones: ["— Sin campaña —","Hey Mami - Spotify Streams + YouTube Views","YouTube: Suscriptores al canal","YouTube: Visualizaciones sobre Tantra Liveset"]
+     elegida : "— Sin campaña —"
+
+===== fila #25 · "Videoset Comuna 13" =====
+  Campaña (de qué campaña forma parte)
+     opciones: ["— Sin campaña —","Hey Mami - Spotify Streams + YouTube Views","YouTube: Suscriptores al canal","YouTube: Visualizaciones sobre Tantra Liveset"]
+     elegida : "— Sin campaña —"
+
+===== fila #26 · "A-SIMÉTRICO ALBUM RELEASE (En fase de Produción)" =====
+  Campaña (de qué campaña forma parte)
+     opciones: ["— Sin campaña —","Campaña de aumento de seguidores - Meta (Instagram)","Campaña de aumento de suscriptores en YouTube","Campaña de Views en YouTube set COVA SANTA"]
+     elegida : "— Sin campaña —"
+
+===== fila #27 · "Metamorfosi VA Release" =====
+  Campaña (de qué campaña forma parte)
+     opciones: ["— Sin campaña —"]
+     elegida : "— Sin campaña —"
+
+===== fila #28 · "EP \"SIKO LELE\" on ELROW MUSIC" =====
+  Campaña (de qué campaña forma parte)
+     opciones: ["— Sin campaña —","Campaña de aumento de seguidores - Meta (Instagram)","Campaña de aumento de suscriptores en YouTube","Campaña de Views en YouTube set COVA SANTA"]
+     elegida : "— Sin campaña —"
+
+===== fila #29 · "Single \"Corazón\" en COCOA music" =====
+  Campaña (de qué campaña forma parte)
+     opciones: ["— Sin campaña —"]
+     elegida : "— Sin campaña —"
+
+===== fila #30 · "Single \"Flowers in Anounymous\" on NUSONIDO" =====
+  Campaña (de qué campaña forma parte)
+     opciones: ["— Sin campaña —","Campaña de aumento de seguidores - Meta (Instagram)","Campaña de aumento de suscriptores en YouTube","Campaña de Views en YouTube set COVA SANTA"]
+     elegida : "— Sin campaña —"
