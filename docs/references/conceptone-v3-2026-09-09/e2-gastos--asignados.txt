@@ -1,0 +1,173 @@
+<!-- /gastos · filtro «Asignados» — capturado 2026-09-09T11:15:31.778Z (https://bookings.conceptoneagency.com) -->
+Gastos
+
+Salidas de las cuentas de Holded (banco, PayPal, Stripe). Concilia cada movimiento con un show: gasto de la agencia o liquidación al artista. Últimos 120 días.
+
+GASTO SIN ASIGNAR
+
+201.704,56 €
+
+361 movimiento(s)
+
+MOVIMIENTOS (TOTAL)
+
+398
+
+CUENTAS
+
+3
+
+Todas las cuentas
+Sin asignar
+Asignados
+Todos
+↻ Actualizar
+fac n : 2025007 00000083 Yeray Javier Hernandez / The Way Y TRANSFERENCIAS
+01 sept 2026 · BBVA - ConceptOne
+Liquidación
+− 584,29 €
+fac n : F26 00000002 DESCARO EVENTOS LC / THE WAY YOU GROW TRANSFERENCIAS
+01 sept 2026 · BBVA - ConceptOne
+Liquidación
+− 584,29 €
+fac n :2025007 00000082 Yeray Hernandez / The Way You Gro TRANSFERENCIAS
+31 ago 2026 · BBVA - ConceptOne
+Liquidación
+− 1200,00 €
+fac n : F26 00000003 DESCARO EVENTOS LC / THE WAY YOU GROW TRANSFERENCIAS
+31 ago 2026 · BBVA - ConceptOne
+Liquidación
+− 1200,00 €
+fac n : 2025007 00000081 YERAY JAVIER HERNANDEZ TRANSFERENCIAS
+31 ago 2026 · BBVA - ConceptOne
+Liquidación
+− 495,63 €
+fac n : F26 00000001 DECARO EVENTOS LC SL / THE WAY YOU GRO TRANSFERENCIAS
+31 ago 2026 · BBVA - ConceptOne
+Liquidación
+− 495,63 €
+fac n : 89 Brenda Serna / The Way You Grow TRANSFERENCIAS
+31 ago 2026 · BBVA - ConceptOne
+Liquidación
+− 1431,00 €
+Fac n : 0015/2026 Felix Berzosa Salamanca / The Way You Gr TRANSFERENCIAS
+31 ago 2026 · BBVA - ConceptOne
+Liquidación
+− 678,40 €
+fac n : ANL260048 JORGE DE GALVEZ GONZALEZ / THE WAY YOU GRO TRANSFERENCIAS
+31 ago 2026 · BBVA - ConceptOne
+Liquidación
+− 678,40 €
+FAC N. : EV2676478 EVENTS BRANCH / MARIAN ARISS / THE WAY TRANSFERENCIAS
+27 ago 2026 · BBVA - ConceptOne
+Liquidación
+− 1210,00 €
+FAC N. : 126 SERGIO BIZARRO AVILA / POWDER ENTERTAINMENT TRANSFERENCIAS
+27 ago 2026 · BBVA - ConceptOne
+Liquidación
+− 848,00 €
+fac n : 87 Brenda Serna / The Way You Grow TRANSFERENCIAS
+26 ago 2026 · BBVA - ConceptOne
+Liquidación
+− 742,00 €
+fac n : 26136 Tomislav Bozic / Tomi Keash 30 August 2026 TRANSFERENCIAS
+26 ago 2026 · BBVA - ConceptOne
+Liquidación
+− 1702,40 €
+fac n : F0143ES Valhalla Music / The Way You Grow TRANSFERENCIAS
+20 ago 2026 · BBVA - ConceptOne
+Liquidación
+− 968,00 €
+fac n : 56/2026 Marcel Bofill Sureda / The Way You Grow TRANSFERENCIAS
+19 ago 2026 · BBVA - ConceptOne
+Liquidación
+− 2174,06 €
+fac n : 57/2026 Marcel Bofill Sureda / The Way You Grow TRANSFERENCIAS
+19 ago 2026 · BBVA - ConceptOne
+Liquidación
+− 530,00 €
+fac n : 87 Brenda Serna Perez / The Way You Grow TRANSFERENCIAS
+19 ago 2026 · BBVA - ConceptOne
+Liquidación
+− 763,20 €
+fac n : 081 nappet bussines group / The Way You Grow TRANSFERENCIAS
+19 ago 2026 · BBVA - ConceptOne
+Liquidación
+− 1210,00 €
+fac n : 86 BRENDA SERNA PEREZ / THE WAY YOU GROW TRANSFERENCIAS
+19 ago 2026 · BBVA - ConceptOne
+Liquidación
+− 1272,00 €
+fac n Compr. Nro : 00003-00000002 Bustamante Cintia Muriel TRANSFERENCIAS
+18 ago 2026 · BBVA - ConceptOne
+Liquidación
+− 1000,00 €
+fac n : 14 Pau Guilera Caballero / The Way You Grow TRANSFERENCIAS
+18 ago 2026 · BBVA - ConceptOne
+Liquidación
+− 1060,00 €
+fac n F0142ES VALHALLA MUSIC / THE WAY YOU GROW TRANSFERENCIAS
+17 ago 2026 · BBVA - ConceptOne
+Liquidación
+− 968,00 €
+fac n 15 Pau Guilera Caballero / The Way You Grow TRANSFERENCIAS
+17 ago 2026 · BBVA - ConceptOne
+Gasto
+− 424,00 €
+fac n : 00000084 Francisco Ruben Quintana / The Way You Gro TRANSFERENCIAS
+13 ago 2026 · BBVA - ConceptOne
+Liquidación
+− 510,00 €
+fac n : 2025007 00000078 YERAY JAVIER HERNANDEZ / THE WAY Y TRANSFERENCIAS
+13 ago 2026 · BBVA - ConceptOne
+Liquidación
+− 600,00 €
+fac n : 85 Brenda Serna Perez / The Way You Grow TRANSFERENCIAS
+06 ago 2026 · BBVA - ConceptOne
+Liquidación
+− 1166,00 €
+FAC N. : EV2667382 EVENTS BRANCH / LONDONGROUND / THE WAY YO TRANSFERENCIAS
+05 ago 2026 · BBVA - ConceptOne
+Liquidación
+− 968,00 €
+fac n : 13 Pau Guillera Caballero / The Way you Grow TRANSFERENCIAS
+04 ago 2026 · BBVA - ConceptOne
+Liquidación
+− 424,00 €
+FAC N. : SL-2026-801 JOAN SEBASTIAN CEBALLOS LEON / THE WAY TRANSFERENCIAS THE WAY YOU GROW S.L. JOAN SEBASTIAN CEBALLOS LEON
+31 jul 2026 · BBVA - ConceptOne
+Liquidación
+− 1488,29 €
+fac n 2025007 00000075 YERAY JAVIER HERNANDEZ / THE WAY YOU TRANSFERENCIAS
+29 jul 2026 · BBVA - ConceptOne
+Liquidación
+− 870,46 €
+Fac n 00000080 Francisco Ruben Quintana / The Way You Grow TRANSFERENCIAS
+29 jul 2026 · BBVA - ConceptOne
+Liquidación
+− 788,46 €
+Invoice n :43098 FLORENTIA : Opening Summer Festival / Book TRANSFERENCIAS
+23 jul 2026 · BBVA - ConceptOne
+Colaborador
+− 100,00 €
+Invoice n : 43095 florentia opening Sumer Festival / Produc TRANSFERENCIAS
+23 jul 2026 · BBVA - ConceptOne
+Liquidación
+− 500,00 €
+Invoice n : 43094 FLORENTIA Opening Summer Festival / NGE TRANSFERENCIAS
+23 jul 2026 · BBVA - ConceptOne
+Liquidación
+− 380,00 €
+4152550001533191 VUELING AIRLINES PRAT DE LLOBRES PAGO CON TARJETA EN LINEAS AEREAS
+22 jul 2026 · BBVA - ConceptOne
+Gasto
+− 228,02 €
+4152550001533191 VUELING AIRLINES PRAT DE LLOBRES PAGO CON TARJETA EN LINEAS AEREAS
+22 jul 2026 · BBVA - ConceptOne
+Gasto
+− 130,98 €
+4152550001533191 ANTTripcom PAGO CON TARJETA EN AGENCIAS DE VIAJE
+29 jun 2026 · BBVA - ConceptOne
+Gasto
+− 285,41 €
+Selecciona un movimiento de la izquierda para conciliarlo.

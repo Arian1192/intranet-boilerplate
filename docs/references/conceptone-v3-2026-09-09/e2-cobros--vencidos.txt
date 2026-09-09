@@ -1,0 +1,393 @@
+<!-- /cobros · chip «Vencidos» — capturado 2026-09-09T11:15:24.187Z (https://bookings.conceptoneagency.com) -->
+Cobros
+
+Lo que deben los promotores. Total y vencimientos salen del plan de pagos; lo cobrado, de las facturas conciliadas en Holded.
+
+Facturar el mes…
+
+SHOWS POR COBRAR
+
+155
+
+PENDIENTE TOTAL
+
+172.489,88 €
+
+FUERA DE PLAZO
+
+126.007,08 €
+
+119 show(s)
+
+VENCE ESTA SEMANA
+
+6421,40 €
+
+9 show(s)
+
+Por show
+155
+Por factura
+79
+Todos
+155
+Vencidos
+119
+Show	ARTISTA	TOTAL	PAGADO	Pendiente	Vencimiento	CLIENTE
+C1-2024-001
+24 ene 2024D+959
+	Bizza	605,00 €	0,00 €	605,00 €	04 ene 2024Vencido · 605,00 €	—
+C1-2024-004
+16 feb 2024D+936
+	Bizza	871,20 €	0,00 €	871,20 €	27 ene 2024Vencido · 871,20 €	—
+C1-2024-005
+24 feb 2024D+928
+	Bizza	871,20 €	0,00 €	871,20 €	04 feb 2024Vencido · 871,20 €	Boig Musical SL
+C1-2024-002
+23 mar 2024D+900
+	Bizza	1016,40 €	0,00 €	1016,40 €	03 mar 2024Vencido · 1016,40 €	—
+C1-2024-006
+01 jun 2024D+830
+	Bizza	726,00 €	0,00 €	726,00 €	12 may 2024Vencido · 726,00 €	—
+Marina Valencia
+09 jun 2024D+822
+	Bizza	1452,00 €	0,00 €	1452,00 €	20 may 2024Vencido · 1452,00 €	—
+C1-2024-009
+04 sept 2024D+735
+	Bizza	1016,40 €	0,00 €	1016,40 €	15 ago 2024Vencido · 1016,40 €	—
+C1-2024-010
+07 sept 2024D+732
+	Bizza	1161,60 €	0,00 €	1161,60 €	18 ago 2024Vencido · 1161,60 €	—
+C1-2024-003
+26 sept 2024D+713
+	Bizza	871,20 €	0,00 €	871,20 €	06 sept 2024Vencido · 871,20 €	—
+SIGHT
+30 mar 2025D+528
+	Bizza	1161,60 €	0,00 €	1161,60 €	10 mar 2025Vencido · 1161,60 €	—
+C1-2025-002
+02 abr 2025D+525
+	Bizza	605,00 €	0,00 €	605,00 €	13 mar 2025Vencido · 605,00 €	—
+IMPULSE
+22 abr 2025D+505
+	Bizza	605,00 €	0,00 €	605,00 €	02 abr 2025Vencido · 605,00 €	—
+C1-2025-004
+25 abr 2025D+502
+	Bizza	1149,50 €	0,00 €	1149,50 €	05 abr 2025Vencido · 1149,50 €	—
+C1-2025-005
+26 jul 2025D+410
+	Bizza	968,00 €	0,00 €	968,00 €	06 jul 2025Vencido · 968,00 €	—
+C1-2025-020
+04 ago 2025D+401
+	Aaron Martin	847,00 €	0,00 €	847,00 €	15 jul 2025Vencido · 847,00 €	—
+C1-2025-006
+08 ago 2025D+397
+	Bizza	2178,00 €	0,00 €	2178,00 €	19 jul 2025Vencido · 2178,00 €	—
+DREAMBEACH FESTIVAL
+09 ago 2025D+396
+	Bizza	871,20 €	0,00 €	871,20 €	20 jul 2025Vencido · 871,20 €	—
+C1-2025-021
+29 ago 2025D+376
+	Aaron Martin	786,50 €	0,00 €	786,50 €	09 ago 2025Vencido · 786,50 €	—
+C1-2025-008
+03 sept 2025D+371
+	Bizza	1210,00 €	0,00 €	1210,00 €	14 ago 2025Vencido · 1210,00 €	—
+C1-2025-009
+05 sept 2025D+369
+	Bizza	1452,00 €	0,00 €	1452,00 €	16 ago 2025Vencido · 1452,00 €	—
+The Garden
+27 sept 2025D+347
+	Aaron Martin	726,00 €	0,00 €	726,00 €	07 sept 2025Vencido · 726,00 €	—
+C1-2025-010
+11 oct 2025D+333
+	Bizza	871,20 €	0,00 €	871,20 €	21 sept 2025Vencido · 871,20 €	—
+C1-2025-023
+11 oct 2025D+333
+	Aaron Martin	1742,40 €	0,00 €	1742,40 €	21 sept 2025Vencido · 1742,40 €	—
+KEDAVRA
+25 oct 2025D+319
+	Bizza	1210,00 €	0,00 €	1210,00 €	05 oct 2025Vencido · 1210,00 €	—
+True Torero
+31 oct 2025D+313
+	Aaron Martin	1210,00 €	0,00 €	1210,00 €	11 oct 2025Vencido · 1210,00 €	—
+C1-2025-012
+31 oct 2025D+313
+	Bizza	1210,00 €	0,00 €	1210,00 €	11 oct 2025Vencido · 1210,00 €	—
+C1-2025-013
+01 nov 2025D+312
+	Bizza	726,00 €	0,00 €	726,00 €	12 oct 2025Vencido · 726,00 €	—
+C1-2025-025
+01 nov 2025D+312
+	Aaron Martin	484,00 €	0,00 €	484,00 €	12 oct 2025Vencido · 484,00 €	—
+Good Taste
+02 nov 2025D+311
+	Bizza	847,00 €	0,00 €	847,00 €	13 oct 2025Vencido · 847,00 €	—
+LOAD
+07 nov 2025D+306
+	Bizza	1161,60 €	0,00 €	1161,60 €	18 oct 2025Vencido · 1161,60 €	—
+C1-2025-026
+14 nov 2025D+299
+	Aaron Martin	847,00 €	0,00 €	847,00 €	25 oct 2025Vencido · 847,00 €	—
+C1-2025-027
+15 nov 2025D+298
+	Aaron Martin	726,00 €	0,00 €	726,00 €	26 oct 2025Vencido · 726,00 €	—
+Dropset x Moya
+15 nov 2025D+298
+	Bizza	726,00 €	0,00 €	726,00 €	26 oct 2025Vencido · 726,00 €	—
+C1-2025-028
+16 nov 2025D+297
+	Aaron Martin	363,00 €	0,00 €	363,00 €	27 oct 2025Vencido · 363,00 €	—
+Silver Room
+21 nov 2025D+292
+	Bizza	968,00 €	0,00 €	968,00 €	01 nov 2025Vencido · 968,00 €	—
+C1-2025-029
+22 nov 2025D+291
+	Aaron Martin	847,00 €	0,00 €	847,00 €	02 nov 2025Vencido · 847,00 €	—
+HIDA OPEN AIR
+23 nov 2025D+290
+	Aaron Martin	605,00 €	0,00 €	605,00 €	03 nov 2025Vencido · 605,00 €	—
+C1-2025-031
+28 nov 2025D+285
+	Aaron Martin	605,00 €	0,00 €	605,00 €	08 nov 2025Vencido · 605,00 €	—
+Roma Eventos
+29 nov 2025D+284
+	Aaron Martin	1089,00 €	0,00 €	1089,00 €	09 nov 2025Vencido · 1089,00 €	—
+Infinity Segundo Aniversario
+19 dic 2025D+264
+	Aaron Martin	1016,40 €	0,00 €	1016,40 €	29 nov 2025Vencido · 1016,40 €	—
+MAR ELECTRONIC FESTIVAL
+20 dic 2025D+263
+	Bizza	726,00 €	0,00 €	726,00 €	30 nov 2025Vencido · 726,00 €	—
+MAR ELECTRONIC FESTIVAL SL
+24 dic 2025D+259
+	Bizza	726,00 €	0,00 €	726,00 €	04 dic 2025Vencido · 726,00 €	—
+SIGHT
+04 ene 2026D+248
+	Bizza	605,00 €	0,00 €	605,00 €	15 dic 2025Vencido · 605,00 €	Lounge Sotavento SL
+Savana
+09 ene 2026D+243
+	Aaron Martin	847,00 €	0,00 €	847,00 €	20 dic 2025Vencido · 847,00 €	—
+C1-2026-184
+24 ene 2026D+228
+	Bizza	1210,00 €	0,00 €	1210,00 €	04 ene 2026Vencido · 1210,00 €	—
+Selva Mallorca
+31 ene 2026D+221
+	Bizza	943,80 €	0,00 €	943,80 €	11 ene 2026Vencido · 943,80 €	—
+C1-2026-186
+14 feb 2026D+207
+	Bizza	1815,00 €	0,00 €	1815,00 €	25 ene 2026Vencido · 1815,00 €	—
+Treze Events
+27 feb 2026D+194
+	Aaron Martin	1089,00 €	0,00 €	1089,00 €	07 feb 2026Vencido · 1089,00 €	—
+C1-2026-188
+28 mar 2026D+165
+	Bizza	1161,60 €	0,00 €	1161,60 €	08 mar 2026Vencido · 1161,60 €	—
+Marina Beach
+17 abr 2026D+145
+	Bizza	1452,00 €	0,00 €	1452,00 €	28 mar 2026Vencido · 1452,00 €	—
+DEXT GONNA GEOOVE
+18 abr 2026D+144
+	Bizza	508,20 €	0,00 €	508,20 €	29 mar 2026Vencido · 508,20 €	—
+C1-2026-191
+25 abr 2026D+137
+	Bizza	968,00 €	0,00 €	968,00 €	05 abr 2026Vencido · 968,00 €	—
+Magnetic People
+08 may 2026D+124
+	Bizza	605,00 €	0,00 €	605,00 €	18 abr 2026Vencido · 605,00 €	—
+Ayahuasca Marbella
+09 may 2026D+123
+	Aaron Martin	605,00 €	0,00 €	605,00 €	19 abr 2026Vencido · 605,00 €	—
+Raw
+23 may 2026D+109
+	Bizza	726,00 €	0,00 €	726,00 €	03 may 2026Vencido · 726,00 €	—
+C1-2026-194
+24 may 2026D+108
+	Bizza	1210,00 €	0,00 €	1210,00 €	04 may 2026Vencido · 1210,00 €	—
+C1-2026-205
+24 may 2026D+108
+	Aaron Martin	1161,60 €	0,00 €	1161,60 €	04 may 2026Vencido · 1161,60 €	—
+C1-2026-206
+31 may 2026D+101
+	Aaron Martin	605,00 €	0,00 €	605,00 €	11 may 2026Vencido · 605,00 €	—
+Kompaz Crew
+05 jun 2026D+96
+	Bizza	605,00 €	0,00 €	605,00 €	16 may 2026Vencido · 605,00 €	—
+Boiler
+06 jun 2026D+95
+	Bizza	1210,00 €	0,00 €	1210,00 €	17 may 2026Vencido · 1210,00 €	—
+C1-2026-197
+10 jun 2026D+91
+	Bizza	726,00 €	0,00 €	726,00 €	21 may 2026Vencido · 726,00 €	—
+Resaca Club
+14 jun 2026D+87
+	Aaron Martin	726,00 €	0,00 €	726,00 €	25 may 2026Vencido · 726,00 €	—
+C1-2026-209
+16 jun 2026D+85
+	Aaron Martin	1452,00 €	0,00 €	1452,00 €	27 may 2026Vencido · 1452,00 €	—
+Cecille Showcase
+17 jun 2026D+84
+	Bizza	968,00 €	0,00 €	968,00 €	28 may 2026Vencido · 968,00 €	—
+WonderMusic 2026
+20 jun 2026D+81
+	Aaron Martin	1331,00 €	0,00 €	1331,00 €	31 may 2026Vencido · 1331,00 €	—
+C1-2026-211
+21 jun 2026D+80
+	Aaron Martin	605,00 €	0,00 €	605,00 €	01 jun 2026Vencido · 605,00 €	—
+C1-2026-199
+17 jul 2026D+54
+	Bizza	968,00 €	0,00 €	968,00 €	27 jun 2026Vencido · 968,00 €	—
+C1-2026-212
+19 jul 2026D+52
+	Aaron Martin	968,00 €	0,00 €	968,00 €	29 jun 2026Vencido · 968,00 €	—
+C1-2026-213
+24 jul 2026D+47
+	Aaron Martin	484,00 €	0,00 €	484,00 €	04 jul 2026Vencido · 484,00 €	—
+Casa del Mar
+01 ago 2026D+39
+	Milan Torne	424,18 €	0,00 €	424,18 €	12 jul 2026Vencido · 424,18 €	Casa De Mar LLC
+Descaro
+06 ago 2026D+34
+	Los Canarios	3206,50 €	0,00 €	3206,50 €	17 jul 2026Vencido · 3206,50 €	—
+More Amor
+18 jul 2026D+53
+	Bizza	1161,60 €	0,00 €	1161,60 €	18 jul 2026Vencido · 1161,60 €	STRATENEX, S.L.
+Homies
+07 ago 2026D+33
+	Pau Guilera	1161,60 €	0,00 €	1161,60 €	18 jul 2026Vencido · 1161,60 €	MAXIMILIANO REGALDO
+C1-2026-088
+08 ago 2026D+32
+	Sera De Villalta	605,00 €	0,00 €	605,00 €	19 jul 2026Vencido · 605,00 €	—
+Ku Barcelona
+09 ago 2026D+31
+	LA CINTIA	1452,00 €	0,00 €	1452,00 €	20 jul 2026Vencido · 1452,00 €	Lounge Sotavento SL
+Sounders
+09 ago 2026D+31
+	Fran Hernandez	1452,00 €	0,00 €	1452,00 €	20 jul 2026Vencido · 1452,00 €	RASET PUERTO S.L.U
+C1-2026-072
+09 ago 2026D+31
+	Aaron Martin	500,00 €	0,00 €	500,00 €	20 jul 2026Vencido · 500,00 €	ECHOM ENTERTAINMENT
+SIGHT
+16 ago 2026D+24
+	Test Artist	1452,00 €	0,00 €	1452,00 €	27 jul 2026Vencido · 1452,00 €	—
+Push Red Room
+20 ago 2026D+20
+	Sebastian Ledher	871,20 €	0,00 €	871,20 €	31 jul 2026Vencido · 871,20 €	Lounge Sotavento SL
+Descaro x Follow
+20 ago 2026D+20
+	Bizza	363,00 €	0,00 €	363,00 €	31 jul 2026Vencido · 363,00 €	—
+C1-2026-136
+23 ago 2026D+17
+	Sebastian Ledher	1210,00 €	0,00 €	1210,00 €	03 ago 2026Vencido · 1210,00 €	—
+Hi, I'm Sci
+24 sept 2026D-15
+	Sebastian Ledher	1500,00 €	744,95 €	755,05 €	03 ago 2026Vencido · 900,00 €	MOONSOUND CO SAS
+C1-2026-137
+26 ago 2026D+14
+	Sera De Villalta	726,00 €	0,00 €	726,00 €	06 ago 2026Vencido · 726,00 €	—
+C1-2026-024
+28 ago 2026D+12
+	ART NO LOGIA	3000,00 €	2459,45 €	540,55 €	08 ago 2026Vencido · 1500,00 €	Lucia SDQ SRL
+Colombia Bogotá Us & Them
+29 ago 2026D+11
+	ART NO LOGIA	2500,00 €	0,00 €	2500,00 €	09 ago 2026Vencido · 2500,00 €	Us & Them
+The Coffe Party
+29 ago 2026D+11
+	Sera De Villalta	1500,00 €	0,00 €	1500,00 €	09 ago 2026Vencido · 1500,00 €	The Coffee Party Inc.
+C1-2026-127
+25 ago 2026D+15
+	Vidaloca	900,00 €	0,00 €	900,00 €	10 ago 2026Vencido · 900,00 €	Tantra Ibiza
+Viuz medellin Colombia
+30 ago 2026D+10
+	ART NO LOGIA	700,00 €	0,00 €	700,00 €	10 ago 2026Vencido · 700,00 €	—
+C1-2026-214
+30 ago 2026D+10
+	Aaron Martin	871,20 €	0,00 €	871,20 €	10 ago 2026Vencido · 871,20 €	—
+Pantheon
+30 ago 2026D+10
+	Marcel BS	907,50 €	0,00 €	907,50 €	10 ago 2026Vencido · 907,50 €	PORE PORE S.L
+C1-2026-121
+24 dic 2026D-106
+	ART NO LOGIA	1800,00 €	0,00 €	1800,00 €	13 ago 2026Vencido · 300,00 €	Eladiopink Inversiones SLU
+Loop
+04 sept 2026D+5
+	Fran Hernandez	847,00 €	423,50 €	423,50 €	15 ago 2026Vencido · 423,50 €	OFFROADSITE, S.L.
+Secret Coffee Party + Afterparty at Whiskey Row
+06 sept 2026D+3
+	Milan Torne	1000,00 €	0,00 €	1000,00 €	17 ago 2026Vencido · 1000,00 €	Brian Montes
+C1-2026-129
+22 ago 2026D+18
+	Milan Torne	1000,00 €	0,00 €	1000,00 €	19 ago 2026Vencido · 1000,00 €	Resident Denver
+House of Ferns
+03 sept 2026D+6
+	Milan Torne	500,00 €	0,00 €	500,00 €	20 ago 2026Vencido · 500,00 €	24k ENT
+UNLOCKED XL
+10 sept 2026D-1
+	Gaston Zani	2178,00 €	0,00 €	2178,00 €	21 ago 2026Vencido · 2178,00 €	EMERGEN-DISC SL
+Echo
+11 sept 2026D-2
+	Marcel BS	600,00 €	0,00 €	600,00 €	22 ago 2026Vencido · 600,00 €	Tamar Gonashvili
+C1-2026-177
+12 sept 2026D-3
+	ART NO LOGIA	871,20 €	0,00 €	871,20 €	23 ago 2026Vencido · 871,20 €	RollerCoaster Group, S.L.
+C1-2026-216
+12 sept 2026D-3
+	ACA	1200,00 €	0,00 €	1200,00 €	23 ago 2026Vencido · 1200,00 €	Asociatia EU SUNT
+C1-2026-174
+12 sept 2026D-3
+	Claudia Tejeda	871,20 €	0,00 €	871,20 €	23 ago 2026Vencido · 871,20 €	RollerCoaster Group, S.L.
+FITZ
+12 sept 2026D-3
+	Los Canarios	2178,00 €	0,00 €	2178,00 €	23 ago 2026Vencido · 2178,00 €	MARBELLA SOUNDS SL
+Sansa
+19 sept 2026D-10
+	Sebastian Ledher	1815,00 €	0,00 €	1815,00 €	28 ago 2026Vencido · 1089,00 €	MUCHO JALEO S.L.
+C1-2026-158
+18 sept 2026D-9
+	Bassel Darwish	2070,00 €	0,00 €	2070,00 €	29 ago 2026Vencido · 2070,00 €	About Music spa
+Senses
+18 sept 2026D-9
+	Claudia Tejeda	1450,00 €	0,00 €	1450,00 €	29 ago 2026Vencido · 1450,00 €	Carlos Andrés Chan Jiménez
+Confirmed - - Sitio
+19 sept 2026D-10
+	Marian Ariss	2000,00 €	0,00 €	2000,00 €	30 ago 2026Vencido · 2000,00 €	CREW SAS
+Zona Groove
+19 sept 2026D-10
+	Claudia Tejeda	1500,00 €	861,10 €	638,90 €	30 ago 2026Vencido · 750,00 €	Matias Jaramillo Moreno
+Pink Cloud
+19 sept 2026D-10
+	Brenda Serna	1936,00 €	387,20 €	1548,80 €	30 ago 2026Vencido · 1936,00 €	Dance Nation SL
+Zona Groove
+19 sept 2026D-10
+	Sera De Villalta	1500,00 €	0,00 €	1500,00 €	30 ago 2026Vencido · 1500,00 €	Matias Jaramillo Moreno
+C1-2026-140
+20 sept 2026D-11
+	Sera De Villalta	300,00 €	0,00 €	300,00 €	31 ago 2026Vencido · 300,00 €	Marco Aedo
+Art Gallery
+12 sept 2026D-3
+	Bassel Darwish	2000,00 €	0,00 €	2000,00 €	03 sept 2026Vencido · 2000,00 €	Axion Inversiones SpA
+WAA!!!
+23 sept 2026D-14
+	Los Canarios	2178,00 €	0,00 €	2178,00 €	03 sept 2026Vencido · 2178,00 €	Opium Mar, S.L.
+C1-2026-138
+26 sept 2026D-17
+	Sera De Villalta	850,00 €	0,00 €	850,00 €	04 sept 2026Vencido · 425,00 €	Nero Club
+Kevin de Vries Cordoba
+25 sept 2026D-16
+	Marian Ariss	1400,00 €	0,00 €	1400,00 €	05 sept 2026Vencido · 1400,00 €	MUZIK DAY AND NIGHT LLC
+Raw
+25 sept 2026D-16
+	Sera De Villalta	500,00 €	0,00 €	500,00 €	05 sept 2026Vencido · 500,00 €	Sociedad de Inversiones RAW spa
+Jiwa
+26 sept 2026D-17
+	ART NO LOGIA	1800,00 €	0,00 €	1800,00 €	06 sept 2026Vencido · 1800,00 €	JIWA WORLD LIMITED
+Kevin de Vries Buenos Aires
+26 sept 2026D-17
+	Marian Ariss	1400,00 €	0,00 €	1400,00 €	06 sept 2026Vencido · 1400,00 €	MUZIK DAY AND NIGHT LLC
+Morenos
+26 sept 2026D-17
+	Claudia Tejeda	1450,00 €	0,00 €	1450,00 €	06 sept 2026Vencido · 1450,00 €	Carlos Andrés Chan Jiménez
+After Brunch
+05 sept 2026D+4
+	Rivellino	580,80 €	0,00 €	580,80 €	07 sept 2026Vencido · 580,80 €	SEI HEI MOON.S.L.U.
+C1-2026-149
+27 sept 2026D-18
+	Los Canarios	2280,00 €	0,00 €	2280,00 €	07 sept 2026Vencido · 2280,00 €	Monkey Beach Parties SL

@@ -1,0 +1,430 @@
+<!-- /cobros · vista «Por factura» — capturado 2026-09-09T11:15:26.485Z (https://bookings.conceptoneagency.com) -->
+Cobros
+
+Lo que deben los promotores. Total y vencimientos salen del plan de pagos; lo cobrado, de las facturas conciliadas en Holded.
+
+Facturar el mes…
+
+SHOWS POR COBRAR
+
+155
+
+PENDIENTE TOTAL
+
+172.489,88 €
+
+FUERA DE PLAZO
+
+126.007,08 €
+
+119 show(s)
+
+VENCE ESTA SEMANA
+
+6421,40 €
+
+9 show(s)
+
+Por show
+155
+Por factura
+79
+CLIENTE / FACTURA
+IMPORTE
+COBRADO
+PENDIENTE
+Dance Nation SLFactura F26580 · 1 show
+2323,20 €
+387,20 €
+1936,00 €
+▾
+SOMNUS GROUP SLFactura F26621 · 1 show
+3630,00 €
+3629,50 €
+0,50 €
+▾
+Matias Jaramillo MorenoFactura F26672 · 1 show
+2620,40 €
+861,10 €
+1759,30 €
+▾
+Punta Piedra Restauración SLFactura F26691 · 1 show
+1452,00 €
+0,00 €
+1452,00 €
+▾
+Lounge Sotavento SLFactura F26697 · 5 shows
+40.535,00 €
+8107,00 €
+32.428,00 €
+▾
+MOONSOUND CO SASFactura F26707 · 1 show
+1346,94 €
+0,00 €
+1346,94 €
+▾
+Lucia SDQ SRLFactura F26712 · 1 show
+2638,83 €
+1298,96 €
+1339,87 €
+▾
+Ayuntamiento Elche de la SierraFactura F26713 · 1 show
+4356,00 €
+2178,00 €
+2178,00 €
+▾
+Vicente Gómez ValderramaFactura F26719 · 1 show
+4356,00 €
+2541,00 €
+1815,00 €
+▾
+CREW SASProforma PRO260246 · 1 show
+1764,84 €
+0,00 €
+1764,84 €
+▾
+Carlos Andrés Chan JiménezProforma PRO260287 · 2 shows
+2634,32 €
+0,00 €
+2634,32 €
+▾
+Alejandro Rodriguez FernandezProforma PRO260298 · 1 show
+1200,00 €
+0,00 €
+1200,00 €
+▾
+This is la fiesta S.L.Proforma PRO260308 · 3 shows
+3194,40 €
+0,00 €
+3194,40 €
+▾
+Recaba Inversiones Turisticas, S.L.Proforma PRO260314 · 1 show
+605,00 €
+0,00 €
+605,00 €
+▾
+PHOENIX NIGHTS S.L.Proforma PRO260315 · 1 show
+1815,00 €
+0,00 €
+1815,00 €
+▾
+Solart Fest SLProforma PRO260322 · 1 show
+2425,03 €
+0,00 €
+2425,03 €
+▾
+Rubén Batista AguileraProforma PRO260325 · 2 shows
+242,00 €
+0,00 €
+242,00 €
+▾
+The Coffee Party Inc.Proforma PRO260327 · 1 show
+1301,55 €
+0,00 €
+1301,55 €
+▾
+LIMBER 1968 SLProforma PRO260336 · 2 shows
+1210,00 €
+0,00 €
+1210,00 €
+▾
+Puerta del Mar y Ocio S.LProforma PRO260340 · 1 show
+434,39 €
+0,00 €
+434,39 €
+▾
+GENESI SRLProforma PRO260345 · 1 show
+900,00 €
+0,00 €
+900,00 €
+▾
+BELABARCE SLProforma PRO260346 · 1 show
+1234,20 €
+0,00 €
+1234,20 €
+▾
+RUBEN VIDAL NOYAProforma PRO260348 · 1 show
+3630,00 €
+0,00 €
+3630,00 €
+▾
+Alvaro Montero SolaProforma PRO260350 · 1 show
+2613,60 €
+0,00 €
+2613,60 €
+▾
+COCOA MUSICA Y ARTE S.L.Proforma PRO260351 · 1 show
+1573,00 €
+0,00 €
+1573,00 €
+▾
+Allin Promotions BVProforma PRO260352 · 1 show
+2178,00 €
+0,00 €
+2178,00 €
+▾
+GLOBO ROSA S.L.Proforma PRO260354 · 0 shows
+2613,60 €
+0,00 €
+2613,60 €
+▾
+Lounge Sotavento SLProforma PRO260356 · 0 shows
+1452,00 €
+0,00 €
+1452,00 €
+▾
+Eladiopink Inversiones SLUProforma PRO260357 · 1 show
+300,00 €
+0,00 €
+300,00 €
+▾
+Francisco LageProforma PRO260358 · 1 show
+2468,40 €
+0,00 €
+2468,40 €
+▾
+Ayuntamiento Elche de la SierraProforma PRO260361 · 1 show
+4356,00 €
+0,00 €
+4356,00 €
+▾
+24k ENTProforma PRO260362 · 1 show
+500,00 €
+0,00 €
+500,00 €
+▾
+Musica, Arte, Innovación y Kreatividad SLProforma PRO260363 · 1 show
+3388,00 €
+0,00 €
+3388,00 €
+▾
+Cristian J. Viloria RomeroProforma PRO260364 · 1 show
+2420,00 €
+0,00 €
+2420,00 €
+▾
+Resident DenverProforma PRO260365 · 1 show
+1000,00 €
+0,00 €
+1000,00 €
+▾
+Axion Inversiones SpAProforma PRO260366 · 1 show
+2000,00 €
+0,00 €
+2000,00 €
+▾
+SW 4 MUSIC SLProforma PRO260367 · 1 show
+302,50 €
+0,00 €
+302,50 €
+▾
+Axion Inversiones SpAProforma PRO260368 · 1 show
+400,00 €
+0,00 €
+400,00 €
+▾
+Erick SierraProforma PRO260369 · 1 show
+800,00 €
+0,00 €
+800,00 €
+▾
+Nero ClubProforma PRO260372 · 1 show
+850,00 €
+0,00 €
+850,00 €
+▾
+Christopher ThomasProforma PRO260373 · 1 show
+1742,40 €
+0,00 €
+1742,40 €
+▾
+EMERGEN-DISC SLProforma PRO260374 · 1 show
+2178,00 €
+0,00 €
+2178,00 €
+▾
+Marco AedoProforma PRO260375 · 1 show
+300,00 €
+0,00 €
+300,00 €
+▾
+Suena Alto SLUProforma PRO260377 · 1 show
+605,00 €
+0,00 €
+605,00 €
+▾
+Suena Alto SLUProforma PRO260378 · 1 show
+605,00 €
+0,00 €
+605,00 €
+▾
+Dinosaurios de la noche SLProforma PRO260379 · 1 show
+1815,00 €
+0,00 €
+1815,00 €
+▾
+Vicente Gómez ValderramaProforma PRO260380 · 1 show
+4356,00 €
+0,00 €
+4356,00 €
+▾
+MUCHO JALEO S.L.Proforma PRO260381 · 1 show
+1815,00 €
+0,00 €
+1815,00 €
+▾
+2M Group Eventos SLProforma PRO260382 · 1 show
+1452,00 €
+0,00 €
+1452,00 €
+▾
+LIMBER 1968 SLProforma PRO260383 · 1 show
+580,80 €
+0,00 €
+580,80 €
+▾
+JUST TREND S.LProforma PRO260384 · 1 show
+1742,40 €
+0,00 €
+1742,40 €
+▾
+Kopas Lanzarote SLProforma PRO260385 · 1 show
+2160,00 €
+0,00 €
+2160,00 €
+▾
+Lounge Sotavento SLProforma PRO260386 · 1 show
+871,20 €
+0,00 €
+871,20 €
+▾
+LA VIDA ES UN FESTIVAL, S.L.Proforma PRO260387 · 1 show
+2400,00 €
+0,00 €
+2400,00 €
+▾
+Alvaro Montero SolaProforma PRO260388 · 1 show
+1210,00 €
+0,00 €
+1210,00 €
+▾
+Monkey Beach Parties SLProforma PRO260389 · 1 show
+2280,00 €
+0,00 €
+2280,00 €
+▾
+Sociedad de Inversiones RAW spaProforma PRO260390 · 1 show
+500,00 €
+0,00 €
+500,00 €
+▾
+CACAO CAOS GROUP SL.Proforma PRO260391 · 1 show
+1742,40 €
+0,00 €
+1742,40 €
+▾
+Eladiopink Inversiones SLUProforma PRO260392 · 1 show
+960,00 €
+0,00 €
+960,00 €
+▾
+MUZIK DAY AND NIGHT LLCProforma PRO260393 · 1 show
+1400,00 €
+0,00 €
+1400,00 €
+▾
+MUZIK DAY AND NIGHT LLCProforma PRO260394 · 1 show
+1400,00 €
+0,00 €
+1400,00 €
+▾
+Carlos Andrés Chan JiménezProforma PRO260395 · 1 show
+360,00 €
+0,00 €
+360,00 €
+▾
+About Music spaProforma PRO260396 · 1 show
+270,00 €
+0,00 €
+270,00 €
+▾
+Carlos Andrés Chan JiménezProforma PRO260397 · 1 show
+360,00 €
+0,00 €
+360,00 €
+▾
+Brian MontesProforma PRO260398 · 1 show
+1000,00 €
+0,00 €
+1000,00 €
+▾
+Victor Hugo Montero GadeaProforma PRO260403 · 1 show
+1200,00 €
+0,00 €
+1200,00 €
+▾
+MARBELLA SOUNDS SLProforma PRO260404 · 1 show
+2178,00 €
+0,00 €
+2178,00 €
+▾
+Sarta SRLProforma PRO260405 · 1 show
+1300,00 €
+0,00 €
+1300,00 €
+▾
+Victor Hugo Montero GadeaProforma PRO260406 · 1 show
+800,00 €
+0,00 €
+800,00 €
+▾
+RollerCoaster Group, S.L.Proforma PRO260407 · 1 show
+871,20 €
+0,00 €
+871,20 €
+▾
+RollerCoaster Group, S.L.Proforma PRO260408 · 1 show
+871,20 €
+0,00 €
+871,20 €
+▾
+LA VIDA ES UN FESTIVAL, SLProforma PRO260409 · 1 show
+240,00 €
+0,00 €
+240,00 €
+▾
+LA VIDA ES UN FESTIVAL, SLProforma PRO260410 · 1 show
+871,20 €
+0,00 €
+871,20 €
+▾
+HOTEL L'AVENTUREProforma PRO260414 · 1 show
+1000,00 €
+0,00 €
+1000,00 €
+▾
+Carlos Andrés Chan JiménezProforma PRO260415 · 1 show
+2200,00 €
+0,00 €
+2200,00 €
+▾
+SEI HEI MOON.S.L.U.Proforma PRO260416 · 1 show
+580,80 €
+0,00 €
+580,80 €
+▾
+Asociatia EU SUNTProforma PRO260417 · 1 show
+1572,32 €
+0,00 €
+1572,32 €
+▾
+Luis Antonio Montilla GutierrezProforma PRO260418 · 1 show
+480,00 €
+0,00 €
+480,00 €
+▾
+Ruben Gomez SeguraProforma PRO260419 · 1 show
+1742,40 €
+0,00 €
+1742,40 €
+▾
