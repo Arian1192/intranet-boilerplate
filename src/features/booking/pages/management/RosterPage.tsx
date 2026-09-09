@@ -62,9 +62,13 @@ export function RosterPage() {
           value={busqueda}
           onChange={(e) => setBusqueda(e.target.value)}
         />
-        <span className="ml-auto text-xs text-slate-400">
-          {visibles.length} artistas del roster
-        </span>
+        {/*
+          El contador es del conjunto, no de lo filtrado: en la pantalla hermana
+          (/management/insights) está medido que no cambia al filtrar. Aquí no se
+          ha podido medir —haría falta teclear en el live y la regla de
+          solo-lectura lo prohíbe—, así que se sigue a la hermana.
+        */}
+        <span className="ml-auto text-xs text-slate-400">{roster.length} artistas del roster</span>
       </div>
 
       <div className="card overflow-hidden p-0">

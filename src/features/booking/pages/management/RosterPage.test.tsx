@@ -65,6 +65,7 @@ describe('RosterPage — calco del live', () => {
     render(<RosterPage />);
     await usuario.type(screen.getByPlaceholderText('Buscar artista…'), 'bizza');
     expect(screen.getAllByRole('row')).toHaveLength(2);
-    expect(screen.getByText('1 artistas del roster')).toBeInTheDocument();
+    // El contador es del conjunto y no se mueve, como en /management/insights.
+    expect(screen.getByText('41 artistas del roster')).toBeInTheDocument();
   });
 });
