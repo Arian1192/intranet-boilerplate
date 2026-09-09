@@ -1,0 +1,1247 @@
+ConceptOne
+Añadir show
+BOOKINGS
+Dashboard
+Shows
+Tours
+Ofertas
+Cobros
+Gastos
+Liquidaciones
+Disponibilidad
+Calendario
+Contactos
+MANAGEMENT
+Roster
+Insights
+Estrategias
+Contratos
+Activaciones
+Campañas
+Content
+Incidencias
+MÁS
+Roster
+Análisis
+Ajustes
+Black Moose
+Pendientes
+Modo noche
+Ayuda
+9+
+Notificaciones
+T
+testadmin
+Shows
+
+87 shows
+
+Solo futuros
+Última semana → Todo el futuro
+Filtros
+Hecho
+En curso / pendiente
+Sin empezar
+Atención · avanzando con un requisito bloqueante sin resolver
+03
+SEP
+Milan Torne @ House of Ferns
+Pagos
+C1-2026-130
+· Red Room, USA
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+500,00 US$
+Sin cobrar
+03
+SEP
+Los Canarios @ Tentative - Playa de las Américas - Papagayo Tenerife - FOLLOW PRESENTA LOS CANARIOS
+Sin gestión
+C1-2026-057
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+04
+SEP
+Brenda Serna @ Alcazar de San Juan
+Cerrado
+C1-2026-005
+· Alcazar de San Juan, España
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+2500,00 €
+Liquidado
+04
+SEP
+Londonground @ Confirmed - Eivissa - Tantra Ibiza
+Tentative
+C1-2026-166
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+0,00 €
+No facturado
+04
+SEP
+Fran Hernandez @ Loop
+Tentative
+C1-2026-168
+· Maya Benicassim, España
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+700,00 €
+Cobro parcial
+05
+SEP
+Sebastian Ledher @ La Sagrada
+Liquidación
+C1-2026-084
+· CDLC, España
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+1800,00 €
+Cobrado
+05
+SEP
+Abdon @ Kova Beach Club
+Liquidación
+C1-2026-146
+· Kova Beach Club, España
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+1200,00 €
+Cobrado
+05
+SEP
+Rivellino @ After Brunch
+Pagos
+C1-2026-215
+· INPUT High Fidelity, España
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+400,00 €
+Sin cobrar
+05
+SEP
+Bizza @ KŌDŌ
+Contrato
+C1-2026-039
+· Lío Ibiza, España
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+500,00 €
+Cobrado
+05
+SEP
+Brenda Serna @ Pandora
+Liquidación
+C1-2026-064
+· Pandora, España
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+2000,00 €
+Cobrado
+05
+SEP
+ART NO LOGIA @ Panorama
+Liquidación
+C1-2026-115
+· El Cortijo Cádiz, España
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+1500,00 €
+Cobrado
+05
+SEP
+Tomi & Kesh @ Santa Fe de la Vera Cruz - Hub
+Sin gestión
+C1-2026-169
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+05
+SEP
+Los Canarios @ Kodo
+Liquidación
+C1-2026-058
+· Lío Ibiza, España
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+500,00 €
+Cobrado
+06
+SEP
+Sera De Villalta @ Sunwaves
+Contrato
+C1-2026-135
+· Roquetes de Mar, España
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+250,00 €
+Sin cobrar
+06
+SEP
+Tomi & Kesh @ Confirmed - Cdad. Autónoma de Buenos Aires - The BOW - Rio electronic
+Sin gestión
+C1-2026-124
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+06
+SEP
+DH Moon @ Pantheon
+Cancelado
+C1-2026-116
+· Cova Santa, España
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+1000,00 €
+Cancelado
+06
+SEP
+Milan Torne @ Secret Coffee Party + Afterparty at Whiskey Row
+Contrato
+C1-2026-151
+· Larimer Square, Estados Unidos
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+1000,00 US$
+Sin cobrar
+10
+SEP
+Gaston Zani @ UNLOCKED XL
+Contrato
+C1-2026-117
+· Terminal, España
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+1500,00 €
+Sin cobrar
+10
+SEP
+Los Canarios @ Tentative - Playa de las Américas - Papagayo Tenerife - FOLLOW PRESENTA LOS CANARIOS
+Sin gestión
+C1-2026-059
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+11
+SEP
+Marcel BS @ Echo
+Tentative
+C1-2026-062
+· King David's Hotel, Georgia
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+600,00 €
+No facturado
+11
+SEP
+Milan Torne @ Continental Bar Lounge Patio
+Tentative
+C1-2026-218
+· Continental Bar Lounge Patio, Estados Unidos
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+500,00 US$
+No facturado
+11
+SEP
+Pau Guilera @ La Guasa
+Contrato
+C1-2026-145
+· Sea Sea Club, España
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+400,00 €
+Sin cobrar
+11
+SEP
+Tomi & Kesh @ Confirmed - Itagüí, Itagüi - VIUZ
+Sin gestión
+C1-2026-171
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+11
+SEP
+ACA @ Secret Sessions Eden
+Sin gestión
+C1-2026-119
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+12
+SEP
+Abdon @ Bossa Playa
+Tentative
+C1-2026-179
+· Bossa Playa, España
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+0,00 €
+No facturado
+12
+SEP
+ACA @ Alba Lulia
+Contrato
+C1-2026-216
+· Alba Lulia, Rumanía
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+1000,00 €
+Falta recuperar
+12
+SEP
+ART NO LOGIA @ POP CAAC
+Contrato
+C1-2026-177
+· POP CAAC, España
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+600,00 €
+Sin cobrar
+12
+SEP
+Claudia Tejeda @ POP CAAC
+Contrato
+C1-2026-174
+· POP CAAC, España
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+600,00 €
+Sin cobrar
+12
+SEP
+Los Canarios @ FITZ
+Pagos
+C1-2026-173
+· Fitz Marbella, España
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+1500,00 €
+Falta recuperar
+12
+SEP
+Freddy Bello @ CACAO
+Pagos
+C1-2026-154
+· Luz de Gas, España
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+1200,00 €
+Cobrado
+12
+SEP
+ART NO LOGIA @ Pandora Sevilla
+Pagos
+C1-2026-178
+· Pandora Sevilla, España
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+600,00 €
+Sin cobrar
+12
+SEP
+Claudia Tejeda @ Pandora Sevilla
+Contrato
+C1-2026-175
+· Pandora Sevilla, España
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+200,00 €
+Sin cobrar
+12
+SEP
+Bassel Darwish @ Art Gallery
+Pagos
+C1-2026-133
+· Club Room, Chile
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+2000,00 US$
+Sin cobrar
+13
+SEP
+Londonground @ brunch
+Tentative
+C1-2026-167
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+0,00 €
+No facturado
+16
+SEP
+ACA @ Tentative - - Paradise UNVRS
+Sin gestión
+C1-2026-208
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+16
+SEP
+Brenda Serna @ Elx al Carrer
+Pagos
+C1-2026-065
+· Carpas de Elche, España
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+3000,00 €
+Cobrado
+18
+SEP
+Claudia Tejeda @ Senses
+Contrato
+C1-2026-160
+· Zouk, Costa Rica
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+1450,00 US$
+Sin cobrar
+18
+SEP
+Bassel Darwish @ el Tebo
+● Excepción
+Pagos
+C1-2026-158
+· el Tebo, Chile
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+1800,00 US$
+Sin cobrar
+18
+SEP
+Sergio Saffe @ el Tebo
+Tentative
+C1-2026-013
+· el Tebo, Chile
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+1000,00 US$
+No facturado
+18
+SEP
+Sebastian Ledher @ Polianka-Puntapiedra
+Cancelado
+C1-2026-043
+· Puntapiedra, España
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+1500,00 €
+Cancelado
+19
+SEP
+Marian Ariss @ Confirmed - - Sitio
+Pagos
+C1-2026-176
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+2000,00 US$
+Sin cobrar
+19
+SEP
+Marcel BS @ L'Aventure Paris
+Pagos
+C1-2026-163
+· Hotel l'Aventure, Francia
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+1000,00 €
+Sin cobrar
+19
+SEP
+ART NO LOGIA @ Confirmed - București - Medusa Universe
+Pagos
+C1-2026-180
+· Medusa Universe, Rumanía
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+1500,00 €
+Sin cobrar
+19
+SEP
+Sera De Villalta @ Zona Groove
+Tentative
+C1-2026-141
+· Piket’ando, Colombia
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+1500,00 US$
+Sin cobrar
+19
+SEP
+Claudia Tejeda @ Zona Groove
+Tentative
+C1-2026-201
+· Piket’ando, Colombia
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+1500,00 US$
+Cobro parcial
+19
+SEP
+Brenda Serna @ Pink Cloud
+Contrato
+C1-2026-081
+· Hotel el Bruc, España
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+1600,00 €
+Sin cobrar
+19
+SEP
+Tomi & Kesh @ Confirmed - São Paulo - We Are Sun
+Sin gestión
+C1-2026-172
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+19
+SEP
+Sebastian Ledher @ Sansa
+Pagos
+C1-2026-143
+· Club Varadero, España
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+1500,00 €
+Sin cobrar
+20
+SEP
+Sera De Villalta @ Substance
+● Excepción
+Contrato
+C1-2026-140
+· Substance, Chile
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+300,00 US$
+Sin cobrar
+23
+SEP
+Los Canarios @ WAA!!!
+Tentative
+C1-2026-067
+· Opium Barcelona, España
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+1500,00 €
+No facturado
+24
+SEP
+Sebastian Ledher @ Hi, I'm Sci
+Pagos
+C1-2026-044
+· Hi I'm Sci, Colombia
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+1500,00 US$
+Sin cobrar
+25
+SEP
+Marian Ariss @ Kevin de Vries Cordoba
+Contrato
+C1-2026-016
+· La Fábrica, Argentina
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+1400,00 US$
+Sin cobrar
+25
+SEP
+Sera De Villalta @ Raw
+Pagos
+C1-2026-152
+· Raw, Chile
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+500,00 US$
+Sin cobrar
+26
+SEP
+ART NO LOGIA @ Jiwa
+Confirmado
+C1-2026-011
+· Boho Beer Garden, Reino Unido
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+1800,00 €
+No facturado
+26
+SEP
+Marian Ariss @ Kevin de Vries Buenos Aires
+Contrato
+C1-2026-017
+· Mandarine Park, Argentina
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+1400,00 US$
+Sin cobrar
+26
+SEP
+Sera De Villalta @ Nero Club
+Pagos
+C1-2026-138
+· Nero Club, Peru
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+850,00 US$
+Sin cobrar
+26
+SEP
+Claudia Tejeda @ Morenos
+Tentative
+C1-2026-200
+· Palio Sabana, Costa Rica
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+1450,00 US$
+Sin cobrar
+27
+SEP
+Los Canarios @ Monkey Beach Club
+Contrato
+C1-2026-149
+· Monkey Beach Club, España
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+1900,00 €
+Sin cobrar
+27
+SEP
+Abdon @ SIGHT x Pantheon
+Pagos
+C1-2026-048
+· Cova Santa, España
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+1000,00 €
+No facturado
+02
+OCT
+Sera De Villalta @ Event Garden
+Contrato
+C1-2026-181
+· Event Garden, Ecuador
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+1000,00 US$
+No facturado
+02
+OCT
+Bassel Darwish @ Senses
+Tentative
+C1-2026-159
+· Zouk, Costa Rica
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+1800,00 US$
+Sin cobrar
+02
+OCT
+DH Moon @ 100 Room
+Contrato
+C1-2026-165
+· 100 puerto madero, Argentina
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+1300,00 US$
+Sin cobrar
+02
+OCT
+Jose Fajardo @ Baila Ritmo
+Contrato
+C1-2026-123
+· Goya, España
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+1700,00 €
+Sin cobrar
+03
+OCT
+Bizza @ La Guasa
+Tentative
+C1-2026-041
+· Cova Santa, España
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+0,00 €
+No facturado
+03
+OCT
+Sera De Villalta @ Lost City
+Contrato
+C1-2026-223
+· Lost City, Ecuador
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+400,00 US$
+Sin cobrar
+03
+OCT
+Bassel Darwish @ Palio Sabana
+Contrato
+C1-2026-157
+· Palio Sabana, Costa Rica
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+1800,00 US$
+Sin cobrar
+03
+OCT
+Pau Guilera @ LA Guasa
+Tentative
+C1-2026-030
+· Cova Santa, España
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+0,00 €
+No facturado
+09
+OCT
+O
+Olivia Bass @ NIX
+Pagos
+C1-2026-220
+· NIX, España
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+1200,00 €
+Sin cobrar
+09
+OCT
+ART NO LOGIA @ Chili Taste
+Tentative
+C1-2026-164
+· Sala Omnium, Chile
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+1725,00 US$
+No facturado
+09
+OCT
+Aaron Martin @ Confirmed - Valencia - Marina Beach Club
+Tentative
+C1-2026-156
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+0,00 €
+No facturado
+10
+OCT
+Aaron Martin @ Sala Sonora Bilbao
+Tentative
+C1-2026-222
+· Sala Sonora Bilbao, España
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+500,00 €
+No facturado
+11
+OCT
+Aaron Martin @ BRO MÁLAGA
+Tentative
+C1-2026-217
+· BRO MÁLAGA, España
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+800,00 €
+No facturado
+11
+OCT
+Sera De Villalta @ BRO MÁLAGA
+Confirmado
+C1-2026-219
+· BRO MÁLAGA, España
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+600,00 €
+No facturado
+16
+OCT
+ART NO LOGIA @ Confusión
+Contrato
+C1-2026-162
+· Modo Caracas, Venezuela
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+2000,00 US$
+Sin cobrar
+17
+OCT
+ART NO LOGIA @ Zouk CR
+Contrato
+C1-2026-182
+· Zouk CR, Costa Rica
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+2200,00 US$
+Sin cobrar
+23
+OCT
+Claudia Tejeda @ Tormenta
+Contrato
+C1-2026-139
+· El Sotano, España
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+1200,00 €
+Sin cobrar
+30
+OCT
+Vidaloca @ Lula Club
+Tentative
+C1-2026-221
+· Lula Club, España
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+600,00 €
+Falta recuperar
+31
+OCT
+Bizza @ CIRQ Club
+Tentative
+C1-2026-042
+· CIRQ Club, Italia
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+0,00 €
+No facturado
+31
+OCT
+Brenda Serna @ NON Disco
+Pagos
+C1-2026-071
+· NON the Club, España
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+2500,00 €
+Cobro parcial
+14
+NOV
+Bizza @ Industrial Copera
+Tentative
+C1-2026-153
+· Industrial Copera, España
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+600,00 €
+No facturado
+27
+NOV
+Freddy Bello @ Klandestino
+Pagos
+C1-2026-073
+· Independence Club, España
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+2000,00 €
+Cobro parcial
+05
+DIC
+Los Canarios @ Kopas
+Tentative
+C1-2026-147
+· Kopas
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+1800,00 €
+Sin cobrar
+19
+DIC
+Freddy Bello @ Sanpapaclub
+Pagos
+C1-2026-144
+· LAB, España
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+1000,00 €
+Sin cobrar
+24
+DIC
+O
+Olivia Bass @ OASIS
+Contrato
+C1-2026-155
+· Oasis, España
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+800,00 €
+Sin cobrar
+24
+DIC
+ART NO LOGIA @ Oasis
+Contrato
+C1-2026-121
+· Oasis, España
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+1500,00 €
+Sin cobrar
+24
+DIC
+Tomi & Kesh @ Confirmed - Stuttgart - Waranga - Heiliger Morgen
+Sin gestión
+C1-2026-134
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+—
+Andrea Castells @ Sephora Opening
+Tentative
+C1-2026-007
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+2000,00 €
+No facturado
+Chat · ConceptOne
+
+El fee va en la moneda del deal
+
+Si el acuerdo es en dólares, se guarda en dólares y se convierte con el tipo de cambio del show. Meter el equivalente en euros a mano hace que la liquidación no cuadre.
+
+Cerrar gastos es lo que congela la liquidación
+
+Mientras no cierres gastos, la cifra sigue moviéndose. Ciérralos cuando el show haya pasado y tengas todas las facturas.
+
+Enviar
+Reportar con captura
+Mis avisos

@@ -1,0 +1,46 @@
+{
+  "side": {
+    "width": "58px",
+    "backgroundColor": "rgb(255, 255, 255)",
+    "borderRight": "1px solid rgb(234, 234, 242)",
+    "color": "rgb(30, 41, 59)",
+    "padding": "12px 9px 10px",
+    "position": "fixed",
+    "top": "0px",
+    "height": "1000px"
+  },
+  "shellBg": {
+    "backgroundColor": "rgb(245, 245, 250)",
+    "color": "rgb(30, 41, 59)"
+  },
+  "itemOn": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(91, 75, 232)",
+    "fontWeight": "600",
+    "fontSize": "13.5px",
+    "borderRadius": "9px",
+    "padding": "6px 9px",
+    "gap": "11px",
+    "height": "32.25px"
+  },
+  "itemOff": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(107, 107, 128)",
+    "fontWeight": "500",
+    "fontSize": "13.5px",
+    "borderRadius": "9px",
+    "padding": "6px 9px",
+    "gap": "11px",
+    "height": "32.25px"
+  },
+  "cap": {
+    "color": "rgb(107, 107, 128)",
+    "fontSize": "9.5px",
+    "fontWeight": "600",
+    "letterSpacing": "0.76px",
+    "textTransform": "uppercase",
+    "padding": "9px 9px 2px",
+    "margin": "0px"
+  },
+  "rootVars": ""
+}

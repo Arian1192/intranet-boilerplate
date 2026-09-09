@@ -1,0 +1,113 @@
+ConceptOne
+Añadir show
+BOOKINGS
+Dashboard
+Shows
+Tours
+Ofertas
+Cobros
+Gastos
+Liquidaciones
+Disponibilidad
+Calendario
+Contactos
+MANAGEMENT
+Roster
+Insights
+Estrategias
+Contratos
+Activaciones
+Campañas
+Content
+Incidencias
+MÁS
+Roster
+Análisis
+Ajustes
+Black Moose
+Pendientes
+Modo noche
+Ayuda
+9+
+Notificaciones
+T
+testadmin
+Campañas
+
+Inversión en marketing por canal. La del artista es la que cuenta para el retorno.
+
++ Nueva campaña
+INVERSIÓN DEL ARTISTA
+1150,00 €
+Gasto real (payer artista/compartido)
+PRESUPUESTO ACTIVO
+450,00 €
+Aprobadas + activas
+CAMPAÑAS ACTIVAS
+1
+Todos los artistas
+Todos los canales
+Todos los estados
+11 campañas
+CAMPAÑA	CANAL	ESTADO	PAGA	GASTO / PRESUPUESTO
+
+Campaña de aumento de suscriptores en YouTube
+Abdon · 17 sept 2026	Otro	Aprobada	Artista	
+0,00 € / 75,00 €
+
+
+YouTube: Suscriptores al canal
+DH Moon · 17 sept 2026	Google Ads	Propuesta	Artista	
+0,00 € / 150,00 €
+
+
+YouTube: Visualizaciones sobre Tantra Liveset
+DH Moon · 10 sept 2026	Google Ads	Propuesta	Artista	
+0,00 € / 50,00 €
+
+
+Campaña de Views en YouTube set COVA SANTA
+Abdon · 10 sept 2026	Google Ads	Aprobada	Artista	
+0,00 € / 100,00 €
+
+
+Campaña de aumento de seguidores - Meta (Instagram)
+Abdon · 10 sept 2026	Meta Ads	Aprobada	Artista	
+0,00 € / 75,00 €
+
+
+Campaña lanzamiento 'Favela'
+Claudia Tejeda · 04 sept 2026	Meta Ads	Propuesta	Artista	
+850,00 € / 0,00 €
+
+
+Campaña general Bizza
+Bizza · 02 sept 2026	Otro	Activa	Agencia	
+0,00 € / 0,00 €
+
+
+Campaña lanzamiento 'Wild Groove'
+Claudia Tejeda · 27 ago 2026	Playlisting	Aprobada	Artista	
+300,00 € / 0,00 €
+
+
+Campaña General para EU
+Gaston Zani · 26 ago 2026	Meta Ads	Aprobada	Compartido	
+0,00 € / 200,00 €
+
+
+Hey Mami - Spotify Streams + YouTube Views
+DH Moon	Otro	Propuesta	Artista	
+0,00 € / 0,00 €
+
+
+Campaña EP c/Bizza "ABC" y "Club Fiction" EP (TBC date and EP name)
+Fran Hernandez	Otro	Propuesta	Artista	
+0,00 € / 0,00 €
+Chat
+
+Pregunta lo que quieras de esta pantalla, o cuenta qué está fallando.
+
+Enviar
+Reportar con captura
+Mis avisos

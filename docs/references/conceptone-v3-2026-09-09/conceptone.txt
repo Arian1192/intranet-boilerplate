@@ -1,0 +1,493 @@
+ConceptOne
+Añadir show
+BOOKINGS
+Dashboard
+Shows
+Tours
+Ofertas
+Cobros
+Gastos
+Liquidaciones
+Disponibilidad
+Calendario
+Contactos
+MANAGEMENT
+Roster
+Insights
+Estrategias
+Contratos
+Activaciones
+Campañas
+Content
+Incidencias
+MÁS
+Roster
+Análisis
+Ajustes
+Black Moose
+Pendientes
+Modo noche
+Ayuda
+9+
+Notificaciones
+T
+testadmin
+Dashboard
+Ir a todos los shows
+→
+TENTATIVE
+70.479,07 €· 100
+CONFIRMADO
+14.100,56 €· 16
+CONTRATO
+30.905,46 €· 28
+PENDIENTE COBRO
+32.473,28 €· 27
+PENDIENTE LIQUIDAR
+24.250,00 €· 19
+CERRADO
+31.350,00 €· 23
+NOVEDADES
+Lo que hacen los promotores con sus correos y contratos
+Bassel Darwish · Francisco Guzman firmó su parte
+hoy a las 04:02 · C1-2026-158
+Bassel Darwish · Contrato firmado por todas las partes
+hoy a las 04:02 · C1-2026-158
+Bassel Darwish · Francisco Guzman empezó a firmar
+hoy a las 04:02 · C1-2026-158
+Bassel Darwish · Francisco Guzman abrió el contrato
+hoy a las 04:02 · C1-2026-158
+Sera De Villalta · Christin Exantus abrió el contrato
+ayer a las 22:44 · C1-2026-181
+ART NO LOGIA · Victor Hugo Montero Gadea abrió el contrato
+ayer a las 17:48 · C1-2026-162
+Olivia Bass · Ruben Gomez Segura firmó su parte
+ayer a las 14:18 · C1-2026-220
+Olivia Bass · Contrato firmado por todas las partes
+ayer a las 14:18 · C1-2026-220
+Olivia Bass · Ruben Gomez Segura empezó a firmar
+ayer a las 14:18 · C1-2026-220
+Olivia Bass · Ruben Gomez Segura abrió el contrato
+ayer a las 14:18 · C1-2026-220
+Sera De Villalta · Contrato enviado a firmar
+ayer a las 11:16 · C1-2026-181
+Olivia Bass · Contrato enviado a firmar
+ayer a las 10:57 · C1-2026-220
+Sera De Villalta · Contrato enviado a firmar
+ayer a las 10:46 · C1-2026-223
+Sera De Villalta · Randy anael mundaca Valera firmó su parte
+7/9 a las 20:54 · C1-2026-138
+Sera De Villalta · Contrato firmado por todas las partes
+7/9 a las 20:54 · C1-2026-138
+ADVANCING
+· Contrato · pagos · detalles
+40
+D-1
+10/09/26
+Gaston Zani @ UNLOCKED XL
+Sin firmar
+Pago pendiente
+D-2
+11/09/26
+Pau Guilera @ La Guasa
+Sin firmar
+Pago pendiente
+D-3
+12/09/26
+Bassel Darwish @ Art Gallery
+Pago pendiente
+D-3
+12/09/26
+Claudia Tejeda @ Pandora Sevilla
+Sin firmar
+Pago pendiente
+D-3
+12/09/26
+ART NO LOGIA @ Pandora Sevilla
+Pago pendiente
+D-3
+12/09/26
+Claudia Tejeda @ POP CAAC
+Sin firmar
+Pago pendiente
+D-3
+12/09/26
+Los Canarios @ FITZ
+Pago pendiente
+D-3
+12/09/26
+ACA @ Alba Lulia
+Sin firmar
+Pago pendiente
+D-3
+12/09/26
+ART NO LOGIA @ POP CAAC
+Sin firmar
+Pago pendiente
+D-9
+18/09/26
+Claudia Tejeda @ Senses
+Sin firmar
+Pago pendiente
+D-9
+18/09/26
+Bassel Darwish @ el Tebo
+Pago pendiente
+D-10
+19/09/26
+Marian Ariss @ Confirmed - - Sitio
+Pago pendiente
+D-10
+19/09/26
+Brenda Serna @ Pink Cloud
+Sin firmar
+Pago pendiente
+D-10
+19/09/26
+ART NO LOGIA @ Confirmed - București - Medusa Universe
+Pago pendiente
+D-10
+19/09/26
+Sebastian Ledher @ Sansa
+Pago pendiente
+D-10
+19/09/26
+Marcel BS @ L'Aventure Paris
+Pago pendiente
+D-11
+20/09/26
+Sera De Villalta @ Substance
+Sin firmar
+Pago pendiente
+D-15
+24/09/26
+Sebastian Ledher @ Hi, I'm Sci
+Pago pendiente
+D-16
+25/09/26
+Marian Ariss @ Kevin de Vries Cordoba
+Sin firmar
+Pago pendiente
+D-16
+25/09/26
+Sera De Villalta @ Raw
+Pago pendiente
+D-17
+26/09/26
+ART NO LOGIA @ Jiwa
+Sin firmar
+Pago pendiente
+D-17
+26/09/26
+Sera De Villalta @ Nero Club
+Pago pendiente
+D-17
+26/09/26
+Marian Ariss @ Kevin de Vries Buenos Aires
+Sin firmar
+Pago pendiente
+D-18
+27/09/26
+Abdon @ SIGHT x Pantheon
+Pago pendiente
+D-18
+27/09/26
+Los Canarios @ Monkey Beach Club
+Sin firmar
+Pago pendiente
+D-23
+02/10/26
+Sera De Villalta @ Event Garden
+Sin firmar
+Pago pendiente
+D-23
+02/10/26
+DH Moon @ 100 Room
+Sin firmar
+Pago pendiente
+D-23
+02/10/26
+Jose Fajardo @ Baila Ritmo
+Sin firmar
+Pago pendiente
+D-24
+03/10/26
+Bassel Darwish @ Palio Sabana
+Sin firmar
+Pago pendiente
+D-24
+03/10/26
+Sera De Villalta @ Lost City
+Sin firmar
+Pago pendiente
+D-30
+09/10/26
+O
+Olivia Bass @ NIX
+Pago pendiente
+D-32
+11/10/26
+Sera De Villalta @ BRO MÁLAGA
+Sin firmar
+Pago pendiente
+D-37
+16/10/26
+ART NO LOGIA @ Confusión
+Sin firmar
+Pago pendiente
+D-38
+17/10/26
+ART NO LOGIA @ Zouk CR
+Sin firmar
+Pago pendiente
+D-44
+23/10/26
+Claudia Tejeda @ Tormenta
+Sin firmar
+Pago pendiente
+D-52
+31/10/26
+Brenda Serna @ NON Disco
+Pago pendiente
+D-79
+27/11/26
+Freddy Bello @ Klandestino
+Pago pendiente
+D-101
+19/12/26
+Freddy Bello @ Sanpapaclub
+Pago pendiente
+D-106
+24/12/26
+O
+Olivia Bass @ OASIS
+Sin firmar
+Pago pendiente
+D-106
+24/12/26
+ART NO LOGIA @ Oasis
+Sin firmar
+Pago pendiente
+LOGÍSTICA
+· Itinerario · vuelos · set times
+41
+D-1
+10/09/26
+Gaston Zani @ UNLOCKED XL
+Vuelos pendientes
+D-2
+11/09/26
+Pau Guilera @ La Guasa
+Sin itinerario
+Sin set times
+D-3
+12/09/26
+Bassel Darwish @ Art Gallery
+Sin itinerario
+Sin set times
+D-3
+12/09/26
+Claudia Tejeda @ Pandora Sevilla
+Sin itinerario
+D-3
+12/09/26
+ART NO LOGIA @ Pandora Sevilla
+Sin itinerario
+D-3
+12/09/26
+Claudia Tejeda @ POP CAAC
+Sin itinerario
+D-3
+12/09/26
+Los Canarios @ FITZ
+Sin itinerario
+Gastos abiertos
+D-3
+12/09/26
+Freddy Bello @ CACAO
+Sin itinerario
+Sin set times
+D-3
+12/09/26
+ART NO LOGIA @ POP CAAC
+Sin itinerario
+D-7
+16/09/26
+Brenda Serna @ Elx al Carrer
+Sin itinerario
+Sin set times
+D-9
+18/09/26
+Claudia Tejeda @ Senses
+Sin itinerario
+Sin set times
+D-9
+18/09/26
+Bassel Darwish @ el Tebo
+Sin itinerario
+Sin set times
+D-10
+19/09/26
+Marian Ariss @ Confirmed - - Sitio
+Sin itinerario
+Sin set times
+D-10
+19/09/26
+Brenda Serna @ Pink Cloud
+Sin itinerario
+Sin set times
+Gastos abiertos
+D-10
+19/09/26
+ART NO LOGIA @ Confirmed - București - Medusa Universe
+Sin itinerario
+Sin set times
+D-10
+19/09/26
+Sebastian Ledher @ Sansa
+Sin itinerario
+D-10
+19/09/26
+Marcel BS @ L'Aventure Paris
+Sin set times
+Gastos abiertos
+D-11
+20/09/26
+Sera De Villalta @ Substance
+Sin itinerario
+Sin set times
+D-15
+24/09/26
+Sebastian Ledher @ Hi, I'm Sci
+Sin itinerario
+D-16
+25/09/26
+Marian Ariss @ Kevin de Vries Cordoba
+Sin itinerario
+D-16
+25/09/26
+Sera De Villalta @ Raw
+Sin itinerario
+D-17
+26/09/26
+ART NO LOGIA @ Jiwa
+Sin itinerario
+Gastos abiertos
+D-17
+26/09/26
+Sera De Villalta @ Nero Club
+Sin itinerario
+Sin set times
+D-17
+26/09/26
+Marian Ariss @ Kevin de Vries Buenos Aires
+Sin itinerario
+D-18
+27/09/26
+Abdon @ SIGHT x Pantheon
+Sin itinerario
+D-18
+27/09/26
+Los Canarios @ Monkey Beach Club
+Sin itinerario
+Sin set times
+D-23
+02/10/26
+Sera De Villalta @ Event Garden
+Sin itinerario
+Sin set times
+D-23
+02/10/26
+DH Moon @ 100 Room
+Sin itinerario
+D-23
+02/10/26
+Jose Fajardo @ Baila Ritmo
+Sin itinerario
+Sin set times
+D-24
+03/10/26
+Bassel Darwish @ Palio Sabana
+Sin itinerario
+Sin set times
+D-24
+03/10/26
+Sera De Villalta @ Lost City
+Sin itinerario
+Sin set times
+D-30
+09/10/26
+O
+Olivia Bass @ NIX
+Sin itinerario
+Sin set times
+D-32
+11/10/26
+Sera De Villalta @ BRO MÁLAGA
+Sin itinerario
+Sin set times
+D-37
+16/10/26
+ART NO LOGIA @ Confusión
+Sin itinerario
+D-38
+17/10/26
+ART NO LOGIA @ Zouk CR
+Sin itinerario
+Sin set times
+D-44
+23/10/26
+Claudia Tejeda @ Tormenta
+Sin itinerario
+Sin set times
+D-52
+31/10/26
+Brenda Serna @ NON Disco
+Sin itinerario
+Sin set times
+D-79
+27/11/26
+Freddy Bello @ Klandestino
+Sin itinerario
+Sin set times
+D-101
+19/12/26
+Freddy Bello @ Sanpapaclub
+Sin itinerario
+D-106
+24/12/26
+O
+Olivia Bass @ OASIS
+Sin itinerario
+Sin set times
+D-106
+24/12/26
+ART NO LOGIA @ Oasis
+Sin itinerario
+Sin set times
+NOTAS URGENTES
++
+Gestionar factura vuelos ACA 12 de Sept.
+✓
+Aldo - Avanzar con DH Moon, Argentina
+✓
+FICHAS A REVISAR
+
+35 artistas con datos pendientes · 53 datos · 16 documentos · 2 bios
+
+▸
+POSIBLES GIGS EN CALENDARIO
+
+Fechas que el artista tiene en su Google Calendar y aún no son shows. Decide si perseguirlas.
+
+64
+▼
+Chat · ConceptOne
+
+El panel de atención no es una lista de tareas
+
+Es lo que está en riesgo por fecha: cuanto más cerca el show, más arriba. Si algo no debería estar ahí, es que le falta un dato al show.
+
+Enviar
+Reportar con captura
+Mis avisos
