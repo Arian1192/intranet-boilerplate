@@ -291,6 +291,38 @@ más `f1-00-literales.json` y `f1-README.md`. Siete correcciones a la tabla de a
 > si lo haces, la pantalla deja de responder al tema y se rompe en modo oscuro.
 
 
+### 3.2 La ruta 15 y un límite del inventario (Faena 2, 2026-09-09)
+
+**`/management/insights/:artistaId` existe y el spec no la tenía.** Las filas de `/management/insights`
+son clicables y el pie de la tabla lo dice literal: «Pulsa un artista para su ficha completa». El clic
+**no abre un modal: navega**. Verificado por el coordinador en
+`/management/insights/d371328b-a849-40ce-9320-dee3af5c017c` — renderiza una pantalla completa, no el
+catch-all.
+
+Contenido: cabecera con flecha de volver, nombre, chip de estado, `Songstats · actualizado 2/9/2026` y
+botón `Sincronizar`; **12 pestañas** (`Overview`, `Audiencia`, `Spotify`, `Beatport`, `Shazam`,
+`YouTube`, `TikTok`, `Instagram`, `SoundCloud`, `Deezer`, `Tidal`, `Traxsource`); **9 KPI**; y un bloque
+`TOP TRACKS` con tres ordenaciones (`Streams`, `Popularidad`, `Playlist reach`).
+
+**Decisión del coordinador:** se registra **ahora** la ruta apuntando a un stub (h1 + volver), para que
+las filas naveguen de verdad y el pie no prometa algo que no hace. **La ficha completa es la Fase F**,
+talla **L**, y se escribe en su propia rama. Excepción puntual al congelado de `router.tsx`: la añade la
+Faena 2, **una línea y su fichero de stub, en un commit aparte**.
+
+#### Límite conocido del inventario de rutas
+
+**El inventario de 89 rutas es un suelo, no un techo.** Se construyó rastreando enlaces `<a href>`, y
+buena parte de las listas del live **no usan anclas**: navegan por código desde filas o tarjetas con
+`cursor: pointer`. Sondeadas 17 listas, solo `/cobros` y `/personal/fichas` tienen anclas; el resto
+—`/shows`, `/liquidaciones`, `/gastos`, `/contactos`, `/artistas`, `/tours`, `/management/*`, `/cruda`,
+`/euphoric/cuentas`— llevan filas clicables que el rastreo **no ve**. `/shows/:id` entró en el
+inventario solo porque allí sí había anclas.
+
+**Regla permanente para todas las fases:** si tu pantalla tiene filas o tarjetas clicables, **pulsa una**
+(es navegación, no escritura: está permitido) y comprueba si cambia la URL. Si cambia, **avisa al
+coordinador** con la ruta observada para que se registre. No inventes la ruta ni la des por inexistente.
+
+
 ---
 
 ## 4. Recalco de las pantallas existentes
@@ -321,6 +353,7 @@ de ejecutar la fase, no se da por hecho aquí.
 | **C** | Management II: `/management/{contratos,activaciones,campanas,content}` | `feature/conceptone-v3-management` (continúa la de B) | 0 | M |
 | **D** | Management III + «Más»: `/management/incidentes` + `/incidentes/analitica`, `/artistas`, `/reporte`, `/conceptone/ajustes` | `feature/conceptone-v3-mas` | 0 | M |
 | **E** | Recalco: Dashboard, Contactos, Cobros, Ofertas, Gastos, Shows | `feature/conceptone-v3-recalco` | 0 | M/L |
+| **F** | **Ficha de artista de Insights** (`/management/insights/:artistaId`): 12 pestañas, 9 KPI y `TOP TRACKS` (ver §3.2) | `feature/conceptone-v3-insights-ficha` | 0, B | **L** |
 
 **Reparto en tres rondas**, dos ejecutores más el coordinador:
 
