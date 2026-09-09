@@ -16,7 +16,7 @@ describe('gastos — espejo del live', () => {
 
   it('los 3 KPIs salen a cero como en el live', () => {
     const kpis = gastosKpis();
-    expect(formatImporte(kpis.sinAsignarImporte)).toBe('0,00 €');
+    expect(formatImporte(kpis.sinAsignarImporte)).toBe('0,00 €');
     expect(kpis.sinAsignarMovimientos).toBe(0);
     expect(kpis.movimientosTotal).toBe(0);
     expect(kpis.cuentas).toBe(0);
@@ -37,7 +37,7 @@ describe('gastos — espejo del live', () => {
       { id: 'c2', nombre: 'PayPal' },
     ]);
     expect(kpis.sinAsignarMovimientos).toBe(2);
-    expect(formatImporte(kpis.sinAsignarImporte)).toBe('150,50 €');
+    expect(formatImporte(kpis.sinAsignarImporte)).toBe('150,50 €');
     expect(kpis.movimientosTotal).toBe(3);
     expect(kpis.cuentas).toBe(2);
   });

@@ -125,8 +125,27 @@ export function formatFechaCorta(iso: string): string {
  * los millares de 4 dígitos: '9631,60 €' pero '11.433,78 €') y espacio normal
  * antes del símbolo, no el duro que mete Intl.
  */
+/**
+ * Importes como los escribe el live: agrupación `es-ES` —que **no** separa los
+ * millares de cuatro dígitos— y **espacio duro** (`U+00A0`) antes del símbolo.
+ *
+ * Este `replace` metía un espacio normal y era un error: medido el 2026-09-09
+ * sobre las capturas de las dos pantallas que usan este formateador, el live
+ * pone espacio duro en **949 de 949** importes (587 en `/cobros`, 362 en
+ * `/gastos`), sin una sola excepción.
+ *
+ * La agrupación tampoco es un detalle: el live escribe `6421,40 €` sin punto y
+ * `10.000,00 €` con él. No es un umbral raro suyo, es el `minimumGroupingDigits`
+ * de `es-ES`, así que `Intl` lo hace solo — verificado en 10 pares
+ * valor↔pantalla, todos exactos.
+ *
+ * `formatImporteLiquidacion` en `liquidaciones.ts` ya llegó a esta misma
+ * conclusión por su cuenta y dejó dicho que no reutilizaba éste «que mete un
+ * espacio normal». Ahora los dos coinciden; unificarlos es tarea aparte, porque
+ * ese fichero es de otro lote.
+ */
 export function formatImporte(amount: number): string {
-  return formatCurrency(amount).replace(' ', ' ');
+  return formatCurrency(amount);
 }
 
 const MS_DIA = 24 * 60 * 60 * 1000;

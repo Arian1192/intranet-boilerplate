@@ -31,4 +31,21 @@ describe('GastosPage', () => {
     render(<GastosPage />);
     expect(screen.getByText('Cargando movimientos de Holded…')).toBeInTheDocument();
   });
+
+  /**
+   * `getByText` **normaliza** el espacio duro a uno normal, así que las
+   * consultas de arriba pasarían igual con el formateo mal. Esto lo comprueba
+   * donde sí se ve: en el `textContent` del DOM renderizado, por código de
+   * carácter. El live pone `U+00A0` en los 362 importes de `/gastos`.
+   */
+  it('los importes del DOM llevan el espacio duro del live, no uno normal', () => {
+    const { container } = render(<GastosPage />);
+    const conEuro = [...container.querySelectorAll('*')]
+      .map((e) => e.textContent ?? '')
+      .filter((t) => /^[\d.,]+.€$/.test(t));
+    expect(conEuro.length).toBeGreaterThan(0);
+    for (const texto of conEuro) {
+      expect(texto.charCodeAt(texto.length - 2)).toBe(160);
+    }
+  });
 });

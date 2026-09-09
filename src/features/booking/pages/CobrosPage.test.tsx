@@ -111,4 +111,21 @@ describe('CobrosPage', () => {
     await user.click(screen.getByRole('button', { name: 'Por factura 1' }));
     expect(screen.queryByRole('group', { name: 'Filtro de cobros' })).toBeNull();
   });
+
+  /**
+   * `getByText` **normaliza** el espacio duro a uno normal, así que las
+   * consultas de arriba pasarían igual con el formateo mal. Esto lo comprueba
+   * donde sí se ve: en el `textContent` del DOM renderizado, por código de
+   * carácter. El live pone `U+00A0` en los 587 importes de `/cobros`.
+   */
+  it('los importes del DOM llevan el espacio duro del live, no uno normal', () => {
+    const { container } = render(<CobrosPage />);
+    const conEuro = [...container.querySelectorAll('*')]
+      .map((e) => e.textContent ?? '')
+      .filter((t) => /^[\d.,]+.€$/.test(t));
+    expect(conEuro.length).toBeGreaterThan(0);
+    for (const texto of conEuro) {
+      expect(texto.charCodeAt(texto.length - 2)).toBe(160);
+    }
+  });
 });

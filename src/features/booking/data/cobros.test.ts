@@ -26,13 +26,13 @@ describe('cobros — seed espejo del live', () => {
 
   it('cada fila lleva los importes y el cliente exactos del live', () => {
     const fila = (show: string) => cobros.find((c) => c.show === show)!;
-    expect(formatImporte(fila('The Next').total)).toBe('1016,40 €');
-    expect(formatImporte(fila('Solart Fest').total)).toBe('2904,00 €');
-    expect(formatImporte(fila('LOAD').total)).toBe('484,00 €');
-    expect(formatImporte(fila('More Amor').total)).toBe('1161,60 €');
-    expect(formatImporte(fila('Homies').total)).toBe('1161,60 €');
-    expect(formatImporte(fila('SANITY').total)).toBe('1452,00 €');
-    expect(formatImporte(fila('Summer Opening Festival').total)).toBe('1452,00 €');
+    expect(formatImporte(fila('The Next').total)).toBe('1016,40 €');
+    expect(formatImporte(fila('Solart Fest').total)).toBe('2904,00 €');
+    expect(formatImporte(fila('LOAD').total)).toBe('484,00 €');
+    expect(formatImporte(fila('More Amor').total)).toBe('1161,60 €');
+    expect(formatImporte(fila('Homies').total)).toBe('1161,60 €');
+    expect(formatImporte(fila('SANITY').total)).toBe('1452,00 €');
+    expect(formatImporte(fila('Summer Opening Festival').total)).toBe('1452,00 €');
     expect(cobros.every((c) => c.pagado === 0)).toBe(true);
     expect(fila('The Next').cliente).toBe('Recaba Inversiones Turisticas, S.L.');
     expect(fila('LOAD').cliente).toBe('LIMBER 1968 SL');
@@ -81,10 +81,10 @@ describe('cobros — seed espejo del live', () => {
   it('los 4 KPIs cuadran con el live al céntimo', () => {
     const kpis = cobrosKpis(cobros);
     expect(kpis.showsPorCobrar).toBe(7);
-    expect(formatImporte(kpis.pendienteTotal)).toBe('9631,60 €');
-    expect(formatImporte(kpis.fueraDePlazoImporte)).toBe('6727,60 €');
+    expect(formatImporte(kpis.pendienteTotal)).toBe('9631,60 €');
+    expect(formatImporte(kpis.fueraDePlazoImporte)).toBe('6727,60 €');
     expect(kpis.fueraDePlazoShows).toBe(5);
-    expect(formatImporte(kpis.venceSemanaImporte)).toBe('0,00 €');
+    expect(formatImporte(kpis.venceSemanaImporte)).toBe('0,00 €');
     expect(kpis.venceSemanaShows).toBe(0);
   });
 
@@ -104,10 +104,22 @@ describe('cobros — seed espejo del live', () => {
   });
 
   it('formatImporte escribe los euros como el live', () => {
-    // es-ES no agrupa los millares de 4 dígitos, y el live usa espacio normal.
-    expect(formatImporte(9631.6)).toBe('9631,60 €');
-    expect(formatImporte(0)).toBe('0,00 €');
-    expect(formatImporte(11433.78)).toBe('11.433,78 €');
-    expect(formatImporte(1016.4)).not.toContain(' ');
+    // `es-ES` no agrupa los millares de cuatro dígitos: eso ya estaba bien.
+    expect(formatImporte(9631.6)).toBe('9631,60 €');
+    expect(formatImporte(0)).toBe('0,00 €');
+    expect(formatImporte(11433.78)).toBe('11.433,78 €');
+  });
+
+  /**
+   * Este test decía lo contrario —«el live usa espacio normal»— y lo desmiente
+   * la captura del 2026-09-09: el live pone **espacio duro** en los 587 importes
+   * de `/cobros` y los 362 de `/gastos`, sin una sola excepción. Se comprueba
+   * por código de carácter y no por literal, porque los dos espacios se ven
+   * idénticos al leer el fichero.
+   */
+  it('el espacio antes del € es duro (U+00A0), no normal', () => {
+    const salida = formatImporte(1016.4);
+    expect(salida.charCodeAt(salida.length - 2)).toBe(160);
+    expect(salida).not.toContain(' €');
   });
 });
