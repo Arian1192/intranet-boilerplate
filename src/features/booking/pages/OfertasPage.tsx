@@ -17,13 +17,20 @@ export function OfertasPage() {
   const detalle = visibles.find((oferta) => oferta.id === seleccionada) ?? null;
 
   return (
-    <div className="mx-auto w-full max-w-[1120px]">
-      <h1 className="text-2xl font-semibold text-slate-800">Ofertas entrantes</h1>
-      <p className="text-sm text-slate-500">
-        Propuestas recibidas desde el formulario público de la web.
-      </p>
+    // El live envuelve esta pantalla en su propio contenedor, más estrecho que
+    // el `max-w-7xl` del shell, y le da una cabecera distinta a la de las demás
+    // (`text-xl font-bold`): es una pantalla que no se ha rehecho con apx.
+    <div className="mx-auto max-w-6xl px-4 py-6">
+      <div className="mb-4 flex items-center justify-between">
+        <div>
+          <h1 className="text-xl font-bold text-slate-900">Ofertas entrantes</h1>
+          <p className="text-sm text-slate-500">
+            Propuestas recibidas desde el formulario público de la web.
+          </p>
+        </div>
+      </div>
 
-      <div className="mt-5 flex flex-wrap items-center gap-2">
+      <div className="mb-4 flex flex-wrap gap-2">
         {OFERTA_FILTROS.map((opcion) => {
           const activo = opcion === filtro;
           return (
@@ -36,10 +43,11 @@ export function OfertasPage() {
                 setSeleccionada(null);
               }}
               className={cn(
-                'rounded-full border px-3 py-1.5 text-sm font-medium transition-colors',
+                'rounded-full px-3 py-1 text-xs font-medium',
+                // El activo va SIN borde; sólo lo llevan los apagados.
                 activo
-                  ? 'border-slate-800 bg-slate-800 text-white'
-                  : 'border-slate-200 bg-white text-slate-600 hover:bg-slate-50'
+                  ? 'bg-slate-800 text-white'
+                  : 'border border-slate-200 bg-white text-slate-600'
               )}
             >
               {opcion} ({contarOfertas(todasLasOfertas, opcion)})
@@ -48,10 +56,10 @@ export function OfertasPage() {
         })}
       </div>
 
-      <div className="mt-6 grid items-start gap-6 lg:grid-cols-2">
-        <div>
+      <div className="grid gap-4 lg:grid-cols-[1fr_1.1fr]">
+        <div className="space-y-2">
           {visibles.length === 0 ? (
-            <p className="py-12 text-center text-slate-400">No hay ofertas aquí.</p>
+            <p className="py-10 text-center text-sm text-slate-400">No hay ofertas aquí.</p>
           ) : (
             <ul className="divide-y divide-slate-100 rounded-xl border border-slate-200 bg-white">
               {visibles.map((oferta) => (
@@ -77,9 +85,12 @@ export function OfertasPage() {
           )}
         </div>
 
-        <div className="flex min-h-[160px] items-center justify-center rounded-xl border border-dashed border-slate-200 p-6">
+        <div>
           {detalle ? (
-            <div className="w-full">
+            // El live nunca enseña este panel con datos —la bandeja está vacía—,
+            // así que aquí no hay foto que calcar: se deja lo que ya teníamos y
+            // sin la altura fija, que sí está medida pero sólo para el vacío.
+            <div className="rounded-xl border border-slate-200 p-6">
               <h2 className="text-lg font-semibold text-slate-800">{detalle.artista}</h2>
               <p className="text-sm text-slate-500">
                 {detalle.evento} · {detalle.ciudad} · {detalle.fecha}
@@ -87,7 +98,9 @@ export function OfertasPage() {
               <p className="mt-4 text-sm text-slate-600">{detalle.mensaje}</p>
             </div>
           ) : (
-            <p className="text-slate-400">Selecciona una oferta</p>
+            <div className="grid h-40 place-items-center rounded-xl border border-dashed border-slate-200 text-sm text-slate-400">
+              Selecciona una oferta
+            </div>
           )}
         </div>
       </div>

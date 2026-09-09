@@ -7,7 +7,9 @@ import { OfertasPage } from './OfertasPage';
 describe('OfertasPage', () => {
   it('calca cabecera y bajada del live', () => {
     render(<OfertasPage />);
-    expect(screen.getByRole('heading', { level: 1, name: 'Ofertas entrantes' })).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', { level: 1, name: 'Ofertas entrantes' })
+    ).toBeInTheDocument();
     expect(
       screen.getByText('Propuestas recibidas desde el formulario público de la web.')
     ).toBeInTheDocument();
@@ -52,9 +54,35 @@ describe('OfertasPage', () => {
     );
   });
 
+  it('el chip activo va sin borde y el inactivo con él, como el live', () => {
+    render(<OfertasPage />);
+    const activo = screen.getByRole('button', { name: 'Nuevas (0)' });
+    expect(activo).toHaveClass('bg-slate-800', 'text-white', 'text-xs', 'py-1');
+    expect(activo).not.toHaveClass('border');
+    const inactivo = screen.getByRole('button', { name: 'Todas (0)' });
+    expect(inactivo).toHaveClass('border', 'border-slate-200', 'bg-white', 'text-slate-600');
+  });
+
+  it('la cabecera es la del live: text-xl y font-bold, no la de las demás pantallas', () => {
+    render(<OfertasPage />);
+    expect(screen.getByRole('heading', { level: 1, name: 'Ofertas entrantes' })).toHaveClass(
+      'text-xl',
+      'font-bold',
+      'text-slate-900'
+    );
+  });
+
   it('bandeja vacía: aviso a la izquierda y panel de selección a la derecha', () => {
     render(<OfertasPage />);
-    expect(screen.getByText('No hay ofertas aquí.')).toBeInTheDocument();
-    expect(screen.getByText('Selecciona una oferta')).toBeInTheDocument();
+    expect(screen.getByText('No hay ofertas aquí.')).toHaveClass(
+      'py-10',
+      'text-sm',
+      'text-slate-400'
+    );
+    expect(screen.getByText('Selecciona una oferta')).toHaveClass(
+      'h-40',
+      'place-items-center',
+      'border-dashed'
+    );
   });
 });
