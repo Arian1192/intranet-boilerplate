@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { render, screen, within } from '@testing-library/react';
+import { render, screen, fireEvent, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 import { LiquidacionesPage } from './LiquidacionesPage';
@@ -98,35 +98,41 @@ describe('LiquidacionesPage', () => {
     expect(screen.getAllByRole('row')).toHaveLength(24);
   });
 
-  it('el buscador filtra por código', async () => {
-    const user = userEvent.setup();
+  it('el buscador filtra por código', () => {
     render(<LiquidacionesPage />);
-    await user.type(
-      screen.getByPlaceholderText('Buscar artista, show, código…'),
-      'C1-2026-155'
-    );
+    // `fireEvent.change` en vez de `user.type`: la tabla tiene 243 filas y
+    // teclear letra a letra la re-renderiza una vez por pulsación. Se comía los
+    // 5 s de límite en cuanto la suite corría con carga, y fallaba de forma
+    // intermitente. Lo que prueba el test —que el buscador filtra— no cambia.
+    fireEvent.change(screen.getByPlaceholderText('Buscar artista, show, código…'), {
+      target: { value: 'C1-2026-155' },
+    });
     expect(screen.getByText('1 show')).toBeInTheDocument();
     expect(screen.getAllByRole('row')).toHaveLength(2);
   });
 
-  it('los KPI se recalculan sobre lo filtrado', async () => {
-    const user = userEvent.setup();
+  it('los KPI se recalculan sobre lo filtrado', () => {
     render(<LiquidacionesPage />);
-    await user.type(
-      screen.getByPlaceholderText('Buscar artista, show, código…'),
-      'C1-2026-155'
-    );
+    // `fireEvent.change` en vez de `user.type`: la tabla tiene 243 filas y
+    // teclear letra a letra la re-renderiza una vez por pulsación. Se comía los
+    // 5 s de límite en cuanto la suite corría con carga, y fallaba de forma
+    // intermitente. Lo que prueba el test —que el buscador filtra— no cambia.
+    fireEvent.change(screen.getByPlaceholderText('Buscar artista, show, código…'), {
+      target: { value: 'C1-2026-155' },
+    });
     const kpi = screen.getByText('PENDIENTE DE COBRAR').parentElement!;
     expect(within(kpi).getByText('960,00 €')).toBeInTheDocument();
   });
 
-  it('avisa cuando la búsqueda no encuentra nada', async () => {
-    const user = userEvent.setup();
+  it('avisa cuando la búsqueda no encuentra nada', () => {
     render(<LiquidacionesPage />);
-    await user.type(
-      screen.getByPlaceholderText('Buscar artista, show, código…'),
-      'no-existe-este-show'
-    );
+    // `fireEvent.change` en vez de `user.type`: la tabla tiene 243 filas y
+    // teclear letra a letra la re-renderiza una vez por pulsación. Se comía los
+    // 5 s de límite en cuanto la suite corría con carga, y fallaba de forma
+    // intermitente. Lo que prueba el test —que el buscador filtra— no cambia.
+    fireEvent.change(screen.getByPlaceholderText('Buscar artista, show, código…'), {
+      target: { value: 'no-existe-este-show' },
+    });
     expect(screen.getByText('Ningún show cuadra con el filtro.')).toBeInTheDocument();
   });
 });

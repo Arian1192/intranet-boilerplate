@@ -5,7 +5,12 @@ describe('contactos — venues (evidencia venues-full.json)', () => {
   it('18 venues con badges de evidencia', () => {
     expect(venues).toHaveLength(18);
     const casa = venues.find((v) => v.name === 'Casa del Mar')!;
-    expect(casa).toMatchObject({ city: 'Isla Santa Catalina', country: 'USA', ubicado: false, aforo: 600 });
+    expect(casa).toMatchObject({
+      city: 'Isla Santa Catalina',
+      country: 'USA',
+      ubicado: false,
+      aforo: 600,
+    });
     const fab = venues.find((v) => v.name === 'La Fábrica')!;
     expect(fab).toMatchObject({ city: null, country: null, ubicado: false, aforo: null });
     const ku = venues.find((v) => v.name === 'Ku Barcelona')!;
@@ -17,6 +22,8 @@ describe('contactos — venues (evidencia venues-full.json)', () => {
   });
 });
 
+// Ojo: estas 117 empresas ya NO se pintan en ninguna pantalla. Ver la nota en
+// `contactos.ts`. El test se queda porque el dato se queda.
 describe('contactos — empresas (evidencia empresas-full.json)', () => {
   it('117 empresas en orden alfabético con formato de contacto', () => {
     expect(empresas).toHaveLength(117);
