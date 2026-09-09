@@ -43,6 +43,7 @@ import { CobrosPage } from '@/features/booking/pages/CobrosPage';
 import { GastosPage } from '@/features/booking/pages/GastosPage';
 import { EstrategiasPage } from '@/features/booking/pages/EstrategiasPage';
 import { ToursPage } from '@/features/booking/pages/ToursPage';
+import { TourDetallePage } from '@/features/booking/pages/TourDetallePage';
 import { LiquidacionesPage } from '@/features/booking/pages/LiquidacionesPage';
 import { PendientesPage } from '@/features/booking/pages/PendientesPage';
 import { ArtistasPage as C1ArtistasPage } from '@/features/booking/pages/ArtistasPage';
@@ -99,6 +100,7 @@ export function AppRouter() {
         <Route path="/conceptone" element={<BookingDashboardPage />} />
         <Route path="/shows" element={<ShowsPage />} />
         <Route path="/tours" element={<ToursPage />} />
+        <Route path="/tours/:tourId" element={<TourDetallePage />} />
         <Route path="/ofertas" element={<OfertasPage />} />
         <Route path="/cobros" element={<CobrosPage />} />
         <Route path="/gastos" element={<GastosPage />} />
