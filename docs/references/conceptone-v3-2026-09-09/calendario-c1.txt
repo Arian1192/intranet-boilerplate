@@ -1,0 +1,591 @@
+ConceptOne
+Añadir show
+BOOKINGS
+Dashboard
+Shows
+Tours
+Ofertas
+Cobros
+Gastos
+Liquidaciones
+Disponibilidad
+Calendario
+Contactos
+MANAGEMENT
+Roster
+Insights
+Estrategias
+Contratos
+Activaciones
+Campañas
+Content
+Incidencias
+MÁS
+Roster
+Análisis
+Ajustes
+Black Moose
+Pendientes
+Modo noche
+Ayuda
+9+
+Notificaciones
+T
+testadmin
+Calendario
+
+Shows y holds de artista en un solo sitio. Un hold puede subir a show sin duplicar.
+
+Disponibilidad
++ Hold
+‹
+Septiembre 2026
+›
+LU
+MA
+MI
+JU
+VI
+SÁ
+DO
+1
+2
+3
+Milan Torne · Santa Ana
+Los Canarios
+4
+Brenda Serna · Alcázar de San Juan
+Fran Hernandez · Benicasim
+Londonground
++3
+5
+Los Canarios · Eivissa
+Brenda Serna · Sevilla
+Tomi & Kesh
++7
+6
+Milan Torne · Denver
+Tomi & Kesh
+DH Moon · Eivissa
++1
+7
+8
+9
+Florentia · Confirmed - Paradise @ UNVRS Ibiza
+10
+Los Canarios
+Gaston Zani · Sabadell
+Rivellino · Valhalla Beach @ Sunseabar Barcelona
+11
+Milan Torne · San Jose
+Marcel BS · T'bilisi
+Pau Guilera · Barcelona
++5
+12
+Bassel Darwish · Recoleta
+Claudia Tejeda · Sevilla
+Abdon · Torrox
++9
+13
+Londonground
+Brenda Serna · Tentative - - INDIA TOUR
+14
+15
+16
+ACA
+Brenda Serna · Elche de la Sierra
+17
+Tomi & Kesh · Confirmed - Bogotá - Hi, I’m Sci
+18
+Claudia Tejeda · Pozos
+Sergio Saffe · Valparaiso
+Bassel Darwish · Valparaiso
++4
+19
+Marian Ariss
+Sera De Villalta · Rionegro
+Claudia Tejeda · Rionegro
++11
+20
+Sera De Villalta · Substance
+Abdon · brisa
+Florentia · Confirmed - Ibiza - Cova Santa
++1
+21
+22
+23
+Los Canarios · Barcelona
+Rivellino · Confirmed - Barcelona - Input - High Fidelity Dance Club
+Rivellino · Gig Input x Colyn
+24
+Sebastian Ledher · Bogotá
+25
+Marian Ariss · Cordoba
+Sera De Villalta · Antofagasta
+ART NO LOGIA · Input Barcelona
++1
+26
+ART NO LOGIA · Birmingham
+Sera De Villalta · Chiclayo
+Marian Ariss · Buenos Aires
++6
+27
+Abdon · Eivissa
+Los Canarios · Santa cruz de Tenerife
+ACA · Confirmed - Ibiza - Cova Santa
++3
+28
+29
+30
+jueves, 3 de septiembre
+Show
+Milan Torne · Red Room · Santa Ana · House of Ferns
+Sin liquidar
+Show
+Los Canarios · Tentative - Playa de las Américas - Papagayo Tenerife - FOLLOW PRESENTA LOS CANARIOS
+Autogestión
+Sin liquidar
+viernes, 4 de septiembre
+Show
+Brenda Serna · Alcazar de San Juan · Alcázar de San Juan · Alcazar de San Juan
+Liquidado
+Show
+Fran Hernandez · Maya Benicassim · Benicasim · Loop
+Sin liquidar
+Show
+Londonground · Confirmed - Eivissa - Tantra Ibiza
+Sin liquidar
+Calendario
+Brenda Serna · Confirmed - Alcázar de San Juan - SOMNUS GROUP SL(agenda del artista)
+Upgrade a Show
+→ Autogestionado
+Editar
+✕
+Calendario
+Nacho Scoppa · Confirmed - Madrid - Lula Club(agenda del artista)
+Upgrade a Show
+→ Autogestionado
+Editar
+✕
+Calendario
+Prophecy · RELEASE: "Nana" with TH;EN [Now Recordings](agenda del artista)
+Upgrade a Show
+→ Autogestionado
+Editar
+✕
+sábado, 5 de septiembre
+Show
+Los Canarios · Lío Ibiza · Eivissa · Kodo
+Pendiente liquidar
+Show
+Brenda Serna · Pandora · Sevilla
+Pendiente liquidar
+Show
+Tomi & Kesh · Santa Fe de la Vera Cruz - Hub
+Autogestión
+Sin liquidar
+Show
+Bizza · Lío Ibiza · Eivissa · KŌDŌ
+Pendiente liquidar
+Show
+ART NO LOGIA · El Cortijo Cádiz · Vejer de la Frontera · Panorama
+Pendiente liquidar
+Show
+Rivellino · INPUT High Fidelity · Barcelona · After Brunch
+Sin liquidar
+Show
+Abdon · Kova Beach Club · Marbella
+Pendiente liquidar
+Show
+Sebastian Ledher · CDLC · Barcelona · La Sagrada
+Pendiente liquidar
+Calendario
+Brenda Serna · Confirmed - Sevilla - Pandora Sevilla - Pandora (agenda del artista)
+Upgrade a Show
+→ Autogestionado
+Editar
+✕
+Calendario
+Nacho Scoppa · Tentative - Eivissa - Lio Ibiza(agenda del artista)
+Upgrade a Show
+→ Autogestionado
+Editar
+✕
+domingo, 6 de septiembre
+Show
+Milan Torne · Larimer Square · Denver · Secret Coffee Party + Afterparty at Whiskey Row
+Sin liquidar
+Show
+Tomi & Kesh · Confirmed - Cdad. Autónoma de Buenos Aires - The BOW - Rio electronic
+Autogestión
+Sin liquidar
+Show
+DH Moon · Cova Santa · Eivissa · Pantheon
+Sin liquidar
+Show
+Sera De Villalta · Roquetes de Mar · Roquetas de Mar · Sunwaves
+Sin liquidar
+miércoles, 9 de septiembre
+Calendario
+Florentia · Confirmed - Paradise @ UNVRS Ibiza(agenda del artista)
+Upgrade a Show
+→ Autogestionado
+Editar
+✕
+jueves, 10 de septiembre
+Show
+Los Canarios · Tentative - Playa de las Américas - Papagayo Tenerife - FOLLOW PRESENTA LOS CANARIOS
+Autogestión
+Sin liquidar
+Show
+Gaston Zani · Terminal · Sabadell · UNLOCKED XL
+Sin liquidar
+Calendario
+Rivellino · Valhalla Beach @ Sunseabar Barcelona(agenda del artista)
+Upgrade a Show
+→ Autogestionado
+Editar
+✕
+viernes, 11 de septiembre
+Show
+Milan Torne · Continental Bar Lounge Patio · San Jose
+Sin liquidar
+Show
+Marcel BS · King David's Hotel · T'bilisi · Echo
+Sin liquidar
+Show
+Pau Guilera · Sea Sea Club · Barcelona · La Guasa
+Sin liquidar
+Show
+Tomi & Kesh · Confirmed - Itagüí, Itagüi - VIUZ
+Autogestión
+Sin liquidar
+Show
+ACA · Secret Sessions Eden
+Autogestión
+Sin liquidar
+Calendario
+ART NO LOGIA · Sight x Brisa Barcelona(agenda del artista)
+Upgrade a Show
+→ Autogestionado
+Editar
+✕
+Calendario
+Brenda Serna · Tentative - - INDIA TOUR(agenda del artista)
+Upgrade a Show
+→ Autogestionado
+Editar
+✕
+Calendario
+Florentia · Confirmed - Tomorrowland Ibiza (agenda del artista)
+Upgrade a Show
+→ Autogestionado
+Editar
+✕
+sábado, 12 de septiembre
+Show
+Bassel Darwish · Club Room · Recoleta · Art Gallery
+Sin liquidar
+Show
+Claudia Tejeda · Pandora Sevilla · Sevilla
+Sin liquidar
+Show
+Abdon · Bossa Playa · Torrox
+Sin liquidar
+Show
+ART NO LOGIA · Pandora Sevilla · Sevilla
+Sin liquidar
+Show
+Claudia Tejeda · POP CAAC · Sevilla
+Sin liquidar
+Show
+Los Canarios · Fitz Marbella · Marbella · FITZ
+Sin liquidar
+Show
+Freddy Bello · Luz de Gas · Barcelona · CACAO
+Pendiente liquidar
+Show
+ACA · Alba Lulia · Alba Iulia
+Sin liquidar
+Show
+ART NO LOGIA · POP CAAC · Sevilla
+Sin liquidar
+Calendario
+Brenda Serna · Tentative - - INDIA TOUR(agenda del artista)
+Upgrade a Show
+→ Autogestionado
+Editar
+✕
+Calendario
+Sera De Villalta · Confirmed - Torrox - Restaurante Bossa Playa(agenda del artista)
+Upgrade a Show
+→ Autogestionado
+Editar
+✕
+Calendario
+ART NO LOGIA · Sevilla open air + Pandora(agenda del artista)
+Upgrade a Show
+→ Autogestionado
+Editar
+✕
+domingo, 13 de septiembre
+Show
+Londonground · brunch
+Sin liquidar
+Calendario
+Brenda Serna · Tentative - - INDIA TOUR(agenda del artista)
+Upgrade a Show
+→ Autogestionado
+Editar
+✕
+miércoles, 16 de septiembre
+Show
+ACA · Tentative - - Paradise UNVRS
+Autogestión
+Sin liquidar
+Show
+Brenda Serna · Carpas de Elche · Elche de la Sierra · Elx al Carrer
+Pendiente liquidar
+jueves, 17 de septiembre
+Calendario
+Tomi & Kesh · Confirmed - Bogotá - Hi, I’m Sci(agenda del artista)
+Upgrade a Show
+→ Autogestionado
+Editar
+✕
+viernes, 18 de septiembre
+Show
+Claudia Tejeda · Zouk · Pozos · Senses
+Sin liquidar
+Show
+Sergio Saffe · el Tebo · Valparaiso · el Tebo
+Sin liquidar
+Show
+Bassel Darwish · el Tebo · Valparaiso
+Sin liquidar
+Show
+Sebastian Ledher · Puntapiedra · Alicante · Polianka-Puntapiedra
+Sin liquidar
+Calendario
+Tomi & Kesh · Confirmed - Hold 1 - Viña del Mar - the Klan (agenda del artista)
+Upgrade a Show
+→ Autogestionado
+Editar
+✕
+Calendario
+Nacho Scoppa · Confirmed - Cdad. Autónoma de Buenos Aires - Autodromo Buenos Aires - Mushroom x 2GHTR(agenda del artista)
+Upgrade a Show
+→ Autogestionado
+Editar
+✕
+Calendario
+Sergio Saffe · Confirmed - Puchuncaví - El tebo(agenda del artista)
+Upgrade a Show
+→ Autogestionado
+Editar
+✕
+sábado, 19 de septiembre
+Show
+Marian Ariss · Confirmed - - Sitio
+Sin liquidar
+Show
+Sera De Villalta · Piket’ando · Rionegro · Zona Groove
+Sin liquidar
+Show
+Claudia Tejeda · Piket’ando · Rionegro · Zona Groove
+Sin liquidar
+Show
+Brenda Serna · Hotel el Bruc · El Bruc · Pink Cloud
+Sin liquidar
+Show
+ART NO LOGIA · Medusa Universe · București · Confirmed - București - Medusa Universe
+Sin liquidar
+Show
+Tomi & Kesh · Confirmed - São Paulo - We Are Sun
+Autogestión
+Sin liquidar
+Show
+Sebastian Ledher · Club Varadero · Las Palmas de Gran Canaria · Sansa
+Sin liquidar
+Show
+Marcel BS · Hotel l'Aventure · Paris · L'Aventure Paris
+Sin liquidar
+Calendario
+Nacho Scoppa · Confirmed - - Sun.SP - We Are Sun(agenda del artista)
+Upgrade a Show
+→ Autogestionado
+Editar
+✕
+Calendario
+Brenda Serna · Tentative - Banyoles - BLITZ DISCO Banyoles - Treze(agenda del artista)
+Upgrade a Show
+→ Autogestionado
+Editar
+✕
+Calendario
+Londonground · Confirmed - Sant Rafel de Forca - [UNVRS](agenda del artista)
+Upgrade a Show
+→ Autogestionado
+Editar
+✕
+Calendario
+ART NO LOGIA · Bucharest, Romania - Casa Très(agenda del artista)
+Upgrade a Show
+→ Autogestionado
+Editar
+✕
+Calendario
+Aaron Martin · VISUALIZE CLOSING(agenda del artista)
+Upgrade a Show
+→ Autogestionado
+Editar
+✕
+Calendario
+Sera De Villalta · Confirmed - Rionegro - Piket ´Ando(agenda del artista)
+Upgrade a Show
+→ Autogestionado
+Editar
+✕
+domingo, 20 de septiembre
+Show
+Sera De Villalta · Substance
+Sin liquidar
+Calendario
+Abdon · brisa(hold)
+Tentativo
+Upgrade a Show
+→ Autogestionado
+Editar
+✕
+Calendario
+Florentia · Confirmed - Ibiza - Cova Santa(agenda del artista)
+Upgrade a Show
+→ Autogestionado
+Editar
+✕
+Calendario
+Vidaloca · Confirmed - Ibiza - Cova Santa(agenda del artista)
+Upgrade a Show
+→ Autogestionado
+Editar
+✕
+miércoles, 23 de septiembre
+Show
+Los Canarios · Opium Barcelona · Barcelona · WAA!!!
+Sin liquidar
+Calendario
+Rivellino · Confirmed - Barcelona - Input - High Fidelity Dance Club(agenda del artista)
+Upgrade a Show
+→ Autogestionado
+Editar
+✕
+Calendario
+Rivellino · Gig Input x Colyn(agenda del artista)
+Upgrade a Show
+→ Autogestionado
+Editar
+✕
+jueves, 24 de septiembre
+Show
+Sebastian Ledher · Hi I'm Sci · Bogotá · Hi, I'm Sci
+Sin liquidar
+viernes, 25 de septiembre
+Show
+Marian Ariss · La Fábrica · Cordoba · Kevin de Vries Cordoba
+Sin liquidar
+Show
+Sera De Villalta · Raw · Antofagasta · Raw
+Sin liquidar
+Calendario
+ART NO LOGIA · Input Barcelona(agenda del artista)
+Upgrade a Show
+→ Autogestionado
+Editar
+✕
+Calendario
+Marian Ariss · Confirmed - - La Fábrica(agenda del artista)
+Upgrade a Show
+→ Autogestionado
+Editar
+✕
+sábado, 26 de septiembre
+Show
+ART NO LOGIA · Boho Beer Garden · Birmingham · Jiwa
+Sin liquidar
+Show
+Sera De Villalta · Nero Club · Chiclayo
+Sin liquidar
+Show
+Marian Ariss · Mandarine Park · Buenos Aires · Kevin de Vries Buenos Aires
+Sin liquidar
+Show
+Claudia Tejeda · Palio Sabana · San José · Morenos
+Sin liquidar
+Calendario
+SUMIA · Tentative - Berlin - Club OST(agenda del artista)
+Upgrade a Show
+→ Autogestionado
+Editar
+✕
+Calendario
+Sera De Villalta · Tentative - - The Place(agenda del artista)
+Upgrade a Show
+→ Autogestionado
+Editar
+✕
+Calendario
+ART NO LOGIA · Birmingham Jiwa evening(agenda del artista)
+Upgrade a Show
+→ Autogestionado
+Editar
+✕
+Calendario
+Marian Ariss · Tentative - Cdad. Autónoma de Buenos Aires - Mandarine Park & Tent(agenda del artista)
+Upgrade a Show
+→ Autogestionado
+Editar
+✕
+Calendario
+ART NO LOGIA · Confirmed - Birmingham - Boho Beer Garden(agenda del artista)
+Upgrade a Show
+→ Autogestionado
+Editar
+✕
+domingo, 27 de septiembre
+Show
+Abdon · Cova Santa · Eivissa · SIGHT x Pantheon
+Sin liquidar
+Show
+Los Canarios · Monkey Beach Club · Santa cruz de Tenerife
+Sin liquidar
+Calendario
+ACA · Confirmed - Ibiza - Cova Santa(agenda del artista)
+Upgrade a Show
+→ Autogestionado
+Editar
+✕
+Calendario
+Janse · Confirmed - Ibiza - Cova Santa(agenda del artista)
+Upgrade a Show
+→ Autogestionado
+Editar
+✕
+Calendario
+Los Canarios · Confirmed - Santa Cruz de Tenerife - Monkey Beach Parties SL(agenda del artista)
+Upgrade a Show
+→ Autogestionado
+Editar
+✕
+Calendario
+ART NO LOGIA · Confirmed - Ibiza - Cova Santa(agenda del artista)
+Upgrade a Show
+→ Autogestionado
+Editar
+✕
+Chat
+
+Pregunta lo que quieras de esta pantalla, o cuenta qué está fallando.
+
+Enviar
+Reportar con captura
+Mis avisos

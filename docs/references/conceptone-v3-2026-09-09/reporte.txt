@@ -1,0 +1,317 @@
+ConceptOne
+Añadir show
+BOOKINGS
+Dashboard
+Shows
+Tours
+Ofertas
+Cobros
+Gastos
+Liquidaciones
+Disponibilidad
+Calendario
+Contactos
+MANAGEMENT
+Roster
+Insights
+Estrategias
+Contratos
+Activaciones
+Campañas
+Content
+Incidencias
+MÁS
+Roster
+Análisis
+Ajustes
+Black Moose
+Pendientes
+Modo noche
+Ayuda
+9+
+Notificaciones
+T
+testadmin
+Analítica
+
+Uso interno · fees, agentes y comisiones. Importes en EUR.
+
+Estado
+Liquidados
+Pendientes de liquidar
+Todos
+Desde
+dd/mm/aaaa
+Hasta
+dd/mm/aaaa
+Resumen
+Comisiones de agentes
+Reparto de artistas
+DASHBOARD GENERAL
+SHOWS LIQUIDADOS
+23
+BOOKING FEES
+6450,00 €
+MANAGEMENT FEES
+1512,83 €
+TOTAL GASTADO
+1806,98 €
+ARTISTA MÁS RENTABLE
+Los Canarios
+BF 1300,00 €
+MF 947,47 €
+Fees por artista (Booking + Management apilados)
+BookingManagement
+Los Canarios
+Brenda Serna
+Marcel BS
+Sebastian Ledher
+Rivellino
+Tomi & Kesh
+Pau Guilera
+Bizza
+Florentia
+LA CINTIA
+Londonground
+Jose Fajardo
+Marian Ariss
+0,00 €
+600,00 €
+1200,00 €
+1800,00 €
+2400,00 €
+POR AGENTE
+TOTAL COMISIONES
+1747,50 €
+AGENTE TOP (COMISIÓN)
+Yenifer Bernardo
+1227,50 €
+MÁS FECHAS CERRADAS
+Yenifer Bernardo
+14 cierres
+AGENTES ACTIVOS
+5
+Comisión generada por agente
+Yenifer Bernardo
+Alex González
+Aldo Messina
+Patricia Pareja Casalí
+Oscar Buch
+0,00 €
+350,00 €
+700,00 €
+1050,00 €
+1400,00 €
+AGENTE	CIERRES	FEE BRUTO	FEE MEDIO	BOOKING FEES	COMISIÓN
+Yenifer Bernardo	14	22.650,00 €	1617,86 €	4810,00 €	1227,50 €
+Alex González	3	4200,00 €	1400,00 €	940,00 €	235,00 €
+Aldo Messina	3	2000,00 €	666,67 €	400,00 €	210,00 €
+Patricia Pareja Casalí	2	2000,00 €	1000,00 €	200,00 €	50,00 €
+Oscar Buch	1	500,00 €	500,00 €	100,00 €	25,00 €
+
+Cierres = fechas que trae el agente (de origen, o el oficial del artista si no hay agente de origen). La comisión incluye lo que gana como oficial y como origen en todos los shows del filtro.
+
+VISTA POR ARTISTA
+Selecciona un artista…
+Aaron Martin
+Abdon
+ACA
+ADDMOR
+Adrian Oliver
+Agoria
+Agus
+Agustin Montes
+AIIVIIK
+Alex Now
+Alexanders Som
+Alvaro Prieto
+Alvaro Varen
+Andrea Castells
+Andrew Azara
+ART NO LOGIA
+Ballesteros
+Bassel Darwish
+Bianca Lif
+Bicar
+Bizza
+Bliezt
+Brenda Serna
+CAAL
+Cannon
+Carlos Chaparro
+Caste
+Cesar Alamdena
+Cesar Almena
+Chinonegro
+Chrlyfst
+CHUS SOS
+Claptone
+Claudia Tejeda
+Crixx
+Cuartero
+D.O.D
+Dani Berenguel
+Dani Corral
+Danny Gomez
+Dany Gomez
+De La Swing
+Delatorre
+Delum
+Denis Cruz
+Detleft
+DH Moon
+Dhuna
+Dimmish
+Disciples
+Dj Equis
+Dontbedaft
+Dunmore Brothers
+Erick Sierra
+ERRE
+Ezziolino
+Felipe Nogueira
+Fletch
+Fleur Shore
+Florentia
+Fran Hernandez
+Francisco Allendes
+Francisco Valentín
+Freddy Bello
+Funk Off
+Gala
+Galgo
+Gaston Zani
+GoldRed
+Gonzz
+Gordo
+Guille Placencia
+Harvy Valencia
+Hector
+Hector Couto
+HoneyLuv
+Ian Margalef
+Ivan Dive
+James Hype
+Jan
+Janse
+Jay De Lys
+JESS
+JNJS
+Joey Daniel
+JORGESYN
+Jose Fajardo
+Jp Candela
+Kaeru
+Kavi jr
+Kele
+Kevin de Vries
+Kevin.Wav
+KevLb
+Kidoo
+Kirik
+KOKO
+Koleto
+Korolova
+LA CINTIA
+Larida
+Levi
+Leyo
+Linxes
+Local Support
+Londonground
+Los Campos
+Los Canarios
+Lucas Rios
+Lucor
+Luka Kuhnow
+Luke Vose
+Mamen
+Manclus
+Manda Moor
+Marcel BS
+Marian
+Marian Ariss
+Matthias Tanzmann
+MAZIUS&CALE
+metaraph
+Miane
+Michael Stiven
+Miganova
+Milan Torne
+Mr. Belt & Wezol
+Nacho Lara
+Nacho Scoppa
+Nick Curly
+Nico Loco
+Nicole Moudaber
+Oden & Fatzo
+Olivia Bass
+Ollie BC
+Omy Cid
+Orquesta Tropicanas
+Oscar Buch
+Palo Main
+Parsa Jafari
+Patrick Topping
+Pau Guilera
+Paul Woolford
+Paulina Di Mundo
+Portega
+Prophecy
+Rayconen
+Residente
+Rivellino
+Rooléh
+Rubenus
+S MARIO
+S.A.M.
+Sacchi
+Sadkiel
+Saldivar
+Salvi Fernandez
+Sante Sansone
+Savai
+Sebastian Ledher
+Selecta
+Sem Jacobs
+Sera De Villalta
+Sergio Leon
+Sergio Saffe
+Shakti
+SHOKË
+Simas
+Sirlof
+Sirolf
+Sirus Hood
+Solardo
+Sonno Sossego
+Sonny Fodera
+SOVA
+Spaceray
+Stella
+SUMIA
+TBA
+Tenax
+Test Artist
+Thinkpink
+Tom Nolan
+Tomi & Kesh
+Tony Guerra
+UGOTGLENN
+Vengui
+Vidaloca
+Vite
+Vito UK
+Vitor
+Werninghaus
+Wes Colstock
+Xandro
+Selecciona un artista para ver su detalle.
+Chat
+
+Pregunta lo que quieras de esta pantalla, o cuenta qué está fallando.
+
+Enviar
+Reportar con captura
+Mis avisos
+350,00 €

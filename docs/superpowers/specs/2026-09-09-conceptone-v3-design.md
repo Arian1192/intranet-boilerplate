@@ -1,0 +1,329 @@
+# ConceptOne v3 — carcasa `apx`, área Management y recalco del módulo · Design
+
+**Rama base:** `main` (`990dd7e`, 252 ficheros / 1019 tests verdes, verificado 2026-09-09).
+**Ramas:** una por fase — `feature/conceptone-v3-carcasa`, `-bookings`, `-management`, `-mas`, `-recalco`.
+Una PR por rama.
+**Evidencia:** `docs/references/conceptone-v3-2026-09-09/` — 23 rutas capturadas el **2026-09-09 entre
+09:20 y 09:40 CEST** (`.png` fullPage a `deviceScaleFactor: 2`, `.txt` de `innerText`, `.main.html`
+**sin truncar**), más `apx.css` (las 208 reglas de la carcasa), `apx-computed.json` (estilos calculados
+del rail) y `foot.html` (el pie del rail). Inventario de rutas del live en
+`00-rutas-live-2026-09-09.json`.
+
+> **El calco se fija a la foto.** Las cifras de este spec son las de esa franja horaria. El live mueve
+> números en horas: cada fase **re-captura su pantalla** en el momento de implementarla y fija sus
+> propias cifras.
+
+---
+
+## 1. Por qué
+
+Entre el barrido del **2026-07-30** y hoy, ConceptOne ha dejado de ser un módulo dentro de nuestra
+cabecera compartida y se ha convertido en **una aplicación con carcasa propia**. No es una deriva de
+estilos: es otro contenedor, otro sistema de tokens, otra navegación y 14 rutas que no existían.
+
+De las 89 rutas estructurales que hoy tiene el live, nos faltan 26. **Catorce de ellas son de
+ConceptOne** y son nuevas desde el 30-jul. Ninguna ruta nuestra ha desaparecido del live: todo el delta
+es material nuevo.
+
+Además, las pantallas de ConceptOne que **ya teníamos** han derivado por dentro (Dashboard, Contactos,
+Cobros, Ofertas, Gastos), así que dejarlas debajo de una carcasa nueva sin tocarlas produciría un módulo
+incoherente: rail nuevo, contenido viejo.
+
+---
+
+## 2. La carcasa `apx`
+
+### D1 — Es un sistema de tokens propio, no una variante del nuestro
+
+ConceptOne se envuelve en un elemento con clase `.apx` que declara **sus propias custom properties**.
+No es la rampa `brand` carbón del resto del boilerplate: el acento es **violeta** y el lienzo es lila
+frío. Literal del live (`apx.css:1`):
+
+```css
+.apx {
+  --ink: #0C0C16; --ink-2: #1A1A2A; --muted: #6B6B80;
+  --line: #EAEAF2; --surface: #FFFFFF; --canvas: #F5F5FA; --canvas-2: #EEEEF6;
+  --accent: #5B4BE8; --accent-2: #8B7BFF; --accent-soft: #EEEBFF;
+  --accent-grad: linear-gradient(135deg,#5B4BE8,#8B7BFF);
+  --mint: #16C79A;  --mint-soft: #E1F8F1;  --mint-fg: #0E8F6E;
+  --amber: #F5A524; --amber-soft: #FDF1DC; --amber-fg: #9A6206;
+  --rose: #F2547B;  --rose-soft: #FDE7ED;  --rose-fg: #C22A50;
+  --pill: 999px;
+  --ease: cubic-bezier(.22,1,.36,1);
+  --shadow: 0 1px 2px rgba(12,12,22,.04), 0 8px 22px rgba(12,12,22,.06);
+  --shadow-lg: 0 2px 8px rgba(12,12,22,.06), 0 22px 44px rgba(12,12,22,.14);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--canvas);
+}
+```
+
+**Decisión tomada (Arian, 2026-09-09): calco literal.** Se copia esta hoja tal cual a
+`src/features/booking/shell/apx.css`, **scoped bajo `.apx`**, sin tocar `tailwind.config.js` ni exponer
+estos tokens al resto del boilerplate. Convivirán dos lenguajes visuales, que es exactamente lo que
+pasa en el live.
+
+Son **solo 11 clases**: `apx-side`, `apx-side-logo`, `apx-cta`, `apx-side-scroll`, `apx-nav-cap`,
+`apx-nav-item`, `apx-nav-lab`, `apx-nav-sep`, `apx-side-foot`, `apx-prof`, `apx-shift`. El **interior de
+las páginas sigue siendo Tailwind** con nuestras utilidades de siempre.
+
+### D2 — El rail: 58 px que se expanden a 224 px al hover
+
+```css
+.apx .apx-side {
+  position: fixed; top: 0; left: 0; bottom: 0; width: 58px; z-index: 40; overflow: hidden;
+  background: var(--surface); border-right: 1px solid var(--line);
+  display: flex; flex-direction: column; padding: 12px 9px 10px;
+  transition: width .22s var(--ease), box-shadow .22s var(--ease);
+}
+.apx .apx-side:hover { width: 224px; box-shadow: var(--shadow-lg); }
+.apx-shift { margin-left: 58px; }
+```
+
+El contenido no se re-maqueta al expandirse: el rail **flota por encima** (`position: fixed`) y
+`.apx-shift` mantiene el margen fijo de 58 px.
+
+Las etiquetas viven en `span.apx-nav-lab { opacity: 0 }` y pasan a `opacity: 1` cuando el rail está en
+hover, con `text-overflow: ellipsis`. El logotipo hace lo mismo (`.brandtxt`).
+
+Ítems del rail, valores calculados verificados (`apx-computed.json`):
+
+| | Live | Nota |
+|---|---|---|
+| Alto del ítem | 32,25 px | `padding: 6px 9px`, `gap: 11px`, `border-radius: 9px` |
+| Tipografía | 13,5 px | `font-weight: 500` inactivo · **600** activo |
+| Color inactivo | `#6B6B80` (`--muted`) | |
+| Color activo | `#5B4BE8` (`--accent`) | **sin fondo**: `background: none` |
+| Hover | `background: var(--canvas)`, `color: var(--ink)` | también sobre el activo |
+| Icono | SVG 20×20, `stroke-width: 1.6` | |
+| Rótulo de grupo | `#6B6B80`, 9,5 px, peso 600, `letter-spacing: .76px`, `uppercase` | `padding: 9px 9px 2px` |
+
+**El activo no lleva pastilla de fondo** — solo color y peso. Es la diferencia más fácil de fallar.
+**No hay tooltips**: los ítems del rail no tienen `title` ni `aria-label` (verificado). Con el rail
+plegado, el único indicio es el icono.
+
+El CTA de cabecera es un botón con degradado:
+```css
+.apx .apx-cta {
+  background: var(--accent-grad); color: #fff; border-radius: 10px; padding: 9px;
+  font-size: 14px; font-weight: 600; box-shadow: 0 3px 10px rgba(91,75,232,.24);
+}
+.apx .apx-cta:hover { filter: brightness(1.03); transform: translateY(-1px); }
+```
+
+### D3 — La navegación: tres grupos y un pie
+
+El logo es `/logo_antlers.svg` (20×20) + `span.brandtxt` con el texto `ConceptOne`, enlazando a
+`/conceptone`. Debajo, el CTA **`Añadir show`**. Y luego los tres grupos, con los rótulos en el DOM
+como `Bookings` / `Management` / `Más` (el `uppercase` lo pone el CSS):
+
+| Grupo | Ítems (rótulo → ruta) |
+|---|---|
+| **Bookings** (10) | Dashboard → `/conceptone` · Shows → `/shows` · **Tours → `/tours`** · Ofertas → `/ofertas` · Cobros → `/cobros` · Gastos → `/gastos` · **Liquidaciones → `/liquidaciones`** · Disponibilidad → `/disponibilidad` · Calendario → `/calendario-c1` · Contactos → `/contactos` |
+| **Management** (8) | **Roster → `/management/roster`** · **Insights → `/management/insights`** · Estrategias → `/management/estrategias` · **Contratos → `/management/contratos`** · **Activaciones → `/management/activaciones`** · **Campañas → `/management/campanas`** · **Content → `/management/content`** · Incidencias → `/management/incidentes` |
+| **Más** (3) | Roster → `/artistas` · Análisis → `/reporte` · Ajustes → `/conceptone/ajustes` |
+
+> Ojo al homónimo: hay **dos ítems rotulados «Roster»**, uno en Management (`/management/roster`,
+> selección de artistas para Songstats) y otro en Más (`/artistas`, el roster de la agencia). Es así en
+> el live; no se corrige.
+
+Pie (`.apx-side-foot`, separado por `border-top: 1px solid var(--line)`), en orden:
+
+1. **Black Moose** → `/` (icono casa) — la salida del módulo hacia la intranet.
+2. **Pendientes** → `/conceptone/pendientes` (icono portapapeles con check).
+3. **Modo noche** — `<button type="button" class="apx-nav-item">`, icono luna.
+4. **Ayuda** — `<button>`, icono interrogación en círculo; abre el panel de Ayuda.
+5. **Notificaciones** — un `div.apx-nav-item` con `cursor: default` que envuelve el botón de campana
+   existente (badge `9+`, `bg-red-500`), más el rótulo `Notificaciones`.
+6. **Perfil** — `<a class="apx-prof" href="/perfil">` con el avatar (28 px, color de fondo inline),
+   nombre `test` y rol `admin`.
+
+`.apx-prof { display:flex; align-items:center; gap:7px; padding:7px 5px; border-radius:10px; color: var(--ink) }`
+y `:hover { background: var(--canvas) }`.
+
+### D4 — El modo noche
+
+**Decisión tomada (Arian): calco literal del retrofit.** El live no usa las variantes `dark:` de
+Tailwind: redefine los tokens en `.apx[data-theme="dark"]` y luego **pisa 49 utilidades Tailwind con
+`!important`**, porque las páginas están escritas en claro y no se han reanotado.
+
+```css
+.apx[data-theme="dark"] {
+  --ink: #ECECF6; --ink-2: #FFFFFF; --muted: #9494AD;
+  --line: #26263A; --surface: #16161F; --canvas: #0C0C12; --canvas-2: #1F1F2C;
+  --accent: #8B7BFF; --accent-2: #A99CFF; --accent-soft: #231E4A;
+  --mint-soft: #0E2C25;  --mint-fg: #4FD8B4;
+  --amber-soft: #33270F; --amber-fg: #F0B44F;
+  --rose-soft: #361420;  --rose-fg: #FF7B9C;
+  --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 22px rgba(0,0,0,.4);
+  --shadow-lg: 0 2px 8px rgba(0,0,0,.5), 0 22px 44px rgba(0,0,0,.6);
+  background: var(--canvas); color: var(--ink);
+}
+.apx[data-theme="dark"] .bg-white,
+.apx[data-theme="dark"] .bg-white\/90, … { background-color: rgb(22,22,31) !important; }
+.apx[data-theme="dark"] .bg-slate-50, …  { background-color: rgb(19,19,27) !important; }
+.apx[data-theme="dark"] .bg-slate-100, … { background-color: rgb(31,31,44) !important; }
+.apx[data-theme="dark"] .bg-slate-200, … { background-color: rgb(38,38,58) !important; }
+.apx[data-theme="dark"] .bg-brand-50     { background-color: rgb(33,28,70) !important; }
+.apx[data-theme="dark"] .bg-brand-100    { background-color: rgb(42,36,87) !important; }
+…
+```
+
+Las 49 reglas se copian **literales** desde `docs/references/conceptone-v3-2026-09-09/apx.css`
+(líneas 35-83). Cubren fondos sólidos, fondos con alpha (`/50`, `/60`, `/70`, `/80`, `/90`, `/95`),
+`hover:` y las tres posiciones de gradiente (`from-`, `via-`, `to-`).
+
+**Persistencia verificada:** `localStorage['apx-tema']`, valores `light` | `dark`. En claro el atributo
+`data-theme` **no está presente** (no es `data-theme="light"`): el tema claro es la ausencia del
+atributo. El toggle escribe la clave y pone o quita el atributo sobre el elemento `.apx`.
+
+> El estado en oscuro **no se ha capturado**: activarlo exigía pulsar el botón y el live es solo
+> lectura. El calco se hace desde las reglas CSS, que sí están capturadas íntegras. Quien implemente la
+> Fase 0 documenta esta limitación en su PR.
+
+### D5 — Ficheros de la carcasa
+
+```
+src/features/booking/shell/
+  apx.css          ← tokens light + dark + 49 overrides + las 11 clases
+  ApxShell.tsx     ← wrapper .apx, estado del tema, localStorage['apx-tema']
+  ApxRail.tsx      ← rail: logo, CTA, 3 grupos, pie
+  nav.ts           ← RAIL_GROUPS y RAIL_FOOT (sustituye a CONCEPTONE_AREAS/BOOKINGS_SECTIONS)
+```
+
+`ConceptOneShell.tsx` deja de usar `AppLayout` y pasa a `<ApxShell><ApxRail /><div class="apx-shift"><Outlet/></div></ApxShell>`.
+
+`src/features/booking/data/nav.ts` queda **obsoleto para ConceptOne**: `CONCEPTONE_AREAS`,
+`BOOKINGS_SECTIONS`, `activeArea`, `activeSection` y `showsSectionBar` se borran junto con sus tests.
+Comprobar con `grep` que no los consume nadie más antes de borrar.
+
+**El `AppLayout`/`TopNav` compartido no se toca**: lo siguen usando los otros 11 módulos, y su propio
+plan del 30-jul (`docs/superpowers/plans/2026-07-30-topnav-modulo-activo.md`) sigue vigente e
+independiente de este spec.
+
+---
+
+## 3. Las 14 rutas nuevas
+
+Talla estimada a partir del contenido observado. **Cada fase re-captura su pantalla antes de escribirla.**
+
+| Ruta | `h1` | Bajada / contenido | Talla |
+|---|---|---|---|
+| `/tours` | Tours | «Agrupa shows de un artista en una gira: viabilidad económica (P&L), gastos de tour (vuelos, hospedaje, per diems) y agenda de promo.» · CTA `+ Nuevo tour` · tarjetas por gira con estado `Planificando`, artista, territorio, rango de fechas y `N shows` | M |
+| `/liquidaciones` | Liquidaciones | «Estado de dinero de cada show: cobros del promotor, gastos, y lo liquidado al artista.» · conmutador `Por show` / `Por artista` · 3 KPI (`PENDIENTE DE COBRAR 172.489,88 €`, `GASTOS POR RECUPERAR 1006,43 €`, `PENDIENTE DE LIQUIDAR 124.050,25 €`) · filtro de 5 estados · tabla de 9 columnas, 243 shows | **L** |
+| `/conceptone/pendientes` | Pendientes | «Lo que te toca en ConceptOne: alertas de shows, arte por aprobar, liquidaciones y tus tareas.» · inbox-zero idéntico al de Mi trabajo · Ayuda contextual propia | S |
+| `/management/roster` | Roster de Management | «Elige con qué artistas trabajáis management y de cuáles traer datos de Songstats (se paga por uso).» · 2 KPI · tabla `ARTISTA / EN MANAGEMENT / SONGSTATS (API)` con toggles, 41 artistas | M |
+| `/management/insights` | Insights | «Estado de cada artista en streaming y redes (Songstats). Todo se calcula del histórico — nada se introduce a mano.» · botón `Sincronizar Songstats` · 4 KPI · 5 chips de estado · tabla de 9 columnas | **L** |
+| `/management/contratos` | Contratos | «Ciclo de vida del contrato de cada artista: término, preaviso, alcance y comisión.» · `+ Nuevo contrato` · 3 KPI · tabla de 6 columnas · **estado vacío**: «Sin contratos. Crea el primero.» | S |
+| `/management/activaciones` | Activaciones | «Calendario de activaciones del roster: prensa, releases, posts, rodajes, entregas…» · 3 filtros · agrupación por mes con día/día-de-semana · estados `Programada/En curso/Hecha/Perdida` · 31 activaciones | M |
+| `/management/campanas` | Campañas | «Inversión en marketing por canal. La del artista es la que cuenta para el retorno.» · 3 KPI · 3 filtros · tabla `CAMPAÑA/CANAL/ESTADO/PAGA/GASTO / PRESUPUESTO`, 11 campañas | M |
+| `/management/content` | Content | «Pipeline de proyectos creativos del roster: del brief a la entrega.» · kanban de 5 columnas (`Idea`, `Briefado`, `Producción`, `Revisión`, +) con contador y `—` en las vacías | M |
+| `/management/incidentes` | Incidentes | 9 filtros guardados + `+ Más filtros` + `Limpiar filtros` · tabla de 8 columnas ordenada por severidad · conmutador de vista | M |
+| `/management/incidentes/analitica` | Analítica de incidentes | tabla de coste `COSTE/PERDIDO/RECUP./NETO` + gráficos | M |
+| `/artistas` | Artistas | conmutador `Lista` / `Roster` · `+ Nuevo artista` · 41 artistas con badges `B`/`M` y estado de contrato · índice alfabético | M |
+| `/reporte` | Analítica | «Uso interno · fees, agentes y comisiones. Importes en EUR.» · rango de fechas · 3 pestañas (`Resumen`, `Comisiones de agentes`, `Reparto de artistas`) · tabla `AGENTE/CIERRES/FEE BRUTO/FEE MEDIO/BOOKING FEES/COMISIÓN` | **L** |
+| `/conceptone/ajustes` | Ajustes de ConceptOne | «Configuración del espacio de booking: administración, alertas, configuración y conexiones.» · secciones `Datos fiscales`, `Contratos`, `Comisiones y exclusividad`, `Alertas`, `Recordatorios`, `Confirmación de show`, `Formulario de ofertas`, `Extras de logística`, `Calendario Google` · botón `Guardar` | S — **re-expone paneles que ya tenemos en `/configuracion/comisiones` y `/configuracion/alertas`** |
+
+---
+
+## 4. Recalco de las pantallas existentes
+
+**Decisión tomada (Arian): entran en esta ronda.** Deltas confirmados hoy:
+
+| Pantalla | Live 2026-09-09 | Nosotros hoy |
+|---|---|---|
+| **Dashboard** (`/conceptone`) | Tira de **6 KPI de pipeline** (`TENTATIVE 70.479,07 € · 100`, `CONFIRMADO 14.100,56 € · 16`, `CONTRATO 30.905,46 € · 28`, `PENDIENTE COBRO 32.473,28 € · 27`, `PENDIENTE LIQUIDAR 24.250,00 € · 19`, `CERRADO 31.350,00 € · 23`) + enlace `Ir a todos los shows →` + feed **NOVEDADES** («Lo que hacen los promotores con sus correos y contratos») con eventos de firma fechados y referencia `C1-2026-158` | Ninguno de esos elementos existe |
+| **Contactos** | 4 pestañas: `Venues` · `Eventos / Promotoras` · `Empresas` · `Personas` + `+ Nuevo venue` | 2 pestañas: `Venues` · `Empresas y contactos` |
+| **Cobros** | Bajada ampliada («…Total y vencimientos salen del plan de pagos; **lo cobrado, de las facturas conciliadas en Holded**.») + botón `Facturar el mes…` + KPI `SHOWS POR COBRAR 155` / `PENDIENTE TOTAL 172.489,88 €` | Bajada corta, sin botón ni ese KPI |
+| **Ofertas** | 5 chips con contador (`Todas` · `Nuevas` · `Revisadas` · `Convertidas` · `Descartadas`) + master-detail con vacío «Selecciona una oferta» | Revisar contra la captura |
+| **Gastos** | Bajada con «**Últimos 120 días**» + 3 KPI (`GASTO SIN ASIGNAR 194.004,76 €` / `356 movimiento(s)`, `MOVIMIENTOS (TOTAL) 393`) | Revisar contra la captura |
+| **Shows** | Toolbar `87 shows` · `Solo futuros` · rango `Última semana → Todo el futuro` · `Filtros` · leyenda de estado | Revisar contra la captura |
+
+Las tres últimas van marcadas «revisar»: el delta se confirma con el diff `ours/` ↔ live en el momento
+de ejecutar la fase, no se da por hecho aquí.
+
+---
+
+## 5. Fases, dependencias y reparto
+
+| # | Fase | Rama | Depende de | Talla |
+|---|---|---|---|---|
+| **0** | **Carcasa `apx`** — `apx.css`, `ApxShell`, `ApxRail`, `nav.ts`, tema, y **`router.tsx` con las 14 rutas nuevas apuntando a stubs** | `feature/conceptone-v3-carcasa` | — | M |
+| **A** | Bookings nuevas: `/tours`, `/liquidaciones`, `/conceptone/pendientes` | `feature/conceptone-v3-bookings` | 0 | M |
+| **B** | Management I: `/management/roster`, `/management/insights` | `feature/conceptone-v3-management` | 0 | M |
+| **C** | Management II: `/management/{contratos,activaciones,campanas,content}` | `feature/conceptone-v3-management` (continúa la de B) | 0 | M |
+| **D** | Management III + «Más»: `/management/incidentes` + `/incidentes/analitica`, `/artistas`, `/reporte`, `/conceptone/ajustes` | `feature/conceptone-v3-mas` | 0 | M |
+| **E** | Recalco: Dashboard, Contactos, Cobros, Ofertas, Gastos, Shows | `feature/conceptone-v3-recalco` | 0 | M/L |
+
+**Reparto en tres rondas**, dos ejecutores más el coordinador:
+
+1. Ejecutor 1 → **Fase 0**. Ejecutor 2 → captura de evidencia complementaria del live a `docs/`
+   (independiente, no toca `src/`, arranca a la vez).
+2. Fusionada la 0: Ejecutor 1 → **B + C**. Ejecutor 2 → **A + D**.
+3. **E** repartida entre los dos.
+
+El coordinador no escribe código de producción: escribe specs y planes, revisa e integra.
+
+---
+
+## 6. Reglas anti-conflicto
+
+Esto es lo que hace el trabajo paralelizable. Son obligatorias:
+
+1. **La Fase 0 registra las 14 rutas de golpe** apuntando a componentes stub. A partir de ahí
+   **nadie más toca `router.tsx`**: cada fase sustituye el cuerpo de su propia página.
+2. **Congelados tras la Fase 0:** `router.tsx`, `src/features/booking/shell/*` (incluido `apx.css`),
+   `nav.ts`, `ConceptOneShell.tsx`. Si una fase necesita cambiarlos, **pide al coordinador**, no lo hace
+   por su cuenta.
+3. **Una pantalla = un fichero de página + un fichero de datos propio.** Nada de meter varias pantallas
+   en un fichero ni de ampliar `index.ts` compartidos: los barrels son el punto de conflicto clásico.
+   Las páginas nuevas se importan por ruta directa.
+4. **Worktrees en `~/dev/worktrees/Boilerplate/<nombre>`.** `~/orca/` está deprecado.
+5. **Nada se fusiona a `main` sin OK explícito** de Arian a través del coordinador.
+6. **El live es SOLO LECTURA.** Login, navegación y captura. Ni formularios, ni guardados, ni el toggle
+   de tema.
+
+---
+
+## 7. Datos y fidelidad
+
+Todo el módulo sigue siendo **seed local**: las pantallas nuevas llevan sus datos en
+`src/features/booking/data/<dominio>.ts`, calcados de la captura de su fase. No se toca el
+`Repository`/`SupabaseAdapter`.
+
+Regla de calco vigente en el proyecto y que aplica aquí igual:
+
+- **Doble medida para los colores.** Un color del live se fija con dos medidas independientes que
+  coincidan al valor exacto (regla CSS capturada + `getComputedStyle`, o muestreo del PNG con PIL).
+  Nunca a ojo.
+- **Nunca truncar un volcado DOM.** Los `.main.html` de la evidencia están completos por eso.
+- **El dato ya está en casa:** antes de encargar una captura nueva, buscar en `src/` y en
+  `docs/references/`.
+
+---
+
+## 8. Verificación
+
+Cada fase cierra con la salida real pegada en su reporte:
+
+```
+npm test          # 252+ ficheros, 1019+ tests — ninguno rojo
+npx tsc --noEmit
+npm run lint
+```
+
+Más, por pantalla: captura de la nuestra en la misma ruta y viewport (1440×1000) y comparación contra
+el PNG del live de su fase. «Hecho» sin esa salida no cuenta.
+
+---
+
+## 9. Fuera de alcance
+
+- **`/perfil`.** El pie del rail enlaza ahí y la pantalla no existe en nuestro router — hoy caería en el
+  catch-all que pinta el Home. Tiene spec propio del 30-jul
+  (`2026-07-30-perfil-y-sesiones-design.md`); se deja el enlace puesto y se implementa en su ronda.
+- **El TopNav compartido** y su plan del 30-jul: siguen vigentes para los otros 11 módulos.
+- **La Ayuda contextual** (`2026-07-30-ayuda-contextual-design.md`): el botón `Ayuda` del pie del rail
+  abre el panel que ya tenemos. La versión contextual llega con su propio spec.
+- **Las otras 12 rutas** que nos faltan fuera de ConceptOne (`/cruda/costes`,
+  `/euphoric/negocio/{partes,rendimiento,facturacion}`, `/crm/kpis`, `/personal/analitica`,
+  `/mixmag/{analitica,ajustes}`, `/tagmag/{analitica,ajustes}`, `/produccion/ajustes`): otras rondas.

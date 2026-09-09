@@ -1,0 +1,339 @@
+ConceptOne
+Añadir show
+BOOKINGS
+Dashboard
+Shows
+Tours
+Ofertas
+Cobros
+Gastos
+Liquidaciones
+Disponibilidad
+Calendario
+Contactos
+MANAGEMENT
+Roster
+Insights
+Estrategias
+Contratos
+Activaciones
+Campañas
+Content
+Incidencias
+MÁS
+Roster
+Análisis
+Ajustes
+Black Moose
+Pendientes
+Modo noche
+Ayuda
+9+
+Notificaciones
+T
+testadmin
+Insights
+
+Estado de cada artista en streaming y redes (Songstats). Todo se calcula del histórico — nada se introduce a mano.
+
+Sincronizar Songstats
+OYENTES DEL ROSTER
+674.7K
+FOLLOWERS DEL ROSTER
+59.5K
+CON MOMENTUM
+7escalando / creciendo
+REQUIEREN ATENCIÓN
+7declive / inactivo
+Escalando
+6
+Creciendo
+1
+Estable
+2
+En declive
+7
+Inactivo
+0
+17 con datos · 17 artistas
+ARTISTA	TENDENCIA	OYENTES ▼	FOLLOWERS	STREAMS	YOUTUBE	INSTAGRAM	TIKTOK	ESTADO
+Janse		
+137.1K
+-17.9K · -23%
+	
+289
++19
+	
+9.7M
+	
+3
+	
+4K
+	
+0
+	
+En declive
+Londonground		
+132.5K
++22.6K · +1%
+	
+10.8K
++299
+	
+12.9M
+	
+1.4K
+	
+17.9K
+	
+0
+	
+Estable
+DH Moon		
+130.7K
++80.6K · +147%
+	
+966
++58
+	
+1.7M
+	
+246
+	
+22.6K
+	
+0
+	
+Escalando
+ART NO LOGIA		
+88.8K
++4.4K · -10%
+	
+1.5K
++120
+	
+1.6M
+	
+716
+	
+30.8K
+	
+0
+	
+En declive
+Bizza		
+51.8K
++27.2K · +19%
+	
+2.8K
++223
+	
+1.7M
+	
+172
+	
+17.7K
+	
+1.3K
+	
+Escalando
+Gaston Zani		
+41.7K
+-2.7K · -27%
+	
+4K
++43
+	
+4.8M
+	
+719
+	
+52.1K
+	
+23.4K
+	
+En declive
+Tony Guerra		
+41.1K
++769 · -11%
+	
+22.7K
++201
+	
+7.6M
+	
+406.3K
+	
+219.8K
+	
+158.8K
+	
+En declive
+Claudia Tejeda		
+9.3K
++1.6K · +107%
+	
+2K
++48
+	
+856K
+	
+657
+	
+43.3K
+	
+3.1K
+	
+Escalando
+Vidaloca		
+8.9K
+-2.5K · +18%
+	
+4.4K
++27
+	
+1.7M
+	
+302
+	
+30K
+	
+0
+	
+Escalando
+Los Canarios		
+8.9K
++147 · +1%
+	
+4.6K
++62
+	
+591.8K
+	
+2.3K
+	
+0
+	
+0
+	
+Estable
+Rivellino		
+8.9K
++5.1K · +149%
+	
+1K
++24
+	
+509.5K
+	
+105
+	
+13.2K
+	
+0
+	
+Escalando
+Milan Torne		
+8.7K
++1.2K · +43%
+	
+1K
++14
+	
+4.3M
+	
+16
+	
+7.7K
+	
+0
+	
+Escalando
+Abdon		
+4.3K
++251 · -23%
+	
+572
++12
+	
+291.6K
+	
+36
+	
+0
+	
+0
+	
+En declive
+Aaron Martin		
+1.6K
++99 · -29%
+	
+1.5K
++22
+	
+444.7K
+	
+180
+	
+26.3K
+	
+1.3K
+	
+En declive
+Freddy Bello		
+313
++14 · -11%
+	
+1.3K
++6
+	
+139.8K
+	
+111
+	
+37.1K
+	
+3.3K
+	
+En declive
+Marcel BS		
+82
+-24 · +8%
+	
+43
++3
+	
+15.4K
+	
+0
+	
+0
+	
+0
+	
+Creciendo
+Sebastian Ledher	—	
+—
+	
+—
+	
+—
+	
+—
+	
+—
+	
+—
+	
+Sin datos
+
+Cómo se lee: el estado sale del momentum de oyentes mensuales a 90 días. Escalando es crecimiento fuerte (≥12%); Creciendo es sostenido (≥3%); Estable es plano; En declive cae; Inactivo es nivel bajo y sin movimiento. Pulsa un artista para su ficha completa.
+
+Chat
+
+Pregunta lo que quieras de esta pantalla, o cuenta qué está fallando.
+
+Enviar
+Reportar con captura
+Mis avisos
