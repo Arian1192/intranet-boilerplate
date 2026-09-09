@@ -172,8 +172,12 @@ Los gráficos de conteo sí tienen datos (`Sin categoría 3`, `Pago 2`, `Conduct
 `h1` **Artistas** con dos contadores en la cabecera: **`B 41`** y **`M 17`** · bajada: «Ficha completa
 del artista: condiciones, datos personales, contrato y documentos.»
 
-- Conmutador `Lista` / `Roster` (activo `bg-brand-600 text-white` — **rampa `brand` carbón, no el
-  violeta `apx`**).
+- Conmutador `Lista` / `Roster` (activo `bg-brand-600 text-white`).
+  **Corregido tras la enmienda del coordinador (spec §3.1):** aquí leí la clase y deduje el color, que
+  es justo lo que prohíbe el estándar de doble medida. Medido en el live, `/artistas` está dentro de
+  `.apx` y `bg-brand-600` computa a **`rgb(91, 75, 232)`** — es violeta, por las 27 reglas de remapeo.
+  Dentro de ConceptOne las clases `brand-*` se escriben **tal cual** y el violeta lo pone `apx.css`;
+  hardcodearlo rompe el modo oscuro.
 - Columna izquierda: `+ Nuevo artista` (ancho completo), buscador `input[type=search]`
   «`Buscar artista…`», 41 artistas con badges `B` / `M` y `Sin contrato`, y al final un desplegable
   **`Archivados · 1 ▸`**.
