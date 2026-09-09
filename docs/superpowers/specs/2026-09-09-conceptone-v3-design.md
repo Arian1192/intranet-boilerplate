@@ -223,8 +223,8 @@ Talla estimada a partir del contenido observado. **Cada fase re-captura su panta
 
 | Ruta | `h1` | Bajada / contenido | Talla |
 |---|---|---|---|
-| `/tours` | Tours | «Agrupa shows de un artista en una gira: viabilidad económica (P&L), gastos de tour (vuelos, hospedaje, per diems) y agenda de promo.» · CTA `+ Nuevo tour` · tarjetas por gira con estado `Planificando`, artista, territorio, rango de fechas y `N shows` | M |
-| `/liquidaciones` | Liquidaciones | «Estado de dinero de cada show: cobros del promotor, gastos, y lo liquidado al artista.» · conmutador `Por show` / `Por artista` · 3 KPI (`PENDIENTE DE COBRAR 172.489,88 €`, `GASTOS POR RECUPERAR 1006,43 €`, `PENDIENTE DE LIQUIDAR 124.050,25 €`) · filtro de 5 estados · tabla de 9 columnas, 243 shows | **L** |
+| `/tours` | Tours | «Agrupa shows de un artista en una gira: viabilidad económica (P&L), gastos de tour (vuelos, hospedaje, per diems) y agenda de promo.» · CTA `+ Nuevo tour` · tarjetas por gira **que son botones y abren un detalle** (ver §3.1) | **L** |
+| `/liquidaciones` | Liquidaciones | «Estado de dinero de cada show: cobros del promotor, gastos, y lo liquidado al artista.» · 3 KPI (`PENDIENTE DE COBRAR 172.489,88 €`, `GASTOS POR RECUPERAR 1006,43 €`, `PENDIENTE DE LIQUIDAR 124.050,25 €`) · **dos tablas distintas** y un `<select>` de 6 opciones (ver §3.1) | **L** |
 | `/conceptone/pendientes` | Pendientes | «Lo que te toca en ConceptOne: alertas de shows, arte por aprobar, liquidaciones y tus tareas.» · inbox-zero idéntico al de Mi trabajo · Ayuda contextual propia | S |
 | `/management/roster` | Roster de Management | «Elige con qué artistas trabajáis management y de cuáles traer datos de Songstats (se paga por uso).» · 2 KPI · tabla `ARTISTA / EN MANAGEMENT / SONGSTATS (API)` con toggles, 41 artistas | M |
 | `/management/insights` | Insights | «Estado de cada artista en streaming y redes (Songstats). Todo se calcula del histórico — nada se introduce a mano.» · botón `Sincronizar Songstats` · 4 KPI · 5 chips de estado · tabla de 9 columnas | **L** |
@@ -232,11 +232,64 @@ Talla estimada a partir del contenido observado. **Cada fase re-captura su panta
 | `/management/activaciones` | Activaciones | «Calendario de activaciones del roster: prensa, releases, posts, rodajes, entregas…» · 3 filtros · agrupación por mes con día/día-de-semana · estados `Programada/En curso/Hecha/Perdida` · 31 activaciones | M |
 | `/management/campanas` | Campañas | «Inversión en marketing por canal. La del artista es la que cuenta para el retorno.» · 3 KPI · 3 filtros · tabla `CAMPAÑA/CANAL/ESTADO/PAGA/GASTO / PRESUPUESTO`, 11 campañas | M |
 | `/management/content` | Content | «Pipeline de proyectos creativos del roster: del brief a la entrega.» · kanban de 5 columnas (`Idea`, `Briefado`, `Producción`, `Revisión`, +) con contador y `—` en las vacías | M |
-| `/management/incidentes` | Incidentes | 9 filtros guardados + `+ Más filtros` + `Limpiar filtros` · tabla de 8 columnas ordenada por severidad · conmutador de vista | M |
-| `/management/incidentes/analitica` | Analítica de incidentes | tabla de coste `COSTE/PERDIDO/RECUP./NETO` + gráficos | M |
-| `/artistas` | Artistas | conmutador `Lista` / `Roster` · `+ Nuevo artista` · 41 artistas con badges `B`/`M` y estado de contrato · índice alfabético | M |
-| `/reporte` | Analítica | «Uso interno · fees, agentes y comisiones. Importes en EUR.» · rango de fechas · 3 pestañas (`Resumen`, `Comisiones de agentes`, `Reparto de artistas`) · tabla `AGENTE/CIERRES/FEE BRUTO/FEE MEDIO/BOOKING FEES/COMISIÓN` | **L** |
-| `/conceptone/ajustes` | Ajustes de ConceptOne | «Configuración del espacio de booking: administración, alertas, configuración y conexiones.» · secciones `Datos fiscales`, `Contratos`, `Comisiones y exclusividad`, `Alertas`, `Recordatorios`, `Confirmación de show`, `Formulario de ofertas`, `Extras de logística`, `Calendario Google` · botón `Guardar` | S — **re-expone paneles que ya tenemos en `/configuracion/comisiones` y `/configuracion/alertas`** |
+| `/management/incidentes` | Incidentes | **8** filtros guardados + `Limpiar filtros` + `+ Más filtros` (despliega 5 campos) · tabla de 8 columnas ordenada por severidad · conmutador de **tres** vistas (ver §3.1) | M |
+| `/management/incidentes/analitica` | Analítica de incidentes | 4 KPI + 10 bloques nombrados. **Las dos tablas de coste están hoy vacías en el live** (`Sin impacto registrado.`): el calco va contra el vacío (ver §3.1) | M |
+| `/artistas` | Artistas | **master-detail**, no una lista · conmutador `Lista` / `Roster` · `+ Nuevo artista` · contadores `B 41` / `M 17` · plegable `Archivados · 1` (ver §3.1) | M |
+| `/reporte` | Analítica | «Uso interno · fees, agentes y comisiones. Importes en EUR.» · rango de fechas · 3 pestañas con **tres formas distintas**, no tres tablas (ver §3.1) | **L** |
+| `/conceptone/ajustes` | Ajustes de ConceptOne | «Configuración del espacio de booking: administración, alertas, configuración y conexiones.» · **10 paneles en 4 grupos** (ver §3.1) · botón `Guardar` | S — **re-expone paneles que ya tenemos en `/configuracion/comisiones` y `/configuracion/alertas`** |
+
+### 3.1 Correcciones de la Faena 1 (evidencia `f1-`, capturada 10:08-10:14 CEST)
+
+La Faena 1 capturó **19 estados secundarios** que el barrido de las 09:20-09:40 no cubría (detalles,
+segundas pestañas, vistas alternativas y paneles). Evidencia con prefijo `f1-` en el mismo directorio,
+más `f1-00-literales.json` y `f1-README.md`. Siete correcciones a la tabla de arriba:
+
+1. **`/tours` es talla L, no M.** Las tarjetas son botones que abren un **detalle de gira**: 4 KPI,
+   chips de estado, `ITINERARIO` con logística ciclable por show (Vuelo / Hotel / Ground / Visado),
+   tramos con km, millas, horas y días de hueco, bloque `RUTA` con enlace a Google Maps, gastos de tour
+   y **P&L detallado en dos bloques** (artista y agencia) con nota de tipo de cambio. **Replantear la
+   talla de la Fase A.**
+2. **`/liquidaciones` tiene dos tablas.** La de 9 columnas es `Por show` (243 shows). `Por artista` es
+   **otra distinta, de 5 columnas** (`ARTISTA` / `SHOWS` / `PEND. LIQUIDAR` / `DEUDA VIVA` /
+   `POSICIÓN NETA`, 32 artistas). El filtro de estados es un **`<select>` de 6 opciones**, no chips.
+   Los 3 KPI coinciden al céntimo con los de la tabla de §3.
+3. **`/management/incidentes`:** son **8** filtros guardados (el noveno que contaba el spec era el
+   propio `Limpiar filtros`). El conmutador de vista tiene **tres** posiciones —`Tabla`, `Tablero`,
+   `Timeline`—, que en el DOM van en minúscula y las sube el `capitalize` del CSS. `+ Más filtros`
+   despliega 5 campos adicionales.
+4. **`/artistas` es un master-detail**, no una lista. Vacío literal: «Selecciona un artista o crea uno
+   nuevo.». Contadores `B 41` / `M 17` en cabecera, plegable `Archivados · 1`, y la vista `Roster` trae
+   9 enlaces sociales por artista. **No hay índice alfabético** (era una inferencia del spec, y era
+   falsa).
+5. **`/reporte`:** la tabla `AGENTE / CIERRES / FEE BRUTO / FEE MEDIO / BOOKING FEES / COMISIÓN` vive
+   **dentro de la pestaña `Resumen`**, no es la pantalla. `Comisiones de agentes` **no es una tabla**:
+   son tarjetas por agente con `DEVENGADO` / `ABONADO` / `PENDIENTE` y botones `Detalle` y
+   `Registrar abono`. `Reparto de artistas` es `CARGA POR PERSONA` agrupada por rol
+   (`Agentes` / `Advancing` / `Logística`) más un bloque `POR ARTISTA`.
+6. **`/conceptone/ajustes` tiene 10 paneles, no 9**, agrupados en cuatro secciones. Al spec le faltaba
+   **`Ocultar movimientos`**:
+
+   | Grupo | Paneles |
+   |---|---|
+   | `ADMINISTRACIÓN` | Datos fiscales · **Ocultar movimientos** · Contratos · Comisiones y exclusividad |
+   | `ALERTAS` | Alertas · Recordatorios |
+   | `CONFIGURACIÓN` | Confirmación de show · Formulario de ofertas · Extras de logística |
+   | `CONEXIONES` | Calendario Google |
+
+7. **`/management/incidentes/analitica`:** 4 KPI y 10 bloques nombrados. Las **dos tablas de coste
+   están hoy vacías** en el live (`Sin impacto registrado.`). El calco va **contra ese vacío**, no
+   contra datos inventados.
+
+> **Enmienda del coordinador a la corrección 4.** La Faena 1 apuntó que `/artistas` «usa la rampa brand
+> carbón (`bg-brand-600`), no el violeta apx». **Eso es leer la clase, no el color.** Medido en el live
+> el 2026-09-09: `/artistas` está dentro de `.apx` y `bg-brand-600` computa a **`rgb(91, 75, 232)`**,
+> `bg-brand-100` a `rgb(228, 224, 255)` y `text-brand-700` a `rgb(91, 75, 232)`. Es el efecto de las 27
+> reglas de remapeo de §2 D1.
+>
+> **Regla general para las fases A-E:** dentro de ConceptOne se escriben las clases `brand-*` **tal
+> cual**, exactamente como hace el live. El violeta lo pone `apx.css`. **Nunca hardcodear el violeta**:
+> si lo haces, la pantalla deja de responder al tema y se rompe en modo oscuro.
+
 
 ---
 
