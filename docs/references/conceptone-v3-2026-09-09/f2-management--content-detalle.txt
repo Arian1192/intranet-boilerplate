@@ -1,0 +1,83 @@
+<!-- /management/content (fila desplegada) — capturado 2026-09-09T08:40:51.009Z -->
+Content
+
+Pipeline de proyectos creativos del roster: del brief a la entrega.
+
++ Nuevo proyecto
+Todos los artistas
+1 proyecto
+Idea
+1
+8bit Release promo video "LIFESTYLE"
+Vídeo
+Londonground · ConceptOne
+◄
+Eliminar
+►
+Briefado
+0
+—
+Producción
+0
+—
+Revisión
+0
+—
+Entregado
+0
+—
+Editar proyecto
+✕
+Título
+Artista
+— Elige —
+Aaron Martin
+Abdon
+ART NO LOGIA
+Bizza
+Claudia Tejeda
+DH Moon
+Freddy Bello
+Gaston Zani
+Janse
+Londonground
+Los Canarios
+Marcel BS
+Milan Torne
+Rivellino
+Sebastian Ledher
+Tony Guerra
+Vidaloca
+Tipo
+Vídeo
+Foto
+Artwork
+Branding
+Otro
+Fase
+Idea
+Briefado
+Producción
+Revisión
+Entregado
+Producido por
+Campaña (de qué campaña forma parte)
+— Sin campaña —
+Proveedor externo
+Brief
+Presup. cotizado (€)
+Aprobado (€)
+Real (€)
+Paga
+Artista
+Agencia
+Compartido
+Recuperable
+Brief enviado
+dd/mm/aaaa
+Entrega prevista
+dd/mm/aaaa
+Aprobado
+Notas
+Cancelar
+Guardar
