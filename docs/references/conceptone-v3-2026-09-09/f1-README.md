@@ -49,8 +49,11 @@ secundarios. 27 estados capturados, 19 de ellos nuevos:
 `h1` **Tours** · bajada literal: «Agrupa shows de un artista en una gira: viabilidad económica (P&L),
 gastos de tour (vuelos, hospedaje, per diems) y agenda de promo.» · CTA `+ Nuevo tour`.
 
-Tres tarjetas, todas en estado `Planificando`, y **son botones**: abren un **detalle a pantalla
-completa** que el spec no recoge.
+Tres tarjetas, todas en estado `Planificando`, y **son botones que navegan**: llevan a
+**`/tours/:tourId`** — una ruta que el inventario de 89 no recogía (verificada por URL directa el
+2026-09-09 a las 10:39 CEST). UUID del live: Spain `5c5f62d8-83a3-422c-86de-733e1d8241e5`, LATAM
+`c68ade2f-5f01-4686-869c-34e744cf445a`, ART NO LOGIA `db6247ed-d98e-476d-a0fb-3b0ab4675267`.
+Esa pantalla **no tiene `h1`**: el nombre de la gira es un `<input>` editable en línea.
 
 | Gira | Artista · territorio · fechas | Shows |
 |---|---|---|
@@ -61,7 +64,8 @@ completa** que el spec no recoge.
 **El detalle de tour** (`f1-tours--detalle-latam`) lleva:
 
 - `← Volver a tours` · `Exportar PDF` · cabecera `N shows · <territorio> · <fechas>`
-- Chips de estado: `Planificando` · `Confirmado` · `Cerrado` · `Cancelado`
+- Estado: un **`<select class="select h-9 w-auto">`** con `Planificando` · `Confirmado` · `Cerrado` ·
+  `Cancelado` (lo describí como chips leyendo el `innerText`; el HTML dice que es un desplegable)
 - Campos: `Zona / región`, `Desde`, `Hasta`, **`Moneda del P&L`**
 - 4 KPI: `NETO DEL ARTISTA CON LA GIRA` (`3520,00 US$` / «cachés netos de 3 shows») ·
   `MARGEN DE LA AGENCIA` (`880,00 US$` / «booking fee 880,00 US$») · `GASTOS DE TOUR` (`0,00 US$` /
