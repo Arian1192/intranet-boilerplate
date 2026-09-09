@@ -1,0 +1,75 @@
+<!-- /management/insights/fc750d67-bfcb-4b4c-ab5d-166a59334c53 · pestaña «Audiencia» — capturado 2026-09-09T10:19:07.893Z (https://bookings.conceptoneagency.com) -->
+←
+DH Moon
+Escalando
+
+Songstats · actualizado 2/9/2026
+
+Sincronizar
+Overview
+Audiencia
+Spotify
+Beatport
+Shazam
+YouTube
+TikTok
+Instagram
+SoundCloud
+Apple Music
+Deezer
+Tidal
+OYENTES POR CIUDAD — MAPA
+Actual
+Pico
+OYENTES POR CIUDAD (SPOTIFY)
+CIUDAD	ACTUAL	PICO	FECHA PICO
+CaracasVE	17.8K	17.8K	02 sept 26
+ValenciaVE	7K	7K	02 sept 26
+BogotáCO	6.9K	6.9K	02 sept 26
+MedellínCO	5.4K	5.4K	02 sept 26
+BarquisimetoVE	4.7K	4.7K	02 sept 26
+SantiagoCL	3.9K	3.9K	02 sept 26
+Mexico CityMX	3.7K	7.7K	12 nov 25
+MaracayVE	3.5K	3.5K	02 sept 26
+LimaPE	3.3K	3.3K	02 sept 26
+MadridES	3K	3K	02 sept 26
+MaracaiboVE	2.4K	2.4K	02 sept 26
+CaliCO	2.3K	2.4K	29 may 26
+BarcelonaES	1.7K	1.7K	02 sept 26
+BarranquillaCO	1.6K	1.6K	02 sept 26
+MiamiUS	1.6K	1.6K	02 sept 26
+BarcelonaVE	1.3K	1.3K	02 sept 26
+BarinasVE	1.2K	1.2K	02 sept 26
+GuayaquilEC	1.1K	1.1K	02 sept 26
+São PauloBR	1.1K	1.1K	29 ago 26
+San CristobalVE	1K	1K	02 sept 26
+AcariguaVE	977	977	02 sept 26
+Santo DomingoDO	963	963	02 sept 26
+Panama CityPA	958	958	02 sept 26
+QuitoEC	851	851	02 sept 26
+TurmeroVE	832	832	02 sept 26
+OYENTES POR PAÍS
+VE
+45.5K
+CO
+17.6K
+ES
+6.5K
+PE
+4K
+CL
+3.9K
+US
+3.8K
+MX
+3.7K
+EC
+2K
+DO
+1.7K
+BR
+1.1K
+PA
+958
+AR
+612
