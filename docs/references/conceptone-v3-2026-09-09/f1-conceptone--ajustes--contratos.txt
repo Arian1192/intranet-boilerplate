@@ -1,0 +1,85 @@
+<!-- capturado 2026-09-09 10:14:03 CEST · https://bookings.conceptoneagency.com/conceptone/ajustes -->
+ConceptOne
+Añadir show
+BOOKINGS
+Dashboard
+Shows
+Tours
+Ofertas
+Cobros
+Gastos
+Liquidaciones
+Disponibilidad
+Calendario
+Contactos
+MANAGEMENT
+Roster
+Insights
+Estrategias
+Contratos
+Activaciones
+Campañas
+Content
+Incidencias
+MÁS
+Roster
+Análisis
+Ajustes
+Black Moose
+Pendientes
+Modo noche
+Ayuda
+9+
+Notificaciones
+T
+testadmin
+Ajustes de ConceptOne
+
+Configuración del espacio de booking: administración, alertas, configuración y conexiones.
+
+ADMINISTRACIÓN
+Datos fiscalesOcultar movimientosContratosComisiones y exclusividad
+ALERTAS
+AlertasRecordatorios
+CONFIGURACIÓN
+Confirmación de showFormulario de ofertasExtras de logística
+CONEXIONES
+Calendario Google
+Plantillas de contrato
+
+Escribe el contrato con variables {{grupo.campo}}; se rellenan con los datos del show al generarlo.
+
++ Nueva plantilla
+Penalizaciones por cancelación del promotor
+
+Cláusula estándar que se inserta con la variable {{contrato.penalizaciones}}. Ajústala aquí si quieres.
+
+▸
+Firma de la agencia (contrafirma)
+
+Se estampa automáticamente en el contrato antes de enviarlo a firmar. Hay una firma cargada.
+
+▸
+Booking Agreement · ConceptOne
+EN
+
+Contrato de actuación completo: desglose económico en tabla, plan de pagos, logística y rider.
+
+Editar
+✕
+Contrato de actuación · ConceptOne
+ES
+
+Contrato de actuación completo: desglose económico en tabla, plan de pagos, logística y rider.
+
+Editar
+✕
+Chat · ConceptOne
+
+El panel de atención no es una lista de tareas
+
+Es lo que está en riesgo por fecha: cuanto más cerca el show, más arriba. Si algo no debería estar ahí, es que le falta un dato al show.
+
+Enviar
+Reportar con captura
+Mis avisos

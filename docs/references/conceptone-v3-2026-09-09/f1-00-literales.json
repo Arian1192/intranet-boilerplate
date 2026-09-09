@@ -1,0 +1,702 @@
+// extraido 2026-09-09 10:15:25 CEST de https://bookings.conceptoneagency.com
+{
+  "/tours": {
+    "h1": "Tours",
+    "bajada": "Agrupa shows de un artista en una gira: viabilidad económica (P&L), gastos de tour (vuelos, hospedaje, per diems) y agenda de promo.",
+    "botones": [
+      "+ Nuevo tour",
+      "Planificando Spain Sept 2026 Milan Torne · Spain · 30 oct 2026 → 11 nov 2026 0 shows",
+      "Planificando LATAM Sept 2026 Claudia Tejeda · Latinoamérica · 17 sept 2026 3 shows",
+      "Planificando ART NO LOGIA Sept 2026 ART NO LOGIA · Latinoamérica 3 shows"
+    ],
+    "selects": [],
+    "inputs": [],
+    "tablas": [],
+    "kpis": [],
+    "vacios": [],
+    "h2": []
+  },
+  "/liquidaciones": {
+    "h1": "Liquidaciones",
+    "bajada": "Estado de dinero de cada show: cobros del promotor, gastos, y lo liquidado al artista.",
+    "botones": [
+      "Por show",
+      "Por artista"
+    ],
+    "selects": [
+      {
+        "etiqueta": "(sin etiqueta)",
+        "opciones": [
+          "Todos los estados",
+          "Sin liquidar",
+          "Parcialmente liquidado",
+          "Pendiente liquidar",
+          "Liquidado",
+          "Incidencia"
+        ],
+        "valor": "Todos los estados"
+      }
+    ],
+    "inputs": [
+      {
+        "tipo": "text",
+        "placeholder": "Buscar artista, show, código…"
+      }
+    ],
+    "tablas": [
+      {
+        "cabeceras": [
+          "SHOW",
+          "FECHA",
+          "COBRADO",
+          "PEND. COBRAR",
+          "A RECUPERAR",
+          "NETO ARTISTA",
+          "LIQUIDADO",
+          "PEND. LIQUIDAR",
+          "ESTADO"
+        ],
+        "filas": 243,
+        "primera_fila": [
+          "Olivia Bass C1-2026-155 OASIS · Oasis · Maspalomas",
+          "24 dic 2026",
+          "0,00 €",
+          "960,00 €",
+          "—",
+          "800,00 €",
+          "—",
+          "800,00 €",
+          "Sin liquidar"
+        ]
+      }
+    ],
+    "kpis": [
+      "PENDIENTE DE COBRAR",
+      "GASTOS POR RECUPERAR",
+      "PENDIENTE DE LIQUIDAR",
+      "SHOW",
+      "FECHA",
+      "COBRADO",
+      "PEND. COBRAR",
+      "A RECUPERAR",
+      "NETO ARTISTA",
+      "LIQUIDADO",
+      "PEND. LIQUIDAR",
+      "ESTADO"
+    ],
+    "vacios": [
+      "Sin liquidar",
+      "Sin liquidar",
+      "Sin liquidar",
+      "Sin liquidar",
+      "Sin liquidar",
+      "Sin liquidar",
+      "Sin liquidar",
+      "Sin liquidar",
+      "Sin liquidar",
+      "Sin liquidar",
+      "Sin liquidar",
+      "Sin liquidar"
+    ],
+    "h2": []
+  },
+  "/conceptone/pendientes": {
+    "h1": "Pendientes",
+    "bajada": "Lo que te toca en ConceptOne: alertas de shows, arte por aprobar, liquidaciones y tus tareas.",
+    "botones": [],
+    "selects": [],
+    "inputs": [],
+    "tablas": [],
+    "kpis": [],
+    "vacios": [
+      "No te toca nada ahora mismo"
+    ],
+    "h2": []
+  },
+  "/management/incidentes": {
+    "h1": "Incidentes",
+    "bajada": "6 de 7 incidentes",
+    "botones": [
+      "+ Incidente",
+      "Todas (sin cerrar)",
+      "Mis abiertos",
+      "Sin resolver +7 días",
+      "Críticos y Altos",
+      "Sin asignar",
+      "Este mes",
+      "Preventables 90 días",
+      "Recurrentes",
+      "Limpiar filtros",
+      "+ Más filtros",
+      "Tabla",
+      "Tablero",
+      "Timeline"
+    ],
+    "selects": [
+      {
+        "etiqueta": "(sin etiqueta)",
+        "opciones": [
+          "Todos",
+          "Abiertos (sin resolver)",
+          "Abierta",
+          "En curso",
+          "Bloqueada",
+          "Resuelta",
+          "Cerrada"
+        ],
+        "valor": "Todos"
+      },
+      {
+        "etiqueta": "(sin etiqueta)",
+        "opciones": [
+          "Todas",
+          "Baja",
+          "Media",
+          "Alta",
+          "Crítica"
+        ],
+        "valor": "Todas"
+      },
+      {
+        "etiqueta": "(sin etiqueta)",
+        "opciones": [
+          "Todas",
+          "Viaje y logística",
+          "Técnico y producción",
+          "Contractual",
+          "Pago",
+          "Conducta del artista",
+          "Conducta de promotor/comprador",
+          "Venue y operaciones del evento",
+          "Media y PR",
+          "Staff e interno",
+          "Legal y compliance",
+          "Salud y seguridad"
+        ],
+        "valor": "Todas"
+      },
+      {
+        "etiqueta": "(sin etiqueta)",
+        "opciones": [
+          "Todos",
+          "Alba G",
+          "Alberto Egea",
+          "Aldo Messina",
+          "Alex González",
+          "Carlos Pego",
+          "Fran Hinojosa Veredas",
+          "Israel Cuenca",
+          "Jack Howell",
+          "Jassi Gonzalez Montes",
+          "Joe Coe",
+          "Juan (Staff Level Test)",
+          "Maf",
+          "Meritxell Pareja Casalí",
+          "Oscar Buch",
+          "Patricia Pareja Casalí",
+          "Sadkiel",
+          "test",
+          "Tony Carrerira",
+          "Yenifer Bernardo"
+        ],
+        "valor": "Todos"
+      }
+    ],
+    "inputs": [
+      {
+        "tipo": "text",
+        "placeholder": "Buscar artista…"
+      },
+      {
+        "tipo": "text",
+        "placeholder": "Texto…"
+      }
+    ],
+    "tablas": [
+      {
+        "cabeceras": [
+          "CÓDIGO",
+          "TÍTULO",
+          "DEPARTAMENTO",
+          "CATEGORÍA",
+          "SEVERIDAD ↓",
+          "ESTADO",
+          "OWNER",
+          "EDAD"
+        ],
+        "filas": 6,
+        "primera_fila": [
+          "#5",
+          "La pareja de Jose Fajardo se ha peleado con la novia del promotor.",
+          "ConceptOne (booking)",
+          "Conducta del artista",
+          "Alta",
+          "Abierta",
+          "Sin asignar",
+          "37d"
+        ]
+      }
+    ],
+    "kpis": [
+      "CÓDIGO TÍTULO DEPARTAMENTO CATEGORÍA SEVERIDAD ↓ ESTADO OWNER EDAD"
+    ],
+    "vacios": [
+      "Sin asignar",
+      "Sin asignar",
+      "Sin asignar",
+      "Sin asignar",
+      "Sin asignar",
+      "Sin asignar"
+    ],
+    "h2": []
+  },
+  "/management/incidentes/analitica": {
+    "h1": "Analítica de incidentes",
+    "bajada": "Patrones, tiempos de resolución, impacto económico y calidad del reporte.",
+    "botones": [],
+    "selects": [],
+    "inputs": [],
+    "tablas": [
+      {
+        "cabeceras": [
+          "",
+          "COSTE",
+          "PERDIDO",
+          "RECUP.",
+          "NETO"
+        ],
+        "filas": 1,
+        "primera_fila": [
+          "Sin impacto registrado."
+        ]
+      },
+      {
+        "cabeceras": [
+          "",
+          "COSTE",
+          "PERDIDO",
+          "RECUP.",
+          "NETO"
+        ],
+        "filas": 1,
+        "primera_fila": [
+          "Sin impacto registrado."
+        ]
+      }
+    ],
+    "kpis": [
+      "INCIDENTES (RANGO)",
+      "RESOLUCIÓN MEDIA",
+      "% PREVENTABLES",
+      "IMPACTO NETO",
+      "IMPACTO ECONÓMICO",
+      "COSTE INCURRIDO",
+      "INGRESO PERDIDO",
+      "RECUPERADO",
+      "NETO",
+      "POR CATEGORÍA",
+      "COSTE PERDIDO RECUP. NETO",
+      "POR DEPARTAMENTO",
+      "COSTE PERDIDO RECUP. NETO",
+      "INCIDENTES POR CATEGORÍA",
+      "INCIDENTES POR DEPARTAMENTO",
+      "INCIDENTES POR MES (FECHA DE REPORTE)",
+      "RESOLUCIÓN MEDIA POR SEVERIDAD",
+      "RESOLUCIÓN MEDIA POR DEPARTAMENTO",
+      "PREVENTABLES VS NO PREVENTABLES",
+      "COUNTERPARTIES RECURRENTES",
+      "ABIERTOS CON MÁS DE 14 DÍAS",
+      "LAG MEDIO DE REPORTE POR DEPARTAMENTO"
+    ],
+    "vacios": [
+      "Sin impacto registrado.",
+      "Sin impacto registrado.",
+      "Sin categoría 3 Pago 2 Conducta del artista 1 Staff e interno 1",
+      "Sin categoría 3",
+      "Sin categoría 3",
+      "Sin owner 4"
+    ],
+    "h2": [
+      "IMPACTO ECONÓMICO",
+      "INCIDENTES POR CATEGORÍA",
+      "INCIDENTES POR DEPARTAMENTO",
+      "INCIDENTES POR MES (FECHA DE REPORTE)",
+      "RESOLUCIÓN MEDIA POR SEVERIDAD",
+      "RESOLUCIÓN MEDIA POR DEPARTAMENTO",
+      "PREVENTABLES VS NO PREVENTABLES",
+      "COUNTERPARTIES RECURRENTES",
+      "ABIERTOS CON MÁS DE 14 DÍAS",
+      "LAG MEDIO DE REPORTE POR DEPARTAMENTO"
+    ]
+  },
+  "/artistas": {
+    "h1": "Artistas",
+    "bajada": "Ficha completa del artista: condiciones, datos personales, contrato y documentos.",
+    "botones": [
+      "Lista",
+      "Roster",
+      "+ Nuevo artista",
+      "Aaron Martin B M Sin contrato",
+      "Abdon B M Sin contrato",
+      "ACA B Sin contrato",
+      "Andrea Castells B Sin contrato",
+      "ART NO LOGIA B M Sin contrato",
+      "Bassel Darwish B Sin contrato",
+      "Bizza B M Sin contrato",
+      "Brenda Serna B Sin contrato",
+      "Claudia Tejeda B M Sin contrato",
+      "DH Moon B M Sin contrato",
+      "Dhuna B Sin contrato",
+      "Florentia B Sin contrato",
+      "Fran Hernandez B Sin contrato",
+      "Freddy Bello B M Sin contrato",
+      "Gaston Zani B M Sin contrato",
+      "Janse B M Sin contrato",
+      "Jose Fajardo B Sin contrato",
+      "Koleto B Sin contrato",
+      "LA CINTIA B Sin contrato",
+      "Londonground B M Sin contrato",
+      "Los Canarios B M Sin contrato",
+      "Marcel BS B M Sin contrato",
+      "Marian Ariss B Sin contrato",
+      "Milan Torne B M Sin contrato",
+      "Nacho Scoppa B Sin contrato",
+      "OL Olivia Bass B Sin contrato",
+      "PA Parsa Jafari B Sin contrato",
+      "Pau Guilera B Sin contrato",
+      "Prophecy B Sin contrato",
+      "Rivellino B M Sin contrato",
+      "Rubenus B Sin contrato",
+      "Sadkiel B Sin contrato",
+      "SA Saldivar B Sin contrato",
+      "Sebastian Ledher B M Sin contrato",
+      "Sera De Villalta B Sin contrato",
+      "Sergio Saffe B Sin contrato",
+      "SUMIA B Sin contrato",
+      "Test Artist B Sin contrato",
+      "Tomi & Kesh B Sin contrato",
+      "Tony Guerra B M Sin contrato",
+      "Vidaloca B M Sin contrato",
+      "Archivados · 1 ▸"
+    ],
+    "selects": [],
+    "inputs": [
+      {
+        "tipo": "search",
+        "placeholder": "Buscar artista…"
+      }
+    ],
+    "tablas": [],
+    "kpis": [],
+    "vacios": [
+      "Selecciona un artista o crea uno nuevo."
+    ],
+    "h2": []
+  },
+  "/reporte": {
+    "h1": "Analítica",
+    "bajada": "Uso interno · fees, agentes y comisiones. Importes en EUR.",
+    "botones": [
+      "dd/mm/aaaa",
+      "dd/mm/aaaa",
+      "Resumen",
+      "Comisiones de agentes",
+      "Reparto de artistas"
+    ],
+    "selects": [
+      {
+        "etiqueta": "(sin etiqueta)",
+        "opciones": [
+          "Liquidados",
+          "Pendientes de liquidar",
+          "Todos"
+        ],
+        "valor": "Liquidados"
+      },
+      {
+        "etiqueta": "(sin etiqueta)",
+        "opciones": [
+          "Selecciona un artista…",
+          "Aaron Martin",
+          "Abdon",
+          "ACA",
+          "ADDMOR",
+          "Adrian Oliver",
+          "Agoria",
+          "Agus",
+          "Agustin Montes",
+          "AIIVIIK",
+          "Alex Now",
+          "Alexanders Som",
+          "Alvaro Prieto",
+          "Alvaro Varen",
+          "Andrea Castells",
+          "Andrew Azara",
+          "ART NO LOGIA",
+          "Ballesteros",
+          "Bassel Darwish",
+          "Bianca Lif",
+          "Bicar",
+          "Bizza",
+          "Bliezt",
+          "Brenda Serna",
+          "CAAL",
+          "Cannon",
+          "Carlos Chaparro",
+          "Caste",
+          "Cesar Alamdena",
+          "Cesar Almena",
+          "Chinonegro",
+          "Chrlyfst",
+          "CHUS SOS",
+          "Claptone",
+          "Claudia Tejeda",
+          "Crixx",
+          "Cuartero",
+          "D.O.D",
+          "Dani Berenguel",
+          "Dani Corral",
+          "Danny Gomez",
+          "Dany Gomez",
+          "De La Swing",
+          "Delatorre",
+          "Delum",
+          "Denis Cruz",
+          "Detleft",
+          "DH Moon",
+          "Dhuna",
+          "Dimmish",
+          "Disciples",
+          "Dj Equis",
+          "Dontbedaft",
+          "Dunmore Brothers",
+          "Erick Sierra",
+          "ERRE",
+          "Ezziolino",
+          "Felipe Nogueira",
+          "Fletch",
+          "Fleur Shore",
+          "Florentia",
+          "Fran Hernandez",
+          "Francisco Allendes",
+          "Francisco Valentín",
+          "Freddy Bello",
+          "Funk Off",
+          "Gala",
+          "Galgo",
+          "Gaston Zani",
+          "GoldRed",
+          "Gonzz",
+          "Gordo",
+          "Guille Placencia",
+          "Harvy Valencia",
+          "Hector",
+          "Hector Couto",
+          "HoneyLuv",
+          "Ian Margalef",
+          "Ivan Dive",
+          "James Hype",
+          "Jan",
+          "Janse",
+          "Jay De Lys",
+          "JESS",
+          "JNJS",
+          "Joey Daniel",
+          "JORGESYN",
+          "Jose Fajardo",
+          "Jp Candela",
+          "Kaeru",
+          "Kavi jr",
+          "Kele",
+          "Kevin de Vries",
+          "Kevin.Wav",
+          "KevLb",
+          "Kidoo",
+          "Kirik",
+          "KOKO",
+          "Koleto",
+          "Korolova",
+          "LA CINTIA",
+          "Larida",
+          "Levi",
+          "Leyo",
+          "Linxes",
+          "Local Support",
+          "Londonground",
+          "Los Campos",
+          "Los Canarios",
+          "Lucas Rios",
+          "Lucor",
+          "Luka Kuhnow",
+          "Luke Vose",
+          "Mamen",
+          "Manclus",
+          "Manda Moor",
+          "Marcel BS",
+          "Marian",
+          "Marian Ariss",
+          "Matthias Tanzmann",
+          "MAZIUS&CALE",
+          "metaraph",
+          "Miane",
+          "Michael Stiven",
+          "Miganova",
+          "Milan Torne",
+          "Mr. Belt & Wezol",
+          "Nacho Lara",
+          "Nacho Scoppa",
+          "Nick Curly",
+          "Nico Loco",
+          "Nicole Moudaber",
+          "Oden & Fatzo",
+          "Olivia Bass",
+          "Ollie BC",
+          "Omy Cid",
+          "Orquesta Tropicanas",
+          "Oscar Buch",
+          "Palo Main",
+          "Parsa Jafari",
+          "Patrick Topping",
+          "Pau Guilera",
+          "Paul Woolford",
+          "Paulina Di Mundo",
+          "Portega",
+          "Prophecy",
+          "Rayconen",
+          "Residente",
+          "Rivellino",
+          "Rooléh",
+          "Rubenus",
+          "S MARIO",
+          "S.A.M.",
+          "Sacchi",
+          "Sadkiel",
+          "Saldivar",
+          "Salvi Fernandez",
+          "Sante Sansone",
+          "Savai",
+          "Sebastian Ledher",
+          "Selecta",
+          "Sem Jacobs",
+          "Sera De Villalta",
+          "Sergio Leon",
+          "Sergio Saffe",
+          "Shakti",
+          "SHOKË",
+          "Simas",
+          "Sirlof",
+          "Sirolf",
+          "Sirus Hood",
+          "Solardo",
+          "Sonno Sossego",
+          "Sonny Fodera",
+          "SOVA",
+          "Spaceray",
+          "Stella",
+          "SUMIA",
+          "TBA",
+          "Tenax",
+          "Test Artist",
+          "Thinkpink",
+          "Tom Nolan",
+          "Tomi & Kesh",
+          "Tony Guerra",
+          "UGOTGLENN",
+          "Vengui",
+          "Vidaloca",
+          "Vite",
+          "Vito UK",
+          "Vitor",
+          "Werninghaus",
+          "Wes Colstock",
+          "Xandro"
+        ],
+        "valor": "Selecciona un artista…"
+      }
+    ],
+    "inputs": [],
+    "tablas": [
+      {
+        "cabeceras": [
+          "AGENTE",
+          "CIERRES",
+          "FEE BRUTO",
+          "FEE MEDIO",
+          "BOOKING FEES",
+          "COMISIÓN"
+        ],
+        "filas": 5,
+        "primera_fila": [
+          "Yenifer Bernardo",
+          "14",
+          "22.650,00 €",
+          "1617,86 €",
+          "4810,00 €",
+          "1227,50 €"
+        ]
+      }
+    ],
+    "kpis": [
+      "DASHBOARD GENERAL",
+      "SHOWS LIQUIDADOS",
+      "BOOKING FEES",
+      "MANAGEMENT FEES",
+      "TOTAL GASTADO",
+      "ARTISTA MÁS RENTABLE",
+      "POR AGENTE",
+      "TOTAL COMISIONES",
+      "AGENTE TOP (COMISIÓN)",
+      "MÁS FECHAS CERRADAS",
+      "AGENTES ACTIVOS",
+      "AGENTE CIERRES FEE BRUTO FEE MEDIO BOOKING FEES COMISIÓN",
+      "VISTA POR ARTISTA"
+    ],
+    "vacios": [
+      "Selecciona un artista para ver su detalle."
+    ],
+    "h2": [
+      "DASHBOARD GENERAL",
+      "Fees por artista (Booking + Management apilados)",
+      "POR AGENTE",
+      "Comisión generada por agente",
+      "VISTA POR ARTISTA"
+    ]
+  },
+  "/conceptone/ajustes": {
+    "h1": "Ajustes de ConceptOne",
+    "bajada": "Configuración del espacio de booking: administración, alertas, configuración y conexiones.",
+    "botones": [
+      "Datos fiscales",
+      "Ocultar movimientos",
+      "Contratos",
+      "Comisiones y exclusividad",
+      "Alertas",
+      "Recordatorios",
+      "Confirmación de show",
+      "Formulario de ofertas",
+      "Extras de logística",
+      "Calendario Google",
+      "Guardar"
+    ],
+    "selects": [],
+    "inputs": [
+      {
+        "tipo": "text",
+        "placeholder": "Escribe la dirección y elige un resultado…"
+      }
+    ],
+    "tablas": [],
+    "kpis": [
+      "ADMINISTRACIÓN",
+      "ALERTAS",
+      "CONFIGURACIÓN",
+      "CONEXIONES",
+      "DATOS FISCALES",
+      "DIRECCIÓN",
+      "CONTACTO",
+      "DATOS BANCARIOS"
+    ],
+    "vacios": [],
+    "h2": []
+  }
+}

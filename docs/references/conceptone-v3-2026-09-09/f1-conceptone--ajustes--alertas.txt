@@ -1,0 +1,330 @@
+<!-- capturado 2026-09-09 10:14:07 CEST · https://bookings.conceptoneagency.com/conceptone/ajustes -->
+ConceptOne
+Añadir show
+BOOKINGS
+Dashboard
+Shows
+Tours
+Ofertas
+Cobros
+Gastos
+Liquidaciones
+Disponibilidad
+Calendario
+Contactos
+MANAGEMENT
+Roster
+Insights
+Estrategias
+Contratos
+Activaciones
+Campañas
+Content
+Incidencias
+MÁS
+Roster
+Análisis
+Ajustes
+Black Moose
+Pendientes
+Modo noche
+Ayuda
+9+
+Notificaciones
+T
+testadmin
+Ajustes de ConceptOne
+
+Configuración del espacio de booking: administración, alertas, configuración y conexiones.
+
+ADMINISTRACIÓN
+Datos fiscalesOcultar movimientosContratosComisiones y exclusividad
+ALERTAS
+AlertasRecordatorios
+CONFIGURACIÓN
+Confirmación de showFormulario de ofertasExtras de logística
+CONEXIONES
+Calendario Google
+Alertas de shows
+
+Lo que vigila que un show no se caiga por un hueco. Cada aviso tiene un dueño: si le llega a tres personas, no lo atiende ninguna.
+
+Activo — se están mandando avisos
+
+Cada día a las 07:15 se avisa a los destinatarios de cada regla. Una alerta se manda una vez; si el problema se arregla y reaparece, vuelve a saltar.
+
+Volver a modo prueba
+Evaluar y avisar ahora
+AGENTE
+
+Su lead, su llamada. Nadie más puede perseguir una oferta.
+
+Oferta sin respuesta
+
+Se emitió una oferta y el show sigue en tentativa. O el promotor no contesta, o nadie ha vuelto a llamarle.
+
+Activa
+Cuándo salta
+días antes del show
+días después del show
+días desde la oferta
+Severidad
+Info
+Aviso
+Crítica
+También por email
+Avisa a: el agente del show
+Cambiar
+LOGÍSTICA
+
+Lo que hay que cerrar antes de que el artista se suba a un avión.
+
+Itinerario sin cerrar
+
+A una semana del show el itinerario (vuelos, hoteles...) sigue sin cerrar. A partir de aquí cuestan el doble.
+
+Activa
+Cuándo salta
+días antes del show
+días después del show
+días desde la oferta
+Severidad
+Info
+Aviso
+Crítica
+También por email
+Avisa a: Alex González, Oscar Buch
+Cambiar
+Logística sin definir en contrato
+
+Quedan bloques de logística en «sin decidir»: no es que no se cubran, es que nadie los ha mirado.
+
+Activa
+Cuándo salta
+días antes del show
+días después del show
+días desde la oferta
+Severidad
+Info
+Aviso
+Crítica
+También por email
+Avisa a: el agente del show + Joe Coe
+Cambiar
+Gastos sin cerrar
+
+Quedan gastos sin cerrar y el show es esta semana. Deberían estar cerrados ANTES: sin ellos no se puede liquidar, y cada día que pasa se recuerda peor lo que se gastó.
+
+Activa
+Cuándo salta
+días antes del show
+días después del show
+días desde la oferta
+Severidad
+Info
+Aviso
+Crítica
+También por email
+Avisa a: Alex González, Oscar Buch
+Cambiar
+ADVANCING
+
+El papel y el dinero: contrato, cobro y liquidación.
+
+Confirmado y sin contrato firmado
+
+El show está confirmado pero el contrato no está firmado. Sin contrato no hay a quién reclamar si el promotor se cae.
+
+Activa
+Cuándo salta
+días antes del show
+días después del show
+días desde la oferta
+Severidad
+Info
+Aviso
+Crítica
+También por email
+Avisa a: Joe Coe
+Cambiar
+Contrato firmado y sin plan de cobro
+
+El contrato está firmado pero no hay ni una fila de cobro. Sin plan de pago el show NO avanza solo a Liquidación.
+
+Activa
+Cuándo salta
+días antes del show
+días después del show
+días desde la oferta
+Severidad
+Info
+Aviso
+Crítica
+También por email
+Avisa a: Joe Coe
+Cambiar
+Show sin liquidar
+
+Pasó hace un mes y el dinero sigue sin liquidarse. Esto es caja que no ha entrado o un artista al que no se ha pagado.
+
+Activa
+Cuándo salta
+días antes del show
+días después del show
+días desde la oferta
+Severidad
+Info
+Aviso
+Crítica
+También por email
+Avisa a: Joe Coe
+Cambiar
+Cobro en efectivo pendiente
+
+Este show tiene un cobro en efectivo que hay que pedir en sala antes de actuar. Si no se cobra en el momento, no se cobra.
+
+Activa
+Cuándo salta
+días antes del show
+días después del show
+días desde la oferta
+Severidad
+Info
+Aviso
+Crítica
+También por email
+Avisa a: Alex González, Joe Coe, Oscar Buch
+Cambiar
+Cobro vencido
+
+Hay un tramo del plan de pagos vencido y sin cobrar: el promotor va tarde. Cada día que pasa es dinero fuera de plazo.
+
+Activa
+Cuándo salta
+días antes del show
+días después del show
+días desde la oferta
+Severidad
+Info
+Aviso
+Crítica
+También por email
+Avisa a: el agente del show
+Cambiar
+
+Las alertas leen la fase del show, no solo la fecha: un show cancelado no avisa de nada, y uno liquidado tampoco. El banner de la ficha del show se calcula en vivo y funciona siempre, incluso en modo prueba — lo que el modo prueba silencia son las notificaciones y los correos.
+
+Avisos de eventos
+
+Avisos que saltan en el momento en que pasa algo (los empuja DocuSeal / Holded), no el repaso diario de arriba. Elige a quién llega: el agente del show, un departamento entero (p. ej. Logística, se mantiene solo al entrar gente) y/o personas concretas.
+
+Recordatorios de firma de contrato
+
+Si el promotor no firma, el sistema le recuerda por el hilo del show (no DocuSeal), con el equipo en copia. Desactivado de fábrica.
+
+activo
+Cada cuántos días recordar
+Máximo de recordatorios
+Aviso interno si abrió y no firma (horas)
+
+El recordatorio al promotor va en el idioma de la plantilla del contrato. El aviso interno es una campana al agente del show.
+
+✍️
+Contratos firmados
+
+Cuando un promotor firma online el contrato de un show (DocuSeal). La reciben quienes designes.
+
+también por email
+Avisar al agente del show
+Avisar al de advancing del show
+Avisar al de logística del show
+
+Advancing y logística salen del staff ConceptOne del artista. Si no están asignados, esa vía no avisa a nadie.
+
+DEPARTAMENTOS
+Advancing
+Board
+Booking
+Comercial
+Comunicación & PR
+Diseño
+Logística
+Management
+Marketing
+Paid Ads
+Redacción
+Vídeo
+PERSONAS CONCRETAS
+Alba G
+Alberto Egea
+Aldo Messina
+Alex González
+Carlos Pego
+Fran Hinojosa Veredas
+Israel Cuenca
+Jack Howell
+Jassi Gonzalez Montes
+Joe Coe
+Juan (Staff Level Test)
+Maf
+Meritxell Pareja Casalí
+Oscar Buch
+Patricia Pareja Casalí
+Sadkiel
+test
+Tony Carrerira
+Yenifer Bernardo
+💰
+Facturas cobradas (Holded)
+
+Cuando se concilia el cobro de una factura de un show en Holded. Pensada para advancing y logística: elige quién la recibe.
+
+también por email
+Avisar al agente del show
+Avisar al de advancing del show
+Avisar al de logística del show
+
+Advancing y logística salen del staff ConceptOne del artista. Si no están asignados, esa vía no avisa a nadie.
+
+DEPARTAMENTOS
+Advancing
+Board
+Booking
+Comercial
+Comunicación & PR
+Diseño
+Logística
+Management
+Marketing
+Paid Ads
+Redacción
+Vídeo
+PERSONAS CONCRETAS
+Alba G
+Alberto Egea
+Aldo Messina
+Alex González
+Carlos Pego
+Fran Hinojosa Veredas
+Israel Cuenca
+Jack Howell
+Jassi Gonzalez Montes
+Joe Coe
+Juan (Staff Level Test)
+Maf
+Meritxell Pareja Casalí
+Oscar Buch
+Patricia Pareja Casalí
+Sadkiel
+test
+Tony Carrerira
+Yenifer Bernardo
+Chat · ConceptOne
+
+El panel de atención no es una lista de tareas
+
+Es lo que está en riesgo por fecha: cuanto más cerca el show, más arriba. Si algo no debería estar ahí, es que le falta un dato al show.
+
+Enviar
+Reportar con captura
+Mis avisos

@@ -1,0 +1,204 @@
+<!-- capturado 2026-09-09 10:14:12 CEST · https://bookings.conceptoneagency.com/conceptone/ajustes -->
+ConceptOne
+Añadir show
+BOOKINGS
+Dashboard
+Shows
+Tours
+Ofertas
+Cobros
+Gastos
+Liquidaciones
+Disponibilidad
+Calendario
+Contactos
+MANAGEMENT
+Roster
+Insights
+Estrategias
+Contratos
+Activaciones
+Campañas
+Content
+Incidencias
+MÁS
+Roster
+Análisis
+Ajustes
+Black Moose
+Pendientes
+Modo noche
+Ayuda
+9+
+Notificaciones
+T
+testadmin
+Ajustes de ConceptOne
+
+Configuración del espacio de booking: administración, alertas, configuración y conexiones.
+
+ADMINISTRACIÓN
+Datos fiscalesOcultar movimientosContratosComisiones y exclusividad
+ALERTAS
+AlertasRecordatorios
+CONFIGURACIÓN
+Confirmación de showFormulario de ofertasExtras de logística
+CONEXIONES
+Calendario Google
+CONFIRMACIÓN DE SHOW · CORREO AL PROMOTOR
+
+Define qué datos son esenciales y cómo aparecen en el correo automático al confirmar un show. Obligatorio bloquea el envío si está vacío; el correo decide cómo se muestra al promotor.
+
+Activar el aviso automático al promotor al confirmar un show
+Asunto del correo (opcional; vacío = por defecto)
+Texto introductorio del correo (opcional)
+VARIABLES DISPONIBLES (ASUNTO Y TEXTO)
+{codigo}
+Código del show
+{artista}
+Artista
+{evento}
+Evento (fiesta)
+{fecha}
+Fecha
+{ciudad}
+Ciudad
+{pais}
+País
+{venue}
+Venue
+
+Escribe la variable entre llaves; se reemplaza por el dato del show. Si el dato está vacío, se omite del asunto.
+
+Campos esenciales
+
+Por página del show. Informativo = se muestra si está; Amarillo = se le pide al promotor si falta; No aparece = se omite del correo.
+
+EVENTO
+Artista
+Obligatorio
+No aparece
+Informativo
+Amarillo
+Evento
+Obligatorio
+No aparece
+Informativo
+Amarillo
+Fecha
+Obligatorio
+No aparece
+Informativo
+Amarillo
+Ciudad
+Obligatorio
+No aparece
+Informativo
+Amarillo
+País
+Obligatorio
+No aparece
+Informativo
+Amarillo
+Venue
+Obligatorio
+No aparece
+Informativo
+Amarillo
+Dirección del venue
+Obligatorio
+No aparece
+Informativo
+Amarillo
+Aforo
+Obligatorio
+No aparece
+Informativo
+Amarillo
+Horarios (doors, curfew)
+Obligatorio
+No aparece
+Informativo
+Amarillo
+Line-up
+Obligatorio
+No aparece
+Informativo
+Amarillo
+Billing (cartel)
+Obligatorio
+No aparece
+Informativo
+Amarillo
+Duración del set
+Obligatorio
+No aparece
+Informativo
+Amarillo
+SET TIMES
+Set times
+Obligatorio
+No aparece
+Informativo
+Amarillo
+OFERTA
+Deal
+Obligatorio
+No aparece
+Informativo
+Amarillo
+LOGÍSTICA
+Viaje
+Obligatorio
+No aparece
+Informativo
+Amarillo
+Traslados internos (ground)
+Obligatorio
+No aparece
+Informativo
+Amarillo
+Alojamiento
+Obligatorio
+No aparece
+Informativo
+Amarillo
+Buyout
+Obligatorio
+No aparece
+Informativo
+Amarillo
+CONTACTOS
+Firmante (nombre + email)
+Obligatorio
+No aparece
+Informativo
+Amarillo
+Empresa + datos fiscales (NIF, razón social, dirección de facturación)
+Obligatorio
+No aparece
+Informativo
+Amarillo
+PAGOS
+Plan de pagos
+Obligatorio
+No aparece
+Informativo
+Amarillo
+Mensajes personalizados
++ Añadir mensaje
+
+Recordatorios que se añaden al final del correo (p. ej. «Hasta que no se firme el contrato y se realice el primer pago no se podrá anunciar el show»).
+
+Sin mensajes.
+
+Guardar ajustes
+Chat · ConceptOne
+
+El panel de atención no es una lista de tareas
+
+Es lo que está en riesgo por fecha: cuanto más cerca el show, más arriba. Si algo no debería estar ahí, es que le falta un dato al show.
+
+Enviar
+Reportar con captura
+Mis avisos

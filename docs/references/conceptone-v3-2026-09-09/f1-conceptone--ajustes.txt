@@ -1,0 +1,78 @@
+<!-- capturado 2026-09-09 10:09:32 CEST · https://bookings.conceptoneagency.com/conceptone/ajustes -->
+ConceptOne
+Añadir show
+BOOKINGS
+Dashboard
+Shows
+Tours
+Ofertas
+Cobros
+Gastos
+Liquidaciones
+Disponibilidad
+Calendario
+Contactos
+MANAGEMENT
+Roster
+Insights
+Estrategias
+Contratos
+Activaciones
+Campañas
+Content
+Incidencias
+MÁS
+Roster
+Análisis
+Ajustes
+Black Moose
+Pendientes
+Modo noche
+Ayuda
+9+
+Notificaciones
+T
+testadmin
+Ajustes de ConceptOne
+
+Configuración del espacio de booking: administración, alertas, configuración y conexiones.
+
+ADMINISTRACIÓN
+Datos fiscalesOcultar movimientosContratosComisiones y exclusividad
+ALERTAS
+AlertasRecordatorios
+CONFIGURACIÓN
+Confirmación de showFormulario de ofertasExtras de logística
+CONEXIONES
+Calendario Google
+ConceptOneGuardado
+Guardar
+DATOS FISCALES
+Razón social
+NIF
+DIRECCIÓN
+Buscar dirección en Google
+Dirección
+Población
+Código postal
+Provincia
+País
+CONTACTO
+Email
+Teléfono
+Web
+DATOS BANCARIOS
+Banco
+Titular de la cuenta
+IBAN
+SWIFT/BIC
+Firmante (representante legal)
+Chat · ConceptOne
+
+El panel de atención no es una lista de tareas
+
+Es lo que está en riesgo por fecha: cuanto más cerca el show, más arriba. Si algo no debería estar ahí, es que le falta un dato al show.
+
+Enviar
+Reportar con captura
+Mis avisos
