@@ -2,8 +2,27 @@
 
 **Ejecutor:** pane `wA:pC`. **Coordinador:** `wA:p5`.
 **Spec:** `/home/arian/dev/Boilerplate/docs/superpowers/specs/2026-09-09-conceptone-v3-design.md`.
-**Rama:** `feature/conceptone-v3-show-detalle`, salida de `main` (`e899d3f`).
+**Rama:** `feature/conceptone-v3-show-detalle`, salida de **`feature/conceptone-v3-recalco-e1`**
+(el lote 1 de la Fase E, PR **#33**, sin fusionar) — **no de `main`**. Si la #33 se fusiona, esta rama
+se rebasa sobre `main` y queda igual.
 **Worktree:** `~/dev/worktrees/Boilerplate/c1-management` — el mismo, ya puesto en la rama por el coordinador.
+
+## De qué cuelga esta fase, y por qué su base no es `main`
+
+La primera versión de este brief decía que la rama salía de `main`. **Era falso**, y describía un
+árbol que no existía: `main` no tiene el lote 1. Cuatro de las cosas que este brief da por hechas
+**sólo existen en `feature/conceptone-v3-recalco-e1`**:
+
+1. **La ruta `/shows/:showId`**, registrada en `router.tsx` (commit `3c0b505`). Sin ella no hay nada
+   que sustituir — y como el router **no tiene catch-all**, la URL se queda en blanco.
+2. **`ShowDetallePage.tsx`**, el stub cuyo cuerpo escribe esta fase.
+3. **`trackShow.ts`**, la tabla de la moda medida por fase. Este brief pide reutilizarla y **no**
+   escribir una segunda: si la fila y el detalle dijeran cosas distintas del mismo show, sería peor
+   que la aproximación.
+4. **La capa `apxlist` en `apx.css`** (commit `30c53a2`), que el live usa en la lista y probablemente
+   también aquí.
+
+Por eso la base es esa rama y no `main`. Verificado sobre el árbol, no supuesto.
 
 ## Por qué esta pantalla y por qué ahora
 
@@ -66,4 +85,5 @@ incidente — compara contra la carga limpia de la ruta, no contra cero.
    bloque, y deja el pane `idle`.
 3. **Nada se fusiona a `main` sin OK explícito** de Arian a través del coordinador. Pushea y avísame.
 4. **Verificación:** `npm test`, `npx tsc --noEmit`, `npm run lint` pegados en el reporte.
-   Baseline de `main`: **266 ficheros / 1174 tests**.
+   Baseline de la rama base (lote 1 incluido): **269 ficheros / 1200 tests**. No son los 266/1174 de
+   `main`: esa cifra era de antes del lote 1.
