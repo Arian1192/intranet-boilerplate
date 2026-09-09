@@ -251,6 +251,27 @@ describe('InsightsArtistaPage — Audiencia', () => {
     expect(burbujas()).toBeGreaterThan(actual);
   });
 
+  /**
+   * La proyección y el radio son del live, no invención nuestra: se verificaron
+   * contra las 137 burbujas capturadas con desviación cero. Este test los fija
+   * sobre la ciudad mayor, que es la que ancla la escala.
+   */
+  it('la burbuja mayor cae donde la pone el live y con su radio', async () => {
+    renderFicha('janse');
+    await userEvent.click(screen.getByRole('button', { name: 'Audiencia' }));
+    const mapa = screen.getByRole('img', { name: 'Oyentes por ciudad' });
+    const mayor = [...mapa.querySelectorAll('circle')].reduce((a, b) =>
+      Number(a.getAttribute('r')) >= Number(b.getAttribute('r')) ? a : b
+    );
+    const ciudad = FICHAS.find((f) => f.id === 'janse')!.ciudades.reduce((a, b) =>
+      a.actual >= b.actual ? a : b
+    );
+    expect(Number(mayor.getAttribute('cx'))).toBeCloseTo(((ciudad.lng + 180) / 360) * 1000, 4);
+    expect(Number(mayor.getAttribute('cy'))).toBeCloseTo(((90 - ciudad.lat) / 180) * 500, 4);
+    // 3 de suelo + 26 para la mayor: la mayor mide exactamente 29.
+    expect(Number(mayor.getAttribute('r'))).toBeCloseTo(29, 6);
+  });
+
   it('la tabla de ciudades se corta en 25 filas y las barras de país en 12', async () => {
     renderFicha('dhmoon'); // 248 ciudades: sobra material para que el recorte se note.
     await userEvent.click(screen.getByRole('button', { name: 'Audiencia' }));

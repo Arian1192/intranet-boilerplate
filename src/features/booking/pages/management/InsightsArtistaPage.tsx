@@ -633,17 +633,28 @@ function Audiencia({ ciudades }: { ciudades: CiudadOyentes[] }) {
   );
 }
 
-const RADIO_MAXIMO = 29;
+/** Radio de la burbuja: 3 px de suelo y 26 más para la ciudad mayor. */
+const RADIO_MINIMO = 3;
+const RADIO_EXTRA = 26;
 
 /**
  * El mapa de burbujas.
  *
- * Los trazados de país son literales del live (ver `mapamundi.ts`). **La
- * proyección de las burbujas es nuestra y va declarada**: del volcado sólo se
- * pueden leer las coordenadas ya proyectadas, no la fórmula que las produjo, y
- * deducirla de unos pocos puntos habría sido inventar geometría. Se usa una
- * equirectangular sobre el mismo `viewBox`, que es la que encaja con el dibujo.
- * El radio sí está medido: 29 px la ciudad mayor y raíz cuadrada del resto.
+ * Los trazados de país son literales del live (ver `mapamundi.ts`), y **la
+ * proyección y el radio también lo son: se dedujeron y se verificaron**, no se
+ * inventaron. Del volcado sólo se leen las coordenadas ya proyectadas, así que
+ * al principio se dieron por «nuestras» —como la de `EsquemaRuta` en
+ * `TourDetallePage`— pero contrastando las burbujas contra las
+ * `city_lat`/`city_lng` del origen salieron exactas:
+ *
+ * - **Proyección equirectangular** sobre el mismo `viewBox` de 1000×500:
+ *   `x = (lng + 180) / 360 · 1000` y `y = (90 − lat) / 180 · 500`. Verificada en
+ *   las **137 burbujas** de los cuatro artistas con audiencia.
+ * - **Radio** `3 + 26 · √(v / máximo)`, con `v` el valor del modo activo.
+ *   Verificado en las mismas 137, con desviación **cero**.
+ *
+ * Por eso las coordenadas van a precisión completa en el fichero de datos:
+ * redondearlas a cuatro decimales ya desplazaba alguna burbuja 0,16 px.
  */
 function Mapa({
   burbujas,
@@ -675,7 +686,7 @@ function Mapa({
           key={`${c.nombre}-${c.pais}`}
           cx={((c.lng + 180) / 360) * 1000}
           cy={((90 - c.lat) / 180) * 500}
-          r={RADIO_MAXIMO * Math.sqrt(valor(c) / techo)}
+          r={RADIO_MINIMO + RADIO_EXTRA * Math.sqrt(valor(c) / techo)}
           fill="#5B4BE8"
           fillOpacity="0.4"
           stroke="#5B4BE8"

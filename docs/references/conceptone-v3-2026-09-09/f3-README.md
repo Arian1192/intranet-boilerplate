@@ -84,6 +84,10 @@ explícito porque en este proyecto la señal «cero no-`GET`» tiene un matiz: e
    `—` en los nueve KPI, «Sin datos.» en los bloques y una sola pestaña. Eso explica el chip
    `Sin datos` que la Faena 2 vio en `/management/insights` y que no está entre los cinco filtros.
 6. **Sin serie no hay tarjeta de gráfico.** `Traxsource` no era un caso especial: es esta regla.
+7. **La deriva de cifras tenía causa, y no era ruido.** El `Songstats · actualizado` de Janse pasó de
+   `2/9/2026` a `9/9/2026` entre la captura de la Faena 2 y ésta: su fila se **re-sincronizó de
+   verdad** durante la ronda, y por eso sus números se movieron mientras los otros cuatro artistas
+   —todos en `2/9/2026`— no se movieron nada.
 
 ## Lo que quedó medido al detalle
 
@@ -112,14 +116,18 @@ explícito porque en este proyecto la señal «cero no-`GET`» tiene un matiz: e
   no se dedujo qué es.
 - `Charts` de Amazon y Tidal y `Followers` de TikTok valen cero en los cinco, así que su campo de
   origen **no se pudo aislar por valor**; se usa el de sus hermanas inequívocas.
-- **La proyección de las burbujas del mapa es nuestra** y va declarada como tal en el código. Del
-  volcado sólo se leen las coordenadas ya proyectadas, no la fórmula. Los trazados de país sí son
-  literales.
+
+**Y un límite que resultó no serlo.** La proyección de las burbujas del mapa se dio por «nuestra» al
+principio —del volcado sólo se leen las coordenadas ya proyectadas— pero contrastándolas contra las
+`city_lat`/`city_lng` del origen salió **exacta**: equirectangular sobre el `viewBox` de 1000×500, y
+radio `3 + 26·√(v/máximo)`. Verificado en las **137 burbujas** de los cuatro artistas con audiencia,
+con desviación **cero**. Se deja anotado porque el primer instinto —declararlo como inventado— habría
+metido en el calco una geometría aproximada teniendo la buena al alcance.
 
 ## Y una advertencia sobre las cifras
 
 **El live las mueve en horas.** Durante este mismo recon, el oyentes-mensuales de Janse pasó de
-`136K` a `126.7K` en 23 minutos. Por eso cada artista se capturó en **una sola pasada** —origen y
+`136K` a `126.7K` en 23 minutos — porque su fila se re-sincronizó de verdad (punto 7 de arriba). Por eso cada artista se capturó en **una sola pasada** —origen y
 DOM en el mismo instante— y por eso los tests del calco van contra reglas y literales, nunca contra
 una cifra que se mueva. Cualquier comparación posterior contra el live dará números distintos sin que
 nada esté roto.
