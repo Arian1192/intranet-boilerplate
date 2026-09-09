@@ -217,7 +217,7 @@ independiente de este spec.
 
 ---
 
-## 3. Las 14 rutas nuevas
+## 3. Las rutas nuevas (14 en el inventario inicial, 16 tras el sondeo)
 
 Talla estimada a partir del contenido observado. **Cada fase re-captura su pantalla antes de escribirla.**
 
@@ -244,11 +244,14 @@ La Faena 1 capturó **19 estados secundarios** que el barrido de las 09:20-09:40
 segundas pestañas, vistas alternativas y paneles). Evidencia con prefijo `f1-` en el mismo directorio,
 más `f1-00-literales.json` y `f1-README.md`. Siete correcciones a la tabla de arriba:
 
-1. **`/tours` es talla L, no M.** Las tarjetas son botones que abren un **detalle de gira**: 4 KPI,
-   chips de estado, `ITINERARIO` con logística ciclable por show (Vuelo / Hotel / Ground / Visado),
+1. **`/tours` es talla L, no M.** Las tarjetas **navegan** a un **detalle de gira** (ruta 16, §3.2):
+   4 KPI, `ITINERARIO` con logística ciclable por show (Vuelo / Hotel / Ground / Visado),
    tramos con km, millas, horas y días de hueco, bloque `RUTA` con enlace a Google Maps, gastos de tour
    y **P&L detallado en dos bloques** (artista y agencia) con nota de tipo de cambio. **Replantear la
    talla de la Fase A.**
+   *Corrección de la propia Faena 1, verificada por el coordinador:* el estado de la gira **no son
+   chips**, es un `<select class="select h-9 w-auto">` con cuatro opciones — `Planificando`,
+   `Confirmado`, `Cerrado`, `Cancelado`.
 2. **`/liquidaciones` tiene dos tablas.** La de 9 columnas es `Por show` (243 shows). `Por artista` es
    **otra distinta, de 5 columnas** (`ARTISTA` / `SHOWS` / `PEND. LIQUIDAR` / `DEUDA VIVA` /
    `POSICIÓN NETA`, 32 artistas). El filtro de estados es un **`<select>` de 6 opciones**, no chips.
@@ -308,6 +311,35 @@ botón `Sincronizar`; **12 pestañas** (`Overview`, `Audiencia`, `Spotify`, `Bea
 las filas naveguen de verdad y el pie no prometa algo que no hace. **La ficha completa es la Fase F**,
 talla **L**, y se escribe en su propia rama. Excepción puntual al congelado de `router.tsx`: la añade la
 Faena 2, **una línea y su fichero de stub, en un commit aparte**.
+
+#### Ruta 16 — `/tours/:tourId` (Faena 1, verificada por el coordinador)
+
+Las tarjetas de `/tours` **navegan**, no despliegan en sitio, y la ruta es **deep-linkable**: cargando
+`/tours/c68ade2f-5f01-4686-869c-34e744cf445a` a pelo renderiza el detalle entero. Se registra contra un
+stub, igual que la 15.
+
+**Ojo al maquetarla: esta pantalla no tiene `h1`.** El nombre de la gira es un **input editable en
+línea**, medido en el live:
+
+```html
+<input class="w-full border-0 bg-transparent p-0 text-2xl font-semibold text-slate-800
+              focus:outline-none focus:ring-0" value="LATAM Sept 2026">
+```
+
+El patrón «h1 + bajada» del resto de páginas **no aplica aquí**, y por tanto el stub de esta ruta
+tampoco lo lleva.
+
+#### Sondeo de filas clicables (Faena 1, 2026-09-09)
+
+| Pantalla | Al pulsar una fila | Consecuencia |
+|---|---|---|
+| `/tours` | navega a `/tours/:tourId` | **ruta 16**, se registra |
+| `/liquidaciones` (`Por show`) | navega a `/shows/:id` | ruta **ya existente**: las 243 filas son enlaces al detalle del show. No hay nada que registrar |
+| `/artistas` | no cambia la URL, no hay modal | master-detail **en sitio**, confirmado |
+| `/management/incidentes` | no cambia la URL, **abre un modal** (`[role=dialog]`) | se captura a fondo en la Fase D |
+
+Pendiente de sondear: `/management/incidentes/analitica` y las tarjetas por agente de `/reporte`
+(`Detalle`, `Registrar abono`). Van con la Fase D.
 
 #### Límite conocido del inventario de rutas
 
