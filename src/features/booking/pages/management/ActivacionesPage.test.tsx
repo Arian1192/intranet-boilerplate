@@ -104,3 +104,40 @@ describe('ActivacionesPage — calco del live', () => {
     expect(screen.getByLabelText('Solo futuras')).toBeChecked();
   });
 });
+
+describe('ActivacionesPage — el modal de edición', () => {
+  it('el título de la fila abre `Editar activación` con sus datos', async () => {
+    const usuario = userEvent.setup();
+    render(<ActivacionesPage />);
+    await usuario.click(screen.getByText('Brunch Show - Grabación'));
+    expect(
+      screen.getByRole('heading', { name: 'Editar activación', level: 2 })
+    ).toBeInTheDocument();
+    expect(screen.getByLabelText('Título')).toHaveValue('Brunch Show - Grabación');
+    expect(screen.getByLabelText('Artista')).toHaveValue('Londonground');
+  });
+
+  it('guardar un cambio de tipo se ve en la fila', async () => {
+    const usuario = userEvent.setup();
+    render(<ActivacionesPage />);
+    await usuario.click(screen.getByText('Brunch Show - Grabación'));
+    await usuario.selectOptions(screen.getByLabelText('Tipo'), 'Entrega');
+    await usuario.click(screen.getByRole('button', { name: 'Guardar' }));
+    expect(within(fila('Brunch Show - Grabación')).getByText('Entrega')).toBeInTheDocument();
+  });
+
+  it('guardar conserva el estado, que no vive en el modal sino en la fila', async () => {
+    const usuario = userEvent.setup();
+    render(<ActivacionesPage />);
+    const select = within(fila('Brunch Show - Grabación')).getByRole(
+      'combobox'
+    ) as HTMLSelectElement;
+    await usuario.selectOptions(select, 'En curso');
+    await usuario.click(screen.getByText('Brunch Show - Grabación'));
+    await usuario.selectOptions(screen.getByLabelText('Tipo'), 'Show');
+    await usuario.click(screen.getByRole('button', { name: 'Guardar' }));
+    expect(
+      (within(fila('Brunch Show - Grabación')).getByRole('combobox') as HTMLSelectElement).value
+    ).toBe('En curso');
+  });
+});

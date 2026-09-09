@@ -1,0 +1,89 @@
+https://bookings.conceptoneagency.com/management/campanas — listas de opciones de cada select, modal a modal — 9/9/2026, 11:58:30 CEST
+
+===== fila #0 · "Campaña de aumento de suscriptores en YouTube" =====
+  Estrategia (a qué plan pertenece)
+     opciones: ["— Sin estrategia —","Plan de Crecimiento Redes"]
+     elegida : "Plan de Crecimiento Redes"
+  Campaña madre (opcional)
+     opciones: ["— Ninguna (es principal) —","Campaña de Views en YouTube set COVA SANTA","Campaña de aumento de seguidores - Meta (Instagram)"]
+     elegida : "— Ninguna (es principal) —"
+
+===== fila #1 · "YouTube: Suscriptores al canal" =====
+  Estrategia (a qué plan pertenece)
+     opciones: ["— Sin estrategia —","Estrategia de Crecimiento Redes 2026/2027"]
+     elegida : "Estrategia de Crecimiento Redes 2026/2027"
+  Campaña madre (opcional)
+     opciones: ["— Ninguna (es principal) —","YouTube: Visualizaciones sobre Tantra Liveset","Hey Mami - Spotify Streams + YouTube Views"]
+     elegida : "— Ninguna (es principal) —"
+
+===== fila #2 · "YouTube: Visualizaciones sobre Tantra Liveset" =====
+  Estrategia (a qué plan pertenece)
+     opciones: ["— Sin estrategia —","Estrategia de Crecimiento Redes 2026/2027"]
+     elegida : "Estrategia de Crecimiento Redes 2026/2027"
+  Campaña madre (opcional)
+     opciones: ["— Ninguna (es principal) —","YouTube: Suscriptores al canal","Hey Mami - Spotify Streams + YouTube Views"]
+     elegida : "— Ninguna (es principal) —"
+
+===== fila #3 · "Campaña de Views en YouTube set COVA SANTA " =====
+  Estrategia (a qué plan pertenece)
+     opciones: ["— Sin estrategia —","Plan de Crecimiento Redes"]
+     elegida : "Plan de Crecimiento Redes"
+  Campaña madre (opcional)
+     opciones: ["— Ninguna (es principal) —","Campaña de aumento de suscriptores en YouTube","Campaña de aumento de seguidores - Meta (Instagram)"]
+     elegida : "— Ninguna (es principal) —"
+
+===== fila #4 · "Campaña de aumento de seguidores - Meta (Instagram)" =====
+  Estrategia (a qué plan pertenece)
+     opciones: ["— Sin estrategia —","Plan de Crecimiento Redes"]
+     elegida : "Plan de Crecimiento Redes"
+  Campaña madre (opcional)
+     opciones: ["— Ninguna (es principal) —","Campaña de aumento de suscriptores en YouTube","Campaña de Views en YouTube set COVA SANTA"]
+     elegida : "— Ninguna (es principal) —"
+
+===== fila #5 · "Campaña lanzamiento 'Favela'" =====
+  Estrategia (a qué plan pertenece)
+     opciones: ["— Sin estrategia —"]
+     elegida : "— Sin estrategia —"
+  Campaña madre (opcional)
+     opciones: ["— Ninguna (es principal) —","Campaña lanzamiento 'Wild Groove'"]
+     elegida : "— Ninguna (es principal) —"
+
+===== fila #6 · "Campaña general Bizza" =====
+  Estrategia (a qué plan pertenece)
+     opciones: ["— Sin estrategia —"]
+     elegida : "— Sin estrategia —"
+  Campaña madre (opcional)
+     opciones: ["— Ninguna (es principal) —"]
+     elegida : "— Ninguna (es principal) —"
+
+===== fila #7 · "Campaña lanzamiento 'Wild Groove'" =====
+  Estrategia (a qué plan pertenece)
+     opciones: ["— Sin estrategia —"]
+     elegida : "— Sin estrategia —"
+  Campaña madre (opcional)
+     opciones: ["— Ninguna (es principal) —","Campaña lanzamiento 'Favela'"]
+     elegida : "— Ninguna (es principal) —"
+
+===== fila #8 · "Campaña General para EU" =====
+  Estrategia (a qué plan pertenece)
+     opciones: ["— Sin estrategia —","Lanzamiento Marca Nueva \"Aktivo\"","Más bookings en EU"]
+     elegida : "— Sin estrategia —"
+  Campaña madre (opcional)
+     opciones: ["— Ninguna (es principal) —"]
+     elegida : "— Ninguna (es principal) —"
+
+===== fila #9 · "Hey Mami - Spotify Streams + YouTube Views" =====
+  Estrategia (a qué plan pertenece)
+     opciones: ["— Sin estrategia —","Estrategia de Crecimiento Redes 2026/2027"]
+     elegida : "— Sin estrategia —"
+  Campaña madre (opcional)
+     opciones: ["— Ninguna (es principal) —","YouTube: Suscriptores al canal","YouTube: Visualizaciones sobre Tantra Liveset"]
+     elegida : "— Ninguna (es principal) —"
+
+===== fila #10 · "Campaña EP c/Bizza \"ABC\" y \"Club Fiction\" EP (TBC date and EP name)" =====
+  Estrategia (a qué plan pertenece)
+     opciones: ["— Sin estrategia —"]
+     elegida : "— Sin estrategia —"
+  Campaña madre (opcional)
+     opciones: ["— Ninguna (es principal) —"]
+     elegida : "— Ninguna (es principal) —"

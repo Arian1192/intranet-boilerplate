@@ -101,3 +101,45 @@ describe('CampanasPage — calco del live', () => {
     expect(barra.style.width).toBe('0%');
   });
 });
+
+describe('CampanasPage — el modal de edición', () => {
+  it('la fila abre `Editar campaña` con los datos de esa campaña', async () => {
+    const usuario = userEvent.setup();
+    render(<CampanasPage />);
+    await usuario.click(screen.getByText('Campaña general Bizza'));
+    expect(screen.getByRole('heading', { name: 'Editar campaña', level: 2 })).toBeInTheDocument();
+    expect(screen.getByLabelText('Nombre')).toHaveValue('Campaña general Bizza');
+    expect(screen.getByLabelText('Artista')).toHaveValue('Bizza');
+  });
+
+  it('guardar un cambio se ve en la tabla y en los KPI', async () => {
+    const usuario = userEvent.setup();
+    render(<CampanasPage />);
+    expect(kpi('Campañas activas')).toBe('1');
+    await usuario.click(screen.getByText('Campaña general Bizza'));
+    await usuario.selectOptions(screen.getByLabelText('Estado'), 'Completada');
+    await usuario.click(screen.getByRole('button', { name: 'Guardar' }));
+    expect(screen.queryByRole('heading', { name: 'Editar campaña' })).not.toBeInTheDocument();
+    expect(screen.getByText('Completada')).toBeInTheDocument();
+    expect(kpi('Campañas activas')).toBe('0');
+  });
+
+  it('cancelar no cambia nada', async () => {
+    const usuario = userEvent.setup();
+    render(<CampanasPage />);
+    await usuario.click(screen.getByText('Campaña general Bizza'));
+    await usuario.selectOptions(screen.getByLabelText('Estado'), 'Cancelada');
+    await usuario.click(screen.getByRole('button', { name: 'Cancelar' }));
+    expect(screen.getByText('Activa')).toBeInTheDocument();
+    expect(kpi('Campañas activas')).toBe('1');
+  });
+
+  it('eliminar quita la campaña y baja el contador', async () => {
+    const usuario = userEvent.setup();
+    render(<CampanasPage />);
+    await usuario.click(screen.getByText('Campaña general Bizza'));
+    await usuario.click(screen.getByRole('button', { name: 'Eliminar' }));
+    expect(screen.queryByText('Campaña general Bizza')).not.toBeInTheDocument();
+    expect(screen.getByText('10 campañas')).toBeInTheDocument();
+  });
+});

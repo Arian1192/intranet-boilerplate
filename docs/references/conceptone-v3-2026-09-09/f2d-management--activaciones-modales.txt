@@ -1,0 +1,298 @@
+https://bookings.conceptoneagency.com/management/activaciones — los 31 modales de edición, campo a campo — 9/9/2026, 11:52:38 CEST
+Sólo se abrió y se cerró cada modal con su aspa. Ni una tecla, ni Guardar, ni Eliminar.
+
+===== fila #0 · Editar activación =====
+  Título = "\"What it Do\" single release - "
+  Artista = "Milan Torne"
+  Tipo = "Release"
+  Fecha = "10/09/2026"
+  Hora (opcional) = ""
+  Campaña (de qué campaña forma parte) = "— Sin campaña —"
+  Descripción = ""
+  [pista] Este artista no tiene campañas todavía.
+
+===== fila #1 · Editar activación =====
+  Título = "YouTube Set: Cova Santa "
+  Artista = "Abdon"
+  Tipo = "Post social"
+  Fecha = "10/09/2026"
+  Hora (opcional) = ""
+  Campaña (de qué campaña forma parte) = "— Sin campaña —"
+  Descripción = "Activamos campaña de google ads"
+
+===== fila #2 · Editar activación =====
+  Título = "YouTube Set: Tantra Ibiza"
+  Artista = "DH Moon"
+  Tipo = "Post social"
+  Fecha = "10/09/2026"
+  Hora (opcional) = ""
+  Campaña (de qué campaña forma parte) = "— Sin campaña —"
+  Descripción = ""
+
+===== fila #3 · Editar activación =====
+  Título = "Contactar con el Row - JASSI"
+  Artista = "Vidaloca"
+  Tipo = "Post social"
+  Fecha = "10/09/2026"
+  Hora (opcional) = ""
+  Campaña (de qué campaña forma parte) = "— Sin campaña —"
+  Descripción = ""
+  [pista] Este artista no tiene campañas todavía.
+
+===== fila #4 · Editar activación =====
+  Título = "4 Track EP - Lost in the Groove Release collab w/ Sera de Villalta"
+  Artista = "Aaron Martin"
+  Tipo = "Release"
+  Fecha = "11/09/2026"
+  Hora (opcional) = ""
+  Campaña (de qué campaña forma parte) = "— Sin campaña —"
+  Descripción = ""
+  [pista] Este artista no tiene campañas todavía.
+
+===== fila #5 · Editar activación =====
+  Título = "Brunch Show - Grabación"
+  Artista = "Londonground"
+  Tipo = "Rodaje de contenido"
+  Fecha = "13/09/2026"
+  Hora (opcional) = ""
+  Campaña (de qué campaña forma parte) = "— Sin campaña —"
+  Descripción = ""
+  [pista] Este artista no tiene campañas todavía.
+
+===== fila #6 · Editar activación =====
+  Título = "7-8 videos de Support "
+  Artista = "Janse"
+  Tipo = "Post social"
+  Fecha = "15/09/2026"
+  Hora (opcional) = ""
+  Campaña (de qué campaña forma parte) = "— Sin campaña —"
+  Descripción = "Recopilar videos y hacer 2 posts\n"
+  [pista] Este artista no tiene campañas todavía.
+
+===== fila #7 · Editar activación =====
+  Título = "Photoshoot | De estudio y de calle"
+  Artista = "Bizza"
+  Tipo = "Rodaje de contenido"
+  Fecha = "15/09/2026"
+  Hora (opcional) = ""
+  Campaña (de qué campaña forma parte) = "— Sin campaña —"
+  Descripción = "Presupuesto aproximado €250 | Wardrobe by WANF | Beige color palette\n\nEstudio: https://shootestudios.com/alquiler-localizaciones-barcelona/alquiler-loft-para-rodaje-brooklyn/downtown-brooklyn/ = €280 + IVA\n\nRopa: WANF \nEstilismo: TBC\nMaquillaje: TBC"
+
+===== fila #8 · Editar activación =====
+  Título = "IDEA CONCEPTUAL -> Mariposas rodeando Janse -> Metamorfosi"
+  Artista = "Janse"
+  Tipo = "Rodaje de contenido"
+  Fecha = "16/09/2026"
+  Hora (opcional) = ""
+  Campaña (de qué campaña forma parte) = "— Sin campaña —"
+  Descripción = "Esta en un picnic cuando es rodeado de mariposas poco a poco hasta comerselo"
+  [pista] Este artista no tiene campañas todavía.
+
+===== fila #9 · Editar activación =====
+  Título = "Fiesta y Bullshit | Podcast o entrevista"
+  Artista = "Bizza"
+  Tipo = "Deadline de prensa"
+  Fecha = "16/09/2026"
+  Hora (opcional) = ""
+  Campaña (de qué campaña forma parte) = "Campaña general Bizza"
+  Descripción = "Patri hablara con TEO para intentar cerrar\n\nCosas antiguas:\nParadise - Debut en UNVRS\nCecille - Release + B2B w/ Nick Curly at Showcase  \nBotaniq - House Release + Off Week Showcase \nMagentic People - Residencia en marca en crecimiento \n\nCosas nuevas:    \nOhana - Tema principal porque vamos a estar desarrollando el sello y showcase\nDeeperfect EP Release w/ Florentia + Potencial showcase ADE\nOrigins EP Release w/ Caal\nRhoush EP Release w/ Miike\nLTF potencialmente, contar esfuerzo de que nos aprueben sample\n\nGUIA DE PODCAST: https://docs.google.com/document/d/1LfhdmsTBqbj4A7iDFCDRivjlqVdTlHHZojo0U0_sj50/edit?usp=sharing"
+
+===== fila #10 · Editar activación =====
+  Título = "Clothes Sponsorship Study"
+  Artista = "Sebastian Ledher"
+  Tipo = "Deadline de prensa"
+  Fecha = "17/09/2026"
+  Hora (opcional) = ""
+  Campaña (de qué campaña forma parte) = "— Sin campaña —"
+  Descripción = "Armani Exchange | Prada | etc"
+  [pista] Este artista no tiene campañas todavía.
+
+===== fila #11 · Editar activación =====
+  Título = "Vlog de Lifestyle (formato largo)"
+  Artista = "DH Moon"
+  Tipo = "Rodaje de contenido"
+  Fecha = "17/09/2026"
+  Hora (opcional) = ""
+  Campaña (de qué campaña forma parte) = "— Sin campaña —"
+  Descripción = ""
+
+===== fila #12 · Editar activación =====
+  Título = "8bit Release \"Answer The Light\" - 4 Track EP"
+  Artista = "Londonground"
+  Tipo = "Release"
+  Fecha = "18/09/2026"
+  Hora (opcional) = ""
+  Campaña (de qué campaña forma parte) = "— Sin campaña —"
+  Descripción = "Tenemos muy buen support sobre el track"
+  [pista] Este artista no tiene campañas todavía.
+
+===== fila #13 · Editar activación =====
+  Título = "Grabación - UNVRS"
+  Artista = "Londonground"
+  Tipo = "Post social"
+  Fecha = "19/09/2026"
+  Hora (opcional) = ""
+  Campaña (de qué campaña forma parte) = "— Sin campaña —"
+  Descripción = ""
+  [pista] Este artista no tiene campañas todavía.
+
+===== fila #14 · Editar activación =====
+  Título = "VideoSet en Boris - Set después de Damian Lazarus"
+  Artista = "Janse"
+  Tipo = "Rodaje de contenido"
+  Fecha = "19/09/2026"
+  Hora (opcional) = ""
+  Campaña (de qué campaña forma parte) = "— Sin campaña —"
+  Descripción = "Multi-cam para YouTube\n"
+  [pista] Este artista no tiene campañas todavía.
+
+===== fila #15 · Editar activación =====
+  Título = "Clips -> Formato TikTok (del vlog)"
+  Artista = "DH Moon"
+  Tipo = "Post social"
+  Fecha = "24/09/2026"
+  Hora (opcional) = ""
+  Campaña (de qué campaña forma parte) = "— Sin campaña —"
+  Descripción = ""
+
+===== fila #16 · Editar activación =====
+  Título = "Clips -> Formato Instagram (del vlog)"
+  Artista = "DH Moon"
+  Tipo = "Post social"
+  Fecha = "24/09/2026"
+  Hora (opcional) = ""
+  Campaña (de qué campaña forma parte) = "— Sin campaña —"
+  Descripción = ""
+
+===== fila #17 · Editar activación =====
+  Título = "Cova Santa B2B Abdon"
+  Artista = "Janse"
+  Tipo = "Rodaje de contenido"
+  Fecha = "27/09/2026"
+  Hora (opcional) = ""
+  Campaña (de qué campaña forma parte) = "— Sin campaña —"
+  Descripción = "Potencial multi-cam dependiendo de horario y aforo"
+  [pista] Este artista no tiene campañas todavía.
+
+===== fila #18 · Editar activación =====
+  Título = "Lapsus VA \"Feel the ritmo\""
+  Artista = "Vidaloca"
+  Tipo = "Release"
+  Fecha = "10/10/2026"
+  Hora (opcional) = ""
+  Campaña (de qué campaña forma parte) = "— Sin campaña —"
+  Descripción = ""
+  [pista] Este artista no tiene campañas todavía.
+
+===== fila #19 · Editar activación =====
+  Título = "\"Everything\" EP - Machaca la Membrana"
+  Artista = "Janse"
+  Tipo = "Release"
+  Fecha = "16/10/2026"
+  Hora (opcional) = ""
+  Campaña (de qué campaña forma parte) = "— Sin campaña —"
+  Descripción = "EP de 2 tracks: \"Everything\" y \"That's Right\""
+  [pista] Este artista no tiene campañas todavía.
+
+===== fila #20 · Editar activación =====
+  Título = "LEXLAY x VIDALOCA EP TBC"
+  Artista = "Vidaloca"
+  Tipo = "Release"
+  Fecha = "19/10/2026"
+  Hora (opcional) = ""
+  Campaña (de qué campaña forma parte) = "— Sin campaña —"
+  Descripción = "Intercambio por fechas Happy Techno en Argentina"
+  [pista] Este artista no tiene campañas todavía.
+
+===== fila #21 · Editar activación =====
+  Título = "YouTube Set: Halloween Cueva (Mexico)"
+  Artista = "DH Moon"
+  Tipo = "Rodaje de contenido"
+  Fecha = "31/10/2026"
+  Hora (opcional) = ""
+  Campaña (de qué campaña forma parte) = "— Sin campaña —"
+  Descripción = ""
+
+===== fila #22 · Editar activación =====
+  Título = "15 DIAS EN ESPAÑA "
+  Artista = "DH Moon"
+  Tipo = "Show"
+  Fecha = "01/11/2026"
+  Hora (opcional) = ""
+  Campaña (de qué campaña forma parte) = "— Sin campaña —"
+  Descripción = ""
+
+===== fila #23 · Editar activación =====
+  Título = "\"Realase Name TBC\" EP - Laundry"
+  Artista = "Janse"
+  Tipo = "Release"
+  Fecha = "06/11/2026"
+  Hora (opcional) = ""
+  Campaña (de qué campaña forma parte) = "— Sin campaña —"
+  Descripción = "EP de 3 tracks: \"Guess what\", \"Don't Get It\" y \"Want Ya\""
+  [pista] Este artista no tiene campañas todavía.
+
+===== fila #24 · Editar activación =====
+  Título = "Posible videoset Mute Monkey | RD Punta Cana"
+  Artista = "DH Moon"
+  Tipo = "Rodaje de contenido"
+  Fecha = "07/11/2026"
+  Hora (opcional) = ""
+  Campaña (de qué campaña forma parte) = "— Sin campaña —"
+  Descripción = ""
+
+===== fila #25 · Editar activación =====
+  Título = "Videoset Comuna 13"
+  Artista = "DH Moon"
+  Tipo = "Rodaje de contenido"
+  Fecha = "09/11/2026"
+  Hora (opcional) = ""
+  Campaña (de qué campaña forma parte) = "— Sin campaña —"
+  Descripción = "Fecha TBC"
+
+===== fila #26 · Editar activación =====
+  Título = "A-SIMÉTRICO ALBUM RELEASE (En fase de Produción)"
+  Artista = "Abdon"
+  Tipo = "Release"
+  Fecha = "11/11/2026"
+  Hora (opcional) = ""
+  Campaña (de qué campaña forma parte) = "— Sin campaña —"
+  Descripción = "DIA DE RELEASE DE SINGLE 11/11 -> ALBUM RELEASE FEBRERO"
+
+===== fila #27 · Editar activación =====
+  Título = "Metamorfosi VA Release"
+  Artista = "Janse"
+  Tipo = "Release"
+  Fecha = "16/12/2026"
+  Hora (opcional) = ""
+  Campaña (de qué campaña forma parte) = "— Sin campaña —"
+  Descripción = "Saldrá antes de Navidad"
+  [pista] Este artista no tiene campañas todavía.
+
+===== fila #28 · Editar activación =====
+  Título = "EP \"SIKO LELE\" on ELROW MUSIC"
+  Artista = "Abdon"
+  Tipo = "Release"
+  Fecha = "18/12/2026"
+  Hora (opcional) = ""
+  Campaña (de qué campaña forma parte) = "— Sin campaña —"
+  Descripción = "Confirmed"
+
+===== fila #29 · Editar activación =====
+  Título = "Single \"Corazón\" en COCOA music"
+  Artista = "Aaron Martin"
+  Tipo = "Release"
+  Fecha = "01/01/2027"
+  Hora (opcional) = ""
+  Campaña (de qué campaña forma parte) = "— Sin campaña —"
+  Descripción = "TO BE CONFIRMED DATE"
+  [pista] Este artista no tiene campañas todavía.
+
+===== fila #30 · Editar activación =====
+  Título = "Single \"Flowers in Anounymous\" on NUSONIDO"
+  Artista = "Abdon"
+  Tipo = "Post social"
+  Fecha = "01/01/2027"
+  Hora (opcional) = ""
+  Campaña (de qué campaña forma parte) = "— Sin campaña —"
+  Descripción = "FECHA TO BE CONFIRMED"

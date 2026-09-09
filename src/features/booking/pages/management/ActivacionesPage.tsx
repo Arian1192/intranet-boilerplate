@@ -9,6 +9,7 @@ import {
   type Activacion,
   type EstadoActivacion,
 } from '@/features/booking/data/management-activaciones';
+import { EditarActivacionModal } from './EditarActivacionModal';
 
 const DIA_SEMANA = new Intl.DateTimeFormat('es-ES', { weekday: 'short', timeZone: 'UTC' });
 const MES_Y_ANIO = new Intl.DateTimeFormat('es-ES', {
@@ -44,8 +45,9 @@ interface Fila extends Activacion {
  * interruptores de `/management/roster`. En el live abren escritura real; aquí
  * no hay repositorio detrás.
  *
- * El título de cada fila es un `button` porque en el live abre el modal
- * `Editar activación`, que es la **Fase G**: aquí se deja sin acción todavía.
+ * El título de cada fila es un `button` que abre el modal `Editar activación`,
+ * igual que en el live. Ese modal **no** trae botón de borrar: el aspa de la
+ * fila es la única forma de eliminar, y así está medido.
  */
 export function ActivacionesPage() {
   const [filas, setFilas] = useState<Fila[]>(() =>
@@ -54,6 +56,7 @@ export function ActivacionesPage() {
   const [artista, setArtista] = useState<string | null>(null);
   const [tipo, setTipo] = useState<string | null>(null);
   const [soloFuturas, setSoloFuturas] = useState(true);
+  const [editando, setEditando] = useState<Fila | null>(null);
 
   const visibles = useMemo(
     () =>
@@ -83,6 +86,13 @@ export function ActivacionesPage() {
 
   const borrar = (titulo: string) =>
     setFilas((previas) => previas.filter((f) => f.titulo !== titulo));
+
+  const guardar = (cambiada: Activacion) => {
+    setFilas((previas) =>
+      previas.map((f) => (f.titulo === editando?.titulo ? { ...cambiada, estado: f.estado } : f))
+    );
+    setEditando(null);
+  };
 
   return (
     <div>
@@ -145,8 +155,11 @@ export function ActivacionesPage() {
                         {DIA_SEMANA.format(new Date(`${fila.fecha}T12:00:00Z`))}
                       </div>
                     </div>
-                    {/* En el live abre el modal `Editar activación` — Fase G. */}
-                    <button type="button" className="min-w-0 flex-1 text-left">
+                    <button
+                      type="button"
+                      className="min-w-0 flex-1 text-left"
+                      onClick={() => setEditando(fila)}
+                    >
                       <div className="flex items-center gap-2">
                         <span className="truncate text-sm font-medium text-slate-800">
                           {fila.titulo}
@@ -187,6 +200,14 @@ export function ActivacionesPage() {
             </div>
           ))}
         </div>
+      )}
+
+      {editando && (
+        <EditarActivacionModal
+          activacion={editando}
+          onGuardar={guardar}
+          onCancelar={() => setEditando(null)}
+        />
       )}
     </div>
   );

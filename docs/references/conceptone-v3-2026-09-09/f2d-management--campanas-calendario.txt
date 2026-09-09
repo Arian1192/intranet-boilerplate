@@ -1,0 +1,66 @@
+https://bookings.conceptoneagency.com/management/campanas — el calendario .dp-pop abierto — 9/9/2026, 11:56:33 CEST
+
+Maniobra autorizada por el coordinador. Se sale RECARGANDO, no cerrando: el estado de un modal y
+de su calendario es estado de cliente y muere con la recarga sin tocar un pixel del formulario.
+
+(a) listener de red activo antes de abrir el modal
+(b) un solo registro: fila 0, «Campaña de aumento de suscriptores en YouTube»
+(c) valor de Inicio ANTES = "17/09/2026"
+(c) valor de Inicio DESPUÉS = "17/09/2026" → IDÉNTICO
+(d) no se pulsó ninguna celda de día ni flecha de mes
+(a) peticiones no-GET durante la maniobra: ninguna
+(a) peticiones totales: 1
+
+padre del .dp-pop: DIV.apx
+celdas de día: 31
+
+--- innerText ---
+Septiembre 2026
+L
+M
+X
+J
+V
+S
+D
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+Borrar fecha
+
+--- outerHTML, sin truncar ---
+<div class="dp-pop" style="position: static; inset: auto; opacity: 1; transform: none; pointer-events: auto; margin: 0px;"><div class="dp-head"><button type="button" class="dp-nav" aria-label="Mes anterior"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"></path></svg></button><b>septiembre 2026</b><button type="button" class="dp-nav" aria-label="Mes siguiente"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"></path></svg></button></div><div class="dp-dow"><span>L</span><span>M</span><span>X</span><span>J</span><span>V</span><span>S</span><span>D</span></div><div class="dp-grid"><span class="dp-day mut"></span><button type="button" class="dp-day  ">1</button><button type="button" class="dp-day  ">2</button><button type="button" class="dp-day  ">3</button><button type="button" class="dp-day  ">4</button><button type="button" class="dp-day  ">5</button><button type="button" class="dp-day  ">6</button><button type="button" class="dp-day  ">7</button><button type="button" class="dp-day  ">8</button><button type="button" class="dp-day  ">9</button><button type="button" class="dp-day  ">10</button><button type="button" class="dp-day  ">11</button><button type="button" class="dp-day  ">12</button><button type="button" class="dp-day  ">13</button><button type="button" class="dp-day  ">14</button><button type="button" class="dp-day  ">15</button><button type="button" class="dp-day  ">16</button><button type="button" class="dp-day sel ">17</button><button type="button" class="dp-day  ">18</button><button type="button" class="dp-day  ">19</button><button type="button" class="dp-day  ">20</button><button type="button" class="dp-day  ">21</button><button type="button" class="dp-day  ">22</button><button type="button" class="dp-day  ">23</button><button type="button" class="dp-day  ">24</button><button type="button" class="dp-day  ">25</button><button type="button" class="dp-day  ">26</button><button type="button" class="dp-day  ">27</button><button type="button" class="dp-day  ">28</button><button type="button" class="dp-day  ">29</button><button type="button" class="dp-day  ">30</button></div><button type="button" class="dp-clear">Borrar fecha</button></div>
+
+(e) salida por RECARGA, sin pulsar nada
+    modales abiertos tras recargar = 0
+    KPI     = ["Campañas","1150,00 €","450,00 €","1"]
+    contador= "11 campañas"
+    fila 0  = "Campaña de aumento de suscriptores en YouTube Abdon · 17 sept 2026 Otro Aprobada Artista 0,00 € / 75,00 €"
+(a) peticiones no-GET en toda la sesión: ninguna
