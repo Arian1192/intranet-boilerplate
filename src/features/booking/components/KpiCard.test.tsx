@@ -6,7 +6,12 @@ import { KpiCard } from './KpiCard';
 
 function LocationProbe() {
   const location = useLocation();
-  return <span data-testid="location">{location.pathname}{location.search}</span>;
+  return (
+    <span data-testid="location">
+      {location.pathname}
+      {location.search}
+    </span>
+  );
 }
 
 const mockKpi = {
@@ -51,14 +56,20 @@ describe('KpiCard', () => {
       'bg-amber-500'
     );
     expect(screen.getByText(/0,00/)).toHaveClass('text-lg', 'font-bold', 'leading-tight');
-    expect(screen.getByText('Contrato')).toHaveClass('text-[11px]', 'font-medium', 'uppercase', 'tracking-wide', 'opacity-90');
+    expect(screen.getByText('Contrato')).toHaveClass(
+      'text-[11px]',
+      'font-medium',
+      'uppercase',
+      'tracking-wide',
+      'opacity-90'
+    );
     expect(screen.getByText('0 shows')).toHaveClass('text-[11px]', 'opacity-80');
 
     fireEvent.click(button);
     expect(screen.getByTestId('location')).toHaveTextContent('/shows?status=contract');
   });
 
-  it('relabela pending-payment como "Pendiente cobro" y done como "Liquidado"', () => {
+  it('relabela pending-payment como "Pendiente cobro"', () => {
     render(
       <MemoryRouter>
         <KpiCard kpi={{ id: 'x', label: '', amount: 0, count: 0, status: 'pending-payment' }} />
@@ -67,12 +78,16 @@ describe('KpiCard', () => {
     expect(screen.getByText('Pendiente cobro')).toBeInTheDocument();
   });
 
-  it('done se muestra como "Liquidado"', () => {
+  // Recalco del 2026-09-09: el live rotula esta etapa «Cerrado», no «Liquidado».
+  // Medido tres veces —el `<select>` Etapa, el `title` del propio tile y la
+  // ausencia total de «Cerrado» en /liquidaciones—, y de paso deja «Liquidado»
+  // sólo en el eje de pago, que es donde el live lo tiene.
+  it('done se muestra como "Cerrado"', () => {
     render(
       <MemoryRouter>
         <KpiCard kpi={{ id: 'y', label: '', amount: 0, count: 0, status: 'done' }} />
       </MemoryRouter>
     );
-    expect(screen.getByText('Liquidado')).toBeInTheDocument();
+    expect(screen.getByText('Cerrado')).toBeInTheDocument();
   });
 });

@@ -27,7 +27,8 @@ describe('BookingDashboardPage — v2 del live', () => {
       ['Contrato', '0,00 €', '0 shows'],
       ['Pendiente cobro', '800,00 €', '1 show'],
       ['Pendiente liquidar', '6150,00 €', '6 shows'],
-      ['Liquidado', '1000,00 €', '1 show'],
+      // El live llama «Cerrado» a esta etapa; ver `etapaLabels.ts`.
+      ['Cerrado', '1000,00 €', '1 show'],
     ];
     for (const [label, importe, shows] of esperado) {
       const tarjeta = screen.getByTitle(`Ver shows en ${label}`);
