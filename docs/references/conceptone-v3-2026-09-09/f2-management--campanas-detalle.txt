@@ -1,0 +1,130 @@
+<!-- /management/campanas (fila desplegada) — capturado 2026-09-09T08:40:39.119Z -->
+Campañas
+
+Inversión en marketing por canal. La del artista es la que cuenta para el retorno.
+
++ Nueva campaña
+INVERSIÓN DEL ARTISTA
+1150,00 €
+Gasto real (payer artista/compartido)
+PRESUPUESTO ACTIVO
+450,00 €
+Aprobadas + activas
+CAMPAÑAS ACTIVAS
+1
+Todos los artistas
+Todos los canales
+Todos los estados
+11 campañas
+CAMPAÑA	CANAL	ESTADO	PAGA	GASTO / PRESUPUESTO
+
+Campaña de aumento de suscriptores en YouTube
+Abdon · 17 sept 2026	Otro	Aprobada	Artista	
+0,00 € / 75,00 €
+
+
+YouTube: Suscriptores al canal
+DH Moon · 17 sept 2026	Google Ads	Propuesta	Artista	
+0,00 € / 150,00 €
+
+
+YouTube: Visualizaciones sobre Tantra Liveset
+DH Moon · 10 sept 2026	Google Ads	Propuesta	Artista	
+0,00 € / 50,00 €
+
+
+Campaña de Views en YouTube set COVA SANTA
+Abdon · 10 sept 2026	Google Ads	Aprobada	Artista	
+0,00 € / 100,00 €
+
+
+Campaña de aumento de seguidores - Meta (Instagram)
+Abdon · 10 sept 2026	Meta Ads	Aprobada	Artista	
+0,00 € / 75,00 €
+
+
+Campaña lanzamiento 'Favela'
+Claudia Tejeda · 04 sept 2026	Meta Ads	Propuesta	Artista	
+850,00 € / 0,00 €
+
+
+Campaña general Bizza
+Bizza · 02 sept 2026	Otro	Activa	Agencia	
+0,00 € / 0,00 €
+
+
+Campaña lanzamiento 'Wild Groove'
+Claudia Tejeda · 27 ago 2026	Playlisting	Aprobada	Artista	
+300,00 € / 0,00 €
+
+
+Campaña General para EU
+Gaston Zani · 26 ago 2026	Meta Ads	Aprobada	Compartido	
+0,00 € / 200,00 €
+
+
+Hey Mami - Spotify Streams + YouTube Views
+DH Moon	Otro	Propuesta	Artista	
+0,00 € / 0,00 €
+
+
+Campaña EP c/Bizza "ABC" y "Club Fiction" EP (TBC date and EP name)
+Fran Hernandez	Otro	Propuesta	Artista	
+0,00 € / 0,00 €
+Editar campaña
+✕
+Nombre
+Artista
+— Elige —
+Aaron Martin
+Abdon
+ART NO LOGIA
+Bizza
+Claudia Tejeda
+DH Moon
+Freddy Bello
+Gaston Zani
+Janse
+Londonground
+Los Canarios
+Marcel BS
+Milan Torne
+Rivellino
+Sebastian Ledher
+Tony Guerra
+Vidaloca
+Estrategia (a qué plan pertenece)
+— Sin estrategia —
+Plan de Crecimiento Redes
+Campaña madre (opcional)
+— Ninguna (es principal) —
+Campaña de Views en YouTube set COVA SANTA
+Campaña de aumento de seguidores - Meta (Instagram)
+Canal
+Google Ads
+Meta Ads
+Spotify Ads
+Playlisting
+PR
+Otro
+Estado
+Propuesta
+Aprobada
+Activa
+Completada
+Cancelada
+Paga
+Artista
+Agencia
+Compartido
+Objetivo
+Presupuesto (€)
+Gasto real (€)
+Inicio
+17/09/2026
+Fin
+01/10/2026
+Notas
+Eliminar
+Cancelar
+Guardar

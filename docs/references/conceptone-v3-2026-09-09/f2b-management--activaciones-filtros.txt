@@ -1,0 +1,41 @@
+https://bookings.conceptoneagency.com/management/activaciones — menús de filtro abiertos — 9/9/2026, 11:24:41 CEST
+
+===== dd #0 · "Todos los artistas" =====
+padre del menú: DIV.apx
+--- 18 opciones ---
+  "Todos los artistas"   [dd-opt sel]
+  "Aaron Martin"   [dd-opt ]
+  "Abdon"   [dd-opt ]
+  "ART NO LOGIA"   [dd-opt ]
+  "Bizza"   [dd-opt ]
+  "Claudia Tejeda"   [dd-opt ]
+  "DH Moon"   [dd-opt ]
+  "Freddy Bello"   [dd-opt ]
+  "Gaston Zani"   [dd-opt ]
+  "Janse"   [dd-opt ]
+  "Londonground"   [dd-opt ]
+  "Los Canarios"   [dd-opt ]
+  "Marcel BS"   [dd-opt ]
+  "Milan Torne"   [dd-opt ]
+  "Rivellino"   [dd-opt ]
+  "Sebastian Ledher"   [dd-opt ]
+  "Tony Guerra"   [dd-opt ]
+  "Vidaloca"   [dd-opt ]
+--- outerHTML ---
+<div class="dd-menu" role="listbox" style="position: static; inset: auto; opacity: 1; transform: none; pointer-events: auto; margin: 0px;"><div role="option" aria-selected="true" class="dd-opt sel"><span style="width: 0px;"></span><span class="dd-lab">Todos los artistas</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">Aaron Martin</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">Abdon</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">ART NO LOGIA</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">Bizza</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">Claudia Tejeda</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">DH Moon</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">Freddy Bello</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">Gaston Zani</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">Janse</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">Londonground</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">Los Canarios</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">Marcel BS</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">Milan Torne</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">Rivellino</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">Sebastian Ledher</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">Tony Guerra</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">Vidaloca</span></div></div>
+
+===== dd #1 · "Todos los tipos" =====
+padre del menú: DIV.apx
+--- 10 opciones ---
+  "Todos los tipos"   [dd-opt sel]
+  "Deadline de prensa"   [dd-opt ]
+  "Publicación"   [dd-opt ]
+  "Post social"   [dd-opt ]
+  "Activación de ads"   [dd-opt ]
+  "Release"   [dd-opt ]
+  "Show"   [dd-opt ]
+  "Rodaje de contenido"   [dd-opt ]
+  "Entrega"   [dd-opt ]
+  "Deadline de aprobación"   [dd-opt ]
+--- outerHTML ---
+<div class="dd-menu" role="listbox" style="position: static; inset: auto; opacity: 1; transform: none; pointer-events: auto; margin: 0px;"><div role="option" aria-selected="true" class="dd-opt sel"><span style="width: 0px;"></span><span class="dd-lab">Todos los tipos</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">Deadline de prensa</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">Publicación</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">Post social</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">Activación de ads</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">Release</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">Show</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">Rodaje de contenido</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">Entrega</span></div><div role="option" aria-selected="false" class="dd-opt "><span style="width: 0px;"></span><span class="dd-lab">Deadline de aprobación</span></div></div>

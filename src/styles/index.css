@@ -22,6 +22,42 @@
   .select {
     @apply w-full rounded-lg border border-slate-300 bg-white px-3 py-2 pr-8 text-sm text-slate-800 focus:border-brand-400 focus:outline-none;
   }
+
+  /*
+   * Componentes base que el live tiene en su capa de componentes y a nosotros
+   * nos faltaban. Medidos en el live el 2026-09-09 con `getComputedStyle` y
+   * leyendo sus reglas CSS: usa exactamente nuestra rampa carbón
+   * (`.btn-primary` es `rgb(68,68,76)` = `brand-600`, su hover `rgb(55,55,61)`
+   * = `brand-700`, y el foco `rgb(95,95,104)` = `brand-500`).
+   *
+   * Hacen falta porque `apx.css` no las define: sólo las *retoca* dentro de
+   * `.apx` (le cambia el fondo a violeta, el radio a 14px y la sombra). Sin la
+   * base, una `card` calcada del live salía sin fondo blanco y sin borde.
+   *
+   * Ningún otro módulo usaba estos nombres de clase, así que esto no cambia
+   * nada de lo que ya había.
+   */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-colors;
+  }
+  .btn:focus {
+    @apply outline-none ring-2 ring-brand-500 ring-offset-1;
+  }
+  .btn:disabled {
+    @apply cursor-not-allowed opacity-50;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-brand-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-brand-700;
+  }
+  .btn-primary:disabled {
+    @apply cursor-not-allowed opacity-50;
+  }
+  .card {
+    @apply rounded-xl border border-slate-200 bg-white shadow-sm;
+  }
+  .badge {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium;
+  }
 }
 
 .ProseMirror p.is-editor-empty:first-child::before {

@@ -51,7 +51,7 @@ describe('rutas de ConceptOne v3 — las 14 nuevas', () => {
     ['/tours', 'viabilidad económica'],
     ['/liquidaciones', 'cobros del promotor'],
     ['/conceptone/pendientes', 'arte por aprobar'],
-    ['/management/roster', 'Songstats'],
+    ['/management/roster', 'se paga por uso'],
     ['/management/insights', 'nada se introduce a mano'],
     ['/management/contratos', 'preaviso'],
     ['/management/activaciones', 'rodajes'],

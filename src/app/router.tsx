@@ -51,6 +51,7 @@ import { ReportePage } from '@/features/booking/pages/ReportePage';
 import { AjustesPage as ConceptOneAjustesPage } from '@/features/booking/pages/AjustesPage';
 import { RosterPage } from '@/features/booking/pages/management/RosterPage';
 import { InsightsPage } from '@/features/booking/pages/management/InsightsPage';
+import { InsightsArtistaPage } from '@/features/booking/pages/management/InsightsArtistaPage';
 import { ContratosPage as ManagementContratosPage } from '@/features/booking/pages/management/ContratosPage';
 import { ActivacionesPage } from '@/features/booking/pages/management/ActivacionesPage';
 import { CampanasPage as ManagementCampanasPage } from '@/features/booking/pages/management/CampanasPage';
@@ -112,6 +113,7 @@ export function AppRouter() {
         {/* Management */}
         <Route path="/management/roster" element={<RosterPage />} />
         <Route path="/management/insights" element={<InsightsPage />} />
+        <Route path="/management/insights/:artistaId" element={<InsightsArtistaPage />} />
         <Route path="/management/estrategias" element={<EstrategiasPage />} />
         <Route path="/management/contratos" element={<ManagementContratosPage />} />
         <Route path="/management/activaciones" element={<ActivacionesPage />} />

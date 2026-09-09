@@ -1,0 +1,30 @@
+https://bookings.conceptoneagency.com/management/roster — ¿el contador cuenta lo filtrado? — 9/9/2026, 11:43:15 CEST
+
+Excepción puntual y acotada a la regla de solo-lectura, autorizada por el coordinador: teclear en el
+buscador, leer, borrar. Nada más. Se vigiló la red durante el tecleo.
+
+Antes de teclear:
+  url      = https://bookings.conceptoneagency.com/management/roster
+  input    = ""
+  contador = "41 artistas del roster"
+  filas    = 41
+  KPI      = ["Roster de Management","17","17"]
+
+Tecleando "abd":
+  url      = https://bookings.conceptoneagency.com/management/roster
+  input    = "abd"
+  contador = "1 artistas del roster"
+  filas    = 1
+  KPI      = ["Roster de Management","17","17"]
+
+Tras borrar:
+  url      = https://bookings.conceptoneagency.com/management/roster
+  input    = ""
+  contador = "41 artistas del roster"
+  filas    = 41
+  KPI      = ["Roster de Management","17","17"]
+
+Peticiones de red durante el tecleo (0):
+  (ninguna)
+
+¿Cambió la URL?  NO
