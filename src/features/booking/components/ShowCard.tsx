@@ -1,76 +1,158 @@
+import type { ReactElement } from 'react';
+import { useNavigate } from 'react-router';
 import { formatCurrency } from '@/lib/format';
-import { cn } from '@/lib/utils';
-import type { ArtStatus, Show, ShowStatus } from '@/types';
-import { etapaLabel } from '../data/etapaLabels';
-import { PaymentChip } from './PaymentChip';
+import type { PaymentStatus, Show, ShowFase } from '@/types';
+import { SEGMENTOS_TRACK, bordeDeTrack, trackDeFase, type EstadoSegmento } from '../data/trackShow';
 
 export interface ShowCardProps {
   show: Show;
 }
 
-const etapaChip: Record<ShowStatus, string> = {
-  tentative: 'bg-sky-50 text-sky-700',
-  offer: 'bg-sky-50 text-sky-700',
-  confirmed: 'bg-blue-50 text-blue-700',
-  contract: 'bg-indigo-50 text-indigo-700',
-  'pending-payment': 'bg-rose-50 text-rose-700',
-  'pending-settlement': 'bg-indigo-50 text-indigo-700',
-  done: 'bg-green-50 text-green-700',
+/**
+ * Enseñar la foto del artista en el avatar. **Apagada a propósito.**
+ *
+ * El live sirve esas fotos desde `i.scdn.co`, la CDN de Spotify, y hotlinkearlas
+ * ataría la pantalla a un tercero y a que haya red. Misma decisión que se tomó
+ * en `/artistas`: se pintan las iniciales. El día que el dato traiga una URL
+ * propia, se guarda en el fichero de datos y esta constante la enciende.
+ */
+const MOSTRAR_FOTOS = false;
+
+/** `Sera De Villalta` → `SV`; `Abdon` → `AB`. */
+function iniciales(nombre: string): string {
+  const palabras = nombre.trim().split(/\s+/);
+  if (palabras.length === 1) return palabras[0].slice(0, 2).toUpperCase();
+  return (palabras[0][0] + palabras[1][0]).toUpperCase();
+}
+
+/** Rótulo y color de la píldora de fase, medidos en las 87 filas del live. */
+const FPILL: Record<ShowFase, { texto: string; tono: string }> = {
+  tentative: { texto: 'Tentative', tono: 'p-none' },
+  confirmed: { texto: 'Confirmado', tono: 'p-accent' },
+  contract: { texto: 'Contrato', tono: 'p-accent' },
+  pagos: { texto: 'Pagos', tono: 'p-amber' },
+  liquidacion: { texto: 'Liquidación', tono: 'p-mint' },
+  liquidado: { texto: 'Cerrado', tono: 'p-mint' },
+  cancelado: { texto: 'Cancelado', tono: 'p-rose' },
 };
 
-const arteChip: Record<ArtStatus, string> = {
-  'Arte no subido': 'bg-slate-100 text-slate-500',
-  'Arte pendiente': 'bg-amber-50 text-amber-700',
-  'Arte subido': 'bg-green-50 text-green-700',
+/**
+ * Tono del chip de dinero.
+ *
+ * Sólo uno está medido: en el live, `Liquidado` va en `p-mint`. Los otros cuatro
+ * son etiquetas **nuestras** que el live no usa —su chip habla de cobro
+ * (`Sin cobrar`, `No facturado`…) y el nuestro de liquidación—, así que su tono
+ * va por analogía y queda declarado como tal. Ver
+ * `docs/coordination/2026-09-09-dos-ejes-de-pago.md`.
+ */
+const TONO_PAGO: Record<PaymentStatus, string> = {
+  'No abonado': 'p-rose',
+  'Parcialmente abonado': 'p-amber',
+  'Pendiente liquidar': 'p-amber',
+  Liquidado: 'p-mint',
+  Incidencia: 'p-rose',
 };
 
+/** El `title` del live escribe el estado en castellano: «Confirm.: Hecho». */
+const ROTULO_ESTADO: Record<EstadoSegmento, string> = {
+  done: 'Hecho',
+  prog: 'En curso',
+  alert: 'Atención',
+  none: 'Sin empezar',
+};
+
+const ICONO: Record<EstadoSegmento, ReactElement> = {
+  done: <path d="M20 6L9 17l-5-5" />,
+  prog: <path d="M12 4a8 8 0 1 1-8 8" />,
+  alert: <path d="M12 4l9 16H3zM12 10v4M12 17h.01" />,
+  none: <circle cx="12" cy="12" r="8" />,
+};
+
+/**
+ * Una fila de `/shows` — calco del `srow` del live del 2026-09-09.
+ *
+ * Usa la capa `apxlist` que la Fase 0 no había copiado y que se añadió a
+ * `apx.css` en su propio commit: la lista del live no es esta tarjeta con otras
+ * clases, es otro componente.
+ *
+ * El `track` de seis segmentos **no se calca, se deriva**, y está declarado en
+ * `trackShow.ts`: en el live cada segmento es un sub-estado real de ese show y
+ * nuestros 14 shows no tienen ese dato.
+ *
+ * La fila es un `button` que **navega al detalle**, como en el live: medido el
+ * 2026-09-09, pulsar una fila lleva a `/shows/<uuid>`. Esa ruta se registró
+ * contra un stub en su propio commit; el cuerpo de la pantalla es otra fase.
+ */
 export function ShowCard({ show }: ShowCardProps) {
+  const navegar = useNavigate();
+  const [dia, mes] = show.date ? show.date.split(/\s+/) : ['—', ''];
+  const track = trackDeFase(show.fase);
+  const fpill = FPILL[show.fase];
   const ubicacion = [show.venue, show.country].filter(Boolean).join(', ');
 
   return (
-    <div className="flex items-center gap-4 border-b border-slate-100 px-4 py-4 last:border-b-0 hover:bg-slate-50/60">
-      {/* Fecha + código */}
-      <div className="w-24 shrink-0">
-        <div className="text-sm font-medium text-slate-700">{show.date ?? '—'}</div>
-        <div className="font-mono text-[11px] text-slate-400">{show.code}</div>
+    <button
+      type="button"
+      onClick={() => navegar(`/shows/${show.id}`)}
+      className={`srow ${bordeDeTrack(track)}`}
+    >
+      <div className="rdate">
+        <div className="d">{dia}</div>
+        <div className="m">{mes}</div>
       </div>
 
-      {/* Artista @ Evento + ubicación · deal */}
-      <div className="min-w-0 flex-1">
-        <div className="truncate text-base font-bold text-slate-900">
-          {show.artist} @ {show.event}
-        </div>
-        <div className="truncate text-sm text-slate-500">
-          {ubicacion && <span>{ubicacion} · </span>}
-          <span className="font-semibold text-slate-600">{show.dealType}</span>
-        </div>
-      </div>
-
-      {/* Etapa + excepción */}
-      <div className="flex w-40 shrink-0 items-center justify-end gap-2">
-        <span className={cn('inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium', etapaChip[show.etapa])}>
-          {etapaLabel(show.etapa)}
-        </span>
-        {show.exception && (
-          <span className="whitespace-nowrap text-xs font-medium text-red-500">● Excepción</span>
+      <div className="ravatar">
+        {MOSTRAR_FOTOS ? null : (
+          <div
+            title={show.artist}
+            className="grid h-11 w-11 shrink-0 place-items-center rounded-full border-2 border-white bg-[var(--canvas-2)] text-xs font-semibold text-[var(--muted)] shadow-sm"
+          >
+            {iniciales(show.artist)}
+          </div>
         )}
       </div>
 
-      {/* Fee + BF/MF */}
-      <div className="w-40 shrink-0 text-right">
-        <div className="text-lg font-bold text-slate-900">{formatCurrency(show.fee)}</div>
-        <div className="text-[11px] text-slate-400">
-          BF {formatCurrency(show.bf)} · MF {formatCurrency(show.mf)}
+      <div className="rinfo">
+        <div className="nm">
+          <span className="min-w-0 flex-1 truncate">
+            {show.artist} @ {show.event}
+          </span>
+          {show.exception && <span className="exc">Excepción</span>}
+        </div>
+        <div className="sub">
+          <span className={`fpill ${fpill.tono}`}>{fpill.texto}</span>
+          <span className="co">{show.code}</span>
+          {ubicacion && <span className="cty">· {ubicacion}</span>}
         </div>
       </div>
 
-      {/* Pago + arte */}
-      <div className="flex w-40 shrink-0 flex-col items-end gap-1">
-        <PaymentChip status={show.paymentStatus} />
-        <span className={cn('inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium', arteChip[show.artStatus])}>
-          {show.artStatus}
-        </span>
+      <div className="track">
+        {SEGMENTOS_TRACK.map((rotulo, i) => (
+          <span
+            key={rotulo}
+            className={`seg s-${track[i]}`}
+            title={`${rotulo}: ${ROTULO_ESTADO[track[i]]}`}
+          >
+            <svg viewBox="0 0 24 24">{ICONO[track[i]]}</svg>
+            <span className="lab">{rotulo}</span>
+          </span>
+        ))}
       </div>
-    </div>
+
+      <div className="ramt">
+        {show.fee > 0 && (
+          <>
+            <div className="v">{formatCurrency(show.fee)}</div>
+            <span className={`s ${TONO_PAGO[show.paymentStatus]}`}>{show.paymentStatus}</span>
+          </>
+        )}
+      </div>
+
+      <span className="rchev">
+        <svg viewBox="0 0 24 24" stroke="currentColor">
+          <path d="M9 6l6 6-6 6" />
+        </svg>
+      </span>
+    </button>
   );
 }

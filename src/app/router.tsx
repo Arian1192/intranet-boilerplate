@@ -35,6 +35,7 @@ import { ProyeccionesListPage } from '@/features/herramientas/pages/Proyecciones
 import { ProyeccionDetailPage } from '@/features/herramientas/pages/ProyeccionDetailPage';
 import { BookingDashboardPage } from '@/features/booking/pages/BookingDashboardPage';
 import { ShowsPage } from '@/features/booking/pages/ShowsPage';
+import { ShowDetallePage } from '@/features/booking/pages/ShowDetallePage';
 import { CalendarioPage as BookingCalendarioPage } from '@/features/booking/pages/CalendarioPage';
 import { DisponibilidadPage } from '@/features/booking/pages/DisponibilidadPage';
 import { ContactosPage } from '@/features/booking/pages/ContactosPage';
@@ -100,6 +101,7 @@ export function AppRouter() {
         {/* Bookings */}
         <Route path="/conceptone" element={<BookingDashboardPage />} />
         <Route path="/shows" element={<ShowsPage />} />
+        <Route path="/shows/:showId" element={<ShowDetallePage />} />
         <Route path="/tours" element={<ToursPage />} />
         <Route path="/tours/:tourId" element={<TourDetallePage />} />
         <Route path="/ofertas" element={<OfertasPage />} />

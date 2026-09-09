@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useSearchParams } from 'react-router';
 import { ShowCard, ShowsToolbar, FiltrosDrawer, RangoPopover } from '@/features/booking/components';
+import { LeyendaEstado } from '@/features/booking/components/LeyendaEstado';
 import type { ShowsFiltros } from '@/features/booking/components';
 import type { Show, ShowStatus } from '@/types';
 import { useShows } from '../hooks/useShows';
@@ -70,6 +71,16 @@ export function ShowsPage() {
           rangoLabel={`${desdeLabel(rango.desde)} → ${hastaLabel(rango.hasta)}`}
           onToggleRango={() => setRangoAbierto((v) => !v)}
           onOpenFiltros={() => setFiltrosAbierto(true)}
+          soloFuturos={rango.desde === 'hoy'}
+          // `Solo futuros` y el desplegable `Desde` son el mismo filtro visto de
+          // dos maneras: el botón mueve el rango a «Desde hoy (solo futuros)» y
+          // al apagarlo vuelve al valor por defecto del live, «Última semana».
+          onToggleSoloFuturos={() =>
+            setRango((previo) => ({
+              ...previo,
+              desde: previo.desde === 'hoy' ? rangoPorDefecto.desde : 'hoy',
+            }))
+          }
         />
         <RangoPopover
           abierto={rangoAbierto}
@@ -78,10 +89,14 @@ export function ShowsPage() {
           onClose={() => setRangoAbierto(false)}
         />
       </div>
-      <div className="overflow-hidden rounded-xl border border-slate-100 bg-white shadow-sm">
-        {shownShows.map((show) => (
-          <ShowCard key={show.id} show={show} />
-        ))}
+      <LeyendaEstado />
+      {/* `apxlist` + `rowlist` son las clases de la capa que usa el live. */}
+      <div className="apxlist">
+        <div className="rowlist">
+          {shownShows.map((show) => (
+            <ShowCard key={show.id} show={show} />
+          ))}
+        </div>
       </div>
       <FiltrosDrawer
         abierto={filtrosAbierto}

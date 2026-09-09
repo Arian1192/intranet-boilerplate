@@ -17,6 +17,14 @@ const statusStyles: Record<Kpi['status'], string> = {
   done: 'bg-emerald-600',
 };
 
+/**
+ * Los tiles de la tira de pipeline del dashboard.
+ *
+ * Recalco del 2026-09-09: el live los pinta con el rótulo **arriba y el importe
+ * debajo** —de ahí el `lg:flex-col-reverse`— y el recuento **pegado al importe
+ * en la misma línea, como `· 100`**, no en una línea aparte diciendo «100
+ * shows». Los seis colores ya coincidían.
+ */
 export function KpiCard({ kpi }: KpiCardProps) {
   const navigate = useNavigate();
   const label = etapaLabel(kpi.status);
@@ -25,13 +33,13 @@ export function KpiCard({ kpi }: KpiCardProps) {
     <button
       type="button"
       title={`Ver shows en ${label}`}
-      className={`rounded-xl px-3 py-2.5 text-left text-white transition-transform hover:-translate-y-0.5 ${statusStyles[kpi.status]}`}
+      className={`flex items-center justify-between gap-2 rounded-xl px-3 py-2.5 text-left text-white transition-transform hover:-translate-y-0.5 lg:flex-col-reverse lg:items-start ${statusStyles[kpi.status]}`}
       onClick={() => navigate(`/shows?status=${kpi.status}`)}
     >
-      <div className="text-lg font-bold leading-tight">{formatCurrency(kpi.amount)}</div>
       <div className="text-[11px] font-medium uppercase tracking-wide opacity-90">{label}</div>
-      <div className="text-[11px] opacity-80">
-        {kpi.count} {kpi.count === 1 ? 'show' : 'shows'}
+      <div className="shrink-0 whitespace-nowrap text-right lg:text-left">
+        <span className="text-lg font-bold leading-tight">{formatCurrency(kpi.amount)}</span>
+        <span className="ml-1 text-[11px] opacity-80">· {kpi.count}</span>
       </div>
     </button>
   );

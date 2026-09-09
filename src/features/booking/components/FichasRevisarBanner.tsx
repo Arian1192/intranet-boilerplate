@@ -9,7 +9,7 @@ export function FichasRevisarBanner({ fichas }: FichasRevisarBannerProps) {
     <div className="flex items-center justify-between gap-4 rounded-xl border border-rose-200 bg-rose-50/60 px-5 py-3">
       <div>
         <h2 className="text-sm font-semibold uppercase tracking-wide text-rose-700">
-          📋 Fichas a revisar
+          Fichas a revisar
         </h2>
         <p className="mt-0.5 text-sm text-rose-600">
           {fichas.artistas} artistas con datos pendientes · {fichas.datos} datos ·{' '}

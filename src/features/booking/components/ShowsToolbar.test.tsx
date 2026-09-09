@@ -13,13 +13,17 @@ describe('ShowsToolbar', () => {
         rangoLabel="Última semana → Todo el futuro"
         onToggleRango={() => {}}
         onOpenFiltros={() => {}}
+        soloFuturos={false}
+        onToggleSoloFuturos={() => {}}
       />
     );
     expect(screen.getByRole('heading', { name: 'Shows' })).toBeInTheDocument();
     expect(screen.getByText('14 shows')).toBeInTheDocument();
     expect(screen.getByPlaceholderText('Buscar artista, evento, venue…')).toBeInTheDocument();
     expect(screen.getByRole('button', { name: 'Filtros' })).toBeInTheDocument();
-    expect(screen.getByRole('button', { name: /Última semana → Todo el futuro/ })).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: /Última semana → Todo el futuro/ })
+    ).toBeInTheDocument();
   });
 
   it('el contador usa singular con 1 resultado y emite onQueryChange al escribir', () => {
@@ -32,10 +36,14 @@ describe('ShowsToolbar', () => {
         rangoLabel="Última semana → Todo el futuro"
         onToggleRango={() => {}}
         onOpenFiltros={() => {}}
+        soloFuturos={false}
+        onToggleSoloFuturos={() => {}}
       />
     );
     expect(screen.getByText('1 show')).toBeInTheDocument();
-    fireEvent.change(screen.getByPlaceholderText('Buscar artista, evento, venue…'), { target: { value: 'Flor' } });
+    fireEvent.change(screen.getByPlaceholderText('Buscar artista, evento, venue…'), {
+      target: { value: 'Flor' },
+    });
     expect(onQueryChange).toHaveBeenCalledWith('Flor');
   });
 });

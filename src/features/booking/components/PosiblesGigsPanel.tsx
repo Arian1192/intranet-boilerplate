@@ -10,7 +10,7 @@ export function PosiblesGigsPanel({ gigs }: PosiblesGigsPanelProps) {
       <div className="flex items-start justify-between gap-4 px-5 py-3">
         <div>
           <h2 className="text-sm font-semibold uppercase tracking-wide text-violet-700">
-            📅 Posibles gigs en calendario
+            Posibles gigs en calendario
           </h2>
           <p className="mt-0.5 text-sm text-violet-600">
             Fechas que el artista tiene en su Google Calendar y aún no son shows. Decide si

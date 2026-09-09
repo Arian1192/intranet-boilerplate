@@ -1,0 +1,59 @@
+https://bookings.conceptoneagency.com/shows — la capa apxlist: de dónde sale y qué declara — 9/9/2026, 12:28:02 CEST
+
+=== DE DÓNDE SALE (condición d) ===
+Hojas .css que pasaron por la red: 2
+  https://bookings.conceptoneagency.com/assets/index-CPwLpapT.css
+  https://bookings.conceptoneagency.com/assets/Shows-PeQdz7t2.css
+
+hoja: https://bookings.conceptoneagency.com/assets/index-CPwLpapT.css · reglas 1446 · de la capa 0
+hoja: https://bookings.conceptoneagency.com/assets/Shows-PeQdz7t2.css · reglas 50 · de la capa 0
+
+=== MEDIDA 1 · las reglas CSS declaradas ===
+
+=== MEDIDA 2 · getComputedStyle sobre elementos reales (87 filas) ===
+.srow:
+   display: grid
+   align-items: center
+   gap: 14px
+   padding: 7px 14px
+   border-bottom: 1px solid rgb(234, 234, 242)
+   background-color: rgba(0, 0, 0, 0)
+   cursor: pointer
+.rdate:
+   width: 46px
+   text-align: center
+   flex: 0 1 auto
+   font-size: 16px
+.rdate .d:
+   font-size: 18px
+   font-weight: 700
+   line-height: 18px
+   color: rgb(12, 12, 22)
+.rdate .m:
+   font-size: 10.5px
+   text-transform: uppercase
+   color: rgb(107, 107, 128)
+   letter-spacing: 0.63px
+.fpill:
+   display: block
+   padding: 1px 7px
+   border-radius: 999px
+   font-size: 9.5px
+   font-weight: 700
+   background-color: rgb(253, 241, 220)
+   color: rgb(154, 98, 6)
+.seg:
+   display: flex
+   align-items: center
+   gap: 3px
+   font-size: 16px
+   color: rgb(14, 143, 110)
+.ramt .v:
+   font-size: 18px
+   font-weight: 700
+   color: rgb(12, 12, 22)
+   text-align: left
+.rchev:
+   color: rgb(107, 107, 128)
+   width: 16px
+   height: 16px

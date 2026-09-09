@@ -19,11 +19,23 @@ describe('RangoPopover', () => {
 
     const desde = screen.getByLabelText('Desde');
     expect(Array.from(desde.querySelectorAll('option')).map((o) => o.textContent)).toEqual([
-      'Última semana', 'Últimos 3 días', 'Último mes', 'Último año', 'Todo el pasado',
+      // Recalco del 2026-09-09: el live abre la lista con «Desde hoy (solo
+      // futuros)», que es lo que pone el botón `Solo futuros` de la toolbar.
+      'Desde hoy (solo futuros)',
+      'Última semana',
+      'Últimos 3 días',
+      'Último mes',
+      'Último año',
+      'Todo el pasado',
     ]);
     const hasta = screen.getByLabelText('Hasta');
     expect(Array.from(hasta.querySelectorAll('option')).map((o) => o.textContent)).toEqual([
-      'Todo el futuro', 'Próximos 3 días', 'Próxima semana', 'Próximo mes', 'Próximo año', 'Hasta hoy',
+      'Todo el futuro',
+      'Próximos 3 días',
+      'Próxima semana',
+      'Próximo mes',
+      'Próximo año',
+      'Hasta hoy',
     ]);
 
     fireEvent.change(hasta, { target: { value: 'hasta-hoy' } });

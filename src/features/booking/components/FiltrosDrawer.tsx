@@ -1,5 +1,6 @@
 import type { PaymentStatus, ShowFase, ShowStatus } from '@/types';
 import { artistasDisponibles } from '../data/artistas';
+import { etapaLabel } from '../data/etapaLabels';
 
 export interface ShowsFiltros {
   etapa: ShowStatus | '';
@@ -15,14 +16,16 @@ export interface FiltrosDrawerProps {
   onClose: () => void;
 }
 
+/**
+ * Las etiquetas salen de `etapaLabels`, que es la única fuente: aquí había una
+ * copia y era la forma de que la misma etapa acabase con dos nombres según la
+ * pantalla. `offer` no entra porque el `<select>` del live tampoco la ofrece.
+ */
 const etapaOpciones: { value: ShowStatus | ''; label: string }[] = [
   { value: '', label: 'Todas las etapas' },
-  { value: 'tentative', label: 'Tentative' },
-  { value: 'confirmed', label: 'Confirmado' },
-  { value: 'contract', label: 'Contrato' },
-  { value: 'pending-payment', label: 'Pendiente cobro' },
-  { value: 'pending-settlement', label: 'Pendiente liquidar' },
-  { value: 'done', label: 'Liquidado' },
+  ...(
+    ['tentative', 'confirmed', 'contract', 'pending-payment', 'pending-settlement', 'done'] as const
+  ).map((value) => ({ value, label: etapaLabel(value) })),
 ];
 
 const faseOpciones: { value: ShowFase | ''; label: string }[] = [
@@ -32,7 +35,7 @@ const faseOpciones: { value: ShowFase | ''; label: string }[] = [
   { value: 'contract', label: 'Contrato' },
   { value: 'pagos', label: 'Pagos' },
   { value: 'liquidacion', label: 'Liquidación' },
-  { value: 'liquidado', label: 'Liquidado' },
+  { value: 'liquidado', label: 'Cerrado' },
   { value: 'cancelado', label: 'Cancelado' },
 ];
 
@@ -100,25 +103,53 @@ export function FiltrosDrawer({ abierto, filtros, onChange, onClose }: FiltrosDr
         </div>
 
         <div className="flex-1 space-y-5 overflow-y-auto px-6 py-5">
-          <Campo id="filtro-etapa" label="Etapa" value={filtros.etapa} onChange={(v) => onChange({ ...filtros, etapa: v as ShowStatus | '' })}>
+          <Campo
+            id="filtro-etapa"
+            label="Etapa"
+            value={filtros.etapa}
+            onChange={(v) => onChange({ ...filtros, etapa: v as ShowStatus | '' })}
+          >
             {etapaOpciones.map((o) => (
-              <option key={o.label} value={o.value}>{o.label}</option>
+              <option key={o.label} value={o.value}>
+                {o.label}
+              </option>
             ))}
           </Campo>
-          <Campo id="filtro-fase" label="Fase" value={filtros.fase} onChange={(v) => onChange({ ...filtros, fase: v as ShowFase | '' })}>
+          <Campo
+            id="filtro-fase"
+            label="Fase"
+            value={filtros.fase}
+            onChange={(v) => onChange({ ...filtros, fase: v as ShowFase | '' })}
+          >
             {faseOpciones.map((o) => (
-              <option key={o.label} value={o.value}>{o.label}</option>
+              <option key={o.label} value={o.value}>
+                {o.label}
+              </option>
             ))}
           </Campo>
-          <Campo id="filtro-pago" label="Estado de pago" value={filtros.pago} onChange={(v) => onChange({ ...filtros, pago: v as PaymentStatus | '' })}>
+          <Campo
+            id="filtro-pago"
+            label="Estado de pago"
+            value={filtros.pago}
+            onChange={(v) => onChange({ ...filtros, pago: v as PaymentStatus | '' })}
+          >
             {pagoOpciones.map((o) => (
-              <option key={o.label} value={o.value}>{o.label}</option>
+              <option key={o.label} value={o.value}>
+                {o.label}
+              </option>
             ))}
           </Campo>
-          <Campo id="filtro-artista" label="Artista" value={filtros.artista} onChange={(v) => onChange({ ...filtros, artista: v })}>
+          <Campo
+            id="filtro-artista"
+            label="Artista"
+            value={filtros.artista}
+            onChange={(v) => onChange({ ...filtros, artista: v })}
+          >
             <option value="">Todos los artistas</option>
             {artistasDisponibles.map((nombre) => (
-              <option key={nombre} value={nombre}>{nombre}</option>
+              <option key={nombre} value={nombre}>
+                {nombre}
+              </option>
             ))}
           </Campo>
         </div>

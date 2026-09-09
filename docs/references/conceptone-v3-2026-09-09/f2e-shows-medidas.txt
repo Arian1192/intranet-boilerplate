@@ -1,0 +1,41 @@
+https://bookings.conceptoneagency.com/shows — lo que no se puede deducir del volcado — 9/9/2026, 12:18:54 CEST
+
+=== 1. El contador y «Solo futuros» ===
+Antes:  {"contador":"87 shows","filas":0}
+Pulsado «Solo futuros»: {"contador":"70 shows","filas":0}
+  → el contador SÍ cambia (cuenta lo filtrado)
+  clase del botón antes  : inline-flex h-9 shrink-0 items-center gap-1.5 rounded-lg border px-3 text-sm font-medium transition-colors border-slate-300 bg-white text-slate-600 hover:bg-slate-50
+  clase del botón después: inline-flex h-9 shrink-0 items-center gap-1.5 rounded-lg border px-3 text-sm font-medium transition-colors border-brand-600 bg-brand-600 text-white
+
+=== 2. El popover del rango ===
+select nativos: 2 · .dd: 0 · .dp: 0
+--- innerText ---
+Desde
+Desde hoy (solo futuros)
+Última semana
+Últimos 3 días
+Último mes
+Último año
+Todo el pasado
+Hasta
+Todo el futuro
+Próximos 3 días
+Próxima semana
+Próximo mes
+Próximo año
+Hasta hoy
+--- outerHTML ---
+<div class="absolute right-0 z-30 mt-1 rounded-lg border border-slate-200 bg-white shadow-lg"><div class="w-56 space-y-2 p-3"><div><label class="label mb-1">Desde</label><select class="input h-9"><option value="hoy">Desde hoy (solo futuros)</option><option value="semana">Última semana</option><option value="3dias">Últimos 3 días</option><option value="mes">Último mes</option><option value="anio">Último año</option><option value="todo">Todo el pasado</option></select></div><div><label class="label mb-1">Hasta</label><select class="input h-9"><option value="futuro">Todo el futuro</option><option value="3dias">Próximos 3 días</option><option value="semana">Próxima semana</option><option value="mes">Próximo mes</option><option value="anio">Próximo año</option><option value="hoy">Hasta hoy</option></select></div></div></div>
+
+=== 3. El drawer de Filtros ===
+(no se encontró el drawer)
+
+=== 4. La leyenda de estado ===
+  "Hecho" → fondo rgb(22, 199, 154) · borde rgb(229, 231, 235)
+  "En curso / pendiente" → fondo rgb(245, 165, 36) · borde rgb(229, 231, 235)
+  "Sin empezar" → fondo rgb(238, 238, 246) · borde rgb(234, 234, 242)
+  "Atención · avanzando con un requisito bloqueante sin resolver" → fondo rgb(242, 84, 123) · borde rgb(229, 231, 235)
+--- outerHTML ---
+<div class="apxlist mb-2"><div class="flex flex-wrap items-center gap-x-4 gap-y-1 rounded-xl border border-[var(--line)] bg-[var(--surface)] px-3.5 py-2 text-[11.5px] text-[var(--muted)]"><span class="flex items-center gap-1.5"><span class="inline-block h-2.5 w-2.5 rounded-full" style="background: var(--mint);"></span>Hecho</span><span class="flex items-center gap-1.5"><span class="inline-block h-2.5 w-2.5 rounded-full" style="background: var(--amber);"></span>En curso / pendiente</span><span class="flex items-center gap-1.5"><span class="inline-block h-2.5 w-2.5 rounded-full border border-[var(--line)]" style="background: var(--canvas-2);"></span>Sin empezar</span><span class="flex items-center gap-1.5"><span class="inline-block h-2.5 w-2.5 rounded-full" style="background: var(--rose);"></span>Atención · avanzando con un requisito bloqueante sin resolver</span></div></div>
+
+Peticiones no-GET en toda la sesión: ninguna
