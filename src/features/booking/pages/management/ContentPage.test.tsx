@@ -82,3 +82,33 @@ describe('ContentPage — calco del live', () => {
     expect(screen.getAllByText('—')).toHaveLength(5);
   });
 });
+
+describe('ContentPage — el modal de edición', () => {
+  it('la tarjeta abre `Editar proyecto` con sus datos', async () => {
+    const usuario = userEvent.setup();
+    render(<ContentPage />);
+    await usuario.click(screen.getByText(TITULO));
+    expect(screen.getByRole('heading', { name: 'Editar proyecto', level: 2 })).toBeInTheDocument();
+    expect(screen.getByLabelText('Título')).toHaveValue(TITULO);
+    expect(screen.getByLabelText('Producido por')).toHaveValue('ConceptOne');
+  });
+
+  it('cambiar la fase desde el modal mueve la tarjeta de columna', async () => {
+    const usuario = userEvent.setup();
+    render(<ContentPage />);
+    await usuario.click(screen.getByText(TITULO));
+    await usuario.selectOptions(screen.getByLabelText('Fase'), 'Revisión');
+    await usuario.click(screen.getByRole('button', { name: 'Guardar' }));
+    expect(within(columna('Revisión')).getByText(TITULO)).toBeInTheDocument();
+    expect(within(columna('Idea')).getByText('—')).toBeInTheDocument();
+  });
+
+  it('cancelar no mueve nada', async () => {
+    const usuario = userEvent.setup();
+    render(<ContentPage />);
+    await usuario.click(screen.getByText(TITULO));
+    await usuario.selectOptions(screen.getByLabelText('Fase'), 'Entregado');
+    await usuario.click(screen.getByRole('button', { name: 'Cancelar' }));
+    expect(within(columna('Idea')).getByText(TITULO)).toBeInTheDocument();
+  });
+});

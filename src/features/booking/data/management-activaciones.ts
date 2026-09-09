@@ -17,7 +17,16 @@
  *
  * `nota` es lo que el live pinta tras el `·` del artista. Se guarda entera, con
  * sus saltos de línea, aunque la fila la recorte con `truncate`: truncar el dato
- * sería perderlo.
+ * sería perderlo. **Y es el mismo campo que el modal rotula `Descripción`**:
+ * comprobado abriendo los 31 modales el 2026-09-09 a las 11:52 CEST
+ * (`f2d-management--activaciones-modales.txt`), donde la de Abdon trae
+ * «Activamos campaña de google ads», idéntica a la que pinta su fila.
+ *
+ * Los otros dos campos que sólo viven en el modal están medidos igual, no
+ * supuestos: `Hora (opcional)` está **vacía en las 31**, y sólo **una** tiene
+ * campaña asignada — «Fiesta y Bullshit | Podcast o entrevista» apunta a
+ * «Campaña general Bizza». Cuando el artista no tiene campañas, el live añade
+ * bajo el desplegable la pista «Este artista no tiene campañas todavía.».
  *
  * El filtro `Solo futuras` viene marcado en el live y compara contra el día de
  * hoy. Aquí compara contra `HOY_CAPTURA`, el día de la foto, no contra la fecha
@@ -44,8 +53,15 @@ export interface Activacion {
   titulo: string;
   tipo: TipoActivacion;
   artista: string;
-  /** Lo que el live pinta tras el `·`. Entera, con sus saltos de línea. */
+  /**
+   * Lo que el live pinta tras el `·`, y lo que el modal rotula `Descripción`.
+   * Entera, con sus saltos de línea.
+   */
   nota?: string;
+  /** Campo `Hora (opcional)` del modal. Vacía en las 31 de la captura. */
+  hora?: string;
+  /** Campo `Campaña (de qué campaña forma parte)`. Sólo una la tiene. */
+  campana?: string;
 }
 
 /**
@@ -144,6 +160,7 @@ export const ACTIVACIONES: Activacion[] = [
     titulo: 'Fiesta y Bullshit | Podcast o entrevista',
     tipo: 'Deadline de prensa',
     artista: 'Bizza',
+    campana: 'Campaña general Bizza',
     nota: 'Patri hablara con TEO para intentar cerrar\n\nCosas antiguas:\nParadise - Debut en UNVRS\nCecille - Release + B2B w/ Nick Curly at Showcase  \nBotaniq - House Release + Off Week Showcase \nMagentic People - Residencia en marca en crecimiento \n\nCosas nuevas:    \nOhana - Tema principal porque vamos a estar desarrollando el sello y showcase\nDeeperfect EP Release w/ Florentia + Potencial showcase ADE\nOrigins EP Release w/ Caal\nRhoush EP Release w/ Miike\nLTF potencialmente, contar esfuerzo de que nos aprueben sample\n\nGUIA DE PODCAST: https://docs.google.com/document/d/1LfhdmsTBqbj4A7iDFCDRivjlqVdTlHHZojo0U0_sj50/edit?usp=sharing',
   },
   {

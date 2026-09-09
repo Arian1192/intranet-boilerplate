@@ -6,8 +6,23 @@ import {
   CAMPANAS,
   CANALES_CAMPANA,
   ESTADOS_CAMPANA,
+  type Campana,
   type EstadoCampana,
 } from '@/features/booking/data/management-campanas';
+import { EditarCampanaModal } from './EditarCampanaModal';
+
+/** `2026-09-17` → `17 sept 2026`, el literal exacto con que el live rotula la fila. */
+const FECHA_FILA = new Intl.DateTimeFormat('es-ES', {
+  day: '2-digit',
+  month: 'short',
+  year: 'numeric',
+  timeZone: 'UTC',
+});
+
+function subtitulo(campana: Campana) {
+  if (!campana.inicio) return campana.artista;
+  return `${campana.artista} · ${FECHA_FILA.format(new Date(`${campana.inicio}T12:00:00Z`))}`;
+}
 
 /**
  * Paleta de los estados, leída del volcado del `<main>`: `Aprobada` va en
@@ -38,24 +53,40 @@ function contador(n: number) {
  * lo medido en el live: filtrando por Abdon pasa de `1150,00 € / 450,00 € / 1`
  * y «11 campañas» a `0,00 € / 250,00 € / 0` y «3 campañas».
  *
- * Las filas son un `button` porque en el live abren el modal `Editar campaña`.
- * Ese modal es la **Fase G**; aquí el botón se deja sin acción todavía.
+ * Las filas son un `button` que abre el modal `Editar campaña`, igual que en el
+ * live. Guardar y eliminar cambian el seed en local: no hay repositorio detrás.
+ *
+ * La fecha que la fila pinta tras el artista es el `Inicio` de la campaña, el
+ * mismo dato que el modal enseña como `17/09/2026`. Se guarda en ISO y cada
+ * sitio lo formatea como el live lo escribe.
  */
 export function CampanasPage() {
+  const [campanas, setCampanas] = useState<Campana[]>(CAMPANAS);
   const [artista, setArtista] = useState<string | null>(null);
   const [canal, setCanal] = useState<string | null>(null);
   const [estado, setEstado] = useState<string | null>(null);
+  const [editando, setEditando] = useState<Campana | null>(null);
 
   const visibles = useMemo(
     () =>
-      CAMPANAS.filter(
+      campanas.filter(
         (c) =>
           (!artista || c.artista === artista) &&
           (!canal || c.canal === canal) &&
           (!estado || c.estado === estado)
       ),
-    [artista, canal, estado]
+    [campanas, artista, canal, estado]
   );
+
+  const guardar = (cambiada: Campana) => {
+    setCampanas((previas) => previas.map((c) => (c.nombre === editando?.nombre ? cambiada : c)));
+    setEditando(null);
+  };
+
+  const eliminar = () => {
+    setCampanas((previas) => previas.filter((c) => c.nombre !== editando?.nombre));
+    setEditando(null);
+  };
 
   const inversionDelArtista = visibles
     .filter((c) => c.paga === 'Artista' || c.paga === 'Compartido')
@@ -163,16 +194,17 @@ export function CampanasPage() {
               visibles.map((campana) => (
                 <tr key={campana.nombre} className="group hover:bg-slate-50">
                   <td className="px-3 py-2.5 align-middle">
-                    {/* En el live abre el modal `Editar campaña` — Fase G. */}
-                    <button type="button" className="min-w-0 text-left">
+                    <button
+                      type="button"
+                      className="min-w-0 text-left"
+                      onClick={() => setEditando(campana)}
+                    >
                       <div className="flex min-w-0 items-center gap-1.5">
                         <span className="truncate font-medium text-slate-800">
                           {campana.nombre}
                         </span>
                       </div>
-                      <span className="truncate text-xs text-slate-400">
-                        {campana.fecha ? `${campana.artista} · ${campana.fecha}` : campana.artista}
-                      </span>
+                      <span className="truncate text-xs text-slate-400">{subtitulo(campana)}</span>
                     </button>
                   </td>
                   <td className="px-3 py-2.5 align-middle text-xs text-slate-500">
@@ -212,6 +244,16 @@ export function CampanasPage() {
           </tbody>
         </table>
       </div>
+
+      {editando && (
+        <EditarCampanaModal
+          campana={editando}
+          todas={campanas}
+          onGuardar={guardar}
+          onCancelar={() => setEditando(null)}
+          onEliminar={eliminar}
+        />
+      )}
     </div>
   );
 }

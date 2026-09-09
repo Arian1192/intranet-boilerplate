@@ -6,6 +6,7 @@ import {
   PROYECTOS_CONTENT,
   type ProyectoContent,
 } from '@/features/booking/data/management-content';
+import { EditarProyectoModal } from './EditarProyectoModal';
 
 /** El live escribe «1 proyecto» y «0 proyectos»; medido filtrando. */
 function contador(n: number) {
@@ -25,12 +26,14 @@ function contador(n: number) {
  * tarjeta en `Entregado` con la que medirlo, y dejarla activa sacaría la tarjeta
  * del tablero.
  *
- * El cuerpo de la tarjeta es un `button` porque en el live abre el modal
- * `Editar proyecto`, que es la **Fase G**: aquí se deja sin acción todavía.
+ * El cuerpo de la tarjeta es un `button` que abre el modal `Editar proyecto`,
+ * igual que en el live. Ese modal no trae botón de borrar: se elimina desde la
+ * propia tarjeta, y así está medido.
  */
 export function ContentPage() {
   const [proyectos, setProyectos] = useState<ProyectoContent[]>(PROYECTOS_CONTENT);
   const [artista, setArtista] = useState<string | null>(null);
+  const [editando, setEditando] = useState<ProyectoContent | null>(null);
 
   const visibles = useMemo(
     () => proyectos.filter((p) => !artista || p.artista === artista),
@@ -50,6 +53,11 @@ export function ContentPage() {
 
   const borrar = (titulo: string) =>
     setProyectos((previos) => previos.filter((p) => p.titulo !== titulo));
+
+  const guardar = (cambiado: ProyectoContent) => {
+    setProyectos((previos) => previos.map((p) => (p.titulo === editando?.titulo ? cambiado : p)));
+    setEditando(null);
+  };
 
   return (
     <div>
@@ -95,8 +103,11 @@ export function ContentPage() {
                 ) : (
                   enFase.map((proyecto) => (
                     <div key={proyecto.titulo} className="card p-3">
-                      {/* En el live abre el modal `Editar proyecto` — Fase G. */}
-                      <button type="button" className="w-full text-left">
+                      <button
+                        type="button"
+                        className="w-full text-left"
+                        onClick={() => setEditando(proyecto)}
+                      >
                         <div className="flex items-center gap-1.5">
                           <span className="min-w-0 flex-1 truncate text-sm font-medium text-slate-800">
                             {proyecto.titulo}
@@ -147,6 +158,14 @@ export function ContentPage() {
           );
         })}
       </div>
+
+      {editando && (
+        <EditarProyectoModal
+          proyecto={editando}
+          onGuardar={guardar}
+          onCancelar={() => setEditando(null)}
+        />
+      )}
     </div>
   );
 }
