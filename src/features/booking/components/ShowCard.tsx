@@ -1,4 +1,5 @@
 import type { ReactElement } from 'react';
+import { useNavigate } from 'react-router';
 import { formatCurrency } from '@/lib/format';
 import type { PaymentStatus, Show, ShowFase } from '@/types';
 import { SEGMENTOS_TRACK, bordeDeTrack, trackDeFase, type EstadoSegmento } from '../data/trackShow';
@@ -78,17 +79,23 @@ const ICONO: Record<EstadoSegmento, ReactElement> = {
  * `trackShow.ts`: en el live cada segmento es un sub-estado real de ese show y
  * nuestros 14 shows no tienen ese dato.
  *
- * La fila es un `button` como en el live, pero sin navegación: el detalle
- * `/shows/:id` no existe todavía en nuestro router, que además está congelado.
+ * La fila es un `button` que **navega al detalle**, como en el live: medido el
+ * 2026-09-09, pulsar una fila lleva a `/shows/<uuid>`. Esa ruta se registró
+ * contra un stub en su propio commit; el cuerpo de la pantalla es otra fase.
  */
 export function ShowCard({ show }: ShowCardProps) {
+  const navegar = useNavigate();
   const [dia, mes] = show.date ? show.date.split(/\s+/) : ['—', ''];
   const track = trackDeFase(show.fase);
   const fpill = FPILL[show.fase];
   const ubicacion = [show.venue, show.country].filter(Boolean).join(', ');
 
   return (
-    <button type="button" className={`srow ${bordeDeTrack(track)}`}>
+    <button
+      type="button"
+      onClick={() => navegar(`/shows/${show.id}`)}
+      className={`srow ${bordeDeTrack(track)}`}
+    >
       <div className="rdate">
         <div className="d">{dia}</div>
         <div className="m">{mes}</div>

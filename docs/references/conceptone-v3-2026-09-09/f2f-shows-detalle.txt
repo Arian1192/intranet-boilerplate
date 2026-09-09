@@ -1,0 +1,35 @@
+https://bookings.conceptoneagency.com/shows — a dónde lleva pulsar una fila — 9/9/2026, 13:07:24 CEST
+URL antes:   https://bookings.conceptoneagency.com/shows
+URL después: https://bookings.conceptoneagency.com/shows/94a46bd5-7545-4fd0-9ca5-e6c6718b6a7c
+¿navega?: SÍ
+h1 del detalle: "Milan Torne @ House of Ferns"
+enlace de vuelta: "← Volver a la lista"
+
+--- primeras líneas del main ---
+← Volver a la lista
+|
+‹
+Shows filtrados 1/87
+›
+C1-2026-130
+Milan Torne @ House of Ferns
+
+03 sept 2026 · Red Room, Santa Ana
+
+Show
+Promo
+Autogestión
+✓ Tareas
+⚠ Registrar incidente
+🗑 Eliminar show
+Estado del show: Pagos
+Cancelar
+Confirm.
+Contrato
+Cobro
+Itiner.
+Gastos
+Liquid.
+Sin liquidar
+
+Peticiones no-GET durante el clic: POST rpc/show_alertas
