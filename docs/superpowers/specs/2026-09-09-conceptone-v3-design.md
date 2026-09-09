@@ -338,8 +338,33 @@ tampoco lo lleva.
 | `/artistas` | no cambia la URL, no hay modal | master-detail **en sitio**, confirmado |
 | `/management/incidentes` | no cambia la URL, **abre un modal** (`[role=dialog]`) | se captura a fondo en la Fase D |
 
+#### Sondeo de filas clicables (Faena 2, 2026-09-09)
+
+| Pantalla | Al pulsar una fila | Consecuencia |
+|---|---|---|
+| `/management/roster`, `/management/contratos` | nada clicable | sin ruta que registrar |
+| `/management/campanas` (11 filas), `/management/activaciones` (31), `/management/content` (1 tarjeta) | la fila es un `button.text-left`; **no navega**: abre un **modal de edición** en la misma página (`Editar campaña`, `Editar activación`, `Editar proyecto`) | sin ruta nueva. Los tres modales son la **Fase G** |
+
+`/management/insights/:artistaId` (ruta 15) sigue siendo la única ruta nueva de Management.
+
 Pendiente de sondear: `/management/incidentes/analitica` y las tarjetas por agente de `/reporte`
 (`Detalle`, `Registrar abono`). Van con la Fase D.
+
+#### Precisión de la regla de solo-lectura
+
+El sondeo obliga a afinar la regla, porque «pulsa una fila» puede acabar abriendo un formulario:
+
+1. **Sonda pasiva primero.** Antes de pulsar nada, `getComputedStyle` sobre lo que cuelga de `main`
+   para localizar el elemento clicable exacto. Así se elige el objetivo en vez de tantear.
+2. **Abrir un modal de edición de un registro que ya existe: permitido** cuando hace falta para la
+   evidencia. No escribe nada y es estado de cliente: se va al recargar.
+3. **Abrir un formulario de alta (`+ Nuevo…`): NO.** Riesgo real de que el servidor cree un borrador o
+   reserve un identificador al abrirlo. Si hace falta esa evidencia, se pide al coordinador.
+4. **Nunca:** teclear en un campo, guardar, pulsar botones de cambio de estado
+   (`Programada`/`En curso`/`Hecha`/`Perdida`) ni aspas de borrado.
+
+La Faena 2 abrió los tres modales de edición siguiendo 1, 2 y 4, lo declaró por su cuenta y no escribió
+nada. Queda como el procedimiento correcto.
 
 #### Límite conocido del inventario de rutas
 
@@ -386,6 +411,7 @@ de ejecutar la fase, no se da por hecho aquí.
 | **D** | Management III + «Más»: `/management/incidentes` + `/incidentes/analitica`, `/artistas`, `/reporte`, `/conceptone/ajustes` | `feature/conceptone-v3-mas` | 0 | M |
 | **E** | Recalco: Dashboard, Contactos, Cobros, Ofertas, Gastos, Shows | `feature/conceptone-v3-recalco` | 0 | M/L |
 | **F** | **Ficha de artista de Insights** (`/management/insights/:artistaId`): 12 pestañas, 9 KPI y `TOP TRACKS` (ver §3.2) | `feature/conceptone-v3-insights-ficha` | 0, B | **L** |
+| **G** | **Los 3 modales de edición de Management** (`Editar campaña`, `Editar activación`, `Editar proyecto`): 8-10 campos cada uno. Evidencia ya capturada por la Faena 2 (`f2-management--*-detalle.*`) | `feature/conceptone-v3-management-modales` | C | M |
 
 **Reparto en tres rondas**, dos ejecutores más el coordinador:
 
