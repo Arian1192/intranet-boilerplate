@@ -4,14 +4,9 @@ import {
   PESTANAS_REPORTE,
   ESTADOS_REPORTE,
   formatEurosReporte,
-  kpisDashboard,
-  feesPorArtista,
-  TICKS_FEES,
+  datosReporte,
   COLOR_BOOKING,
   COLOR_MANAGEMENT,
-  kpisPorAgente,
-  TICKS_COMISION,
-  tablaAgentes,
   CABECERAS_AGENTES,
   NOTA_AGENTES,
   artistasSelect,
@@ -24,6 +19,7 @@ import {
   repartoPorArtista,
   artistasSinAsignar,
   inicialesPersona,
+  type DatosReporte,
   type KpiReporte,
   type PestanaReporte,
   type PersonaChip,
@@ -95,8 +91,9 @@ function TarjetaKpi({ kpi }: { kpi: KpiReporte }) {
  * una serie, así que lleva leyenda; los colores van literales porque así los
  * emite el SVG del live.
  */
-function GraficoApilado() {
-  const max = TICKS_FEES[TICKS_FEES.length - 1];
+function GraficoApilado({ datos }: { datos: DatosReporte }) {
+  const { feesPorArtista, ticksFees } = datos;
+  const max = ticksFees[ticksFees.length - 1];
   return (
     <div className="card mt-4 p-5">
       <section aria-label="Fees por artista (Booking + Management apilados)">
@@ -123,7 +120,7 @@ function GraficoApilado() {
         </div>
         <div className="flex h-72 gap-2">
           <div className="flex w-20 shrink-0 flex-col-reverse justify-between pb-10 text-right text-[11px] tabular-nums text-slate-500">
-            {TICKS_FEES.map((tick) => (
+            {ticksFees.map((tick) => (
               <span key={tick}>{formatEurosReporte(tick)}</span>
             ))}
           </div>
@@ -132,7 +129,7 @@ function GraficoApilado() {
               aria-hidden="true"
               className="pointer-events-none absolute inset-x-0 bottom-10 top-0 flex flex-col justify-between"
             >
-              {TICKS_FEES.map((tick) => (
+              {ticksFees.map((tick) => (
                 <div key={tick} className="border-t border-dashed border-slate-100" />
               ))}
             </div>
@@ -170,15 +167,16 @@ function GraficoApilado() {
   );
 }
 
-function GraficoComisiones() {
-  const max = TICKS_COMISION[TICKS_COMISION.length - 1];
+function GraficoComisiones({ datos }: { datos: DatosReporte }) {
+  const { tablaAgentes, ticksComision } = datos;
+  const max = ticksComision[ticksComision.length - 1];
   return (
     <div className="card mt-4 p-5">
       <section aria-label="Comisión generada por agente">
         <h3 className="mb-4 text-sm font-medium text-slate-600">Comisión generada por agente</h3>
         <div className="flex h-64 gap-2">
           <div className="flex w-20 shrink-0 flex-col-reverse justify-between pb-10 text-right text-[11px] tabular-nums text-slate-500">
-            {TICKS_COMISION.map((tick) => (
+            {ticksComision.map((tick) => (
               <span key={tick}>{formatEurosReporte(tick)}</span>
             ))}
           </div>
@@ -187,7 +185,7 @@ function GraficoComisiones() {
               aria-hidden="true"
               className="pointer-events-none absolute inset-x-0 bottom-10 top-0 flex flex-col justify-between"
             >
-              {TICKS_COMISION.map((tick) => (
+              {ticksComision.map((tick) => (
                 <div key={tick} className="border-t border-dashed border-slate-100" />
               ))}
             </div>
@@ -255,6 +253,8 @@ export function ReportePage() {
   const [artista, setArtista] = useState('');
   const [soloSinAsignar, setSoloSinAsignar] = useState(false);
 
+  // El filtro Estado cambia KPI, gráficos y tabla: no es decorativo.
+  const datos = useMemo(() => datosReporte(estado), [estado]);
   const sinAsignar = useMemo(() => artistasSinAsignar(repartoPorArtista), []);
   const filasReparto = soloSinAsignar ? sinAsignar : repartoPorArtista;
 
@@ -320,11 +320,11 @@ export function ReportePage() {
               Dashboard general
             </h2>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-              {kpisDashboard.map((kpi) => (
+              {datos.kpisDashboard.map((kpi) => (
                 <TarjetaKpi key={kpi.etiqueta} kpi={kpi} />
               ))}
             </div>
-            <GraficoApilado />
+            <GraficoApilado datos={datos} />
           </section>
 
           <section className="mb-8">
@@ -332,11 +332,11 @@ export function ReportePage() {
               Por agente
             </h2>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-              {kpisPorAgente.map((kpi) => (
+              {datos.kpisPorAgente.map((kpi) => (
                 <TarjetaKpi key={kpi.etiqueta} kpi={kpi} />
               ))}
             </div>
-            <GraficoComisiones />
+            <GraficoComisiones datos={datos} />
             <div className="card mt-4 overflow-hidden">
               <div className="overflow-x-auto">
                 <table className="w-full text-sm">
@@ -353,7 +353,7 @@ export function ReportePage() {
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-slate-100">
-                    {tablaAgentes.map((fila) => (
+                    {datos.tablaAgentes.map((fila) => (
                       <tr key={fila.agente}>
                         <td className="px-4 py-2 font-medium text-slate-800">{fila.agente}</td>
                         <td className="px-4 py-2 text-right tabular-nums text-slate-600">

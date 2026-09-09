@@ -88,13 +88,13 @@ describe('catálogos de incidentes', () => {
 });
 
 describe('las incidencias del live', () => {
-  it('son las 6 visibles de un total de 7', () => {
-    expect(incidentes).toHaveLength(6);
+  it('son las siete del live', () => {
+    expect(incidentes).toHaveLength(7);
     expect(TOTAL_INCIDENTES).toBe(7);
   });
 
   it('trae los códigos y títulos del live', () => {
-    expect(incidentes.map((i) => i.codigo)).toEqual(['#9', '#8', '#7', '#6', '#5', '#2']);
+    expect(incidentes.map((i) => i.codigo)).toEqual(['#9', '#8', '#7', '#6', '#5', '#4', '#2']);
     const fajardo = incidentes.find((i) => i.codigo === '#5');
     expect(fajardo?.titulo).toBe(
       'La pareja de Jose Fajardo se ha peleado con la novia del promotor.'
@@ -108,18 +108,32 @@ describe('las incidencias del live', () => {
     expect(incidentes.filter((i) => i.confidencial).map((i) => i.codigo)).toEqual(['#7']);
   });
 
-  it('las tiene todas abiertas, sin owner y en ConceptOne (booking)', () => {
+  it('todas son de ConceptOne (booking), y sólo la resuelta tiene owner', () => {
     for (const incidente of incidentes) {
-      expect(incidente.estado).toBe('abierta');
-      expect(incidente.owner).toBeNull();
       expect(incidente.departamento).toBe('ConceptOne (booking)');
     }
+    const conOwner = incidentes.filter((i) => i.owner !== null);
+    expect(conOwner.map((i) => [i.codigo, i.owner])).toEqual([['#4', 'Sadkiel']]);
+    expect(incidentes.filter((i) => i.estado !== 'abierta').map((i) => i.codigo)).toEqual(['#4']);
+  });
+
+  it('la séptima es la que la analítica dejaba adivinar, y coincide', () => {
+    const septima = incidentes.find((i) => i.codigo === '#4');
+    expect(septima).toMatchObject({
+      categoria: 'Pago',
+      severidad: 'media',
+      estado: 'resuelta',
+      preventable: true,
+      fechaReporte: '2026-08-03',
+    });
+    // Es la que hace que «Pago» sean 2 en el recuento por categoría.
+    expect(incidentes.filter((i) => i.categoria === 'Pago')).toHaveLength(2);
   });
 });
 
 describe('edad de una incidencia', () => {
   it('cuenta los días desde el reporte hasta la fecha de la foto', () => {
-    expect(incidentes.map((i) => edadDias(i))).toEqual([1, 14, 29, 37, 37, 46]);
+    expect(incidentes.map((i) => edadDias(i))).toEqual([1, 14, 29, 37, 37, 37, 46]);
   });
 
   it('se escribe con la «d» pegada, como el live', () => {
@@ -143,8 +157,8 @@ describe('formatFechaIncidente', () => {
 });
 
 describe('filterIncidentes', () => {
-  it('sin filtros devuelve las seis', () => {
-    expect(filterIncidentes(incidentes, FILTROS_INCIDENTES_VACIO)).toHaveLength(6);
+  it('sin filtros devuelve las siete', () => {
+    expect(filterIncidentes(incidentes, FILTROS_INCIDENTES_VACIO)).toHaveLength(7);
   });
 
   it('filtra por severidad', () => {
@@ -154,7 +168,7 @@ describe('filterIncidentes', () => {
 
   it('filtra por categoría', () => {
     const pago = filterIncidentes(incidentes, { ...FILTROS_INCIDENTES_VACIO, categoria: 'Pago' });
-    expect(pago.map((i) => i.codigo)).toEqual(['#6']);
+    expect(pago.map((i) => i.codigo)).toEqual(['#6', '#4']);
   });
 
   it('«Abiertos (sin resolver)» deja fuera resueltas y cerradas', () => {
@@ -163,6 +177,7 @@ describe('filterIncidentes', () => {
       estado: '__abierto__',
     });
     expect(sinResolver).toHaveLength(6);
+    expect(sinResolver.map((i) => i.codigo)).not.toContain('#4');
   });
 
   it('busca en el título sin distinguir mayúsculas ni acentos', () => {
@@ -187,7 +202,7 @@ describe('filterIncidentes', () => {
       desde: '2026-08-01',
       hasta: '2026-08-31',
     });
-    expect(agosto.map((i) => i.codigo)).toEqual(['#8', '#7', '#6', '#5']);
+    expect(agosto.map((i) => i.codigo)).toEqual(['#8', '#7', '#6', '#5', '#4']);
   });
 
   it('filtra por owner sin asignar', () => {
@@ -223,6 +238,7 @@ describe('ordenarPorSeveridad', () => {
       '#8',
       '#7',
       '#6',
+      '#4',
       '#2',
     ]);
   });
@@ -238,7 +254,7 @@ describe('agruparPorEstado', () => {
       'Resuelta',
       'Cerrada',
     ]);
-    expect(columnas.map((c) => c.incidentes.length)).toEqual([6, 0, 0, 0, 0]);
+    expect(columnas.map((c) => c.incidentes.length)).toEqual([6, 0, 0, 1, 0]);
   });
 });
 
@@ -250,18 +266,21 @@ describe('agruparPorMes', () => {
       'agosto de 2026',
       'julio de 2026',
     ]);
-    expect(meses.map((m) => m.incidentes.length)).toEqual([1, 4, 1]);
+    // Agosto son 5, que es justo lo que dice el gráfico de la analítica.
+    expect(meses.map((m) => m.incidentes.length)).toEqual([1, 5, 1]);
   });
 
   it('dentro de cada mes ordena de la más reciente a la más antigua', () => {
     const agosto = agruparPorMes(incidentes)[1];
-    expect(agosto.incidentes.map((i) => i.codigo)).toEqual(['#8', '#7', '#6', '#5']);
+    expect(agosto.incidentes.map((i) => i.codigo)).toEqual(['#8', '#7', '#6', '#5', '#4']);
   });
 });
 
 describe('aplicarFiltroGuardado', () => {
-  it('«Todas (sin cerrar)» deja las seis, que ninguna está cerrada', () => {
-    expect(aplicarFiltroGuardado(incidentes, 'sin-cerrar')).toHaveLength(6);
+  it('«Todas (sin cerrar)» deja seis: se lleva por delante la resuelta', () => {
+    const sinCerrar = aplicarFiltroGuardado(incidentes, 'sin-cerrar');
+    expect(sinCerrar).toHaveLength(6);
+    expect(sinCerrar.map((i) => i.codigo)).not.toContain('#4');
   });
 
   it('«Sin asignar» deja las que no tienen owner', () => {
@@ -274,7 +293,7 @@ describe('aplicarFiltroGuardado', () => {
     ]);
   });
 
-  it('«Sin resolver +7 días» deja fuera la de ayer', () => {
+  it('«Sin resolver +7 días» deja fuera la de ayer y la ya resuelta', () => {
     expect(aplicarFiltroGuardado(incidentes, 'sin-resolver-7').map((i) => i.codigo)).toEqual([
       '#8',
       '#7',
@@ -292,8 +311,10 @@ describe('aplicarFiltroGuardado', () => {
     expect(aplicarFiltroGuardado(incidentes, 'mis-abiertos')).toHaveLength(0);
   });
 
-  it('«Preventables 90 días» no deja ninguna: ninguna visible tiene el dato', () => {
-    expect(aplicarFiltroGuardado(incidentes, 'preventables-90')).toHaveLength(0);
+  it('«Preventables 90 días» deja la única clasificada como evitable', () => {
+    expect(aplicarFiltroGuardado(incidentes, 'preventables-90').map((i) => i.codigo)).toEqual([
+      '#4',
+    ]);
   });
 
   it('«Recurrentes» no deja ninguna: ninguna visible tiene contraparte atribuida', () => {
@@ -301,6 +322,6 @@ describe('aplicarFiltroGuardado', () => {
   });
 
   it('sin filtro guardado devuelve la lista entera', () => {
-    expect(aplicarFiltroGuardado(incidentes, null)).toHaveLength(6);
+    expect(aplicarFiltroGuardado(incidentes, null)).toHaveLength(7);
   });
 });

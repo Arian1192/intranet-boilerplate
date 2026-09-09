@@ -64,12 +64,19 @@ describe('IncidentesPage — filtros guardados', () => {
     expect(screen.getAllByRole('row')).toHaveLength(2);
   });
 
-  it('«Limpiar filtros» devuelve las seis y apaga los guardados', async () => {
+  it('«Limpiar filtros» saca la séptima, la resuelta, y apaga los guardados', async () => {
     const user = userEvent.setup();
     renderPage();
     await user.click(screen.getByRole('button', { name: 'Críticos y Altos' }));
     await user.click(screen.getByRole('button', { name: 'Limpiar filtros' }));
-    expect(screen.getByText('6 de 7 incidentes')).toBeInTheDocument();
+    // Medido en el live: sin filtros son 7 de 7, y aparece la resuelta #4.
+    expect(screen.getByText('7 de 7 incidentes')).toBeInTheDocument();
+    const filas = screen.getAllByRole('row');
+    expect(filas).toHaveLength(8);
+    const resuelta = filas.find((f) => within(f).queryByText('#4'));
+    expect(resuelta).toBeDefined();
+    expect(within(resuelta!).getByText('Sadkiel')).toBeInTheDocument();
+    expect(within(resuelta!).getByText('Resuelta')).toBeInTheDocument();
     expect(screen.getByRole('button', { name: 'Todas (sin cerrar)' })).toHaveAttribute(
       'aria-pressed',
       'false'

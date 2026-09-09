@@ -137,6 +137,45 @@ describe('ReportePage — pestaña Resumen', () => {
   });
 });
 
+describe('ReportePage — el filtro Estado no es decorativo', () => {
+  it('cambiar a «Todos» cambia el rótulo, los KPI y la tabla', async () => {
+    const user = userEvent.setup();
+    render(<ReportePage />);
+    expect(screen.getByText('Shows liquidados')).toBeInTheDocument();
+    expect(within(screen.getByRole('table')).getAllByRole('row')).toHaveLength(6);
+
+    await user.selectOptions(screen.getByLabelText('Estado'), 'Todos');
+
+    expect(screen.queryByText('Shows liquidados')).toBeNull();
+    expect(screen.getByText('Shows')).toBeInTheDocument();
+    expect(screen.getByText('251')).toBeInTheDocument();
+    expect(within(screen.getByRole('table')).getAllByRole('row')).toHaveLength(8);
+    expect(screen.getAllByText('Aldo Messina').length).toBeGreaterThan(0);
+  });
+
+  it('«Pendientes de liquidar» trae sus propias cifras', async () => {
+    const user = userEvent.setup();
+    render(<ReportePage />);
+    await user.selectOptions(screen.getByLabelText('Estado'), 'Pendientes de liquidar');
+    expect(screen.getByText('Shows pendientes')).toBeInTheDocument();
+    expect(screen.getByText('228')).toBeInTheDocument();
+    expect(screen.getAllByText('Bizza').length).toBeGreaterThan(0);
+  });
+
+  it('el gráfico apilado también cambia de artistas', async () => {
+    const user = userEvent.setup();
+    render(<ReportePage />);
+    const grafico = () =>
+      screen.getByRole('region', { name: 'Fees por artista (Booking + Management apilados)' });
+    expect(within(grafico()).getByText('Los Canarios')).toBeInTheDocument();
+    // Aaron Martin no tiene nada liquidado, así que aquí no sale.
+    expect(within(grafico()).queryByText('Aaron Martin')).toBeNull();
+
+    await user.selectOptions(screen.getByLabelText('Estado'), 'Todos');
+    expect(within(grafico()).getByText('Aaron Martin')).toBeInTheDocument();
+  });
+});
+
 describe('ReportePage — pestaña Comisiones de agentes', () => {
   it('cambia a los tres KPI de abonos', async () => {
     await irA('Comisiones de agentes');

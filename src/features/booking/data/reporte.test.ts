@@ -22,6 +22,8 @@ import {
   repartoPorArtista,
   artistasSinAsignar,
   inicialesPersona,
+  REPORTE_POR_ESTADO,
+  datosReporte,
 } from './reporte';
 
 describe('formatEurosReporte', () => {
@@ -264,5 +266,65 @@ describe('inicialesPersona', () => {
 
   it('con un solo nombre repite sus dos primeras letras', () => {
     expect(inicialesPersona('Sadkiel')).toBe('SA');
+  });
+});
+
+describe('el filtro Estado cambia todo el Resumen', () => {
+  it('tiene los tres estados del live', () => {
+    expect(Object.keys(REPORTE_POR_ESTADO)).toEqual(ESTADOS_REPORTE);
+  });
+
+  it('«Liquidados» es lo que ya estaba, y es el estado por defecto', () => {
+    const datos = datosReporte('Liquidados');
+    expect(datos.kpisDashboard).toEqual(kpisDashboard);
+    expect(datos.tablaAgentes).toEqual(tablaAgentes);
+    expect(datos.feesPorArtista).toEqual(feesPorArtista);
+  });
+
+  it('hasta el rótulo del primer KPI cambia con el estado', () => {
+    expect(datosReporte('Liquidados').kpisDashboard[0].etiqueta).toBe('Shows liquidados');
+    expect(datosReporte('Pendientes de liquidar').kpisDashboard[0].etiqueta).toBe(
+      'Shows pendientes'
+    );
+    expect(datosReporte('Todos').kpisDashboard[0].etiqueta).toBe('Shows');
+  });
+
+  it('«Todos» es la suma: 251 shows y siete agentes', () => {
+    const datos = datosReporte('Todos');
+    expect(datos.kpisDashboard[0].valor).toBe('251');
+    expect(datos.tablaAgentes).toHaveLength(7);
+    expect(datos.tablaAgentes[0].agente).toBe('Aldo Messina');
+  });
+
+  it('en los tres estados el gráfico apilado cuadra con los KPI de la cabecera', () => {
+    for (const estado of ESTADOS_REPORTE) {
+      const datos = datosReporte(estado);
+      const booking = datos.feesPorArtista.reduce((t, f) => t + f.booking, 0);
+      const management = datos.feesPorArtista.reduce((t, f) => t + f.management, 0);
+      // Cada barra se decodifica de su altura y se redondea al céntimo, así que
+      // sobre 31 barras cabe algún céntimo de deriva. Manda el KPI, no la suma.
+      expect(Math.abs(booking - datos.totalBooking)).toBeLessThanOrEqual(0.05);
+      expect(Math.abs(management - datos.totalManagement)).toBeLessThanOrEqual(0.05);
+    }
+  });
+
+  it('en los tres estados las comisiones de la tabla suman su KPI', () => {
+    for (const estado of ESTADOS_REPORTE) {
+      const datos = datosReporte(estado);
+      const total = datos.tablaAgentes.reduce((t, f) => t + f.comision, 0);
+      expect(formatEurosReporte(total)).toBe(datos.kpisPorAgente[0].valor);
+    }
+  });
+
+  it('el eje de cada gráfico da cabida a su mayor barra', () => {
+    for (const estado of ESTADOS_REPORTE) {
+      const datos = datosReporte(estado);
+      const mayor = Math.max(...datos.feesPorArtista.map((f) => f.booking + f.management));
+      expect(mayor).toBeLessThanOrEqual(datos.ticksFees[datos.ticksFees.length - 1]);
+      const mayorComision = Math.max(...datos.tablaAgentes.map((f) => f.comision));
+      expect(mayorComision).toBeLessThanOrEqual(
+        datos.ticksComision[datos.ticksComision.length - 1]
+      );
+    }
   });
 });

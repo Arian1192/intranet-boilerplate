@@ -1084,3 +1084,293 @@ export function inicialesPersona(nombre: string): string {
   if (partes.length === 1) return partes[0].slice(0, 2).toUpperCase();
   return (partes[0][0] + partes[partes.length - 1][0]).toUpperCase();
 }
+
+export interface DatosReporte {
+  kpisDashboard: KpiReporte[];
+  feesPorArtista: FeeArtista[];
+  ticksFees: number[];
+  /** Los dos KPI de la cabecera, en número: son la contraprueba del gráfico. */
+  totalBooking: number;
+  totalManagement: number;
+  kpisPorAgente: KpiReporte[];
+  ticksComision: number[];
+  tablaAgentes: FilaAgente[];
+}
+
+/**
+ * El filtro `Estado` **no es decorativo**: cambia los KPI, los dos gráficos y
+ * la tabla de agentes, y hasta el rótulo del primer KPI («Shows liquidados» /
+ * «Shows pendientes» / «Shows»).
+ *
+ * Medido y capturado en el live el 2026-09-09 a las 12:06 CEST
+ * (`f1d-reporte--estado-pendientes` y `f1d-reporte--estado-todos`), después de
+ * que el coordinador avisara de que en otras pantallas los contadores cuentan
+ * lo filtrado. Aquí cuentan lo filtrado, y de qué manera.
+ */
+export const REPORTE_POR_ESTADO: Record<string, DatosReporte> = {
+  Liquidados: {
+    kpisDashboard,
+    feesPorArtista,
+    ticksFees: TICKS_FEES,
+    totalBooking: 6450,
+    totalManagement: 1512.83,
+    kpisPorAgente,
+    ticksComision: TICKS_COMISION,
+    tablaAgentes,
+  },
+  'Pendientes de liquidar': {
+    kpisDashboard: [
+      { etiqueta: 'Shows pendientes', valor: '228', clase: 'text-slate-800' },
+      { etiqueta: 'Booking fees', valor: formatEurosReporte(36004.43), clase: 'text-brand-700' },
+      { etiqueta: 'Management fees', valor: formatEurosReporte(16154.38), clase: 'text-brand-700' },
+      { etiqueta: 'Total gastado', valor: formatEurosReporte(11502.14), clase: 'text-amber-600' },
+      {
+        etiqueta: 'Artista más rentable',
+        valor: 'Bizza',
+        pies: [`BF ${formatEurosReporte(7965.86)}`, `MF ${formatEurosReporte(5067.47)}`],
+        clase: 'text-slate-800',
+      },
+    ],
+    feesPorArtista: [
+      { artista: 'Bizza', booking: 7965.86, management: 5067.47 },
+      { artista: 'Los Canarios', booking: 3890.0, management: 3248.15 },
+      { artista: 'Aaron Martin', booking: 3896.33, management: 2084.0 },
+      { artista: 'ART NO LOGIA', booking: 4067.28, management: 1402.78 },
+      { artista: 'Sebastian Ledher', booking: 1802.68, management: 451.69 },
+      { artista: 'Claudia Tejeda', booking: 1158.25, management: 966.6 },
+      { artista: 'Brenda Serna', booking: 1820.0, management: 0.0 },
+      { artista: 'Sera De Villalta', booking: 1615.61, management: 0.0 },
+      { artista: 'Freddy Bello', booking: 840.0, management: 760.0 },
+      { artista: 'Abdon', booking: 980.0, management: 560.0 },
+      { artista: 'Marcel BS', booking: 820.0, management: 450.99 },
+      { artista: 'Bassel Darwish', booking: 1195.28, management: 0.0 },
+      { artista: 'Milan Torne', booking: 673.36, management: 219.51 },
+      { artista: 'Marian Ariss', booking: 890.78, management: 0.0 },
+      { artista: 'DH Moon', booking: 423.99, management: 379.19 },
+      { artista: 'Gaston Zani', booking: 300.0, management: 300.0 },
+      { artista: 'Vidaloca', booking: 300.0, management: 264.0 },
+      { artista: 'Tomi & Kesh', booking: 520.0, management: 0.0 },
+      { artista: 'Andrea Castells', booking: 400.0, management: 0.0 },
+      { artista: 'Olivia Bass', booking: 400.0, management: 0.0 },
+      { artista: 'Fran Hernandez', booking: 380.0, management: 0.0 },
+      { artista: 'Jose Fajardo', booking: 340.0, management: 0.0 },
+      { artista: 'Pau Guilera', booking: 320.0, management: 0.0 },
+      { artista: 'Rivellino', booking: 230.0, management: 0.0 },
+      { artista: 'ACA', booking: 200.0, management: 0.0 },
+      { artista: 'Dhuna', booking: 200.0, management: 0.0 },
+      { artista: 'Test Artist', booking: 200.0, management: 0.0 },
+      { artista: 'Sergio Saffe', booking: 175.0, management: 0.0 },
+    ],
+    ticksFees: [0, 3500, 7000, 10500, 14000],
+    totalBooking: 36004.43,
+    totalManagement: 16154.38,
+    kpisPorAgente: [
+      { etiqueta: 'Total comisiones', valor: formatEurosReporte(9722.35), clase: 'text-brand-700' },
+      {
+        etiqueta: 'Agente top (comisión)',
+        valor: 'Aldo Messina',
+        pies: [formatEurosReporte(5598.85)],
+        clase: 'text-slate-800',
+      },
+      {
+        etiqueta: 'Más fechas cerradas',
+        valor: 'Aldo Messina',
+        pies: ['134 cierres'],
+        clase: 'text-slate-800',
+      },
+      { etiqueta: 'Agentes activos', valor: '7', clase: 'text-slate-800' },
+    ],
+    ticksComision: [0, 1500, 3000, 4500, 6000],
+    tablaAgentes: [
+      {
+        agente: 'Aldo Messina',
+        cierres: 134,
+        feeBruto: 104038.43,
+        feeMedio: 776.41,
+        bookingFees: 20730.44,
+        comision: 5598.85,
+      },
+      {
+        agente: 'Yenifer Bernardo',
+        cierres: 69,
+        feeBruto: 53241.27,
+        feeMedio: 771.61,
+        bookingFees: 10648.25,
+        comision: 2917.06,
+      },
+      {
+        agente: 'Alex González',
+        cierres: 12,
+        feeBruto: 13853.92,
+        feeMedio: 1154.49,
+        bookingFees: 2770.78,
+        comision: 692.7,
+      },
+      {
+        agente: 'Oscar Buch',
+        cierres: 10,
+        feeBruto: 7524.76,
+        feeMedio: 752.48,
+        bookingFees: 1504.95,
+        comision: 376.24,
+      },
+      {
+        agente: 'Patricia Pareja Casalí',
+        cierres: 2,
+        feeBruto: 1150.0,
+        feeMedio: 575.0,
+        bookingFees: 230.0,
+        comision: 57.5,
+      },
+      {
+        agente: 'Carlos Pego',
+        cierres: 0,
+        feeBruto: 0.0,
+        feeMedio: 0.0,
+        bookingFees: 0.0,
+        comision: 50.0,
+      },
+      {
+        agente: 'Jassi Gonzalez Montes',
+        cierres: 1,
+        feeBruto: 600.0,
+        feeMedio: 600.0,
+        bookingFees: 120.0,
+        comision: 30.0,
+      },
+    ],
+  },
+  Todos: {
+    kpisDashboard: [
+      { etiqueta: 'Shows', valor: '251', clase: 'text-slate-800' },
+      { etiqueta: 'Booking fees', valor: formatEurosReporte(42454.43), clase: 'text-brand-700' },
+      { etiqueta: 'Management fees', valor: formatEurosReporte(17667.21), clase: 'text-brand-700' },
+      { etiqueta: 'Total gastado', valor: formatEurosReporte(13309.12), clase: 'text-amber-600' },
+      {
+        etiqueta: 'Artista más rentable',
+        valor: 'Bizza',
+        pies: [`BF ${formatEurosReporte(8165.86)}`, `MF ${formatEurosReporte(5067.47)}`],
+        clase: 'text-slate-800',
+      },
+    ],
+    feesPorArtista: [
+      { artista: 'Bizza', booking: 8165.86, management: 5067.47 },
+      { artista: 'Los Canarios', booking: 5190.0, management: 4195.62 },
+      { artista: 'Aaron Martin', booking: 3896.33, management: 2084.0 },
+      { artista: 'ART NO LOGIA', booking: 4067.28, management: 1402.78 },
+      { artista: 'Brenda Serna', booking: 3530.0, management: 0.0 },
+      { artista: 'Sebastian Ledher', booking: 2242.68, management: 617.06 },
+      { artista: 'Claudia Tejeda', booking: 1158.25, management: 966.6 },
+      { artista: 'Marcel BS', booking: 1560.0, management: 450.99 },
+      { artista: 'Sera De Villalta', booking: 1615.61, management: 0.0 },
+      { artista: 'Freddy Bello', booking: 840.0, management: 760.0 },
+      { artista: 'Abdon', booking: 980.0, management: 560.0 },
+      { artista: 'Bassel Darwish', booking: 1195.28, management: 0.0 },
+      { artista: 'Marian Ariss', booking: 1090.78, management: 0.0 },
+      { artista: 'Tomi & Kesh', booking: 1080.0, management: 0.0 },
+      { artista: 'Milan Torne', booking: 673.36, management: 219.51 },
+      { artista: 'Rivellino', booking: 430.0, management: 400.0 },
+      { artista: 'DH Moon', booking: 423.99, management: 379.19 },
+      { artista: 'Pau Guilera', booking: 620.0, management: 0.0 },
+      { artista: 'Gaston Zani', booking: 300.0, management: 300.0 },
+      { artista: 'Vidaloca', booking: 300.0, management: 264.0 },
+      { artista: 'Jose Fajardo', booking: 540.0, management: 0.0 },
+      { artista: 'Andrea Castells', booking: 400.0, management: 0.0 },
+      { artista: 'Olivia Bass', booking: 400.0, management: 0.0 },
+      { artista: 'Fran Hernandez', booking: 380.0, management: 0.0 },
+      { artista: 'Florentia', booking: 200.0, management: 0.0 },
+      { artista: 'ACA', booking: 200.0, management: 0.0 },
+      { artista: 'LA CINTIA', booking: 200.0, management: 0.0 },
+      { artista: 'Dhuna', booking: 200.0, management: 0.0 },
+      { artista: 'Londonground', booking: 200.0, management: 0.0 },
+      { artista: 'Test Artist', booking: 200.0, management: 0.0 },
+      { artista: 'Sergio Saffe', booking: 175.0, management: 0.0 },
+    ],
+    ticksFees: [0, 3500, 7000, 10500, 14000],
+    totalBooking: 42454.43,
+    totalManagement: 17667.21,
+    kpisPorAgente: [
+      {
+        etiqueta: 'Total comisiones',
+        valor: formatEurosReporte(11469.85),
+        clase: 'text-brand-700',
+      },
+      {
+        etiqueta: 'Agente top (comisión)',
+        valor: 'Aldo Messina',
+        pies: [formatEurosReporte(5808.85)],
+        clase: 'text-slate-800',
+      },
+      {
+        etiqueta: 'Más fechas cerradas',
+        valor: 'Aldo Messina',
+        pies: ['137 cierres'],
+        clase: 'text-slate-800',
+      },
+      { etiqueta: 'Agentes activos', valor: '7', clase: 'text-slate-800' },
+    ],
+    ticksComision: [0, 1500, 3000, 4500, 6000],
+    tablaAgentes: [
+      {
+        agente: 'Aldo Messina',
+        cierres: 137,
+        feeBruto: 106038.43,
+        feeMedio: 774.0,
+        bookingFees: 21130.44,
+        comision: 5808.85,
+      },
+      {
+        agente: 'Yenifer Bernardo',
+        cierres: 83,
+        feeBruto: 75891.27,
+        feeMedio: 914.35,
+        bookingFees: 15458.25,
+        comision: 4144.56,
+      },
+      {
+        agente: 'Alex González',
+        cierres: 15,
+        feeBruto: 18053.92,
+        feeMedio: 1203.59,
+        bookingFees: 3710.78,
+        comision: 927.7,
+      },
+      {
+        agente: 'Oscar Buch',
+        cierres: 11,
+        feeBruto: 8024.76,
+        feeMedio: 729.52,
+        bookingFees: 1604.95,
+        comision: 401.24,
+      },
+      {
+        agente: 'Patricia Pareja Casalí',
+        cierres: 4,
+        feeBruto: 3150.0,
+        feeMedio: 787.5,
+        bookingFees: 430.0,
+        comision: 107.5,
+      },
+      {
+        agente: 'Carlos Pego',
+        cierres: 0,
+        feeBruto: 0.0,
+        feeMedio: 0.0,
+        bookingFees: 0.0,
+        comision: 50.0,
+      },
+      {
+        agente: 'Jassi Gonzalez Montes',
+        cierres: 1,
+        feeBruto: 600.0,
+        feeMedio: 600.0,
+        bookingFees: 120.0,
+        comision: 30.0,
+      },
+    ],
+  },
+};
+
+export function datosReporte(estado: string): DatosReporte {
+  return REPORTE_POR_ESTADO[estado] ?? REPORTE_POR_ESTADO[ESTADOS_REPORTE[0]];
+}

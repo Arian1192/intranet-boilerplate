@@ -1,0 +1,341 @@
+<!-- capturado 2026-09-09 12:05:44 CEST · https://bookings.conceptoneagency.com/reporte (Estado=Todos) · viewport 1440x1000 · dsf 2 -->
+ConceptOne
+Añadir show
+BOOKINGS
+Dashboard
+Shows
+Tours
+Ofertas
+Cobros
+Gastos
+Liquidaciones
+Disponibilidad
+Calendario
+Contactos
+MANAGEMENT
+Roster
+Insights
+Estrategias
+Contratos
+Activaciones
+Campañas
+Content
+Incidencias
+MÁS
+Roster
+Análisis
+Ajustes
+Black Moose
+Pendientes
+Modo noche
+Ayuda
+9+
+Notificaciones
+T
+testadmin
+Analítica
+
+Uso interno · fees, agentes y comisiones. Importes en EUR.
+
+Estado
+Liquidados
+Pendientes de liquidar
+Todos
+Desde
+dd/mm/aaaa
+Hasta
+dd/mm/aaaa
+Resumen
+Comisiones de agentes
+Reparto de artistas
+DASHBOARD GENERAL
+SHOWS
+251
+BOOKING FEES
+42.454,43 €
+MANAGEMENT FEES
+17.667,21 €
+TOTAL GASTADO
+13.309,12 €
+ARTISTA MÁS RENTABLE
+Bizza
+BF 8165,86 €
+MF 5067,47 €
+Fees por artista (Booking + Management apilados)
+BookingManagement
+Bizza
+Los Canarios
+Aaron Martin
+ART NO LOGIA
+Brenda Serna
+Sebastian Ledher
+Claudia Tejeda
+Marcel BS
+Sera De Villalta
+Freddy Bello
+Abdon
+Bassel Darwish
+Marian Ariss
+Tomi & Kesh
+Milan Torne
+Rivellino
+DH Moon
+Pau Guilera
+Gaston Zani
+Vidaloca
+Jose Fajardo
+Andrea Castells
+Olivia Bass
+Fran Hernandez
+Florentia
+ACA
+LA CINTIA
+Dhuna
+Londonground
+Test Artist
+Sergio Saffe
+Nacho Scoppa
+0,00 €
+3500,00 €
+7000,00 €
+10.500,00 €
+14.000,00 €
+POR AGENTE
+TOTAL COMISIONES
+11.469,85 €
+AGENTE TOP (COMISIÓN)
+Aldo Messina
+5808,85 €
+MÁS FECHAS CERRADAS
+Aldo Messina
+137 cierres
+AGENTES ACTIVOS
+7
+Comisión generada por agente
+Aldo Messina
+Yenifer Bernardo
+Alex González
+Oscar Buch
+Patricia Pareja Casalí
+Carlos Pego
+Jassi Gonzalez Montes
+0,00 €
+1500,00 €
+3000,00 €
+4500,00 €
+6000,00 €
+AGENTE	CIERRES	FEE BRUTO	FEE MEDIO	BOOKING FEES	COMISIÓN
+Aldo Messina	137	106.038,43 €	774,00 €	21.130,44 €	5808,85 €
+Yenifer Bernardo	83	75.891,27 €	914,35 €	15.458,25 €	4144,56 €
+Alex González	15	18.053,92 €	1203,59 €	3710,78 €	927,70 €
+Oscar Buch	11	8024,76 €	729,52 €	1604,95 €	401,24 €
+Patricia Pareja Casalí	4	3150,00 €	787,50 €	430,00 €	107,50 €
+Carlos Pego	0	0,00 €	0,00 €	0,00 €	50,00 €
+Jassi Gonzalez Montes	1	600,00 €	600,00 €	120,00 €	30,00 €
+
+Cierres = fechas que trae el agente (de origen, o el oficial del artista si no hay agente de origen). La comisión incluye lo que gana como oficial y como origen en todos los shows del filtro.
+
+VISTA POR ARTISTA
+Selecciona un artista…
+Aaron Martin
+Abdon
+ACA
+ADDMOR
+Adrian Oliver
+Agoria
+Agus
+Agustin Montes
+AIIVIIK
+Alex Now
+Alexanders Som
+Alvaro Prieto
+Alvaro Varen
+Andrea Castells
+Andrew Azara
+ART NO LOGIA
+Ballesteros
+Bassel Darwish
+Bianca Lif
+Bicar
+Bizza
+Bliezt
+Brenda Serna
+CAAL
+Cannon
+Carlos Chaparro
+Caste
+Cesar Alamdena
+Cesar Almena
+Chinonegro
+Chrlyfst
+CHUS SOS
+Claptone
+Claudia Tejeda
+Crixx
+Cuartero
+D.O.D
+Dani Berenguel
+Dani Corral
+Danny Gomez
+Dany Gomez
+De La Swing
+Delatorre
+Delum
+Denis Cruz
+Detleft
+DH Moon
+Dhuna
+Dimmish
+Disciples
+Dj Equis
+Dontbedaft
+Dunmore Brothers
+Erick Sierra
+ERRE
+Ezziolino
+Felipe Nogueira
+Fletch
+Fleur Shore
+Florentia
+Fran Hernandez
+Francisco Allendes
+Francisco Valentín
+Freddy Bello
+Funk Off
+Gala
+Galgo
+Gaston Zani
+GoldRed
+Gonzz
+Gordo
+Guille Placencia
+Harvy Valencia
+Hector
+Hector Couto
+HoneyLuv
+Ian Margalef
+Ivan Dive
+James Hype
+Jan
+Janse
+Jay De Lys
+JESS
+JNJS
+Joey Daniel
+JORGESYN
+Jose Fajardo
+Jp Candela
+Kaeru
+Kavi jr
+Kele
+Kevin de Vries
+Kevin.Wav
+KevLb
+Kidoo
+Kirik
+KOKO
+Koleto
+Korolova
+LA CINTIA
+Larida
+Levi
+Leyo
+Linxes
+Local Support
+Londonground
+Los Campos
+Los Canarios
+Lucas Rios
+Lucor
+Luka Kuhnow
+Luke Vose
+Mamen
+Manclus
+Manda Moor
+Marcel BS
+Marian
+Marian Ariss
+Matthias Tanzmann
+MAZIUS&CALE
+metaraph
+Miane
+Michael Stiven
+Miganova
+Milan Torne
+Mr. Belt & Wezol
+Nacho Lara
+Nacho Scoppa
+Nick Curly
+Nico Loco
+Nicole Moudaber
+Oden & Fatzo
+Olivia Bass
+Ollie BC
+Omy Cid
+Orquesta Tropicanas
+Oscar Buch
+Palo Main
+Parsa Jafari
+Patrick Topping
+Pau Guilera
+Paul Woolford
+Paulina Di Mundo
+Portega
+Prophecy
+Rayconen
+Residente
+Rivellino
+Rooléh
+Rubenus
+S MARIO
+S.A.M.
+Sacchi
+Sadkiel
+Saldivar
+Salvi Fernandez
+Sante Sansone
+Savai
+Sebastian Ledher
+Selecta
+Sem Jacobs
+Sera De Villalta
+Sergio Leon
+Sergio Saffe
+Shakti
+SHOKË
+Simas
+Sirlof
+Sirolf
+Sirus Hood
+Solardo
+Sonno Sossego
+Sonny Fodera
+SOVA
+Spaceray
+Stella
+SUMIA
+TBA
+Tenax
+Test Artist
+Thinkpink
+Tom Nolan
+Tomi & Kesh
+Tony Guerra
+UGOTGLENN
+Vengui
+Vidaloca
+Vite
+Vito UK
+Vitor
+Werninghaus
+Wes Colstock
+Xandro
+Selecciona un artista para ver su detalle.
+Chat
+
+Pregunta lo que quieras de esta pantalla, o cuenta qué está fallando.
+
+Enviar
+Reportar con captura
+Mis avisos
+1500,00 €

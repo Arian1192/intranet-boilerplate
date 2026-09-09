@@ -168,12 +168,12 @@ export const FILTROS_GUARDADOS: FiltroGuardado[] = [
 ];
 
 /**
- * El live dice «6 de 7 incidentes»: hay una séptima que el filtro guardado por
- * defecto («Todas (sin cerrar)») deja fuera. De la analítica se sabe que está
- * cerrada, es de categoría `Pago`, severidad media, se resolvió en 3 días y es
- * la única clasificada como preventable — pero **su código y su título nunca se
- * vieron**, así que no se inventa una fila: el total va como constante y la
- * analítica lleva sus propias cifras.
+ * Las siete del live. La séptima —`#4`, resuelta— no sale con el filtro
+ * guardado por defecto; se capturó aparte pulsando «Limpiar filtros»
+ * (`f1d-management--incidentes--sin-filtros`, 2026-09-09 12:05 CEST), y sus
+ * datos confirman lo que ya decía la analítica: categoría `Pago` —que es lo que
+ * hace que ese recuento sea 2—, severidad media, resuelta, y reportada en
+ * agosto, que es lo que cuadra el mes con 5.
  */
 export const TOTAL_INCIDENTES = 7;
 
@@ -181,7 +181,7 @@ export const TOTAL_INCIDENTES = 7;
 export const HOY_INCIDENTES = '2026-09-09';
 
 /**
- * Las 6 incidencias visibles, en código descendente — el orden natural del
+ * Las 7 del live, en código descendente — el orden natural del
  * live: la tabla lo reordena por severidad y el timeline por fecha, y ambos
  * ordenamientos son estables sobre éste.
  */
@@ -269,6 +269,23 @@ export const incidentes: Incidente[] = [
     conRelacionados: false,
     impactoEconomico: null,
     artista: 'Jose Fajardo',
+    contraparte: null,
+  },
+  {
+    codigo: '#4',
+    titulo: 'Promotor solicita pagar directamente a Aaron Martin para ahorrarse WHT desde India',
+    departamento: 'ConceptOne (booking)',
+    categoria: 'Pago',
+    severidad: 'media',
+    estado: 'resuelta',
+    owner: 'Sadkiel',
+    fechaReporte: '2026-08-03',
+    confidencial: false,
+    preventable: true,
+    escalado: false,
+    conRelacionados: false,
+    impactoEconomico: null,
+    artista: 'Aaron Martin',
     contraparte: null,
   },
   {
@@ -501,7 +518,9 @@ export function aplicarFiltroGuardado(
   const sinResolver = (i: Incidente) => ESTADOS_SIN_RESOLVER.includes(i.estado);
   switch (id) {
     case 'sin-cerrar':
-      return lista.filter((i) => i.estado !== 'cerrada');
+      // Medido en el live: deja fuera las **resueltas** además de las cerradas.
+      // Con el filtro puesto salen 6 de 7; al limpiarlo aparece la resuelta.
+      return lista.filter(sinResolver);
     case 'mis-abiertos':
       return lista.filter((i) => sinResolver(i) && i.owner === USUARIO_ACTUAL);
     case 'sin-resolver-7':
