@@ -63,3 +63,21 @@ export const ROSTER_MANAGEMENT: ArtistaRoster[] = [
   { nombre: 'Tony Guerra', management: true, songstats: true },
   { nombre: 'Vidaloca', management: true, songstats: true },
 ];
+
+/**
+ * Los artistas que llevan management, en el orden del roster.
+ *
+ * Es la lista que el live enseña en el filtro `Todos los artistas` de
+ * `/management/{activaciones,campanas,content}`: medido con el menú abierto el
+ * 2026-09-09 a las 11:24 CEST (`f2b-management--campanas-filtros.txt`), son
+ * estos 17 y en este orden. La segunda medida es el `<select>` de artista de los
+ * tres modales de edición (`f2-management--*-detalle.main.html`), que trae los
+ * mismos 17.
+ *
+ * Se deriva del interruptor en vez de escribirse a mano: el filtro es
+ * exactamente «quién está en management», y así no hay dos listas que puedan
+ * separarse.
+ */
+export const ARTISTAS_MANAGEMENT: readonly string[] = ROSTER_MANAGEMENT.filter(
+  (a) => a.management
+).map((a) => a.nombre);
