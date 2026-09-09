@@ -90,10 +90,13 @@ export function ShowsPage() {
         />
       </div>
       <LeyendaEstado />
-      <div className="overflow-hidden rounded-xl border border-slate-100 bg-white shadow-sm">
-        {shownShows.map((show) => (
-          <ShowCard key={show.id} show={show} />
-        ))}
+      {/* `apxlist` + `rowlist` son las clases de la capa que usa el live. */}
+      <div className="apxlist">
+        <div className="rowlist">
+          {shownShows.map((show) => (
+            <ShowCard key={show.id} show={show} />
+          ))}
+        </div>
       </div>
       <FiltrosDrawer
         abierto={filtrosAbierto}
